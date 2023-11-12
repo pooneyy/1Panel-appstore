@@ -14,7 +14,7 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=Asia/Shanghai
-    image: linuxserver/heimdall:2.5.7
+    image: linuxserver/heimdall:2.5.8
     labels:  
       createdBy: "Apps"
 
