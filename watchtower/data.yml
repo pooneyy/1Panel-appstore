@@ -12,7 +12,7 @@ additionalProperties:
     shortDescZh: 自动更新 Docker 容器基础镜像的工具
     shortDescEn: Tool to automatically update Docker container base images
     type: tool
-    crossVersionUpdate: false
+    crossVersionUpdate: true
     limit: 1
     recommend: 0
     website: https://github.com/containrrr/watchtower
