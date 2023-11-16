@@ -60,11 +60,18 @@
 默认`1Panel`安装在`/opt/`路径下，如果不是按需修改以下。
 
 ### 2.1 国内网络
+
+> GitHub加速方式
+>> - (本仓库已添加)自建：https://github.com/hunshcn/gh-proxy
+>> - ~~https://ghproxy.com~~
+>> - https://mirror.ghproxy.com
+>> - https://gh-proxy.com
+
 #### 2.1.1 使用 git 命令获取应用
 
 `1panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-git clone -b localApps https://ghproxy.com/https://github.com/okxlin/appstore /opt/1panel/resource/apps/local/appstore-localApps
+git clone -b localApps https://gh-proxy.com/https://github.com/okxlin/appstore /opt/1panel/resource/apps/local/appstore-localApps
 
 cp -rf /opt/1panel/resource/apps/local/appstore-localApps/apps/* /opt/1panel/resource/apps/local/
 
@@ -77,7 +84,7 @@ rm -r /opt/1panel/resource/apps/local/appstore-localApps
 
 `1panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-wget -P /opt/1panel/resource/apps/local https://ghproxy.com/https://github.com/okxlin/appstore/archive/refs/heads/localApps.zip
+wget -P /opt/1panel/resource/apps/local https://gh-proxy.com/https://github.com/okxlin/appstore/archive/refs/heads/localApps.zip
 
 unzip -o -d /opt/1panel/resource/apps/local/ /opt/1panel/resource/apps/local/localApps.zip
 
