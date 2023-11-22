@@ -10,7 +10,7 @@ services:
     volumes:
       - "${DATA_PATH}:/home/node/trilium-data"
     tty: true
-    image: zadam/trilium:0.61.15
+    image: zadam/trilium:0.62.2
     labels:  
       createdBy: "Apps"
 
