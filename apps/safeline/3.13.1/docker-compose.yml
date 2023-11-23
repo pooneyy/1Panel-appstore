@@ -5,9 +5,8 @@ services:
     restart: always
     networks:
       1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.4
-    image: chaitin/safeline-mgt-api:3.12.2
+        ipv4_address: ${SUBNET_PREFIX}.234
+    image: chaitin/safeline-mgt-api:3.13.1
     volumes:
     - ${SAFELINE_DIR}/resources/management:/resources/management
     - ${SAFELINE_DIR}/resources/nginx:/resources/nginx
@@ -20,7 +19,7 @@ services:
     - NGINX_RESOURCES_DIR=/resources/nginx
     - DATABASE_URL=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-postgres/safeline-ce
     - MARIO_URL=http://safeline-mario:3335
-    - DETECTOR_URL=http://safeline-detector:8001
+    - FVM_MANAGER_URL=safeline-fvm-manager:9004
     - REDIS_URL=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${REDIS_HOST}:${REDIS_PORT}/0
     - MANAGEMENT_LOGS_DIR=/logs/management
     dns: 
@@ -40,13 +39,14 @@ services:
     restart: always
     networks:
       1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.5
-    image: chaitin/safeline-detector:3.12.2
+        ipv4_address: ${SUBNET_PREFIX}.235
+    image: chaitin/safeline-detector:3.13.1
     volumes:
     - ${SAFELINE_DIR}/resources/detector:/resources/detector
     - ${SAFELINE_DIR}/logs/detector:/logs/detector
     - /etc/localtime:/etc/localtime:ro
+    ports:
+    - ${PANEL_APP_PORT_HTTP2}:8000
     environment:
     - LOG_DIR=/logs/detector
     cap_drop:
@@ -59,9 +59,8 @@ services:
     restart: always
     networks:
       1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.6
-    image: chaitin/safeline-mario:3.12.2
+        ipv4_address: ${SUBNET_PREFIX}.236
+    image: chaitin/safeline-mario:3.13.1
     volumes:
     - ${SAFELINE_DIR}/resources/mario:/resources/mario
     - ${SAFELINE_DIR}/logs/mario:/logs/mario
@@ -79,7 +78,7 @@ services:
   safeline-tengine:
     container_name: ${CONTAINER_NAME}-tengine
     restart: always
-    image: chaitin/safeline-tengine:3.12.2
+    image: chaitin/safeline-tengine:3.13.1
     volumes:
     - ${SAFELINE_DIR}/resources/nginx:/etc/nginx
     - ${SAFELINE_DIR}/resources/management:/resources/management
@@ -89,11 +88,29 @@ services:
     - ${SAFELINE_DIR}/resources/cache:/usr/local/nginx/cache
     - /etc/resolv.conf:/etc/resolv.conf
     environment:
-    - REDIS_URL=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${SUBNET_PREFIX}.3:${REDIS_PORT}/0
-    - MGT_ADDR=${SUBNET_PREFIX}.4:9002
+    - REDIS_URL=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${SUBNET_PREFIX}.233:${REDIS_PORT}/0
+    - MGT_ADDR=${SUBNET_PREFIX}.234:9002
     ulimits:
       nofile: 131072
     network_mode: host
+    labels:
+      createdBy: Apps
+
+  fvm-manager:
+    container_name: ${CONTAINER_NAME}-fvm-manager
+    restart: always
+    networks:
+      1panel-network:
+        ipv4_address: ${SUBNET_PREFIX}.238
+    image: chaitin/safeline-fvm-manager:3.13.1
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${SAFELINE_DIR}/logs:/logs
+    environment:
+      - FVM_LOGS_DIR=/logs/management
+      - DETECTOR_URL=http://safeline-detector:8001
+    cap_drop:
+      - net_raw
     labels:
       createdBy: Apps
 
@@ -102,8 +119,7 @@ services:
     restart: always
     networks:
       1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.2
+        ipv4_address: ${SUBNET_PREFIX}.232
     image: postgres:15.4-bookworm
     volumes:
     - ${SAFELINE_DIR}/resources/postgres/data:/var/lib/postgresql/data
@@ -122,8 +138,7 @@ services:
     restart: always
     networks:
       1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.3
+        ipv4_address: ${SUBNET_PREFIX}.233
     image: redis:7.2.3
     volumes:
       - ${SAFELINE_DIR}/resources/redis/data:/data
@@ -139,13 +154,3 @@ services:
 networks:
   1panel-network:
     external: true
-  safeline-ce:
-    name: safeline-ce
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-      - gateway: ${SUBNET_PREFIX:?SUBNET_PREFIX required}.1
-        subnet: ${SUBNET_PREFIX}.0/24
-    driver_opts:
-      com.docker.network.bridge.name: safeline-ce
