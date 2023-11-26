@@ -14,7 +14,7 @@ services:
       - PUID=0
       - PGID=0
       - UMASK=022
-    image: xhofe/alist:v3.28.0@sha256:1e931c57d9de771f75c5c853231f215ffd8a684563323fa42138beda8ff42e5a
+    image: xhofe/alist:v3.29.1@sha256:33f0cc7823ff0fc0e7f590c91c6b1e8945025ff611ed317724c91fb8444a2a07
     labels:  
       createdBy: "Apps"
 
