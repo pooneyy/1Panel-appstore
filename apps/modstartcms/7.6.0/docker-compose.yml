@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 services:
   modstartcms:
     container_name: ${CONTAINER_NAME}
@@ -8,13 +8,10 @@ services:
     ports:
       - "${PANEL_APP_PORT_HTTP}:80"
     volumes:
-      - modstartcms:/server/web
+      - ./data:/server/web
     image: modstart/modstartcms:v7.6.0
     labels:  
       createdBy: "Apps"
-
-volumes:
-  modstartcms:
 
 networks:  
   1panel-network:  
