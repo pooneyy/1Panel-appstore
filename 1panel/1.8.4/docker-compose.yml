@@ -10,6 +10,6 @@ services:
       - ${DATA_PATH}:/opt
     environment:
       - TZ=${TIME_ZONE}
-    image: moelin/1panel:v1.8.4
+    image: moelin/1panel:v1.8.5
     labels:  
       createdBy: "Apps"
