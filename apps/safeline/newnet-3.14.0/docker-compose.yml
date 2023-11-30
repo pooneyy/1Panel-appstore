@@ -7,7 +7,7 @@ services:
       1panel-network:
       safeline-ce:
         ipv4_address: ${SUBNET_PREFIX}.4
-    image: chaitin/safeline-mgt-api:3.13.2
+    image: chaitin/safeline-mgt-api:3.14.0
     volumes:
     - ${SAFELINE_DIR}/resources/management:/resources/management
     - ${SAFELINE_DIR}/resources/nginx:/resources/nginx
@@ -21,7 +21,6 @@ services:
     - DATABASE_URL=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-postgres/safeline-ce
     - MARIO_URL=http://safeline-mario:3335
     - FVM_MANAGER_URL=safeline-fvm-manager:9004
-    - REDIS_URL=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${REDIS_HOST}:${REDIS_PORT}/0
     - MANAGEMENT_LOGS_DIR=/logs/management
     dns: 
       - 119.29.29.29
@@ -42,7 +41,7 @@ services:
       1panel-network:
       safeline-ce:
         ipv4_address: ${SUBNET_PREFIX}.5
-    image: chaitin/safeline-detector:3.13.2
+    image: chaitin/safeline-detector:3.14.0
     volumes:
     - ${SAFELINE_DIR}/resources/detector:/resources/detector
     - ${SAFELINE_DIR}/logs/detector:/logs/detector
@@ -61,7 +60,7 @@ services:
       1panel-network:
       safeline-ce:
         ipv4_address: ${SUBNET_PREFIX}.6
-    image: chaitin/safeline-mario:3.13.2
+    image: chaitin/safeline-mario:3.14.0
     volumes:
     - ${SAFELINE_DIR}/resources/mario:/resources/mario
     - ${SAFELINE_DIR}/logs/mario:/logs/mario
@@ -70,7 +69,6 @@ services:
     - LOG_DIR=/logs/mario
     - GOGC=100
     - DATABASE_URL=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-postgres/safeline-ce
-    - REDIS_URL=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${REDIS_HOST}:${REDIS_PORT}/0
     cap_drop:
     - net_raw
     labels:
@@ -79,7 +77,7 @@ services:
   safeline-tengine:
     container_name: ${CONTAINER_NAME}-tengine
     restart: always
-    image: chaitin/safeline-tengine:3.13.2
+    image: chaitin/safeline-tengine:3.14.0
     volumes:
     - ${SAFELINE_DIR}/resources/nginx:/etc/nginx
     - ${SAFELINE_DIR}/resources/management:/resources/management
@@ -89,8 +87,7 @@ services:
     - ${SAFELINE_DIR}/resources/cache:/usr/local/nginx/cache
     - /etc/resolv.conf:/etc/resolv.conf
     environment:
-    - REDIS_URL=redis://:${PANEL_REDIS_ROOT_PASSWORD}@${SUBNET_PREFIX}.3:${REDIS_PORT}/0
-    - MGT_ADDR=${SUBNET_PREFIX}.4:9002
+    - MGT_API=https://${SUBNET_PREFIX}.4:1443/api/publish/server
     ulimits:
       nofile: 131072
     network_mode: host
@@ -104,7 +101,7 @@ services:
       1panel-network:
       safeline-ce:
         ipv4_address: ${SUBNET_PREFIX}.8
-    image: chaitin/safeline-fvm-manager:3.13.2
+    image: chaitin/safeline-fvm-manager:3.14.0
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ${SAFELINE_DIR}/logs:/logs
@@ -133,25 +130,6 @@ services:
     cap_drop:
     - net_raw
     command: [postgres, -c, max_connections=200]
-    labels:
-      createdBy: Apps
-
-  safeline-redis:
-    container_name: ${CONTAINER_NAME}-redis
-    restart: always
-    networks:
-      1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.3
-    image: redis:7.2.3
-    volumes:
-      - ${SAFELINE_DIR}/resources/redis/data:/data
-      - /etc/localtime:/etc/localtime:ro
-    command: redis-server --appendonly yes --requirepass  ${PANEL_REDIS_ROOT_PASSWORD}
-    cap_drop:
-      - net_raw
-    sysctls:
-      net.core.somaxconn: "511"
     labels:
       createdBy: Apps
 
