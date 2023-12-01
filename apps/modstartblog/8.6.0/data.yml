@@ -1,6 +1,6 @@
 additionalProperties:
     formFields:
-        - default: 40180
+        - default: 40181
           edit: true
           envKey: PANEL_APP_PORT_HTTP
           labelEn: HTTP WebUI Port
