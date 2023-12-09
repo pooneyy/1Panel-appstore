@@ -5,9 +5,8 @@ services:
     restart: always
     networks:
       1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.4
-    image: chaitin/safeline-mgt-api:3.15.2
+        ipv4_address: ${SUBNET_PREFIX}.234
+    image: chaitin/safeline-mgt-api:3.15.3
     volumes:
     - ${SAFELINE_DIR}/resources/management:/resources/management
     - ${SAFELINE_DIR}/resources/nginx:/resources/nginx
@@ -39,9 +38,8 @@ services:
     restart: always
     networks:
       1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.5
-    image: chaitin/safeline-detector:3.15.2
+        ipv4_address: ${SUBNET_PREFIX}.235
+    image: chaitin/safeline-detector:3.15.3
     volumes:
     - ${SAFELINE_DIR}/resources/detector:/resources/detector
     - ${SAFELINE_DIR}/logs/detector:/logs/detector
@@ -58,9 +56,8 @@ services:
     restart: always
     networks:
       1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.6
-    image: chaitin/safeline-mario:3.15.2
+        ipv4_address: ${SUBNET_PREFIX}.236
+    image: chaitin/safeline-mario:3.15.3
     volumes:
     - ${SAFELINE_DIR}/resources/mario:/resources/mario
     - ${SAFELINE_DIR}/logs/mario:/logs/mario
@@ -77,7 +74,7 @@ services:
   safeline-tengine:
     container_name: ${CONTAINER_NAME}-tengine
     restart: always
-    image: chaitin/safeline-tengine:3.15.2
+    image: chaitin/safeline-tengine:3.15.3
     volumes:
     - ${SAFELINE_DIR}/resources/nginx:/etc/nginx
     - ${SAFELINE_DIR}/resources/management:/resources/management
@@ -87,7 +84,7 @@ services:
     - ${SAFELINE_DIR}/resources/cache:/usr/local/nginx/cache
     - /etc/resolv.conf:/etc/resolv.conf
     environment:
-    - MGT_API=https://${SUBNET_PREFIX}.4:1443/api/publish/server
+    - MGT_API=https://${SUBNET_PREFIX}.234:1443/api/publish/server
     ulimits:
       nofile: 131072
     network_mode: host
@@ -99,9 +96,8 @@ services:
     restart: always
     networks:
       1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.8
-    image: chaitin/safeline-fvm-manager:3.15.2
+        ipv4_address: ${SUBNET_PREFIX}.238
+    image: chaitin/safeline-fvm-manager:3.15.3
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ${SAFELINE_DIR}/logs:/logs
@@ -118,8 +114,7 @@ services:
     restart: always
     networks:
       1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.2
+        ipv4_address: ${SUBNET_PREFIX}.232
     image: postgres:15.4-bookworm
     volumes:
     - ${SAFELINE_DIR}/resources/postgres/data:/var/lib/postgresql/data
@@ -136,13 +131,3 @@ services:
 networks:
   1panel-network:
     external: true
-  safeline-ce:
-    name: safeline-ce
-    driver: bridge
-    ipam:
-      driver: default
-      config:
-      - gateway: ${SUBNET_PREFIX:?SUBNET_PREFIX required}.1
-        subnet: ${SUBNET_PREFIX}.0/24
-    driver_opts:
-      com.docker.network.bridge.name: safeline-ce
