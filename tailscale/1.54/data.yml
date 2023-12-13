@@ -84,3 +84,10 @@ additionalProperties:
       labelZh: 启用用户空间网络 (true/false)
       required: false
       type: text
+    - default: ''
+      edit: true
+      envKey: TS_EXTRA_ARGS
+      labelEn: Any other flags for tailscaled (--login-server=https://login.example.com)
+      labelZh: 更多命令参数 (--login-server=https://login.example.com)
+      required: false
+      type: text
