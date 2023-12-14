@@ -16,7 +16,9 @@
   - `/var/run/docker.sock`的相关映射
  ***
 - 可调整参数
-  - `/www/data/1panel-data:/opt`                        文件存储映射
+> **推荐使用/opt路径，否则有些调用本地文件的应用可能出现异常**
+  - `/opt:/opt`                        文件存储映射
+  - `/root:/root`                        文件存储映射
   - `TZ=Asia/Shanghai`                        时区设置
   - `1panel`                          容器名
   - `/var/lib/docker/volumes:/var/lib/docker/volumes` 存储卷映射
