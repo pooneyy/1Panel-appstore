@@ -8,8 +8,8 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - default: ./data
-          edit: true
+        - default: /opt
+          disabled: true
           envKey: DATA_PATH
           labelEn: Data storage folder
           labelZh: 数据存放文件夹
