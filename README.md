@@ -2,7 +2,7 @@
 
 [**点我打赏，用爱发电**](https://afdian.net/a/dockerapps)
 
-[![**点我打赏，用爱发电**](./docs/afdian-logo.png)](https://afdian.net/a/dockerapps)
+[![**点我打赏，用爱发电**](https://github.com/okxlin/appstore/raw/localApps/docs/afdian-logo.png)](https://afdian.net/a/dockerapps)
 
 * * *
 ## 目录
@@ -31,7 +31,7 @@
 ## 免责声明
 
 ### 1. 镜像容器适配
-本项目仅针对原`docker`镜像容器运行进行针对`1panel`应用商店的适配。我们不对任何原始镜像的有效性做出任何明示或暗示的保证或声明，并且不对使用本仓库应用所造成的任何影响负责。用户在使用本项目时应自行承担风险。
+本项目仅针对原`docker`镜像容器运行进行针对`1Panel`应用商店的适配。我们不对任何原始镜像的有效性做出任何明示或暗示的保证或声明，并且不对使用本仓库应用所造成的任何影响负责。用户在使用本项目时应自行承担风险。
 
 ### 2. 法律遵守
 用户在使用本仓库时必须遵守所在国家与地区的法律法规。某些应用可能受到特定国家法律的限制，用户需自行了解并遵守相关法律要求。本仓库不对用户违反法律法规所产生的任何后果负责。
@@ -65,11 +65,10 @@
 >> - (本仓库已添加)自建：https://github.com/hunshcn/gh-proxy
 >> - ~~https://ghproxy.com~~
 >> - https://mirror.ghproxy.com
->> - https://gh-proxy.com
 
 #### 2.1.1 使用 git 命令获取应用
 
-`1panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
+`1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
 git clone -b localApps https://mirror.ghproxy.com/https://github.com/okxlin/appstore /opt/1panel/resource/apps/local/appstore-localApps
 
@@ -82,7 +81,7 @@ rm -r /opt/1panel/resource/apps/local/appstore-localApps
 
 #### 2.1.2 使用压缩包方式获取应用
 
-`1panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
+`1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
 wget -P /opt/1panel/resource/apps/local https://mirror.ghproxy.com/https://github.com/okxlin/appstore/archive/refs/heads/localApps.zip
 
@@ -101,7 +100,7 @@ rm /opt/1panel/resource/apps/local/localApps.zip
 
 #### 2.2.1 使用 git 命令获取应用
 
-`1panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
+`1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
 git clone -b localApps https://github.com/okxlin/appstore /opt/1panel/resource/apps/local/appstore-localApps
 
@@ -114,7 +113,7 @@ rm -r /opt/1panel/resource/apps/local/appstore-localApps
 
 #### 2.2.2 使用压缩包方式获取应用
 
-`1panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
+`1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
 wget -P /opt/1panel/resource/apps/local https://github.com/okxlin/appstore/archive/refs/heads/localApps.zip
 
@@ -136,7 +135,9 @@ rm /opt/1panel/resource/apps/local/localApps.zip
 
 **但是支持直接终端运行。**
 
-以rustdesk为例
+> 本仓库应用基本支持直接 `docker-compose up` 运行
+
+以`rustdesk`为例
 
 ```shell
 # 进入 rustdesk 的最新版本目录
@@ -158,4 +159,4 @@ cat ./data/hbbs/id_ed25519.pub
 
 ## 4. 应用一览图
 
-![](./docs/app-list.png)
+![](https://github.com/okxlin/appstore/raw/localApps/docs/app-list.png)
