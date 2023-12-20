@@ -11,6 +11,6 @@ services:
       - /root:/root
     environment:
       - TZ=${TIME_ZONE}
-    image: moelin/1panel:v1.9.1
+    image: moelin/1panel:v1.9.2
     labels:  
       createdBy: "Apps"
