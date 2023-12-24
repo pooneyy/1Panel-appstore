@@ -9,7 +9,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:5231"
     volumes:
       - "${DATA_PATH}:/var/opt/slash"
-    image: yourselfhosted/slash:0.5.0
+    image: yourselfhosted/slash:0.5.1
     labels:  
       createdBy: "Apps"
 
