@@ -1,25 +1,23 @@
 additionalProperties:
   formFields:
-    - child:
+    - default: mysql
+      envKey: PANEL_DB_TYPE
+      labelEn: Database Service
+      labelZh: 数据库服务
+      required: true
+      type: apps
+      values:
+        - label: MySQL
+          value: mysql
+        - label: LocalMySQL
+          value: localmysql
+      child:
         default: ""
         envKey: PANEL_DB_HOST
         labelEn: Database Service
         labelZh: 数据库服务
         required: true
         type: service
-      default: mysql
-      labelEn: Database Service
-      labelZh: 数据库服务
-      params:
-        - envKey: SEAFILE_DB_PORT
-          key: mysql
-          type: param
-          value: "3306"
-      required: true
-      type: apps
-      values:
-        - label: MySQL
-          value: mysql
     - default: mysql_root_password
       envKey: PANEL_DB_ROOT_PASSWORD
       labelEn: Database root password
@@ -70,14 +68,24 @@ additionalProperties:
       labelZh: 时区
       required: true
       type: text
-    - default: ""
-      edit: true
-      envKey: MEMCACHED_HOST
-      key: memcached
+    - default: memcached
+      envKey: MEMCACHED_TYPE
       labelEn: Memcached Service
       labelZh: Memcached 服务
       required: true
-      type: service
+      type: apps
+      values:
+        - label: Memcached
+          value: memcached
+        - label: LocalMemcached
+          value: localmemcached
+      child:
+        default: ""
+        envKey: MEMCACHED_HOST
+        labelEn: Memcached Service
+        labelZh: Memcached 服务
+        required: true
+        type: service
     - default: example.seatable.com
       edit: true
       envKey: SERVER_HOSTNAME
