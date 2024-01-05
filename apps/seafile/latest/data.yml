@@ -9,6 +9,8 @@ additionalProperties:
       values:
         - label: MySQL
           value: mysql
+        - label: LocalMySQL
+          value: localmysql
       child:
         default: ""
         envKey: PANEL_DB_HOST
@@ -76,7 +78,7 @@ additionalProperties:
           value: localmemcached
       child:
         default: ""
-        envKey: MMEMCACHED_HOST
+        envKey: MEMCACHED_HOST
         labelEn: Memcached Service
         labelZh: Memcached 服务
         required: true
