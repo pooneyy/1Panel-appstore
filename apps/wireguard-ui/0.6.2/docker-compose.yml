@@ -1,21 +1,5 @@
 version: "3"
 services:
-  wireguard:
-    container_name: ${CONTAINER_NAME}-wireguard
-    restart: always
-    networks:
-      - 1panel-network
-    cap_add:
-      - NET_ADMIN
-    volumes:
-      - ${DATA_PATH}/config:/config
-    ports:
-      - "${PANEL_APP_PORT_HTTP}:5000"
-      - "${WIREGUARD_PORT}:51820/udp"
-    image: linuxserver/wireguard:latest
-    labels:  
-      createdBy: "Apps"
-
   wireguard-ui:
     container_name: ${CONTAINER_NAME}
     restart: always
@@ -37,11 +21,27 @@ services:
     volumes:
       - ${DATA_PATH}/db:/app/db
       - ${DATA_PATH}/config:/etc/wireguard
-    image: ngoduykhanh/wireguard-ui:0.6.0
+    image: ngoduykhanh/wireguard-ui:0.6.2
     logging:
       driver: json-file
       options:
         max-size: 50m
+    labels:  
+      createdBy: "Apps"
+
+  wireguard:
+    container_name: ${CONTAINER_NAME}-wireguard
+    restart: always
+    networks:
+      - 1panel-network
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ${DATA_PATH}/config:/config
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:5000"
+      - "${WIREGUARD_PORT}:51820/udp"
+    image: linuxserver/wireguard:latest
     labels:  
       createdBy: "Apps"
 
