@@ -1,3 +1,6 @@
+ 中文 | [English](https://github.com/okxlin/appstore/blob/localApps/README-en.md)
+***
+
 ## 打赏链接
 
 [**点我打赏，用爱发电**](https://afdian.net/a/dockerapps)
@@ -8,7 +11,6 @@
 ## 目录
 
 - [打赏链接](#打赏链接)
-- [目录](#目录)
 - [免责声明](#免责声明)
   - [1. 镜像容器适配](#1-镜像容器适配)
   - [2. 法律遵守](#2-法律遵守)
@@ -63,7 +65,6 @@
 
 > GitHub加速方式
 >> - (本仓库已添加)自建：https://github.com/hunshcn/gh-proxy
->> - ~~https://ghproxy.com~~
 >> - https://mirror.ghproxy.com
 
 #### 2.1.1 使用 git 命令获取应用
@@ -74,7 +75,7 @@ git clone -b localApps https://mirror.ghproxy.com/https://github.com/okxlin/apps
 
 cp -rf /opt/1panel/resource/apps/local/appstore-localApps/apps/* /opt/1panel/resource/apps/local/
 
-rm -r /opt/1panel/resource/apps/local/appstore-localApps
+rm -rf /opt/1panel/resource/apps/local/appstore-localApps
 ```
 
 然后应用商店刷新本地应用即可。
@@ -89,9 +90,9 @@ unzip -o -d /opt/1panel/resource/apps/local/ /opt/1panel/resource/apps/local/loc
 
 cp -rf /opt/1panel/resource/apps/local/appstore-localApps/apps/* /opt/1panel/resource/apps/local/
 
-rm -r /opt/1panel/resource/apps/local/appstore-localApps
+rm -rf /opt/1panel/resource/apps/local/appstore-localApps
 
-rm /opt/1panel/resource/apps/local/localApps.zip
+rm -rf /opt/1panel/resource/apps/local/localApps.zip
 ```
 
 然后应用商店刷新本地应用即可。
@@ -106,7 +107,7 @@ git clone -b localApps https://github.com/okxlin/appstore /opt/1panel/resource/a
 
 cp -rf /opt/1panel/resource/apps/local/appstore-localApps/apps/* /opt/1panel/resource/apps/local/
 
-rm -r /opt/1panel/resource/apps/local/appstore-localApps
+rm -rf /opt/1panel/resource/apps/local/appstore-localApps
 ```
 
 然后应用商店刷新本地应用即可。
@@ -121,9 +122,9 @@ unzip -o -d /opt/1panel/resource/apps/local/ /opt/1panel/resource/apps/local/loc
 
 cp -rf /opt/1panel/resource/apps/local/appstore-localApps/apps/* /opt/1panel/resource/apps/local/
 
-rm -r /opt/1panel/resource/apps/local/appstore-localApps
+rm -rf /opt/1panel/resource/apps/local/appstore-localApps
 
-rm /opt/1panel/resource/apps/local/localApps.zip
+rm -rf /opt/1panel/resource/apps/local/localApps.zip
 ```
 
 然后应用商店刷新本地应用即可。
