@@ -1,3 +1,14 @@
+# 使用说明
+
+- 账户密码
+```
+username: admin@sun.cc
+password: 12345678
+```
+
+# 原始相关
+***
+
 # Sun-Panel
 Server, NAS navigation panel, Homepage, Browser homepage.
 <br>
@@ -124,4 +135,4 @@ hslr/sun-panel
 - [Rock.L](https://github.com/gitlyp)
 
 ## LICENSE
-[MIT](./LICENSE)
+[MIT](https://github.com/hslr-s/sun-panel/blob/master/LICENSE)
