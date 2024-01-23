@@ -31,14 +31,14 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - default: true
+        - default: 'true'
           edit: true
           envKey: MULTITHREAD_SWITCH
           labelEn: Improves performance in multi-threaded CPU environments (true / false)
           labelZh: 是否启用 CPU 多线程优化 (true / false)
           required: true
           type: text
-        - default: false
+        - default: 'false'
           edit: true
           envKey: PUBLIC_SWITCH
           labelEn: Setup server as a community server (true / false)
@@ -60,7 +60,7 @@ additionalProperties:
           required: false
           rule: paramPort
           type: text
-        - default: false
+        - default: 'false'
           edit: true
           envKey: UPDATE_SWITCH
           labelEn: Whether the server should be update each time start (true / false)
@@ -98,7 +98,7 @@ additionalProperties:
           required: false
           rule: paramComplexity
           type: password
-        - default: false
+        - default: 'false'
           edit: true
           envKey: RCON_SWITCH
           labelEn: Enable RCON (true / false)
