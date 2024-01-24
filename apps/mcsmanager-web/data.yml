@@ -1,14 +1,14 @@
 name: MCSManager Web
 tags:
-    - 工具
+    - 休闲游戏
 title: 支持大部分游戏服务端和控制台程序的管理面板(前端)
-type: 工具
+type: 休闲游戏
 description: 支持大部分游戏服务端和控制台程序的管理面板(前端)
 additionalProperties:
     key: mcsmanager-web
     name: MCSManager Web
     tags:
-        - Tool
+        - Game
     shortDescZh: 支持大部分游戏服务端和控制台程序的管理面板(前端)
     shortDescEn: Distributed, Docker-supported, Multilingual, and Lightweight control panel for Minecraft server and more (webui)
     type: tool
