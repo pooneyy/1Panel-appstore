@@ -16,13 +16,6 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
-        - default: ./data
-          edit: true
-          envKey: DATA_PATH
-          labelEn: Data folder path
-          labelZh: 数据文件夹路径
-          required: true
-          type: text
         - default: 32
           edit: true
           envKey: MAX_PLAYERS
