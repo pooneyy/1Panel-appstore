@@ -1,19 +1,3 @@
-# 使用说明
-
-## 数据文件夹授权
-
-- 1、**必要操作：** 首次安装完成后，进入已安装应用界面，点击跳转数据目录，修改目录下的`data`文件夹为`1000`用户和用户组。
-
-命令行修改则类似如下，路径按需修改：
-```
-chown -R 1000:1000 /opt/1panel/apps/local/palworld-server/palworld-server/data
-```
-
-- 2、回到已安装应用界面，重建应用。
-
-# 原始相关
-***
-
 # palworld-docker
 
 [![Check Update](https://github.com/KagurazakaNyaa/palworld-docker/actions/workflows/update.yml/badge.svg)](https://github.com/KagurazakaNyaa/palworld-docker/actions/workflows/update.yml)

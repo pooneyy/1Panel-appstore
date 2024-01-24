@@ -10,7 +10,7 @@ services:
       - ${PANEL_APP_PORT_RCON}:${PANEL_APP_PORT_RCON}/tcp
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ${DATA_PATH}:/opt/palworld/Pal/Saved
+      - ./data:/opt/palworld/Pal/Saved
     environment:
       - GAME_PORT=${PANEL_APP_PORT_HTTP}
       - MAX_PLAYERS=${MAX_PLAYERS}
