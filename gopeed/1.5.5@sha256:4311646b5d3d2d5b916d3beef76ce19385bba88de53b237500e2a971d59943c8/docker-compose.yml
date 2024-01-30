@@ -9,7 +9,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:9999"
     volumes:
       - "${DOWNLOAD_PATH}:/root/Downloads"
-    image: liwei2633/gopeed:v1.5.3@sha256:a170395b06a62f791edda21263abb12eb2ccb58cb4ffe0fed91fda832399074f
+    image: liwei2633/gopeed:v1.5.5@sha256:4311646b5d3d2d5b916d3beef76ce19385bba88de53b237500e2a971d59943c8
     labels:  
       createdBy: "Apps"
 
