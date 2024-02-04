@@ -10,7 +10,7 @@
 #
 # https://myheadscale.example.com:443
 #
-server_url: https://myheadscale.example.com:443
+server_url: https://myheadscale.example.com:443 #提示：最终的服务器连接，改我
 
 # Address to listen to / bind to on the server
 #
@@ -97,7 +97,7 @@ derp:
     # This flag can be used, so the DERP map entry for the embedded DERP server is not written automatically,
     # it enables the creation of your very own DERP map entry using a locally available file with the parameter DERP.paths
     # If you enable the DERP server and set this to false, it is required to add the DERP server to the DERP map using DERP.paths
-    automatically_add_embedded_derp_region: false
+    automatically_add_embedded_derp_region: true
 
     # For better connection stability (especially when using an Exit-Node and DNS is not working),
     # it is possible to optionall add the public IPv4 and IPv6 address to the Derp-Map using:
@@ -117,8 +117,8 @@ derp:
   # paths:
   #   - /etc/headscale/derp-example.yaml
   paths: []
-  #paths:
-  #  - /etc/headscale/derp.yaml
+  #paths:  #提示：这个区域取消注释，则启用derp转发配置，然后要把上一行加#号注释掉
+  #  - /etc/headscale/derp.yaml #提示：这个区域取消注释，则启用derp转发配置
 
   # If enabled, a worker will be set up to periodically
   # refresh the given sources and update the derpmap
@@ -217,7 +217,7 @@ dns_config:
   override_local_dns: false
 
   # List of DNS servers to expose to clients.
-  nameservers:
+  nameservers: #提示：这里是DNS相关，自己考虑要不要改
     - 223.5.5.5
     - 1.1.1.1
 
@@ -265,7 +265,7 @@ dns_config:
   # `base_domain` must be a FQDNs, without the trailing dot.
   # The FQDN of the hosts will be
   # `hostname.user.base_domain` (e.g., _myhost.myuser.example.com_).
-  base_domain: example.com
+  base_domain: example.com #提示：tailscale局域网的自定义域名，随便设置
 
 # Unix socket used for the CLI to connect without authentication
 # Note: for production you will want to set this to something like:
