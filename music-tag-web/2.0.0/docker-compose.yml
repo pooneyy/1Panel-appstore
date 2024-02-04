@@ -8,9 +8,10 @@ services:
     ports:
       - "${PANEL_APP_PORT_HTTP}:8001"
     volumes:
-      - "${DATA_PATH}:/app/media:z"
+      - "${DATA_PATH}:/app/media:rw"
+      - "./config:/app/data"
     command: /start
-    image: registry.cn-hangzhou.aliyuncs.com/charles0519/music_tag_web:1.2.5
+    image: xhongc/music_tag_web:2.0.0
     labels:  
       createdBy: "Apps"
 
