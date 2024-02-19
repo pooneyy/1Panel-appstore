@@ -1,21 +1,5 @@
 version: "3"
 services:
-  wireguard:
-    container_name: ${CONTAINER_NAME}-wireguard
-    restart: always
-    networks:
-      - 1panel-network
-    cap_add:
-      - NET_ADMIN
-    volumes:
-      - ${DATA_PATH}/config:/config
-    ports:
-      - "${PANEL_APP_PORT_HTTP}:5000"
-      - "${WIREGUARD_PORT}:51820/udp"
-    image: linuxserver/wireguard:latest
-    labels:  
-      createdBy: "Apps"
-
   wireguard-ui:
     container_name: ${CONTAINER_NAME}
     restart: always
@@ -32,11 +16,13 @@ services:
       - WGUI_USERNAME=${WEBUI_USER}
       - WGUI_PASSWORD=${WEBUI_PWD}
       - WG_CONF_TEMPLATE
-      - WGUI_MANAGE_START=true
+      - WGUI_MANAGE_START=false
       - WGUI_MANAGE_RESTART=true
+      - WGUI_SERVER_LISTEN_PORT=${PANEL_APP_PORT_WIREGUARD}
+      - BIND_ADDRESS=0.0.0.0:${PANEL_APP_PORT_HTTP}
     volumes:
-      - ${DATA_PATH}/db:/app/db
-      - ${DATA_PATH}/config:/etc/wireguard
+      - ./data/db:/app/db
+      - ./data/config:/etc/wireguard
     image: ngoduykhanh/wireguard-ui:latest
     logging:
       driver: json-file
@@ -45,7 +31,27 @@ services:
     labels:  
       createdBy: "Apps"
 
+  wireguard:
+    container_name: ${CONTAINER_NAME}-wireguard
+    restart: always
+    networks:
+      - 1panel-network
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./data/config:/config
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}"
+      - "${PANEL_APP_PORT_WIREGUARD}:${PANEL_APP_PORT_WIREGUARD}/udp"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - PEERS=1
+      - SERVERPORT=${PANEL_APP_PORT_WIREGUARD}
+    image: linuxserver/wireguard:latest
+    labels:  
+      createdBy: "Apps"
+
 networks:  
   1panel-network:  
     external: true
-

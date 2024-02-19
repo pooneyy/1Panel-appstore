@@ -10,19 +10,12 @@ additionalProperties:
           type: number
         - default: 51820
           edit: true
-          envKey: WIREGUARD_PORT
+          envKey: PANEL_APP_PORT_WIREGUARD
           labelEn: Wireguard port
-          labelZh: Wireguard端口
+          labelZh: Wireguard 端口
           required: true
           rule: paramPort
           type: number
-        - default: ./data
-          edit: true
-          envKey: DATA_PATH
-          labelEn: Data folder path
-          labelZh: 数据文件夹路径
-          required: true
-          type: text
         - default: "admin"
           edit: true
           envKey: WEBUI_USER
@@ -35,7 +28,7 @@ additionalProperties:
           envKey: WEBUI_PWD
           labelEn: Webui password
           labelZh: 网页密码
-          random: false
-          required: false
+          random: true
+          required: true
           rule: paramComplexity
           type: password
