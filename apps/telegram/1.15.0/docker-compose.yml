@@ -13,7 +13,7 @@ services:
       - VNC_PW=${HTTP_PWD}
     shm_size: ${MEM_USE}
     tty: true
-    image: kasmweb/telegram:1.14.0
+    image: kasmweb/telegram:1.15.0
     labels:  
       createdBy: "Apps"
 
