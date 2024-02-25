@@ -10,7 +10,7 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /etc/timezone:/etc/timezone:ro
-    image: imsyy/splayer:v2.0.3
+    image: imsyy/splayer:v2.0.4
     labels:  
       createdBy: "Apps"
 
