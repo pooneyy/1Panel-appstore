@@ -15,3 +15,10 @@ additionalProperties:
           labelZh: 数据文件夹路径
           required: true
           type: text
+        - default: 
+          edit: true
+          envKey: ADMIN_TOKEN
+          labelEn: ADMIN_TOKEN
+          labelZh: ADMIN_TOKEN
+          required: true
+          type: text
