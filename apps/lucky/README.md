@@ -119,15 +119,3 @@ Lucky 的核心程序完全采用 Golang 实现，具有高效、稳定、跨平
   ```bash
   docker run -d --name lucky --restart=always --net=host -v /root/luckyconf:/goodluck gdy666/lucky
   ```
-
-
-
-
-
-
-
-
-
-
-
-
