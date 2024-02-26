@@ -1,16 +1,16 @@
-name: dbgate
+name: DbGate
 tags:
-    - 工具
-title: 基于 Web 的用户界面，用于管理和浏览 SQL 数据库数据
-type: 工具
-description: 基于 Web 的用户界面，用于管理和浏览 SQL 数据库数据
+    - 开发工具
+title: 跨平台的数据库管理器
+type: 开发工具
+description: 跨平台的数据库管理器
 additionalProperties:
     key: dbgate
-    name: Changedetection.io
+    name: DbGate
     tags:
-        - Tool
-    shortDescZh: 基于 Web 的用户界面，用于管理和浏览 SQL 数据库数据
-    shortDescEn: Web based UI for managing and exploring SQL database data 
+        - DevTool
+    shortDescZh: 跨平台的数据库管理器
+    shortDescEn: Cross-platform database manager
     type: tool
     crossVersionUpdate: true
     limit: 0
