@@ -1,0 +1,20 @@
+name: dbgate
+tags:
+    - 工具
+title: 基于 Web 的用户界面，用于管理和浏览 SQL 数据库数据
+type: 工具
+description: 基于 Web 的用户界面，用于管理和浏览 SQL 数据库数据
+additionalProperties:
+    key: dbgate
+    name: Changedetection.io
+    tags:
+        - Tool
+    shortDescZh: 基于 Web 的用户界面，用于管理和浏览 SQL 数据库数据
+    shortDescEn: Web based UI for managing and exploring SQL database data 
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://dbgate.org
+    github: https://github.com/dbgate/dbgate
+    document: https://dbgate.org/docs/
