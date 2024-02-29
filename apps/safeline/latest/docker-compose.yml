@@ -71,7 +71,7 @@ services:
     image: chaitin/safeline-tengine:latest
     volumes:
     - /etc/localtime:/etc/localtime:ro
-    - /etc/resolv.conf:/etc/resolv.conf
+    - /etc/resolv.conf:/etc/resolv.conf:ro
     - ${SAFELINE_DIR}/resources/nginx:/etc/nginx
     - ${SAFELINE_DIR}/resources/detector:/resources/detector
     - ${SAFELINE_DIR}/logs/nginx:/var/log/nginx
@@ -95,6 +95,11 @@ services:
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ${SAFELINE_DIR}/resources/luigi:/app/data
+    environment:
+      - MGT_IP=${SUBNET_PREFIX}.234
+    depends_on:
+      - safeline-detector
+      - safeline-mgt
     labels:
       createdBy: Apps
 
