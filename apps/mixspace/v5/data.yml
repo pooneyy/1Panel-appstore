@@ -15,7 +15,7 @@ additionalProperties:
       required: true
       rule: paramExtUrl
       type: text
-    - default: Np2qgqtiUayA857GpuVI0Wtg
+    - default: Np2qgqtiUayA857
       envKey: JWT_SECRET
       labelEn: Password
       labelZh: JWT密钥（16到32位字符，请一定修改至要求！）
