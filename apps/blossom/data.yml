@@ -1,0 +1,13 @@
+additionalProperties:
+  key: blossom
+  name: Blossom云端双链笔记
+  tags:
+    - Tool
+  shortDescZh: Blossom 云端双链笔记 完全开源，私有部署，你的笔记不再宕机。
+  shortDescEn: Blossom Cloud-Dual-Chain Storing Notebook, Fully open source, privately deployable, your notes will no longer experience downtime.
+  type: tool
+  crossVersionUpdate: True
+  limit: 0
+  website: https://www.wangyunf.com/blossom-doc/index
+  github: https://github.com/blossom-editor/blossom
+  document: https://www.wangyunf.com/blossom-doc/index
