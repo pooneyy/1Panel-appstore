@@ -1,3 +1,18 @@
+# 使用说明
+
+**管理页面及初始账户密码等通过查看容器日志获取。**
+
+- 日志样本展示
+```
+blossom  | 启动成功 [xxxx-xx-xx xx:xx:xx], 可使用客户端登录, 默认用户名/密码: blos/blos
+blossom  | 下载地址: https://github.com/blossom-editor/blossom/releases
+blossom  | 文档地址: https://www.wangyunf.com/blossom-doc/index
+blossom  | 博客端访问地址: http://IP:端口(域名)/blog/#/home
+blossom  | 客户端访问地址: http://IP:端口(域名)/editor/#/settingindex
+```
+
+# 原始相关
+***
 <p align="center">
 <img src="https://github.com/blossom-editor/blossom/raw/dev/doc/imgs/blossom_name.png" height="auto">
 </p>
