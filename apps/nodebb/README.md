@@ -1,13 +1,7 @@
 # 介绍
 
-NodeBB 是一款由Node.js开发的、开源的、现代化的论坛程序
+NodeBB 是一款由 Node.js 开发的、开源的、现代化的论坛程序
 
-
-## 所使用docker镜像相关:
-
-> 项目链接
->> - https://hub.docker.com/r/elestio/nodebb
->> - https://github.com/elestio-examples/nodebb
 
 ## 数据库连接问题
 
