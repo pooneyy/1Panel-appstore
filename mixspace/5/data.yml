@@ -1,0 +1,37 @@
+additionalProperties:
+  formFields:
+    - default: 2333
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 应用端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: example.com
+      envKey: ALLOWED_ORIGINS
+      labelEn: Allowed_Origins
+      labelZh: 允许域名（前端绑定域名，不需要https://，多个使用英文逗号分割）
+      required: true
+      type: text
+    - default: Np2qgqtiUayA857
+      envKey: JWT_SECRET
+      labelEn: Password
+      labelZh: JWT密钥（16到32位字符，请一定修改至要求！）
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: 
+      envKey: ENCRYPT_KEY
+      labelEn: ENCRYPT_KEY
+      labelZh: 加密密钥（非特殊需求不建议填写）
+      required: false
+      rule: paramCommon
+      type: password
+    - default: 
+      envKey: ENCRYPT_ENABLE
+      labelEn: ENCRYPT_ENABLE
+      labelZh: 是否开启加密（true或false，需要填写加密密钥）
+      required: false
+      type: text
