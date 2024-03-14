@@ -2,7 +2,7 @@ version: '3.8'
 services:
   mixspace:
     container_name: ${CONTAINER_NAME}
-    image: innei/mx-server:5
+    image: innei/mx-server:latest
     command: bash ./docker-run.sh
     environment:
       - TZ=${TIME_ZONE}

@@ -4,8 +4,7 @@ Mix Space 是一个一款简洁而不简单的个人博客系统，它够快，�
 
 ## 注意事项
 
-在此处你安装的是Mix-Space的后端，你还需要参照官方文档中的[前端主题](https://mx-space.js.org/themes
-)部分完成前端部署
+在此处你安装的是Mix-Space的后端，你还需要参照官方文档中的 [前端主题](https://mx-space.js.org/themes) 部分完成前端部署
 
 ## 主要功能：
 
