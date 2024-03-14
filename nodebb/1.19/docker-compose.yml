@@ -9,7 +9,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:4567"
     volumes:
       - ./data:/usr/src/app/public/uploads
-    image: nodebb/docker:latest
+    image: nodebb/docker:1.19
     labels:  
       createdBy: "Apps"
     
