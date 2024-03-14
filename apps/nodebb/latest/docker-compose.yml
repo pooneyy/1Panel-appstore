@@ -1,0 +1,22 @@
+version: "3.3"
+services:
+  nodebb:
+    container_name: ${CONTAINER_NAME}
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:4567"
+    user: 0:0
+    image: elestio/nodebb:latest
+    restart: always
+    networks:
+      - 1panel-network
+    environment:
+      URL: "https://${DOMAIN}"
+    volumes:
+      - ./nodebb-files:/usr/src/app/public/uploads
+      # - ./nodebb-config/config.json:/usr/src/app/config.json
+      - ./entrypoint.sh:/usr/src/app/entrypoint.sh
+
+    
+networks:  
+  1panel-network:  
+    external: true

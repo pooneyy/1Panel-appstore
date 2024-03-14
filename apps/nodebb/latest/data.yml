@@ -1,0 +1,17 @@
+additionalProperties:
+  formFields:
+    - default: 4567
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 应用端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: example.com
+      envKey: DOMAIN
+      labelEn: Allowed_Origins
+      labelZh: 绑定域名
+      required: true
+      rule: paramExtUrl
+      type: text
