@@ -3,7 +3,7 @@ services:
   tianji:
     container_name: ${CONTAINER_NAME}
     restart: unless-stopped
-    image: moonrailgun/tianji:1.6.0
+    image: moonrailgun/tianji:1.7.3
     networks:
       - 1panel-network
     ports:
