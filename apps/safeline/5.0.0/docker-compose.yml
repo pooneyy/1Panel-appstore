@@ -6,12 +6,14 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.234
-    image: chaitin/safeline-mgt:4.4.2
+    image: chaitin/safeline-mgt:5.0.0
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - ${SAFELINE_DIR}/resources/mgt:/app/data
     ports:
     - ${PANEL_APP_PORT_HTTP:-9443}:1443
+    healthcheck:
+      test: curl -k -f https://localhost:1443/api/open/health
     environment:
     - MGT_PG=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-pg/safeline-ce?sslmode=disable
     dns: 
@@ -37,7 +39,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.235
-    image: chaitin/safeline-detector:4.4.2
+    image: chaitin/safeline-detector:5.0.0
     volumes:
     - ${SAFELINE_DIR}/resources/detector:/resources/detector
     - ${SAFELINE_DIR}/logs/detector:/logs/detector
@@ -53,7 +55,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.236
-    image: chaitin/safeline-mario:4.4.2
+    image: chaitin/safeline-mario:5.0.0
     volumes:
     - ${SAFELINE_DIR}/resources/mario:/resources/mario
     - ${SAFELINE_DIR}/logs/mario:/logs/mario
@@ -68,7 +70,7 @@ services:
   safeline-tengine:
     container_name: ${CONTAINER_NAME}-tengine
     restart: always
-    image: chaitin/safeline-tengine:4.4.2
+    image: chaitin/safeline-tengine:5.0.0
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - /etc/resolv.conf:/etc/resolv.conf:ro
@@ -91,7 +93,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.237
-    image: chaitin/safeline-luigi:4.4.2
+    image: chaitin/safeline-luigi:5.0.0
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ${SAFELINE_DIR}/resources/luigi:/app/data
@@ -109,7 +111,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.238
-    image: chaitin/safeline-fvm:4.4.2
+    image: chaitin/safeline-fvm:5.0.0
     volumes:
       - /etc/localtime:/etc/localtime:ro
     labels:
@@ -121,7 +123,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.239
-    image: chaitin/safeline-bridge:4.4.2
+    image: chaitin/safeline-bridge:5.0.0
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run:/app/run
