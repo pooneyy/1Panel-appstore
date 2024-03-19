@@ -19,10 +19,11 @@ kcpBindPort = 7000
 #subDomainHost = "example.com"
 
 # tls
-tls.force = false
-#transport.tls.certFile = "/etc/frp/server.crt"
-#transport.tls.keyFile = "/etc/frp/server.key"
-#transport.tls.trustedCaFile = "/etc/frp/ca.crt"
+transport.tls.force = true
+#tls.force = false # 版本0.52.0到0.55.0用这个
+#transport.tls.certFile = "/etc/frp/ssl/server.crt"
+#transport.tls.keyFile = "/etc/frp/ssl/server.key"
+#transport.tls.trustedCaFile = "/etc/frp/ssl/ca.crt"
 
 # dashboard
 webServer.addr = "0.0.0.0"
