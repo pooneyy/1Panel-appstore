@@ -14,3 +14,10 @@ additionalProperties:
           labelZh: 端口 (由配置文件决定)
           required: true
           type: number
+        - default: ./data/ssl
+          edit: true
+          envKey: SSL_FOLDER_PATH
+          labelEn: Certificate folder path (corresponding to "/etc/frp/ssl" in container)
+          labelZh: 证书文件夹路径 (对应容器内 "/etc/frp/ssl")
+          required: true
+          type: text
