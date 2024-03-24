@@ -13,7 +13,7 @@ services:
       - verdaccio_data:/verdaccio
     environment:
       - VERDACCIO_PORT=4873
-    image: verdaccio/verdaccio:5.29.2
+    image: verdaccio/verdaccio:5.30.2
     labels:  
       createdBy: "Apps"
 
