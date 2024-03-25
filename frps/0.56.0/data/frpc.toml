@@ -22,6 +22,11 @@ transport.tls.enable = false
 # transport.tls.trustedCaFile = "ca.crt"
 # transport.tls.serverName = "example.com"
 
+# tls
+#transport.tls.certFile = "/etc/frp/ssl/client.crt"
+#transport.tls.keyFile = "/etc/frp/ssl/client.key"
+#transport.tls.trustedCaFile = "/etc/frp/ssl/ca.crt"
+
 [[proxies]]
 name = "rdp_tcp"
 type = "tcp"
