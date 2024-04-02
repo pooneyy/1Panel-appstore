@@ -9,7 +9,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:23333"
     volumes:
       - "${DATA_PATH}:/opt/mcsmanager/web/data"
-    image: alisaqaq/mcsmanager-web:9.9.0
+    image: alisaqaq/mcsmanager-web:10.1.0
     labels:  
       createdBy: "Apps"
 
