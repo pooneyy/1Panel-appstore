@@ -1,6 +1,6 @@
 additionalProperties:
   key: smokeping
-  name: Smokeping
+  name: SmokePing
   tags:
     - Tool
   shortDescZh: 一个豪华的延迟测量工具
