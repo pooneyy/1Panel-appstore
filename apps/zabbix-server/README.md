@@ -9,7 +9,9 @@ password:zabbix
 
 ## 注意事项
 
-**注意：这是Zabbix-MySQL版本的，Zabbix 6.X的需求环境MySQL8**
+**注意：默认版本是Zabbix-MySQL版本的，Zabbix 6.X的需求环境MySQL8**
+
+**`postgresql`的版本，资源占用会小很多。**
 
 商店自带的`MySQL 8`的数据库格式设置与`Zabbix`需求有所不同，`zabbix-server-mysql`容器会提示存在错误。
 
