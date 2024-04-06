@@ -1,16 +1,5 @@
 version: '3'
 services:
-  nt-guacd:
-    container_name: ${CONTAINER_NAME}-guacd
-    restart: always
-    networks:
-      - 1panel-network
-    volumes:
-      - "${DATA_PATH}:/usr/local/next-terminal/data"
-    image: dushixiang/guacd:1.5.3
-    labels:  
-      createdBy: "Apps"
-
   next-terminal:
     container_name: ${CONTAINER_NAME}
     restart: always
@@ -29,6 +18,17 @@ services:
       GUACD_PORT: 4822
       SSHD_ENABLE: ${SSHD_SWITCH}
     image: dushixiang/next-terminal:v1.3.9
+    labels:  
+      createdBy: "Apps"
+
+  nt-guacd:
+    container_name: ${CONTAINER_NAME}-guacd
+    restart: always
+    networks:
+      - 1panel-network
+    volumes:
+      - "${DATA_PATH}:/usr/local/next-terminal/data"
+    image: dushixiang/guacd:1.5.4
     labels:  
       createdBy: "Apps"
 
