@@ -14,7 +14,7 @@ services:
             - driver: ${GPU_DRIVER_TYPE}
               count: all
               capabilities: [gpu]
-    image: registry.cn-beijing.aliyuncs.com/chatchat/chatchat:0.2.7
+    image: registry.cn-beijing.aliyuncs.com/chatchat/chatchat:0.2.10
     labels:  
       createdBy: "Apps"
 
