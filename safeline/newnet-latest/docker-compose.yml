@@ -163,7 +163,7 @@ services:
     environment:
     - POSTGRES_USER=safeline-ce
     - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-    command: [postgres, -c, max_connections=200]
+    command: [postgres, -c, max_connections=600]
     healthcheck:
       test: pg_isready -U safeline-ce -d safeline-ce
     labels:
