@@ -1,7 +1,7 @@
 version: '3'
 services:
   firefly:
-    image: "uusec/firefly:v3.0"
+    image: "uusec/firefly:v3.1"
     container_name: ${CONTAINER_NAME}
     restart: always
     devices:
