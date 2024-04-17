@@ -6,7 +6,7 @@ networks:
 
 services:
   blossom:
-    image: jasminexzzz/blossom:1.15.0
+    image: jasminexzzz/blossom:1.16.0
     container_name: ${CONTAINER_NAME}
     volumes:
       - ./bl/:/home/bl/
