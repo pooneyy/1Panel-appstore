@@ -1,3 +1,13 @@
+# 使用说明
+
+**镜像标签版本是不同的，不可以覆盖**
+
+- `latest`是下载了整合包，镜像体积比较大。
+- 数字版本的是安装好了会自动在线下载所需内容的。
+
+# 原始相关
+***
+
 # palworld-docker
 
 [![Check Update](https://github.com/KagurazakaNyaa/palworld-docker/actions/workflows/update.yml/badge.svg)](https://github.com/KagurazakaNyaa/palworld-docker/actions/workflows/update.yml)
