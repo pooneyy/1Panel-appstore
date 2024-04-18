@@ -64,6 +64,10 @@ services:
     - LOG_DIR=/logs/mario
     - GOGC=100
     - DATABASE_URL=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-pg/safeline-ce
+    logging:
+      options:
+        max-size: "100m"
+        max-file: "10"
     labels:
       createdBy: Apps
 
@@ -99,6 +103,10 @@ services:
       - ${SAFELINE_DIR}/resources/luigi:/app/data
     environment:
       - MGT_IP=${SUBNET_PREFIX}.234
+    logging:
+      options:
+        max-size: "100m"
+        max-file: "10"
     depends_on:
       - safeline-detector
       - safeline-mgt
@@ -114,6 +122,10 @@ services:
     image: chaitin/safeline-fvm:latest
     volumes:
       - /etc/localtime:/etc/localtime:ro
+    logging:
+      options:
+        max-size: "100m"
+        max-file: "10"
     labels:
       createdBy: Apps
 
