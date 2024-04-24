@@ -1,0 +1,15 @@
+additionalProperties:
+  crossVersionUpdate: 'true'
+  document: https://sscms.com/docs/
+  github: https://github.com/siteserver/cms
+  key: sscms
+  limit: 0
+  name: SSCMS 内容管理系统
+  shortDescEn: SiteServer CMS is an open source, free, enterprise-level, commercially
+    available CMS content management system.
+  shortDescZh: 开源免费、企业级、可商用的CMS内容管理系统
+  tags:
+    - WebSite
+    - Tool
+  type: tool
+  website: https://sscms.com/
