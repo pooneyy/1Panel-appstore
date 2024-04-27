@@ -1,11 +1,11 @@
-name: Pterodactyl
+name: Pterodactyl (翼龙中国版)
 tags:
     - 休闲游戏
 title: 一个免费的开源游戏服务器管理面板（前端）
 description: 一个免费的开源游戏服务器管理面板（前端）
 additionalProperties:
-    key: pterodactyl-panel
-    name: Pterodactyl
+    key: pterodactyl-china
+    name: Pterodactyl (翼龙中国版)
     tags:
         - Game
     shortDescZh: 一个免费的开源游戏服务器管理面板（前端）
@@ -13,7 +13,7 @@ additionalProperties:
     type: tool
     crossVersionUpdate: true
     limit: 0
-    recommend: 11
+    recommend: 0
     website: https://pterodactyl.top/
     github: https://github.com/pterodactyl-china/panel
     document: https://pterodactyl.top/
