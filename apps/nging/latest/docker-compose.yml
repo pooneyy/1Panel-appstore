@@ -4,10 +4,7 @@ services:
     image: admpub/nging:latest
     container_name: ${CONTAINER_NAME}
     restart: always
-    networks:
-      - 1panel-network
-    ports:
-      - "${PANEL_APP_PORT_HTTP}:9999"
+    network_mode: host
     volumes:
       - ./data/data/cache:/home/nging_linux_amd64/data/cache
       - ./data/data/ftpdir:/home/nging_linux_amd64/data/ftpdir
@@ -15,10 +12,6 @@ services:
       - ./data/data/sm2:/home/nging_linux_amd64/data/sm2
       - ./data/myconfig:/home/nging_linux_amd64/myconfig
       - ./data/public:/home/nging_linux_amd64/public
-    command: [ "-p", "9999", "-c", "myconfig/config.yaml" ]
+    command: [ "-p", "${PANEL_APP_PORT_HTTP}", "-c", "myconfig/config.yaml" ]
     labels:  
       createdBy: "Apps"
-
-networks:  
-  1panel-network:  
-    external: true
