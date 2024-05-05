@@ -10,7 +10,7 @@ services:
     volumes:
       - "${DATA_PATH}:/opt/app/backend/data"
       - "${UPLOAD_PATH}:/opt/app/frontend/public/img"
-    image: stonith404/pingvin-share:v0.23.1@sha256:77704fbac22d56e2e262ad73903b24ff8a0e0db6fd3534eed5f2893346616734
+    image: stonith404/pingvin-share:v0.24.1@sha256:10c535ad4e044afec12ee09eeee4951cc0e98831f9bf55ad9c4c7e163044ca78
     labels:  
       createdBy: "Apps"
 
