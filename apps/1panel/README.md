@@ -1,11 +1,12 @@
 # 使用说明
 
-### 镜像Github：https://github.com/okxlin/docker-1panel
+### 镜像 Github：https://github.com/okxlin/docker-1panel
 
-### 镜像Docker Hub：https://hub.docker.com/r/moelin/1panel
+### 镜像 Docker Hub：https://hub.docker.com/r/moelin/1panel
 
 如果更新了更高版本的镜像，实际是更新了对应版本的二进制程序，面板显示的相关版本还需要手动更新，具体操作可以查看[**Github**](https://github.com/okxlin/docker-1panel)。
 
+**不要点击容器化部署的 `1Panel` 右下角进行更新，应该拉取新镜像再更新**
 ***
 - 默认端口：`10086`
 - 默认账户：`1panel`
@@ -37,25 +38,28 @@ docker pull moelin/1panel:latest
 # 原始相关
 ***
 
-[README_EN.md](https://github.com/1Panel-dev/1Panel/blob/dev/README_EN.md)
 <p align="center"><a href="https://1panel.cn"><img src="http://1panel.oss-cn-hangzhou.aliyuncs.com/img/1panel-logo.png" alt="1Panel" width="300" /></a></p>
 <p align="center"><b>现代化、开源的 Linux 服务器运维管理面板</b></p>
 <p align="center">
-  <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="https://shields.io/github/license/1Panel-dev/1Panel" alt="License: GPL v3"></a>
+  <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="https://shields.io/github/license/1Panel-dev/1Panel?color=%231890FF" alt="License: GPL v3"></a>
   <a href="https://app.codacy.com/gh/1Panel-dev/1Panel?utm_source=github.com&utm_medium=referral&utm_content=1Panel-dev/1Panel&utm_campaign=Badge_Grade_Dashboard"><img src="https://app.codacy.com/project/badge/Grade/da67574fd82b473992781d1386b937ef" alt="Codacy"></a>
   <a href="https://github.com/1Panel-dev/1Panel/releases"><img src="https://img.shields.io/github/v/release/1Panel-dev/1Panel" alt="GitHub release"></a>
   <a href="https://github.com/1Panel-dev/1Panel"><img src="https://img.shields.io/github/stars/1Panel-dev/1Panel?color=%231890FF&style=flat-square" alt="Stars"></a>
-  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2F1Panel-dev%2F1Panel?ref=badge_shield"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2F1Panel-dev%2F1Panel.svg?type=shield" alt="FOSSA Status"></a>
+  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2F1Panel-dev%2F1Panel?ref=badge_shield"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2F1Panel-dev%2F1Panel.svg?type=shield" alt="FOSSA Status"></a><br>
+  [<a href="https://github.com/1Panel-dev/1Panel/blob/dev/docs/README_TW.md">中文(繁體)</a>] | [<a href="https://github.com/1Panel-dev/1Panel/blob/dev/docs/README_EN.md">English</a>] | [<a href="https://github.com/1Panel-dev/1Panel/blob/dev/docs/README_JP.md">日本語</a>]
 </p>
 
 ------------------------------
 
-1Panel 是一个现代化、开源的 Linux 服务器运维管理面板。1Panel 的功能和优势包括：
+1Panel 是新一代的 Linux 服务器运维管理面板。
 
-- **快速建站**：深度集成 Wordpress 和 [Halo](https://github.com/halo-dev/halo/)，域名绑定、SSL 证书配置等一键搞定；
-- **高效管理**：通过 Web 端轻松管理 Linux 服务器，包括主机监控、文件管理、数据库管理、容器管理等；
-- **安全可靠**：基于容器来管理和部署应用，最小漏洞暴露面，提供防火墙和日志审计等功能；
-- **一键备份**：支持一键备份和恢复，备份数据到各类云端存储，永不丢失。
+- **高效管理**：用户可以通过 Web 图形界面轻松管理 Linux 服务器，实现主机监控、文件管理、数据库管理、容器管理等功能；
+- **快速建站**：深度集成开源建站软件 WordPress 和 [Halo](https://github.com/halo-dev/halo/)，域名绑定、SSL 证书配置等操作一键搞定；
+- **应用商店**：精选上架各类高质量的开源工具和应用软件，协助用户轻松安装并升级；
+- **安全可靠**：基于容器管理并部署应用，实现最小的漏洞暴露面，同时提供防火墙和日志审计等功能；
+- **一键备份**：支持一键备份和恢复，用户可以将数据备份到各类云端存储介质，永不丢失。
+
+1Panel 三分钟速览：https://www.bilibili.com/video/BV1Mt421n7LZ/
 
 ## UI 展示
 
