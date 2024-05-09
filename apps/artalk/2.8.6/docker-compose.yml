@@ -9,7 +9,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:23366"
     volumes:
       - "${DATA_PATH}:/data"
-    image: artalk/artalk-go:2.8.5
+    image: artalk/artalk-go:2.8.6
     labels:  
       createdBy: "Apps"
 
