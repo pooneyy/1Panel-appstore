@@ -12,7 +12,7 @@ additionalProperties:
     shortDescEn: A lightweight host and Docker container monitoring tool
     type: tool
     crossVersionUpdate: true
-    limit: 0
+    limit: 1
     recommend: 0
     website: https://github.com/amuluze/amprobe
     github: https://github.com/amuluze/amprobe
