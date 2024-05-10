@@ -4,8 +4,7 @@ services:
     image: amuluze/amprobe:v1.3.3
     container_name: ${CONTAINER_NAME}
     restart: always
-    ports:
-      - "${PANEL_APP_PORT_HTTP}:80"
+    network_mode: "host"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /proc:/host/proc:ro
@@ -16,7 +15,3 @@ services:
       - ./data/supervisor:/etc/supervisor/conf.d
     labels:  
       createdBy: "Apps"
-
-networks:  
-  1panel-network:  
-    external: true
