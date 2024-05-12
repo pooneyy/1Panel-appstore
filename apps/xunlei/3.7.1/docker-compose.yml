@@ -19,7 +19,7 @@ services:
       - XL_BA_PASSWORD=${HTTP_PWD}
     hostname: ${HOSTNAME}
     privileged: true
-    image: cnk3x/xunlei:3.7.1
+    image: cnk3x/xunlei:3.11.2
     labels:  
       createdBy: "Apps"
 
