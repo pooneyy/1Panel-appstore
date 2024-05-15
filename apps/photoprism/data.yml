@@ -1,14 +1,13 @@
 name: PhotoPrism
 tags:
-    - 工具
+    - 多媒体
 title: 去中心化网络的人工智能照片应用程序
-type: 工具
 description: 去中心化网络的人工智能照片应用程序
 additionalProperties:
     key: photoprism
     name: PhotoPrism
     tags:
-        - Tool
+        - Media
     shortDescZh: 去中心化网络的人工智能照片应用程序
     shortDescEn: AI-Powered Photos App for the Decentralized Web
     type: tool

@@ -1,14 +1,13 @@
 name: Immich
 tags:
-    - 工具
+    - 多媒体
 title: 高性能的自托管照片和视频备份方案
-type: 工具
 description: 高性能的自托管照片和视频备份方案
 additionalProperties:
     key: immich
     name: Immich
     tags:
-        - Tool
+        - Media
     shortDescZh: 高性能的自托管照片和视频备份方案
     shortDescEn: High performance self-hosted photo and video backup solution
     type: tool

@@ -1,14 +1,13 @@
 name: Audiobookshelf
 tags:
-    - 工具
-title: 一个自托管有声读物和播客服务器
+    - 多媒体
 type: 工具
 description: 一个自托管有声读物和播客服务器
 additionalProperties:
     key: audiobookshelf
     name: Audiobookshelf
     tags:
-        - Tool
+        - Media
     shortDescZh: 一个自托管有声读物和播客服务器
     shortDescEn: A Self-hosted audiobook and podcast server
     type: tool

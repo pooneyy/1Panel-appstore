@@ -1,14 +1,13 @@
 name: Koodo Reader
 tags:
-    - 工具
+    - 多媒体
 title: 一个跨平台的电子书阅读器
-type: 工具
 description: 一个跨平台的电子书阅读器
 additionalProperties:
     key: koodo-reader
     name: Koodo Reader
     tags:
-        - Tool
+        - Media
     shortDescZh: 一个跨平台的电子书阅读器
     shortDescEn: A cross-platform ebook reader
     type: tool

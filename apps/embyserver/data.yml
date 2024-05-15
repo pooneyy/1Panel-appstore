@@ -1,16 +1,15 @@
 name: Emby Server
 tags:
-    - 工具
-title: Emby 是一个免费的个人媒体服务器
-type: 工具
-description: Emby 是一个免费的个人媒体服务器
+    - 多媒体
+title: 一个免费的个人媒体服务器
+description: 一个免费的个人媒体服务器
 additionalProperties:
     key: embyserver
     name: Emby Server
     tags:
-        - Tool
-    shortDescZh: Emby 是一个免费的个人媒体服务器
-    shortDescEn: Emby is a free personal media server
+        - Media
+    shortDescZh: 一个免费的个人媒体服务器
+    shortDescEn: A free personal media server
     type: tool
     crossVersionUpdate: true
     limit: 0

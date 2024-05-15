@@ -1,14 +1,13 @@
 name: Music Tag Web
 tags:
-    - 工具
+    - 多媒体
 title: 一款可以编辑歌曲的标题，专辑，艺术家，歌词，封面等信息的应用程序
-type: 工具
 description: 一款可以编辑歌曲的标题，专辑，艺术家，歌词，封面等信息的应用程序
 additionalProperties:
     key: music-tag-web
     name: Music Tag Web
     tags:
-        - Tool
+        - Media
     shortDescZh: 一款可以编辑歌曲的标题，专辑，艺术家，歌词，封面等信息的应用程序
     shortDescEn: An app that can edit the title, album, artist, lyrics, cover, and more of the song
     type: tool

@@ -1,14 +1,13 @@
 name: Pandora
 tags:
-    - 工具
+    - AI / 大模型
 title: 潘多拉，一个让你呼吸顺畅的 ChatGPT
-type: 工具
 description: 潘多拉，一个让你呼吸顺畅的 ChatGPT
 additionalProperties:
     key: pandora
     name: Pandora
     tags:
-        - Tool
+        - AI
     shortDescZh: 潘多拉，一个让你呼吸顺畅的 ChatGPT
     shortDescEn: Pandora, a ChatGPT that helps you breathe smoothly
     type: tool

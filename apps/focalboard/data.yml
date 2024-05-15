@@ -1,14 +1,13 @@
 name: Focalboard
 tags:
-    - 工具
+    - DevOps
 title: Trello，Notion 和 Asana 的开源自托管替代方案
-type: 工具
 description: Trello，Notion 和 Asana 的开源自托管替代方案
 additionalProperties:
     key: focalboard
     name: Focalboard
     tags:
-        - Tool
+        - DevOps
     shortDescZh: Trello，Notion 和 Asana 的开源自托管替代方案
     shortDescEn: An open source, self-hosted alternative to Trello, Notion, and Asana
     type: tool

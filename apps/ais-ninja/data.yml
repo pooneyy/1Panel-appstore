@@ -1,6 +1,6 @@
 name: ais-ninja
 tags:
-    - 工具
+    - AI / 大模型
 title: 基于 ChatGPT 的 Web 应用程序
 type: 工具
 description: 基于 ChatGPT 的 Web 应用程序
@@ -8,7 +8,7 @@ additionalProperties:
     key: ais-ninja
     name: ais-ninja
     tags:
-        - Tool
+        - AI
     shortDescZh: 基于 ChatGPT 的 Web 应用程序
     shortDescEn: ChatGPT-based web applications
     type: tool
