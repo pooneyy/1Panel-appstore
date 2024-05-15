@@ -1,14 +1,13 @@
 name: Navidrome Music Server
 tags:
-    - 工具
+    - 多媒体
 title: 基于 Web 的开源音乐收藏服务器和流媒体
-type: 工具
 description: 基于 Web 的开源音乐收藏服务器和流媒体
 additionalProperties:
     key: navidrome
     name: Navidrome Music Server
     tags:
-        - Tool
+        - Media
     shortDescZh: 基于 Web 的开源音乐收藏服务器和流媒体
     shortDescEn: An open source web-based music collection server and streamer
     type: tool

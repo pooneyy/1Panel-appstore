@@ -1,14 +1,13 @@
 name: Happy-ChatGPT
 tags:
-    - 工具
+    - AI / 大模型
 title: ChatGPT 国粹版，和 GPT 一起学习地道的中国话吧
-type: 工具
 description: ChatGPT 国粹版，和 GPT 一起学习地道的中国话吧
 additionalProperties:
     key: happy-chatgpt
     name: Happy-ChatGPT
     tags:
-        - Tool
+        - AI
     shortDescZh: ChatGPT 国粹版，和 GPT 一起学习地道的中国话吧
     shortDescEn: ChatGPT (swear version), learn "authentic" Chinese with GPT
     type: tool
