@@ -75,8 +75,10 @@ services:
       - POSTGRES_PASSWORD=${PANEL_DB_USER_PASSWORD}
       - POSTGRES_USER=${PANEL_DB_USER}
       - POSTGRES_DB=${PANEL_DB_NAME}
+      - POSTGRES_INITDB_ARGS=--data-checksums
     volumes:
       - ${DB_PATH}:/var/lib/postgresql/data
+    command: ["postgres", "-c" ,"shared_preload_libraries=vectors.so", "-c", 'search_path="$$user", public, vectors', "-c", "logging_collector=on", "-c", "max_wal_size=2GB", "-c", "shared_buffers=512MB", "-c", "wal_compression=on"]
     labels:  
       createdBy: "Apps"
 

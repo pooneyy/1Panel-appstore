@@ -5,7 +5,7 @@ services:
     restart: always
     networks:
       - 1panel-network
-    image: altran1502/immich-server:v1.103.1
+    image: altran1502/immich-server:v1.105.1
     command: [ "start.sh", "immich" ]
     volumes:
       - ${UPLOAD_LOCATION}:/usr/src/app/upload
@@ -25,7 +25,7 @@ services:
     restart: always
     networks:
       - 1panel-network
-    image: altran1502/immich-server:v1.103.1
+    image: altran1502/immich-server:v1.105.1
     # extends:
     #   file: hwaccel.yml
     #   service: hwaccel
@@ -46,7 +46,7 @@ services:
     restart: always
     networks:
       - 1panel-network
-    image: altran1502/immich-machine-learning:v1.103.1
+    image: altran1502/immich-machine-learning:v1.105.1
     volumes:
       - ${CACHE_PATH}:/cache
     env_file:
@@ -75,8 +75,10 @@ services:
       - POSTGRES_PASSWORD=${PANEL_DB_USER_PASSWORD}
       - POSTGRES_USER=${PANEL_DB_USER}
       - POSTGRES_DB=${PANEL_DB_NAME}
+      - POSTGRES_INITDB_ARGS=--data-checksums
     volumes:
       - ${DB_PATH}:/var/lib/postgresql/data
+    command: ["postgres", "-c" ,"shared_preload_libraries=vectors.so", "-c", 'search_path="$$user", public, vectors', "-c", "logging_collector=on", "-c", "max_wal_size=2GB", "-c", "shared_buffers=512MB", "-c", "wal_compression=on"]
     labels:  
       createdBy: "Apps"
 
