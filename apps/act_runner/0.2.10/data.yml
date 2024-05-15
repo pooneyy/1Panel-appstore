@@ -13,6 +13,7 @@ additionalProperties:
           labelEn: Gitea instance URL
           labelZh: Gitea 实例 URL
           required: true
+          rule: paramExtUrl
           type: text
         - default: ''
           edit: true
