@@ -1,14 +1,13 @@
 name: OneDev
 tags:
-    - CI/CD
+    - DevOps
 title: 具有 CI/CD 和 Kanban 的自托管 Git 服务器
-type: CI/CD
 description: 具有 CI/CD 和 Kanban 的自托管 Git 服务器
 additionalProperties:
     key: onedev
     name: OneDev
     tags:
-        - CI/CD
+        - DevOps
     shortDescZh: 具有 CI/CD 和 Kanban 的自托管 Git 服务器
     shortDescEn: Self-hosted Git Server with CI/CD and Kanban
     type: tool

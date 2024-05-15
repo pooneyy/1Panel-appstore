@@ -1,14 +1,13 @@
 name: Act runner
 tags:
-    - CI/CD
+    - DevOps
 title: Gitea Actions 的 Runner
-type: CI/CD
 description: Gitea Actions 的 Runner
 additionalProperties:
     key: act_runner
     name: Act runner
     tags:
-        - CI/CD
+        - DevOps
     shortDescZh: Gitea Actions 的 Runner
     shortDescEn: A runner for Gitea based on Gitea fork of act
     type: tool
