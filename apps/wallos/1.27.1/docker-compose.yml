@@ -12,7 +12,7 @@ services:
       - ./data/logos:/var/www/html/images/uploads/logos
     environment:
       - TZ=${TIME_ZONE}
-    image: bellamy/wallos:1.27.1
+    image: bellamy/wallos:1.28.0
     labels:  
       createdBy: "Apps"
 
