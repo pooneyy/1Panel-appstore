@@ -2,7 +2,7 @@
 
 - **需要注意查看项目`Wiki`先安装好对应环境**
 
-- **`1Panel`可能会覆盖`docker-compose.yml`的`gpu`设置，所以最好安装完成后检查一下，**
+- **`1Panel` `v1.10.3-lts`以下版本会覆盖`docker-compose.yml`的`gpu`设置，所以最好安装完成后检查一下，**
   **不对则用以下覆盖并在应用目录下手动执行`docker-compose down && docker-compose up -d`。**
 
 ```

@@ -24,6 +24,46 @@ webui有两个可以选择，都在应用商店里，a1111版和comfy
 }
 ```
 
+- **`1Panel` `v1.10.3-lts`以下版本会覆盖`docker-compose.yml`的`gpu`设置，所以最好安装完成后检查一下，**
+  **不对则用以下覆盖并在应用目录下手动执行`docker-compose down && docker-compose up -d`。**
+
+```
+version: '3'
+services:
+  sd-comfyui:
+    build: ./comfy
+    image: sd-comfyui:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    runtime: nvidia
+    networks:
+      - 1panel-network
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8188"
+    volumes:
+      - ${DATA_PATH}:/data
+      - ${OUTPUT_PATH}:/output
+    environment:
+      - CLI_ARGS=${SD_CONSOLE_CLI_COMFY}
+      - APT_ARGS=${SD_CONSOLE_APT_COMFY}
+      - PIP_ARGS=${SD_CONSOLE_PIP_COMFY}
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - NVIDIA_VISIBLE_DEVICES=all
+    deploy:
+      resources:
+        reservations:
+          devices:
+              - driver: nvidia
+                device_ids: ['${SD_CONSOLE_DEVICE_IDS}']
+                capabilities: [gpu,compute,utility]
+    labels:
+      createdBy: Apps
+networks:
+  1panel-network:
+    external: true
+
+```
+
 ## 关于缺少依赖的报错
 安装镜像过程会自动安装当前版本所需依赖
 为适应未来版本变化，添加了apt和pip指令，当前版本不填即可。
