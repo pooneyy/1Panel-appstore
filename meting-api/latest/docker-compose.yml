@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-  meting:
+  meting-api:
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
