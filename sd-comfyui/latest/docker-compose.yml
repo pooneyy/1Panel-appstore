@@ -19,14 +19,13 @@ services:
       - PIP_ARGS=${SD_CONSOLE_PIP_COMFY}
       - NVIDIA_DRIVER_CAPABILITIES=compute,utility
       - NVIDIA_VISIBLE_DEVICES=all
-    # 1Panel会覆盖此设置 
-    #deploy:
-    #  resources:
-    #    reservations:
-    #      devices:
-    #          - driver: nvidia
-    #            device_ids: ['${SD_CONSOLE_DEVICE_IDS}']
-    #            capabilities: [gpu,compute,utility]
+    deploy:
+      resources:
+        reservations:
+          devices:
+              - driver: nvidia
+                device_ids: ['${SD_CONSOLE_DEVICE_IDS}']
+                capabilities: [gpu,compute,utility]
     labels:
       createdBy: Apps
 networks:

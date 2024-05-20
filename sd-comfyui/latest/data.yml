@@ -29,13 +29,13 @@ additionalProperties:
           labelZh: 想安装的 pip 包 (等同 pip install)
           required: false
           type: text
-        #- default: 0
-        #  edit: true
-        #  envKey: SD_CONSOLE_DEVICE_IDS
-        #  labelEn: GPU ID
-        #  labelZh: SD 运行指定的 GPU 设备 ID
-        #  required: true
-        #  type: number
+        - default: 0
+          edit: true
+          envKey: SD_CONSOLE_DEVICE_IDS
+          labelEn: GPU ID
+          labelZh: SD 运行指定的 GPU 设备 ID
+          required: true
+          type: number
         - default: ./data/data
           edit: true
           envKey: DATA_PATH
