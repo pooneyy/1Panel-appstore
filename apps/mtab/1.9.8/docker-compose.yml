@@ -1,7 +1,7 @@
 version: '3'
 services:
   mtabserver:
-    image: itushan/mtab:1.9.8
+    image: itushan/mtab:2.0.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
