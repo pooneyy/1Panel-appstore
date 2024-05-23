@@ -17,17 +17,10 @@ services:
       test: curl -k -f https://localhost:1443/api/open/health
     environment:
     - MGT_PG=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-pg/safeline-ce?sslmode=disable
-    dns: 
-      - 119.29.29.29
-      - 223.5.5.5
-      - 180.76.76.76
-      - 1.2.4.8
-      - 114.114.114.114
-      - 8.8.8.8
     logging:
       options:
         max-size: "100m"
-        max-file: "10"
+        max-file: "5"
     depends_on:
       - safeline-pg
       - safeline-fvm
@@ -70,7 +63,7 @@ services:
     logging:
       options:
         max-size: "100m"
-        max-file: "10"
+        max-file: "5"
     labels:
       createdBy: Apps
 
@@ -110,7 +103,7 @@ services:
     logging:
       options:
         max-size: "100m"
-        max-file: "10"
+        max-file: "5"
     depends_on:
       - safeline-detector
       - safeline-mgt
@@ -130,7 +123,7 @@ services:
     logging:
       options:
         max-size: "100m"
-        max-file: "10"
+        max-file: "5"
     labels:
       createdBy: Apps
 
@@ -155,7 +148,7 @@ services:
     logging:
       options:
         max-size: "100m"
-        max-file: "10"
+        max-file: "5"
     depends_on:
       - safeline-mgt
     labels:
