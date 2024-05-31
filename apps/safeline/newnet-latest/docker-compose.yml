@@ -174,6 +174,23 @@ services:
     labels:
       createdBy: Apps
 
+  safeline-chaos:
+    container_name: ${CONTAINER_NAME}-chaos
+    restart: always
+    networks:
+      1panel-network:
+      safeline-ce:
+        ipv4_address: ${SUBNET_PREFIX}.10
+    image: chaitin/safeline-chaos:latest
+    logging:
+      options:
+        max-size: "100m"
+        max-file: "5"
+    ports:
+      - ${PANEL_APP_PORT_CHAOS:-23333}:23333
+    labels:
+      createdBy: Apps
+
 networks:
   1panel-network:
     external: true
