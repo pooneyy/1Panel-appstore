@@ -6,7 +6,7 @@ services:
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:8966"
+      - "${PANEL_APP_PORT_HTTP}:18966"
     environment:
       - BING_MAP_API_KEY=${BING_MAP_API_KEY}
       - ALLOWED_DOMAINS=${ALLOWED_DOMAINS}
