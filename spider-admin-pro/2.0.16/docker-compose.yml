@@ -1,4 +1,3 @@
-version: '3'
 services:
   spider-admin-pro:
     container_name: ${CONTAINER_NAME}

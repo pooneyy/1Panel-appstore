@@ -1,4 +1,3 @@
-version: '3'
 services:
   ms365-e5-renew-x:
     container_name: ${CONTAINER_NAME}

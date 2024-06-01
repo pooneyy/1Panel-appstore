@@ -1,4 +1,3 @@
-version: '3'
 services:
   streaming-media-server-pro:
     container_name: ${CONTAINER_NAME}

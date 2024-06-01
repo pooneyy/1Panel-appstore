@@ -1,4 +1,3 @@
-version: '3'
 services:
   photoview:
     container_name: ${CONTAINER_NAME}

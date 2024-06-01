@@ -1,4 +1,3 @@
-version: '3'
 services:
   slink:
     image: anirdev/slink:v1.1.0

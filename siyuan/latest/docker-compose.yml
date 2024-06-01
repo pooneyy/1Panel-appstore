@@ -1,4 +1,3 @@
-version: '3'
 services:
   siyuan:
     container_name: ${CONTAINER_NAME}

@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   pingvin-share:
     container_name: ${CONTAINER_NAME}

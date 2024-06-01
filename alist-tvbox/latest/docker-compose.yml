@@ -1,4 +1,3 @@
-version: '3'
 services:
   alist-tvbox:
     container_name: ${CONTAINER_NAME}

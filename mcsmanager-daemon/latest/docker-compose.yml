@@ -1,4 +1,3 @@
-version: '3'
 services:
   mcsm-daemon:
     container_name: ${CONTAINER_NAME}

@@ -1,4 +1,3 @@
-version: '3'
 services:
   mtabserver:
     image: itushan/mtab:2.0.1

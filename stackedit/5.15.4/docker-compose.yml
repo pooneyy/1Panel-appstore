@@ -1,4 +1,3 @@
-version: '3'
 services:
   stackedit:
     container_name: ${CONTAINER_NAME}

@@ -1,4 +1,3 @@
-version: "3.3"
 services:
   mw-server:
     container_name: ${CONTAINER_NAME}

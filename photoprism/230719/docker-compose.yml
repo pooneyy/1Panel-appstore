@@ -1,4 +1,3 @@
-version: '3'
 services:
   photoprism:
     container_name: ${CONTAINER_NAME}

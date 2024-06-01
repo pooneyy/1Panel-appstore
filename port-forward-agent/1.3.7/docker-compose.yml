@@ -1,4 +1,3 @@
-version: "3"  
 services:
   port-forward-server:
     build:

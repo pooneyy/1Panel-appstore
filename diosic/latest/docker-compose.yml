@@ -1,4 +1,3 @@
-version: '3.9'
 services:
   diosic:
     container_name: ${CONTAINER_NAME}

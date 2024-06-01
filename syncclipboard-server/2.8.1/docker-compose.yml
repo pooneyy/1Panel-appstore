@@ -1,4 +1,3 @@
-version: '3'
 services:
   syncclipboard-server:
     image: jericx/syncclipboard-server:v2.8.1

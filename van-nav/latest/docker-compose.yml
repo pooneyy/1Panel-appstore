@@ -1,4 +1,3 @@
-version: '3'
 services:
   van-nav:
     container_name: ${CONTAINER_NAME}

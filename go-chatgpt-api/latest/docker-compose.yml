@@ -1,4 +1,3 @@
-version: "3"
 services:
   go-chatgpt-api:
     container_name: ${CONTAINER_NAME}-api

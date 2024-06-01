@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   pterodactyl-china:
     image: ghcr.io/pterodactyl-china/panel:latest

@@ -1,4 +1,3 @@
-version: '3'
 services:
   npc:
     image: yisier1/npc:latest

@@ -1,4 +1,3 @@
-version: '3'
 services:
   modstartblog:
     container_name: ${CONTAINER_NAME}

@@ -1,4 +1,3 @@
-version: "3"
 services:
   gh-proxy:
     container_name: ${CONTAINER_NAME}

@@ -1,4 +1,3 @@
-version: '3'
 services:
   langchain-chatchat:
     container_name: ${CONTAINER_NAME}
