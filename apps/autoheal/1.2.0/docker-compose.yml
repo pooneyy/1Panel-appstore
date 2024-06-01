@@ -1,4 +1,3 @@
-version: '3'
 services:
   autoheal:
     container_name: ${CONTAINER_NAME}

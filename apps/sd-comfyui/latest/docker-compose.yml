@@ -1,4 +1,3 @@
-version: '3'
 services:
   sd-comfyui:
     build: ./comfy

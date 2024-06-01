@@ -1,4 +1,3 @@
-version: '3'
 services:
   nging:
     image: admpub/nging:latest

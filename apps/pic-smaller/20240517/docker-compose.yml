@@ -1,4 +1,3 @@
-version: "3"
 services:
   pic-smaller:
     image: "vimiix/pic-smaller:20240517"

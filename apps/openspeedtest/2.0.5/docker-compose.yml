@@ -1,4 +1,3 @@
-version: '3'
 services:
   speedtest:
     container_name: ${CONTAINER_NAME}

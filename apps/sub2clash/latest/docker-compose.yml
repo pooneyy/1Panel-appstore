@@ -1,4 +1,3 @@
-version: '3'
 services:
   sub2clash:
     image: nite07/sub2clash:latest

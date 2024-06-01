@@ -1,4 +1,3 @@
-version: '3'
 services:
   unblockneteasemusic:
     container_name: ${CONTAINER_NAME}

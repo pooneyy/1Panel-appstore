@@ -1,4 +1,3 @@
-version: '3'
 services:
   dailyhot-web:
     container_name: ${CONTAINER_NAME}

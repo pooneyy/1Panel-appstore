@@ -1,4 +1,3 @@
-version: '3'
 services:
   vanblog:
     image: mereith/van-blog:v0.54.0

@@ -1,4 +1,3 @@
-version: '3'
 services:
   linkding:
     container_name: ${CONTAINER_NAME}

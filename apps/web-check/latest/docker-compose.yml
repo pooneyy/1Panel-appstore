@@ -1,4 +1,3 @@
-version: '3'
 services:
   web-check:
     container_name: ${CONTAINER_NAME}

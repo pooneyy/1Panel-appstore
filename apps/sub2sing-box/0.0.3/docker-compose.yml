@@ -1,4 +1,3 @@
-version: '3'
 services:
   sub2sing-box:
     image: nite07/sub2sing-box:0.0.3

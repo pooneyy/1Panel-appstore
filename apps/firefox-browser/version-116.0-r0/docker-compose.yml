@@ -1,4 +1,3 @@
-version: '3'
 services:
   firefox:
     container_name: ${CONTAINER_NAME}

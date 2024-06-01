@@ -1,4 +1,3 @@
-version: '3'
 services:
   rss-reader:
     container_name: ${CONTAINER_NAME}

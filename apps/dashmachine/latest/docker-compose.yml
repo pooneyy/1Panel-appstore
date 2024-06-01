@@ -1,4 +1,3 @@
-version: '3'
 services:
   dashmachine:
     container_name: ${CONTAINER_NAME}

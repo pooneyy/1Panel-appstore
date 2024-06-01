@@ -1,4 +1,3 @@
-version: '3'
 services:
   sscms:
     image: sscms/core:latest

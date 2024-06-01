@@ -1,4 +1,3 @@
-version: '3'
 services:
   tianji:
     container_name: ${CONTAINER_NAME}

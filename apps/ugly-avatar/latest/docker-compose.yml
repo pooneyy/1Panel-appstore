@@ -1,4 +1,3 @@
-version: '3'
 services:
   ugly-avatar:
     image: joesonshaw/ugly-face:latest

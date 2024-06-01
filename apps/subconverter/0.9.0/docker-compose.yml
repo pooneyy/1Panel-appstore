@@ -1,4 +1,3 @@
-version: '3'
 services:
   subconverter:
     image: tindy2013/subconverter:0.9.0

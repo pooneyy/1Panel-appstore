@@ -1,4 +1,3 @@
-version: '3'
 services:
   alist-encrypt:
     container_name: ${CONTAINER_NAME}

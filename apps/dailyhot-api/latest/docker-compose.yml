@@ -1,4 +1,3 @@
-version: '3'
 services:
   dailyhot-api:
     container_name: ${CONTAINER_NAME}

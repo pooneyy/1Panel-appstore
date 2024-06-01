@@ -1,4 +1,3 @@
-version: "3"
 services:
   wireguard-ui:
     container_name: ${CONTAINER_NAME}

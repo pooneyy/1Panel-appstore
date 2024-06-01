@@ -1,4 +1,3 @@
-version: '3'
 services:
   headscale-ui:
     container_name: ${CONTAINER_NAME}

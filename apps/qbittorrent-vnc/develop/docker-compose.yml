@@ -1,4 +1,3 @@
-version: '3'
 services:
   qbittorrent-vnc:
     container_name: ${CONTAINER_NAME}

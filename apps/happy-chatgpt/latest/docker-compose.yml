@@ -1,4 +1,3 @@
-version: '3'
 services:
   happy-chatgpt:
     container_name: ${CONTAINER_NAME}

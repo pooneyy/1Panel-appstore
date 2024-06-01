@@ -1,4 +1,3 @@
-version: '3'
 services:
   modstartcms:
     container_name: ${CONTAINER_NAME}

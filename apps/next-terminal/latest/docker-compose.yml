@@ -1,4 +1,3 @@
-version: '3'
 services:
   nt-guacd:
     container_name: ${CONTAINER_NAME}-guacd

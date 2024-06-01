@@ -1,4 +1,3 @@
-version: '3'
 services:
   fossbilling:
     container_name: ${CONTAINER_NAME}

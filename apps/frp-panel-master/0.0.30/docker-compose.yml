@@ -1,4 +1,3 @@
-version: '3'
 services:
   frp-panel-master:
     container_name: ${CONTAINER_NAME}

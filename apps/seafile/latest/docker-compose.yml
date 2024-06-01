@@ -1,4 +1,3 @@
-version: '3'
 services:
   seafile:
     container_name: ${CONTAINER_NAME}

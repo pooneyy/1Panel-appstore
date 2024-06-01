@@ -1,4 +1,3 @@
-version: '3.8'
 services:
   gowebdav:
     image: 117503445/go_webdav:latest

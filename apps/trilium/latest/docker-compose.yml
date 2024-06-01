@@ -1,4 +1,3 @@
-version: '3'
 services:
   trilium:
     container_name: ${CONTAINER_NAME}
