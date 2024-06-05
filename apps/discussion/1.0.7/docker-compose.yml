@@ -1,6 +1,6 @@
 services:
   discussion:
-    image: "kingwrcy/discussion:1.0.6"
+    image: "kingwrcy/discussion:1.0.7"
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:
