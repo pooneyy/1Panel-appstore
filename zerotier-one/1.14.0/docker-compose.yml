@@ -10,6 +10,6 @@ services:
       - SYS_ADMIN
     volumes:
       - ./data:/var/lib/zerotier-one
-    image: bltavares/zerotier:1.14.0
+    image: "zerotier/zerotier:1.14.0"
     labels:  
       createdBy: "Apps"
