@@ -1,0 +1,32 @@
+additionalProperties:
+    formFields:
+        - default: 8098
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: HTTP Port
+          labelZh: HTTP端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: 8922
+          edit: true
+          envKey: PANEL_APP_PORT_HTTPS
+          labelEn: HTTPS Port
+          labelZh: HTTPS端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ./data/config
+          edit: true
+          envKey: DATA_PATH
+          labelEn: Data folder path
+          labelZh: 数据文件夹路径
+          required: true
+          type: text
+        - default: ./data/mnt
+          edit: true
+          envKey: MOUNT_PATH
+          labelEn: Mount folder path
+          labelZh: 挂载文件夹路径
+          required: true
+          type: text
