@@ -75,6 +75,7 @@ services:
     - /etc/resolv.conf:/etc/resolv.conf:ro
     - ${SAFELINE_DIR}/resources/nginx:/etc/nginx
     - ${SAFELINE_DIR}/resources/detector:/resources/detector
+    - ${SAFELINE_DIR}/resources/chaos:/resources/chaos
     - ${SAFELINE_DIR}/logs/nginx:/var/log/nginx
     - ${SAFELINE_DIR}/resources/cache:/usr/local/nginx/cache
     environment:
@@ -185,8 +186,8 @@ services:
       options:
         max-size: "100m"
         max-file: "5"
-    ports:
-      - ${PANEL_APP_PORT_CHAOS:-23333}:23333
+    volumes:
+      - ${SAFELINE_DIR}/resources/chaos:/app/chaos
     labels:
       createdBy: Apps
 
