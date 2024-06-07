@@ -1,7 +1,7 @@
 additionalProperties:
   formFields:
     - default: 7333
-      disabled: true
+      edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port (determined by the configuration file)
       labelZh: 端口 (由配置文件决定)
