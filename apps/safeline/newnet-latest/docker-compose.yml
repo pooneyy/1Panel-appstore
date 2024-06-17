@@ -10,6 +10,7 @@ services:
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - ${SAFELINE_DIR}/resources/mgt:/app/data
+    - ${SAFELINE_DIR}/logs/nginx:/app/log/nginx:z
     ports:
     - ${PANEL_APP_PORT_HTTP:-9443}:1443
     healthcheck:
@@ -76,7 +77,7 @@ services:
     - ${SAFELINE_DIR}/resources/nginx:/etc/nginx
     - ${SAFELINE_DIR}/resources/detector:/resources/detector
     - ${SAFELINE_DIR}/resources/chaos:/resources/chaos
-    - ${SAFELINE_DIR}/logs/nginx:/var/log/nginx
+    - ${SAFELINE_DIR}/logs/nginx:/var/log/nginx:z
     - ${SAFELINE_DIR}/resources/cache:/usr/local/nginx/cache
     environment:
     - TCD_MGT_API=https://${SUBNET_PREFIX}.4:1443/api/open/publish/server
