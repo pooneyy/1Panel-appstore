@@ -9,7 +9,7 @@ services:
     volumes:
       - "${DATA_PATH}/db:/app/db"
       - "./data/config.json:/app/config.json"
-    image: srcrs/rss-reader:v2.0
+    image: srcrs/rss-reader:v2.1
     labels:  
       createdBy: "Apps"
 
