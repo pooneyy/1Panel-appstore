@@ -20,9 +20,11 @@ chatgpt-on-wechat（简称CoW）项目是基于大模型的智能对话机器人
 
 ```
 GROUP_CHAT_IN_ONE_SESSION='["ChatGPT测试群"]'
+GROUP_CHAT_PREFIX='["@bot"]'
 GROUP_NAME_WHITE_LIST='["ChatGPT测试群", "ChatGPT测试群2"]'
 IMAGE_CREATE_PREFIX='["画", "看", "找"]'
 SINGLE_CHAT_PREFIX='["bot", "@bot"]'
+SINGLE_CHAT_REPLY_PREFIX='[bot] '
 ```
 
 文件路径，按需修改
