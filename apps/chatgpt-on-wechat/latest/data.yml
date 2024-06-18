@@ -66,7 +66,7 @@ additionalProperties:
       envKey: SINGLE_CHAT_REPLY_PREFIX
       labelEn: Single Chat Reply Prefix
       labelZh: 私聊回复前缀
-      required: true
+      required: false
       type: text
     - default: ""
       edit: true
@@ -80,7 +80,7 @@ additionalProperties:
       envKey: GROUP_CHAT_PREFIX
       labelEn: Group Chat Prefix
       labelZh: 群聊前缀
-      required: true
+      required: false
       type: text
     - default: ""
       edit: true
@@ -814,13 +814,28 @@ additionalProperties:
       labelZh: 清除记忆指令
       required: false
       type: text
-    - default: ""
+    - default: "wx"
       edit: true
       envKey: CHANNEL_TYPE
       labelEn: Channel Type
       labelZh: 通道类型
-      required: false
-      type: text
+      required: true
+      type: select
+      values:
+        - label: "wx"
+          value: "wx"
+        - label: "wxy"
+          value: "wxy"
+        - label: "terminal"
+          value: "terminal"
+        - label: "wechatmp"
+          value: "wechatmp"
+        - label: "wechatmp_service"
+          value: "wechatmp_service"
+        - label: "wechatcom_app"
+          value: "wechatcom_app"
+        - label: "dingtalk"
+          value: "dingtalk"
     - default: ""
       edit: true
       envKey: SUBSCRIBE_MSG
