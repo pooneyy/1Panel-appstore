@@ -1,11 +1,11 @@
-name: Librespeed
+name: LibreSpeed
 tags:
     - 实用工具
 title: 开源速度测试工具
 description: 开源速度测试工具
 additionalProperties:
     key: librespeed
-    name: Librespeed
+    name: LibreSpeed
     tags:
         - Tool
     shortDescZh: 开源速度测试工具
