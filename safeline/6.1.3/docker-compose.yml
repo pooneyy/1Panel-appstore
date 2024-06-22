@@ -5,7 +5,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.234
-    image: chaitin/safeline-mgt:6.1.1
+    image: chaitin/safeline-mgt:6.1.3
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - ${SAFELINE_DIR}/resources/mgt:/app/data
@@ -32,7 +32,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.235
-    image: chaitin/safeline-detector:6.1.1
+    image: chaitin/safeline-detector:6.1.3
     volumes:
     - ${SAFELINE_DIR}/resources/detector:/resources/detector
     - ${SAFELINE_DIR}/logs/detector:/logs/detector
@@ -48,7 +48,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.236
-    image: chaitin/safeline-mario:6.1.1
+    image: chaitin/safeline-mario:6.1.3
     volumes:
     - ${SAFELINE_DIR}/resources/mario:/resources/mario
     - ${SAFELINE_DIR}/logs/mario:/logs/mario
@@ -67,7 +67,7 @@ services:
   safeline-tengine:
     container_name: ${CONTAINER_NAME}-tengine
     restart: always
-    image: chaitin/safeline-tengine:6.1.1
+    image: chaitin/safeline-tengine:6.1.3
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - /etc/resolv.conf:/etc/resolv.conf:ro
@@ -91,7 +91,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.237
-    image: chaitin/safeline-luigi:6.1.1
+    image: chaitin/safeline-luigi:6.1.3
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ${SAFELINE_DIR}/resources/luigi:/app/data
@@ -113,7 +113,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.238
-    image: chaitin/safeline-fvm:6.1.1
+    image: chaitin/safeline-fvm:6.1.3
     volumes:
       - /etc/localtime:/etc/localtime:ro
     logging:
@@ -129,7 +129,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.239
-    image: chaitin/safeline-bridge:6.1.1
+    image: chaitin/safeline-bridge:6.1.3
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run:/app/run
@@ -174,7 +174,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.240
-    image: chaitin/safeline-chaos:6.1.1
+    image: chaitin/safeline-chaos:6.1.3
     logging:
       options:
         max-size: "100m"
