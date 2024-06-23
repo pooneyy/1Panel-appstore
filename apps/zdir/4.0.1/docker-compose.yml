@@ -1,6 +1,6 @@
 services:
   zdir:
-    image: helloz/zdir:4.0.0
+    image: helloz/zdir:4.0.1
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
