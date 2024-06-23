@@ -17,7 +17,7 @@ services:
       - PHOTOVIEW_MEDIA_CACHE=/app/cache
       # - GODEBUG=asyncpreemptoff=1  # Optional: If you are using Samba/CIFS-Share and experience problems with "directory not found"
       # - MAPBOX_TOKEN=<YOUR TOKEN HERE>  # A token can be generated for free here https://account.mapbox.com/access-tokens/
-    image: viktorstrate/photoview:2.3.13
+    image: viktorstrate/photoview:2.4.0
     labels:  
       createdBy: "Apps"
 
