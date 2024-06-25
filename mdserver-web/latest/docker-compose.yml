@@ -12,7 +12,7 @@ services:
         - "${phpMyAdmin_PORT}:888"
     volumes:
         - mw-server:/www
-    image: "ddsderek/mw:latest"
+    image: "ddsderek/mdserver-web:latest"
     labels:  
       createdBy: "Apps"
 volumes:
