@@ -15,6 +15,6 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
-    website: https://hub.docker.com/r/ddsderek/mw
+    website: https://hub.docker.com/r/ddsderek/mdserver-web
     github: https://github.com/midoks/mdserver-web
     document: https://github.com/midoks/mdserver-web/wiki/
