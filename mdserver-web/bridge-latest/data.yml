@@ -8,6 +8,30 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: 10080
+      edit: true
+      envKey: HTTP_PORT
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 10443
+      edit: true
+      envKey: HTTPS_PORT
+      labelEn: HTTPS Port
+      labelZh: HTTPS 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 10888
+      edit: true
+      envKey: PHPMYAYMIN_PORT
+      labelEn: phpMyAdmin Port
+      labelZh: phpMyAdmin 端口
+      required: true
+      rule: paramPort
+      type: number
     - default: "true"
       edit: true
       envKey: CLOSE_ADMIN_PATH
