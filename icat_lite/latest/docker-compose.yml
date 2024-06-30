@@ -1,6 +1,6 @@
 services:
   icat_lite:
-    image: "bluesdo/icat_lite_public:1.1"
+    image: "bluesdo/icat_lite_public:latest"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
