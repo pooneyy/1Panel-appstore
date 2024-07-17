@@ -35,7 +35,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: 222
+    - default: 22
       envKey: PANEL_APP_PORT_SSH
       labelZh: SSH 端口
       labelEn: SSH Port
@@ -92,32 +92,25 @@ additionalProperties:
       labelEn: Database Name
       required: true
       type: text
-    - default: "Gitea: Git with a cup of tea"
+    - default: "Gitea"
       edit: true
       envKey: APP_NAME
       labelZh: 应用名称
       labelEn: Application Name
       required: true
       type: text
-    - default: "127.0.0.1"
+    - default: "localhost"
       edit: true
       envKey: DOMAIN
       labelZh: HTTP 克隆域名
       labelEn: HTTP Clone Domain
       required: true
       type: text
-    - default: "127.0.0.1"
+    - default: "localhost"
       edit: true
       envKey: SSH_DOMAIN
       labelZh: SSH 克隆域名
       labelEn: SSH Clone Domain
-      required: true
-      type: text
-    - default: "222"
-      edit: true
-      envKey: SSH_PORT
-      labelZh: SSH 克隆端口
-      labelEn: SSH Clone Port
       required: true
       type: text
     - default: ""
@@ -126,6 +119,7 @@ additionalProperties:
       labelZh: 公共 URL (覆盖级)
       labelEn: Public URL (Override)
       required: false
+      rule: paramExtUrl
       type: text
     - default: "false"
       edit: true
@@ -171,8 +165,6 @@ additionalProperties:
       required: true
       type: select
       values:
-        - label: 忽略
-          value: ""
         - label: 开启
           value: "true"
         - label: 关闭

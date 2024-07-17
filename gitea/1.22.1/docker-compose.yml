@@ -28,7 +28,10 @@ services:
       - USER_UID=1000
       - USER_GID=1000
       - DB_HOST=${DB_HOSTNAME}:${DB_PORT}
+      - SSH_PORT=${PANEL_APP_PORT_SSH}
       - GITEA__time__DEFAULT_UI_LOCATION=Asia/Shanghai
       - GITEA__migrations__ALLOW_LOCALNETWORKS=true
       - GITEA__api__ENABLE_SWAGGER=false
       - GITEA__other__SHOW_FOOTER_POWERED_BY=false
+      - GITEA__git.config__http.proxy=${PROXY_URL}
+      - GITEA__git.config__https.proxy=${PROXY_URL}
