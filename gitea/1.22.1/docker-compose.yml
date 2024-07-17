@@ -27,5 +27,8 @@ services:
     environment:
       - USER_UID=1000
       - USER_GID=1000
-      - ENABLE_SWAGGER=false
       - DB_HOST=${DB_HOSTNAME}:${DB_PORT}
+      - GITEA__time__DEFAULT_UI_LOCATION=Asia/Shanghai
+      - GITEA__migrations__ALLOW_LOCALNETWORKS=true
+      - GITEA__api__ENABLE_SWAGGER=false
+      - GITEA__other__SHOW_FOOTER_POWERED_BY=false
