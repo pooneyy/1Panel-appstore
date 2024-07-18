@@ -224,13 +224,6 @@ additionalProperties:
           value: "true"
         - label: 关闭
           value: "false"
-    - default: "smtp"
-      edit: true
-      envKey: MAILER_PROTOCOL
-      labelZh: 邮件服务协议
-      labelEn: Mailer Protocol
-      required: false
-      type: text
     - default: ""
       edit: true
       envKey: MAILER_SMTP_ADDR
