@@ -167,7 +167,7 @@ additionalProperties:
           value: "true"
         - label: 关闭
           value: "false"
-    - default: ""
+    - default: "false"
       edit: true
       envKey: INSTALL_LOCK
       labelZh: 禁止访问安装页面
