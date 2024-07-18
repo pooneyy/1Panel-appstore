@@ -54,19 +54,21 @@ additionalProperties:
           value: postgresql
         - label: MySQL (MariaDB, Percona)
           value: mysql
+        - label: SQLite3 (忽略数据库配置)
+          value: sqlite3
     - default: "127.0.0.1"
       edit: true
       envKey: DB_HOSTNAME
       labelZh: 数据库 主机地址
       labelEn: Database Host
-      required: true
+      required: false
       type: text
     - default: 5432
       edit: true
       envKey: DB_PORT
       labelZh: 数据库 端口
       labelEn: Database Port
-      required: true
+      required: false
       rule: paramPort
       type: number
     - default: "gitea"
@@ -74,7 +76,7 @@ additionalProperties:
       envKey: DB_USER
       labelZh: 数据库 用户名
       labelEn: Database User
-      required: true
+      required: false
       type: text
     - default: ""
       edit: true
@@ -82,7 +84,7 @@ additionalProperties:
       labelEn: Database Password
       labelZh: 数据库 密码
       random: true
-      required: true
+      required: false
       rule: paramComplexity
       type: password
     - default: "gitea"
@@ -90,7 +92,7 @@ additionalProperties:
       envKey: DB_NAME
       labelZh: 数据库 名称
       labelEn: Database Name
-      required: true
+      required: false
       type: text
     - default: "Gitea"
       edit: true
@@ -113,6 +115,14 @@ additionalProperties:
       labelEn: SSH Clone Domain
       required: true
       type: text
+    - default: 22
+      edit: true
+      envKey: SSH_PORT
+      labelZh: SSH 克隆显示端口
+      labelEn: SSH Clone Display Port
+      required: true
+      rule: paramPort
+      type: number
     - default: ""
       edit: true
       envKey: ROOT_URL
@@ -172,15 +182,15 @@ additionalProperties:
     - default: ""
       edit: true
       envKey: SECRET_KEY
-      labelZh: 全局密钥 (覆盖级)
-      labelEn: Global Secret Key (Override)
+      labelZh: 全局加密密钥
+      labelEn: Global Secret Key
       required: false
       type: text
     - default: "false"
       edit: true
       envKey: PROXY_ENABLED
-      labelZh: 启用代理
-      labelEn: Enable Proxy
+      labelZh: 启用代理 (全局 + Webhook)
+      labelEn: Enable Proxy (Global + Webhook)
       required: true
       type: select
       values:
@@ -191,14 +201,75 @@ additionalProperties:
     - default: ""
       edit: true
       envKey: PROXY_URL
-      labelZh: 代理服务器地址
-      labelEn: Proxy Server URL
+      labelZh: 代理服务器地址 (全局 + Webhook)
+      labelEn: Proxy Server URL (Global + Webhook)
       required: false
       type: text
     - default: "**"
       edit: true
       envKey: PROXY_HOSTS
-      labelZh: 代理网址
-      labelEn: Proxy Hosts
+      labelZh: 代理网址 (全局 + Webhook)
+      labelEn: Proxy Hosts (Global + Webhook)
+      required: false
+      type: text
+    - default: "false"
+      edit: true
+      envKey: MAILER_ENABLED
+      labelZh: 启用邮件服务
+      labelEn: Enable Mailer Service
+      required: true
+      type: select
+      values:
+        - label: 开启
+          value: "true"
+        - label: 关闭
+          value: "false"
+    - default: "smtp"
+      edit: true
+      envKey: MAILER_PROTOCOL
+      labelZh: 邮件服务协议
+      labelEn: Mailer Protocol
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: MAILER_SMTP_ADDR
+      labelZh: 邮件服务器地址
+      labelEn: Mailer Server Address
+      required: false
+      type: text
+    - default: 465
+      edit: true
+      envKey: MAILER_SMTP_PORT
+      labelZh: 邮件服务器端口
+      labelEn: Mailer Server Port
+      required: false
+      type: number
+    - default: ""
+      edit: true
+      envKey: MAILER_USER
+      labelZh: 邮件服务用户名
+      labelEn: Mailer Username
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: MAILER_PASSWD
+      labelZh: 邮件服务密码
+      labelEn: Mailer Password
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: MAILER_FROM
+      labelZh: 邮件服务发件人
+      labelEn: Mailer From
+      required: false
+      type: text
+    - default: "[Gitea]"
+      edit: true
+      envKey: MAILER_SUBJECT_PREFIX
+      labelZh: 邮件服务主题前缀
+      labelEn: Mailer Subject Prefix
       required: false
       type: text

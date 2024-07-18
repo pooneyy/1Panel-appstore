@@ -27,11 +27,13 @@ services:
     environment:
       - USER_UID=1000
       - USER_GID=1000
-      - DB_HOST=${DB_HOSTNAME}:${DB_PORT}
-      - SSH_PORT=${PANEL_APP_PORT_SSH}
-      - GITEA__time__DEFAULT_UI_LOCATION=Asia/Shanghai
-      - GITEA__migrations__ALLOW_LOCALNETWORKS=true
+      - DISABLE_SSH=false
       - GITEA__api__ENABLE_SWAGGER=false
-      - GITEA__other__SHOW_FOOTER_POWERED_BY=false
+      - DB_HOST=${DB_HOSTNAME}:${DB_PORT}
+      - GITEA__proxy__PROXY_ENABLED=${PROXY_ENABLED}
+      - GITEA__proxy__PROXY_URL=${PROXY_URL}
+      - GITEA__proxy__PROXY_HOSTS=${PROXY_HOSTS}
+      - GITEA__webhook__PROXY_URL=${PROXY_URL}
+      - GITEA__webhook__PROXY_HOSTS=${PROXY_HOSTS}
       - GITEA__git.config__http.proxy=${PROXY_URL}
       - GITEA__git.config__https.proxy=${PROXY_URL}

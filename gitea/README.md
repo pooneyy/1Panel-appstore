@@ -56,7 +56,7 @@ Gitea 提供多种语言界面，适应全球范围内的用户，促进了国�
 
 ### 代理配置
 
-开启 `启用代理` 配置后
+开启 `启用代理` 配置后,同时生效与 `Gitea` 服务和 `Webhook` 服务和 `Git` 服务
 
 + `代理服务器地址` 填写代理服务器地址
 
@@ -68,10 +68,35 @@ Gitea 提供多种语言界面，适应全球范围内的用户，促进了国�
 
 使用 `**` 代表所有网址
 
-例如需要代理: `Github` `gitlab`
+例如需要代理: `Github` `gitlab`, 此项配置不作用于 `Git` 服务
 
 ```text
-*.github.com,*.gitlab.com
+github.com,*.github.com,*.gitlab.com
+```
+
+在 app.ini 配置文件中配置如下：
+
+```ini
+[webhook]
+PROXY_URL = http://{host}:{port}
+PROXY_HOSTS = github.com,*.github.com,*.gitlab.com
+[proxy]
+PROXY_ENABLED = true
+PROXY_URL = http://{host}:{port}
+PROXY_HOSTS = github.com,*.github.com,*.gitlab.com
+```
+
+### 开启 API 文档
+
+默认关闭 `Swagger` 文档，开启后可以查看 `API` 文档
+
+首次安装前，编辑`docker-compose.yml`修改环境变量 `GITEA__api__ENABLE_SWAGGER=false` 为 `true` 即可开启文档服务。
+
+已安装用户，修改配置文件 `data/gitea/conf/app.ini` 中 `API` 配置项 `ENABLE_SWAGGER` 为 `true` 即可开启文档服务。
+
+```ini
+[api]
+ENABLE_SWAGGER = true
 ```
 
 ## 反向代理
