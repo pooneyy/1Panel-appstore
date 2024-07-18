@@ -118,3 +118,29 @@ location / {
 > 安装后，修改配置文件后，重启服务，但是配置文件没有生效？
 
 安装后如需修改配置，请修改 持久化目录 下的 `data/gitea/conf/app.ini` 文件，然后重启服务。
+
+> 迁移 大仓库时，提示 `fatal: early EOF`？
+
+请修改 `data/gitea/home/.gitconfig` 文件，然后重启服务。
+
+```gitconfig
+[http]
+	version = HTTP/1.1
+	lowSpeedLimit = 0
+	lowSpeedTime = 999999
+	postbuffer = 2147483648
+[core]
+	compression = 0
+```
+
+配置说明：
+
++ 使用 HTTP/1.1 协议 `http.version = HTTP/1.1`
+
++ 限制速度 `http.lowSpeedLimit = 0`
+
++ 限制时间 `http.lowSpeedTime = 999999`
+
++ 提交缓冲区大小 `http.postbuffer = 2147483648`
+
++ 关闭压缩 `core.compression = 0`
