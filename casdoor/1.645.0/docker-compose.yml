@@ -20,6 +20,10 @@ services:
       dockerfile: Dockerfile
       target: STANDARD
     entrypoint: /bin/sh -c './server --createDatabase=true'
+    env_file:
+      - /etc/1panel/envs/global.env
+      - /etc/1panel/envs/casdoor/casdoor.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${CASDOOR_ROOT_PATH}/data/files:/home/user/casdoor/files
     environment:

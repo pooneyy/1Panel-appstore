@@ -62,6 +62,8 @@ Casdoor 支持将用户头像等文件存储在本地文件系统中。默认情
 
 如果您的网络环境受到地区网络限制，您可以通过配置 `Socks5 代理` 来解决这个问题。
 
+格式：host:port
+
 socks5Proxy 是 SOCKS 代理服务器 IP 地址。
 设置代理端口，因为我们有与Google相关的服务，或者使用Google、GitHub、Facebook、LinkedIn或Steam作为OAuth提供商，这在某些地区可能会受到网络限制。
 
