@@ -77,7 +77,7 @@ additionalProperties:
       required: false
       rule: paramPort
       type: number
-    - default: "gitea"
+    - default: "casdoor"
       edit: true
       envKey: DB_USER
       labelZh: 数据库 用户名
@@ -93,7 +93,7 @@ additionalProperties:
       required: false
       rule: paramComplexity
       type: password
-    - default: "gitea"
+    - default: "casdoor"
       edit: true
       envKey: DB_NAME
       labelZh: 数据库 名称
