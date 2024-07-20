@@ -12,7 +12,7 @@ if [ -f .env ]; then
   fi
 
   if [ "$DB_TYPE" == "postgres" ]; then
-    echo "dataSourceName=user=$DB_USER password=$DB_PASSWD host=$DB_HOSTNAME port=$DB_PORT sslmode=disable dbname=$DB_NAME" >> .env
+    echo "dataSourceName=\"user=$DB_USER password=$DB_PASSWD host=$DB_HOSTNAME port=$DB_PORT sslmode=disable dbname=$DB_NAME\"" >> .env
   fi
 
   if [ -n "$REDIS_PASSWORD" ]; then
