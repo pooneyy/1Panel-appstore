@@ -24,7 +24,6 @@ services:
     environment:
       - driverName=${DB_TYPE}
       - dbName=${DB_NAME}
-      - redisEndpoint=${REDIS_HOSTNAME}:${REDIS_PORT}
       - verificationCodeTimeout=10
       - appname=casdoor
       - authState=casdoor
