@@ -17,7 +17,6 @@ additionalProperties:
   type: website
   crossVersionUpdate: true
   limit: 0
-  recommend: 0
   website: https://nacos.io/
-  github: https://github.com/alibaba/nacos
-  document: https://github.com/alibaba/nacos/blob/develop/README.md
+  github: https://github.com/alibaba/nacos/
+  document: https://nacos.io/docs/latest/what-is-nacos/

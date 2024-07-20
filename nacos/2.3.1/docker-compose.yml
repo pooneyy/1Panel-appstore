@@ -16,6 +16,9 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:8848
       - ${NACOS_COMMUNICATION_PORT}:9848
+    env_file:
+      - /etc/1panel/envs/global.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${NACOS_ROOT_PATH}/logs:/home/nacos/logs
       - ${NACOS_ROOT_PATH}/data:/home/nacos/data
@@ -24,5 +27,3 @@ services:
       - NACOS_SERVER_PORT=8848
       - NACOS_AUTH_ENABLE=true
       - SPRING_DATASOURCE_PLATFORM=mysql
-    env_file:
-      - .env

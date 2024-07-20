@@ -3,6 +3,10 @@
 if [ -f .env ]; then
   source .env
 
+  # setup-1 add default values
+  CURRENT_DIR=$(pwd)
+  echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
+
   if command -v mysql &> /dev/null; then
     if [[ -f ./init/mysql-schema.sql ]]; then
       mysql -u"$MYSQL_SERVICE_USER" -p"$MYSQL_SERVICE_PASSWORD" -h"$MYSQL_SERVICE_HOST" -P"$MYSQL_SERVICE_PORT" --protocol=TCP "$MYSQL_SERVICE_DB_NAME" < ./init/mysql-schema.sql
