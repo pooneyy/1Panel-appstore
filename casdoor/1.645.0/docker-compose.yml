@@ -15,11 +15,6 @@ services:
       - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:8000
-    build:
-      context: ./
-      dockerfile: Dockerfile
-      target: STANDARD
-    entrypoint: /bin/sh -c './server --createDatabase=true'
     env_file:
       - /etc/1panel/envs/global.env
       - /etc/1panel/envs/casdoor/casdoor.env
@@ -31,5 +26,5 @@ services:
       - dbName=${DB_NAME}
       - redisEndpoint=${REDIS_HOSTNAME}:${REDIS_PORT}
       - verificationCodeTimeout=10
-      - appname="casdoor"
-      - authState="casdoor"
+      - appname=casdoor
+      - authState=casdoor
