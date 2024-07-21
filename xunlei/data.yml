@@ -1,8 +1,7 @@
 name: 迅雷
 tags:
-    - 工具
+    - 实用工具
 title: 提取自群晖平台的迅雷下载套件
-type: 工具
 description: 提取自群晖平台的迅雷下载套件
 additionalProperties:
     key: xunlei
