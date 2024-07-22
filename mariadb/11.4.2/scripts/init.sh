@@ -5,6 +5,7 @@ if [ -f .env ]; then
 
   # setup-1 add default values
   CURRENT_DIR=$(pwd)
+  sed -i '/^ENV_FILE=/d' .env
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
 
   mkdir -p "$MARIADB_ROOT_PATH"
