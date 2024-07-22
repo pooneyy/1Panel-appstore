@@ -1,0 +1,19 @@
+name: Kibana
+title: 可视化Elasticsearch数据并导航Elastic堆栈
+description: 可视化Elasticsearch数据并导航Elastic堆栈
+additionalProperties:
+  key: kibana
+  name: Kibana
+  tags:
+    - WebSite
+    - Middleware
+    - Tool
+    - Local
+  shortDescZh: 可视化Elasticsearch数据并导航Elastic堆栈
+  shortDescEn: Visualize Elasticsearch data and navigate the Elastic stack
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.elastic.co/
+  github: https://github.com/elastic/kibana/
+  document: https://www.elastic.co/docs/

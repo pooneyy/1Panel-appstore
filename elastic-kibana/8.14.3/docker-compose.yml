@@ -1,0 +1,32 @@
+version: "3.8"
+
+networks:
+  1panel-network:
+    external: true
+
+services:
+  kibana:
+    image: kibana:8.14.3
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:5601
+    env_file:
+      - /etc/1panel/envs/global.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    volumes:
+      - ./config/kibana.yml:/usr/share/kibana/config/kibana.yml
+      - ${BARK_ROOT_PATH}/config:/usr/share/kibana/config
+      - ${BARK_ROOT_PATH}/data:/usr/share/kibana/data
+    environment:
+      - SERVER_PORT=5601
+      - SERVER_NAME="kibana-node"
+      - SERVER_HOST="0.0.0.0"
+      - I18N_LOCALE="zh-CN"
+      - SERVER_REWRITEBASEPATH=false
+      - SERVER_BASEPATH=""
+      - SERVER_PUBLICBASEURL=""

@@ -1,0 +1,39 @@
+version: "3.8"
+
+networks:
+  1panel-network:
+    external: true
+
+services:
+  elasticsearch:
+    image: elasticsearch:8.14.3
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    networks:
+      - 1panel-network
+    tty: true
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - ${PANEL_APP_PORT_HTTPS}:9200
+      - ${PANEL_APP_PORT_API}:9300
+    env_file:
+      - /etc/1panel/envs/global.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    volumes:
+      - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ${BARK_ROOT_PATH}/certs:/usr/share/elasticsearch/config/certs
+      - ${BARK_ROOT_PATH}/config:/usr/share/elasticsearch/config
+      - ${BARK_ROOT_PATH}/data:/usr/share/elasticsearch/data
+      - ${BARK_ROOT_PATH}/data:/usr/share/elasticsearch/logs
+      - ${BARK_ROOT_PATH}/data:/usr/share/elasticsearch/plugins
+    environment:
+      - ES_SETTING_HTTP_PORT=9200
+      - ES_SETTING_CLUSTER_NAME=elasticsearch-cluster
+      - ES_SETTING_LICENSE=basic
+      - MEM_LIMIT=1073741824
+      - ES_SETTING_BOOTSTRAP_MEMORY__LOCK=true

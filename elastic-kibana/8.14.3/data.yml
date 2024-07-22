@@ -1,0 +1,45 @@
+additionalProperties:
+  formFields:
+    - default: "/home/kibana"
+      edit: true
+      envKey: BARK_ROOT_PATH
+      labelZh: 数据持久化路径
+      labelEn: Data persistence path
+      required: true
+      type: text
+    - default: 5601
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: WebUI 端口
+      labelEn: WebUI port
+      required: true
+      rule: paramPort
+      type: number
+    - default: "['http://127.0.0.1:9200']"
+      edit: true
+      envKey: ELASTICSEARCH_HOSTS
+      labelZh: Elasticsearch 地址
+      labelEn: Elasticsearch address
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: ELASTICSEARCH_USERNAME
+      labelZh: Elasticsearch 用户名
+      labelEn: Elasticsearch username
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: ELASTICSEARCH_PASSWORD
+      labelZh: Elasticsearch 密码
+      labelEn: Elasticsearch password
+      required: false
+      type: password
+    - default: ""
+      edit: true
+      envKey: ELASTICSEARCH_SERVICEACCOUNTTOKEN
+      labelZh: Elasticsearch 服务 账户令牌
+      labelEn: Elasticsearch service account token
+      required: false
+      type: password
