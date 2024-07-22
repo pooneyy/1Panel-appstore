@@ -5,13 +5,12 @@ additionalProperties:
   key: elasticsearch
   name: Elasticsearch
   tags:
-    - WebSite
+    - Database
     - Middleware
-    - Tool
     - Local
   shortDescZh: 分布式、RESTful 风格的搜索和数据分析引擎
   shortDescEn: Distributed, RESTful-style search and data analysis engine
-  type: website
+  type: runtime
   crossVersionUpdate: true
   limit: 0
   website: https://www.elastic.co/
