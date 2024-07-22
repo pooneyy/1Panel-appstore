@@ -1,6 +1,6 @@
 name: Kibana
-title: 可视化Elasticsearch数据并导航Elastic堆栈
-description: 可视化Elasticsearch数据并导航Elastic堆栈
+title: 基于浏览器的 Elasticsearch 分析和搜索仪表盘
+description: 基于浏览器的 Elasticsearch 分析和搜索仪表盘
 additionalProperties:
   key: kibana
   name: Kibana
@@ -9,8 +9,8 @@ additionalProperties:
     - Middleware
     - Tool
     - Local
-  shortDescZh: 可视化Elasticsearch数据并导航Elastic堆栈
-  shortDescEn: Visualize Elasticsearch data and navigate the Elastic stack
+  shortDescZh: 基于浏览器的 Elasticsearch 分析和搜索仪表盘
+  shortDescEn: Browser-based Elasticsearch analytics and search dashboard
   type: website
   crossVersionUpdate: true
   limit: 0

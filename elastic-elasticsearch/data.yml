@@ -1,19 +1,19 @@
-name: Kibana
-title: 可视化Elasticsearch数据并导航Elastic堆栈
-description: 可视化Elasticsearch数据并导航Elastic堆栈
+name: Elasticsearch
+title: 分布式、RESTful 风格的搜索和数据分析引擎
+description: 分布式、RESTful 风格的搜索和数据分析引擎
 additionalProperties:
-  key: kibana
-  name: Kibana
+  key: elasticsearch
+  name: Elasticsearch
   tags:
     - WebSite
     - Middleware
     - Tool
     - Local
-  shortDescZh: 可视化Elasticsearch数据并导航Elastic堆栈
-  shortDescEn: Visualize Elasticsearch data and navigate the Elastic stack
+  shortDescZh: 分布式、RESTful 风格的搜索和数据分析引擎
+  shortDescEn: Distributed, RESTful-style search and data analysis engine
   type: website
   crossVersionUpdate: true
   limit: 0
   website: https://www.elastic.co/
-  github: https://github.com/elastic/kibana/
+  github: https://github.com/elastic/elasticsearch/
   document: https://www.elastic.co/docs/
