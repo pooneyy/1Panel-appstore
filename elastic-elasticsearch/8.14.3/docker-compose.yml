@@ -33,7 +33,6 @@ services:
       - ${BARK_ROOT_PATH}/data:/usr/share/elasticsearch/plugins
     environment:
       - ES_SETTING_HTTP_PORT=9200
-      - ES_SETTING_CLUSTER_NAME=elasticsearch-cluster
       - ES_SETTING_LICENSE=basic
       - MEM_LIMIT=1073741824
       - ES_SETTING_BOOTSTRAP_MEMORY__LOCK=true
