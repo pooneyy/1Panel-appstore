@@ -25,36 +25,22 @@ additionalProperties:
       type: number
     - default: ""
       edit: true
-      envKey: ELASTIC_PASSWORD
-      labelZh: Elasticsearch 密码 (elastic)
-      labelEn: Elasticsearch password (elastic)
-      required: true
-      type: password
-    - default: ""
-      edit: true
-      envKey: KIBANA_PASSWORD
-      labelZh: Kibana 密码 (kibana_system)
-      labelEn: Kibana password (kibana_system)
-      required: false
-      type: password
-    - default: "elasticsearch"
-      edit: true
-      envKey: ES_SETTING_CLUSTER_NAME
-      labelZh: 集群名称
-      labelEn: Cluster name
+      envKey: ENROLLMENT_TOKEN
+      labelZh: 节点注册令牌
+      labelEn: Node enrollment token
       required: true
       type: text
     - default: "es-node"
       edit: true
       envKey: ES_SETTING_NODE_NAME
-      labelZh: 节点名称
-      labelEn: Node name
+      labelZh: 节点名称 (集群内唯一值)
+      labelEn: Node name (unique value within the cluster)
       required: true
       type: text
     - default: "-Xms1g -Xmx1g"
       edit: true
       envKey: ES_JAVA_OPTS
-      labelZh: Java 启动参数 (可选)
-      labelEn: Java startup parameters (optional)
+      labelZh: Elasticsearch Java 配置 (可选)
+      labelEn: Elasticsearch Java configuration (optional)
       required: false
       type: text

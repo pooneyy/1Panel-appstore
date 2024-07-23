@@ -36,56 +36,66 @@ echo "vm.max_map_count=262144" >>/etc/sysctl.conf
 sysctl -p
 ```
 
-### 集群主节点安装
+### 单节点安装
 
-> `集群名称` 配置
++ `集群名称` 配置
 
 用于标识集群的名称。默认为 `elasticsearch-cluster`。
 
-> `节点名称` 配置
++ `节点名称` 配置
 
 用于标识节点的名称。默认为 `elasticsearch-node`。
 
-> `Elasticsearch 密码 (elastic)` 配置
++ `Elasticsearch 密码 (elastic)` 配置
 
 内置用户 `elastic` 的密码。默认情况下，密码是随机生成的。
 
-> `Kibana 密码 (kibana_system)` 配置
++ `Kibana 密码 (kibana_system)` 配置
 
 内置用户 `kibana_system` 的密码。默认情况下，密码是随机生成的。
 
 用于保护内置用户 `kibana_system` 的密码。默认情况下，密码是随机生成的。
 
-> `Java 启动参数 (可选)` 配置
++ `注册令牌 (节点)` 配置
 
-Java 启动参数。默认为空。
+忽略即可
 
-推荐参数：`-Xms1g -Xmx1g`
+### 集群节点安装
 
-小内存推荐参数：`-Xms512m -Xmx512m`
++ `集群名称` 配置
+
+与加入的集群名称一致。
+
++ `节点名称` 配置
+
+集群中唯一的节点名称。请勿重复
+
++ `Elasticsearch 密码 (elastic)` 配置
+
+忽略即可
+
++ `Kibana 密码 (kibana_system)` 配置
+
+忽略即可
+
++ `注册令牌 (节点)` 配置
+
+用于加入集群的注册令牌。在集群中的节点中生成，用于加入集群验证。每个注册令牌有效时长30分钟。
 
 ## 快捷操作
 
 > 重置密码
 
 ```sh
-/usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
-```
-
-> 创建 `节点` 注册令牌
-
-注册令牌的有效期为30分钟。
-
-```sh
-/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s node
+cd /usr/share/elasticsearch/bin
+./elasticsearch-reset-password -u elastic
 ```
 
 > 创建 `kibana` 注册令牌
 
-注册令牌的有效期为30分钟。
-
 ```sh
-/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kibana
+cd /usr/share/elasticsearch/bin
+./elasticsearch-create-enrollment-token -s kibana
 ```
 
 > 导出证书
