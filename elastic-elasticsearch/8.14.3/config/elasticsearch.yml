@@ -10,7 +10,6 @@ http:
   cors:
     enabled: true
     allow-origin: "*"
-    allow-headers:xpack: X-Requested-With,Content-Type,Content-Length,Authorization
 
 path:
   repo:
