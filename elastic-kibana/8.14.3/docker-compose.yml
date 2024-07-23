@@ -20,8 +20,7 @@ services:
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ./config/kibana.yml:/usr/share/kibana/config/kibana.yml
-      - ${BARK_ROOT_PATH}/config:/usr/share/kibana/config
-      - ${BARK_ROOT_PATH}/data:/usr/share/kibana/data
+      - ${KIBANA_ROOT_PATH}/data:/usr/share/kibana/data
     environment:
       - SERVER_NAME="kibana"
       - SERVER_HOST="0.0.0.0"

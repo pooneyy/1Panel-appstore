@@ -2,7 +2,7 @@ additionalProperties:
   formFields:
     - default: "/home/kibana"
       edit: true
-      envKey: BARK_ROOT_PATH
+      envKey: KIBANA_ROOT_PATH
       labelZh: 数据持久化路径
       labelEn: Data persistence path
       required: true

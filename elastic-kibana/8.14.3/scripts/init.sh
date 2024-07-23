@@ -8,6 +8,11 @@ if [ -f .env ]; then
   sed -i '/^ENV_FILE=/d' .env
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
 
+  mkdir -p $KIBANA_ROOT_PATH
+  mkdir -p "$KIBANA_ROOT_PATH/data"
+
+  chown -R 1000:1000 $KIBANA_ROOT_PATH
+
   echo "Check Finish."
 
 else
