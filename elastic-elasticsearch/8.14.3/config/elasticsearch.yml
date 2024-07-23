@@ -1,7 +1,9 @@
 discovery:
   type: single-node
+
 network:
   host: 0.0.0.0
+
 http:
   host: 0.0.0.0
   port: 9200
@@ -9,11 +11,10 @@ http:
     enabled: true
     allow-origin: "*"
     allow-headers:xpack: X-Requested-With,Content-Type,Content-Length,Authorization
+
 path:
   repo:
     - /usr/share/elasticsearch/backup
-
-xpack.security.enabled: true
 
 xpack:
   security:
