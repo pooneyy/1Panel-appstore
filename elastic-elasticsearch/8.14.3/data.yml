@@ -9,40 +9,18 @@ additionalProperties:
       type: text
     - default: 9200
       edit: true
-      envKey: PANEL_APP_PORT_HTTPS
+      envKey: PANEL_APP_PORT_HTTP
       labelZh: WebUI 端口
       labelEn: WebUI port
       required: true
       rule: paramPort
       type: number
-    - default: 9300
-      edit: true
-      envKey: PANEL_APP_PORT_API
-      labelZh: 通讯端口
-      labelEn: Communication port
-      required: true
-      rule: paramPort
-      type: number
-    - default: "elasticsearch-cluster"
-      edit: true
-      envKey: CLUSTER_NAME
-      labelZh: 集群名称
-      labelEn: Cluster name
-      required: true
-      type: text
-    - default: "elasticsearch-node"
-      edit: true
-      envKey: ES_SETTING_NODE_NAME
-      labelZh: 节点名称
-      labelEn: Node name
-      required: true
-      type: text
     - default: ""
       edit: true
       envKey: ELASTIC_PASSWORD
       labelZh: Elasticsearch 密码 (elastic)
       labelEn: Elasticsearch password (elastic)
-      required: false
+      required: true
       type: password
     - default: ""
       edit: true
@@ -51,13 +29,6 @@ additionalProperties:
       labelEn: Kibana password (kibana_system)
       required: false
       type: password
-    - default: ""
-      edit: true
-      envKey: ENROLLMENT_TOKEN
-      labelZh: 注册令牌 (节点)
-      labelEn: Enrollment token (node)
-      required: false
-      type: text
     - default: ""
       edit: true
       envKey: ES_JAVA_OPTS
