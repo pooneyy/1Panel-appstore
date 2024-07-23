@@ -60,6 +60,28 @@ Java 启动参数。默认为空。
 
 小内存推荐参数：`-Xms512m -Xmx512m`
 
+> 角色配置
+
+可以通过环境变量配置节点角色。
+
+```sh
+ES_SETTING_NODE_ROLES=[master, data, ingest]
+```
+
+可选角色
+
++ `master`
++ `data`
++ `data_content`
++ `data_hot`
++ `data_warm`
++ `data_cold`
++ `data_frozen`
++ `ingest`
++ `ml`
++ `remote_cluster_client`
++ `transform`
+
 ## 快捷操作 (注册成功)
 
 > 重置密码
