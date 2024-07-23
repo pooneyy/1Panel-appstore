@@ -9,15 +9,16 @@ if [ -f .env ]; then
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
 
   mkdir -p "$ELASTICSEARCH_ROOT_PATH"
-  mkdir -p "$ELASTICSEARCH_DATA_PATH/certs"
   mkdir -p "$ELASTICSEARCH_DATA_PATH/data"
-  mkdir -p "$ELASTICSEARCH_DATA_PATH/logs"
+  mkdir -p "$ELASTICSEARCH_DATA_PATH/backup"
   mkdir -p "$ELASTICSEARCH_DATA_PATH/plugins"
 
-  chown -R 1000:0 "$ELASTICSEARCH_ROOT_PATH"
+  chown -R 1000:1000 "$ELASTICSEARCH_ROOT_PATH"
+  chown -R 1000:1000 "$ELASTICSEARCH_ROOT_PATH/data"
+  chown -R 1000:1000 "$ELASTICSEARCH_ROOT_PATH/backup"
+  chown -R 1000:1000 "$ELASTICSEARCH_ROOT_PATH/plugins"
 
   echo "Check Finish."
-
 else
   echo "Error: .env file not found."
 fi
