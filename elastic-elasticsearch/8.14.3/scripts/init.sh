@@ -8,6 +8,11 @@ if [ -f .env ]; then
   sed -i '/^ENV_FILE=/d' .env
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
 
+  mkdir -p $ELASTICSEARCH_ROOT_PATH
+  mkdir -p "$ELASTICSEARCH_ROOT_PATH/data"
+  mkdir -p "$ELASTICSEARCH_ROOT_PATH/backup"
+  mkdir -p "$ELASTICSEARCH_ROOT_PATH/plugins"
+
   chown -R 1000:1000 $ELASTICSEARCH_ROOT_PATH
 
   echo "Check Finish."
