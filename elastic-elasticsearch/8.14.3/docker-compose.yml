@@ -27,10 +27,10 @@ services:
       - /etc/1panel/envs/global.env
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
       - ${ELASTICSEARCH_ROOT_PATH}/data:/usr/share/elasticsearch/data
       - ${ELASTICSEARCH_ROOT_PATH}/backup:/usr/share/elasticsearch/backup
       - ${ELASTICSEARCH_ROOT_PATH}/plugins:/usr/share/elasticsearch/plugins
     environment:
       - LICENSE=basic
       - ES_SETTING_BOOTSTRAP_MEMORY__LOCK=true
+      - ES_SETTING_PATH_REPO=/usr/share/elasticsearch/backup

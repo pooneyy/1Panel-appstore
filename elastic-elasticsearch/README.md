@@ -79,3 +79,29 @@ sysctl -p
 + `注册令牌 (节点)` 配置
 
 用于加入集群的注册令牌。在集群中的节点中生成，用于加入集群验证。每个注册令牌有效时长30分钟。
+
+## 快捷操作
+
+> 重置密码
+
+```sh
+cd /usr/share/elasticsearch/bin
+./elasticsearch-reset-password -u elastic
+```
+
+> 创建 `kibana` 注册令牌
+
+```sh
+cd /usr/share/elasticsearch/bin
+./elasticsearch-create-enrollment-token -s kibana
+```
+
+> 导出证书
+
+<容器名称> 为容器名称或容器 ID，可以通过 `docker ps` 命令查看。
+
+导出 `http_ca.crt` 证书到当前目录
+
+```sh
+docker cp <容器名称>:/usr/share/elasticsearch/config/certs/http_ca.crt .
+```

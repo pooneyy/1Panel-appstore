@@ -29,10 +29,24 @@ additionalProperties:
       labelEn: Kibana password (kibana_system)
       required: false
       type: password
-    - default: ""
+    - default: "-Xms1g -Xmx1g"
       edit: true
       envKey: ES_JAVA_OPTS
       labelZh: Elasticsearch Java 配置 (可选)
       labelEn: Elasticsearch Java configuration (optional)
       required: false
+      type: text
+    - default: "elasticsearch"
+      edit: true
+      envKey: ES_SETTING_CLUSTER_NAME
+      labelZh: 集群名称
+      labelEn: Cluster name
+      required: true
+      type: text
+    - default: "es-node"
+      edit: true
+      envKey: ES_SETTING_NODE_NAME
+      labelZh: 节点名称
+      labelEn: Node name
+      required: true
       type: text
