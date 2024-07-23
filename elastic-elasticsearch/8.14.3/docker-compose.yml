@@ -29,11 +29,12 @@ services:
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ./config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-      - ${BARK_ROOT_PATH}/certs:/usr/share/elasticsearch/config/certs
-      - ${BARK_ROOT_PATH}/data:/usr/share/elasticsearch/data
-      - ${BARK_ROOT_PATH}/logs:/usr/share/elasticsearch/logs
-      - ${BARK_ROOT_PATH}/plugins:/usr/share/elasticsearch/plugins
+      - ${ELASTICSEARCH_ROOT_PATH}/certs:/usr/share/elasticsearch/config/certs
+      - ${ELASTICSEARCH_ROOT_PATH}/data:/usr/share/elasticsearch/data
+      - ${ELASTICSEARCH_ROOT_PATH}/logs:/usr/share/elasticsearch/logs
+      - ${ELASTICSEARCH_ROOT_PATH}/plugins:/usr/share/elasticsearch/plugins
     environment:
       - LICENSE=basic
       - ES_SETTING_BOOTSTRAP_MEMORY__LOCK=true
       - TAKE_FILE_OWNERSHIP=true
+      - CLUSTER_INITIAL__MASTER__NODES=${ES_SETTING_NODE_NAME}

@@ -4,6 +4,3 @@ http.host: 0.0.0.0
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 network.host: 0.0.0.0
-
-xpack.security.enabled: true
-xpack.security.enrollment.enabled: true
