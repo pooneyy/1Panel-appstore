@@ -2,7 +2,7 @@
 
 搜索并分析您的数据
 
-![Elasticsearch](https://file.lifebus.top/imgs/elasticsearch_logo.svg)
+<img src="https://file.lifebus.top/imgs/elasticsearch_logo.svg" width="100%"/>
 
 Elasticsearch 是 Elastic Stack 核心的分布式搜索和分析引擎。 Logstash 和 Beats 有助于收集、聚合和丰富您的数据并将其存储在
 Elasticsearch 中。
