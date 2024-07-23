@@ -33,5 +33,4 @@ services:
       - ${ELASTICSEARCH_ROOT_PATH}/plugins:/usr/share/elasticsearch/plugins
     environment:
       - LICENSE=basic
-      - TAKE_FILE_OWNERSHIP=true
       - ES_SETTING_BOOTSTRAP_MEMORY__LOCK=true
