@@ -8,10 +8,13 @@ http:
   cors:
     enabled: true
     allow-origin: "*"
-xpack:
+    allow-headers:xpack: X-Requested-With,Content-Type,Content-Length,Authorization
   security:
     enabled: true
     autoconfiguration:
       enabled: true
     enrollment:
       enabled: true
+path:
+  repo:
+    - /usr/share/elasticsearch/backup
