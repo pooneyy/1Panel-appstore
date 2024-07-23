@@ -15,31 +15,10 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: "['http://127.0.0.1:9200']"
+    - default: "https://127.0.0.1:9200"
       edit: true
-      envKey: ELASTICSEARCH_HOSTS
+      envKey: elasticsearch_hosts
       labelZh: Elasticsearch 地址
       labelEn: Elasticsearch address
       required: true
       type: text
-    - default: ""
-      edit: true
-      envKey: ELASTICSEARCH_USERNAME
-      labelZh: Elasticsearch 用户名
-      labelEn: Elasticsearch username
-      required: false
-      type: text
-    - default: ""
-      edit: true
-      envKey: ELASTICSEARCH_PASSWORD
-      labelZh: Elasticsearch 密码
-      labelEn: Elasticsearch password
-      required: false
-      type: password
-    - default: ""
-      edit: true
-      envKey: ELASTICSEARCH_SERVICEACCOUNTTOKEN
-      labelZh: Elasticsearch 服务 账户令牌
-      labelEn: Elasticsearch service account token
-      required: false
-      type: password
