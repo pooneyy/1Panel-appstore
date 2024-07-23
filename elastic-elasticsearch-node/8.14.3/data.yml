@@ -30,11 +30,25 @@ additionalProperties:
       labelEn: Node enrollment token
       required: true
       type: text
+    - default: "127.0.0.1:9300"
+      edit: true
+      envKey: ES_SETTING_DISCOVERY_SEED__HOSTS
+      labelZh: 集群发现地址
+      labelEn: Cluster discovery address
+      required: true
+      type: text
+    - default: "elasticsearch"
+      edit: true
+      envKey: ES_SETTING_CLUSTER_NAME
+      labelZh: 集群名称
+      labelEn: Cluster name
+      required: true
+      type: text
     - default: "es-node"
       edit: true
       envKey: ES_SETTING_NODE_NAME
-      labelZh: 节点名称 (集群内唯一值)
-      labelEn: Node name (unique value within the cluster)
+      labelZh: 节点名称
+      labelEn: Node name
       required: true
       type: text
     - default: "-Xms1g -Xmx1g"
