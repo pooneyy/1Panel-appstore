@@ -9,7 +9,6 @@ if [ -f .env ]; then
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
 
   mkdir -p $ELASTICSEARCH_ROOT_PATH
-  mkdir -p "$ELASTICSEARCH_ROOT_PATH/config"
   mkdir -p "$ELASTICSEARCH_ROOT_PATH/data"
   mkdir -p "$ELASTICSEARCH_ROOT_PATH/backup"
   mkdir -p "$ELASTICSEARCH_ROOT_PATH/plugins"
