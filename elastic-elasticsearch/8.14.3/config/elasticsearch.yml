@@ -4,6 +4,17 @@ http.host: 0.0.0.0
 http.cors.enabled: true
 http.cors.allow-origin: "*"
 network.host: 0.0.0.0
+path:
+  data: /usr/share/elasticsearch/data
+  logs: /usr/share/elasticsearch/logs
+gateway.recover_after_nodes: 1
+cluster.name: ${CLUSTER_NAME}
+node.name: ${ES_SETTING_NODE_NAME}
+node.master: true
+node.ingest: true
+node.data: true
+
+
 #----------------------- BEGIN SECURITY AUTO CONFIGURATION -----------------------
 #
 # The following settings, TLS certificates, and keys have been automatically
