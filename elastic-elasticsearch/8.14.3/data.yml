@@ -25,9 +25,16 @@ additionalProperties:
       type: number
     - default: "elasticsearch-cluster"
       edit: true
-      envKey: ES_SETTING_CLUSTER_NAME
-      labelZh: 节点名称
+      envKey: CLUSTER_NAME
+      labelZh: 集群名称
       labelEn: Cluster name
+      required: true
+      type: text
+    - default: "elasticsearch-node"
+      edit: true
+      envKey: ES_SETTING_NODE_NAME
+      labelZh: 节点名称
+      labelEn: Node name
       required: true
       type: text
     - default: ""
@@ -49,5 +56,12 @@ additionalProperties:
       envKey: ENROLLMENT_TOKEN
       labelZh: 注册令牌 (节点)
       labelEn: Enrollment token (node)
+      required: false
+      type: text
+    - default: "-Xlog:disable -Xlog:gc=debug:stderr -Xms512m -Xmx512m"
+      edit: true
+      envKey: ES_JAVA_OPTS
+      labelZh: Elasticsearch Java 配置 (可选)
+      labelEn: Elasticsearch Java configuration (optional)
       required: false
       type: text

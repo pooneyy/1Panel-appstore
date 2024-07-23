@@ -23,10 +23,6 @@ services:
       - ${BARK_ROOT_PATH}/config:/usr/share/kibana/config
       - ${BARK_ROOT_PATH}/data:/usr/share/kibana/data
     environment:
-      - SERVER_PORT=5601
-      - SERVER_NAME="kibana-node"
+      - SERVER_NAME="kibana"
       - SERVER_HOST="0.0.0.0"
       - I18N_LOCALE="zh-CN"
-      - SERVER_REWRITEBASEPATH=false
-      - SERVER_BASEPATH=""
-      - SERVER_PUBLICBASEURL=""

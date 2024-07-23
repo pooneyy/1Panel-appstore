@@ -10,24 +10,72 @@ Kibana 使您能够以交互方式探索、可视化和分享对数据的见解�
 
 ## 安装说明
 
+### 宿主机配置
+
++ `vm.max_map_count` 配置
+
+Elasticsearch 需要设置 `vm.max_map_count` 为至少 `262144`。可以通过以下命令设置：
+
+```sh
+grep vm.max_map_count /etc/sysctl.conf
+
+# 如果输出为空，表示没有设置，需要手动添加
+vm.max_map_count=262144
+```
+
+添加配置
+
+```sh
+# 临时生效
+sysctl -w vm.max_map_count=262144
+
+# 永久生效
+echo "vm.max_map_count=262144" >>/etc/sysctl.conf
+sysctl -p
+```
+
 ### 单节点安装
+
++ `集群名称` 配置
+
+用于标识集群的名称。默认为 `elasticsearch-cluster`。
 
 + `节点名称` 配置
 
-用于标识集群中的节点。默认情况下，节点名称是随机生成的 UUID。
+用于标识节点的名称。默认为 `elasticsearch-node`。
 
 + `Elasticsearch 密码 (elastic)` 配置
 
-单节点启动必填
-
-用于保护内置用户 `elastic` 的密码。默认情况下，密码是随机生成的。
+内置用户 `elastic` 的密码。默认情况下，密码是随机生成的。
 
 + `Kibana 密码 (kibana_system)` 配置
 
-单节点启动必填
+内置用户 `kibana_system` 的密码。默认情况下，密码是随机生成的。
 
 用于保护内置用户 `kibana_system` 的密码。默认情况下，密码是随机生成的。
 
 + `注册令牌 (节点)` 配置
 
-单节点启动可忽略， 如果是作为 `集群` 中的节点启动，此项 `必须` 填写，可忽略密码配置。
+忽略即可
+
+### 集群节点安装
+
++ `集群名称` 配置
+
+与加入的集群名称一致。
+
++ `节点名称` 配置
+
+集群中唯一的节点名称。请勿重复
+
++ `Elasticsearch 密码 (elastic)` 配置
+
+忽略即可
+
++ `Kibana 密码 (kibana_system)` 配置
+
+忽略即可
+
++ `注册令牌 (节点)` 配置
+
+用于加入集群的注册令牌。在集群中的节点中生成，用于加入集群验证。每个注册令牌有效时长30分钟。
