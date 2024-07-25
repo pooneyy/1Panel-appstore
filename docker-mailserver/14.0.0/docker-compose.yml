@@ -1,0 +1,39 @@
+version: "3.8"
+
+networks:
+  1panel-network:
+    external: true
+
+services:
+  mailserver:
+    image: mailserver/docker-mailserver:14.0.0
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    networks:
+      - 1panel-network
+    stop_grace_period: 1m
+    hostname: ${HOSTNAME_FQDN}
+    ports:
+      - ${PANEL_APP_PORT_SMTP}:25
+      - ${PANEL_APP_PORT_IMAP}:143
+      - ${PANEL_APP_PORT_SMTPS}:465
+      - ${PANEL_APP_PORT_ESMTP}:587
+      - ${PANEL_APP_PORT_IPAPS}:993
+    env_file:
+      - /etc/1panel/envs/global.env
+      - /etc/1panel/envs/mailserver/mailserver.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - ${DOCKER_MAILSERVER_ROOT_PATH}/dms/mail-data/:/var/mail/
+      - ${DOCKER_MAILSERVER_ROOT_PATH}/dms/mail-state/:/var/mail-state/
+      - ${DOCKER_MAILSERVER_ROOT_PATH}/dms/mail-logs/:/var/log/mail/
+      - ${DOCKER_MAILSERVER_ROOT_PATH}/dms/config/:/tmp/docker-mailserver/
+    environment:
+      -
+    healthcheck:
+      test: "ss --listening --tcp | grep -P 'LISTEN.+:smtp' || exit 1"
+      timeout: 3s
+      retries: 0

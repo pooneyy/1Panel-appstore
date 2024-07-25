@@ -1,0 +1,17 @@
+name: Docker Mailserver
+title: 是一个可用于生产的全栈但简单的邮件服务器
+description: 是一个可用于生产的全栈但简单的邮件服务器
+additionalProperties:
+  key: docker-mailserver
+  name: Docker Mailserver
+  tags:
+    - Email
+    - Local
+  shortDescZh: 是一个可用于生产的全栈但简单的邮件服务器
+  shortDescEn: A fullstack but simple mail server (smtp, imap, antispam, antivirus, etc.)
+  type: runtime
+  crossVersionUpdate: true
+  limit: 0
+  website: https://docker-mailserver.github.io/
+  github: https://github.com/docker-mailserver/docker-mailserver/
+  document: https://docker-mailserver.github.io/
