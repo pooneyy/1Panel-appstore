@@ -13,6 +13,11 @@ services:
     restart: always
     networks:
       - 1panel-network
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 20000
+        hard: 40000
     ports:
       - ${PANEL_APP_PORT_HTTP}:9090
     volumes:
