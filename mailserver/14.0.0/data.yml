@@ -139,3 +139,31 @@ additionalProperties:
       labelEn: SSL Private certificate file name
       required: false
       type: text
+    - default: ""
+      edit: true
+      envKey: RELAY_HOST
+      labelZh: SMTP 中继主机
+      labelEn: SMTP relay host
+      required: false
+      type: text
+    - default: 587
+      edit: true
+      envKey: RELAY_PORT
+      labelZh: SMTP 中继端口
+      labelEn: SMTP relay port
+      required: false
+      type: number
+    - default: ""
+      edit: true
+      envKey: RELAY_USER
+      labelZh: SMTP 中继用户名
+      labelEn: SMTP relay username
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: RELAY_PASSWORD
+      labelZh: SMTP 中继密码
+      labelEn: SMTP relay password
+      required: false
+      type: text
