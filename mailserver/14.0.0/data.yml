@@ -118,8 +118,6 @@ additionalProperties:
           value: "letsencrypt"
         - label: 本地证书
           value: "manual"
-        - label: 禁用 SSL
-          value: ""
     - default: "public.crt"
       edit: true
       envKey: CERTS_PUBLIC_CRT
