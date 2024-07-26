@@ -75,6 +75,13 @@ additionalProperties:
       required: false
       rule: paramPort
       type: number
+    - default: "domain.com"
+      edit: true
+      envKey: HOSTNAME_FQDN
+      labelZh: 邮件服务器域名
+      labelEn: Mail server domain name
+      required: true
+      type: text
     - default: "postmaster@domain.com"
       edit: true
       envKey: POSTMASTER_ADDRESS

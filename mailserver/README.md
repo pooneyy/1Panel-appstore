@@ -40,6 +40,22 @@ SQL 数据库。其形象以 "保持简单和版本化 "为口号。
 
 将证书文件放置在 持久化目录的 `certs` 目录下，文件名为 `public.crt` 和 `private.key`。
 
+### 端口占用检查
+
+- `25` SMTP 端口
+
+```sh
+netstat -tuln | grep 25
+```
+
+停止Linux 邮件服务 `postfix` 服务, 释放 25 端口, 避免端口占用。
+
+```sh
+systemctl status postfix.service
+systemctl stop postfix.service
+systemctl disable postfix.service
+```
+
 ## 安装完成
 
 首次启动至少要添加一个账户，您有两分钟的时间来执行此操作。请在容器终端中运行以下命令。
