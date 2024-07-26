@@ -1,6 +1,6 @@
 additionalProperties:
   formFields:
-    - default: "/home/bark"
+    - default: "/home/mailserver"
       edit: true
       envKey: MAILSERVER_ROOT_PATH
       labelZh: 数据持久化路径
