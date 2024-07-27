@@ -1,0 +1,18 @@
+name: Pixman
+title: IPTV、M3U8 直播源
+description: IPTV、M3U8 直播源
+additionalProperties:
+  key: pixman
+  name: Pixman
+  tags:
+    - WebSite
+    - Media
+    - Local
+  shortDescZh: IPTV、M3U8 直播源
+  shortDescEn: IPTV、M3U8 直播源
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://pixman.io/
+  github: https://pixman.io/
+  document: https://pixman.io/
