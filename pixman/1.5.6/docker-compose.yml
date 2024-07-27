@@ -18,6 +18,6 @@ services:
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${PIXMAN_ROOT_PATH}/m3u:/app/app/data/m3u
-    entrypoint:
+    environment:
       - http_proxy=${NETWORK_PROXY:-}
       - https_proxy=${NETWORK_PROXY:-}
