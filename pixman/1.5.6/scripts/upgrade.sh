@@ -8,6 +8,11 @@ if [ -f .env ]; then
   sed -i '/^ENV_FILE=/d' .env
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
 
+  if [ ! -d $PIXMAN_ROOT_PATH/m3u ]; then
+    mkdir -p $PIXMAN_ROOT_PATH/m3u
+  fi
+  cp -rf ./m3u/* $PIXMAN_ROOT_PATH/m3u/
+
   echo "Check Finish."
 
 else
