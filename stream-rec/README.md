@@ -2,7 +2,7 @@
 
 Stream-rec 是一个自动录制各种直播平台的工具。
 
-![Stream-Rec](https://github.com/hua0512/stream-rec-front/blob/master/docs/zh/dashboard.png)
+![Stream-Rec](https://file.lifebus.top/imgs/stream_rec_cover.png)
 
 ## 特性
 
@@ -24,10 +24,6 @@ Stream-rec 是一个自动录制各种直播平台的工具。
 | 虎牙        | ✅  | ✅  | `https://www.huya.com/{直播间}`                  |
 | PandaTV   | ✅  | ✅  | `https://www.pandalive.co.kr/live/play/{直播间}` |
 | Twitch    | ✅  | ✅  | `https://www.twitch.tv/{直播间}`                 |
-| AfreecaTv | ❌  | ❌  |                                               |
-| Bilibili  | ❌  | ❌  |                                               |
-| Niconico  | ❌  | ❌  |                                               |
-| Youtube   | ❌  | ❌  |                                               |
 
 ## 安装说明
 
@@ -35,7 +31,7 @@ Stream-rec 是一个自动录制各种直播平台的工具。
 >
 > 用户名：stream-rec
 >
-> 密码：stream-rec
+> 密码：stream-rec 或 `登录密码 (初始化)` 配置
 
 ### 必须修改配置
 

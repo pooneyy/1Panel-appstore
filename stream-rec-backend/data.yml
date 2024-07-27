@@ -1,9 +1,9 @@
-name: Stream Rec API服务
+name: Stream Rec 后端服务
 title: 自动流媒体录制工具
 description: 自动流媒体录制工具
 additionalProperties:
   key: stream-rec-backend
-  name: Stream Rec API服务
+  name: Stream Rec 后端服务
   tags:
     - Tool
     - Local
