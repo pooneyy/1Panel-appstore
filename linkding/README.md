@@ -2,7 +2,7 @@
 
 链接是一个简单的书签服务，您可以自己托管。
 
-![linkding](https://github.com/sissbruecker/linkding/blob/master/docs/linkding-screenshot.png)
+![linkding](https://file.lifebus.top/imgs/linkding_cover.png)
 
 ## 特性
 
