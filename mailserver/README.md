@@ -3,6 +3,8 @@
 docker-mailserver，简称 DMS，是一个可用于生产的全栈但简单的邮件服务器（SMTP、IMAP、LDAP、反垃圾邮件、反病毒等）。它只使用配置文件，不使用
 SQL 数据库。其形象以 "保持简单和版本化 "为口号。
 
+<img height="128" src="https://file.lifebus.top/apps/mailserver/logo.png" width="128"/>
+
 ## 前置准备
 
 - `域名`
@@ -106,7 +108,6 @@ setup alias add postmaster@example.com user@example.com
 - `163`: `465`
 - `126`: `465`
 - `25` 通常也可以使用
-
 
 ### `SMTP 中继用户名` 配置
 

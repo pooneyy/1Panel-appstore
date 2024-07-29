@@ -1,15 +1,14 @@
 name: Pixman
-title: IPTV、M3U8 直播源
-description: IPTV、M3U8 直播源
+title: IPTV、M3U8 流媒体代理方案
+description: IPTV、M3U8 流媒体代理方案
 additionalProperties:
   key: pixman
   name: Pixman
   tags:
-    - WebSite
     - Media
     - Local
-  shortDescZh: IPTV、M3U8 直播源
-  shortDescEn: IPTV、M3U8 直播源
+  shortDescZh: IPTV、M3U8 流媒体代理方案
+  shortDescEn: IPTV、M3U8 streaming media proxy solution
   type: website
   crossVersionUpdate: true
   limit: 0
