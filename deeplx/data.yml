@@ -6,7 +6,7 @@ additionalProperties:
   key: deeplx
   name: DeepLX
   tags:
-    - WebSite
+    - Tool
     - Middleware
     - Local
   shortDescZh: DeepL 免费API

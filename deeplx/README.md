@@ -2,7 +2,7 @@
 
 强大的 DeepL 翻译 API
 
-![DeepLX](https://static.deepl.com/img/appDownload/macos_app_download.svg)
+![DeepLX](https://file.lifebus.top/imgs/deeplx_cover.png)
 
 ## 简介
 

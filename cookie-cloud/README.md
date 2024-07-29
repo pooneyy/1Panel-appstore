@@ -3,7 +3,7 @@
 CookieCloud 是一个用于将 cookie 与您的自托管服务器同步的小工具，允许您将浏览器 cookie
 和本地存储同步到您的手机和云端。它具有内置的端到端加密功能，并允许您设置同步间隔。
 
-![CookieCloud](https://github.com/easychen/CookieCloud/blob/master/images/20230121092535.png)
+![CookieCloud](https://file.lifebus.top/imgs/cookie_cloud_cover.png)
 
 ## 浏览器插件
 
