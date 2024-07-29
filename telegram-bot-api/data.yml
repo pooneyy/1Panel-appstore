@@ -3,7 +3,7 @@ title: Telegram Bot API 服务器
 description: Telegram Bot API 服务器
 additionalProperties:
   key: telegram-bot-api
-  name: Bark
+  name: Telegram Bot Api
   tags:
     - Middleware
     - Tool
