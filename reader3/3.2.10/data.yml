@@ -103,18 +103,6 @@ additionalProperties:
           value: "true"
         - label: 禁止
           value: "false"
-    - default: "false"
-      edit: true
-      envKey: READER_APP_defaultUserBookLimit
-      labelZh: 允许新用户编辑 RSS 源
-      labelEn: Allow New User Edit RSS Source
-      required: true
-      type: select
-      values:
-        - label: 允许
-          value: "true"
-        - label: 禁止
-          value: "false"
     - default: 200
       edit: true
       envKey: READER_APP_DEFAULTUSERBOOKSOURCELIMIT
