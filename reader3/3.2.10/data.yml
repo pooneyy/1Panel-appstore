@@ -29,7 +29,7 @@ additionalProperties:
       labelEn: Invite Code
       required: false
       type: text
-    - default: ""
+    - default: "true"
       edit: true
       envKey: READER_APP_CACHECHAPTERCONTENT
       labelZh: 缓存章节内容

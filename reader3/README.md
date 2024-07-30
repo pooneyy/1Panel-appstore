@@ -16,15 +16,23 @@
 
 ## 服务地址说明
 
-> 全功能web端：`http://{host_ip}:{port}`
+> 1. 全功能web端
 >
-> 适配kindle的 simple-web (收费)：`http://{host_ip}:{port}/simple-web`
+> 访问地址：`http://{host_ip}:{port}`
 >
-> WebDAV同步配置：`http://{host_ip}:{port}/reader3/webdav/`
+> 用户需要自行注册账号
 >
-> 用户名 `default` 或 注册用户
+> 2. 适配kindle的 simple-web (收费)
 >
-> 密码 `123456` 或 注册用户密码
+> 访问地址：`http://{host_ip}:{port}/simple-web`
+>
+> 3. WebDAV同步配置
+>
+> 访问地址：`http://{host_ip}:{port}/reader3/webdav/`
+>
+> 用户名 `default` 或 用户名
+>
+> 密码 `123456` 或 用户密码
 
 ## 安装说明
 
