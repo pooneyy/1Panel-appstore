@@ -1,9 +1,9 @@
-name: Alist
+name: Alist FFMpeg插件版
 title: 文件列表程序
 description: 一个支持多种存储的文件列表程序
 additionalProperties:
   key: alist-ffmpeg
-  name: Alist
+  name: Alist FFMpeg插件版
   tags:
     - WebSite
     - Storage
