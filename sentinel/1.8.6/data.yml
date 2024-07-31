@@ -38,13 +38,13 @@ additionalProperties:
       required: true
       type: select
       values:
-        - label: "Host"
+        - label: 主机网络模式
           value: "host"
-        - label: "Bridge"
+        - label: 桥接网络模式
           value: "bridge"
-        - label: "None"
+        - label: 无网络模式
           value: "none"
-        - label: "1panel-network"
+        - label: 1panel-network
           value: "1panel-network"
     - default: "false"
       edit: true

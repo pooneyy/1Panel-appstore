@@ -1,0 +1,17 @@
+name: Crmeb 商城
+title:
+description:
+additionalProperties:
+  key: crmeb
+  name: Crmeb 商城
+  tags:
+    - WebSite
+    - Local
+  shortDescZh:
+  shortDescEn:
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: http://www.crmeb.com/
+  github: https://github.com/crmeb/CRMEB/
+  document: https://doc.crmeb.com/

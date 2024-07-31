@@ -8,11 +8,11 @@ additionalProperties:
       required: true
       type: select
       values:
-        - label: 主机模式
+        - label: 主机网络模式
           value: "host"
-        - label: 桥接模式
+        - label: 桥接网络模式
           value: "bridge"
-        - label: 无网络
+        - label: 无网络模式
           value: "none"
         - label: 1panel-network
           value: "1panel-network"

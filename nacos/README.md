@@ -4,9 +4,12 @@
 
 ![Nacos](https://github.com/alibaba/nacos/raw/develop/doc/Nacos_Logo.png)
 
-## 特性
-
 ## 安装说明
+
+Nacos
+2.x默认使用的端口为8848（HTTP管理端口）、9848（客户端gRPC请求服务端端口）和9849（服务端gRPC请求服务端端口）。客户端在连接时，虽然主要配置的是管理端访问端口8848，但实际上客户端会根据服务端的配置自动计算其他端口进行通信。
+
+因此我们推荐使用 `host` 模式部署，以避免端口冲突。
 
 > 安全路径：`/nacos`
 >
