@@ -3,16 +3,16 @@ additionalProperties:
     - default: 8858
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Web port
-      labelZh: Web 端口
+      labelZh: WebUI 端口
+      labelEn: WebUI Port
       required: true
       rule: paramPort
       type: number
     - default: 8719
       edit: true
-      envKey: COMMUNICATION_PORT
-      labelEn: Communication port
-      labelZh: 通讯端口
+      envKey: PANEL_APP_PORT_API
+      labelZh: API 端口
+      labelEn: API Port
       required: true
       rule: paramPort
       type: number
@@ -49,12 +49,12 @@ additionalProperties:
     - default: "false"
       edit: true
       envKey: SENTINEL_DASHBOARD_FEIGN_ENABLED
-      labelEn: Feign enabled
-      labelZh: Feign 支持是否启用
+      labelZh: 启用 Feign
+      labelEn: Enable Feign
       required: false
       type: select
       values:
-        - label: "true"
+        - label: 启用
           value: "true"
-        - label: "false"
+        - label: 禁用
           value: "false"
