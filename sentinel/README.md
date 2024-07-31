@@ -7,11 +7,9 @@
 访问地址
 `http://IP:8858/sentinel`
 
-> 用户名
-> sentinel
+> 用户名：`sentinel`
 >
-> 密码
-> sentinel
+> 密码：`sentinel`
 
 ## Sentinel 的历史
 
