@@ -6,7 +6,7 @@ networks:
 
 services:
   stream-rec-frontend:
-    image: streamrec/stream-rec-front:v0.6.9
+    image: streamrec/stream-rec-front:v0.7.0
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
