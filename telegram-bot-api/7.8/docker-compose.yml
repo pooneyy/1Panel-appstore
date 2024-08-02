@@ -6,7 +6,7 @@ networks:
 
 services:
   telegram-bot-api:
-    image: aiogram/telegram-bot-api:7.7
+    image: aiogram/telegram-bot-api:7.8
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
