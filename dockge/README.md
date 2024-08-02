@@ -4,6 +4,8 @@
 
 ![Dockge](https://file.lifebus.top/imgs/dockge_cover.png)
 
+![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+
 ## 特性
 
 + 🧑‍💼 管理您的 compose.yaml 文件
@@ -17,3 +19,7 @@
   命令与它们交互
 + 🚄 反应式 - 一切都是响应式的。进度（Pull/Up/Down）和终端输出是实时的
 + 🐣 易于使用且精美的 UI - 如果您喜欢 Uptime Kuma 的 UI/UX，您也会喜欢这个
+
+---
+
+![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

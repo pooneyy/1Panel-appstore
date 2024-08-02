@@ -7,6 +7,8 @@ CRMEB属于西安众邦网络科技有限公司旗下品牌，CRMEB v5 基于Thi
 
 系统采用前后端分离技术，基于TP6+Uni-app框架开发；全开源无加密，支持微信小程序、公众号、H5、APP、PC端适配，数据同步！是一套为开发者量身打造，极易二次开发的单商户新零售社交电商系统。
 
+![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+
 ## 应用简介
 
 + `前后端分离`：后端TP6，管理端Element UI，移动端Uni-app；
@@ -38,3 +40,7 @@ CRMEB属于西安众邦网络科技有限公司旗下品牌，CRMEB v5 基于Thi
 + 贡献者授权：要求所有贡献者授予 Apache 软件基金会永久性的、免费的、不可撤销的许可，以使用、复制、修改和分发其贡献。
 
 + 专利许可：为了保护使用该软件的用户，该许可要求贡献者授权任何必要的专利许可，以便将其用于 Apache 软件基金会的项目。
+
+---
+
+![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

@@ -4,6 +4,8 @@ MinIO 是一种高性能、S3 兼容的对象存储。它是为大规模 AI/ML�
 
 ![MinIO](https://file.lifebus.top/imgs/minio_cover.png)
 
+![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+
 ## 特性
 
 + 简单
@@ -64,3 +66,7 @@ MinIO API 端口默认是 9000。
 域名配置，可填写：`https://web.minio.com`
 
 协议 `https` 取决于是否启用了 SSL/TLS, 是否配置了域名证书。
+
+---
+
+![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

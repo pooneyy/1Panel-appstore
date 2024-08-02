@@ -4,6 +4,8 @@
 
 ![PostgreSQL](https://file.lifebus.top/imgs/postgresql_logo.png)
 
+![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+
 ## 简介
 
 PostgreSQL 是一个功能强大的开源对象关系型数据库系统，它使用并扩展了 SQL 语言，并结合了多种功能，可以安全地存储和扩展最复杂的数据工作负载。PostgreSQL
@@ -42,3 +44,7 @@ PostgreSQL 具有许多功能，旨在帮助开发人员构建应用程序，帮
 - `{version}` 默认版
 
     + 官方默认 PostgreSQL 版本，基于 Debian Linux 发行版。
+
+---
+
+![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

@@ -4,6 +4,8 @@ IYUU 是一个基于种子特征码的交叉索引工具
 
 ![IYUU Plus](https://file.lifebus.top/imgs/iyuuplus_cover.png)
 
+![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+
 ## 简介
 
 使用php语言编写并使用php-cli常驻内存运行，通过计划任务，按用户设定的频率调用transmission、qBittorrent下载软件的API接口，提取正在做种的info_hash提交到IYUU辅种服务器的API接口https:
@@ -83,3 +85,7 @@ UI遠端，以最大化你的torrent体验。使用qBittorrent，你可以在多
 | zmpt      | 织梦     | 自查 |
 | agsvpt    | 末日种子库  | 自查 |
 | 其他站点      | 未知     | 未知 |
+
+---
+
+![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

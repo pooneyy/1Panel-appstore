@@ -5,6 +5,8 @@ Casdoor 是一个 UI 优先的身份访问管理 (IAM)/单点登录 (SSO) 平台
 
 ![Casdoor](https://file.lifebus.top/imgs/casdoor_cover.png)
 
+![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+
 ## 简介
 
 Casdoor是一个基于OAuth 2.0、OIDC、SAML 和 CAS 的，UI-first的身份和访问管理(IAM)/单点登录(SSO)平台。
@@ -87,3 +89,7 @@ volumes:
 ```
 
 其中 `./config/init_data.json` 为默认配置文件所在路径，您可以根据实际情况进行修改为自定义绝对文件路径即可。
+
+---
+
+![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

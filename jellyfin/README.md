@@ -4,6 +4,8 @@
 
 ![JellyFin](https://file.lifebus.top/imgs/jellyfin_cover.png)
 
+![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+
 ## 安装说明
 
 + 开启 `投屏服务(DLNA)` 与 `网络唤醒服务(WOL)` 功能
@@ -16,3 +18,7 @@
 默认路径：`/home/jellyfin/config/font`
 
 `/home/jellyfin` 为安装根路径，请在应用参数中查询具体参数
+
+---
+
+![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

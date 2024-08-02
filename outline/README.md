@@ -6,6 +6,8 @@
 
 迷失在乱七八糟的文档中？无法确定谁有访问权限？同事在聊天中反复询问相同的信息？是时候整理团队知识了。
 
+![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+
 ## 安装说明
 
 ### 参数 `加密密钥` 与 `工具密钥` 配置
@@ -74,3 +76,7 @@ redis://password@127.0.0.1:6379/1?timeout=10&pool_size=10
     proxy_redirect off;
   }
 ```
+
+---
+
+![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

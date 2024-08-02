@@ -4,6 +4,8 @@
 
 ![ztncui](https://docs.zerotier.com/assets/images/integrating-gateway-f59b544e1196b304d4fc502a64b19e27.png)
 
+![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+
 ## 简介
 
 ZeroTier 这一类 P2P VPN 是在互联网的基础上将自己的所有设备组成一个私有的网络，可以理解为互联网连接的局域网。最常见的场景就是在公司可以用手机直接访问家里的
@@ -26,3 +28,7 @@ LEAF ：网络客户端，就是每台连接到网络节点。
 ## 安装说明
 
 > 默认用户名：`admin`
+
+---
+
+![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

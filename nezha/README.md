@@ -4,6 +4,8 @@
 
 ![哪吒监控](https://file.lifebus.top/imgs/nezha_logo.svg)
 
+![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+
 ## OAuth2 配置
 
 推荐使用 `Gitee` 或 `Gitea` 作为管理员账号登录，因为 `Github` 在中国大陆访问速度较慢。
@@ -86,3 +88,7 @@ Agent 是哪吒监控的数据采集工具，用于采集服务器的性能数�
 + 修改配置重建不生效
 
 请前往持久化目录下的 `data` 目录中的 `config.yaml` 修改配置后，然后重启容器
+
+---
+
+![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

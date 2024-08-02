@@ -6,6 +6,8 @@
 
 ![SpeedTest](https://github.com/librespeed/speedtest/blob/master/.logo/logo3.png)
 
+![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+
 ## 特性
 
 + 下载
@@ -48,3 +50,7 @@ GDPR 请求的电子邮件地址。启用遥测时必须指定。
 如果禁用 `禁用 ipinfo.io (开启遥测)`，此项决定如何测量距服务器的距离。
 
 `km` 代表公里， `mi` 代表英里，也可以是空字符串以禁用距离测量。
+
+---
+
+![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
