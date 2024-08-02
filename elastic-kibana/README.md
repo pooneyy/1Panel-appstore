@@ -11,7 +11,7 @@ Kibana，然后管理数据。
 Kibana 适用于所有类型的数据。您的数据可以是结构化或非结构化文本、数字数据、时间序列数据、地理空间数据、日志、指标、安全事件等。无论您的数据是什么，Kibana
 都可以帮助您发现模式和关系并可视化结果。
 
-![Static Badge](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
 
 ## 特性
 
