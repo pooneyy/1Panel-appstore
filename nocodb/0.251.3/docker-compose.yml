@@ -27,4 +27,4 @@ services:
       - NUXT_PUBLIC_NC_BACKEND_URL=http://localhost:8080
       - NC_SMTP_SECURE=true
       - NC_SMTP_IGNORE_TLS=false
-      - NC_DB="${DB_TYPE}://${DB_HOSTNAME}:${DB_PORT}?u=${DB_USER}&p=${DB_PASSWD}&d=${DB_NAME}"
+      - NC_DB=${DB_TYPE}://${DB_HOSTNAME}:${DB_PORT}?u=${DB_USER}&p=${DB_PASSWD}&d=${DB_NAME}
