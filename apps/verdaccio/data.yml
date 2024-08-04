@@ -1,15 +1,15 @@
 name: Verdaccio
 tags:
     - DevOps
-title: 一个基于 Node.js 的轻量级私有仓库
-description: 一个基于 Node.js 的轻量级私有仓库
+title: 本地私有 NPM 注册中心
+description: 本地私有 NPM 注册中心
 additionalProperties:
     key: verdaccio
     name: Verdaccio
     tags:
         - DevOps
-    shortDescZh: 一个基于 Node.js 的轻量级私有仓库
-    shortDescEn: A lightweight Node.js private proxy registry
+    shortDescZh: 本地私有 NPM 注册中心
+    shortDescEn: local private NPM registry
     type: tool
     crossVersionUpdate: true
     limit: 0
