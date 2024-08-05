@@ -22,6 +22,6 @@ services:
       - ${GHOST_ROOT_PATH}/data:/var/lib/ghost/content
     environment:
       - NODE_ENV=production
-      - server__host=127.0.0.1
+      - server__host=0.0.0.0
       - server__port=2368
       - database__client=mysql

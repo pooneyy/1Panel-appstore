@@ -120,7 +120,7 @@ additionalProperties:
       labelZh: 邮件鉴权 密码
       labelEn: Mail Password
       required: true
-      type: text
+      type: password
     - default: ""
       edit: true
       envKey: mail__from
