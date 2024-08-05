@@ -1,0 +1,17 @@
+name: Ghost
+title: 用于现代出版、会员制、订阅和通讯的独立技术
+description: 用于现代出版、会员制、订阅和通讯的独立技术
+additionalProperties:
+  key: ghost
+  name: Ghost
+  tags:
+    - WebSite
+    - Local
+  shortDescZh: 用于现代出版、会员制、订阅和通讯的独立技术
+  shortDescEn: A professional publishing platform
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://ghost.org/
+  github: https://github.com/TryGhost/Ghost/
+  document: https://ghost.org/docs/
