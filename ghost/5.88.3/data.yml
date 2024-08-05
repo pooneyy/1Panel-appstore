@@ -19,7 +19,7 @@ additionalProperties:
           value: mariadb
         - label: Percona
           value: percona
-    - default: "/home/gost"
+    - default: "/home/ghost"
       edit: true
       envKey: GOST_ROOT_PATH
       labelZh: 数据持久化路径

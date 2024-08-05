@@ -1,5 +1,5 @@
 name: Ghost
-title: 用于现代出版、会员制、订阅和通讯的独立技术
+title: 用于现代出版、会员制、订阅和通讯的人博客系统
 description: 用于现代出版、会员制、订阅和通讯的独立技术
 additionalProperties:
   key: ghost
@@ -7,8 +7,8 @@ additionalProperties:
   tags:
     - WebSite
     - Local
-  shortDescZh: 用于现代出版、会员制、订阅和通讯的独立技术
-  shortDescEn: A professional publishing platform
+  shortDescZh: 用于现代出版、会员制、订阅和通讯的人博客系统
+  shortDescEn: Human blogging systems for modern publishing, memberships, subscriptions and newsletters
   type: website
   crossVersionUpdate: true
   limit: 0
