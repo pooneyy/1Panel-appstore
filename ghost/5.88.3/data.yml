@@ -21,7 +21,7 @@ additionalProperties:
           value: percona
     - default: "/home/ghost"
       edit: true
-      envKey: GOST_ROOT_PATH
+      envKey: GHOST_ROOT_PATH
       labelZh: 数据持久化路径
       labelEn: Data persistence path
       required: true
