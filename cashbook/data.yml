@@ -1,0 +1,20 @@
+name: cashbook
+tags:
+    - 工具
+title: Cashbook 个人记账本
+type: 工具
+description: 个人记账本，支持微信、支付、京东账单导入
+additionalProperties:
+    key: cashbook
+    name: Cashbook 个人记账本
+    tags:
+        - Tool
+    shortDescZh: 个人记账本，支持微信、支付、京东账单导入
+    shortDescEn: Personal ledger, supporting import of WeChat, AliPay and more
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://github.com/dingdangdog/cashbook-desktop
+    github: https://github.com/dingdangdog/cashbook-desktop
+    document: https://github.com/dingdangdog/cashbook-desktop
