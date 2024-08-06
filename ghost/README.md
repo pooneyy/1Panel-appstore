@@ -96,6 +96,46 @@ Ghost 还为 Facebook OpenGraph 和 Twitter Card 添加了自动代码。
 
 Ghost 会自动为每个帖子和页面生成正确的rel="canonical"标签，以便搜索引擎始终优先考虑一个真正的链接。
 
+## 安装说明
+
+> 后台管理地址：`http://127.0.0.1:2368/ghost`
+>
+> 首次进入后台管理，会提示创建管理员账号，然后登录即可。
+
+## 使用说明
+
+> 语言设置
+
++ 主题翻译
+
+进入后台管理，点击左下角的 `设置` 按钮，然后在 `Publication Language` 中 `编辑` 将 `en` 改为 `zh` ，保存即可。
+
+繁体中文：`zh-Hant`, 其他语言请参考 [i18n](https://github.com/TryGhost/Ghost/tree/main/ghost/i18n/locales) 目录名称。
+
++ 用户界面翻译
+
+只修改 `Publication Language` 无法修改用户界面的语言，需要进入 `Portal settings` 选项卡，然后在 `Portal settings` 中修改界面参数：
+
++ 后台管理界面
+
+无汉化文件，只能通过修改源码实现。
+
+## 反向代理
+
+> Nginx
+
+```nginx
+location / {
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header Host $http_host;
+    proxy_pass http://127.0.0.1:2368;
+}
+
+client_max_body_size 50m;
+```
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

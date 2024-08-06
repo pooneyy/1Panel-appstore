@@ -25,3 +25,4 @@ services:
       - server__host=0.0.0.0
       - server__port=2368
       - database__client=mysql
+      - mail__options__service=Email
