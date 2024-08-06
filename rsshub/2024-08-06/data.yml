@@ -1,0 +1,43 @@
+additionalProperties:
+  formFields:
+    - default: 1200
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: WebUI 端口
+      labelEn: WebUI port
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: ACCESS_KEY
+      labelZh: 访问密钥
+      labelEn: Access key
+      required: true
+      type: text
+    - default: "memory"
+      edit: true
+      envKey: CACHE_TYPE
+      labelZh: 缓存类型
+      labelEn: Cache type
+      required: true
+      type: select
+      values:
+        - label: 内存
+          value: "memory"
+        - label: Redis
+          value: "redis"
+    - default: "redis://127.0.0.1:6379/"
+      edit: true
+      envKey: REDIS_URL
+      labelZh: Redis URL 地址
+      labelEn: Redis URL address
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: PROXY_URI
+      labelZh: 代理 URL 地址
+      labelEn: Proxy URL address
+      required: false
+      type: text
