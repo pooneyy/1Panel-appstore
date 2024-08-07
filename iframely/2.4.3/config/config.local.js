@@ -4,13 +4,10 @@ import {dirname} from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const proxyUrlBase = process.env.PROXY_URL || '';
-const proxyUrl = proxyUrlBase ? `${proxyUrlBase}?url={url}` : '';
-
 export default {
     DEBUG: false,
     RICH_LOG_ENABLED: false,
-    baseAppUrl: "http://localhost:8061",
+    baseAppUrl: process.env.BASE_APP_URL || "http://localhost:8061",
     relativeStaticUrl: "/r",
     SKIP_IFRAMELY_RENDERS: true,
     GROUP_LINKS: true,
@@ -93,7 +90,7 @@ export default {
 
 
     ENABLED_PROXY: process.env.ENABLED_PROXY === 'true',
-    PROXY_URL: proxyUrl,
+    PROXY_URL: process.env.PROXY_URL,
     PROXY: [{
         re: [
             /^https?:\/\/www\.google\.com/,
@@ -117,7 +114,7 @@ export default {
             /^https?:\/\/www\.linkedin\.com/
         ],
         proxy: process.env.ENABLED_PROXY === 'true',
-        proxy_url: proxyUrl,
+        proxy_url: process.env.PROXY_URL,
         user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
         headers: {},
         cache_ttl: 3600
