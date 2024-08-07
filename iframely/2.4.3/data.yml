@@ -1,0 +1,24 @@
+additionalProperties:
+  formFields:
+    - default: "/home/iframely"
+      edit: true
+      envKey: IFRAMELY_ROOT_PATH
+      labelZh: 数据持久化路径
+      labelEn: Data persistence path
+      required: true
+      type: text
+    - default: 8061
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: WebUI 端口
+      labelEn: WebUI port
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      edit: true
+      envKey: HTTP_PROXY
+      labelZh: 网络代理
+      labelEn: Network Proxy
+      required: false
+      type: text
