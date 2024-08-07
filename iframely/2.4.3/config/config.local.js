@@ -10,7 +10,7 @@ const proxyUrl = proxyUrlBase ? `${proxyUrlBase}?url={url}` : '';
 export default {
     DEBUG: false,
     RICH_LOG_ENABLED: false,
-    baseAppUrl: process.env.BASE_APP_URL || "http://localhost:8061",
+    baseAppUrl: "http://localhost:8061",
     relativeStaticUrl: "/r",
     SKIP_IFRAMELY_RENDERS: true,
     GROUP_LINKS: true,

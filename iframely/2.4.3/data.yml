@@ -8,13 +8,6 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: "http://localhost:8061"
-      edit: true
-      envKey: BASE_APP_URL
-      labelZh: 域名地址
-      labelEn: Domain URL
-      required: false
-      type: text
     - default: "false"
       edit: true
       envKey: ENABLED_PROXY
