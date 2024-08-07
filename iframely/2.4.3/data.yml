@@ -1,12 +1,5 @@
 additionalProperties:
   formFields:
-    - default: "/home/iframely"
-      edit: true
-      envKey: IFRAMELY_ROOT_PATH
-      labelZh: 数据持久化路径
-      labelEn: Data persistence path
-      required: true
-      type: text
     - default: 8061
       edit: true
       envKey: PANEL_APP_PORT_HTTP
