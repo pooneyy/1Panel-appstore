@@ -8,23 +8,11 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: "false"
-      edit: true
-      envKey: ENABLED_PROXY
-      labelZh: 是否开启代理
-      labelEn: Enable Proxy
-      required: true
-      type: select
-      values:
-        - label: 开启
-          value: "true"
-        - label: 关闭
-          value: "false"
     - default: ""
       edit: true
-      envKey: PROXY_URL
-      labelZh: 代理地址
-      labelEn: Proxy URL
+      envKey: HTTP_PROXY
+      labelZh: HTTP 代理
+      labelEn: HTTP Proxy
       required: false
       type: text
     - default: 4

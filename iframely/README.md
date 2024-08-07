@@ -22,14 +22,6 @@ iframely 了解来自 1900 多家出版商的富媒体，并且还在不断增�
 >
 > Debugger UI: '/debug'
 
-### 代理配置
-
-基本格式：`{protocol}://{host}:{port}`
-
-+ `protocol` - 代理服务器的协议
-+ `host` - 代理服务器的主机名
-+ `port` - 代理服务器的端口号
-
 ### 其他配置
 
 自行修改 `config/config.local.js` 配置文件，重启生效

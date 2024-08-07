@@ -24,3 +24,4 @@ services:
       - NODE_ENV=production
       - PORT=8061
       - HOST=0.0.0.0
+      - HTTPS_PROXY=${HTTP_PROXY}

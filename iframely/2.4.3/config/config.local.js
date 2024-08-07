@@ -88,37 +88,27 @@ export default {
         }
     }],
 
-
-    ENABLED_PROXY: process.env.ENABLED_PROXY === 'true',
-    PROXY_URL: process.env.PROXY_URL,
+    /*
     PROXY: [{
-        re: [
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*google\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*facebook\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*twitter\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*youtube\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*instagram\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*whatsapp\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*snapchat\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*tumblr\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*reddit\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*pinterest\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*flickr\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*blogspot\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*wordpress\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*wikipedia\.org/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*imdb\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*vimeo\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*soundcloud\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*spotify\.com/,
-            /^https?:\/\/([a-zA-Z0-9-]+\.)*linkedin\.com/
-        ],
-        proxy: process.env.ENABLED_PROXY === 'true',
-        proxy_url: process.env.PROXY_URL,
-        user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
-        headers: {},
-        cache_ttl: 3600
+        re: [/^https?:\/\/www\.domain\.com/],
+
+        // Either `proxy`, or `proxy_url`, or none.
+        proxy: true,  // Will fetch URL via echo service configured as PROXY_URL. See below.
+        // proxy_url: 'http://1.2.3.4:8080?url={url}', // Will fetch URL via this exact echo service, see below.
+
+        user_agent: 'CHANGE YOUR AGENT',
+        headers: {
+            // HTTP headers
+            // Overrides previous params if overlapped.
+        },
+        cache_ttl: 3600  // in seconds, cache response for 1 hour.
     }],
+
+    // Proxy now requires an echo service endpoint.
+    // See #354 and example code at
+    // https://gist.github.com/nleush/7916ee89f7b8d6f0cd478d7335702139
+    PROXY_URL: 'http://1.2.3.4:8080?url={url}',  // Iframely will add `?url=...` to this endpoint
+    */
 
     providerOptions: {
         locale: "en_US",
