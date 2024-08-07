@@ -8,10 +8,36 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: ""
+    - default: "http://localhost:8061"
       edit: true
-      envKey: HTTP_PROXY
-      labelZh: 网络代理
-      labelEn: Network Proxy
+      envKey: BASE_APP_URL
+      labelZh: 域名地址
+      labelEn: Domain URL
       required: false
       type: text
+    - default: "false"
+      edit: true
+      envKey: ENABLED_PROXY
+      labelZh: 是否开启代理
+      labelEn: Enable Proxy
+      required: true
+      type: select
+      values:
+        - label: 开启
+          value: "true"
+        - label: 关闭
+          value: "false"
+    - default: ""
+      edit: true
+      envKey: PROXY_URL
+      labelZh: 代理地址
+      labelEn: Proxy URL
+      required: false
+      type: text
+    - default: 4
+      edit: true
+      envKey: MAX_REDIRECTS
+      labelZh: 最大重定向次数
+      labelEn: Max Redirects
+      required: false
+      type: number
