@@ -14,8 +14,8 @@ services:
       - thumbnails:/home/koyomi/lanraragi/content/thumb
       - database:/home/koyomi/lanraragi/database
       - plugin:/home/koyomi/lanraragi/lib/LANraragi/Plugin
-      - Sideloaded:/home/koyomi/lanraragi/lib/LANraragi/PluginSideloaded
-    image: difegue/lanraragi
+      - Sideloaded:/home/koyomi/lanraragi/lib/LANraragi/Plugin/Sideloaded
+    image: mhdy2233/lanraragi_cn_mhdy:0.2
     labels:
       createdBy: "Apps"
 
