@@ -1,0 +1,18 @@
+name: LANraragi
+tags:
+    - 多媒体
+title: Lanraragi是一个开源的压缩包漫画阅读器，运行在Mojolicious和Redis基础上。
+type: 多媒体
+description: 
+additionalProperties:
+    key: lanraragi
+    name: LANraragi
+    shortDescZh: Lanraragi是一个开源的压缩包漫画阅读器，运行在Mojolicious和Redis基础上。
+    shortDescEn: Open source server for archival of comics/manga, running on Mojolicious + Redis.
+    type: 多媒体
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://lrr.tvc-16.science/
+    github: https://github.com/Difegue/LANraragi?tab=readme-ov-file
+    document: https://sugoi.gitbook.io/lanraragi/v/dev
