@@ -3,11 +3,20 @@ LANraragi
 
 开源漫画/漫画存档服务器，基于Mojolicious + Redis运行。
 
+基于gpt进行的二次汉化版
+
+E-Hentai Tags Converter脚本插件的数据库须自行下载https://github.com/EhTagTranslation/Database/releases
+
 默认使用存储卷可根据需要自行更换为本机目录，存储卷须手动提升权限777
+
 content: 内容
+
 thumbnails: 缩略图
+
 database: 数据库
+
 plugina: 插件
+
 Sideloaded: 手动上传的插件
 
 #### 💬 与其他LANraragi用户在[Discord](https://discord.gg/aRQxtbg)或[GitHub Discussions](https://github.com/Difegue/LANraragi/discussions)交流  
