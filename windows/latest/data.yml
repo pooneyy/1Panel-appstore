@@ -1,0 +1,79 @@
+additionalProperties:
+    formFields:
+        - default: 8006
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP
+          labelEn: Port (determined by the listening port)
+          labelZh: 端口 (由监听端口决定)
+          required: true
+          rule: paramPort
+          type: number
+        - default: ./data
+          edit: true
+          envKey: DATA_PATH
+          labelEn: Data folder path
+          labelZh: 数据文件夹路径
+          required: true
+          type: text
+        - default: 3389
+          edit: true
+          envKey: RDP_PORT
+          labelEn: RDP Port
+          labelZh: 远程端口
+          required: true
+          rule: paramPort
+          type: number
+        - default: ""
+          edit: true
+          envKey: IMAGE_ISO_FILE
+          labelEn: iso file
+          labelZh: iso 文件路径
+          required: true
+          type: text
+        - default: "N"
+          edit: true
+          envKey: MANUAL
+          labelEn: Manual Install
+          labelZh: 手动安装
+          required: true
+          type: select
+          values:
+            - label: Yes
+              value: "Y"
+            - label: No
+              value: "N"
+        - default: "256G"
+          edit: true
+          envKey: DISK_SIZE
+          labelEn: Disk Size
+          labelZh: 磁盘大小
+          required: true
+          type: text
+        - default: "4G"
+          edit: true
+          envKey: RAM_SIZE
+          labelEn: Ram Size
+          labelZh: 内存大小
+          required: true
+          type: text
+        - default: 2
+          edit: true
+          envKey: CPU_CORES
+          labelEn: Cpu Core Size
+          labelZh: cpu 核心数
+          required: true
+          type: number
+        - default: "docker"
+          edit: true
+          envKey: USERNAME
+          labelEn: Login Username
+          labelZh: 登录用户名
+          required: true
+          type: text
+        - default: ""
+          edit: true
+          envKey: PASSWORD
+          labelEn: Login Password
+          labelZh: 登录密码
+          required: false
+          type: password
