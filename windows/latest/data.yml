@@ -75,7 +75,9 @@ additionalProperties:
       envKey: PASSWORD
       labelEn: Login Password (This setting is not valid for non-matching system images)
       labelZh: 登录密码 (非匹配的系统镜像则此设置无效)
+      random: true
       required: true
+      rule: paramComplexity
       type: password
     - default: "always"
       edit: true

@@ -1,5 +1,12 @@
 additionalProperties:
   formFields:
+    - default: "ltsc10"
+      edit: true
+      envKey: VERSION
+      labelEn: Windows version for online download (also available at https://example.com/win.iso)
+      labelZh: 在线下载的 Windows 版本 (也可 https://example.com/win.iso)
+      required: true
+      type: text
     - default: "40286"
       edit: true
       envKey: PANEL_APP_PORT_HTTP
@@ -23,14 +30,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: ""
-      edit: true
-      envKey: IMAGE_ISO_FILE
-      labelEn: Windows ISO File
-      labelZh: Windows ISO 文件路径
-      required: true
-      type: text
-    - default: "Y"
+    - default: "N"
       edit: true
       envKey: MANUAL
       labelEn: Manual Install
@@ -93,3 +93,24 @@ additionalProperties:
           value: "unless-stopped"
         - label: "No"
           value: "no"
+    - default: "zh-CN"
+      edit: true
+      envKey: LANGUAGE
+      labelEn: Language
+      labelZh: 语言
+      required: true
+      type: text
+    - default: "SG"
+      edit: true
+      envKey: REGION
+      labelEn: Region
+      labelZh: 区域
+      required: true
+      type: text
+    - default: "zh-CN"
+      edit: true
+      envKey: KEYBOARD
+      labelEn: Keyboard Layout
+      labelZh: 键盘布局
+      required: true
+      type: text
