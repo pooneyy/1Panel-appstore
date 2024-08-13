@@ -1,16 +1,15 @@
-name: windows
+name: Windows
 tags:
-    - 工具
-title: 在 Docker 容器内运行 windows
-type: 工具
-description: 在 Docker 容器内运行 windows
+    - 实用工具
+title: 在 Docker 容器内运行 Windows
+description: 在 Docker 容器内运行 Windows
 additionalProperties:
     key: windows
-    name: windows
+    name: Windows
     tags:
         - Tool
-    shortDescZh: 在 Docker 容器内运行 windows
-    shortDescEn: Windows inside a Docker container.
+    shortDescZh: 在 Docker 容器内运行 Windows
+    shortDescEn: Windows inside a Docker container
     type: tool
     crossVersionUpdate: true
     limit: 0
