@@ -18,4 +18,4 @@ services:
       - ${PANEL_APP_PORT_ADMIN}:21007
     volumes:
       - ${IYCMS_ROOT_PATH}/data:/app/iycms/data
-      - ${IYCMS_ROOT_PATH}/config.conf:/app/iycms/config.conf
+      - ${IYCMS_ROOT_PATH}/config/config.conf:/app/iycms/config.conf
