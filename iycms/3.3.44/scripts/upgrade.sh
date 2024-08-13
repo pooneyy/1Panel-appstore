@@ -9,7 +9,16 @@ if [ -f .env ]; then
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
 
   if [ ! -d "$IYCMS_ROOT_PATH/config" ]; then
-    cp -r ./config "$IYCMS_ROOT_PATH/config"
+    mkdir -p "$IYCMS_ROOT_PATH/config"
+  fi
+
+  if [ -d "$IYCMS_ROOT_PATH/config/config.conf" ]; then
+    rm -r "$IYCMS_ROOT_PATH/config/config.conf"
+    touch "$IYCMS_ROOT_PATH/config/config.conf"
+  elif [ ! -f "$IYCMS_ROOT_PATH/config/config.conf" ]; then
+    cp ./config/config.conf "$IYCMS_ROOT_PATH/config/config.conf"
+  else
+    echo "config.conf cp error."
   fi
 
   echo "Check Finish."
