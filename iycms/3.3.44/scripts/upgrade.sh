@@ -8,8 +8,8 @@ if [ -f .env ]; then
   sed -i '/^ENV_FILE=/d' .env
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
 
-  if [ ! -d ${IYCMS_ROOT_PATH}/config ]; then
-    cp -r ./config ${IYCMS_ROOT_PATH}/config
+  if [ ! -d "$IYCMS_ROOT_PATH/config" ]; then
+    cp -r ./config "$IYCMS_ROOT_PATH/config"
   fi
 
   echo "Check Finish."
