@@ -17,4 +17,5 @@ services:
       - ${PANEL_APP_PORT_HTTP}:80
       - ${PANEL_APP_PORT_ADMIN}:21007
     volumes:
-      - ${IYCMS_ROOT_PATH}/data:/app/iycms
+      - ${IYCMS_ROOT_PATH}/data:/app/iycms/data
+      - ${IYCMS_ROOT_PATH}/config.conf:/app/iycms/config.conf
