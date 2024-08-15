@@ -23,7 +23,7 @@ services:
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${WISEFLOW_ROOT_PATH}/pb_data:/app/pb/pb_data
-      - ${WISEFLOW_ROOT_PATH}/data:/app/data
+      - ${WISEFLOW_ROOT_PATH}/data:/app/works_data
     environment:
       - TZ=Asia/Shanghai
       - LANG=zh_CN.UTF-8
