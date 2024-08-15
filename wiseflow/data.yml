@@ -1,9 +1,9 @@
-name: Wiseflow 首席情报官
-title: Wiseflow 首席情报官
-description: 通知推送工具
+name: Wiseflow
+title: Wiseflow
+description: Wiseflow 首席情报官
 additionalProperties:
   key: wiseflow
-  name: Wiseflow 首席情报官
+  name: Wiseflow
   tags:
     - WebSite
     - Tool

@@ -34,6 +34,30 @@ WiseFlow尤其擅长从微信公众号文章中提取信息，为此我们配置
 
 数据库和界面使用 PocketBase，除了 Web 界面外，目前已有 Go/Javascript/Python 等语言的SDK。
 
+## 安装说明
+
+> 数据库初始化
+>
+> 首次安装需要进入 `http://127.0.0.1:8090/_/` 进行数据库初始化。
+>
+> 初始化完成后，回到应用列表，填写 `PB数据库 账户密码` 配置
+>
+> 填写格式 `<email>|<password>`
+>
+> 例如 `test@example.com|1234567890`
+
+### 配置大模型
+
+由于本地部署的原生模型较大，不推荐普通用户自行搭建。
+
+推荐使用 `SiliconFlow` 服务，我们提供了完整的模型服务，只需填写 `SiliconFlow` 的 `API` 地址即可。
+
+账户申请：[SiliconFlow](https://cloud.siliconflow.cn?referrer=clzusc8v803r712nttz3gbfq5)
+
+配置：`LLM API 地址` 填写 `SiliconFlow` 的 `API` 地址 `https://api.siliconflow.cn/v1`
+
+配置密钥：可通过 [API密钥](https://cloud.siliconflow.cn/account/ak) 页面获取
+
 ## 常见问题
 
 ### 🔄 wiseflow 与常见的爬虫工具、LLM-Agent类项目有何不同与关联？
