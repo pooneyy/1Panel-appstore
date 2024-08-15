@@ -1,0 +1,18 @@
+name: Wiseflow 首席情报官
+title: Wiseflow 首席情报官
+description: 通知推送工具
+additionalProperties:
+  key: wiseflow
+  name: Wiseflow 首席情报官
+  tags:
+    - WebSite
+    - Tool
+    - Local
+  shortDescZh: Wiseflow 首席情报官
+  shortDescEn: Wiseflow Chief Intelligence Officer
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://github.com/TeamWiseFlow/wiseflow/
+  github: https://github.com/TeamWiseFlow/wiseflow/
+  document: https://github.com/TeamWiseFlow/wiseflow/
