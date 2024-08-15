@@ -43,7 +43,7 @@ additionalProperties:
       envKey: PB_API_AUTH
       labelZh: PB数据库 账户密码
       labelEn: PB database account password
-      required: true
+      required: false
       type: text
     - default: "zhipuai/glm4-9B-chat"
       edit: true
