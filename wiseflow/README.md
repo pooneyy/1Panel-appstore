@@ -2,7 +2,7 @@
 
 首席情报官（Wiseflow）是一个敏捷的信息挖掘工具，可以从网站、微信公众号、社交平台等各种信息源中按设定的关注点提炼讯息，自动做标签归类并上传数据库。
 
-![Bark](https://file.lifebus.top/imgs/bark_logo.png)
+![Bark](https://file.lifebus.top/imgs/wiseflow_cover.png)
 
 我们缺的其实不是信息，我们需要的是从海量信息中过滤噪音，从而让有价值的信息显露出来！
 
