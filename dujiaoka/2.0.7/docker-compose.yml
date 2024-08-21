@@ -5,18 +5,31 @@ networks:
     external: true
 
 services:
-  acg-faka:
-    image: qyg2297248353/acg-faka:v1.3.1
+  dujiaoka:
+    image: qyg2297248353/dujiaoka:v2.0.7
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
     restart: always
+    tty: true
     networks:
       - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
+      - ${PANEL_APP_PORT_API}:9000
     env_file:
       - /etc/1panel/envs/global.env
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ${ACG_FAKA_ROOT_PATH}/data:/var/www/html
+      - ${DUJIAOKA_ROOT_PATH}/uploads:/app/public/uploads
+      - ${DUJIAOKA_ROOT_PATH}/install.lock:/app/install.lock
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/public
+      - DUJIAO_ADMIN_LANGUAGE=zh_CN
+      - BROADCAST_DRIVER=log
+      - SESSION_DRIVER=file
+      - SESSION_LIFETIME=120
+      - LOG_CHANNEL=stack
+      - APP_DEBUG=false
+      - APP_ENV=local
+      - DB_CONNECTION=mysql
