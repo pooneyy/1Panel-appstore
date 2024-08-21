@@ -1,38 +1,5 @@
 additionalProperties:
   formFields:
-    - child:
-        default: ""
-        envKey: PANEL_REDIS_SERVICE
-        required: true
-        type: service
-      default: redis
-      envKey: PANEL_REDIS_TYPE
-      labelZh: Redis 服务 (前置检查)
-      labelEn: Redis Service (Pre-check)
-      required: false
-      type: apps
-      values:
-        - label: Redis
-          value: redis
-    - child:
-        default: ""
-        envKey: PANEL_DB_HOST
-        required: true
-        type: service
-      default: mysql
-      edit: true
-      envKey: PANEL_DB_TYPE
-      labelZh: MySQL 服务 (前置检查)
-      labelEn: Database Service (Pre-check)
-      required: true
-      type: apps
-      values:
-        - label: MySQL
-          value: mysql
-        - label: MariaDB
-          value: mariadb
-        - label: Percona
-          value: percona
     - default: "/home/dujiaoka"
       edit: true
       envKey: DUJIAOKA_ROOT_PATH
@@ -63,7 +30,7 @@ additionalProperties:
       labelEn: Website name
       required: true
       type: text
-    - default: "base64:hDVkYhfkUjaePiaI1tcBT7G8bh2A8RQxwWIGkq7BO18="
+    - default: "base64:sKDhhXG+bHhlnH8hAVX2MbETkYABNhWNXALo0FU8WH0="
       edit: true
       envKey: APP_KEY
       labelZh: 应用密钥
@@ -108,61 +75,27 @@ additionalProperties:
           value: "redis"
         - label: 文件缓存
           value: "file"
-    - default: "127.0.0.1"
+    - default: "redis"
       edit: true
-      envKey: DB_HOST
-      labelZh: 数据库 主机
-      labelEn: Database Host
+      envKey: CACHE_DRIVER
+      labelZh: 缓存驱动
+      labelEn: Cache driver
       required: true
-      type: text
-    - default: 3306
+      type: select
+      values:
+        - label: Redis 缓存
+          value: "redis"
+        - label: 文件缓存
+          value: "file"
+    - default: "false"
       edit: true
-      envKey: DB_PORT
-      labelZh: 数据库 端口
-      labelEn: Database Port
+      envKey: ADMIN_HTTPS
+      labelZh: 启用后台 HTTPS
+      labelEn: Enable admin HTTPS
       required: true
-      rule: paramPort
-      type: number
-    - default: "dujiaoka"
-      edit: true
-      envKey: DB_USERNAME
-      labelZh: 数据库 用户名
-      labelEn: Database Username
-      required: true
-      type: text
-    - default: ""
-      edit: true
-      envKey: DB_PASSWORD
-      labelZh: 数据库 密码
-      labelEn: Database Password
-      required: true
-      type: password
-    - default: "dujiaoka"
-      edit: true
-      envKey: DB_DATABASE
-      labelZh: 数据库 名称
-      labelEn: Database Name
-      required: true
-      type: text
-    - default: "127.0.0.1"
-      edit: true
-      envKey: REDIS_HOST
-      labelZh: Redis 主机
-      labelEn: Redis Host
-      required: true
-      type: text
-    - default: 6379
-      edit: true
-      envKey: REDIS_PORT
-      labelZh: Redis 端口
-      labelEn: Redis Port
-      required: true
-      rule: paramPort
-      type: number
-    - default: ""
-      edit: true
-      envKey: REDIS_PASSWORD
-      labelZh: Redis 密码
-      labelEn: Redis Password
-      required: false
-      type: password
+      type: select
+      values:
+        - label: 启用
+          value: "true"
+        - label: 禁用
+          value: "false"
