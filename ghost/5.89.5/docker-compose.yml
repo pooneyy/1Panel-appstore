@@ -5,8 +5,8 @@ networks:
     external: true
 
 services:
-  casdoor:
-    image: casbin/casdoor:v1.671.0
+  ghost:
+    image: ghost:5.89.5
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
@@ -14,16 +14,16 @@ services:
     networks:
       - 1panel-network
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8000
+      - ${PANEL_APP_PORT_HTTP}:2368
     env_file:
       - /etc/1panel/envs/global.env
-      - /etc/1panel/envs/casdoor/casdoor.env
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ${CASDOOR_ROOT_PATH}/files:/files
+      - ${GHOST_ROOT_PATH}/data:/var/lib/ghost/content
     environment:
-      - driverName=${DB_TYPE}
-      - dbName=${DB_NAME}
-      - verificationCodeTimeout=10
-      - appname=casdoor
-      - authState=casdoor
+      - NODE_ENV=production
+      - server__host=0.0.0.0
+      - server__port=2368
+      - database__client=mysql
+      - mail__options__service=Email
+      - mail__options__secure=true
