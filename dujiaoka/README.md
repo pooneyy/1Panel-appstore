@@ -33,6 +33,16 @@
 >
 > 默认管理员密码 admin
 
+### `应用密钥` 配置
+
+该密钥由固定头部`base64:`加上`32位字符串的Base64编码`组成，例如：`base64:xxxxx`。
+
+使用 `openssl` 生成密钥：
+
+```bash
+openssl rand -base64 32
+```
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
