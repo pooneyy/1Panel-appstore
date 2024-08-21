@@ -56,6 +56,27 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: "独角数卡"
+      edit: true
+      envKey: APP_NAME
+      labelZh: 网站名称
+      labelEn: Website name
+      required: true
+      type: text
+    - default: "base64:hDVkYhfkUjaePiaI1tcBT7G8bh2A8RQxwWIGkq7BO18="
+      edit: true
+      envKey: APP_KEY
+      labelZh: 应用密钥
+      labelEn: Application key
+      required: true
+      type: text
+    - default: "http://127.0.0.1:8080"
+      edit: true
+      envKey: APP_URL
+      labelZh: 网站域名
+      labelEn: Website domain
+      required: true
+      type: text
     - default: "/admin"
       edit: true
       envKey: ADMIN_ROUTE_PREFIX
