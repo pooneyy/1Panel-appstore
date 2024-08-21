@@ -1,6 +1,6 @@
 name: 独角数卡
-title: 独角数卡(自动售货系统)-开源站长自动化售货解决方案、高效、稳定、快速！
-description: 独角数卡(自动售货系统)-开源站长自动化售货解决方案、高效、稳定、快速！
+title: 独角数卡
+description: 独角数卡(自动售货系统)-开源站长自动化售货解决方案、高效、稳定、快速
 additionalProperties:
   key: dujiaoka
   name: 独角数卡
@@ -8,8 +8,8 @@ additionalProperties:
     - WebSite
     - Tool
     - Local
-  shortDescZh: 独角数卡(自动售货系统)-开源站长自动化售货解决方案、高效、稳定、快速！
-  shortDescEn: Dujiaoka (Automatic Vending System) - Open source webmaster automatic vending solution, efficient, stable, fast!
+  shortDescZh: 独角数卡(自动售货系统)-开源站长自动化售货解决方案、高效、稳定、快速
+  shortDescEn: Dujiaoka (Automatic Vending System) - Open source webmaster automatic vending solution, efficient, stable, fast
   type: website
   crossVersionUpdate: true
   limit: 0
