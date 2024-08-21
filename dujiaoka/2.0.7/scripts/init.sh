@@ -8,10 +8,6 @@ if [ -f .env ]; then
   sed -i '/^ENV_FILE=/d' .env
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
 
-  if [ ! -f $DUJIAOKA_ROOT_PATH/install.lock ]; then
-    touch $DUJIAOKA_ROOT_PATH/install.lock
-  fi
-
   echo "Check Finish."
 
 else
