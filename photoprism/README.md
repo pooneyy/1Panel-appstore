@@ -109,6 +109,17 @@ devices:
 ![App Store](https://file.lifebus.top/imgs/photosync_app_store_qr.png)
 ![Google Play](https://file.lifebus.top/imgs/photosync_google_play_qr.png)
 
+<div style="text-align: center; display: flex; justify-content: center; gap: 20px;">
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="https://file.lifebus.top/imgs/photosync_app_store_qr.png" alt="App Store" style="width: 256px;">
+    <a href="https://apps.apple.com/cn/app/photosync-%E4%BC%A0%E8%BE%93%E5%92%8C%E5%A4%87%E4%BB%BD%E7%85%A7%E7%89%87%E4%B8%8E%E8%A7%86%E9%A2%91/id415850124" style="text-align: center;">App Store</a>
+  </div>
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="https://file.lifebus.top/imgs/photosync_google_play_qr.png" alt="Google Play" style="width: 256px;">
+    <a href="https://play.google.com/store/apps/details?id=com.touchbyte.photosync" style="text-align: center;">Google Play</a>
+  </div>
+</div>
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
