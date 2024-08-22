@@ -2,7 +2,7 @@
 
 面向去中心化网络的人工智能照片应用程序
 
-![Bark](https://file.lifebus.top/imgs/photoprism_cover.jpg)
+![Bark](https://file.lifebus.top/imgs/photoprism_cover.png)
 
 PhotoPrism® 是一款适用于去中心化网络的人工智能照片应用程序。它利用最新技术自动标记和查找图片，而不会妨碍您。您可以在家中、私人服务器上或在云中运行它。
 
