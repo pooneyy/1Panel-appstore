@@ -106,9 +106,6 @@ devices:
 
 ## 设备同步 PhotoSync
 
-![App Store](https://file.lifebus.top/imgs/photosync_app_store_qr.png)
-![Google Play](https://file.lifebus.top/imgs/photosync_google_play_qr.png)
-
 <div style="text-align: center; display: flex; justify-content: center; gap: 20px;">
   <div style="display: flex; flex-direction: column; align-items: center;">
     <img src="https://file.lifebus.top/imgs/photosync_app_store_qr.png" alt="App Store" style="width: 256px;">
