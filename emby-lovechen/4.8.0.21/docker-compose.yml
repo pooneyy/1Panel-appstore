@@ -16,6 +16,13 @@ services:
       - ${PANEL_APP_PORT_HTTP}:8096
     devices:
       - /dev/dri:/dev/dri
+      # - /dev/nvidia0:/dev/nvidia0
+      # - /dev/nvidiactl:/dev/nvidiactl
+      # - /dev/nvidia-modeset:/dev/nvidia-modeset
+      # - /dev/nvidia-nvswitchctl:/dev/nvidia-nvswitchctl
+      # - /dev/nvidia-uvm:/dev/nvidia-uvm
+      # - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
+      # - /dev/video11:/dev/video11
     volumes:
       - /etc/timezone:/etc/timezone
       - /etc/localtime:/etc/localtime

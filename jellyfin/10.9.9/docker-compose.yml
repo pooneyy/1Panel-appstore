@@ -26,7 +26,13 @@ services:
       - ${CUSTOM_MOUNT_DIRECTORY_3:-./default_mount_3}:${CUSTOM_MOUNT_DIRECTORY_3:-/default_mount_3}
     devices:
       - /dev/dri:/dev/dri
-      - /dev/kfd:/dev/kfd
+      # - /dev/nvidia0:/dev/nvidia0
+      # - /dev/nvidiactl:/dev/nvidiactl
+      # - /dev/nvidia-modeset:/dev/nvidia-modeset
+      # - /dev/nvidia-nvswitchctl:/dev/nvidia-nvswitchctl
+      # - /dev/nvidia-uvm:/dev/nvidia-uvm
+      # - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
+      # - /dev/video11:/dev/video11
     environment:
       - ROC_ENABLE_PRE_VEGA=1
       - HTTP_PROXY=${HTTP_PROXY:-}

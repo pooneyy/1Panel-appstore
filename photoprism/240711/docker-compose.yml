@@ -23,13 +23,13 @@ services:
     working_dir: /photoprism
     devices:
       - /dev/dri:/dev/dri
-      - /dev/nvidia0:/dev/nvidia0
-      - /dev/nvidiactl:/dev/nvidiactl
-      - /dev/nvidia-modeset:/dev/nvidia-modeset
-      - /dev/nvidia-nvswitchctl:/dev/nvidia-nvswitchctl
-      - /dev/nvidia-uvm:/dev/nvidia-uvm
-      - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
-      - /dev/video11:/dev/video11
+      # - /dev/nvidia0:/dev/nvidia0
+      # - /dev/nvidiactl:/dev/nvidiactl
+      # - /dev/nvidia-modeset:/dev/nvidia-modeset
+      # - /dev/nvidia-nvswitchctl:/dev/nvidia-nvswitchctl
+      # - /dev/nvidia-uvm:/dev/nvidia-uvm
+      # - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
+      # - /dev/video11:/dev/video11
     env_file:
       - /etc/1panel/envs/global.env
       - /etc/1panel/envs/photoprism/photoprism.env

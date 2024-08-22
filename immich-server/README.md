@@ -31,6 +31,28 @@ Immich - 高性能自托管照片和视频备份解决方案
 
 Immich 使用 Redis 作为缓存服务，所以需要安装 Redis 服务。
 
+### 硬件驱动挂载
+
+默认仅挂载: `/dev/dri`,如果您的设备不存在硬件驱动，请使用删除完整 `devices` 配置。
+
+可以通过 `ls /dev/` 查看存在的设备驱动。
+
+```yml
+devices:
+  - /dev/dri:/dev/dri
+  # - /dev/nvidia0:/dev/nvidia0
+  # - /dev/nvidiactl:/dev/nvidiactl
+  # - /dev/nvidia-modeset:/dev/nvidia-modeset
+  # - /dev/nvidia-nvswitchctl:/dev/nvidia-nvswitchctl
+  # - /dev/nvidia-uvm:/dev/nvidia-uvm
+  # - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
+  # - /dev/video11:/dev/video11
+```
+
+如果您的设备存在其他硬件驱动，可以选择挂载。删除 `# ` 号即可。格式为：`宿主机路径:容器路径`。
+
+格式请与 `- /dev/dri:/dev/dri` 保持一致。
+
 ## 升级说明
 
 + **大版本** `v1.106.2`
@@ -42,7 +64,7 @@ Immich 使用 Redis 作为缓存服务，所以需要安装 Redis 服务。
 3. 底层API发生了变化
     4. 移动端需要同步更新
 
-## 安装参数
+## 安装说明
 
 ### 机器学习 预加载模型(CLIP)
 

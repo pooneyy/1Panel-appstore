@@ -58,6 +58,28 @@ PhotoPrism® 是一款适用于去中心化网络的人工智能照片应用程�
 
 那么任何人都将允许访问程序。
 
+### 硬件驱动挂载
+
+默认仅挂载: `/dev/dri`,如果您的设备不存在硬件驱动，请使用删除完整 `devices` 配置。
+
+可以通过 `ls /dev/` 查看存在的设备驱动。
+
+```yml
+devices:
+  - /dev/dri:/dev/dri
+  # - /dev/nvidia0:/dev/nvidia0
+  # - /dev/nvidiactl:/dev/nvidiactl
+  # - /dev/nvidia-modeset:/dev/nvidia-modeset
+  # - /dev/nvidia-nvswitchctl:/dev/nvidia-nvswitchctl
+  # - /dev/nvidia-uvm:/dev/nvidia-uvm
+  # - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
+  # - /dev/video11:/dev/video11
+```
+
+如果您的设备存在其他硬件驱动，可以选择挂载。删除 `# ` 号即可。格式为：`宿主机路径:容器路径`。
+
+格式请与 `- /dev/dri:/dev/dri` 保持一致。
+
 ### `视频编码器` 配置
 
 `PhotoPrism` 支持 `FFmpeg` 视频编码器，需要安装 `FFmpeg`。
