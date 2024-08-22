@@ -105,6 +105,19 @@ devices:
     + 请检查是否正确配置了 `防火墙` 并开放了 `端口`
     + 请检查是否正确配置了 `Nginx` 服务
 
+## 移动端应用
+
+<div style="text-align: center; display: flex; justify-content: center; gap: 20px;">
+  <div>
+    <img src="https://file.lifebus.top/imgs/immich_app_store_qr.png" alt="App Store" style="width: 256px;">
+    <a href="https://apps.apple.com/sg/app/immich/id1613945652" style="text-align: center;">App Store</a>
+  </div>
+  <div>
+    <img src="https://file.lifebus.top/imgs/immich_google_play_qr.png" alt="Google Play" style="width: 256px;">
+    <a href="https://play.google.com/store/apps/details?id=app.alextran.immich" style="text-align: center;">Google Play</a>
+  </div>
+</div>
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

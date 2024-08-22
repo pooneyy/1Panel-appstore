@@ -107,7 +107,7 @@ devices:
 ## 设备同步 PhotoSync
 
 ![App Store](https://file.lifebus.top/imgs/photosync_app_store_qr.png)
-![App Store](https://file.lifebus.top/imgs/photosync_google_play_qr.png)
+![Google Play](https://file.lifebus.top/imgs/photosync_google_play_qr.png)
 
 ---
 
