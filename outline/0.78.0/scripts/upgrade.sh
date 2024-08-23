@@ -8,6 +8,8 @@ if [ -f .env ]; then
   sed -i '/^ENV_FILE=/d' .env
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
 
+  chmod 777 -R "$OUTLINE_ROOT_PATH"
+
   echo "Check Finish."
 
 else

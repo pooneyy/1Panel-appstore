@@ -11,6 +11,9 @@ if [ -f .env ]; then
   # setup-2 remove empty values
   sed -i '/^.*=""/d' .env
 
+  # setup-3 update directory permissions
+  chmod 777 -R "$OUTLINE_ROOT_PATH"
+
   echo "Check Finish."
 
 else
