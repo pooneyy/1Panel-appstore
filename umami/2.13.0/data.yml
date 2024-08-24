@@ -2,25 +2,18 @@ additionalProperties:
   formFields:
     - child:
         default: ""
-        envKey: PANEL_DB_HOST
+        envKey: PANEL_POSTGRES_SERVICE
         required: true
         type: service
       default: postgresql
-      edit: true
-      envKey: PANEL_DB_TYPE
-      labelZh: 数据库 服务 (前置检查)
-      labelEn: Database Service (Pre-check)
+      envKey: PANEL_POSTGRES_TYPE
+      labelZh: Postgres 服务 (前置检查)
+      labelEn: Postgres Service (Pre-check)
       required: true
       type: apps
       values:
         - label: PostgreSQL
           value: postgresql
-        - label: MySQL
-          value: mysql
-        - label: MariaDB
-          value: mariadb
-        - label: Percona
-          value: percona
     - default: "/home/umami"
       edit: true
       envKey: UMAMI_ROOT_PATH
@@ -71,18 +64,6 @@ additionalProperties:
           value: "1"
         - label: 关闭
           value: "0"
-    - default: postgresql
-      edit: true
-      envKey: DATABASE_TYPE
-      labelZh: 数据库 类型
-      labelEn: Database Type
-      required: true
-      type: select
-      values:
-        - label: PostgreSQL
-          value: postgresql
-        - label: MySQL (MariaDB, Percona)
-          value: mysql
     - default: "127.0.0.1"
       edit: true
       envKey: DB_HOSTNAME
