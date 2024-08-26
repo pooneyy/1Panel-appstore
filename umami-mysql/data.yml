@@ -1,9 +1,9 @@
-name: Umami
-title: Umami - 网站分析
+name: Umami MySQL版
+title: Umami MySQL版
 description: 为速度和效率而构建的网站分析
 additionalProperties:
-  key: umami
-  name: Umami
+  key: umami-mysql
+  name: Umami MySQL版
   tags:
     - WebSite
     - Database

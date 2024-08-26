@@ -1,4 +1,4 @@
-# Umami
+# Umami MySQL版本
 
 为速度和效率而构建的网站分析
 
@@ -7,12 +7,6 @@ Umami 网站分析提供您实时做出决策所需的数据。
 ![Umami](https://file.lifebus.top/imgs/umami_cover.jpg)
 
 ![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
-
-## 声明
-
-> 该应用默认使用 `PostgreSQL` 作为基础数据库，原使用 `MySQL` 数据库的用户需要进行卸载重新安装 `MySQL` 版本。
->
-> 卸载重装请注意参数保持一致，持久化目录也必须保持一致。
 
 ## 简介
 

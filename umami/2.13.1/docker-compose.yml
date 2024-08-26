@@ -4,7 +4,7 @@ networks:
 
 services:
   umami:
-    image: ghcr.io/umami-software/umami:${DATABASE_TYPE}-v2.12.1
+    image: ghcr.io/umami-software/umami:postgresql-v2.13.1
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
@@ -19,4 +19,5 @@ services:
     environment:
       - DISABLE_TELEMETRY = 1
       - REMOVE_TRAILING_SLASH = 1
-      - DATABASE_URL=${DATABASE_TYPE}://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOSTNAME}:${DB_PORT}/${DB_DATABASE_NAME}
+      - DATABASE_TYPE=postgresql
+      - DATABASE_URL=postgresql://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOSTNAME}:${DB_PORT}/${DB_DATABASE_NAME}
