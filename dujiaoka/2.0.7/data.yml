@@ -75,18 +75,6 @@ additionalProperties:
           value: "redis"
         - label: 文件缓存
           value: "file"
-    - default: "redis"
-      edit: true
-      envKey: CACHE_DRIVER
-      labelZh: 缓存驱动
-      labelEn: Cache driver
-      required: true
-      type: select
-      values:
-        - label: Redis 缓存
-          value: "redis"
-        - label: 文件缓存
-          value: "file"
     - default: "false"
       edit: true
       envKey: ADMIN_HTTPS
