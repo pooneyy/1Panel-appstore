@@ -47,6 +47,14 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: 4190
+      edit: true
+      envKey: PANEL_APP_PORT_MANAGESIEVE
+      labelZh: ManageSieve 端口 (保持默认)
+      labelEn: ManageSieve Port (keep default)
+      required: true
+      rule: paramPort
+      type: number
     - default: "0"
       edit: true
       envKey: ENABLE_POP3
