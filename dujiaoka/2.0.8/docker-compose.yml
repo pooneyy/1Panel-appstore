@@ -4,7 +4,7 @@ networks:
 
 services:
   dujiaoka:
-    image: qyg2297248353/dujiaoka:v2.0.7
+    image: qyg2297248353/dujiaoka:v2.0.8
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
