@@ -1,9 +1,10 @@
 networks:
   1panel-network:
     external: true
+
 services:
-  pixman:
-    image: pixman/pixman:v1.7.2
+  casdoor:
+    image: casbin/casdoor:v1.681.0
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
@@ -11,12 +12,16 @@ services:
     networks:
       - 1panel-network
     ports:
-      - ${PANEL_APP_PORT_HTTP}:5000
+      - ${PANEL_APP_PORT_HTTP}:8000
     env_file:
       - /etc/1panel/envs/global.env
+      - /etc/1panel/envs/casdoor/casdoor.env
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ${PIXMAN_ROOT_PATH}/m3u:/app/app/data/m3u
+      - ${CASDOOR_ROOT_PATH}/files:/files
     environment:
-      - http_proxy=${NETWORK_PROXY:-}
-      - https_proxy=${NETWORK_PROXY:-}
+      - driverName=${DB_TYPE}
+      - dbName=${DB_NAME}
+      - verificationCodeTimeout=10
+      - appname=casdoor
+      - authState=casdoor
