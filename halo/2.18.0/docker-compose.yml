@@ -21,3 +21,4 @@ services:
       - --spring.r2dbc.password=${DB_USER_PASSWORD}
       - --spring.sql.init.platform=${DB_TYPE}
       - --halo.external-url=${HALO_EXTERNAL_URL}
+      - --halo.security.remember-me.token-validity=${HALO_REMEMBER_ME_TOKEN_VALIDITY}
