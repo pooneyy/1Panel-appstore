@@ -175,3 +175,31 @@ additionalProperties:
       labelEn: SMTP relay password
       required: false
       type: text
+    - default: ""
+      edit: true
+      envKey: http_proxy
+      labelZh: 网络代理
+      labelEn: Network proxy
+      required: false
+      type: text
+    - default: "localhost:127.0.0.1"
+      edit: true
+      envKey: DOMAIN_HOSTS1
+      labelZh: 固定域名解析
+      labelEn: Domain resolution
+      required: true
+      type: text
+    - default: "1.1.1.1"
+      edit: true
+      envKey: DNS1
+      labelZh: 域名解析 (DNS)
+      labelEn: Domain resolution (DNS)
+      required: true
+      type: text
+    - default: "114.114.114.114"
+      edit: true
+      envKey: DNS2
+      labelZh: 域名解析 (备用 DNS)
+      labelEn: Domain resolution (Backup DNS)
+      required: true
+      type: text
