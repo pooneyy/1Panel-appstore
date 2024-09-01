@@ -1,0 +1,31 @@
+services:
+  lanraragi:
+    user: root
+    container_name: lanraragi
+    restart: always
+    networks:
+      - 1panel-network
+    environment:
+      - "TZ=Asia/Shanghai"
+    ports:
+      - "3000:3000"
+    volumes:
+      - content:/home/koyomi/lanraragi/content
+      - thumbnails:/home/koyomi/lanraragi/content/thumb
+      - database:/home/koyomi/lanraragi/database
+      - plugin:/home/koyomi/lanraragi/lib/LANraragi/Plugin
+      - Sideloaded:/home/koyomi/lanraragi/lib/LANraragi/Plugin/Sideloaded
+    image: mhdy2233/lanraragi_cn_mhdy:0.2
+    labels:
+      createdBy: "Apps"
+
+networks:
+  1panel-network:
+    external: true
+
+volumes:
+  content:
+  thumbnails:
+  database:
+  plugin:
+  Sideloaded:
