@@ -3,7 +3,7 @@ networks:
     external: true
 services:
   pixman:
-    image: pixman/pixman:v1.7.5
+    image: pixman/pixman:v1.7.6
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
