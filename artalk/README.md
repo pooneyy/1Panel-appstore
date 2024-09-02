@@ -2,7 +2,7 @@
 
 一个自托管的评论系统
 
-![DeepLX](https://file.lifebus.top/imgs/artalk_cover.png)
+![Artalk](https://file.lifebus.top/imgs/artalk_cover.png)
 
 Artalk 是一款简单易用但功能丰富的评论系统，你可以开箱即用地部署并置入任何博客、网站、Web 应用。
 
@@ -78,7 +78,17 @@ Artalk 是一款简单易用但功能丰富的评论系统，你可以开箱即�
 
 填写案例：`(bcrypt)$2a$10$yS/EhHU1xqjNpboe8DWkb.AvWdBb5/.Ny3reXy8SltlVaquiSGwzu`
 
+### `受信任的域名 (多个域名用空格分隔)` 配置
 
+填写允许访问的域名，多个域名用空格分隔。
+
+如果您需要将插件使用在以下博客地址：
+
++ `https://blog1.com`
+
++ `https://blog2.com`
+
+填写案例：`https://blog1.com https://blog2.com`
 
 ---
 

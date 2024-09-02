@@ -84,7 +84,7 @@ additionalProperties:
       labelEn: Site name
       required: true
       type: text
-    - default: "http://127.0.0.1"
+    - default: ""
       edit: true
       envKey: ATK_TRUSTED_DOMAINS
       labelZh: 受信任的域名 (多个域名用空格分隔)
