@@ -97,7 +97,7 @@ additionalProperties:
       labelZh: 登录超时时间 (秒)
       labelEn: Login timeout (seconds)
       required: true
-      type: nubmer
+      type: number
     - default: "zh-CN"
       edit: true
       envKey: ATK_LOCALE
