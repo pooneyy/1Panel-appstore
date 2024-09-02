@@ -50,13 +50,6 @@ additionalProperties:
       labelEn: Remember me token validity
       required: true
       type: text
-    - default: "127.0.0.1"
-      edit: true
-      envKey: DB_HOSTNAME
-      labelZh: 数据库 主机地址
-      labelEn: Database Host
-      required: true
-      type: text
     - default: "postgresql"
       edit: true
       envKey: DB_TYPE
@@ -69,6 +62,13 @@ additionalProperties:
           value: postgresql
         - label: MySQL (MariaDB, Percona)
           value: mysql
+    - default: "127.0.0.1"
+      edit: true
+      envKey: DB_HOSTNAME
+      labelZh: 数据库 主机地址
+      labelEn: Database Host
+      required: true
+      type: text
     - default: 5432
       edit: true
       envKey: DB_PORT
