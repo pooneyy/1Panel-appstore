@@ -4,7 +4,7 @@ networks:
 
 services:
   elasticsearch:
-    image: elasticsearch:8.15.0
+    image: elasticsearch:8.15.1
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
