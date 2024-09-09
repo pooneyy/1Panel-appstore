@@ -4,7 +4,7 @@ networks:
 
 services:
   movie-pilot:
-    image: jxxghp/moviepilot:1.9.15
+    image: jxxghp/moviepilot:1.9.16
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
