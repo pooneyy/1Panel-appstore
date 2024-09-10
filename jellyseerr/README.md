@@ -1,120 +1,50 @@
-# DeepLX
+# Jellyseerr
 
-强大的 DeepL 翻译 API
+满足您所有媒体需求的一站式平台
 
-![DeepLX](https://file.lifebus.top/imgs/deeplx_cover.png)
+![Jellyseerr](https://file.lifebus.top/imgs/jellyseerr_cover.jpg)
 
 ![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
 
 ## 简介
 
-DeepLX 最初由 zu1k 命名并发布，尽管 zu1k 此后已停止维护它并删除了相关存储库。
+启动此项目的首要动力是为 Overseerr 增加对 Jellyfin 和 Emby 的支持。因为 Overseerr 是一个性能卓越且易于使用的应用程序，我们希望为
+Jellyfin 和 Emby 用户带来同样的体验。因此，Jellyseerr 应运而生。
 
-感谢zu1k的贡献。
+此应用旨在成为满足您所有媒体需求的一站式平台。它被设计为一个简单、易用的应用程序，允许用户请求将媒体添加到您的
+Jellyfin/Emby/Plex 服务器。
 
-这是zu1k设计的DeepLX Docker镜像的备份，没有任何修改。
+## 特性
 
-## 安装说明
++ 完整的Jellyfin/Emby/Plex集成。使用Jellyfin/Emby/Plex登录和管理用户访问。
++ 同步到您的Jellyfin/Emby/Plex库以显示您已经拥有的标题。
++ 与Sonarr和Radarr集成。未来将提供更多服务。
++ 易于使用的请求系统允许用户在友好、干净的UI中请求各个季节或电影。
++ 简单的需求管理界面。不要通过应用程序来批准最近的请求。
++ 适合移动设备的设计，适用于您需要在旅途中批准请求时。
++ 粒度权限系统。
++ 本地化为其他语言。
 
-### http代理服务器地址
+## 反向代理
 
-> 基本格式
+> Nginx
 
-```shell
-# 无鉴权代理
-http://127.0.0.1:7890
-# 有鉴权代理
-http://<username>:<password>@127.0.0.1:7890
+```nginx
+    proxy_set_header Referer $http_referer;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Real-Port $remote_port;
+    proxy_set_header X-Forwarded-Host $host:$remote_port;
+    proxy_set_header X-Forwarded-Server $host;
+    proxy_set_header X-Forwarded-Port $remote_port;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Ssl on;
+
+    location / {
+        proxy_pass http://127.0.0.1:5055;
+    }
 ```
-
-### 访问令牌以保护您的 API
-
-> 请注意，如果您不使用访问令牌，您的 API 可能会被滥用。
-
-接口调用时，您可以使用 `X-Access-Token` 请求头来传递访问令牌。
-
-### DeepL官方提供的API Auth Key
-
-开通DeepL API后，您将获得一个API Auth Key，您可以使用它来访问DeepL API。
-
-### DeepL Pro 帐户 dl_session cookie
-
-如果您有DeepL Pro帐户，您可以使用 `dl_session` cookie 来访问DeepL API。
-
-## 接口简介
-
-### 免费端点
-
-模拟DeepL iOS客户端发起翻译请求。无限制，但在一定时间内频繁请求会导致429错误。
-
-接口：`/translate`
-请求方式：POST
-请求头：
-
-| Header          | Description                           | Value                      |
-|:----------------|:--------------------------------------|:---------------------------|
-| `Content-Type`  | The content type of the request body. | `application/json`         |
-| `Authorization` | The access token to protect your API. | `Bearer your_access_token` |
-
-> 如果无法使用 `Authorization` 请求头，您可以使用 `URL Params` 传递 `Authorization`。
->
-> 例如：`/translate?token=your_access_token`
-
-请求体：
-
-| 参数名           | 字段类型     | 描述      | 是否必须   |
-|:--------------|:---------|:--------|:-------|
-| `text`        | `string` | 待翻译字段。  | `true` |
-| `source_lang` | `string` | 源语言代码   | `true` |
-| `target_lang` | `string` | 目标语言代码。 | `true` |
-
-请求体 JSON 示例：
-
-```json
-{
-  "text": "你听说过这个吗？",
-  "source_lang": "ZH",
-  "target_lang": "EN"
-}
-```
-
-响应体：
-
-```json
-{
-  "alternatives": [
-    "Did you hear about this?",
-    "You've heard about this?",
-    "You've heard of this?"
-  ],
-  "code": 200,
-  "data": "Have you heard about this?",
-  "id": 8356681003,
-  "method": "Free",
-  "source_lang": "ZH",
-  "target_lang": "EN"
-}
-```
-
-### 专业端点
-
-模拟 DeepL 专业版账户发起翻译请求。无限制，可有效避免 429 问题，但需要提供专业账户的 dl_session 参数，否则无法使用。
-
-接口：`/v1/translate`
-请求方式：POST
-
-> 其他参数与免费端点相同。
-
-### 官方端点
-
-模拟 DeepL 官方 API 发起翻译请求。无限制，但在一定时间内频繁请求将导致 429 错误。
-
-接口：`/v2/translate`
-请求方式：POST
-
-> 其他参数与免费端点相同。
->
-> 更多官方API配置请参考 [DeepL 官方文档](https://developers.deepl.com/docs/api-reference/translate)
 
 ---
 
