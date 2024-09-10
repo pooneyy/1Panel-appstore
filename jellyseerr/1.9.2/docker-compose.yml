@@ -22,3 +22,4 @@ services:
       - PORT=5055
       - LOG_LEVEL=debug
       - TZ=Asia/Shanghai
+      - https_proxy=${http_proxy:-}

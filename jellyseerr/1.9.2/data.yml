@@ -27,3 +27,10 @@ additionalProperties:
           value: "jellyfin"
         - label: Emby
           value: "emby"
+    - default: ""
+      edit: true
+      envKey: http_proxy
+      labelZh: HTTP(s) 网络代理
+      labelEn: HTTP(s) Proxy
+      required: false
+      type: text
