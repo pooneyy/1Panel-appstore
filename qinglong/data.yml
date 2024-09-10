@@ -1,7 +1,4 @@
-name: 青龙
-title: 定时任务管理平台
-description: 定时任务管理平台
-additionalProperties:
+﻿additionalProperties:
   key: qinglong
   name: 青龙
   tags:

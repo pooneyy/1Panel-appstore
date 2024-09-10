@@ -1,7 +1,4 @@
-name: Umami
-title: Umami - 网站分析
-description: 为速度和效率而构建的网站分析
-additionalProperties:
+﻿additionalProperties:
   key: umami
   name: Umami
   tags:

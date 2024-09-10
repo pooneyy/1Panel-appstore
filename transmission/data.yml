@@ -1,7 +1,4 @@
-name: Transmission
-title: BitTorrent客户端
-description: BitTorrent客户端
-additionalProperties:
+﻿additionalProperties:
   key: transmission
   name: Transmission
   tags:

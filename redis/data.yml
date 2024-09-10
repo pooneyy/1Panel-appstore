@@ -1,7 +1,4 @@
-name: Redis
-title: 高性能的开源键值数据库
-description: 高性能的开源键值数据库
-additionalProperties:
+﻿additionalProperties:
   key: redis
   name: Redis
   tags:

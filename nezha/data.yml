@@ -1,8 +1,4 @@
-name: 哪吒监控
-title: 服务器监控、运维工具
-type: 实用工具
-description: 开源、轻量、易用的服务器监控、运维工具
-additionalProperties:
+﻿additionalProperties:
   key: nezha
   name: 哪吒监控
   tags:

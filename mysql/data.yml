@@ -1,7 +1,4 @@
-name: MySQL
-title: 开源关系型数据库
-description: 开源关系型数据库
-additionalProperties:
+﻿additionalProperties:
   key: mysql
   name: MySQL
   tags:

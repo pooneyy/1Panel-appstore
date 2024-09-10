@@ -1,7 +1,4 @@
-name: Jellyseerr
-title: Jellyseerr
-description: 满足您所有媒体需求的一站式平台
-additionalProperties:
+﻿additionalProperties:
   key: jellyseerr
   name: Jellyseerr
   tags:

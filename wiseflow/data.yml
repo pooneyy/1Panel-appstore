@@ -1,7 +1,4 @@
-name: Wiseflow
-title: Wiseflow
-description: Wiseflow 首席情报官
-additionalProperties:
+﻿additionalProperties:
   key: wiseflow
   name: Wiseflow
   tags:

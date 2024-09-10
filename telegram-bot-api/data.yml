@@ -1,7 +1,4 @@
-name: Telegram Bot Api
-title: Telegram Bot API 服务器
-description: Telegram Bot API 服务器
-additionalProperties:
+﻿additionalProperties:
   key: telegram-bot-api
   name: Telegram Bot Api
   tags:

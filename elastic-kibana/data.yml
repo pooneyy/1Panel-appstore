@@ -1,7 +1,4 @@
-name: Kibana
-title: 基于浏览器的 Elasticsearch 分析和搜索仪表盘
-description: 基于浏览器的 Elasticsearch 分析和搜索仪表盘
-additionalProperties:
+﻿additionalProperties:
   key: elastic-kibana
   name: Kibana
   tags:

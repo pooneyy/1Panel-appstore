@@ -1,7 +1,4 @@
-name: Stream Rec WebUI
-title: 自动流媒体录制工具
-description: 自动流媒体录制工具
-additionalProperties:
+﻿additionalProperties:
   key: stream-rec-frontend
   name: Stream Rec WebUI
   tags:

@@ -1,7 +1,4 @@
-name: 爱影CMS
-title: 高性能高并发永久免费影视CMS
-description: 高性能高并发永久免费影视CMS
-additionalProperties:
+﻿additionalProperties:
   key: iycms
   name: 爱影CMS
   tags:

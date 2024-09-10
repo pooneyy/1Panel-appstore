@@ -1,8 +1,4 @@
-name: DeepLX
-title: DeepL 免费API
-type: 实用工具
-description: DeepL 免费API
-additionalProperties:
+﻿additionalProperties:
   key: deeplx
   name: DeepLX
   tags:

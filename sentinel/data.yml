@@ -1,7 +1,4 @@
-name: Sentinel Dashboard
-title: 阿里巴巴流量卫兵
-description: 阿里巴巴流量卫兵
-additionalProperties:
+﻿additionalProperties:
   key: sentinel
   name: Sentinel Dashboard
   tags:

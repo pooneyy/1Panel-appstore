@@ -1,7 +1,4 @@
-name: Linkding
-title: Linkding
-description: 自己托管的书签管理器
-additionalProperties:
+﻿additionalProperties:
   key: linkding
   name: Linkding
   tags:

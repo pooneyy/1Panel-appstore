@@ -1,10 +1,4 @@
-name: Yarr
-tags:
-  - 实用工具
-title: Rss 阅读器
-type: 实用工具
-description: Rss 阅读器
-additionalProperties:
+﻿additionalProperties:
   key: yarr
   name: Yarr
   tags:

@@ -1,9 +1,4 @@
-name: PostgreSQL
-tags:
-  - 数据库
-title: 开源关系型数据库
-description: 开源关系型数据库
-additionalProperties:
+﻿additionalProperties:
   key: postgresql
   name: PostgreSQL
   tags:

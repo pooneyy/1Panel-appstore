@@ -1,7 +1,4 @@
-name: Gitea Runner
-title: 新一代的代码托管平台
-description: 新一代的代码托管平台
-additionalProperties:
+﻿additionalProperties:
   key: gitea-runner
   name: Gitea Runner
   tags:

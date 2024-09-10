@@ -1,7 +1,4 @@
-name: qBittorrent
-title: BitTorrent客户端
-description: BitTorrent客户端
-additionalProperties:
+﻿additionalProperties:
   key: qbittorrent
   name: qBittorrent
   tags:

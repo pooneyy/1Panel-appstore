@@ -1,7 +1,4 @@
-name: 阅读3
-title: 阅读3服务器版，不需要手机
-description: 阅读3服务器版，不需要手机
-additionalProperties:
+﻿additionalProperties:
   key: reader3
   name: 阅读3
   tags:

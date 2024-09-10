@@ -1,7 +1,4 @@
-name: OneDev
-title: DevOps平台
-description: 单一 DevOps 平台
-additionalProperties:
+﻿additionalProperties:
   key: onedev
   name: OneDev
   tags:

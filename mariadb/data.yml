@@ -1,7 +1,4 @@
-name: MariaDB
-title: 开源关系数据库管理系统
-description: 开源关系数据库管理系统
-additionalProperties:
+﻿additionalProperties:
   key: mariadb
   name: MariaDB
   tags:

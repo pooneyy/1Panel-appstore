@@ -1,7 +1,4 @@
-name: Pixman
-title: IPTV、M3U8 流媒体代理方案
-description: IPTV、M3U8 流媒体代理方案
-additionalProperties:
+﻿additionalProperties:
   key: pixman
   name: Pixman
   tags:

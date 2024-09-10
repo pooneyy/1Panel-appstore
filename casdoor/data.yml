@@ -1,7 +1,4 @@
-name: Casdoor
-title: 身份和访问管理(IAM)/单点登录(SSO)平台
-description: 身份和访问管理(IAM)/单点登录(SSO)平台
-additionalProperties:
+﻿additionalProperties:
   key: casdoor
   name: Casdoor
   tags:

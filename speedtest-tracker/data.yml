@@ -1,10 +1,4 @@
-name: SpeedTest-Tracker
-tags:
-  - 工具
-title: SpeedTest-Tracker
-type: 工具
-description:
-additionalProperties:
+﻿additionalProperties:
   key: speedtest-tracker
   name: SpeedTest-Tracker
   tags:

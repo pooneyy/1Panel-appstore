@@ -1,7 +1,4 @@
-name: Artalk
-title: Artalk
-description: 一个自托管的评论系统
-additionalProperties:
+﻿additionalProperties:
   key: artalk
   name: Artalk
   tags:

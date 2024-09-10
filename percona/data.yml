@@ -1,7 +1,4 @@
-name: Percona
-title: 关系型数据库
-description: 关系型数据库
-additionalProperties:
+﻿additionalProperties:
   key: percona
   name: Percona
   tags:

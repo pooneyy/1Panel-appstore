@@ -1,7 +1,4 @@
-name: OpenFire
-title: OpenFire
-description: OpenFire 是一个实时协作服务器。它使用了唯一被广泛采用的即时通讯开放协议 XMPP（也叫 Jabber）
-additionalProperties:
+﻿additionalProperties:
   key: openfire
   name: OpenFire
   tags:

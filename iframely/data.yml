@@ -1,7 +1,4 @@
-name: Iframely
-title: 响应式 Web 嵌入和 URL 元的 Iframely API
-description: 响应式 Web 嵌入和 URL 元的 Iframely API
-additionalProperties:
+﻿additionalProperties:
   key: iframely
   name: Iframely
   tags:

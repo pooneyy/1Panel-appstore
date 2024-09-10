@@ -1,7 +1,4 @@
-name: Emby Amilys版
-title: 媒体服务器
-description: 主从式架构的媒体服务器软件
-additionalProperties:
+﻿additionalProperties:
   key: emby-amilys
   name: Emby Amilys版
   tags:

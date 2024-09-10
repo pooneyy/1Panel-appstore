@@ -1,7 +1,4 @@
-name: SpeedTest
-title: SpeedTest
-description: 轻量级的速度测试
-additionalProperties:
+﻿additionalProperties:
   key: speedtest
   name: SpeedTest
   tags:

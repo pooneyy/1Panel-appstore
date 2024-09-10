@@ -1,7 +1,4 @@
-name: IYUU-Plus
-title: 自动辅种工具
-description: 自动辅种工具
-additionalProperties:
+﻿additionalProperties:
   key: iyuu-plus
   name: IYUU-Plus
   tags:

@@ -1,7 +1,4 @@
-name: PhotoPrism
-title: PhotoPrism
-description: 面向去中心化网络的人工智能照片应用程序
-additionalProperties:
+﻿additionalProperties:
   key: photoprism
   name: PhotoPrism
   tags:

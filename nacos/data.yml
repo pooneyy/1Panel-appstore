@@ -1,10 +1,4 @@
-name: Nacos
-tags:
-  - 中间件
-title: 动态服务发现、配置管理和服务管理平台
-type: 中间件
-description: 动态服务发现、配置管理和服务管理平台
-additionalProperties:
+﻿additionalProperties:
   key: nacos
   name: Nacos
   tags:

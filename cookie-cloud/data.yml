@@ -1,7 +1,4 @@
-name: CookieCloud
-title: Cookie 同步
-description: 自架服务器同步Cookie的小工具
-additionalProperties:
+﻿additionalProperties:
   key: cookie-cloud
   name: CookieCloud
   tags:

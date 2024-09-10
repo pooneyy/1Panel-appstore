@@ -1,7 +1,4 @@
-name: RssHub
-title: 从任何内容生成 RSS/Atom/JSON 订阅源
-description:
-additionalProperties:
+﻿additionalProperties:
   key: rsshub
   name: RssHub
   tags:

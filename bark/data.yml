@@ -1,7 +1,4 @@
-name: Bark
-title: 通知推送工具
-description: 通知推送工具
-additionalProperties:
+﻿additionalProperties:
   key: bark
   name: Bark
   tags:

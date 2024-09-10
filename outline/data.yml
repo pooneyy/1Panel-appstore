@@ -1,7 +1,4 @@
-name: Outline
-title: 您团队的知识库
-description: 您团队的知识库
-additionalProperties:
+﻿additionalProperties:
   key: outline
   name: Outline
   tags:

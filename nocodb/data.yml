@@ -1,7 +1,4 @@
-name: NocoDB
-title: 无代码数据库平台
-description: 无代码数据库平台
-additionalProperties:
+﻿additionalProperties:
   key: nocodb
   name: NocoDB
   tags:
