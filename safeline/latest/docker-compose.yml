@@ -10,6 +10,7 @@ services:
     - /etc/localtime:/etc/localtime:ro
     - ${SAFELINE_DIR}/resources/mgt:/app/data
     - ${SAFELINE_DIR}/logs/nginx:/app/log/nginx:z
+    - ${SAFELINE_DIR}/resources/sock:/app/sock
     ports:
     - ${PANEL_APP_PORT_HTTP:-9443}:1443
     healthcheck:
@@ -76,6 +77,7 @@ services:
     - ${SAFELINE_DIR}/resources/chaos:/resources/chaos
     - ${SAFELINE_DIR}/logs/nginx:/var/log/nginx:z
     - ${SAFELINE_DIR}/resources/cache:/usr/local/nginx/cache
+    - ${SAFELINE_DIR}/resources/sock:/app/sock
     environment:
     - TCD_MGT_API=https://${SUBNET_PREFIX}.234:1443/api/open/publish/server
     - SNSERVER_ADDR=${SUBNET_PREFIX}.235:8000
