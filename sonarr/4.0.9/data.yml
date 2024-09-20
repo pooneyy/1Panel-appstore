@@ -2,7 +2,7 @@ additionalProperties:
   formFields:
     - default: "/home/sonarr"
       edit: true
-      envKey: PANEL_APP_PORT_HTTP
+      envKey: SONARR_ROOT_PATH
       labelZh: 数据持久化路径
       labelEn: Data persistence path
       required: true
