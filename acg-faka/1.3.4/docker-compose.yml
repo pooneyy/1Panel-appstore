@@ -3,8 +3,8 @@ networks:
     external: true
 
 services:
-  artalk:
-    image: artalk/artalk-go:2.9.0
+  acg-faka:
+    image: qyg2297248353/acg-faka:v1.3.4
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
@@ -12,16 +12,9 @@ services:
     networks:
       - 1panel-network
     ports:
-      - ${PANEL_APP_PORT_HTTP}:23366
+      - ${PANEL_APP_PORT_HTTP}:80
     env_file:
       - /etc/1panel/envs/global.env
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ${ARTALK_ROOT_PATH}/data:/data
-    environment:
-      - TZ=Asia/Shanghai
-      - ATK_DEBUG=false
-      - ATK_HOST=0.0.0.0
-      - ATK_PORT=23366
-      - ATK_IP_REGION_ENABLED=true
-      - ATK_DB_TABLE_PREFIX=atk_
+      - ${ACG_FAKA_ROOT_PATH}/data:/var/www/html

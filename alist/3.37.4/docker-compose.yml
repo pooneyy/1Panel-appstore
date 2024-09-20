@@ -2,8 +2,8 @@ networks:
   1panel-network:
     external: true
 services:
-  alist-aria2:
-    image: xhofe/alist-aria2:v3.37.1
+  alist:
+    image: xhofe/alist:v3.37.4
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"

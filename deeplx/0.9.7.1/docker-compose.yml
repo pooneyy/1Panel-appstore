@@ -3,8 +3,8 @@ networks:
     external: true
 
 services:
-  acg-faka:
-    image: qyg2297248353/acg-faka:v1.3.1
+  deeplx:
+    image: qyg2297248353/deeplx:v0.9.7.1
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
@@ -12,9 +12,9 @@ services:
     networks:
       - 1panel-network
     ports:
-      - ${PANEL_APP_PORT_HTTP}:80
+      - ${PANEL_APP_PORT_HTTP}:1188
     env_file:
       - /etc/1panel/envs/global.env
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
-    volumes:
-      - ${ACG_FAKA_ROOT_PATH}/data:/var/www/html
+    environment:
+      - PORT=1188
