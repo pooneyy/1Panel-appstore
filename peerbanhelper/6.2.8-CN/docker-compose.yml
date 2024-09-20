@@ -1,6 +1,6 @@
 services:
   peerbanhelper:
-    image: registry.cn-hangzhou.aliyuncs.com/ghostchu/peerbanhelper:v6.2.7
+    image: registry.cn-hangzhou.aliyuncs.com/ghostchu/peerbanhelper:v6.2.8
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
