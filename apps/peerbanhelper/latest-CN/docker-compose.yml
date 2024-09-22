@@ -1,6 +1,6 @@
 services:
   peerbanhelper:
-    image: "ghostchu/peerbanhelper:latest"
+    image: "registry.cn-hangzhou.aliyuncs.com/ghostchu/peerbanhelper:latest"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
