@@ -10,6 +10,14 @@ Git 托管、代码审查、团队协作、软件包注册和 CI/CD。它与 Git
 
 ![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
 
+## 安装说明
+
+> ⚠️ 警告
+>
+> 该应用申请使用 `特权模式`， 将允许应用在容器内部执行特权操作，如挂载宿主机目录、访问宿主机设备等。
+
+这是Gitea Actions的Runner，用于在Gitea Actions中执行任务。
+
 ## 特性
 
 + 代码托管
@@ -67,14 +75,6 @@ location / {
     proxy_set_header X-Forwarded-Proto $scheme;
 }
 ```
-
-## 安装说明
-
-> ⚠️ 警告
->
-> 该应用申请使用 `特权模式`， 将允许应用在容器内部执行特权操作，如挂载宿主机目录、访问宿主机设备等。
-
-这是Gitea Actions的Runner，用于在Gitea Actions中执行任务。
 
 ---
 
