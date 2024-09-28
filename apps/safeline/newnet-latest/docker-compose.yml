@@ -45,29 +45,6 @@ services:
     labels:
       createdBy: Apps
 
-  safeline-mario:
-    container_name: ${CONTAINER_NAME}-mario
-    restart: always
-    networks:
-      1panel-network:
-      safeline-ce:
-        ipv4_address: ${SUBNET_PREFIX}.6
-    image: chaitin/safeline-mario:latest
-    volumes:
-    - ${SAFELINE_DIR}/resources/mario:/resources/mario
-    - ${SAFELINE_DIR}/logs/mario:/logs/mario
-    - /etc/localtime:/etc/localtime:ro
-    environment:
-    - LOG_DIR=/logs/mario
-    - GOGC=100
-    - DATABASE_URL=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-pg/safeline-ce
-    logging:
-      options:
-        max-size: "100m"
-        max-file: "5"
-    labels:
-      createdBy: Apps
-
   safeline-tengine:
     container_name: ${CONTAINER_NAME}-tengine
     restart: always
