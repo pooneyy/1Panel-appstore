@@ -5,7 +5,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.234
-    image: chaitin/safeline-mgt:6.9.1
+    image: chaitin/safeline-mgt:6.10.4
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - ${SAFELINE_DIR}/resources/mgt:/app/data
@@ -33,7 +33,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.235
-    image: chaitin/safeline-detector:6.9.1
+    image: chaitin/safeline-detector:6.10.4
     volumes:
     - ${SAFELINE_DIR}/resources/detector:/resources/detector
     - ${SAFELINE_DIR}/logs/detector:/logs/detector
@@ -43,32 +43,10 @@ services:
     labels:
       createdBy: Apps
 
-  safeline-mario:
-    container_name: ${CONTAINER_NAME}-mario
-    restart: always
-    networks:
-      1panel-network:
-        ipv4_address: ${SUBNET_PREFIX}.236
-    image: chaitin/safeline-mario:6.9.1
-    volumes:
-    - ${SAFELINE_DIR}/resources/mario:/resources/mario
-    - ${SAFELINE_DIR}/logs/mario:/logs/mario
-    - /etc/localtime:/etc/localtime:ro
-    environment:
-    - LOG_DIR=/logs/mario
-    - GOGC=100
-    - DATABASE_URL=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-pg/safeline-ce
-    logging:
-      options:
-        max-size: "100m"
-        max-file: "5"
-    labels:
-      createdBy: Apps
-
   safeline-tengine:
     container_name: ${CONTAINER_NAME}-tengine
     restart: always
-    image: chaitin/safeline-tengine:6.9.1
+    image: chaitin/safeline-tengine:6.10.4
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - /etc/resolv.conf:/etc/resolv.conf:ro
@@ -93,7 +71,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.237
-    image: chaitin/safeline-luigi:6.9.1
+    image: chaitin/safeline-luigi:6.10.4
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ${SAFELINE_DIR}/resources/luigi:/app/data
@@ -115,7 +93,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.238
-    image: chaitin/safeline-fvm:6.9.1
+    image: chaitin/safeline-fvm:6.10.4
     volumes:
       - /etc/localtime:/etc/localtime:ro
     logging:
@@ -131,7 +109,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.239
-    image: chaitin/safeline-bridge:6.9.1
+    image: chaitin/safeline-bridge:6.10.4
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - /var/run:/app/run
@@ -176,7 +154,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.240
-    image: chaitin/safeline-chaos:6.9.1
+    image: chaitin/safeline-chaos:6.10.4
     logging:
       options:
         max-size: "100m"
