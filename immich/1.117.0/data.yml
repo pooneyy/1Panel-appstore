@@ -142,3 +142,15 @@ additionalProperties:
       rule: paramExtUrl
       required: false
       type: text
+    - default: "false"
+      edit: true
+      envKey: IMMICH_IGNORE_MOUNT_CHECK_ERRORS
+      labelZh: 是否跳过目录检查
+      labelEn: Skip Mount Check
+      required: false
+      type: select
+      values:
+        - label: 跳过检查
+          value: "true"
+        - label: 不跳过检查
+          value: "false"
