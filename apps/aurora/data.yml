@@ -1,15 +1,14 @@
-name: 极光面板 Aurora
+name: Aurora
 tags:
-    - 工具
-title: 一个多服务器端口租用管理面板
-type: 工具
-description: 一个多服务器端口租用管理面板
+    - 实用工具
+title: 极光面板-一个多服务器端口租用管理面板
+description: 极光面板-一个多服务器端口租用管理面板
 additionalProperties:
     key: aurora
-    name: 极光面板 Aurora
+    name: Aurora
     tags:
         - Tool
-    shortDescZh: 一个多服务器端口租用管理面板
+    shortDescZh: 极光面板-一个多服务器端口租用管理面板
     shortDescEn: A multi-server port leasing management panel
     type: tool
     crossVersionUpdate: true
