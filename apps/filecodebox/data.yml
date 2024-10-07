@@ -1,15 +1,14 @@
-name: 文件快递柜-轻量 (FileCodeBox-Lite)
+name: FileCodeBox
 tags:
-    - 工具
-title: 匿名口令分享文本，文件，像拿快递一样取文件
-type: 工具
-description: 匿名口令分享文本，文件，像拿快递一样取文件
+    - 实用工具
+title: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
+description: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
 additionalProperties:
     key: filecodebox
-    name: 文件快递柜-轻量 (FileCodeBox-Lite)
+    name: FileCodeBox
     tags:
         - Tool
-    shortDescZh: 匿名口令分享文本，文件，像拿快递一样取文件
+    shortDescZh: 文件快递柜-匿名口令分享文本，文件，像拿快递一样取文件
     shortDescEn: Anonymous Passcode Sharing Text, Files, Like Taking Express Delivery for Files
     type: tool
     crossVersionUpdate: true
