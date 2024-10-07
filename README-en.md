@@ -3,15 +3,16 @@
 
 ## Contribution Link
 
-[**Click here to contribute with AFDIAN**](https://afdian.net/a/dockerapps)
+[**Click here to contribute with AFDIAN**](https://afdian.com/a/dockerapps)
 
-[![**Click here to contribute with AFDIAN**](https://github.com/okxlin/appstore/raw/localApps/docs/afdian-logo.png)](https://afdian.net/a/dockerapps)
+[![**Click here to contribute with AFDIAN**](https://github.com/okxlin/appstore/raw/localApps/docs/afdian-logo.png)](https://afdian.com/a/dockerapps)
 
 * * *
 
 ## Table of Contents
 
 - [Contribution Link](#contribution-link)
+- [Table of Contents](#table-of-contents)
 - [Disclaimer](#disclaimer)
   - [1. Image Container Adaptation](#1-image-container-adaptation)
   - [2. Compliance with Laws](#2-compliance-with-laws)

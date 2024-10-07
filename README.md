@@ -3,14 +3,15 @@
 
 ## 打赏链接
 
-[**点我打赏，用爱发电**](https://afdian.net/a/dockerapps)
+[**点我打赏，用爱发电**](https://afdian.com/a/dockerapps)
 
-[![**点我打赏，用爱发电**](https://github.com/okxlin/appstore/raw/localApps/docs/afdian-logo.png)](https://afdian.net/a/dockerapps)
+[![**点我打赏，用爱发电**](https://github.com/okxlin/appstore/raw/localApps/docs/afdian-logo.png)](https://afdian.com/a/dockerapps)
 
 * * *
 ## 目录
 
 - [打赏链接](#打赏链接)
+- [目录](#目录)
 - [免责声明](#免责声明)
   - [1. 镜像容器适配](#1-镜像容器适配)
   - [2. 法律遵守](#2-法律遵守)
