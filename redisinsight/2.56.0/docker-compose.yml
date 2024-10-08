@@ -1,6 +1,6 @@
 services:
   redisinsight:
-    image: "redis/redisinsight:2.56.0"
+    image: "redis/redisinsight:2.58.0"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
