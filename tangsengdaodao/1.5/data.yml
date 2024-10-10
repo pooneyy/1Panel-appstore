@@ -102,7 +102,7 @@ additionalProperties:
       labelZh: 超级管理员 密码
       labelEn: Super administrator password
       required: true
-      type: text
+      type: password
     - default: "123456"
       edit: true
       envKey: TS_SMSCODE
