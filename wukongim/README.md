@@ -100,6 +100,16 @@
 + mqtt 协议支持（待开发）
 + 支持发布与订阅
 
+## 安装说明
+
+> 监控地址 http://127.0.0.1:5300/web
+>
+> 具体参考日志：【MonitorServer】Monitor web address：xxx
+>
+> 演示地址 http://127.0.0.1:5172/chatdemo
+>
+> 具体参考日志：【DemoServer】Chat demo address：xxx
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
