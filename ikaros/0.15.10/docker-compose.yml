@@ -1,12 +1,12 @@
 services:
   ikaros:
-    image: ikarosrun/ikaros:v0.15.10
+    image: "ikarosrun/ikaros:v0.15.10"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
       - 1panel-network
     volumes:
-      - ./data:/root/.ikaros
+      - ${DATA_PATH}:/root/.ikaros
     ports:
       - ${PANEL_APP_PORT_HTTP}:9999
     healthcheck:
@@ -16,10 +16,10 @@ services:
       retries: 5
       start_period: 30s
     environment:
-      - LANG=C.UTF-8
-      - LANGUAGE=C:zh
-      - LC_ALL=C.UTF-8
-      - TZ=Asia/Shanghai
+      - LANG=${LANG}
+      - LANGUAGE=${LANGUAGE}
+      - LC_ALL=${LC_ALL}
+      - TZ=${TIME_ZONE}
     command:
       - --logging.charset.console=UTF-8
       - --logging.charset.file=UTF-8
@@ -39,6 +39,8 @@ services:
       - --springdoc.swagger-ui.enabled=false
       # ikaros
       - --ikaros.external-url=${IKAROS_EXTERNAL_URL}
+      - --ikaros.security.initializer.master-username=${IKAROS_ADMIN_USERNAME}
+      - --ikaros.security.initializer.master-password=${IKAROS_ADMIN_PASSWORD}
     labels:
       createdBy: "Apps"
 networks:
