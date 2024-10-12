@@ -12,6 +12,25 @@
 
 我们建议您使用 Redis 作为缓存数据库，以提高性能。
 
+> `Redis 缓存地址` 配置
+
+如果您想要使用 Redis 作为缓存，请填写对应配置。
+
+格式：`redis://username:password@host:port/cache_index`
+
+示例：
+
+```
+# 用户名 + 密码模式
+redis://username:password@localhost:6379/0
+
+# 密码模式
+redis://:password@localhost:6379/0
+
+# 无密码模式
+redis://localhost:6379/0
+```
+
 ## 使用说明
 
 请参考官方文档：[RssHub 使用说明](https://docs.rsshub.app/zh/guide/)
