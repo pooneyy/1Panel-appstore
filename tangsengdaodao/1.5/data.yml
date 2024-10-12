@@ -168,34 +168,6 @@ additionalProperties:
       labelEn: Redis Connection Password
       required: false
       type: password
-    - default: "127.0.0.1"
-      edit: true
-      envKey: MINIO_HOST
-      labelZh: Minio 主机
-      labelEn: Minio Host
-      required: true
-      type: text
-    - default: 9000
-      edit: true
-      envKey: MINIO_PORT
-      labelZh: Minio 端口
-      labelEn: Minio Port
-      required: true
-      type: number
-    - default: "tsdd"
-      edit: true
-      envKey: MINIO_USERNAME
-      labelZh: minio 用户名
-      labelEn: Minio Username
-      required: true
-      type: text
-    - default: "tsdd"
-      edit: true
-      envKey: MINIO_PASSWORD
-      labelZh: Minio 密码
-      labelEn: Minio Password
-      required: true
-      type: password
     - default: "https://api.multiavatar.com/{avatar}.png"
       edit: true
       envKey: TS_AVATAR_DEFAULTBASEURL
