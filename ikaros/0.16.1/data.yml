@@ -55,11 +55,10 @@ additionalProperties:
       rule: paramHttp
       type: text
     - default: "INFO"
-      edit: true
       envKey: SERVER_LOG_LEVEL
       labelEn: Core Server Package Log level
-      labelZh: 核心Server包日志级别
-      required: false
+      labelZh: 【高级】核心Server包日志级别
+      required: true
       type: select
       values:
         - label: DEBUG
@@ -73,11 +72,10 @@ additionalProperties:
         - label: CRITICAL
           value: "CRITICAL"
     - default: "INFO"
-      edit: true
       envKey: PLUGIN_LOG_LEVEL
       labelEn: Plugin Package Log level
-      labelZh: 插件包日志级别
-      required: false
+      labelZh: 【高级】插件包日志级别
+      required: true
       type: select
       values:
         - label: DEBUG
