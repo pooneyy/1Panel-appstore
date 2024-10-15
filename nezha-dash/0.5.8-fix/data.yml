@@ -20,60 +20,11 @@ additionalProperties:
           required: true
           type: text
           edit: true
-        - default: zh
-          edit: true
-          envKey: DEFAULT_LOCALE
-          labelEn: DefaultLocale
-          labelZh: 默认语言
-          required: true
-          type: text
-        - default: false
-          edit: true
-          envKey: ForceShowAllServers
-          labelEn: ForceShowAllServers
-          labelZh: 是否强制显示所有服务器
-          required: true
-          type: text
         - default: 2000
           edit: true
           envKey: NEXT_PUBLIC_NezhaFetchInterval
           labelEn: NezhaFetchInterval
           labelZh: 	获取数据间隔（毫秒）
-          required: true
-          type: text
-        - default: false
-          edit: true
-          envKey: NEXT_PUBLIC_ShowFlag
-          labelEn: ShowFlag
-          labelZh: 是否显示旗帜
-          required: true
-          type: text
-        - default: false
-          edit: true
-          envKey: NEXT_PUBLIC_DisableCartoon
-          labelEn: DisableCartoon
-          labelZh: 是否禁用卡通人物
-          required: true
-          type: text
-        - default: false
-          edit: true
-          envKey: NEXT_PUBLIC_ShowTag
-          labelEn: ShowTag
-          labelZh: 是否显示标签
-          required: true
-          type: text
-        - default: false
-          edit: true
-          envKey: NEXT_PUBLIC_ShowNetTransfer
-          labelEn: ShowNetTransfer
-          labelZh: 是否显示流量信息
-          required: true
-          type: text
-        - default: false
-          edit: true
-          envKey: NEXT_PUBLIC_ForceUseSvgFlag
-          labelEn: ForceUseSvgFlag
-          labelZh: 是否强制使用SVG旗帜
           required: true
           type: text
         - default: https://nezha-cf.buycoffee.top/apple-touch-icon.png
@@ -97,3 +48,91 @@ additionalProperties:
           labelZh: 自定义描述
           required: true
           type: text
+        - default: "zh"
+          edit: true
+          envKey: DEFAULT_LOCALE
+          labelEn: DefaultLocale
+          labelZh: 默认语言
+          required: true
+          type: select
+          values:
+              - label: "简体中文"
+                value: "zh"
+              - label: "繁体中文"
+                value: "zh-t"
+              - label: "English"
+                value: "en"
+              - label: "日本語"
+                value: "ja"
+        - default: "否"
+          edit: true
+          envKey: ForceShowAllServers
+          labelEn: ForceShowAllServers
+          labelZh: 是否强制显示所有服务器
+          required: true
+          type: select
+          values:
+              - label: "是"
+                value: "true"
+              - label: "否"
+                value: "false"
+        - default: "否"
+          edit: true
+          envKey: NEXT_PUBLIC_ShowFlag
+          labelEn: ShowFlag
+          labelZh: 是否显示旗帜
+          required: true
+          type: select
+          values:
+              - label: "是"
+                value: "true"
+              - label: "否"
+                value: "false"
+        - default: "否"
+          edit: true
+          envKey: NEXT_PUBLIC_DisableCartoon
+          labelEn: DisableCartoon
+          labelZh: 是否禁用卡通人物
+          required: true
+          type: select
+          values:
+              - label: "是"
+                value: "true"
+              - label: "否"
+                value: "false"
+        - default: "否"
+          edit: true
+          envKey: NEXT_PUBLIC_ShowTag
+          labelEn: ShowTag
+          labelZh: 是否显示标签
+          required: true
+          type: select
+          values:
+              - label: "是"
+                value: "true"
+              - label: "否"
+                value: "false"
+        - default: "否"
+          edit: true
+          envKey: NEXT_PUBLIC_ShowNetTransfer
+          labelEn: ShowNetTransfer
+          labelZh: 是否显示流量信息
+          required: true
+          type: select
+          values:
+              - label: "是"
+                value: "true"
+              - label: "否"
+                value: "false"
+        - default: "否"
+          edit: true
+          envKey: NEXT_PUBLIC_ForceUseSvgFlag
+          labelEn: ForceUseSvgFlag
+          labelZh: 是否强制使用SVG旗帜
+          required: true
+          type: select
+          values:
+              - label: "是"
+                value: "true"
+              - label: "否"
+                value: "false"
