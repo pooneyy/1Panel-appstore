@@ -1,0 +1,20 @@
+name: nezha-dash
+tags:
+    - 工具
+title: 一个基于 Next.js 和 哪吒监控 的仪表盘
+type: 工具
+description: 一个基于 Next.js 和 哪吒监控 的仪表盘
+additionalProperties:
+    key: nezha-dash
+    name: nezha-dash
+    tags:
+        - Tool
+    shortDescZh: 一个基于 Next.js 和 哪吒监控 的仪表盘
+    shortDescEn: A dashboard based on Next.exe and Nezha monitoring
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://nezha-cf.buycoffee.top/zh
+    github: https://github.com/hamster1963/nezha-dash
+    document: https://github.com/hamster1963/nezha-dash?tab=readme-ov-file#nezhadash
