@@ -1,6 +1,6 @@
 networks:
-  1panel-network:
-    external: true
+  traccar-network:
+    driver: bridge
 
 services:
   traccar:
@@ -10,7 +10,7 @@ services:
       createdBy: "Apps"
     restart: always
     networks:
-      - 1panel-network
+      - traccar-network
     hostname: traccar
     ports:
       - ${PANEL_APP_PORT_HTTP}:8082
