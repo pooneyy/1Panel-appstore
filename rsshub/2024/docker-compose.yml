@@ -24,7 +24,7 @@ services:
       retries: 3
   rsshub:
     image: diygod/rsshub:2024-10-16
-    container_name: ${CONTAINER_NAME}
+    container_name: ${CONTAINER_NAME}-rsshub
     depends_on:
       - browserless
     labels:
