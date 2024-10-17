@@ -14,7 +14,7 @@ additionalProperties:
       labelZh: 访问密钥
       labelEn: Access key
       required: false
-      type: text
+      type: password
     - default: "memory"
       edit: true
       envKey: CACHE_TYPE
