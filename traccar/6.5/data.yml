@@ -15,3 +15,11 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: 5055
+      edit: true
+      envKey: PANEL_APP_PORT_APP
+      labelZh: App 通讯端口
+      labelEn: App communication port
+      required: true
+      rule: paramPort
+      type: number
