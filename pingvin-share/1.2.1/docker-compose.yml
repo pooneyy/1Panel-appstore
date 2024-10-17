@@ -1,0 +1,23 @@
+networks:
+  1panel-network:
+    external: true
+
+services:
+  pingvin-share:
+    image: stonith404/pingvin-share:v1.2.1
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+    volumes:
+      - ${PINGVIN_SHARE_ROOT_PATH}/data:/opt/app/backend/data
+      - ${PINGVIN_SHARE_ROOT_PATH}/images:/opt/app/frontend/public/img
+    environment:
+      - BACKEND_PORT=8080
+      - PORT=3000
+      - API_URL=http://localhost:8080
+      - TRUST_PROXY=false
