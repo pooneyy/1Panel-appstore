@@ -5,7 +5,7 @@ networks:
 services:
   browserless:
     image: browserless/chrome
-    container_name: ${CONTAINER_NAME}-browserless
+    container_name: browserless-${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
     restart: always
@@ -24,7 +24,7 @@ services:
       retries: 3
   rsshub:
     image: diygod/rsshub:2024-10-16
-    container_name: ${CONTAINER_NAME}-rsshub
+    container_name: rsshub-${CONTAINER_NAME}
     depends_on:
       - browserless
     labels:
