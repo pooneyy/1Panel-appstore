@@ -123,6 +123,14 @@ Traccar 支持以下数据库：
 
 请将 `[]` 替换为您的实际配置。
 
+### 端口服务
+
+Traccar 默认使用 8082 端口作为 Web 服务端口。
+
+同时，释放 `5000-5150` TCP + UDP 端口，用于 GPS 设备与 Traccar 服务器通信。
+
+请在安装前确认 `5000-5150` 端口未被占用。
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
