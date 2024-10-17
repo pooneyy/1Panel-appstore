@@ -1,0 +1,20 @@
+networks:
+  1panel-network:
+    external: true
+
+services:
+  watchyourlan:
+    image: aceberg/watchyourlan:2.0.3
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    network_mode: host
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8840
+    volumes:
+      - ${WATCHYOURLAN_ROOT_PATH}/data:/data/WatchYourLAN
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8840
+      - LOG_LEVEL=info
