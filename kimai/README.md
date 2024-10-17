@@ -2,7 +2,7 @@
 
 Kimai 是一款专业级别的时间跟踪应用，免费且开源
 
-![Halo](https://file.lifebus.top/imgs/kimai_cover.png)
+![Kimai](https://file.lifebus.top/imgs/kimai_cover.png)
 
 Kimai 是一个基于网络的多用户时间追踪应用。对每个人都很棒：自由职业者、公司、组织 - 每个人都可以追踪时间、生成报告、创建发票并做更多事情。
 
