@@ -82,8 +82,7 @@ services:
     restart: always
     networks:
       - 1panel-network
-    devices:
-      <<: *default_devices
+    devices: *default_devices
     ports:
       - ${PANEL_APP_PORT_MACHINE_LEARNING}:3003
     env_file:
