@@ -8,6 +8,8 @@ if [ -f .env ]; then
   sed -i '/^ENV_FILE=/d' .env
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
 
+  cp conf/traccar.xml "${TRACCAR_ROOT_PATH}/traccar.xml"
+
   echo "Check Finish."
 
 else
