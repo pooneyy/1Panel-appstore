@@ -14,8 +14,6 @@ services:
     hostname: traccar
     ports:
       - ${PANEL_APP_PORT_HTTP}:8082
-      - ${PANEL_APP_PORT_APP}:5055
-      - ${PANEL_APP_PORT_APP}:5055/udp
     env_file:
       - /etc/1panel/envs/global.env
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
