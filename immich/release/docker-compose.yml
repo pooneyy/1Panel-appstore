@@ -15,7 +15,7 @@ services:
       - DB_DATABASE_NAME=${PANEL_DB_NAME}
       - REDIS_HOSTNAME=${CONTAINER_NAME}-redis
     ports:
-      - ${PANEL_APP_PORT_HTTP}:3001
+      - ${PANEL_APP_PORT_HTTP}:2283
     depends_on:
       - immich-redis
       - immich-database
@@ -73,7 +73,22 @@ services:
       interval: 5m
       start_interval: 30s
       start_period: 5m
-    command: ["postgres", "-c", "shared_preload_libraries=vectors.so", "-c", 'search_path="$$user", public, vectors', "-c", "logging_collector=on", "-c", "max_wal_size=2GB", "-c", "shared_buffers=512MB", "-c", "wal_compression=on"]
+    command:
+      [
+        'postgres',
+        '-c',
+        'shared_preload_libraries=vectors.so',
+        '-c',
+        'search_path="$$user", public, vectors',
+        '-c',
+        'logging_collector=on',
+        '-c',
+        'max_wal_size=2GB',
+        '-c',
+        'shared_buffers=512MB',
+        '-c',
+        'wal_compression=on',
+      ]
     labels:  
       createdBy: "Apps"
 
