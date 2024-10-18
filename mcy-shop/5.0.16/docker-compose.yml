@@ -4,7 +4,7 @@ networks:
 
 services:
   mcy-shop:
-    image: qyg2297248353/mcy-shop:v5.0.16
+    image: qyg2297248353/mcy-shop:v5.0.17
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
