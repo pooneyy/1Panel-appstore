@@ -1,7 +1,7 @@
 services:
   pageSpy:
     container_name: ${CONTAINER_NAME}
-    image: ghcr.io/huolalatech/page-spy-web:latest
+    image: "ghcr.io/huolalatech/page-spy-web:v1.9.5"
     networks:
       - 1panel-network
     ports:
@@ -12,6 +12,6 @@ services:
     restart: always
     labels:
       createdBy: "Apps"
-networks:  
-  1panel-network:  
+networks:
+  1panel-network:
     external: true
