@@ -1,8 +1,7 @@
 name: WuKongIM
 tags:
-  - IM
+  - 实用工具
 title: 让信息传递更简单
-type: 工具
 description: 让企业轻松拥有自己的即时通讯
 additionalProperties:
   key: wukongim
@@ -15,6 +14,6 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 0
   recommend: 0
-  website: https://githubim.com/
+  website: https://githubim.com
   github: https://github.com/TangSengDaoDao/TangSengDaoDaoServer
-  document: https://githubim.com/
+  document: https://githubim.com
