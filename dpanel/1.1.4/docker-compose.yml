@@ -19,3 +19,5 @@ services:
     volumes:
       - ${DPANEL_ROOT_PATH}/data:/dpanel
       - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - APP_NAME=${CONTAINER_NAME}
