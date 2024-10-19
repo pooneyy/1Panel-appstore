@@ -27,7 +27,7 @@ services:
   stream-rec-frontend:
     depends_on:
       - stream-rec-backend
-    image: streamrec/stream-rec-front:v0.7.1
+    image: streamrec/stream-rec-front:v0.7.2
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
