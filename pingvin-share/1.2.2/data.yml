@@ -7,7 +7,7 @@ additionalProperties:
       labelEn: Data persistence path
       required: true
       type: text
-    - default: 3000
+    - default: 3333
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelZh: 访问端口
