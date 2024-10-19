@@ -58,29 +58,17 @@ additionalProperties:
       labelEn: Nginx UI Display Title
       required: true
       type: text
-    - default: "false"
-      edit: true
-      envKey: NGINX_UI_SERVER_SKIP_INSTALLATION
-      labelZh: 跳过安装模式
-      labelEn: Skip Installation Mode
-      required: true
-      type: select
-      values:
-        - label: 跳过
-          value: "true"
-        - label: 不跳过
-          value: "false"
     - default: ""
       edit: true
       envKey: NGINX_UI_PREDEFINED_USER_NAME
-      labelZh: 预设用户名 (跳过安装模式)
+      labelZh: 预设用户名
       labelEn: Predefined Username
       required: false
       type: text
     - default: ""
       edit: true
       envKey: NGINX_UI_PREDEFINED_USER_PASSWORD
-      labelZh: 预设密码 (跳过安装模式)
+      labelZh: 预设密码
       labelEn: Predefined Password
       required: false
       type: text
