@@ -1,12 +1,11 @@
-name: nezha-dash
+name: NezhaDash
 tags:
-    - 工具
+    - 实用工具
 title: 一个基于 Next.js 和 哪吒监控 的仪表盘
-type: 工具
 description: 一个基于 Next.js 和 哪吒监控 的仪表盘
 additionalProperties:
     key: nezha-dash
-    name: nezha-dash
+    name: NezhaDash
     tags:
         - Tool
     shortDescZh: 一个基于 Next.js 和 哪吒监控 的仪表盘
@@ -15,6 +14,6 @@ additionalProperties:
     crossVersionUpdate: true
     limit: 0
     recommend: 0
-    website: https://nezha-cf.buycoffee.top/zh
+    website: https://nezha-cf.buycoffee.top
     github: https://github.com/hamster1963/nezha-dash
-    document: https://github.com/hamster1963/nezha-dash?tab=readme-ov-file#nezhadash
+    document: https://github.com/hamster1963/nezha-dash

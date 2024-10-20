@@ -16,3 +16,11 @@ Nezha Dashboard 是一款强大的开源监控和可视化工具，主要用于�
 - **开放API**：提供 RESTful API，方便与其他系统集成。
 
 Nezha Dashboard 是一个高度可定制、可扩展的监控平台，适合不同规模的用户，帮助运维人员和开发者及时掌握系统健康状态，进行系统调优与性能管理。
+
+## 使用说明
+
+可以通过编辑目录下的配置文件来修改一些配置。
+例如：
+```
+/opt/1panel/apps/local/nezha-dashboard/nezha-dashboard/config.yaml
+```
