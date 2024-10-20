@@ -11,6 +11,7 @@ services:
     - ${SAFELINE_DIR}/resources/mgt:/app/data
     - ${SAFELINE_DIR}/logs/nginx:/app/log/nginx:z
     - ${SAFELINE_DIR}/resources/sock:/app/sock
+    - /var/run:/app/run
     ports:
     - ${PANEL_APP_PORT_HTTP:-9443}:1443
     healthcheck:
