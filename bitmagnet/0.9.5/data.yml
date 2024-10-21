@@ -80,3 +80,10 @@ additionalProperties:
           value: "true"
         - label: 禁止
           value: "false"
+    - default: ""
+      edit: true
+      envKey: TMDB_API_KEY
+      labelZh: TMDB API 密钥
+      labelEn: TMDB API Key
+      required: false
+      type: text
