@@ -2,7 +2,7 @@
 
 自托管的 BitTorrent 索引器，DHT 爬虫，内容分类器和带 Web UI，GraphQL API 以及 Servarr 堆栈集成的 torrent 搜索引擎。
 
-![Kimai](https://file.lifebus.top/imgs/bitmagnet_cover.png)
+![Bitmagnet](https://file.lifebus.top/imgs/bitmagnet_cover.png)
 
 ![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
 
