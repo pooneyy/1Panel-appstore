@@ -58,7 +58,7 @@ additionalProperties:
       type: text
     - default: ""
       edit: true
-      envKey: ADMIN_NAME
+      envKey: ADMIN_PASSWORD
       labelZh: 管理员 密码
       labelEn: Admin Password
       required: true
