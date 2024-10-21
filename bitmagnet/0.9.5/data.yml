@@ -37,13 +37,21 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: "127.0.0.1:5432"
+    - default: "127.0.0.1"
       edit: true
       envKey: POSTGRES_HOST
       labelZh: 数据库 主机地址
       labelEn: Database Host
       required: true
       type: text
+    - default: 5432
+      edit: true
+      envKey: DB_PORT
+      labelZh: 数据库 端口
+      labelEn: Database Port
+      required: true
+      rule: paramPort
+      type: number
     - default: "bitmagnet"
       edit: true
       envKey: POSTGRES_NAME
