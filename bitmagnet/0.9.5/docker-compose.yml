@@ -31,7 +31,6 @@ services:
       - LOG_JSON=false
       - DHT_CRAWLER_SAVE_FILES_THRESHOLD=100
       - PROCESSOR_CONCURRENCY=1
-      - TMDB_API_KEY=your_api_key
     command:
       - worker
       - run
