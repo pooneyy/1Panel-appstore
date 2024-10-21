@@ -11,6 +11,9 @@ services:
     restart: always
     networks:
       - 1panel-network
+    dns:
+      - 1.1.1.1
+      - 114.114.114.114
     ports:
       - ${PANEL_APP_PORT_HTTP}:3333
       - ${PANEL_APP_PORT_BT}:3334/tcp
