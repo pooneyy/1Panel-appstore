@@ -1,8 +1,9 @@
 services:
   arcadia:
-    image: supermanito/arcadia:beta
+    image: "supermanito/arcadia:beta"
     container_name: ${CONTAINER_NAME}
-    hostname: arcadia
+    hostname: ${HOSTNAME}
+    tty: true
     networks:
       - 1panel-network
     volumes:
