@@ -3,21 +3,23 @@ networks:
     external: true
 
 services:
-  siyuan:
-    image: b3log/siyuan:v3.1.9
+  prowlarr:
+    image: linuxserver/prowlarr:1.25.4
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
     restart: always
     networks:
       - 1panel-network
-    command: [ '--workspace=/siyuan/workspace/', '--accessAuthCode=${AuthCode}' ]
-    user: 1000:1000
     ports:
-      - ${PANEL_APP_PORT_HTTP}:6806
+      - ${PANEL_APP_PORT_HTTP}:9696
     env_file:
       - /etc/1panel/envs/global.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ${SIYUAN_ROOT_PATH}/workspace:/siyuan/workspace
+      - ${PROWLARR_ROOT_PATH}/config:/config
     environment:
-      - RUN_IN_CONTAINER=true
+      - PUID=1000
+      - PGID=1000
+      - UMASK=022
+      - TZ=Asia/Shanghai
