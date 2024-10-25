@@ -1,0 +1,23 @@
+networks:
+  1panel-network:
+    external: true
+
+services:
+  shiori:
+    image: ghcr.io/go-shiori/shiori:v1.7.1
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8080
+    env_file:
+      - /etc/1panel/envs/global.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    volumes:
+      - ${SHIORI_ROOT_PATH}/dev-data:/srv/shiori
+      - ${SHIORI_ROOT_PATH}/data:/src/shiori
+    environment:
+      - SHIORI_DIR=/srv/shiori
