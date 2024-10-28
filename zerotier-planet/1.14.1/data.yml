@@ -1,8 +1,8 @@
 additionalProperties:
   formFields:
-    - default: "/home/ztncui"
+    - default: "/home/zerotier-planet"
       edit: true
-      envKey: ZTNCUI_ROOT_PATH
+      envKey: ZEROTIER_PLANET_ROOT_PATH
       labelZh: 数据持久化路径
       labelEn: Data persistence path
       required: true
@@ -23,7 +23,7 @@ additionalProperties:
           value: "none"
         - label: 1panel-network
           value: "1panel-network"
-    - default: 3000
+    - default: 3443
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelZh: WebUI 端口
@@ -31,7 +31,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: 9993
+    - default: 9994
       edit: true
       envKey: PANEL_APP_PORT_API
       labelZh: API 端口
@@ -39,7 +39,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: 3180
+    - default: 3000
       edit: true
       envKey: PANEL_APP_PORT_FILE
       labelZh: 文件传输端口
@@ -49,15 +49,15 @@ additionalProperties:
       type: number
     - default: ""
       edit: true
-      envKey: ZTNCUI_PASSWD
-      labelZh: 面板管理员 密码
-      labelEn: Admin Password
-      required: true
-      type: password
+      envKey: IP_ADDR4
+      labelZh: 公网 IPV4/IPV6
+      labelEn: Public IPV4/IPV6
+      required: false
+      type: text
     - default: ""
       edit: true
-      envKey: MYADDR
-      labelZh: 服务器域名(IP)
-      labelEn: Server Domain(IP)
-      required: true
+      envKey: IP_ADDR6
+      labelZh: 公网 IPV4/IPV6
+      labelEn: Public IPV6/IPV6
+      required: false
       type: text
