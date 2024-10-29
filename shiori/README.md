@@ -20,6 +20,9 @@ Shiori 是一款用 Go 语言编写的简单书签管理器，旨在作为 Pocke
 
 ## 安装说明
 
+> 默认用户名： `shiori`
+> 默认密码： `gopher`
+
 ### `数据库链接 URL` 配置
 
 > 名词解释
@@ -43,6 +46,18 @@ Shiori 是一款用 Go 语言编写的简单书签管理器，旨在作为 Pocke
 
 模板：`postgres://username:password@localhost:port/database?sslmode=disable`
 示例：`postgres://shiori:shiori@postgres/shiori?sslmode=disable`
+
+## 反向代理
+
+> Nginx
+
+```nginx
+location / {
+    proxy_pass http://localhost:8080/;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+}
+```
 
 ---
 
