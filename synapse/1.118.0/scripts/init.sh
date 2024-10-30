@@ -11,9 +11,10 @@ if [ -f .env ]; then
   # setup-2 generate key
   mkdir -p "${CURRENT_DIR}/data"
   docker run -it --rm \
-        --mount type=bind,src="${CURRENT_DIR}/data",dst=/data \
+        -v "${CURRENT_DIR}/data":/data \
         -e SYNAPSE_SERVER_NAME="${DOMAIN_NAME}" \
         -e SYNAPSE_REPORT_STATS=no \
+        -e TZ=Asia/Shanghai \
         matrixdotorg/synapse:latest generate
 
   # setup-3 check permission
