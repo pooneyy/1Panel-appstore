@@ -12,7 +12,7 @@ if [ -f .env ]; then
   mkdir -p "${CURRENT_DIR}/data"
   docker run -it --rm \
         --mount type=bind,src="${CURRENT_DIR}/data",dst=/data \
-        -e SYNAPSE_SERVER_NAME="$DOMAIN_NAME" \
+        -e SYNAPSE_SERVER_NAME="${DOMAIN_NAME}" \
         -e SYNAPSE_REPORT_STATS=no \
         matrixdotorg/synapse:latest generate
 

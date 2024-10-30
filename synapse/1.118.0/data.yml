@@ -8,3 +8,10 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: "matrix.example.com"
+      edit: true
+      envKey: DOMAIN_NAME
+      labelZh: 服务域名
+      labelEn: Domain Name
+      required: true
+      type: text
