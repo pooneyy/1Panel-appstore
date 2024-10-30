@@ -5,13 +5,16 @@ networks:
 services:
   synapse-init:
     image: matrixdotorg/synapse:v1.118.0
-    container_name: synapse-init
+    container_name: init-${CONTAINER_NAME}
     entrypoint: >
       /bin/sh -c "
       if [ ! -f /data/homeserver.yaml ]; then
         python3 -m synapse.app.homeserver --server-name ${SYNAPSE_SERVER_NAME} --config-path /data/homeserver.yaml --generate-config
       fi
       "
+    env_file:
+      - /etc/1panel/envs/global.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
     environment:
       - SYNAPSE_SERVER_NAME=${DOMAIN_NAME}
       - SYNAPSE_REPORT_STATS=no
