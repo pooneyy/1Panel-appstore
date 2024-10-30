@@ -17,7 +17,7 @@ additionalProperties:
       type: number
     - default: "matrix.example.com"
       edit: true
-      envKey: DOMAIN_NAME
+      envKey: SYNAPSE_SERVER_NAME
       labelZh: 服务域名
       labelEn: Domain Name
       required: true
