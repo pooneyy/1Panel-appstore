@@ -18,5 +18,4 @@ services:
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${UPTIME_KUMA_ROOT_PATH}/data:/app/data
-      - ${UPTIME_KUMA_ROOT_PATH}/server:/app/server
-      - ${UPTIME_KUMA_ROOT_PATH}/db:/app/db
+      - /var/run/docker.sock:/var/run/docker.sock
