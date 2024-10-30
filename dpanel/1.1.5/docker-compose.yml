@@ -21,3 +21,10 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - APP_NAME=${CONTAINER_NAME}
+  dpanel-plugin-explorer:
+    image: alpine:latest
+    container_name: dpanel-plugin-explorer
+    restart: unless-stopped
+    privileged: true
+    pid: host
+    command: [ "sh", "-c", "tail -f /dev/null" ]

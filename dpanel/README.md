@@ -12,6 +12,16 @@ Docker 可视化面板系统，提供完善的 docker 管理功能。
 
 ## 安装说明
 
+<div style="border: 1px solid #FFC107; padding: 10px; border-radius: 5px; color: #856404; background-color: #FFF3CD; display: inline-block; width: 100%; max-width: 60%; margin-top: 10px;">
+    <div style="display: flex; align-items: center;">
+        <span style="font-size: 24px; margin-right: 8px;">⚠️</span>
+        <div>
+            <strong style="font-size: 16px;">警告</strong><br>
+            <span style="font-size: 14px; color: #333;">该应用申请使用 `特权模式`， 将允许应用在容器内部执行特权操作，如挂载宿主机目录、访问宿主机设备等。</span>
+        </div>
+    </div>
+</div>
+
 > 默认用户名：`admin`
 >
 > 默认密码：`admin`

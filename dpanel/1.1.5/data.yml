@@ -15,3 +15,17 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: "admin"
+      edit: true
+      envKey: INSTALL_USERNAME
+      labelZh: 管理员 用户名
+      labelEn: Admin Username
+      required: true
+      type: text
+    - default: "admin"
+      edit: true
+      envKey: INSTALL_PASSWORD
+      labelZh: 管理员 密码
+      labelEn: Admin Password
+      required: true
+      type: text
