@@ -12,8 +12,8 @@ Synapse 是一个开源的 Matrix 家庭服务器实现，由 Element 开发和�
     <div style="display: flex; align-items: center;">
         <span style="font-size: 24px; margin-right: 8px;">⚠️</span>
         <div>
-            <strong style="font-size: 16px;">前置脚本说明</strong><br>
-            <span style="font-size: 14px; color: #333;">安装前会执行前置脚本，完成配置文件初始化，如果拉取失败，应用将无法正常安装。如果失败请卸载重新安装。</span>
+            <strong style="font-size: 16px;">配置初始化</strong><br>
+            <span style="font-size: 14px; color: #333;">该应用需要生成前置配置文件，如果首次生成失败，请删除持久化目录重试</span>
         </div>
     </div>
 </div>
