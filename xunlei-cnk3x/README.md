@@ -16,9 +16,15 @@
 
 ## 使用说明
 
-> ⚠️ 警告
->
-> 该应用申请使用 `特权模式`， 将允许应用在容器内部执行特权操作，如挂载宿主机目录、访问宿主机设备等。
+<div style="border: 1px solid #FFC107; padding: 10px; border-radius: 5px; color: #856404; background-color: #FFF3CD; display: inline-block; width: 100%; max-width: 60%; margin-top: 10px;">
+    <div style="display: flex; align-items: center;">
+        <span style="font-size: 24px; margin-right: 8px;">⚠️</span>
+        <div>
+            <strong style="font-size: 16px;">警告</strong><br>
+            <span style="font-size: 14px; color: #333;">该应用申请使用 `特权模式`， 将允许应用在容器内部执行特权操作，如挂载宿主机目录、访问宿主机设备等。</span>
+        </div>
+    </div>
+</div>
 
 下载的数据存储在`downloads`目录下，请查看持久化目录的位置。
 
