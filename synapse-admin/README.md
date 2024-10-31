@@ -10,6 +10,10 @@ Synapse 是一个开源的 Matrix 家庭服务器实现，由 Element 开发和�
 
 本应用为 Synapse 服务器的管理工具，用于管理 Synapse 服务器的配置文件，用户，房间等信息。
 
+### 移动客户端
+
+[![Download on the App Store](http://www.tananaev.com/badges/app-store.svg)](https://apps.apple.com/us/app/element-messenger/id1083446067) [![Get it on Google Play](http://www.tananaev.com/badges/google-play.svg)](https://play.google.com/store/apps/details?id=im.vector.app) [![Get it on F-Droid](http://www.tananaev.com/badges/f-droid.svg)](https://f-droid.org/packages/im.vector.app/)
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
