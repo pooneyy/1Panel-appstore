@@ -13,6 +13,10 @@ if [ -f .env ]; then
   mkdir -p "$ELEMENT_WEB_ROOT_PATH/config"
   cp ./conf/config.sample.json "$ELEMENT_WEB_ROOT_PATH/config/config.json"
 
+  if [ -n "$SYNAPSE_SERVER_NAME" ]; then
+    cp ./conf/config.sample.json "$ELEMENT_WEB_ROOT_PATH/config/config.$SYNAPSE_SERVER_NAME.json"
+  fi
+
   # setup-3 set permission
   chmod -R 777 "$ELEMENT_WEB_ROOT_PATH"
 
