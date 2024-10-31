@@ -15,7 +15,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: "matrix.example.com"
+    - default: "riot.example.com"
       edit: true
       envKey: SYNAPSE_SERVER_NAME
       labelZh: 服务域名
