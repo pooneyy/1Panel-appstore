@@ -2,8 +2,8 @@ networks:
   1panel-network:
     external: true
 services:
-  alist-aria2:
-    image: xhofe/alist-aria2:v3.38.0
+  alist:
+    image: xhofe/alist:v3.39.1-ffmpeg
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
