@@ -25,6 +25,8 @@ services:
       - ${LIBRARY_PATH}:/config
       - ${TVSERIES_PATH}:/tv
       - ${MOVIES_PATH}:/movies
+    labels:
+      createdBy: "Apps"
 
 networks:
   1panel-network:
