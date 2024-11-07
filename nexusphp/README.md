@@ -39,6 +39,60 @@
 
 重启后，请检查 `public/install` 目录是否已删除，如未删除，请手动删除。
 
+### 生成 APP KEY
+
+#### 通过终端生成
+
+1. 通过 `openssl` 得到 32位的十六进制字符串
+
+```bash
+openssl rand -hex 32
+```
+
+2. 转换为 base64 格式
+
+```bash
+echo -n "your_hex_string" | xxd -r -p | base64
+```
+
+3. 得到完整密钥
+
+拼接 `base64:` 和上一步得到的字符串
+
+```bash
+base64:your_base64_string
+```
+
+#### 使用 PHP 函数
+
+1. 通过 `random_bytes` 函数得到 32位的十六进制字符串
+
+```php
+<?php
+echo bin2hex(random_bytes(32));
+?>
+```
+
+2. 转换为 base64 格式
+
+```bash
+echo -n "your_hex_string" | xxd -r -p | base64
+```
+
+3. 得到完整密钥
+
+拼接 `base64:` 和上一步得到的字符串
+
+### 使用 Artisan 命令行工具
+
+需要在项目根目录中执行
+
+这个命令会自动修改 .env 文件中的 APP_KEY 配置，并设置一个随机生成的密钥。
+
+```php
+php artisan key:generate
+```
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
