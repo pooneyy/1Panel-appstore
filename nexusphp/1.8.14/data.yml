@@ -5,16 +5,14 @@ additionalProperties:
         envKey: PANEL_DB_HOST
         required: true
         type: service
-      default: postgresql
+      default: mysql
       edit: true
       envKey: PANEL_DB_TYPE
-      labelZh: 数据库 服务 (前置检查)
+      labelZh: MySQL 服务 (前置检查)
       labelEn: Database Service (Pre-check)
       required: true
       type: apps
       values:
-        - label: PostgreSQL
-          value: postgresql
         - label: MySQL
           value: mysql
         - label: MariaDB
