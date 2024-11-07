@@ -33,7 +33,7 @@ additionalProperties:
       edit: true
       envKey: PANEL_APP_PORT_REMOTE
       labelZh: Windows 远程桌面 端口
-      labelEn: WebUI Remote Desktop Port
+      labelEn: Windows Remote Desktop Port
       required: true
       rule: paramPort
       type: number
