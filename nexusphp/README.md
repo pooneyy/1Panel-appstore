@@ -31,6 +31,14 @@
 + 管理后台
 + Json API
 
+## 安装说明
+
+默认语言为英语，如需中文，请在安装完成后，登录后在站点设置中设置。
+
+安装完成后，请尽快完成初始化操作，并重启Docker容器。
+
+重启后，请检查 `public/install` 目录是否已删除，如未删除，请手动删除。
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
