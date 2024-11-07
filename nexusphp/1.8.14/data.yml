@@ -104,7 +104,7 @@ additionalProperties:
       labelEn: Database Host
       required: true
       type: text
-    - default: 5432
+    - default: 3306
       edit: true
       envKey: DB_PORT
       labelZh: 数据库 端口
@@ -212,5 +212,5 @@ additionalProperties:
       envKey: MAIL_FROM_ADDRESS
       labelZh: 邮件 发件人地址
       labelEn: Mail From Address
-      required: true
+      required: false
       type: text
