@@ -15,7 +15,6 @@ services:
       - ${PANEL_APP_PORT_HTTP}:80
     env_file:
       - /etc/1panel/envs/global.env
-      - /etc/1panel/envs/nexusphp/nexusphp.env
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${NEXUSPHP_ROOT_PATH}/config/.env.example:/var/www/html/.env.example
@@ -23,17 +22,3 @@ services:
       - ${NEXUSPHP_TORRENTS_ROOT_PATH}/torrents:/var/www/html/torrents
       - ${NEXUSPHP_BITBUCKET_ROOT_PATH}/bitbucket:/var/www/html/bitbucket
       - ${NEXUSPHP_ATTACHMENTS_ROOT_PATH}/attachments:/var/www/html/attachments
-    environment:
-      - TIMEZONE=Asia/Shanghai
-      - APP_DEBUG=false
-      - APP_ENV=production
-      - LOG_LEVEL=info
-      - DB_CONNECTION=mysql
-      - BROADCAST_DRIVER=log
-      - CACHE_DRIVER=redis
-      - QUEUE_CONNECTION=redis
-      - SESSION_DRIVER=file
-      - SESSION_LIFETIME=120
-      - MAIL_FROM_NAME=${APP_NAME}
-      - SFTP_ROOT=/tmp
-      - GEOIP2_DATABASE=/var/www/html/geoip2/geoip2.mmdb
