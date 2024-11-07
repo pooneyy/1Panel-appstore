@@ -19,6 +19,14 @@ if [ -f .env ]; then
     echo "Error: Failed to download GeoIP2 database."
   fi
 
+  # setup-3 copy env file
+  CONFIG_DIR="$NEXUSPHP_ROOT_PATH/config"
+  mkdir -p "$CONFIG_DIR"
+
+  CONFIG_FILE="$CONFIG_DIR/.env.example"
+  cp /etc/1panel/envs/nexusphp/nexusphp.env $CONFIG_FILE
+  sed -i "s/APP_KEY=.*/APP_KEY=$APP_KEY/" $CONFIG_FILE
+
   echo "Check Finish."
 
 else
