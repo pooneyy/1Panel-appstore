@@ -71,9 +71,16 @@ additionalProperties:
       type: number
     - default: "http://localhost"
       edit: true
-      envKey: text
+      envKey: APP_URL
       labelZh: 公网地址
       labelEn: Public URL
+      required: true
+      type: text
+    - default: "NexusPHP"
+      edit: true
+      envKey: APP_NAME
+      labelZh: 应用名称
+      labelEn: Application Name
       required: true
       type: text
     - default: "base64:WUbN2wa2kl3E1VDW4iKaH3RBHw3hKY7BK0hWEkBZmGg="
