@@ -19,9 +19,38 @@ Microsoft Windows，或称Windows操作系统，是微软以图形用户界面�
 
 ## 安装说明
 
+<div style="border: 1px solid #FFC107; padding: 10px; border-radius: 5px; color: #856404; background-color: #FFF3CD; display: inline-block; width: 100%; max-width: 60%; margin-top: 10px;">
+    <div style="display: flex; align-items: center;">
+        <span style="font-size: 24px; margin-right: 8px;">⚠️</span>
+        <div>
+            <strong style="font-size: 16px;">警告</strong><br>
+            <span style="font-size: 14px; color: #333;">该应用申请使用 `网络特权模式`， 将允许应用在容器内部执行网络管理相关特权操作。</span>
+        </div>
+    </div>
+</div>
+
 由于需要下载系统镜像，安装过程的快慢取决于您的网络，请耐心等待。
 
 部分系统不包含部分语言，如果无法安装系统，请尝试跟换系统语言，重建即可。
+
+### 挂载自定义ISO
+
+如果您有自己的 Windows 系统镜像。
+你可以选择将其挂载至镜像并修改 docker-compose.yml 文件。
+
++ 自定义本地镜像地址
+
+```yml
+environment:
+  VERSION: "/win.iso"
+```
+
++ 自定义远程镜像地址
+
+```yml
+environment:
+  VERSION: "https://example.com/win.iso"
+```
 
 ## 常见问题
 

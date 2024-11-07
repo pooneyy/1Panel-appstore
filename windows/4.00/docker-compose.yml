@@ -15,6 +15,8 @@ services:
       - ${PANEL_APP_PORT_HTTP}:8006
       - ${PANEL_APP_PORT_REMOTE}:3389/tcp
       - ${PANEL_APP_PORT_REMOTE}:3389/udp
+    cap_add:
+      - NET_ADMIN
     devices:
       - /dev/kvm:/dev/kvm
       - /dev/dri:/dev/dri
@@ -35,3 +37,4 @@ services:
     environment:
       - REGION=en-US
       - KEYBOARD=en-US
+      - VERSION=${VERSION}

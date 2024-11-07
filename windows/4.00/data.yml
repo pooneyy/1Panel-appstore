@@ -114,6 +114,13 @@ additionalProperties:
       labelEn: RAM Size
       required: true
       type: text
+    - default: "64GB"
+      edit: true
+      envKey: DISK_SIZE
+      labelZh: 硬盘大小
+      labelEn: Disk Size
+      required: true
+      type: text
     - default: 4
       edit: true
       envKey: CPU_CORES
