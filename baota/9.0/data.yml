@@ -25,7 +25,7 @@ additionalProperties:
           value: "1panel-network"
     - default: 8888
       edit: true
-      envKey: PANEL_APP_PORT_WEB_HTTP
+      envKey: PANEL_APP_PORT_HTTP
       labelZh: WebUI 端口
       labelEn: WebUI port
       required: true
@@ -33,7 +33,7 @@ additionalProperties:
       type: number
     - default: 80
       edit: true
-      envKey: PANEL_APP_PORT_HTTP
+      envKey: PANEL_APP_PORT_WEB_HTTP
       labelZh: 网站服务 HTTP
       labelEn: Website service HTTP
       required: true
