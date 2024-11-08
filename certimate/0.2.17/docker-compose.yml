@@ -1,9 +1,10 @@
 networks:
   1panel-network:
     external: true
+
 services:
-  maxkb:
-    image: 1panel/maxkb:v1.7.0
+  certimate:
+    image: usual2970/certimate:v0.2.17
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
@@ -11,11 +12,9 @@ services:
     networks:
       - 1panel-network
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8080
+      - ${PANEL_APP_PORT_HTTP}:8090
     env_file:
       - /etc/1panel/envs/global.env
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ${MAXKB_ROOT_PATH}/data:/var/lib/postgresql/data
-      - ${MAXKB_ROOT_PATH}/python-packages:/opt/maxkb/app/sandbox/python-packages
-      - ${MAXKB_ROOT_PATH}/local_embedding:/opt/maxkb/model/local_embedding
+      - ${CERTIMATE_ROOT_PATH}/data:/app/pb_data
