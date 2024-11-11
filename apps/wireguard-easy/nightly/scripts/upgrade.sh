@@ -19,8 +19,8 @@ if [[ -f ./.env ]]; then
 
   # 检查并添加 WG_DEFAULT_ADDRESS 参数
   if ! grep -q 'WG_DEFAULT_ADDRESS' ./.env; then
-    echo 'WG_DEFAULT_ADDRESS="10.8.0.x"' >> ./.env
-    echo "已添加 WG_DEFAULT_ADDRESS=10.8.0.x"
+    echo 'WG_DEFAULT_ADDRESS="10.0.8.x"' >> ./.env
+    echo "已添加 WG_DEFAULT_ADDRESS=10.0.8.x"
   else
     echo "WG_DEFAULT_ADDRESS 参数已存在"
   fi
