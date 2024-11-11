@@ -37,7 +37,7 @@ additionalProperties:
       labelZh: 本机地址(必改项)
       required: true
       type: text
-    - default: "10.8.0.x"
+    - default: "10.0.8.x"
       edit: true
       envKey: WG_DEFAULT_ADDRESS
       labelEn: Default Wireguard Segment
