@@ -1,0 +1,14 @@
+additionalProperties:
+  crossVersionUpdate: true
+  document: https://blinko-doc.vercel.app/intro.html
+  github: https://github.com/blinko-space/blinko
+  key: blinko
+  limit: 0
+  name: Blinko
+  shortDescEn: Blinko is an open-source tool that helps users quickly capture and
+    organize fleeting ideas to ensure no creative spark is lost.
+  shortDescZh: Blinko 是一个创新的开源项目，快速捕捉和整理瞬间的灵感
+  tags:
+  - Tool
+  type: tool
+  website: https://blinko-demo.vercel.app/
