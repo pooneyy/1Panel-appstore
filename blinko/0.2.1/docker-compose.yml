@@ -3,7 +3,7 @@ networks:
       external: true
 services:
   blinko:
-    image: blinkospace/blinko:0.2.1
+    image: blinkospace/blinko:0.2.2
     container_name: ${CONTAINER_NAME}
     environment:
       NODE_ENV: production
