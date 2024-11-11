@@ -1,0 +1,61 @@
+additionalProperties:
+  formFields:
+    - default: "1111"
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: HTTP Port
+      labelZh: HTTP 端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: ""
+      envKey: NEXTAUTH_URL
+      labelEn: NextAuth URL
+      labelZh: NextAuth URL
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: ""
+      envKey: NEXT_PUBLIC_BASE_URL
+      labelEn: Next Public Base URL
+      labelZh: Next Public Base URL
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: my_ultra_secure_nextauth_secret
+      envKey: NEXTAUTH_SECRET
+      labelEn: NextAuth Secret
+      labelZh: NextAuth 密钥
+      required: true
+      rule: paramComplexity
+      type: password
+    - default: ""
+      envKey: PANEL_DB_HOST
+      key: postgresql
+      labelEn: PostgreSQL Database Service
+      labelZh: PostgreSQL 数据库服务
+      required: true
+      type: service
+    - default: blinko
+      envKey: PANEL_DB_NAME
+      labelEn: Database
+      labelZh: 数据库名
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: blinko
+      envKey: PANEL_DB_USER
+      labelEn: User
+      labelZh: 数据库用户
+      random: true
+      required: true
+      rule: paramCommon
+      type: text
+    - default: blinko
+      envKey: PANEL_DB_USER_PASSWORD
+      labelEn: Password
+      labelZh: 数据库用户密码
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
