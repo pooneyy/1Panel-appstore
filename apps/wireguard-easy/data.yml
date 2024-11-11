@@ -1,8 +1,7 @@
 name: WireGuard Easy
 tags:
-    - 工具
+    - 实用工具
 title: 运行 WireGuard VPN + 基于 Web 的管理 UI 的最简单方法
-type: 工具
 description: 运行 WireGuard VPN + 基于 Web 的管理 UI 的最简单方法
 additionalProperties:
     key: wireguard-easy
