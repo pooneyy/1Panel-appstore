@@ -1,14 +1,19 @@
+name: Blinko
+tags:
+    - 实用工具
+title: 一款开源、自托管的个人笔记工具
+description: 一款开源、自托管的个人笔记工具
 additionalProperties:
-  crossVersionUpdate: true
-  document: https://blinko-doc.vercel.app/intro.html
-  github: https://github.com/blinko-space/blinko
-  key: blinko
-  limit: 0
-  name: Blinko
-  shortDescEn: Blinko is an open-source tool that helps users quickly capture and
-    organize fleeting ideas to ensure no creative spark is lost.
-  shortDescZh: Blinko 是一个创新的开源项目，快速捕捉和整理瞬间的灵感
-  tags:
-  - Tool
-  type: tool
-  website: https://blinko-demo.vercel.app/
+    key: blinko
+    name: Blinko
+    tags:
+        - Tool
+    shortDescZh: 一款开源、自托管的个人笔记工具
+    shortDescEn: An open-source, self-hosted personal note tool
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://blinko-demo.vercel.app
+    github: https://github.com/blinko-space/blinko
+    document: https://blinko-doc.vercel.app/intro.html
