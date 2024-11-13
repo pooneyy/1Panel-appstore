@@ -1,0 +1,76 @@
+networks:
+  1panel-network:
+    external: true
+
+services:
+  mediacms-migrations:
+    image: qyg2297248353/mediacms:v4.1.0
+    container_name: migrations-${CONTAINER_NAME}
+    env_file:
+      - /etc/1panel/envs/global.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    volumes:
+      - ${MEDIACMS_ROOT_PATH}/data:/home/mediacms.io/mediacms/
+    command: "./deploy/docker/prestart.sh"
+    restart: on-failure
+    environment:
+      - ENABLE_UWSGI=no
+      - ENABLE_NGINX=no
+      - ENABLE_CELERY_SHORT=no
+      - ENABLE_CELERY_LONG=no
+      - ENABLE_CELERY_BEAT=no
+      - ADMIN_USER=${ADMIN_USER}
+      - ADMIN_EMAIL=${ADMIN_EMAIL}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+  mediacms:
+    image: qyg2297248353/mediacms:v4.1.0
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:80
+    depends_on:
+      - mediacms-migrations
+    env_file:
+      - /etc/1panel/envs/global.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    volumes:
+      - ${MEDIACMS_ROOT_PATH}/data:/home/mediacms.io/mediacms/
+    command: "./deploy/docker/prestart.sh"
+    restart: always
+    environment:
+      - ENABLE_CELERY_BEAT=no
+      - ENABLE_CELERY_SHORT=no
+      - ENABLE_CELERY_LONG=no
+      - ENABLE_MIGRATIONS=no
+  mediacms-celery-beat:
+    image: qyg2297248353/mediacms:v4.1.0
+    container_name: celery-beat-${CONTAINER_NAME}
+    env_file:
+      - /etc/1panel/envs/global.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    volumes:
+      - ${MEDIACMS_ROOT_PATH}/data:/home/mediacms.io/mediacms/
+    environment:
+      - ENABLE_UWSGI=no
+      - ENABLE_NGINX=no
+      - ENABLE_CELERY_SHORT=no
+      - ENABLE_CELERY_LONG=no
+      - ENABLE_MIGRATIONS=no
+  mediacms-celery-worker:
+    image: qyg2297248353/mediacms:v4.1.0
+    container_name: celery-worker-${CONTAINER_NAME}
+    env_file:
+      - /etc/1panel/envs/global.env
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    volumes:
+      - ${MEDIACMS_ROOT_PATH}/data:/home/mediacms.io/mediacms/
+    environment:
+      - ENABLE_UWSGI=no
+      - ENABLE_NGINX=no
+      - ENABLE_CELERY_BEAT=no
+      - ENABLE_MIGRATIONS=no
+    depends_on:
+      - mediacms-migrations
