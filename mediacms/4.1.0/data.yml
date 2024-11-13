@@ -78,13 +78,6 @@ additionalProperties:
       labelEn: Site Name
       required: true
       type: text
-    - default: "MediaCMS"
-      edit: true
-      envKey: PORTAL_NAME
-      labelZh: 站点名称
-      labelEn: Site Name
-      required: true
-      type: text
     - default: "redis://127.0.0.1:6379/1"
       edit: true
       envKey: REDIS_LOCATION
