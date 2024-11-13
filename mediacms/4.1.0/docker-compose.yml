@@ -11,7 +11,8 @@ services:
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${MEDIACMS_ROOT_PATH}/data:/home/mediacms.io/mediacms/
-    command: "./deploy/docker/prestart.sh"
+    command:
+      - ./deploy/docker/prestart.sh
     restart: on-failure
     environment:
       - ENABLE_UWSGI=no
@@ -25,20 +26,19 @@ services:
   mediacms:
     image: qyg2297248353/mediacms:v4.1.0
     container_name: ${CONTAINER_NAME}
+    depends_on:
+      - mediacms-migrations
     labels:
       createdBy: "Apps"
     networks:
       - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:80
-    depends_on:
-      - mediacms-migrations
     env_file:
       - /etc/1panel/envs/global.env
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${MEDIACMS_ROOT_PATH}/data:/home/mediacms.io/mediacms/
-    command: "./deploy/docker/prestart.sh"
     restart: always
     environment:
       - ENABLE_CELERY_BEAT=no
@@ -48,9 +48,6 @@ services:
   mediacms-celery-beat:
     image: qyg2297248353/mediacms:v4.1.0
     container_name: celery-beat-${CONTAINER_NAME}
-    env_file:
-      - /etc/1panel/envs/global.env
-      - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${MEDIACMS_ROOT_PATH}/data:/home/mediacms.io/mediacms/
     environment:
@@ -62,9 +59,8 @@ services:
   mediacms-celery-worker:
     image: qyg2297248353/mediacms:v4.1.0
     container_name: celery-worker-${CONTAINER_NAME}
-    env_file:
-      - /etc/1panel/envs/global.env
-      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    depends_on:
+      - mediacms-migrations
     volumes:
       - ${MEDIACMS_ROOT_PATH}/data:/home/mediacms.io/mediacms/
     environment:
@@ -72,5 +68,3 @@ services:
       - ENABLE_NGINX=no
       - ENABLE_CELERY_BEAT=no
       - ENABLE_MIGRATIONS=no
-    depends_on:
-      - mediacms-migrations
