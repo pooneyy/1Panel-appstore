@@ -1,6 +1,6 @@
 services:
   metatube-sdk-go:
-    image: "metatube/metatube-server:1.2.7"
+    image: "metatube/metatube-server:1.2.8"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
