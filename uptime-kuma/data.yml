@@ -8,7 +8,7 @@
   shortDescZh: 自托管的监控工具
   shortDescEn: Self-hosted monitoring tool
   type: website
-  crossVersionUpdate: true
+  crossVersionUpdate: false
   limit: 0
   website: https://uptime.kuma.pet/
   github: https://github.com/louislam/uptime-kuma/
