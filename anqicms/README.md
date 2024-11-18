@@ -10,16 +10,6 @@ AnQiCMS 是一款专为中小型企业打造的企业级内容管理系统，基
 
 欢迎您使用 AnqiCMS。
 
-## 快速开始
-
-[下载最新的 AnqiCMS](https://github.com/fesiong/goblog/releases)  
-[安装一个新的站点](https://www.anqicms.com/help-basic/210.html)  
-[查看模板使用教程](https://www.anqicms.com/manual)  
-[查看后台使用帮助](https://www.anqicms.com/help)  
-[查看接口文档](https://www.anqicms.com/anqiapi)
-
-> 温馨提示：大多数文档的编写语言为中文，如果您是英文用户，请使用浏览器自带翻译功能自行翻译。
-
 ## 网站特色功能
 
 - 自定义文档模型
@@ -58,52 +48,8 @@ AnQiCMS 是一款专为中小型企业打造的企业级内容管理系统，基
 - 防采集干扰功能
 - 图片水印功能
 
-## AnQiCMS 发展历程
-
-- 最新
-  > 我们一直在努力，不断的探索，持续迭代优化，争取给用户们有更好的使用体验。
-- 2024年 5月 1日，v3.3.5 发布
-  > 支持图片水印功能
-- 2023年10月24日，v3.2.5 发布
-  > 支持多语言翻译功能，支持 Markdown 编辑器
-- 2023年 4月15日，v3.1.1 发布
-  > 接入AI自动写作功能
-- 2022年12月 5日，v3.0.0 发布
-  > 开始支持多站点模式，简化和降低了 AnQiCMS 的部署难度，新增更多丰富的企业站常用功能
-- 2022年 5月30日，v2.1.0 发布
-  > 正式更名为 AnQiCMS，标志着 AnQiCMS 已具备常用的内容管理系统必备功能
-- 2021年 2月16日，v2.0.0-alpha 发布
-  > 开始逐步由单纯的博客功能，过度到更全面的内容管理系统，逐步开发并完善企业站功能
-- 2021年 1月21日，GoBlog v1.0.0 发布  
-  > 博客完善版，在基础版的基础上，增加了后台管理、seo功能等。
-- 2020年12月 1日，GoBlog v0.5 发布  
-  > 重构版本，采用iris框架重写，减少技术栈，改用iris自带的template模板引擎。实现了最基础的博客功能。
-- 2019年11月19日 GoBlog v0.1 发布   
-  > Gin版本，前后端分离，后端使用go、gin、gorm，前端使用Next.js。
-
-## 访问管理后台
-如果你从 GitHub 上克隆下载的代码，自行编译运行的话，需要先编译后台的管理代码，后台管理代码在 https://github.com/fesiong/anqicms-admin 。
-你也可以从 后台管理代码的release中，下载最新的release，将system.zip 解压到项目根目录下的system文件夹。
-
-后台地址默认为 http://127.0.0.1:8001/system
-
-如果你不是通过安装初始化的话，可能没有设置管理员账号，如果没有设置管理员账号，默认的管理员账号密码分别是：
-
-账号：admin
-
-密码：123456
-
 ## 示例网站 & 开发文档
 [示例网站 - https://www.anqicms.com/](https://www.anqicms.com/manual)
-
-
-## 👥问题反馈    
-遇到问题, 请在Github上开issue。  
-也可以加我的微信：websafety
-
-扫码加入golang开发学习群
-
-![扫码入群讨论](https://www.anqicms.com/uploads/202211/09/1a55bfcde55aa2d6.webp)
 
 ## License
 AnqiCMS 最终用户授权协议
