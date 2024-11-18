@@ -4,7 +4,7 @@ networks:
 
 services:
   jellyfin:
-    image: jellyfin/jellyfin:10.10.1
+    image: jellyfin/jellyfin:10.10.2
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
