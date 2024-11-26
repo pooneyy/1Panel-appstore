@@ -4,7 +4,7 @@ networks:
 
 services:
   prowlarr:
-    image: linuxserver/prowlarr:1.26.1
+    image: linuxserver/prowlarr:1.27.0
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
