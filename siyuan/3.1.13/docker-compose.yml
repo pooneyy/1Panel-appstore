@@ -16,7 +16,7 @@ services:
     ports:
       - ${PANEL_APP_PORT_HTTP}:6806
     env_file:
-      - /etc/1panel/envs/global.env
+      - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
     volumes:
       - ${SIYUAN_ROOT_PATH}/workspace:/siyuan/workspace
     environment:

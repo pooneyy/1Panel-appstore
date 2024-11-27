@@ -15,7 +15,7 @@ services:
       - ${PANEL_APP_PORT_TORRENTING}
       - ${PANEL_APP_PORT_TORRENTING}/udp
     env_file:
-      - /etc/1panel/envs/global.env
+      - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
     volumes:
       - ${QBITTORRENT_ROOT_PATH}/config:/config
       - ${QBITTORRENT_ROOT_PATH}/downloads:/downloads
