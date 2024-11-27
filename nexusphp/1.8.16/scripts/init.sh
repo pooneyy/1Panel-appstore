@@ -26,7 +26,7 @@ if [ -f .env ]; then
   mkdir -p "$CONFIG_DIR"
 
   CONFIG_FILE="$CONFIG_DIR/.env.example"
-  cp /etc/1panel/envs/nexusphp/nexusphp.env $CONFIG_FILE
+  cp ./envs/nexusphp.env $CONFIG_FILE
   sed -i "s/APP_KEY=.*/APP_KEY=$APP_KEY/" $CONFIG_FILE
 
   echo "Check Finish."

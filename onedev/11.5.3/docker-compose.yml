@@ -19,7 +19,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     env_file:
       - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
-      - /etc/1panel/envs/onedev/onedev.env
+      - ${APP_ENV_FILE:-/etc/1panel/envs/onedev/onedev.env}
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     environment:
       - initial_user=${INITIAL_USER}

@@ -30,7 +30,7 @@ services:
       # - /dev/video11:/dev/video11
     env_file:
       - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
-      - /etc/1panel/envs/photoprism/photoprism.env
+      - ${APP_ENV_FILE:-/etc/1panel/envs/photoprism/photoprism.env}
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${PHOTOPRISM_ROOT_PATH}/originals:/photoprism/originals
