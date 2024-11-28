@@ -33,7 +33,7 @@ additionalProperties:
       type: number
     - default: ""
       edit: true
-      envKey: HTTP_SSL_PROXY
+      envKey: HTTP_PROXY
       labelZh: HTTP(s) 网络代理
       labelEn: HTTP(s) Proxy
       required: false
