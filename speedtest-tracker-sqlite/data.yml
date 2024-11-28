@@ -1,6 +1,6 @@
 ﻿additionalProperties:
-  key: speedtest-tracker
-  name: SpeedTest Tracker
+  key: speedtest-tracker-sqlite
+  name: SpeedTest Tracker SQLite版
   tags:
     - WebSite
     - Middleware

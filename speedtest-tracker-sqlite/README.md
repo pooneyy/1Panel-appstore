@@ -1,4 +1,4 @@
-# Speedtest Tracker
+# Speedtest Tracker SQLite版
 
 Speedtest Tracker 的主要用例是建立互联网性能的历史记录，以便您在未收到 ISP 公布的费率时收到通知。
 
