@@ -149,21 +149,21 @@ additionalProperties:
       envKey: MAIL_MAILER
       labelZh: 邮件 协议
       labelEn: Mail mailer
-      required: false
+      required: true
       type: text
     - default: "smtp.gmail.com"
       edit: true
       envKey: MAIL_HOST
       labelZh: 邮件 主机地址
       labelEn: Mail host
-      required: false
+      required: true
       type: text
     - default: 465
       edit: true
       envKey: MAIL_PORT
       labelZh: 邮件 主机端口
       labelEn: Mail port
-      required: false
+      required: true
       type: number
     - default: ""
       edit: true
@@ -191,14 +191,14 @@ additionalProperties:
       envKey: MAIL_FROM_NAME
       labelZh: 邮件 发件名称
       labelEn: Mail from name
-      required: false
+      required: true
       type: text
     - default: "tls"
       edit: true
       envKey: MAIL_ENCRYPTION
       labelZh: 邮件 加密方式
       labelEn: Mail encryption
-      required: false
+      required: true
       type: text
     - default: ""
       edit: true
