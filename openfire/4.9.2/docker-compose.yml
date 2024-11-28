@@ -4,7 +4,7 @@ networks:
 
 services:
   openfire:
-    image: nasqueron/openfire:4.9.0
+    image: nasqueron/openfire:4.9.2
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
