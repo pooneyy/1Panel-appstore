@@ -33,6 +33,5 @@ services:
       # - /dev/video11:/dev/video11
     environment:
       - ROC_ENABLE_PRE_VEGA=1
-      - HTTP_PROXY=${HTTP_PROXY:-}
       - HTTPS_PROXY=${HTTP_PROXY:-}
       - NO_PROXY=localhost,127.0.0.1,::1
