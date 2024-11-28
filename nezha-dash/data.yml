@@ -3,10 +3,11 @@
   name: NezhaDash
   tags:
     - WebSite
+    - Middleware
     - Local
   shortDescZh: 基于 Next.js 和 哪吒监控 的仪表盘
   shortDescEn: Dashboard based on Next.js and Nezha Monitor
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   website: https://nezha-cf.buycoffee.top/
