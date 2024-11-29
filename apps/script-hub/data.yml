@@ -1,0 +1,19 @@
+name: Script-Hub
+tags:
+    - 工具
+title: 重写 & 规则集转换工具
+description: 适用于 QX、Loon、Surge、Stash、Egern、LanceX 和 Shadowrocket 的高级脚本转换器
+additionalProperties:
+    key: script-hub
+    name: script-hub
+    tags:
+        - Tool
+    shortDescZh: 适用于 QX、Loon、Surge、Stash、Egern、LanceX 和 Shadowrocket 的高级脚本转换器
+    shortDescEn: Advanced Script Converter for QX, Loon, Surge, Stash, Egern, LanceX and Shadowrocket
+    type: tool
+    crossVersionUpdate: true
+    limit: 0
+    recommend: 0
+    website: https://hub.docker.com/r/xxooyy/script-hub
+    github: https://github.com/Script-Hub-Org/Script-Hub
+    document: https://github.com/Script-Hub-Org/Script-Hub/wiki
