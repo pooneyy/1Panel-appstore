@@ -15,11 +15,3 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: 7700
-      edit: true
-      envKey: PANEL_APP_PORT_MEILI
-      labelZh: MeiliSearch 端口
-      labelEn: MeiliSearch port
-      required: true
-      rule: paramPort
-      type: number
