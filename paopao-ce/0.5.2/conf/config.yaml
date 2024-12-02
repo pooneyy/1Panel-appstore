@@ -198,7 +198,7 @@ WebProfile:
   DefaultTweetVisibility: friend   # 推文可见性，默认好友可见 值: public/following/friend/private
   DefaultMsgLoopInterval: 5000     # 拉取未读消息的间隔，单位：毫秒, 默认5000ms
   CopyrightTop: "2024 泡泡(PaoPao)"
-  CopyrightLeft: "关注我"
+  CopyrightLeft: "人生足迹 · 博客"
   CopyrightLeftLink: "https://blog.lifebus.top"
-  CopyrightRight: "泡泡(PaoPao) x 新疆萌森软件开发工作室"
+  CopyrightRight: "新疆萌森软件开发工作室"
   CopyrightRightLink: "https://blog.lifebus.top"
