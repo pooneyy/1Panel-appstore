@@ -33,6 +33,13 @@ additionalProperties:
       values:
         - label: Redis
           value: redis
+    - default: "/home/topiam"
+      edit: true
+      envKey: TOPIAM_CE_ROOT_PATH
+      labelZh: 数据持久化路径
+      labelEn: Data persistence path
+      required: true
+      type: text
     - default: 1898
       envKey: PANEL_APP_PORT_HTTP
       labelZh: WebUI 端口
