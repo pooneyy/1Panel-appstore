@@ -4,7 +4,7 @@ services:
     restart: always
     networks:
       - 1panel-network
-    image: altran1502/immich-server:v1.120.2
+    image: altran1502/immich-server:v1.121.0
     volumes:
       - ${UPLOAD_LOCATION}:/usr/src/app/upload
       - /etc/localtime:/etc/localtime:ro
@@ -29,7 +29,7 @@ services:
     restart: always
     networks:
       - 1panel-network
-    image: altran1502/immich-machine-learning:v1.120.2
+    image: altran1502/immich-machine-learning:v1.121.0
     volumes:
       - ${CACHE_PATH}:/cache
     environment:
@@ -69,26 +69,23 @@ services:
     volumes:
       - ${DB_PATH}:/var/lib/postgresql/data
     healthcheck:
-      test: pg_isready --dbname='${PANEL_DB_NAME}' || exit 1; Chksum="$$(psql --dbname='${PANEL_DB_NAME}' --username='${PANEL_DB_USER}' --tuples-only --no-align --command='SELECT COALESCE(SUM(checksum_failures), 0) FROM pg_stat_database')"; echo "checksum failure count is $$Chksum"; [ "$$Chksum" = '0' ] || exit 1
+      test: >-
+        pg_isready --dbname="$${PANEL_DB_NAME}" --username="$${PANEL_DB_USER}" || exit 1;
+        Chksum="$$(psql --dbname="$${PANEL_DB_NAME}" --username="$${PANEL_DB_USER}" --tuples-only --no-align
+        --command='SELECT COALESCE(SUM(checksum_failures), 0) FROM pg_stat_database')";
+        echo "checksum failure count is $$Chksum";
+        [ "$$Chksum" = '0' ] || exit 1
       interval: 5m
       start_interval: 30s
       start_period: 5m
-    command:
-      [
-        'postgres',
-        '-c',
-        'shared_preload_libraries=vectors.so',
-        '-c',
-        'search_path="$$user", public, vectors',
-        '-c',
-        'logging_collector=on',
-        '-c',
-        'max_wal_size=2GB',
-        '-c',
-        'shared_buffers=512MB',
-        '-c',
-        'wal_compression=on',
-      ]
+    command: >-
+      postgres
+      -c shared_preload_libraries=vectors.so
+      -c 'search_path="$$user", public, vectors'
+      -c logging_collector=on
+      -c max_wal_size=2GB
+      -c shared_buffers=512MB
+      -c wal_compression=on
     labels:  
       createdBy: "Apps"
 
