@@ -47,23 +47,6 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: "admin"
-      edit: true
-      key: admin
-      envKey: ADMIN_USERNAME
-      labelZh: 管理员 用户名
-      labelEn: Admin Username
-      required: true
-      rule: paramCommon
-      type: text
-    - default: "topiam.cn"
-      edit: true
-      key: ADMIN_PASSWORD
-      envKey: topiam.cn
-      labelZh: 管理员 密码
-      labelEn: Admin Password
-      required: true
-      type: password
     - default: "127.0.0.1"
       edit: true
       envKey: DB_HOST
