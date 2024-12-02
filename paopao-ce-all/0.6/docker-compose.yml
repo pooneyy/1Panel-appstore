@@ -3,7 +3,7 @@ networks:
     external: true
 services:
   paopao-ce:
-    image: bitbus/paopao-ce:all-in-one-v0.6.0-alpha.2
+    image: bitbus/paopao-ce:all-in-one-0.6-alpha
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"

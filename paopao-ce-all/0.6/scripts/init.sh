@@ -15,6 +15,8 @@ if [ -f .env ]; then
   mkdir -p "$PAOPAO_CE_ROOT_PATH/config"
   cp ./conf/config.yaml "$PAOPAO_CE_ROOT_PATH/config/config.yaml"
 
+  chown -R 1000:1000 "$PAOPAO_CE_ROOT_PATH"
+
   echo "Check Finish."
 
 else
