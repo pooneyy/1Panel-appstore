@@ -58,6 +58,12 @@ Fider 可以与支持 Webhook 的任何系统集成，例如 Slack 和 Discord�
 
 Fider 是 100% 开源。
 
+## 安装说明
+
+### `应用密钥` 配置
+
+可以从 [JWT Secret Generator](https://jwtsecret.com/generate) 生成
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
