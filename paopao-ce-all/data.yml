@@ -1,0 +1,14 @@
+﻿additionalProperties:
+  key: paopao-ce-all
+  name: 泡泡广场 All-in-One
+  tags:
+    - WebSite
+    - Local
+  shortDescZh: 清新文艺微社区
+  shortDescEn: An artistic "twitter like" community
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  website: https://www.paopao.info/
+  github: https://github.com/rocboss/paopao-ce/
+  document: https://github.com/rocboss/paopao-ce/
