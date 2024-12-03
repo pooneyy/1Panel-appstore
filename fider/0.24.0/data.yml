@@ -77,45 +77,44 @@ additionalProperties:
       type: password
     - default: ""
       edit: true
-      envKey: EMAIL_SMTP_HOST
-      labelZh: 邮件服务 地址
-      labelEn: Mailer Server Address
+      envKey: EMAIL_NOREPLY
+      labelZh: 发件人地址
+      labelEn: Mailer Sender Address
       required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: EMAIL_SMTP_HOST
+      labelZh: 主机地址 (SMTP)
+      labelEn: Mailer Host (SMTP)
+      required: false
       type: text
     - default: 465
       edit: true
       envKey: EMAIL_SMTP_PORT
-      labelZh: 邮件服务 端口
-      labelEn: Mailer Server Port
+      labelZh: 端口 (SMTP)
+      labelEn: Mailer Port (SMTP)
       required: true
       type: number
     - default: ""
       edit: true
       envKey: EMAIL_SMTP_USERNAME
-      labelZh: 邮件服务 用户名
-      labelEn: Mailer Username
-      required: true
+      labelZh: 用户名 (SMTP)
+      labelEn: Mailer Username (SMTP)
+      required: false
       type: text
     - default: ""
       edit: true
       envKey: EMAIL_SMTP_PASSWORD
-      labelZh: 邮件服务 密码
-      labelEn: Mailer Password
-      required: true
+      labelZh: 密码 (SMTP)
+      labelEn: Mailer Password (SMTP)
+      required: false
       type: text
-    - default: ""
-      edit: true
-      envKey: EMAIL_NOREPLY
-      labelZh: 邮件服务 发件人
-      labelEn: Mailer From
-      required: true
-      type: text
-
     - default: "true"
       edit: true
       envKey: EMAIL_SMTP_ENABLE_STARTTLS
-      labelZh: 邮件服务 启用 STARTTLS
-      labelEn: Mailer Enable STARTTLS
+      labelZh: 启用 STARTTLS (SMTP)
+      labelEn: Enable STARTTLS (SMTP)
       required: true
       type: select
       values:
@@ -123,3 +122,45 @@ additionalProperties:
           value: "true"
         - label: "否"
           value: "false"
+    - default: ""
+      edit: true
+      envKey: EMAIL_MAILGUN_API
+      labelZh: API 地址 (Mailgun)
+      labelEn: API URL (Mailgun)
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: EMAIL_MAILGUN_DOMAIN
+      labelZh: 域名 (Mailgun)
+      labelEn: Domain (Mailgun)
+      required: false
+      type: text
+    - default: "US"
+      edit: true
+      envKey: EMAIL_MAILGUN_REGION
+      labelZh: 区域 (Mailgun)
+      labelEn: Region (Mailgun)
+      required: false
+      type: text
+    - default: "us-east-1"
+      edit: true
+      envKey: EMAIL_AWSSES_REGION
+      labelZh: 区域 (AWS SES)
+      labelEn: Region (AWS SES)
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: EMAIL_AWSSES_ACCESS_KEY_ID
+      labelZh: 授权 ID (AWS SES)
+      labelEn: Access Key ID (AWS SES)
+      required: false
+      type: text
+    - default: ""
+      edit: true
+      envKey: EMAIL_AWSSES_SECRET_ACCESS_KEY
+      labelZh: 授权密钥 (AWS SES)
+      labelEn: Access Key Secret (AWS SES)
+      required: false
+      type: text

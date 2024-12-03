@@ -64,6 +64,10 @@ Fider 是 100% 开源。
 
 可以从 [JWT Secret Generator](https://jwtsecret.com/generate) 生成
 
+### `邮件` 配置
+
+您必须在 `SMTP` `Mailgun` 或 `AWS SES` 中任选其一作为邮件服务，否则无法发送邮件，也无法注册用户。
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
