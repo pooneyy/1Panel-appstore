@@ -4,7 +4,7 @@ networks:
 
 services:
   auto-lady:
-    image: orekiiiiiiiiiiiii/auto-lady:1.4.2
+    image: orekiiiiiiiiiiiii/auto-lady:1.4.3
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
