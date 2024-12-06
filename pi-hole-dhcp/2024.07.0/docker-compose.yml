@@ -10,6 +10,8 @@ services:
       createdBy: "Apps"
     restart: always
     network_mode: host
+    cap_add:
+      - NET_ADMIN
     expose:
       - 67/udp
       - 53
