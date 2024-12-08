@@ -8,7 +8,7 @@ additionalProperties:
     key: modstartblog
     name: ModStartBlog
     tags:
-        - WebSite
+        - Website
     shortDescZh: 开源博客系统
     shortDescEn: Open Source Blog System
     type: website

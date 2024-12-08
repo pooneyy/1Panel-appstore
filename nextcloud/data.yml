@@ -8,7 +8,7 @@ additionalProperties:
     key: nextcloud
     name: Nextcloud
     tags:
-        - WebSite
+        - Website
     shortDescZh: Nextcloud 服务器，所有数据的安全家园
     shortDescEn: Nextcloud server, a safe home for all your data
     type: website

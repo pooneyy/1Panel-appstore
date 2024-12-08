@@ -8,7 +8,7 @@ additionalProperties:
     key: modstartcms
     name: ModStartCMS
     tags:
-        - WebSite
+        - Website
     shortDescZh: 开源企业建站系统
     shortDescEn: Open Source Corp Website Building System
     type: website
