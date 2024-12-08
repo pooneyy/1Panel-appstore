@@ -8,7 +8,7 @@ additionalProperties:
     key: hexo
     name: Hexo
     tags:
-        - WebSite
+        - Website
     shortDescZh: 快速、简洁且高效的博客框架
     shortDescEn: A fast, simple & powerful blog framework
     type: website

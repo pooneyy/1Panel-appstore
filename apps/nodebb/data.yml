@@ -8,7 +8,7 @@ additionalProperties:
   key: nodebb
   name: NodeBB
   tags:
-    - WebSite
+    - Website
   shortDescZh: 基于 Node.js 的现代化论坛程序
   shortDescEn: Open source Forum Powered by Node.js
   type: website

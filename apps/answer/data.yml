@@ -8,7 +8,7 @@ additionalProperties:
     key: answer
     name: Answer
     tags:
-        - WebSite
+        - Website
     shortDescZh: 一款适合任何团队的问答平台软件
     shortDescEn: A Q&A platform software for teams at any scales
     type: website

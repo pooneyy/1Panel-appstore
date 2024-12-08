@@ -8,7 +8,7 @@ additionalProperties:
     key: onenav
     name: OneNav
     tags:
-        - WebSite
+        - Website
     shortDescZh: 一款开源免费的书签（导航）管理程序
     shortDescEn: An open source free bookmark (navigation) management program
     type: website

@@ -8,7 +8,7 @@ additionalProperties:
     key: sun-panel
     name: Sun-Panel
     tags:
-        - WebSite
+        - Website
     shortDescZh: 一个服务器、NAS导航面板、Homepage、浏览器首页
     shortDescEn: Server, NAS navigation panel, Homepage, Browser homepage
     type: website

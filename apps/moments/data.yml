@@ -8,7 +8,7 @@ additionalProperties:
     key: moments
     name: Moments
     tags:
-        - WebSite
+        - Website
     shortDescZh: 一个 C# 开发的博客朋友圈平台
     shortDescEn: A C#-developed blogosphere platform
     type: website
