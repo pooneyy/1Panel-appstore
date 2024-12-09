@@ -4,7 +4,7 @@ networks:
 
 services:
   feedback:
-    image: q2316367743/feedback:1.0.2
+    image: q2316367743/feedback:1.0.3
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
