@@ -1,6 +1,6 @@
 services:
   thunderbird:
-    image: "jlesage/thunderbird:v24.10.1"
+    image: "jlesage/thunderbird:v24.12.1"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
