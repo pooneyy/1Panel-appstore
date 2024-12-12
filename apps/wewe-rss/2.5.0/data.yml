@@ -60,4 +60,3 @@ additionalProperties:
       labelZh: 每分钟最大请求次数
       required: false
       type: number
-
