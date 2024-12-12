@@ -1,6 +1,6 @@
 services:
   blinko:
-    image: "blinkospace/blinko:0.8.15"
+    image: "blinkospace/blinko:0.24.3"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
