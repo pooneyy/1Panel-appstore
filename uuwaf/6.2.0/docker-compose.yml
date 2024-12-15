@@ -7,6 +7,7 @@ services:
         soft: 102400
         hard: 102400
     container_name:  ${CONTAINER_NAME}
+    restart: always
     networks:
       - 1panel-network
     ports:
@@ -15,6 +16,7 @@ services:
       - ${PANEL_APP_PORT_CONSOLE}:4443
     volumes:
       - wafshared:/uuwaf
+      - /etc/localtime:/etc/localtime:ro
     command: ["/run.sh"]
     environment:
       - TZ=${TIME_ZONE}
@@ -27,11 +29,13 @@ services:
   wafdb:
     image: "percona/percona-server:5.7.44"
     container_name:  ${CONTAINER_NAME}-db
+    restart: always
     networks:
       - 1panel-network
     volumes:
       - wafshared:/docker-entrypoint-initdb.d
       - wafdata:/var/lib/mysql
+      - /etc/localtime:/etc/localtime:ro
       - ./low-memory-my.cnf:/etc/mysql/my.cnf
     environment:
       - TZ=${TIME_ZONE}
@@ -39,11 +43,11 @@ services:
       - MYSQL_MAX_CONNECTIONS=${MYSQL_MAX_CONNECTIONS}
       - MYSQL_ROOT_PASSWORD=${PANEL_DB_USER_PASSWORD}
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"]
-      start_period: 0s
-      interval: 5s
-      timeout: 3s
-      retries: 3
+     test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"]
+     start_period: 3s
+     interval: 5s
+     timeout: 3s
+     retries: 7
 volumes:
   wafshared:
     name: wafshared
