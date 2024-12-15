@@ -1,19 +1,19 @@
 name: PerfreeBlog
 tags:
     - 建站
-title: 开源的博客/CMS建站工具
-description: 一款Java开发的博客/CMS系统, 支持主题及扩展插件功能
+title: 开源的博客/CMS 建站工具
+description: 开源的博客/CMS 建站工具
 additionalProperties:
-    key: PerfreeBlog
+    key: perfree-blog
     name: PerfreeBlog
     tags:
         - Website
-    shortDescZh: 开源的博客/CMS建站工具
+    shortDescZh: 开源的博客/CMS 建站工具
     shortDescEn: open source blog/CMS website builder
     type: website
     crossVersionUpdate: true
     limit: 0
-    recommend: 10
+    recommend: 0
     website: https://perfree.org.cn/
     github: https://github.com/PerfreeBlog/PerfreeBlog
     document: https://perfree.org.cn/useDocs/
