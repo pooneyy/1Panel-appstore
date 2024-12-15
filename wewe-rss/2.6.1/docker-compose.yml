@@ -1,6 +1,6 @@
 services:
   wewe-rss:
-    image: "cooderl/wewe-rss-sqlite:v2.5.0"
+    image: "cooderl/wewe-rss-sqlite:v2.6.1"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
