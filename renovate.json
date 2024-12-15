@@ -37,6 +37,10 @@
     {
       "matchFileNames": ["apps/php-unofficial/8.1.*/*.yml"],
       "allowedVersions": "/^8.1.*/"
+    },
+    {
+      "matchFileNames": ["apps/reader/2.7.*/*.yml"],
+      "allowedVersions": "/^2.7.*/"
     }
   ],
   "prCreation": "immediate"
