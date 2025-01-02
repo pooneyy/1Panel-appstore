@@ -4,7 +4,7 @@ networks:
 
 services:
   iyuuplus:
-    image: iyuucn/iyuuplus-nodb:latest
+    image: iyuucn/iyuuplus:latest
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
