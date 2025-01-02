@@ -3,8 +3,8 @@ networks:
     external: true
 
 services:
-  casdoor:
-    image: casbin/casdoor:v1.783.0
+  jellyseerr:
+    image: fallenbagel/jellyseerr:2.2.3
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
@@ -12,16 +12,14 @@ services:
     networks:
       - 1panel-network
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8000
+      - ${PANEL_APP_PORT_HTTP}:5055
     env_file:
       - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
-      - ${APP_ENV_FILE:-/etc/1panel/envs/casdoor/casdoor.env}
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ${CASDOOR_ROOT_PATH}/files:/files
+      - ${JELLYSEERR_ROOT_PATH}/config:/app/config
     environment:
-      - driverName=${DB_TYPE}
-      - dbName=${DB_NAME}
-      - verificationCodeTimeout=10
-      - appname=casdoor
-      - authState=casdoor
+      - PORT=5055
+      - LOG_LEVEL=debug
+      - TZ=Asia/Shanghai
+      - https_proxy=${http_proxy:-}
