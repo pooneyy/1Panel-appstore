@@ -71,8 +71,6 @@ services:
     volumes:
       - ${IMMICH_ROOT_PATH}/data/library:/usr/src/app/upload
       - /etc/localtime:/etc/localtime
-    healthcheck:
-      disable: false
 
   immich-machine-learning:
     image: ghcr.io/immich-app/immich-machine-learning:v1.123.0
@@ -90,5 +88,3 @@ services:
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${IMMICH_ROOT_PATH}/data/cache:/cache
-    healthcheck:
-      disable: false

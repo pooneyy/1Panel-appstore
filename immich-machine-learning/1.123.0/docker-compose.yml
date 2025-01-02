@@ -29,5 +29,3 @@ services:
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${IMMICH_ROOT_PATH}/data/cache:/cache
-    healthcheck:
-      disable: false

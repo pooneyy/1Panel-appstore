@@ -30,5 +30,3 @@ services:
     volumes:
       - ${IMMICH_ROOT_PATH}/data/library:/usr/src/app/upload
       - /etc/localtime:/etc/localtime
-    healthcheck:
-      disable: false
