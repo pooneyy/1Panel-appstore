@@ -16,10 +16,14 @@ if [ -f .env ]; then
   mkdir -p "$NODEBB_ROOT_PATH/uploads"
   mkdir -p "$NODEBB_ROOT_PATH/config"
 
-  chmod -R 1001 "$NODEBB_ROOT_PATH"
-  chmod -R 1001 "$NODEBB_ROOT_PATH/build"
-  chmod -R 1001 "$NODEBB_ROOT_PATH/uploads"
-  chmod -R 1001 "$NODEBB_ROOT_PATH/config"
+  chmod -R 1001:1001 "$NODEBB_ROOT_PATH"
+  chmod -R 644 "$NODEBB_ROOT_PATH"
+  chmod -R 1001:1001 "$NODEBB_ROOT_PATH/build"
+  chmod -R 644 "$NODEBB_ROOT_PATH/build"
+  chmod -R 1001:1001 "$NODEBB_ROOT_PATH/uploads"
+  chmod -R 644 "$NODEBB_ROOT_PATH/uploads"
+  chmod -R 1001:1001 "$NODEBB_ROOT_PATH/config"
+  chmod -R 644 "$NODEBB_ROOT_PATH/config"
 
   echo "Check Finish."
 
