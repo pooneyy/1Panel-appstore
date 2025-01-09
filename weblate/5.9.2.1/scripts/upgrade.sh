@@ -10,6 +10,15 @@ if [ -f .env ]; then
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
   echo "GLOBAL_ENV_FILE=${CURRENT_DIR}/envs/global.env" >> .env
 
+  # setup-2 update dir permissions
+  mkdir -p "$WEBLATE_ROOT_PATH"
+  mkdir -p "$WEBLATE_ROOT_PATH/data"
+  mkdir -p "$WEBLATE_ROOT_PATH/cache"
+
+  chmod -R 1000 "$WEBLATE_ROOT_PATH"
+  chmod -R 1000 "$WEBLATE_ROOT_PATH/data"
+  chmod -R 1000 "$WEBLATE_ROOT_PATH/cache"
+
   echo "Check Finish."
 
 else
