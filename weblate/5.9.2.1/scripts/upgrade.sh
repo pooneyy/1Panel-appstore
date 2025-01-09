@@ -15,9 +15,9 @@ if [ -f .env ]; then
   mkdir -p "$WEBLATE_ROOT_PATH/data"
   mkdir -p "$WEBLATE_ROOT_PATH/cache"
 
-  chmod -R 1000:1000 "$WEBLATE_ROOT_PATH"
-  chmod -R 1000:1000 "$WEBLATE_ROOT_PATH/data"
-  chmod -R 1000:1000 "$WEBLATE_ROOT_PATH/cache"
+  chown -R 1000:1000 "$WEBLATE_ROOT_PATH"
+  chown -R 1000:1000 "$WEBLATE_ROOT_PATH/data"
+  chown -R 1000:1000 "$WEBLATE_ROOT_PATH/cache"
 
   echo "Check Finish."
 
