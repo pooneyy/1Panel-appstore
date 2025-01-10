@@ -17,9 +17,11 @@ services:
       - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
+      - ${NODEBB_ROOT_PATH}/node_modules:/usr/src/app/node_modules
       - ${NODEBB_ROOT_PATH}/build:/usr/src/app/build
       - ${NODEBB_ROOT_PATH}/uploads:/usr/src/app/public/uploads
       - ${NODEBB_ROOT_PATH}/config:/opt/config
+      - ${NODEBB_ROOT_PATH}/setup.json:/usr/src/app/setup.json
     environment:
       - TZ=Asia/Shanghai
       - NODEBB_PORT=4567
