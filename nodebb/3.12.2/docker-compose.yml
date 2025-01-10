@@ -21,7 +21,6 @@ services:
       - ${NODEBB_ROOT_PATH}/build:/usr/src/app/build
       - ${NODEBB_ROOT_PATH}/uploads:/usr/src/app/public/uploads
       - ${NODEBB_ROOT_PATH}/config:/opt/config
-      - ${NODEBB_ROOT_PATH}/setup.json:/usr/src/app/setup.json
     environment:
       - TZ=Asia/Shanghai
       - bind_address=0.0.0.0
