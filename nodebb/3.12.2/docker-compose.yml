@@ -25,4 +25,3 @@ services:
     environment:
       - TZ=Asia/Shanghai
       - NODEBB_PORT=4567
-      - NODEBB_URL=http://127.0.0.1:4567

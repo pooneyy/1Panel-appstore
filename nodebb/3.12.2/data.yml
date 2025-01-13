@@ -15,6 +15,13 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: "http://127.0.0.1:4567"
+      edit: true
+      envKey: NODEBB_URL
+      labelZh: 服务地址
+      labelEn: Service address
+      required: true
+      type: text
     - default: ""
       edit: true
       envKey: NODEBB_ADMIN_USERNAME
