@@ -24,12 +24,3 @@ services:
       - ${NODEBB_ROOT_PATH}/setup.json:/usr/src/app/setup.json
     environment:
       - TZ=Asia/Shanghai
-      - url=${NODEBB_URL}
-      - port=4567
-      - database=${NODEBB_DB}
-      - ${NODEBB_DB}_host=${NODEBB_DB_HOST}
-      - ${NODEBB_DB}_port=${NODEBB_DB_PORT}
-      - ${NODEBB_DB}_username=${NODEBB_DB_USERNAME}
-      - ${NODEBB_DB}_password=${NODEBB_DB_PASSWORD}
-      - ${NODEBB_DB}_database=${NODEBB_DB_DATABASE}
-      - ${NODEBB_DB}_ssl=${NODEBB_DB_SSL:-false}

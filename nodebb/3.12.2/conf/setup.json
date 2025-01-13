@@ -1,23 +1,11 @@
 {
   "defaults": {
-    "mongo": {
-      "host": "mongo",
-      "port": 27017,
-      "database": "nodebb",
-      "username": "nodebb",
-      "password": "nodebb"
-    },
-    "redis": {
-      "host": "redis",
-      "port": 6379,
-      "database": 0
-    },
-    "postgres": {
-      "host": "postgres",
-      "port": 5432,
-      "database": "nodebb",
-      "username": "nodebb",
-      "password": "nodebb"
+    "$NODEBB_DB": {
+      "host": "$NODEBB_DB_HOST",
+      "port": $NODEBB_DB_PORT,
+      "database": "$NODEBB_DB_NAME",
+      "username": "$NODEBB_DB_USER",
+      "password": "$NODEBB_DB_PASSWORD"
     }
   }
 }
