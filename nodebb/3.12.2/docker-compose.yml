@@ -24,4 +24,3 @@ services:
       - ${NODEBB_ROOT_PATH}/setup.json:/usr/src/app/setup.json
     environment:
       - TZ=Asia/Shanghai
-      - NODEBB_PORT=4567
