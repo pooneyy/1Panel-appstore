@@ -48,21 +48,13 @@ additionalProperties:
       labelEn: Application URL
       required: true
       type: text
-    - default: "127.0.0.1"
+    - default: "127.0.0.1:3306"
       edit: true
       envKey: DB_HOST
-      labelZh: 数据库 主机
-      labelEn: Database Host
+      labelZh: 数据库地址
+      labelEn: Database Address
       required: true
       type: text
-    - default: 3306
-      edit: true
-      envKey: DB_PORT
-      labelZh: 数据库 端口
-      labelEn: Database Port
-      required: true
-      rule: paramPort
-      type: number
     - default: "bookstack"
       edit: true
       envKey: DB_DATABASE
