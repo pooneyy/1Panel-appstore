@@ -98,15 +98,6 @@ docker exec -it <bookstack> php /app/www/artisan bookstack:update-url ${OLD_URL}
 docker run -it --rm --entrypoint /bin/bash lscr.io/linuxserver/bookstack:latest appkey
 ```
 
-### 数据库地址
-
-> 数据库地址，例如：`127.0.0.1:3306`
->
-> 如果不携带端口号，默认端口号为 `3306`
-
-
-格式：`IP:PORT`
-
 ## 高级配置
 
 如果您想使用 BookStack 的额外功能，如电子邮件、LDAP 等，您需要设置额外的环境变量或根据 BookStack 文档的指导创建自己的.env
