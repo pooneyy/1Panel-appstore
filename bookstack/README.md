@@ -88,20 +88,14 @@ docker exec -it <bookstack> php /app/www/artisan bookstack:update-url ${OLD_URL}
 
 ### 应用密钥
 
-> 必须是 32 个字符的随机字符串，用于加密会话数据。
+> 必须是 32 个字符的随机字符串，并使用 Base64编码，用于加密会话数据。
 >
 > 如果提供错误的密钥，将导致无法正常使用应用程序。
+>
+> 示例值：`base64:W/NpvTrf6PjZDS7Np+sjOYGQwUg3OoxrbXPVtwWYryw=`
 
-方法一
-
-```bash
-php artisan key:generate
-```
-
-方法二
-
-```bash
-openssl rand -base64 32
+```sh
+docker run -it --rm --entrypoint /bin/bash lscr.io/linuxserver/bookstack:latest appkey
 ```
 
 ### 数据库地址
