@@ -48,13 +48,21 @@ additionalProperties:
       labelEn: Application URL
       required: true
       type: text
-    - default: "127.0.0.1:3306"
+    - default: "127.0.0.1"
       edit: true
       envKey: DB_HOST
-      labelZh: 数据库地址
-      labelEn: Database Address
+      labelZh: 数据库 主机
+      labelEn: Database Host
       required: true
       type: text
+    - default: 3306
+      edit: true
+      envKey: DB_PORT
+      labelZh: 数据库 端口
+      labelEn: Database Port
+      required: true
+      rule: paramPort
+      type: number
     - default: "bookstack"
       edit: true
       envKey: DB_DATABASE
@@ -76,60 +84,3 @@ additionalProperties:
       labelEn: Database Password
       required: true
       type: password
-    - default: "smtp"
-      edit: true
-      envKey: MAIL_DRIVER
-      labelZh: 邮件协议
-      labelEn: Mail Protocol
-      required: false
-      type: text
-    - default: "BookStack"
-      edit: true
-      envKey: MAIL_FROM_NAME
-      labelZh: 邮件发送者
-      labelEn: Mail Sender
-      required: false
-      type: text
-    - default: "bookstack@example.com"
-      edit: true
-      envKey: MAIL_FROM
-      labelZh: 邮件发送地址
-      labelEn: Mail Sender Address
-      required: false
-      type: text
-    - default: "smtp.gmail.com"
-      edit: true
-      envKey: MAIL_HOST
-      labelZh: 邮件服务器 主机
-      labelEn: Mail Server Host
-      required: false
-      type: text
-    - default: 587
-      edit: true
-      envKey: MAIL_PORT
-      labelZh: 邮件服务器 端口
-      labelEn: Mail Server Port
-      required: true
-      rule: paramPort
-      type: number
-    - default: ""
-      edit: true
-      envKey: MAIL_USERNAME
-      labelZh: 邮件服务器 用户名
-      labelEn: Mail Server Username
-      required: false
-      type: text
-    - default: ""
-      edit: true
-      envKey: MAIL_PASSWORD
-      labelZh: 邮件服务器 密码
-      labelEn: Mail Server Password
-      required: false
-      type: password
-    - default: "tls"
-      edit: true
-      envKey: MAIL_ENCRYPTION
-      labelZh: 邮件服务器 加密协议
-      labelEn: Mail Server Encryption Protocol
-      required: false
-      type: text

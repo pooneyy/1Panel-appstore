@@ -68,6 +68,24 @@ BookStack 提供浅色主题和深色主题的用户界面，节省眼睛 那些
 
 ## 安装说明
 
+> 默认管理员账号：`admin@admin.com`
+>
+> 默认管理员密码：`password`
+>
+> 默认已开启队列模式
+
+### 服务地址
+
+如果部署后需要修改：
+
+```bash
+docker exec -it <bookstack> php /app/www/artisan bookstack:update-url ${OLD_URL} ${NEW_URL}
+```
+
++ `${OLD_URL}`：原服务地址
++ `${NEW_URL}`：新服务地址
++ `<bookstack>`：容器名称
+
 ### 应用密钥
 
 > 必须是 32 个字符的随机字符串，用于加密会话数据。
@@ -95,6 +113,12 @@ openssl rand -base64 32
 
 格式：`IP:PORT`
 
+## 高级配置
+
+如果您想使用 BookStack 的额外功能，如电子邮件、LDAP 等，您需要设置额外的环境变量或根据 BookStack 文档的指导创建自己的.env
+文件。
+
+您可修改配置文件： `<持久化目录>/config/www/.env`，然后重启容器。
 
 ---
 
