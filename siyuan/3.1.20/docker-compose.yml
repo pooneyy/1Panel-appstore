@@ -3,23 +3,21 @@ networks:
     external: true
 
 services:
-  jellyseerr:
-    image: fallenbagel/jellyseerr:2.2.3
+  siyuan:
+    image: b3log/siyuan:v3.1.20
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
     restart: always
     networks:
       - 1panel-network
+    command: [ '--workspace=/siyuan/workspace/', '--accessAuthCode=${AuthCode}' ]
+    user: 1000:1000
     ports:
-      - ${PANEL_APP_PORT_HTTP}:5055
+      - ${PANEL_APP_PORT_HTTP}:6806
     env_file:
       - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
-      - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ${JELLYSEERR_ROOT_PATH}/config:/app/config
+      - ${SIYUAN_ROOT_PATH}/workspace:/siyuan/workspace
     environment:
-      - PORT=5055
-      - LOG_LEVEL=debug
-      - TZ=Asia/Shanghai
-      - https_proxy=${http_proxy:-}
+      - RUN_IN_CONTAINER=true
