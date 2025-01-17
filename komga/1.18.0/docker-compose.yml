@@ -20,5 +20,8 @@ services:
     volumes:
       - ${KOMGA_ROOT_PATH}/config:/config
       - ${KOMGA_ROOT_PATH}/data:/data
+      - ${CUSTOM_MOUNT_DIRECTORY_1:-./default_mount_1}:${CUSTOM_MOUNT_DIRECTORY_1:-/default_mount_1}
+      - ${CUSTOM_MOUNT_DIRECTORY_2:-./default_mount_2}:${CUSTOM_MOUNT_DIRECTORY_2:-/default_mount_2}
+      - ${CUSTOM_MOUNT_DIRECTORY_3:-./default_mount_3}:${CUSTOM_MOUNT_DIRECTORY_3:-/default_mount_3}
     environment:
       - TZ=Asia/Shanghai
