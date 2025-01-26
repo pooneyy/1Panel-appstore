@@ -9,6 +9,8 @@ services:
     labels:
       createdBy: "Apps"
     restart: always
+    stdin_open: true
+    tty: true
     networks:
       - 1panel-network
     ports:
@@ -21,8 +23,9 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ${MOVIEPILOT_ROOT_PATH}/config:/config
-      - ${MOVIEPILOT_ROOT_PATH}/moviepilot:/moviepilot
+      - ${MOVIEPILOT_ROOT_PATH}/ms-playwright:/moviepilot/.cache/ms-playwright
       - ${MOVIEPILOT_ROOT_PATH}/download:/download
+      - ${MOVIEPILOT_ROOT_PATH}/media:/media
       - ${CUSTOM_MOUNT_DIRECTORY_1:-./default_mount_1}:${CUSTOM_MOUNT_DIRECTORY_1:-/default_mount_1}
       - ${CUSTOM_MOUNT_DIRECTORY_2:-./default_mount_2}:${CUSTOM_MOUNT_DIRECTORY_2:-/default_mount_2}
       - ${CUSTOM_MOUNT_DIRECTORY_3:-./default_mount_3}:${CUSTOM_MOUNT_DIRECTORY_3:-/default_mount_3}
@@ -32,6 +35,7 @@ services:
       - PUID=0
       - PGID=0
       - UMASK=022
+      - TZ=Asia/Shanghai
       - HTTP_PROXY=${PROXY_HOST}
       - HTTPS_PROXY=${PROXY_HOST}
     logging:

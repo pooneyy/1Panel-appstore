@@ -9,6 +9,8 @@ services:
     labels:
       createdBy: "Apps"
     restart: always
+    stdin_open: true
+    tty: true
     networks:
       - 1panel-network
     ports:

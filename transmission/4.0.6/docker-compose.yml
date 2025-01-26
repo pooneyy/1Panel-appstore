@@ -18,6 +18,7 @@ services:
       - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
+      - ${TRANSMISSION_ROOT_PATH}/themes:/themes
       - ${TRANSMISSION_ROOT_PATH}/config:/config
       - ${TRANSMISSION_ROOT_PATH}/downloads:/downloads
       - ${TRANSMISSION_ROOT_PATH}/watch:/watch
