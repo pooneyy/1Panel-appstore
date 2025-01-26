@@ -10,11 +10,6 @@ if [ -f .env ]; then
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
   echo "GLOBAL_ENV_FILE=${CURRENT_DIR}/envs/global.env" >> .env
 
-  mkdir -p "$TRANSMISSION_ROOT_PATH"
-  mkdir -p "$TRANSMISSION_ROOT_PATH/config"
-  mkdir -p "$TRANSMISSION_ROOT_PATH/downloads"
-  mkdir -p "$TRANSMISSION_ROOT_PATH/watch"
-
   # setup-2 install theme
   if [ ! -d "$TRANSMISSION_ROOT_PATH/ui/themes" ]; then
     mkdir -p "$TRANSMISSION_ROOT_PATH/ui/themes"
