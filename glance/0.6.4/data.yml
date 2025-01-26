@@ -1,8 +1,8 @@
 additionalProperties:
   formFields:
-    - default: "/home/app_name"
+    - default: "/home/glance"
       edit: true
-      envKey: APP_NAME_ROOT_PATH
+      envKey: GLANCE_ROOT_PATH
       labelZh: 数据持久化路径
       labelEn: Data persistence path
       required: true

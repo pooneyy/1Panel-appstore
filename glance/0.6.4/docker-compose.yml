@@ -17,8 +17,8 @@ services:
       - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ${APP_NAME_ROOT_PATH}/app/glance.yml:/app/glance.yml
-      - ${APP_NAME_ROOT_PATH}/app/assets:/app/assets
+      - ${GLANCE_ROOT_PATH}/app/glance.yml:/app/glance.yml
+      - ${GLANCE_ROOT_PATH}/app/assets:/app/assets
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     environment:
