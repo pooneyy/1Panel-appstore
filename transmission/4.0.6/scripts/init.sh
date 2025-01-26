@@ -11,14 +11,14 @@ if [ -f .env ]; then
   echo "GLOBAL_ENV_FILE=${CURRENT_DIR}/envs/global.env" >> .env
 
   # setup-2 install theme
-  if [ ! -d "$TRANSMISSION_ROOT_PATH/ui/themes" ]; then
-    mkdir -p "$TRANSMISSION_ROOT_PATH/ui/themes"
+  if [ ! -d "$TRANSMISSION_ROOT_PATH/themes" ]; then
+    mkdir -p "$TRANSMISSION_ROOT_PATH/themes"
 
     if command -v unzip >/dev/null 2>&1; then
-      unzip -o themes/flood-for-transmission.zip -d "$TRANSMISSION_ROOT_PATH/ui/themes"
+      unzip -o themes/flood-for-transmission.zip -d "$TRANSMISSION_ROOT_PATH/themes"
       UNZIP_SUCCESS=$?
     elif command -v tar >/dev/null 2>&1; then
-      tar -xf themes/flood-for-transmission.zip -C "$TRANSMISSION_ROOT_PATH/ui/themes"
+      tar -xf themes/flood-for-transmission.zip -C "$TRANSMISSION_ROOT_PATH/themes"
       UNZIP_SUCCESS=$?
     else
       echo "Warning: Neither 'unzip' nor 'tar' is installed. Skipping theme extraction."
@@ -39,6 +39,8 @@ if [ -f .env ]; then
   else
     echo "Themes directory already exists. Skipping extraction."
   fi
+
+  chown -R 1000:1000 "$TRANSMISSION_ROOT_PATH"
 
   echo "Check Finish."
 
