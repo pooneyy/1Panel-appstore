@@ -10,6 +10,10 @@ if [ -f .env ]; then
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
   echo "GLOBAL_ENV_FILE=${CURRENT_DIR}/envs/global.env" >> .env
 
+  mkdir -p "$TRANSMISSION_ROOT_PATH/downloads"
+  mkdir -p "$TRANSMISSION_ROOT_PATH/downloads/complete"
+  mkdir -p "$TRANSMISSION_ROOT_PATH/downloads/incomplete"
+
   # setup-2 install theme
   if [ ! -d "$TRANSMISSION_ROOT_PATH/themes" ]; then
     mkdir -p "$TRANSMISSION_ROOT_PATH/themes"
@@ -29,9 +33,9 @@ if [ -f .env ]; then
       echo "Theme successfully extracted."
 
       if grep -q "^TRANSMISSION_WEB_HOME=" .env; then
-          sed -i 's|^TRANSMISSION_WEB_HOME=.*|TRANSMISSION_WEB_HOME=/ui/themes/flood-for-transmission|' .env
+          sed -i 's|^TRANSMISSION_WEB_HOME=.*|TRANSMISSION_WEB_HOME=/themes/flood-for-transmission|' .env
       else
-        echo "TRANSMISSION_WEB_HOME=/ui/themes/flood-for-transmission" >> .env
+        echo "TRANSMISSION_WEB_HOME=/themes/flood-for-transmission" >> .env
       fi
     else
       echo "Warning: Failed to extract the theme archive. Proceeding without extracted theme."
