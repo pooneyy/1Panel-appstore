@@ -18,7 +18,7 @@ services:
       - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ${TRANSMISSION_ROOT_PATH}/themes:/themes
+      - ${TRANSMISSION_ROOT_PATH}/ui/themes:/ui/themes
       - ${TRANSMISSION_ROOT_PATH}/config:/config
       - ${TRANSMISSION_ROOT_PATH}/downloads:/downloads
       - ${TRANSMISSION_ROOT_PATH}/watch:/watch
@@ -26,7 +26,7 @@ services:
       - ${CUSTOM_MOUNT_DIRECTORY_2:-./default_mount_2}:${CUSTOM_MOUNT_DIRECTORY_2:-/default_mount_2}
       - ${CUSTOM_MOUNT_DIRECTORY_3:-./default_mount_3}:${CUSTOM_MOUNT_DIRECTORY_3:-/default_mount_3}
     environment:
-      - PUID=0
-      - PGID=0
-      - UMASK=022
+      - PUID=1000
+      - PGID=1000
       - PEERPORT= ${PANEL_APP_PORT_TORRENTING}
+      - TZ=Asia/Shanghai
