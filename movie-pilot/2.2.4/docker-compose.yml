@@ -11,6 +11,9 @@ services:
     restart: always
     stdin_open: true
     tty: true
+    sysctls:
+      fs.inotify.max_user_watches: 524288
+      fs.inotify.max_user_instances: 524288
     networks:
       - 1panel-network
     ports:
