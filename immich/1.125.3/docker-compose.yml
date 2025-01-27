@@ -47,14 +47,14 @@ services:
   immich-server:
     depends_on:
       - immich-pg14-vectors
-    image: ghcr.io/immich-app/immich-server:v1.125.2
+    image: ghcr.io/immich-app/immich-server:v1.125.3
     container_name: immich-server-${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
     restart: always
     networks:
       - 1panel-network
-    devices:
+    devices: &default_devices
       - /dev/dri:/dev/dri
       # - /dev/nvidia0:/dev/nvidia0
       # - /dev/nvidiactl:/dev/nvidiactl
@@ -71,3 +71,20 @@ services:
     volumes:
       - ${IMMICH_ROOT_PATH}/data/library:/usr/src/app/upload
       - /etc/localtime:/etc/localtime
+
+  immich-machine-learning:
+    image: ghcr.io/immich-app/immich-machine-learning:v1.125.3
+    container_name: immich-machine-learning-${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    networks:
+      - 1panel-network
+    devices: *default_devices
+    ports:
+      - ${PANEL_APP_PORT_MACHINE_LEARNING}:3003
+    env_file:
+      - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    volumes:
+      - ${IMMICH_ROOT_PATH}/data/cache:/cache
