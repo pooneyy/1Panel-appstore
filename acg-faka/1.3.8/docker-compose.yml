@@ -4,7 +4,7 @@ networks:
 
 services:
   acg-faka:
-    image: qyg2297248353/acg-faka:v1.3.8
+    image: qyg2297248353/acg-faka:v1.3.9
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
