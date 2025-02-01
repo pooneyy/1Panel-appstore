@@ -14,6 +14,6 @@ additionalProperties:
   crossVersionUpdate: true
   limit: 1
   recommend: 0
-  website: https://www.easytier.top
+  website: https://easytier.cn/
   github: https://github.com/EasyTier/EasyTier
-  document: https://www.easytier.top
+  document: https://easytier.cn/guide/installation.html
