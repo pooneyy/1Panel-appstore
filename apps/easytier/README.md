@@ -2,7 +2,12 @@
 
 ## 使用说明
 
+> [!NOTE] 
+>
+> **注意：默认启动为服务器(Public_Server)模式，请根据个人需求配置./data/config.toml**
+
 相关信息可通过容器日志与配置文件获取，注意参考官方文档来使用。
+
 ***
 [简体中文](https://github.com/EasyTier/EasyTier/blob/main/README_CN.md) | [English](https://github.com/EasyTier/EasyTier/blob/main/README.md)
 
