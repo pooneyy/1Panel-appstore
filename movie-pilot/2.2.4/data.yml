@@ -57,6 +57,18 @@ additionalProperties:
           value: "true"
         - label: 关闭
           value: "false"
+    - default: "false"
+      edit: true
+      envKey: MOVIEPILOT_AUTO_UPDATE
+      labelZh: 重启时自动更新
+      labelEn: Auto Update on Restart
+      required: true
+      type: select
+      values:
+        - label: 开启
+          value: "true"
+        - label: 关闭
+          value: "false"
     - default: ""
       edit: true
       envKey: CUSTOM_MOUNT_DIRECTORY_1

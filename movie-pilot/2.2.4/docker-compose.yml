@@ -36,6 +36,8 @@ services:
       - PGID=0
       - UMASK=022
       - TZ=Asia/Shanghai
+      - CACHE_BACKEND_TYPE=cachetools
+      - AUTH_SITE=iyuu
       - HTTP_PROXY=${PROXY_HOST}
       - HTTPS_PROXY=${PROXY_HOST}
     logging:
