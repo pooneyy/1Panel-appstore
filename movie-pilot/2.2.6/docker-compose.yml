@@ -37,7 +37,7 @@ services:
       - UMASK=022
       - TZ=Asia/Shanghai
       - CACHE_BACKEND_TYPE=cachetools
-      - AUTH_SITE=iyuu
+      - AUTH_SITE=iyuu,hhclub,audiences,hddolby,zmpt,freefarm,hdfans,wintersakura,leaves,ptba,icc2022,xingtan,ptvicomo,agsvpt,hdkyl,qingwa,discfan,haidan,rousi,sunny,ptcafe,ptzone,kufei,yemapt
       - HTTP_PROXY=${PROXY_HOST}
       - HTTPS_PROXY=${PROXY_HOST}
     logging:
