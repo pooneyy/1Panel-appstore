@@ -61,7 +61,9 @@ services:
     - ${SAFELINE_DIR}/resources/sock:/app/sock
     environment:
     - TCD_MGT_API=https://${SUBNET_PREFIX}.4:1443/api/open/publish/server
+    - TCD_SNSERVER=${SUBNET_PREFIX}.5:8000
     - SNSERVER_ADDR=${SUBNET_PREFIX}.5:8000
+    - CHAOS_ADDR=${SUBNET_PREFIX}.10
     ulimits:
       nofile: 131072
     network_mode: host
@@ -82,6 +84,7 @@ services:
       - ${SAFELINE_DIR}/logs/nginx:/app/log/nginx:z
     environment:
       - MGT_IP=${SUBNET_PREFIX}.4
+      - LUIGI_PG=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-pg/safeline-ce?sslmode=disable
     logging:
       options:
         max-size: "100m"
@@ -116,7 +119,7 @@ services:
       1panel-network:
       safeline-ce:
         ipv4_address: ${SUBNET_PREFIX}.2
-    image: postgres:15.8
+    image: safeline-postgres:15.2
     volumes:
     - ${SAFELINE_DIR}/resources/postgres/data:/var/lib/postgresql/data
     - /etc/localtime:/etc/localtime:ro
@@ -144,6 +147,8 @@ services:
     volumes:
       - ${SAFELINE_DIR}/resources/sock:/app/sock
       - ${SAFELINE_DIR}/resources/chaos:/app/chaos
+    environment:
+      - DB_ADDR=postgres://safeline-ce:${POSTGRES_PASSWORD}@safeline-pg/safeline-ce?sslmode=disable
     labels:
       createdBy: Apps
 
