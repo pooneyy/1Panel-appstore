@@ -39,9 +39,9 @@ additionalProperties:
       required: true
       type: select
       values:
-        - label: 1
+        - label: "1"
           value: "1"
-        - label: 4
+        - label: "4"
           value: "4"
     - default: "f16"
       edit: true
@@ -51,11 +51,11 @@ additionalProperties:
       required: true
       type: select
       values:
-        - label: f16
+        - label: "f16"
           value: "f16"
-        - label: q8_0
+        - label: "q8_0"
           value: "q8_0"
-        - label: q4_0
+        - label: "q4_0"
           value: "q4_0"
     - default: "0"
       edit: true
@@ -65,7 +65,7 @@ additionalProperties:
       required: true
       type: select
       values:
-        - label: 启用
+        - label: "启用"
           value: "1"
-        - label: 禁用
+        - label: "禁用"
           value: "0"
