@@ -11,12 +11,6 @@ services:
     restart: always
     networks:
       - 1panel-network
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities:
-                - gpu
     devices:
       - /dev/dri:/dev/dri
       # - /dev/kfd:/dev/kfd
