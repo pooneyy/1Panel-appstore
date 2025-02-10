@@ -24,6 +24,7 @@ services:
       - ${CUSTOM_MOUNT_DIRECTORY_3:-./default_mount_3}:${CUSTOM_MOUNT_DIRECTORY_3:-/default_mount_3}
     devices:
       - /dev/dri:/dev/dri
+      # - /dev/kfd:/dev/kfd
       # - /dev/nvidia0:/dev/nvidia0
       # - /dev/nvidiactl:/dev/nvidiactl
       # - /dev/nvidia-modeset:/dev/nvidia-modeset
