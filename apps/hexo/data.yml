@@ -10,6 +10,9 @@ additionalProperties:
     - Website
   shortDescZh: 快速、简洁且高效的博客框架
   shortDescEn: A fast, simple & powerful blog framework
+  description:
+    zh: 快速、简洁且高效的博客框架
+    en: A fast, simple & powerful blog framework
   type: website
   crossVersionUpdate: true
   limit: 0
