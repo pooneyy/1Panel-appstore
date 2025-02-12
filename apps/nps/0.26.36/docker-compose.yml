@@ -28,11 +28,6 @@ services:
       NPS_HTTP_PROXY_PORT: ${NPS_HTTP_PROXY_PORT}
       NPS_HTTPS_PROXY_PORT: ${NPS_HTTPS_PROXY_PORT}
       TLS_ENABLE_SWITCH: ${TLS_ENABLE_SWITCH}
-    networks:
-      - 1panel-network
+    network_mode: host
     labels:
       createdBy: "Apps"
-
-networks:
-  1panel-network:
-    external: true
