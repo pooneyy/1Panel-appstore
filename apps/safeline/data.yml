@@ -5,7 +5,7 @@ title: 一款足够简单、足够好用、足够强的免费 WAF
 description: 一款足够简单、足够好用、足够强的免费 WAF
 additionalProperties:
   key: safeline
-  name: 雷池 Web 应用防火墙(Safeline WAF)
+  name: Safeline 雷池
   tags:
     - Security
   shortDescZh: 一款足够简单、足够好用、足够强的免费 WAF
