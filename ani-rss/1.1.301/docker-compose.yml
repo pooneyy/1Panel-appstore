@@ -4,7 +4,7 @@ networks:
 
 services:
   ani-rss:
-    image: wushuo894/ani-rss:v1.1.300
+    image: wushuo894/ani-rss:v1.1.301
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
