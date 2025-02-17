@@ -913,7 +913,7 @@ services:
       - opensearch
 
   myscale:
-    image: myscale/myscaledb:1.6.4
+    image: myscale/myscaledb:1.8.0
     container_name: myscale-${CONTAINER_NAME}
     profiles:
       - myscale
