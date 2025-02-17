@@ -968,7 +968,7 @@ services:
       retries: 50
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:8.14.3
+    image: docker.elastic.co/kibana/kibana:8.17.2
     container_name: kibana-${CONTAINER_NAME}
     profiles:
       - elasticsearch
