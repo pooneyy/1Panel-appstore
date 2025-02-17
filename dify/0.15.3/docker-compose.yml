@@ -931,7 +931,7 @@ services:
       - ${MYSCALE_PORT:-8123}:${MYSCALE_PORT:-8123}
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.14.3
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.17.2
     container_name: elasticsearch-${CONTAINER_NAME}
     profiles:
       - elasticsearch
