@@ -612,7 +612,7 @@ services:
       - '${EXPOSE_NGINX_SSL_PORT:-443}:${NGINX_SSL_PORT:-443}'
 
   weaviate:
-    image: semitechnologies/weaviate:1.19.0
+    image: semitechnologies/weaviate:1.28.5
     container_name: weaviate-${CONTAINER_NAME}
     profiles:
       - ''
