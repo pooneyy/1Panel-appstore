@@ -14,7 +14,7 @@ AMMDS（Adult Movie MetaData Scraper）是一款私人专属数据管理平台�
         <div>
             <strong style="font-size: 16px;">温馨提示</strong><br>
             <span style="font-size: 14px; color: #333;">该软件为离线产品，数据来源由使用者手动录入。</span>
-            <span style="font-size: 14px; color: #333;">请勿在国内宣传该产品，如有需要请使用简称：AMMDS</span>
+            <span style="font-size: 14px; color: #333;">请勿在国内宣传该产品，如有需要请使用简称：<b>AMMDS</b></span>
         </div>
     </div>
 </div>
@@ -24,8 +24,8 @@ AMMDS（Adult Movie MetaData Scraper）是一款私人专属数据管理平台�
         <span style="font-size: 24px; margin-right: 8px;">⚠️</span>
         <div>
             <strong style="font-size: 16px;">插件提示</strong><br>
-            <span style="font-size: 14px; color: #333;">集成插件需要**网络功能**。</span>
-            <span style="font-size: 14px; color: #333;">如开启任一集成插件，将视为您**已同意接入网络连接**。</span>
+            <span style="font-size: 14px; color: #333;">集成插件需要<b>网络功能</b>。</span>
+            <span style="font-size: 14px; color: #333;">如开启任一集成插件，将视为您<b>已同意接入网络连接</b>。</span>
         </div>
     </div>
 </div>
