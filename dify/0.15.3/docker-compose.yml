@@ -681,7 +681,7 @@ services:
 
   # The Couchbase vector store.
   couchbase-server:
-    build: ./couchbase-server
+    build: ./conf/couchbase-server
     profiles:
       - couchbase
     restart: always
