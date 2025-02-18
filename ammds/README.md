@@ -8,17 +8,27 @@ AMMDS（Adult Movie MetaData Scraper）是一款私人专属数据管理平台�
 
 ![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
 
-::: danger 温馨提示
-该软件为离线产品，数据来源由使用者手动录入。
+<div style="border: 1px solid #FFC107; padding: 10px; border-radius: 5px; color: #856404; background-color: #FFF3CD; display: inline-block; width: 100%; max-width: 60%; margin-top: 10px;">
+    <div style="display: flex; align-items: center;">
+        <span style="font-size: 24px; margin-right: 8px;">⚠️</span>
+        <div>
+            <strong style="font-size: 16px;">温馨提示</strong><br>
+            <span style="font-size: 14px; color: #333;">该软件为离线产品，数据来源由使用者手动录入。</span>
+            <span style="font-size: 14px; color: #333;">请勿在国内宣传该产品，如有需要请使用简称：AMMDS</span>
+        </div>
+    </div>
+</div>
 
-请勿在国内宣传该产品，如有需要请使用简称：`AMMDS`
-:::
-
-::: danger 插件提示
-集成插件需要**网络功能**。
-
-如开启任一集成插件，将视为您**已同意接入网络连接**。
-:::
+<div style="border: 1px solid #FFC107; padding: 10px; border-radius: 5px; color: #856404; background-color: #FFF3CD; display: inline-block; width: 100%; max-width: 60%; margin-top: 10px;">
+    <div style="display: flex; align-items: center;">
+        <span style="font-size: 24px; margin-right: 8px;">⚠️</span>
+        <div>
+            <strong style="font-size: 16px;">插件提示</strong><br>
+            <span style="font-size: 14px; color: #333;">集成插件需要**网络功能**。</span>
+            <span style="font-size: 14px; color: #333;">如开启任一集成插件，将视为您**已同意接入网络连接**。</span>
+        </div>
+    </div>
+</div>
 
 ## 🎬 主要特性
 
