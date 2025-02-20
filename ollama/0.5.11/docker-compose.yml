@@ -11,6 +11,7 @@ services:
     restart: always
     networks:
       - 1panel-network
+    tty: true
     devices:
       - /dev/dri:/dev/dri
       # - /dev/kfd:/dev/kfd
