@@ -8,6 +8,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:8000"
     volumes:
       - ./db:/app/db
+      - hexo_data:/app/hexo_data
     environment:
       - PUID=1000
       - PGID=1000
