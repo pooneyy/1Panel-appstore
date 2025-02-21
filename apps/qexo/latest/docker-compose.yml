@@ -1,20 +1,20 @@
 services:
-  hexo:
+  qexo:
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:4000"
+      - "${PANEL_APP_PORT_HTTP}:8000"
     volumes:
-      - hexo_data:/app
+      - ./db:/app/db
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=Asia/Shanghai
-      - GIT_USER=${GIT_USERNAME}
-      - GIT_EMAIL=${GIT_MAIL}
-    image: bloodstar/hexo:latest
+      - WORKERS=4
+      - THREADS=4
+    image: abudulin/qexo:latest
     labels:  
       createdBy: "Apps"
 volumes:
