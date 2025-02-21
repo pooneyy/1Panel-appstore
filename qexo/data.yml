@@ -1,0 +1,22 @@
+ZXname: Qexo
+tags:
+  - 建站
+title: 快速、强大、美观的在线静态博客编辑器
+description: 快速、强大、美观的在线静态博客编辑器
+additionalProperties:
+  key: qexo
+  name: Qexo
+  tags:
+    - Website
+  shortDescZh: 快速、强大、美观的在线静态博客编辑器
+  shortDescEn: A fast, powerful & beautiful online static blog editor
+  description:
+    zh: Qexo 是一个快速、强大、美观的在线静态博客编辑器。使用 GPL3.0 开源协议。支持包括且不限于在 Vercel 等平台部署, 为您的静态博客添加动态的元素。
+    en: Qexo is a fast, powerful, and beautiful online static blog editor. It is licensed under GPL3.0 and supports deployment on platforms like Vercel, adding dynamic elements to your static blog.
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://www.oplog.cn/qexo/
+  github: https://github.com/Qexo/Qexo
+  document: https://www.oplog.cn/qexo/start.html
