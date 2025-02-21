@@ -5,7 +5,7 @@
 
 **Qexo** is a fast, powerful and beautiful online **static blog editor**. Uses the GPL3.0 **Open Source** license. Support includes and is not limited to deployment on platforms such as **Vercel**, adding **dynamic** elements to your static blogs
 
-![Dashboard](./img/Dashboard.png)
+![Dashboard](https://s2.loli.net/2024/07/19/r1XJPHnYANKbcRl.png)
 
 - **Article Management ~ New Interface**
 
@@ -13,7 +13,7 @@
 
   Support multiple image uploading, uploading is just a click away!
 
-  ![PostEditor](./img/PostEditor.png)
+  ![PostEditor](https://s2.loli.net/2024/07/19/q3LlJutFDCvpbMh.png)
 
 - **Cache function ~ speed is the most important thing**
 
