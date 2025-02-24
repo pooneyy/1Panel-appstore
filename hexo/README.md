@@ -1,102 +1,61 @@
-<img src="https://raw.githubusercontent.com/hexojs/logo/master/hexo-logo-avatar.png" alt="Hexo logo" width="100" height="100" align="right" />
-
 # Hexo
 
-> A fast, simple & powerful blog framework, powered by [Node.js](https://nodejs.org).
+> 一个快速、简单且功能强大的博客框架，由[Node.js](https://nodejs.org/)提供支持。
 
-[Website](https://hexo.io) |
-[Documentation](https://hexo.io/docs/) |
-[Installation Guide](https://hexo.io/docs/#Installation) |
-[Contribution Guide](https://hexo.io/docs/contributing) |
-[Code of Conduct](CODE_OF_CONDUCT.md) |
-[API](https://hexo.io/api/) |
-[Twitter](https://twitter.com/hexojs)
+[网站](https://hexo.io/)| [文档](https://hexo.io/docs/)| [安装指南](https://hexo.io/docs/#Installation)| [贡献指南](https://hexo.io/docs/contributing)| [行为准则](https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md)| [API](https://hexo.io/api/) | [Twitter](https://twitter.com/hexojs)
 
-[![NPM version](https://badge.fury.io/js/hexo.svg)](https://www.npmjs.com/package/hexo)
-![Required Node version](https://img.shields.io/node/v/hexo)
-[![Build Status](https://github.com/hexojs/hexo/workflows/Tester/badge.svg)](https://github.com/hexojs/hexo/actions?query=workflow%3ATester)
-[![dependencies Status](https://img.shields.io/librariesio/release/npm/hexo)](https://libraries.io/npm/hexo)
-[![Coverage Status](https://coveralls.io/repos/hexojs/hexo/badge.svg?branch=master)](https://coveralls.io/r/hexojs/hexo?branch=master)
-[![Gitter](https://badges.gitter.im/hexojs/hexo.svg)](https://gitter.im/hexojs/hexo)
-[![Discord Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/teM2Anj)
-[![Telegram Chat](https://img.shields.io/badge/chat-on%20telegram-32afed.svg)](https://t.me/hexojs)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhexojs%2Fhexo.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhexojs%2Fhexo?ref=badge_shield)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
+## 特征
 
-## Features
+- 快速生成
+- 支持 GitHub Flavored Markdown 和大多数 Octopress 插件
+- 一条命令即可部署到 GitHub Pages、Heroku 等。
+- 强大的 API，实现无限扩展
+- 数百个[主题](https://hexo.io/themes/)和[插件](https://hexo.io/plugins/)
 
-- Blazing fast generating
-- Support for GitHub Flavored Markdown and most Octopress plugins
-- One-command deploy to GitHub Pages, Heroku, etc.
-- Powerful API for limitless extensibility
-- Hundreds of [themes](https://hexo.io/themes/) & [plugins](https://hexo.io/plugins/)
+## 快速入门
 
-## Quick Start
+**安装 Hexo**
 
-**Install Hexo**
-
-``` bash
+```
 $ npm install hexo-cli -g
 ```
 
-Install with [brew](https://brew.sh/) on macOS and Linux:
+在 macOS 和 Linux 上使用[brew](https://brew.sh/)安装：
 
-```bash
+```
 $ brew install hexo
 ```
 
-**Setup your blog**
+**设置你的博客**
 
-``` bash
+```
 $ hexo init blog
 $ cd blog
 ```
 
-**Start the server**
+**启动服务器**
 
-``` bash
+```
 $ hexo server
 ```
 
-**Create a new post**
+**创建新帖子**
 
-``` bash
+```
 $ hexo new "Hello Hexo"
 ```
 
-**Generate static files**
+**生成静态文件**
 
-``` bash
+```
 $ hexo generate
 ```
 
-## More Information
+## 更多信息
 
-- Read the [documentation](https://hexo.io/)
-- Visit the [Awesome Hexo](https://github.com/hexojs/awesome-hexo) list
-- Find solutions in [troubleshooting](https://hexo.io/docs/troubleshooting.html)
-- Join discussion on [Google Group](https://groups.google.com/group/hexo), [Discord](https://discord.gg/teM2Anj), [Gitter](https://gitter.im/hexojs/hexo) or [Telegram](https://t.me/hexojs)
-- See the [plugin list](https://hexo.io/plugins/) and the [theme list](https://hexo.io/themes/) on wiki
-- Follow [@hexojs](https://twitter.com/hexojs) for latest news
-
-## Contributing
-
-We welcome you to join the development of Hexo. Please see [contributing document](https://hexo.io/docs/contributing). 🤗
-
-Also, we welcome PR or issue to [official-plugins](https://github.com/hexojs).
-
-## Contributors
-
-[![](https://opencollective.com/Hexo/contributors.svg?width=890)](https://github.com/hexojs/hexo/graphs/contributors)
-
-## Backers
-
-[![Backers](https://opencollective.com/hexo/tiers/backers.svg?avatarHeight=36&width=600)](https://opencollective.com/hexo)
-
-## Sponsors
-
-<a href="https://linktr.ee/rss3"><img src="https://d1fdloi71mui9q.cloudfront.net/8xxahBqRTnecXgXKObeo_L8ks2KjC31fmM5Nd" alt="RSS3" width="200"/></a>
-
-## License
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhexojs%2Fhexo.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhexojs%2Fhexo?ref=badge_large)
+- 阅读[文档](https://hexo.io/)
+- 访问[精彩 Hexo](https://github.com/hexojs/awesome-hexo)列表
+- [在故障排除](https://hexo.io/docs/troubleshooting.html)中寻找解决方案
+- 加入[Google Group](https://groups.google.com/group/hexo)、[Discord](https://discord.gg/teM2Anj)、[Gitter](https://gitter.im/hexojs/hexo)或[Telegram上的讨论](https://t.me/hexojs)
+- 请参阅wiki 上的[插件列表](https://hexo.io/plugins/)和[主题列表](https://hexo.io/themes/)
+- 关注[@hexojs](https://twitter.com/hexojs)了解最新消息
