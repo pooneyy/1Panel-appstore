@@ -11,7 +11,7 @@ additionalProperties:
   shortDescZh: 开源协作wiki和文档软件
   shortDescEn: Open-source collaborative wiki and documentation software.
   description:
-    zh: Qexo 一款开源协作wiki和文档软件。Docmost是Notion和Confluence等开源软件的替代品。
+    zh: Docmost是Notion和Confluence等开源软件的替代品。
     en: Docmost is an open-source alternative to the likes of Notion and Confluence.
   type: website
   crossVersionUpdate: true
