@@ -9,6 +9,7 @@ additionalProperties:
       rule: paramPort
       type: number
     - default: ""
+      edit: true
       envKey: PANEL_DB_USER_PASSWORD
       labelEn: Database Password
       labelZh: 数据库用户密码
