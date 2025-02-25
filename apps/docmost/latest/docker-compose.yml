@@ -2,8 +2,6 @@ services:
   docmost:
     container_name: ${CONTAINER_NAME}
     restart: always
-    networks:
-      - 1panel-network
     ports:
       - "${PANEL_APP_PORT_HTTP}:3000"
     volumes:
