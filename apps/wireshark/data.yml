@@ -1,0 +1,19 @@
+name: Wireshark
+tags:
+  - 安全
+title: 非常流行的网络封包分析软件
+description: Wireshark是一个网络数据包分析器
+additionalProperties:
+  key: wireshark
+  name: Wireshark
+  tags:
+    - Security
+  shortDescZh: Wireshark是一个网络数据包分析器
+  shortDescEn: The world's most popular network protocol analyzer .
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://www.wireshark.org/
+  github: https://github.com/wireshark/wireshark
+  document: https://www.wireshark.org/docs/wsug_html
