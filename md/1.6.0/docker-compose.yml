@@ -1,12 +1,12 @@
 services:
   md:
-    image: doocs/md:v1.6.0
+    image: doocs/md:1.6.0
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
       - 1panel-network
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8080
+      - ${PANEL_APP_PORT_HTTP}:80
     labels:  
       createdBy: "Apps"
 networks:  
