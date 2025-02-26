@@ -412,14 +412,12 @@ x-shared-env: &shared-api-worker-env
   FORCE_VERIFYING_SIGNATURE: ${FORCE_VERIFYING_SIGNATURE:-true}
 
 services:
-  # API service
   api:
     image: langgenius/dify-api:0.15.3
+    container_name: api-${CONTAINER_NAME}
     restart: always
     environment:
-      # Use the shared environment variables.
       <<: *shared-api-worker-env
-      # Startup mode, 'api' starts the API server.
       MODE: api
       SENTRY_DSN: ${API_SENTRY_DSN:-}
       SENTRY_TRACES_SAMPLE_RATE: ${API_SENTRY_TRACES_SAMPLE_RATE:-1.0}
@@ -430,21 +428,17 @@ services:
       - db
       - redis
     volumes:
-      # Mount the storage directory to the container, for storing user files.
       - ${DIFY_ROOT_PATH}/volumes/app/storage:/app/api/storage
     networks:
       - ssrf_proxy_network
       - default
 
-  # worker service
-  # The Celery worker for processing the queue.
   worker:
     image: langgenius/dify-api:0.15.3
+    container_name: worker-${CONTAINER_NAME}
     restart: always
     environment:
-      # Use the shared environment variables.
       <<: *shared-api-worker-env
-      # Startup mode, 'worker' starts the Celery worker for processing the queue.
       MODE: worker
       SENTRY_DSN: ${API_SENTRY_DSN:-}
       SENTRY_TRACES_SAMPLE_RATE: ${API_SENTRY_TRACES_SAMPLE_RATE:-1.0}
@@ -455,15 +449,14 @@ services:
       - db
       - redis
     volumes:
-      # Mount the storage directory to the container, for storing user files.
       - ${DIFY_ROOT_PATH}/volumes/app/storage:/app/api/storage
     networks:
       - ssrf_proxy_network
       - default
 
-  # Frontend web application.
   web:
     image: langgenius/dify-web:0.15.3
+    container_name: ${CONTAINER_NAME}
     restart: always
     environment:
       CONSOLE_API_URL: ${CONSOLE_API_URL:-}
@@ -477,9 +470,9 @@ services:
       TOP_K_MAX_VALUE: ${TOP_K_MAX_VALUE:-}
       INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH: ${INDEXING_MAX_SEGMENTATION_TOKENS_LENGTH:-}
 
-  # The postgres database.
   db:
     image: postgres:15-alpine
+    container_name: db-${CONTAINER_NAME}
     restart: always
     environment:
       PGUSER: ${PGUSER:-postgres}
@@ -502,28 +495,23 @@ services:
     ports:
       - '${EXPOSE_DB_PORT:-5432}:5432'
 
-  # The redis cache.
   redis:
     image: redis:6-alpine
+    container_name: redis-${CONTAINER_NAME}
     restart: always
     environment:
       REDISCLI_AUTH: ${REDIS_PASSWORD:-difyai123456}
     volumes:
-      # Mount the redis data directory to the container.
       - ${DIFY_ROOT_PATH}/volumes/redis/data:/data
-    # Set the redis password when startup redis server.
     command: redis-server --requirepass ${REDIS_PASSWORD:-difyai123456}
     healthcheck:
       test: [ 'CMD', 'redis-cli', 'ping' ]
 
-  # The DifySandbox
   sandbox:
     image: langgenius/dify-sandbox:0.2.10
+    container_name: sandbox-${CONTAINER_NAME}
     restart: always
     environment:
-      # The DifySandbox configurations
-      # Make sure you are changing this key for your deployment with a strong key.
-      # You can generate a strong key using `openssl rand -base64 42`.
       API_KEY: ${SANDBOX_API_KEY:-dify-sandbox}
       GIN_MODE: ${SANDBOX_GIN_MODE:-release}
       WORKER_TIMEOUT: ${SANDBOX_WORKER_TIMEOUT:-15}
@@ -538,12 +526,11 @@ services:
     networks:
       - ssrf_proxy_network
 
-  # plugin daemon
   plugin_daemon:
     image: langgenius/dify-plugin-daemon:0.0.2-local
+    container_name: plugin_daemon-${CONTAINER_NAME}
     restart: always
     environment:
-      # Use the shared environment variables.
       <<: *shared-api-worker-env
       DB_DATABASE: ${DB_PLUGIN_DATABASE:-dify_plugin}
       SERVER_PORT: ${PLUGIN_DAEMON_PORT:-5002}
@@ -562,18 +549,15 @@ services:
       - ${DIFY_ROOT_PATH}/volumes/plugin_daemon:/app/storage
 
 
-  # ssrf_proxy server
-  # for more information, please refer to
-  # https://docs.dify.ai/learn-more/faq/install-faq#id-18.-why-is-ssrf_proxy-needed
   ssrf_proxy:
     image: ubuntu/squid:latest
+    container_name: ssrf_proxy-${CONTAINER_NAME}
     restart: always
     volumes:
       - ${DIFY_ROOT_PATH}/ssrf_proxy/squid.conf.template:/etc/squid/squid.conf.template
       - ${DIFY_ROOT_PATH}/ssrf_proxy/docker-entrypoint.sh:/docker-entrypoint-mount.sh
     entrypoint: [ 'sh', '-c', "cp /docker-entrypoint-mount.sh /docker-entrypoint.sh && sed -i 's/\r$$//' /docker-entrypoint.sh && chmod +x /docker-entrypoint.sh && /docker-entrypoint.sh" ]
     environment:
-      # pls clearly modify the squid env vars to fit your network environment.
       HTTP_PORT: ${SSRF_HTTP_PORT:-3128}
       COREDUMP_DIR: ${SSRF_COREDUMP_DIR:-/var/spool/squid}
       REVERSE_PROXY_PORT: ${SSRF_REVERSE_PROXY_PORT:-8194}
@@ -583,10 +567,9 @@ services:
       - ssrf_proxy_network
       - default
 
-  # Certbot service
-  # use `docker-compose --profile certbot up` to start the certbot service.
   certbot:
     image: certbot/certbot
+    container_name: certbot-${CONTAINER_NAME}
     profiles:
       - certbot
     volumes:
@@ -603,10 +586,9 @@ services:
     entrypoint: [ '/docker-entrypoint.sh' ]
     command: [ 'tail', '-f', '/dev/null' ]
 
-  # The nginx reverse proxy.
-  # used for reverse proxying the API service and Web service.
   nginx:
     image: nginx:latest
+    container_name: nginx-${CONTAINER_NAME}
     restart: always
     volumes:
       - ${DIFY_ROOT_PATH}/nginx/nginx.conf.template:/etc/nginx/nginx.conf.template
@@ -624,8 +606,6 @@ services:
       NGINX_HTTPS_ENABLED: ${NGINX_HTTPS_ENABLED:-false}
       NGINX_SSL_PORT: ${NGINX_SSL_PORT:-443}
       NGINX_PORT: ${NGINX_PORT:-80}
-      # You're required to add your own SSL certificates/keys to the `./nginx/ssl` directory
-      # and modify the env vars below in .env if HTTPS_ENABLED is true.
       NGINX_SSL_CERT_FILENAME: ${NGINX_SSL_CERT_FILENAME:-dify.crt}
       NGINX_SSL_CERT_KEY_FILENAME: ${NGINX_SSL_CERT_KEY_FILENAME:-dify.key}
       NGINX_SSL_PROTOCOLS: ${NGINX_SSL_PROTOCOLS:-TLSv1.1 TLSv1.2 TLSv1.3}
@@ -643,19 +623,16 @@ services:
       - '${PANEL_APP_PORT_HTTP:-80}:${NGINX_PORT:-80}'
       - '${PANEL_APP_PORT_HTTPS:-443}:${NGINX_SSL_PORT:-443}'
 
-  # The Weaviate vector store.
   weaviate:
     image: semitechnologies/weaviate:1.19.0
+    container_name: weaviate-${CONTAINER_NAME}
     profiles:
       - ''
       - weaviate
     restart: always
     volumes:
-      # Mount the Weaviate data directory to the con tainer.
       - ${DIFY_ROOT_PATH}/volumes/weaviate:/var/lib/weaviate
     environment:
-      # The Weaviate configurations
-      # You can refer to the [Weaviate](https://weaviate.io/developers/weaviate/config-refs/env-vars) documentation for more information.
       PERSISTENCE_DATA_PATH: ${WEAVIATE_PERSISTENCE_DATA_PATH:-/var/lib/weaviate}
       QUERY_DEFAULTS_LIMIT: ${WEAVIATE_QUERY_DEFAULTS_LIMIT:-25}
       AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: ${WEAVIATE_AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED:-false}
@@ -667,10 +644,9 @@ services:
       AUTHORIZATION_ADMINLIST_ENABLED: ${WEAVIATE_AUTHORIZATION_ADMINLIST_ENABLED:-true}
       AUTHORIZATION_ADMINLIST_USERS: ${WEAVIATE_AUTHORIZATION_ADMINLIST_USERS:-hello@dify.ai}
 
-  # Qdrant vector store.
-  # (if used, you need to set VECTOR_STORE to qdrant in the api & worker service.)
   qdrant:
     image: langgenius/qdrant:v1.7.3
+    container_name: qdrant-${CONTAINER_NAME}
     profiles:
       - qdrant
     restart: always
@@ -679,7 +655,6 @@ services:
     environment:
       QDRANT_API_KEY: ${QDRANT_API_KEY:-difyai123456}
 
-  # The Couchbase vector store.
   couchbase-server:
     build: ./conf/couchbase-server
     profiles:
@@ -705,26 +680,22 @@ services:
     volumes:
       - ${DIFY_ROOT_PATH}/volumes/couchbase/data:/opt/couchbase/var/lib/couchbase/data
     healthcheck:
-      # ensure bucket was created before proceeding
       test: [ "CMD-SHELL", "curl -s -f -u Administrator:password http://localhost:8091/pools/default/buckets | grep -q '\\[{' || exit 1" ]
       interval: 10s
       retries: 10
       start_period: 30s
       timeout: 10s
 
-  # The pgvector vector database.
   pgvector:
     image: pgvector/pgvector:pg16
+    container_name: pgvector-${CONTAINER_NAME}
     profiles:
       - pgvector
     restart: always
     environment:
       PGUSER: ${PGVECTOR_PGUSER:-postgres}
-      # The password for the default postgres user.
       POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-difyai123456}
-      # The name of the default postgres database.
       POSTGRES_DB: ${PGVECTOR_POSTGRES_DB:-dify}
-      # postgres data directory
       PGDATA: ${PGVECTOR_PGDATA:-/var/lib/postgresql/data/pgdata}
     volumes:
       - ${DIFY_ROOT_PATH}/volumes/pgvector/data:/var/lib/postgresql/data
@@ -734,19 +705,16 @@ services:
       timeout: 3s
       retries: 30
 
-  # pgvecto-rs vector store
   pgvecto-rs:
     image: tensorchord/pgvecto-rs:pg16-v0.3.0
+    container_name: pgvecto-rs-${CONTAINER_NAME}
     profiles:
       - pgvecto-rs
     restart: always
     environment:
       PGUSER: ${PGVECTOR_PGUSER:-postgres}
-      # The password for the default postgres user.
       POSTGRES_PASSWORD: ${PGVECTOR_POSTGRES_PASSWORD:-difyai123456}
-      # The name of the default postgres database.
       POSTGRES_DB: ${PGVECTOR_POSTGRES_DB:-dify}
-      # postgres data directory
       PGDATA: ${PGVECTOR_PGDATA:-/var/lib/postgresql/data/pgdata}
     volumes:
       - ${DIFY_ROOT_PATH}/volumes/pgvecto_rs/data:/var/lib/postgresql/data
@@ -756,9 +724,9 @@ services:
       timeout: 3s
       retries: 30
 
-  # Chroma vector database
   chroma:
     image: ghcr.io/chroma-core/chroma:0.5.20
+    container_name: chroma-${CONTAINER_NAME}
     profiles:
       - chroma
     restart: always
@@ -769,9 +737,9 @@ services:
       CHROMA_SERVER_AUTHN_PROVIDER: ${CHROMA_SERVER_AUTHN_PROVIDER:-chromadb.auth.token_authn.TokenAuthenticationServerProvider}
       IS_PERSISTENT: ${CHROMA_IS_PERSISTENT:-TRUE}
 
-  # OceanBase vector database
   oceanbase:
     image: quay.io/oceanbase/oceanbase-ce:4.3.3.0-100000142024101215
+    container_name: oceanbase-${CONTAINER_NAME}
     profiles:
       - oceanbase
     restart: always
@@ -786,9 +754,9 @@ services:
       OB_CLUSTER_NAME: ${OCEANBASE_CLUSTER_NAME:-difyai}
       OB_SERVER_IP: '127.0.0.1'
 
-  # Oracle vector database
   oracle:
     image: container-registry.oracle.com/database/free:latest
+    container_name: oracle-${CONTAINER_NAME}
     profiles:
       - oracle
     restart: always
@@ -801,10 +769,9 @@ services:
       ORACLE_PWD: ${ORACLE_PWD:-Dify123456}
       ORACLE_CHARACTERSET: ${ORACLE_CHARACTERSET:-AL32UTF8}
 
-  # Milvus vector database services
   etcd:
-    container_name: milvus-etcd
     image: quay.io/coreos/etcd:v3.5.5
+    container_name: milvus-etcd-${CONTAINER_NAME}
     profiles:
       - milvus
     environment:
@@ -824,8 +791,8 @@ services:
       - milvus
 
   minio:
-    container_name: milvus-minio
     image: minio/minio:RELEASE.2023-03-20T20-16-18Z
+    container_name: milvus-minio-${CONTAINER_NAME}
     profiles:
       - milvus
     environment:
@@ -843,8 +810,8 @@ services:
       - milvus
 
   milvus-standalone:
-    container_name: milvus-standalone
     image: milvusdb/milvus:v2.5.0-beta
+    container_name: milvus-standalone-${CONTAINER_NAME}
     profiles:
       - milvus
     command: [ 'milvus', 'run', 'standalone' ]
@@ -869,10 +836,9 @@ services:
     networks:
       - milvus
 
-  # Opensearch vector database
   opensearch:
-    container_name: opensearch
     image: opensearchproject/opensearch:latest
+    container_name: opensearch-${CONTAINER_NAME}
     profiles:
       - opensearch
     environment:
@@ -893,8 +859,8 @@ services:
       - opensearch-net
 
   opensearch-dashboards:
-    container_name: opensearch-dashboards
     image: opensearchproject/opensearch-dashboards:latest
+    container_name: opensearch-dashboards-${CONTAINER_NAME}
     profiles:
       - opensearch
     environment:
@@ -906,10 +872,9 @@ services:
     depends_on:
       - opensearch
 
-  # MyScale vector database
   myscale:
-    container_name: myscale
     image: myscale/myscaledb:1.6.4
+    container_name: myscale-${CONTAINER_NAME}
     profiles:
       - myscale
     restart: always
@@ -921,11 +886,9 @@ services:
     ports:
       - ${MYSCALE_PORT:-8123}:${MYSCALE_PORT:-8123}
 
-  # https://www.elastic.co/guide/en/elasticsearch/reference/current/settings.html
-  # https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html#docker-prod-prerequisites
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:8.14.3
-    container_name: elasticsearch
+    container_name: elasticsearch-${CONTAINER_NAME}
     profiles:
       - elasticsearch
       - elasticsearch-ja
@@ -956,11 +919,9 @@ services:
       timeout: 10s
       retries: 50
 
-  # https://www.elastic.co/guide/en/kibana/current/docker.html
-  # https://www.elastic.co/guide/en/kibana/current/settings.html
   kibana:
     image: docker.elastic.co/kibana/kibana:8.14.3
-    container_name: kibana
+    container_name: kibana-${CONTAINER_NAME}
     profiles:
       - elasticsearch
     depends_on:
@@ -984,10 +945,9 @@ services:
       timeout: 10s
       retries: 3
 
-  # unstructured .
-  # (if used, you need to set ETL_TYPE to Unstructured in the api & worker service.)
   unstructured:
     image: downloads.unstructured.io/unstructured-io/unstructured-api:latest
+    container_name: unstructured-${CONTAINER_NAME}
     profiles:
       - unstructured
     restart: always
@@ -995,7 +955,6 @@ services:
       - ${DIFY_ROOT_PATH}/volumes/unstructured:/app/data
 
 networks:
-  # create a network between sandbox, api and ssrf_proxy, and can not access outside.
   ssrf_proxy_network:
     driver: bridge
     internal: true
