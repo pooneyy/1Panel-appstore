@@ -9,9 +9,9 @@ services:
     labels:
       createdBy: "Apps"
     restart: always
-    network_mode: ${NETWORK_MODE}
+    network_mode: ${NETWORK_MODE:-host}
     ports:
-      - ${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}
+      - ${PANEL_APP_PORT_HTTP:-8080}:${PANEL_APP_PORT_HTTP:-8080}
     env_file:
       - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
@@ -24,5 +24,5 @@ services:
       - ${CUSTOM_MOUNT_DIRECTORY_3:-./default_mount_3}:${CUSTOM_MOUNT_DIRECTORY_3:-/default_mount_3}
     environment:
       - TZ=Asia/Shanghai
-      - NGINX_PORT=${PANEL_APP_PORT_HTTP:8080}
-      - AMMDS_SERVER_PORT=${PANEL_APP_PORT_API:9523}
+      - NGINX_PORT=${PANEL_APP_PORT_HTTP:-8080}
+      - AMMDS_SERVER_PORT=${PANEL_APP_PORT_API:-9523}
