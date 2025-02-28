@@ -413,7 +413,7 @@ x-shared-env: &shared-api-worker-env
 
 services:
   api:
-    image: langgenius/dify-api:0.15.3
+    image: langgenius/dify-api:1.0.0
     container_name: api-${CONTAINER_NAME}
     restart: always
     environment:
@@ -434,7 +434,7 @@ services:
       - default
 
   worker:
-    image: langgenius/dify-api:0.15.3
+    image: langgenius/dify-api:1.0.0
     container_name: worker-${CONTAINER_NAME}
     restart: always
     environment:
@@ -455,7 +455,7 @@ services:
       - default
 
   web:
-    image: langgenius/dify-web:0.15.3
+    image: langgenius/dify-web:1.0.0
     container_name: ${CONTAINER_NAME}
     restart: always
     environment:
@@ -521,13 +521,14 @@ services:
       SANDBOX_PORT: ${SANDBOX_PORT:-8194}
     volumes:
       - ${DIFY_ROOT_PATH}/volumes/sandbox/dependencies:/dependencies
+      - ${DIFY_ROOT_PATH}/volumes/sandbox/conf:/conf
     healthcheck:
       test: [ 'CMD', 'curl', '-f', 'http://localhost:8194/health' ]
     networks:
       - ssrf_proxy_network
 
   plugin_daemon:
-    image: langgenius/dify-plugin-daemon:0.0.2-local
+    image: langgenius/dify-plugin-daemon:0.0.3-local
     container_name: plugin_daemon-${CONTAINER_NAME}
     restart: always
     environment:
