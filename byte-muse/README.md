@@ -27,6 +27,10 @@
 + qBittorrent 下载器
 + PT 站点密钥
 
+## 安装说明
+
+> 激活请通过 `license` 版本进行激活
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
