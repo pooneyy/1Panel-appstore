@@ -19,9 +19,9 @@
 | **[Docmost](https://github.com/docmost/docmost)**    | latest   | DocMost 是一个轻量级的文档管理系统，支持多人协作编辑与版本控制，适合用来构建团队知识库或文档管理平台。 |
 | **[EasyTier](https://github.com/EasyTier/Easytier)** | v2.2.0   | 一个简单、安全、去中心化的内网穿透 VPN 组网方案，使用 Rust 语言和 Tokio 框架实现。 |
 | **[Hexo](https://github.com/hexojs/hexo)**           | latest   | Hexo 是一个快速的静态博客框架，支持Markdown编写，具有丰富的插件和主题，适合搭建个人博客或小型网站。 |
+| **[QEXO](https://github.com/Qexo/Qexo)**             | latest   | 一个美观、强大的在线静态博客管理器，支持Hexo、Hugo、Valaxy 等多种平台，并兼容Github、Gitlab 及本地托管 |
 | **[NPC](https://github.com/djylb/nps)**              | v0.26.36 | NPS客户端，轻量级、高性能、功能强大的**内网穿透**代理工具。(djylb二开版本) |
 | **[NPS](https://github.com/djylb/nps)**              | v0.26.36 | 一款轻量级、高性能、功能强大的内网穿透代理服务器(djylb二开版本) |
-| **[QEXO](https://github.com/Qexo/Qexo)**             | latest   | 一个美观、强大的在线静态博客管理器，支持Hexo、Hugo、Valaxy 等多种平台，并兼容Github、Gitlab 及本地托管 |
 | **[SafeLine](https://github.com/chaitin/SafeLine)**  | V7.6.2   | SafeLine 是一款简单好用, 效果突出的 **`Web 应用防火墙(WAF)`**，可以保护 Web 服务不受黑客攻击。 |
 | [MD](https://github.com/doocs/md)                    | V1.6.0   | 微信 Markdown 编辑器,Markdown 文档自动即时渲染为微信图文     |
 
