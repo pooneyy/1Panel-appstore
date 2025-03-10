@@ -2,7 +2,7 @@ name: Xiaomusic
 tags:
   - 音乐
   - 媒体
-title: Xiaomusic
+title: XiaoMusic
 description: 无限听歌，解放小爱音箱
 
 additionalProperties:
@@ -11,10 +11,10 @@ additionalProperties:
   tags:
     - Music
   shortDescZh: 无限听歌，解放小爱音箱
-  shortDescEn: Open-source music streaming platform
+  shortDescEn: Unlimited music listening, liberating the Xiaolove speaker.
   description:
-    zh: Xiaomusic是Spotify和Apple Music的开源自托管替代方案
-    en: Xiaomusic is a self-hosted open source alternative to Spotify and Apple Music
+    zh: 使用小爱/红米音箱播放音乐，音乐使用 yt-dlp 下载
+    en: Play music using Xiaolove/Redmi speaker, and the music is downloaded with yt-dlp.
   type: music
   crossVersionUpdate: true
   limit: 0
