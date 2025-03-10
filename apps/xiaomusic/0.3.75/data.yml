@@ -9,7 +9,7 @@ additionalProperties:
       type: "text"
     - default: "58090"
       edit: true
-      envKey: "APP_PORT_58090"
+      envKey: PANEL_APP_PORT_HTTP
       labelEn: "Service Port"
       labelZh: "服务端口"
       required: true
