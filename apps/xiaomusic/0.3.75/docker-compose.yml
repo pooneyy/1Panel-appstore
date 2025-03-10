@@ -1,0 +1,13 @@
+version: "3"
+services:
+  xiaomusic:
+    image: ${REGISTRY_URL}hanxi/xiaomusic:${APP_VERSION}
+    container_name: ${APP_NAME}
+    restart: unless-stopped
+    ports:
+      - ${APP_PORT_58090}:8090
+    environment:
+      XIAOMUSIC_PUBLIC_PORT: ${APP_PORT_58090}
+    volumes:
+      - ${APP_DATA}/music:/app/music
+      - ${APP_DATA}/conf:/app/conf
