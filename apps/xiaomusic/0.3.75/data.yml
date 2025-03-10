@@ -14,7 +14,7 @@ additionalProperties:
       labelZh: "服务端口"
       required: true
       rule: paramPort
-      type: "port"
+      type: number
     - default: "Asia/Shanghai"
       edit: true
       envKey: "TZ"
