@@ -4,9 +4,9 @@ services:
     container_name: xiaomusic
     restart: unless-stopped
     ports:
-      - ${APP_PORT_58090}:8090
+      - ${PANEL_APP_PORT_HTTP}:8090
     environment:
-      XIAOMUSIC_PUBLIC_PORT: ${APP_PORT_58090}
+      XIAOMUSIC_PUBLIC_PORT: ${PANEL_APP_PORT_HTTP}
       TZ: ${TZ}
     volumes:
       - ${APP_DATA}/music:/app/music
