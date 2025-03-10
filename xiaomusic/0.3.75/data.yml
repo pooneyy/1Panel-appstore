@@ -13,6 +13,7 @@ additionalProperties:
       labelEn: "Service Port"
       labelZh: "服务端口"
       required: true
+      rule: paramPort
       type: "port"
     - default: "Asia/Shanghai"
       edit: true
