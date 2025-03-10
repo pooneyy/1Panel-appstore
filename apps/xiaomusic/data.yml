@@ -1,12 +1,13 @@
 name: xiaomusic
 title: XiaoMusic
-description: 一个简单的在线音乐播放器，支持多平台音乐资源
+description: 使用小爱音箱播放音乐，音乐使用 yt-dlp 下载
 tags:
     - 实用工具
     - 音乐播放器
-website: https://music.wxhboy.cn/
-github: https://github.com/imsyy/SyMusicApi
-document: https://github.com/imsyy/SyMusicApi
+    - 小爱音箱
+website: https://xdocs.hanxi.cc/
+github: https://github.com/hanxi/xiaomusic
+document: https://xdocs.hanxi.cc/
 architecture:
     - amd64
     - arm64

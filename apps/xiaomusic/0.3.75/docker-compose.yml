@@ -11,4 +11,3 @@ services:
     volumes:
       - ${APP_DATA}/music:/app/music
       - ${APP_DATA}/conf:/app/conf
-      - /xiaomusic_conf:/app/conf
