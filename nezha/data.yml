@@ -1,4 +1,9 @@
-﻿additionalProperties:
+﻿name: Nezha
+tags:
+  - 工具
+title: 开源、轻量、易用的服务器监控、运维工具
+description: Open source, lightweight, easy-to-use server monitoring and operation and maintenance tools
+additionalProperties:
   key: nezha
   name: 哪吒监控v1
   tags:
