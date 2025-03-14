@@ -43,6 +43,7 @@
 | **[Hoarder](https://github.com/hoarder-app/hoarder)** | v0.22.0   | 一个自托管的全能书签管理工具，支持保存链接、笔记和图片，具有AI自动标签功能。 |
 | **[MD](https://github.com/doocs/md)**                | V1.6.0   | 微信 Markdown 编辑器,Markdown 文档自动即时渲染为微信图文     |
 | **[XiaoMusic](https://github.com/xiaomusic/xiaomusic)** | 0.3.75 | 使用小爱/红米音箱播放音乐，音乐使用 yt-dlp 下载 |
+| **[Nezha](https://github.com/naiba/nezha/)** | latest | 哪吒面板v1 - 开源、轻量、易用的服务器监控、运维工具 |
 
 ### 使用方法
 
