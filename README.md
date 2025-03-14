@@ -1,5 +1,22 @@
 # 1Panel 第三方应用仓库 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/arch3rPro/1Panel-Appstore/dev/1Panel-Appstore.png" >
+</p>
+<h1 align="center">1Panel AppStore </h1>
+<br>
+<p align="center">
+  <img src="https://img.shields.io/badge/Author-Arch3rPro-blueviolet.svg">
+  <img src="https://img.shields.io/badge/Release-v1.0-blue.svg" />
+  <img src="https://img.shields.io/badge/Platform-Docker-red.svg" />
+  <img src="https://img.shields.io/badge/Awesome-List-9cf.svg">
+</p>
 
+<p align="center">
+  <a href="http://www.seclions.top/">作者博客</a> | 
+  <a href="http://www.seclions.top/document">文档教程</a> | 
+  <a href="http://nav.seclions.top/">安全导航</a> | 
+  <a href="http://nav.seclions.top/wechat.html">微信公众号导航</a> 
+</p>
 ### 仓库介绍
 
 ​	本仓库包含多个适用于 1Panel 的应用，旨在为用户提供简单、快速的安装与更新体验。应用均为开源项目，支持通过 1Panel 的计划任务功能自动化安装和更新。通过仓库提供的脚本，可以轻松地将应用集成到 1Panel 系统中。
