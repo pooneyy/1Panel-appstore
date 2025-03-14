@@ -51,6 +51,27 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: ""
+      edit: true
+      envKey: ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY
+      labelZh: 数据库加密密钥
+      labelEn: Database encryption key
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT
+      labelZh: 数据库加密盐
+      labelEn: Database encryption salt
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY
+      labelZh: 数据库加密主键
+      labelEn: Database encryption primary key
+      required: true
+      type: text
     - default: "127.0.0.1"
       edit: true
       envKey: DB_HOST

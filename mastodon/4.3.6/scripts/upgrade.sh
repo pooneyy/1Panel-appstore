@@ -9,6 +9,7 @@ if [ -f .env ]; then
   sed -i '/^GLOBAL_ENV_FILE=/d' .env
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
   echo "GLOBAL_ENV_FILE=${CURRENT_DIR}/envs/global.env" >> .env
+  echo "APP_ENV_FILE=${CURRENT_DIR}/envs/mastodon.env" >> .env
 
   echo "Check Finish."
 

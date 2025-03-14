@@ -43,6 +43,20 @@ API。这带来了一个拥有众多选择的丰富应用生态系统！
 >
 > PostgreSQL 12+
 
+### 密钥
+
+您必须提供唯一的加密密钥：`ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY` `ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY` `ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT`
+
+您可以通过命令：`bin/rails db:encryption:init` 生成。
+
+您也可以使用终端的 `openssl` 命令生成：
+
+```bash
+echo "ACTIVE_RECORD_ENCRYPTION_PRIMARY_KEY=$(openssl rand -hex 32)"
+echo "ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY=$(openssl rand -hex 32)"
+echo "ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT=$(openssl rand -hex 32)"
+```
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
