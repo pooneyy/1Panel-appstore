@@ -1,4 +1,3 @@
-# 1Panel 第三方应用仓库 
 <p align="center">
   <img src="https://raw.githubusercontent.com/arch3rPro/1Panel-Appstore/dev/1Panel-Appstore.png" >
 </p>
