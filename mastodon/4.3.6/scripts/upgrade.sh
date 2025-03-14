@@ -11,6 +11,9 @@ if [ -f .env ]; then
   echo "GLOBAL_ENV_FILE=${CURRENT_DIR}/envs/global.env" >> .env
   echo "APP_ENV_FILE=${CURRENT_DIR}/envs/mastodon.env" >> .env
 
+  # setup-2 add update permission
+  chown -R 991:991 "$MASTODON_ROOT_PATH"
+
   echo "Check Finish."
 
 else
