@@ -57,6 +57,10 @@ echo "ACTIVE_RECORD_ENCRYPTION_DETERMINISTIC_KEY=$(openssl rand -hex 32)"
 echo "ACTIVE_RECORD_ENCRYPTION_KEY_DERIVATION_SALT=$(openssl rand -hex 32)"
 ```
 
+### 其他密钥
+
+安装后，进入安装目录，查看 `env/mastodon.env` 文件，里面有其他密钥的配置说明，在您有需要的情况下。
+
 ---
 
 ![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
