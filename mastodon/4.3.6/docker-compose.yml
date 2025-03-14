@@ -1,0 +1,62 @@
+networks:
+  1panel-network:
+    external: true
+
+services:
+  mastodon:
+    image: ghcr.io/mastodon/mastodon:v4.3.6
+    container_name: ${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    command: bundle exec puma -C config/puma.rb
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+    env_file:
+      - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
+      - ${APP_ENV_FILE:-/etc/1panel/envs/mastodon/mastodon.env}
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    volumes:
+      - ${MASTODON_ROOT_PATH}/system:/mastodon/public/system
+    environment:
+      - TZ=Asia/Shanghai
+    healthcheck:
+      test: [ 'CMD-SHELL',"curl -s --noproxy localhost localhost:3000/health | grep -q 'OK' || exit 1" ]
+
+  streaming-mastodon:
+    image: ghcr.io/mastodon/mastodon-streaming:v4.3.6
+    container_name: streaming-${CONTAINER_NAME}
+    restart: always
+    command: node ./streaming/index.js
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_STREAM}:4000
+    env_file:
+      - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
+      - ${APP_ENV_FILE:-/etc/1panel/envs/mastodon/mastodon.env}
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    environment:
+      - TZ=Asia/Shanghai
+    healthcheck:
+      test: [ 'CMD-SHELL', "curl -s --noproxy localhost localhost:4000/api/v1/streaming/health | grep -q 'OK' || exit 1" ]
+
+  sidekiq-mastodon:
+    image: ghcr.io/mastodon/mastodon:v4.3.6
+    container_name: sidekiq-${CONTAINER_NAME}
+    restart: always
+    command: bundle exec sidekiq
+    networks:
+      - 1panel-network
+    env_file:
+      - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
+      - ${APP_ENV_FILE:-/etc/1panel/envs/mastodon/mastodon.env}
+      - ${ENV_FILE:-/etc/1panel/envs/default.env}
+    volumes:
+      - ${MASTODON_ROOT_PATH}/system:/mastodon/public/system
+    environment:
+      - TZ=Asia/Shanghai
+    healthcheck:
+      test: [ 'CMD-SHELL', "ps aux | grep '[s]idekiq\ 6' || false" ]
