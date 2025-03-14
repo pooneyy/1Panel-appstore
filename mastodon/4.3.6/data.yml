@@ -72,6 +72,20 @@ additionalProperties:
       labelEn: Database encryption primary key
       required: true
       type: text
+    - default: ""
+      edit: true
+      envKey: SECRET_KEY_BASE
+      labelZh: 密钥
+      labelEn: Secret key
+      required: true
+      type: text
+    - default: ""
+      edit: true
+      envKey: OTP_SECRET
+      labelZh: OTP 密钥
+      labelEn: OTP secret
+      required: true
+      type: text
     - default: "127.0.0.1"
       edit: true
       envKey: DB_HOST
