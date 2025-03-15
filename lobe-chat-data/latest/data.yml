@@ -9,11 +9,11 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: 8080
+    - default: 8000
       edit: true
       envKey: CASDOOR_PORT
-      labelEn: Auth Port
-      labelZh: 认证端口
+      labelEn: CASDOOR Port
+      labelZh: CASDOOR 端口
       required: true
       rule: paramPort
       type: number
@@ -21,11 +21,11 @@ additionalProperties:
       edit: true
       envKey: MINIO_PORT
       labelEn: MinIO Port
-      labelZh: 存储端口
+      labelZh: MinIO端口
       required: true
       rule: paramPort
       type: number
-    - default: "http://localhost:3210"
+    - default: http://192.168.123.105:3210
       edit: true
       envKey: APP_URL
       labelEn: Application URL
@@ -33,7 +33,7 @@ additionalProperties:
       required: true
       rule: paramExtUrl
       type: text
-    - default: "http://localhost:3210/api/auth"
+    - default: http://192.168.123.105:3210/api/auth
       edit: true
       envKey: AUTH_URL
       labelEn: Auth Service URL
@@ -59,11 +59,11 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: password
-    - default: http://localhost:8080
+    - default: http://192.168.123.105:8000
       edit: true
       envKey: AUTH_CASDOOR_ISSUER
-      labelEn: Auth Issuer
-      labelZh: 认证签发地址
+      labelEn: AUTH CASDOOR ISSUER
+      labelZh: AUTH CASDOOR ISSUER
       required: true
       rule: paramExtUrl
       type: text
@@ -71,16 +71,16 @@ additionalProperties:
     - default: a387a4892ee19b1a2249
       edit: true
       envKey: AUTH_CASDOOR_ID
-      labelEn: Casdoor ID
-      labelZh: 认证ID
+      labelEn: AUTH CASDOOR ID
+      labelZh: AUTH CASDOOR ID
       required: true
       rule: paramCommon
       type: text
-    - default: e03ef4e49e284a57f4619ff777194f4c
+    - default: dbf205949d704de81b0b5b3603174e23fbecc354
       edit: true
       envKey: AUTH_CASDOOR_SECRET
-      labelEn: Casdoor Secret
-      labelZh: 认证密钥
+      labelEn: AUTH CASDOOR SECRET
+      labelZh: AUTH CASDOOR SECRET
       required: true
       rule: paramCommon
       type: password
@@ -88,50 +88,50 @@ additionalProperties:
     - default: admin
       edit: true
       envKey: MINIO_ROOT_USER
-      labelEn: MinIO User
-      labelZh: 存储用户
+      labelEn: MinIO ROOT User
+      labelZh: MinIO ROOT User
       required: true
       rule: paramCommon
       type: text
     - default: e07a87a0
       edit: true
       envKey: MINIO_ROOT_PASSWORD
-      labelEn: MinIO Password
-      labelZh: 存储密码
+      labelEn: MinIO ROOT Password
+      labelZh: MinIO ROOT Password
       required: true
       rule: paramCommon
       type: password
 # Configure the bucket information of MinIO
-    - default: http://localhost:9000
+    - default: http://192.168.123.105:9000
       edit: true
       envKey: S3_ENDPOINT
       labelEn: S3 Endpoint
-      labelZh: 存储服务地址
+      labelZh: S3 Endpoint
       required: true
       rule: paramExtUrl
       type: text
-    - default: http://localhost:9000
+    - default: http://192.168.123.105:9000
       edit: true
       envKey: S3_PUBLIC_DOMAIN
       labelEn: S3 PUBLIC DOMAIN
-      labelZh: 存储公共域名
+      labelZh: S3 PUBLIC DOMAIN
       required: true
       rule: paramExtUrl
       type: text
     - default: lobe
       edit: true
       envKey: MINIO_LOBE_BUCKET
-      labelEn: S3 Bucket
-      labelZh: 存储桶名称
+      labelEn: MINIO LOBE BUCKET
+      labelZh: MINIO LOBE BUCKET
       required: true
       rule: paramCommon
       type: text
 # Configure for casdoor
-    - default: http://localhost:8080
+    - default: http://192.168.123.105:8000
       edit: true
       envKey: origin
       labelEn: origin
-      labelZh: casdoor
+      labelZh: origin
       required: true
       rule: paramExtUrl
       type: text
