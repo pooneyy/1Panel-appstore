@@ -127,7 +127,7 @@ additionalProperties:
       rule: paramCommon
       type: text
 # Configure for casdoor
-    - default: http://localhost:9000
+    - default: http://localhost:8080
       edit: true
       envKey: origin
       labelEn: origin
