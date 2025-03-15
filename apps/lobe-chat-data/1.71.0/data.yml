@@ -1,40 +1,137 @@
 additionalProperties:
   formFields:
-    - default: 40247
+# Default config
+    - default: 3210
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Port
-      labelZh: 端口
+      labelEn: Application Port
+      labelZh: 应用端口
       required: true
       rule: paramPort
       type: number
-    - default: "password"
+    - default: 8080
       edit: true
-      envKey: OPENAI_API_KEY
-      labelEn: OpenAI API Key
-      labelZh: OpenAI API 密钥
-      required: false
-      type: password
-    - default: "https://api.openai.com/v1"
+      envKey: CASDOOR_PORT
+      labelEn: Auth Port
+      labelZh: 认证端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: 9000
       edit: true
-      envKey: OPENAI_PROXY_URL
-      labelEn: OpenAI Proxy URL
-      labelZh: OpenAI 代理 URL
-      required: false
+      envKey: MINIO_PORT
+      labelEn: MinIO Port
+      labelZh: 存储端口
+      required: true
+      rule: paramPort
+      type: number
+    - default: "http://localhost:3210"
+      edit: true
+      envKey: APP_URL
+      labelEn: Application URL
+      labelZh: 应用地址
+      required: true
+      rule: paramExtUrl
       type: text
-    - default: ""
+    - default: "http://localhost:3210/api/auth"
       edit: true
-      envKey: ACCESS_CODE
-      labelEn: Access Code
-      labelZh: 访问密码
+      envKey: AUTH_URL
+      labelEn: Auth Service URL
+      labelZh: 认证服务地址
+      required: true
+      rule: paramExtUrl
+      type: text
+# Postgres related
+    - default: lobechat
+      edit: true
+      envKey: LOBE_DB_NAME
+      labelEn: Database Name
+      labelZh: 数据库名称
       random: true
-      required: false
-      rule: paramComplexity 
-      type: password
-    - default: ""
+      required: true
+      rule: paramCommon
+      type: text
+    - default: uWNZugjBqixf8dxC
       edit: true
-      envKey: OPENAI_MODEL_LIST
-      labelEn: OpenAI Model List
-      labelZh: OpenAI 模型列表
-      required: false
+      envKey: POSTGRES_PASSWORD
+      labelEn: Database Password
+      labelZh: 数据库密码
+      required: true
+      rule: paramCommon
+      type: password
+    - default: http://localhost:8080
+      edit: true
+      envKey: AUTH_CASDOOR_ISSUER
+      labelEn: Auth Issuer
+      labelZh: 认证签发地址
+      required: true
+      rule: paramExtUrl
+      type: text
+# Casdoor secret
+    - default: a387a4892ee19b1a2249
+      edit: true
+      envKey: AUTH_CASDOOR_ID
+      labelEn: Casdoor ID
+      labelZh: 认证ID
+      required: true
+      rule: paramCommon
+      type: text
+    - default: e03ef4e49e284a57f4619ff777194f4c
+      edit: true
+      envKey: AUTH_CASDOOR_SECRET
+      labelEn: Casdoor Secret
+      labelZh: 认证密钥
+      required: true
+      rule: paramCommon
+      type: password
+# MinIO S3 configuration
+    - default: admin
+      edit: true
+      envKey: MINIO_ROOT_USER
+      labelEn: MinIO User
+      labelZh: 存储用户
+      required: true
+      rule: paramCommon
+      type: text
+    - default: e07a87a0
+      edit: true
+      envKey: MINIO_ROOT_PASSWORD
+      labelEn: MinIO Password
+      labelZh: 存储密码
+      required: true
+      rule: paramCommon
+      type: password
+# Configure the bucket information of MinIO
+    - default: http://localhost:9000
+      edit: true
+      envKey: S3_ENDPOINT
+      labelEn: S3 Endpoint
+      labelZh: 存储服务地址
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: http://localhost:9000
+      edit: true
+      envKey: S3_PUBLIC_DOMAIN
+      labelEn: S3 PUBLIC DOMAIN
+      labelZh: 存储公共域名
+      required: true
+      rule: paramExtUrl
+      type: text
+    - default: lobe
+      edit: true
+      envKey: MINIO_LOBE_BUCKET
+      labelEn: S3 Bucket
+      labelZh: 存储桶名称
+      required: true
+      rule: paramCommon
+      type: text
+# Configure for casdoor
+    - default: http://localhost:9000
+      edit: true
+      envKey: origin
+      labelEn: origin
+      labelZh: casdoor
+      required: true
+      rule: paramExtUrl
       type: text
