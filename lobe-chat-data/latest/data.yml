@@ -25,7 +25,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: http://192.168.123.105:3210
+    - default: http://Your-IP:3210
       edit: true
       envKey: APP_URL
       labelEn: Application URL
@@ -33,7 +33,7 @@ additionalProperties:
       required: true
       rule: paramExtUrl
       type: text
-    - default: http://192.168.123.105:3210/api/auth
+    - default: http://Your-IP:3210/api/auth
       edit: true
       envKey: AUTH_URL
       labelEn: Auth Service URL
@@ -59,7 +59,7 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: password
-    - default: http://192.168.123.105:8000
+    - default: http://Your-IP:8000
       edit: true
       envKey: AUTH_CASDOOR_ISSUER
       labelEn: AUTH CASDOOR ISSUER
@@ -102,7 +102,7 @@ additionalProperties:
       rule: paramCommon
       type: password
 # Configure the bucket information of MinIO
-    - default: http://192.168.123.105:9000
+    - default: http://Your-IP:9000
       edit: true
       envKey: S3_ENDPOINT
       labelEn: S3 Endpoint
@@ -110,7 +110,7 @@ additionalProperties:
       required: true
       rule: paramExtUrl
       type: text
-    - default: http://192.168.123.105:9000
+    - default: http://Your-IP:9000
       edit: true
       envKey: S3_PUBLIC_DOMAIN
       labelEn: S3 PUBLIC DOMAIN
@@ -127,7 +127,7 @@ additionalProperties:
       rule: paramCommon
       type: text
 # Configure for casdoor
-    - default: http://192.168.123.105:8000
+    - default: http://Your-IP:8000
       edit: true
       envKey: origin
       labelEn: origin
