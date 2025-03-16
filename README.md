@@ -96,5 +96,7 @@ echo "应用商店数据已更新"
 
 官方应用商店：[https://github.com/1Panel-dev/appstore](https://github.com/1Panel-dev/appstore)
 
-灵感来源：[https://github.com/okxlin/appstore](https://github.com/okxlin/appstore)
+第三方应用商店：[https://github.com/okxlin/appstore](https://github.com/okxlin/appstore)
+
+第三方应用商店：[https://github.com/QYG2297248353/appstore-1panel](https://github.com/QYG2297248353/appstore-1panel)
 
