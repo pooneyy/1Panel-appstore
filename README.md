@@ -44,6 +44,7 @@
 | **[MD](https://github.com/doocs/md)**                | V1.6.0   | 微信 Markdown 编辑器,Markdown 文档自动即时渲染为微信图文     |
 | **[XiaoMusic](https://github.com/xiaomusic/xiaomusic)** | 0.3.75 | 使用小爱/红米音箱播放音乐，音乐使用 yt-dlp 下载 |
 | **[Nezha](https://github.com/naiba/nezha/)** | latest | 哪吒面板v1 - 开源、轻量、易用的服务器监控、运维工具 |
+| **[LobeChat-Data](https://github.com/lobehub/lobe-chat)** | Latest | LobeChat服务端数据库版 - 开源、现代设计的 ChatGPT/LLMs UI/框架 |
 
 ### 使用方法
 
@@ -59,24 +60,11 @@
 # 清理旧的临时目录
 rm -rf /tmp/appstore_merge
 
-# 克隆 appstore-okxlin
-git clone --depth=1 https://ghfast.top/https://github.com/okxlin/appstore /tmp/appstore_merge/appstore-okxlin
-
 # 克隆 appstore-arch3rPro
 git clone --depth=1 https://ghfast.top/https://github.com/arch3rPro/appstore /tmp/appstore_merge/appstore-arch3rPro
 
-# 复制 appstore-okxlin 数据（先完整复制）
-cp -rf /tmp/appstore_merge/appstore-okxlin/apps/* /opt/1panel/resource/apps/local/
-
-# 遍历 appstore-arch3rPro/apps/ 目录，检查哪些目录已存在于 /opt/1panel/resource/apps/local/
-for dir in /tmp/appstore_merge/appstore-arch3rPro/apps/*; do
-    name=$(basename "$dir")
-    if [ -d "/opt/1panel/resource/apps/local/$name" ]; then
-        echo "检测到冲突目录: $name，优先保留 appstore-arch3rPro 版本"
-        rm -rf "/opt/1panel/resource/apps/local/$name"
-    fi
-    cp -rf "$dir" /opt/1panel/resource/apps/local/
-done
+# 复制 数据（先完整复制）
+cp -rf /tmp/appstore_merge/appstore-arch3rPro/apps/* /opt/1panel/resource/apps/local/
 
 # 清理临时目录
 rm -rf /tmp/appstore_merge
