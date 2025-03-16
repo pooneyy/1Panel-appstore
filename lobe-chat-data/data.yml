@@ -1,15 +1,15 @@
 name: LobeChat-Data
 tags:
     - AI / 大模型
-title: 开源、现代设计的 ChatGPT/LLMs UI/框架
-description: 开源、现代设计的 ChatGPT/LLMs UI/框架
+title: LobeChat服务端数据库版 - 开源、现代设计的 ChatGPT/LLMs UI/框架
+description: LobeChat服务端数据库版 - 开源、现代设计的 ChatGPT/LLMs UI/框架
 additionalProperties:
     key: lobe-chat-data
     name: LobeChat-Data
     tags:
         - AI
-    shortDescZh: 现代化设计的开源 ChatGPT/LLMs 聊天应用与开发框架
-    shortDescEn: An open-source, modern-design ChatGPT/LLMs UI/Framework
+    shortDescZh: LobeChat服务端数据库版 - 现代化设计的开源 ChatGPT/LLMs 聊天应用与开发框架
+    shortDescEn: LobeChat-Data - An open-source, modern-design ChatGPT/LLMs UI/Framework
     type: tool
     crossVersionUpdate: true
     limit: 0
