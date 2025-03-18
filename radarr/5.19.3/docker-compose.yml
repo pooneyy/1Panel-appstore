@@ -4,7 +4,7 @@ networks:
 
 services:
   radarr:
-    image: linuxserver/radarr:5.19.3
+    image: linuxserver/radarr:5.20.2
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
