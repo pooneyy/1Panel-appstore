@@ -4,7 +4,7 @@ networks:
 
 services:
   windows:
-    image: dockurr/macos:2.08
+    image: dockurr/macos:2.09
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
