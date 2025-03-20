@@ -4,7 +4,7 @@ networks:
 
 services:
   stash:
-    image: stashapp/stash:v0.28.0
+    image: stashapp/stash:v0.28.1
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
