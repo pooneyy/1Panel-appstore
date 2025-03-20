@@ -7,7 +7,7 @@ additionalProperties:
       labelZh: 远程配置文件地址(若配置，则首先拉取远程配置到本地)
       required: false
       type: text
-    - default: ./api.yaml
+    - default: ./config
       edit: true
       envKey: LOCAL_CONFIG_PATH
       labelEn: local config file path
