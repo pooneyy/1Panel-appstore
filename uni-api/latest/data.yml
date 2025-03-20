@@ -6,25 +6,22 @@ additionalProperties:
       labelEn: CONFIG_URL
       labelZh: 远程配置文件地址(若配置，则首先拉取远程配置到本地)
       required: false
-      rule: paramCommon
       type: text
-    - default: "./api.yaml"
+    - default: ./api.yaml
       edit: true
       envKey: LOCAL_CONFIG_PATH
       labelEn: local config file path
       labelZh: 本地配置文件地址
       required: true
-      rule: paramCommon
       type: text
-    - default: "./data"
+    - default: ./data
       edit: true
       envKey: DATA_PATH
       labelEn: uni-api data path
       labelZh: uni-api数据存储路径
       required: true
-      rule: paramCommon
       type: text
-    - default: 48000
+    - default: 38000
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
