@@ -13,7 +13,8 @@ services:
       - traefik.http.routers.stash-box.tls.certresolver=stash-box
       - traefik.port=9998
     restart: always
-    network_mode: ${NETWORK_MODE:-host}
+    networks:
+      - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}
     env_file:
@@ -25,4 +26,8 @@ services:
         max-file: "10"
         max-size: "2m"
     volumes:
-      - ${STASH_ROOT_PATH}/data:/root/.stash-box
+      - ${STASH_BOX_ROOT_PATH}/data:/root/.stash-box
+    environment:
+      - HTTPS_PROXY=${HTTP_PROXY}
+      - HTTP_PROXY=${HTTP_PROXY:-}
+      - NO_PROXY=${NO_PROXY:-}

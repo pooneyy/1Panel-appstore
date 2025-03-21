@@ -1,28 +1,26 @@
 additionalProperties:
   formFields:
-    - default: "/home/stash"
+    - child:
+        default: ""
+        envKey: PANEL_POSTGRES_SERVICE
+        required: true
+        type: service
+      default: postgresql
+      envKey: PANEL_POSTGRES_TYPE
+      labelZh: Postgres 服务 (前置检查)
+      labelEn: Postgres Service (Pre-check)
+      required: true
+      type: apps
+      values:
+        - label: PostgreSQL
+          value: postgresql
+    - default: "/home/stash-box"
       edit: true
-      envKey: STASH_ROOT_PATH
+      envKey: STASH_BOX_ROOT_PATH
       labelZh: 数据持久化路径
       labelEn: Data persistence path
       required: true
       type: text
-    - default: "host"
-      edit: true
-      envKey: NETWORK_MODE
-      labelEn: Drive path
-      labelZh: 网络模式
-      required: true
-      type: select
-      values:
-        - label: 主机网络模式
-          value: "host"
-        - label: 桥接网络模式
-          value: "bridge"
-        - label: 无网络模式
-          value: "none"
-        - label: 1panel-network
-          value: "1panel-network"
     - default: 9999
       edit: true
       envKey: PANEL_APP_PORT_HTTP
@@ -31,27 +29,45 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: ""
+    - default: "127.0.0.1"
       edit: true
-      envKey: CUSTOM_MOUNT_DIRECTORY_1
-      labelEn: Custom mount directory 1
-      labelZh: 自定义挂载目录 1
-      required: false
+      envKey: POSTGRES_HOST
+      labelZh: 数据库 主机地址
+      labelEn: Database Host
+      required: true
+      type: text
+    - default: 5432
+      edit: true
+      envKey: POSTGRES_PORT
+      labelZh: 数据库 端口
+      labelEn: Database Port
+      required: true
+      rule: paramPort
+      type: number
+    - default: "stash-box"
+      edit: true
+      envKey: POSTGRES_NAME
+      labelZh: 数据库 名称
+      labelEn: Database Name
+      required: true
+      rule: paramCommon
+      type: text
+    - default: "stash-box"
+      edit: true
+      envKey: POSTGRES_USER
+      labelZh: 数据库 用户名
+      labelEn: Database Username
+      required: true
       type: text
     - default: ""
       edit: true
-      envKey: CUSTOM_MOUNT_DIRECTORY_2
-      labelEn: Custom mount directory 2
-      labelZh: 自定义挂载目录 2
-      required: false
-      type: text
-    - default: ""
-      edit: true
-      envKey: CUSTOM_MOUNT_DIRECTORY_3
-      labelEn: Custom mount directory 3
-      labelZh: 自定义挂载目录 3
-      required: false
-      type: text
+      envKey: POSTGRES_PASSWORD
+      labelZh: 数据库 密码
+      labelEn: Database Password
+      random: true
+      required: true
+      rule: paramComplexity
+      type: password
     - default: ""
       edit: true
       envKey: HTTP_PROXY
