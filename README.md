@@ -55,7 +55,7 @@
 | 应用名称 | 版本 | 应用介绍 |
 | -------- | ---- | -------- |
 | **[LobeChat-Data](https://github.com/lobehub/lobe-chat)** | 1.73.0 | LobeChat服务端数据库版 - 开源、现代设计的 ChatGPT/LLMs UI/框架 |
-| **[Dify](https://github.com/langgenius/dify)** | 1.0.1 | Dify 是一个开源的 LLM 应用开发平台。支持 AI 工作流、RAG 管道、Agent、模型管理、可观测性等功能 |
+| **[Dify](https://github.com/langgenius/dify)** | 1.1.1 | Dify 是一个开源的 LLM 应用开发平台。支持 AI 工作流、RAG 管道、Agent、模型管理、可观测性等功能 |
 
 #### 🎵 多媒体与监控
 
