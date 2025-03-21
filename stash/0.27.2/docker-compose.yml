@@ -39,5 +39,5 @@ services:
       - STASH_METADATA=/metadata/
       - STASH_CACHE=/cache/
       - HTTPS_PROXY=${HTTP_PROXY}
-      - HTTP_PROXY=${HTTP_PROXY}
-      - NO_PROXY=${NO_PROXY}
+      - HTTP_PROXY=${HTTP_PROXY:-}
+      - NO_PROXY=${NO_PROXY:-}
