@@ -1,6 +1,6 @@
 services:
   ikaros:
-    image: "ikarosrun/ikaros:v0.20.8"
+    image: "ikarosrun/ikaros:v0.20.9"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
