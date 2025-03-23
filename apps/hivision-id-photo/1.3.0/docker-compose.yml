@@ -1,6 +1,6 @@
 services:
   hivision-id-photo:
-    image: "linzeyi/hivision_idphotos:v1.3.0"
+    image: "linzeyi/hivision_idphotos:v1.3.1"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
