@@ -1,6 +1,6 @@
 services:
   lrcapi:
-    image: "hisatri/lrcapi:1.5.7"
+    image: "hisatri/lrcapi:1.6.0"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
