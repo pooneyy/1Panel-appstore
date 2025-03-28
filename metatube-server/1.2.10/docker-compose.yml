@@ -4,7 +4,7 @@ networks:
 
 services:
   metatube-server:
-    image: ghcr.io/metatube-community/metatube-server:1.2.10
+    image: ghcr.io/metatube-community/metatube-server:1.2.11
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
