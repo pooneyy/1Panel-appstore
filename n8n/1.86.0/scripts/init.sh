@@ -10,6 +10,12 @@ if [ -f .env ]; then
   echo "ENV_FILE=${CURRENT_DIR}/.env" >> .env
   echo "GLOBAL_ENV_FILE=${CURRENT_DIR}/envs/global.env" >> .env
 
+  DATA_DIR="$N8N_ROOT_PATH/data"
+
+  mkdir -p "$DATA_DIR"
+
+  chmod -R 777 "$DATA_DIR"
+
   echo "Check Finish."
 
 else
