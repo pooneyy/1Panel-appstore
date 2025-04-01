@@ -24,3 +24,4 @@ services:
       - N8N_PORT=5678
       - N8N_PROTOCOL=http
       - N8N_DIAGNOSTICS_ENABLED=false
+      - N8N_SECURE_COOKIE=false
