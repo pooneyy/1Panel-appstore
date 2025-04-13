@@ -5,7 +5,7 @@ title: 开源、轻量、易用的服务器监控、运维工具
 description: Open source, lightweight, easy-to-use server monitoring and operation and maintenance tools
 additionalProperties:
   key: nezha
-  name: Nezha
+  name: 哪吒监控-v1
   tags:
     - Tool
   shortDescZh: 开源、轻量、易用的服务器监控、运维工具
