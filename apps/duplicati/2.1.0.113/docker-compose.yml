@@ -1,6 +1,6 @@
 services:
   duplicati:
-    image: "duplicati/duplicati:2.1.0.113"
+    image: "duplicati/duplicati:2.1.0.115"
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
