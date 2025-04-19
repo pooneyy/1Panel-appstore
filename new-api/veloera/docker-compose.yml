@@ -1,6 +1,6 @@
 services:
   new-api:
-    image: calciumion/new-api:latest
+    image: ghcr.io/veloera/veloera:latest
     container_name: ${CONTAINER_NAME}
     restart: always
     ports:

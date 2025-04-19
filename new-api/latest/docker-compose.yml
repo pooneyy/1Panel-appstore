@@ -1,5 +1,5 @@
 services:
-  one-api:
+  new-api:
     image: calciumion/new-api:latest
     container_name: ${CONTAINER_NAME}
     restart: always
