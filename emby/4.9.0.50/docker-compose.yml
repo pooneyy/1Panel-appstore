@@ -4,7 +4,7 @@ networks:
 
 services:
   emby:
-    image: lovechen/embyserver:4.8.0.21
+    image: emby/embyserver:4.9.0.50
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
@@ -33,7 +33,6 @@ services:
       - UID=0
       - GID=0
       - GIDLIST=0
-      - NVIDIA_VISIBLE_DEVICES=all
       - HTTP_PROXY=${HTTP_PROXY:-}
       - HTTPS_PROXY=${HTTP_PROXY:-}
       - NO_PROXY=localhost,127.0.0.1,::1
