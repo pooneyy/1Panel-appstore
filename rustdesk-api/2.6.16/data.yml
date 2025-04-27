@@ -57,7 +57,7 @@ additionalProperties:
           value: "0"
     - default: "1"
       edit: true
-      envKey: RUSTDESK_API_APP_REGISTER
+      envKey: RUSTDESK_API_APP_SHOW_SWAGGER
       labelZh: 开启 Swagger 文档
       labelEn: Enable Swagger docs
       required: true
