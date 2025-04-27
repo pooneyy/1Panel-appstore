@@ -35,7 +35,7 @@ additionalProperties:
       labelZh: RustDesk API 密钥
       labelEn: RustDesk API key
       required: true
-      type: text
+      type: password
     - default: "168h"
       edit: true
       envKey: RUSTDESK_API_APP_TOKEN_EXPIRE
