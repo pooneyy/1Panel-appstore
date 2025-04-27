@@ -31,7 +31,7 @@ additionalProperties:
       type: text
     - default: ""
       edit: true
-      envKey: RUSTDESK_API_RUSTDESK_KEY
+      envKey: KEY
       labelZh: RustDesk API 密钥
       labelEn: RustDesk API key
       required: true
