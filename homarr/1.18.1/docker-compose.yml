@@ -17,6 +17,4 @@ services:
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ${HOMARR_ROOT_PATH}/configs:/app/data/configs
-      - ${HOMARR_ROOT_PATH}/icons:/app/public/icons
-      - ${HOMARR_ROOT_PATH}/data:/data
+      - ${HOMARR_ROOT_PATH}/appdata:/appdata
