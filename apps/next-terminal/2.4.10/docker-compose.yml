@@ -2,8 +2,7 @@ services:
   next-terminal:
     container_name: ${CONTAINER_NAME}
     restart: always
-    networks:
-      - 1panel-network
+    network_mode: host
     ports:
       - "${PANEL_APP_PORT_HTTP}:8088"
       - "${PANEL_APP_PORT_SSH}:8089"
@@ -14,17 +13,20 @@ services:
       - ./config.yaml:/etc/next-terminal/config.yaml
     environment:
       DB: postgres
-      GUACD_HOSTNAME: nt-guacd
+      GUACD_HOSTNAME: guacd
       GUACD_PORT: 4822
       SSHD_ENABLE: ${SSHD_SWITCH}
+      LOG_LEVEL: debug
+    depends_on:
+      - postgresql
+      - nt-guacd
     image: dushixiang/next-terminal:v2.4.10
     labels:  
       createdBy: "Apps"
   postgresql:
     container_name: postgresql
     image: registry.cn-beijing.aliyuncs.com/dushixiang/postgres:16.4
-    networks:
-      - 1panel-network
+    network_mode: host
     environment:
       POSTGRES_DB: next-terminal
       POSTGRES_USER: next-terminal
@@ -34,16 +36,14 @@ services:
     restart: always
 
   nt-guacd:
-    container_name: ${CONTAINER_NAME}-guacd
+    container_name: guacd
+    hostname: guacd
     restart: always
-    networks:
-      - 1panel-network
+    network_mode: host
     volumes:
       - "${DATA_PATH}:/usr/local/next-terminal/data"
     image: dushixiang/guacd:1.5.5
+    environment:
+      - GUACD_LOG_LEVEL=debug
     labels:  
       createdBy: "Apps"
-
-networks:  
-  1panel-network:  
-    external: true
