@@ -13,13 +13,25 @@ services:
       - "${SSH_KEY_PATH}:/root/.ssh/id_rsa"
       - ./config.yaml:/etc/next-terminal/config.yaml
     environment:
-      DB: sqlite
+      DB: postgres
       GUACD_HOSTNAME: nt-guacd
       GUACD_PORT: 4822
       SSHD_ENABLE: ${SSHD_SWITCH}
     image: dushixiang/next-terminal:v2.4.10
     labels:  
       createdBy: "Apps"
+  postgresql:
+    container_name: postgresql
+    image: registry.cn-beijing.aliyuncs.com/dushixiang/postgres:16.4
+    networks:
+      - 1panel-network
+    environment:
+      POSTGRES_DB: next-terminal
+      POSTGRES_USER: next-terminal
+      POSTGRES_PASSWORD: next-terminal
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql/data
+    restart: always
 
   nt-guacd:
     container_name: ${CONTAINER_NAME}-guacd
