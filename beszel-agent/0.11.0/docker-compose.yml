@@ -3,28 +3,21 @@ networks:
     external: true
 
 services:
-  dozzle:
-    image: amir20/dozzle:v8.12.12
+  beszel-agent:
+    image: henrygd/beszel-agent:0.11.0
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
     restart: always
-    networks:
-      - 1panel-network
+    network_mode: ${NETWORK_MODE:-host}
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8080
+      - ${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}
     env_file:
       - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
-    healthcheck:
-      test: [ "CMD", "/dozzle", "healthcheck" ]
-      interval: 3s
-      timeout: 30s
-      retries: 5
-      start_period: 30s
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - DOZZLE_ADDR=:8080
-      - DOZZLE_BASE=/
-      - DOZZLE_LEVEL=info
+      - TZ=Asia/Shanghai
+      - LOG_LEVEL=info
+      - PORT=${PANEL_APP_PORT_HTTP:-45876}

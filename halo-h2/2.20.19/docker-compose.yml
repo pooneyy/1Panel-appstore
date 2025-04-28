@@ -3,8 +3,8 @@ networks:
     external: true
 
 services:
-  beszel:
-    image: henrygd/beszel:0.10.2
+  halo:
+    image: halohub/halo:2.20.19
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
@@ -13,10 +13,10 @@ services:
       - 1panel-network
     ports:
       - ${PANEL_APP_PORT_HTTP}:8090
-    env_file:
-      - ${GLOBAL_ENV_FILE:-/etc/1panel/envs/global.env}
-      - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
-      - ${BESZEL_ROOT_PATH}/data:/beszel_data
+      - ${HALO_ROOT_PATH}/data:/root/.halo2
     environment:
-      - TZ=Asia/Shanghai
+      - JVM_OPTS=-Xmx256m -Xms256m
+    command:
+      - --spring.sql.init.platform=h2
+      - --halo.external-url=${HALO_EXTERNAL_URL}
