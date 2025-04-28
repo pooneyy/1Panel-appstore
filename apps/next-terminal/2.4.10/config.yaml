@@ -2,7 +2,7 @@ database:
   enabled: true
   type: postgres
   postgres:
-    hostname: localhost
+    hostname: 127.0.0.1
     port: 5432
     username: next-terminal
     password: next-terminal
