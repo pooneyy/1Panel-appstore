@@ -1,7 +1,7 @@
 # 应用名称
 name: hoarder
 # 版本
-version: 0.22.0
+version: 0.24.1
 # 描述信息
 description:
   zh: 一个自托管的全能书签管理工具，支持保存链接、笔记和图片，具有AI自动标签功能。
