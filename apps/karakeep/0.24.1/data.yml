@@ -14,7 +14,7 @@ additionalProperties:
       labelEn: NextAuth Secret
       labelZh: NextAuth密钥
       required: true
-      type: string
+      type: text
       description: "使用 openssl rand -base64 36 生成密钥"
     - default: "a+BQCRpK74QuCSqZPhJ6hDeryTn/1rFKhwuc5DC19hOrI8VR"
       edit: true
@@ -22,7 +22,7 @@ additionalProperties:
       labelEn: Meilisearch Master Key
       labelZh: Meilisearch主密钥
       required: true
-      type: string
+      type: text
       description: "使用 openssl rand -base64 36 生成密钥"
     - default: ""
       edit: true
@@ -30,5 +30,5 @@ additionalProperties:
       labelEn: OpenAI API Key
       labelZh: OpenAI API 密钥
       required: false
-      type: string
+      type: text
       description: "请输入OpenAI API 密钥（非必填）"
