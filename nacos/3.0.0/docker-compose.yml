@@ -23,6 +23,7 @@ services:
       - ${NACOS_ROOT_PATH}/data:/home/nacos/data
     environment:
       - MODE=standalone
+      - NACOS_CONSOLE_PORT=${PANEL_APP_PORT_HTTP:-8080}
       - NACOS_SERVER_PORT=${PANEL_APP_PORT_API:-8848}
       - NACOS_AUTH_ENABLE=true
       - SPRING_DATASOURCE_PLATFORM=mysql
