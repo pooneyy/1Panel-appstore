@@ -3,7 +3,6 @@
   name: Nacos
   tags:
     - WebSite
-    - Tool
     - Middleware
     - Local
   shortDescZh: 动态服务发现、配置管理和服务管理平台
