@@ -9,7 +9,7 @@ services:
       - "${PANEL_APP_PORT_HTTP}:8088"
       - "${PANEL_APP_PORT_SSH}:2022"
       - "${PANEL_APP_PORT_PROXY_HTTP}:80"
-      - "${PANEL_APP_PORT_PROXY_HTTPs}:443"
+      - "${PANEL_APP_PORT_PROXY_HTTPS}:443"
     volumes:
       - "/etc/localtime:/etc/localtime"
       - "${DATA_PATH}:/usr/local/next-terminal/data"
@@ -17,7 +17,7 @@ services:
       - ./config.yaml:/etc/next-terminal/config.yaml
     depends_on:
       - postgresql
-      - nt-guacd
+      - guacd
 
     labels:  
       createdBy: "Apps"
