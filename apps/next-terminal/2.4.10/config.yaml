@@ -2,7 +2,7 @@ database:
   enabled: true
   type: postgres
   postgres:
-    hostname: localhost
+    hostname: postgresql
     port: 5432
     username: next-terminal
     password: next-terminal
@@ -26,6 +26,6 @@ app:
   guacd:
     drive: "/usr/local/next-terminal/data/drive"
     hosts:
-      - hostname: localhost
+      - hostname: guacd
         port: 4822
         weight: 1
