@@ -35,7 +35,7 @@
 
 | 应用名称 | 版本 | 应用介绍 |
 | -------- | ---- | -------- |
-| **[Docmost](https://github.com/docmost/docmost)** | latest | DocMost 是一个轻量级的文档管理系统，支持多人协作编辑与版本控制，适合用来构建团队知识库或文档管理平台。 |
+| **[Docmost](https://github.com/docmost/docmost)** | v0.20.3 | DocMost 是一个轻量级的文档管理系统，支持多人协作编辑与版本控制，适合用来构建团队知识库或文档管理平台。 |
 | **[Hexo](https://github.com/hexojs/hexo)** | latest | Hexo 是一个快速的静态博客框架，支持Markdown编写，具有丰富的插件和主题，适合搭建个人博客或小型网站。 |
 | **[QEXO](https://github.com/Qexo/Qexo)** | latest | 一个美观、强大的在线静态博客管理器，支持Hexo、Hugo、Valaxy 等多种平台，并兼容Github、Gitlab 及本地托管 |
 | **[MD](https://github.com/doocs/md)** | V1.6.0 | 微信 Markdown 编辑器,Markdown 文档自动即时渲染为微信图文 |
