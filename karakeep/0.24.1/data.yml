@@ -1,5 +1,5 @@
 # 应用名称
-name: hoarder
+name: karakeep
 # 版本
 version: 0.24.1
 # 描述信息
@@ -8,31 +8,31 @@ description:
   en: A self-hostable bookmark-everything app with AI-based automatic tagging and full text search.
 # 维护者信息
 maintainer:
-  name: hoarder-app
+  name: karakeep-app
   email: 
-  url: https://github.com/hoarder-app/hoarder
+  url: https://github.com/karakeep-app/karakeep
 # 应用配置
 params:
-  - name: HOARDER_IMAGE
-    value: ghcr.io/hoarder-app/hoarder:release
+  - name: KARAKEEP_IMAGE
+    value: ghcr.io/karakeep-app/karakeep:release
     description: 
       zh: 镜像地址
       en: Image URL
     required: true
-  - name: HOARDER_NAME
-    value: hoarder
+  - name: KARAKEEP_NAME
+    value: karakeep
     description: 
       zh: 容器名称
       en: Container Name
     required: true
-  - name: HOARDER_PORT
+  - name: KARAKEEP_PORT
     value: 3000
     description: 
       zh: 访问端口
       en: Access Port
     required: true
-  - name: HOARDER_DATA_PATH
-    value: /data/hoarder
+  - name: KARAKEEP_DATA_PATH
+    value: /data/karakeep
     description: 
       zh: 数据存储路径
       en: Data Storage Path
