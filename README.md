@@ -62,7 +62,7 @@
 | 应用名称 | 版本 | 应用介绍 |
 | -------- | ---- | -------- |
 | ~~[XiaoMusic](https://github.com/xiaomusic/xiaomusic)~~ | 0.3.75 | 【不再维护】作者已删库 使用小爱/红米音箱播放音乐，音乐使用 yt-dlp 下载 |
-| **[Nezha](https://github.com/naiba/nezha/)** | v1.10.1 | 哪吒面板v1 - 开源、轻量、易用的服务器监控、运维工具 |
+| **[Nezha](https://github.com/naiba/nezha/)** | v1.12.2 | 哪吒面板v1 - 开源、轻量、易用的服务器监控、运维工具 |
 
 ### 🚀 使用方法
 
