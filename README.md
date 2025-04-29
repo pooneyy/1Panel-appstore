@@ -39,7 +39,7 @@
 | **[Hexo](https://github.com/hexojs/hexo)** | latest | Hexo 是一个快速的静态博客框架，支持Markdown编写，具有丰富的插件和主题，适合搭建个人博客或小型网站。 |
 | **[QEXO](https://github.com/Qexo/Qexo)** | latest | 一个美观、强大的在线静态博客管理器，支持Hexo、Hugo、Valaxy 等多种平台，并兼容Github、Gitlab 及本地托管 |
 | **[MD](https://github.com/doocs/md)** | V1.6.0 | 微信 Markdown 编辑器,Markdown 文档自动即时渲染为微信图文 |
-| **[Hoarder](https://github.com/hoarder-app/hoarder)** | v0.22.0 | 一个自托管的全能书签管理工具，支持保存链接、笔记和图片，具有AI自动标签功能。 |
+| **[Karakeep](https://github.com/hoarder-app/hoarder)** | v0.24.1 | 原名Hoarder，一个自托管的全能书签管理工具，支持保存链接、笔记和图片，具有AI自动标签功能。 |
 
 #### 🔒 安全与网络工具
 
