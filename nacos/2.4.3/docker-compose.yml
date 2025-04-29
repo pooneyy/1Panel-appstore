@@ -11,7 +11,7 @@ services:
       createdBy: "Apps"
     network_mode: ${NETWORK_MODE}
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8848
+      - ${PANEL_APP_PORT_HTTP:-8848}:${PANEL_APP_PORT_HTTP:-8848}
       - ${PANEL_APP_PORT_GRPC_CLIENT}:9848
       - ${PANEL_APP_PORT_GRPC_SERVER}:9849
     env_file:
@@ -22,6 +22,6 @@ services:
       - ${NACOS_ROOT_PATH}/data:/home/nacos/data
     environment:
       - MODE=standalone
-      - NACOS_SERVER_PORT=8848
+      - NACOS_SERVER_PORT=${PANEL_APP_PORT_HTTP:-8848}
       - NACOS_AUTH_ENABLE=true
       - SPRING_DATASOURCE_PLATFORM=mysql
