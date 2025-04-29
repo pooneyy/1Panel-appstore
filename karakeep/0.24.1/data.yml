@@ -8,3 +8,27 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: "ky0QvBQNLBQFxY6OurQV/6Wg2KjHqS0YSktBRPJw23QWqq5m"
+      edit: true
+      envKey: NEXTAUTH_SECRET
+      labelEn: NextAuth Secret
+      labelZh: NextAuth密钥
+      required: true
+      type: string
+      description: "使用 openssl rand -base64 36 生成密钥"
+    - default: "a+BQCRpK74QuCSqZPhJ6hDeryTn/1rFKhwuc5DC19hOrI8VR"
+      edit: true
+      envKey: MEILI_MASTER_KEY
+      labelEn: Meilisearch Master Key
+      labelZh: Meilisearch主密钥
+      required: true
+      type: string
+      description: "使用 openssl rand -base64 36 生成密钥"
+    - default: ""
+      edit: true
+      envKey: OPENAI_API_KEY
+      labelEn: OpenAI API Key
+      labelZh: OpenAI API 密钥
+      required: false
+      type: string
+      description: "请输入OpenAI API 密钥（非必填）"
