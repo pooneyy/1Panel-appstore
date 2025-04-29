@@ -1,5 +1,5 @@
 services:
-  hoarder:
+  karakeep:
     image: ghcr.io/karakeep-app/karakeep:0.24.1
     restart: unless-stopped
     volumes:
