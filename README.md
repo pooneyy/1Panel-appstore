@@ -11,10 +11,10 @@
 </p>
 
 <p align="center">
-  <a href="http://www.seclions.top/">作者博客</a> | 
-  <a href="http://www.seclions.top/document">文档教程</a> | 
-  <a href="http://nav.seclions.top/">安全导航</a> | 
-  <a href="http://nav.seclions.top/wechat.html">微信公众号导航</a> 
+  <a href="http://www.secnews.top/">作者博客</a> | 
+  <a href="http://www.secnews.top/document">文档教程</a> | 
+  <a href="http://nav.secnews.top/">安全导航</a> | 
+  <a href="http://nav.secnews.top/wechat.html">微信公众号导航</a> 
 </p>
 
 ### 📖 仓库介绍
