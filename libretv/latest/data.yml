@@ -8,4 +8,11 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-  
+    - default:
+      edit: true
+      envKey: PASSWORD
+      labelEn: Password
+      labelZh: 密码
+      random: true
+      required: false
+      rule: paramComplexity
