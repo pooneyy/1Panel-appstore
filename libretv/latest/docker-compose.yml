@@ -7,8 +7,8 @@ services:
       - 1panel-network
     ports:
       - "${PANEL_APP_PORT_HTTP}:80"
-    environment:
-      - PASSWORD=${PASSWORD}
+    #    environment:
+    #      - PASSWORD=${PASSWORD} # optional
     labels:  
       createdBy: "Apps"
 
