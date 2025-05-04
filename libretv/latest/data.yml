@@ -8,7 +8,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default:
+    - default: ""
       edit: true
       envKey: PASSWORD
       labelEn: Password
