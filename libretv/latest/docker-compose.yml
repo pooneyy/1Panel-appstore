@@ -1,5 +1,5 @@
 services:
-  libretv:
+  libreTV:
     image: "bestzwei/libretv:latest"
     container_name: ${CONTAINER_NAME}
     restart: always
@@ -7,7 +7,8 @@ services:
       - 1panel-network
     ports:
       - "${PANEL_APP_PORT_HTTP}:80"
-      - "PASSWORD:${PASSWORD}"
+    environment:
+      - PASSWORD=${PASSWORD}
     labels:  
       createdBy: "Apps"
 
