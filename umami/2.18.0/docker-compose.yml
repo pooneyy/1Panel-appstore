@@ -1,12 +1,10 @@
-version: "3.8"
-
 networks:
   1panel-network:
     external: true
 
 services:
-  umami-mysql:
-    image: umamisoftware/umami:mysql-v2.17.0
+  umami:
+    image: umamisoftware/umami:postgresql-v2.18.0
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
@@ -21,5 +19,5 @@ services:
     environment:
       - DISABLE_TELEMETRY = 1
       - REMOVE_TRAILING_SLASH = 1
-      - DATABASE_TYPE=mysql
-      - DATABASE_URL=mysql://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOSTNAME}:${DB_PORT}/${DB_DATABASE_NAME}
+      - DATABASE_TYPE=postgresql
+      - DATABASE_URL=postgresql://${DB_USERNAME}:${DB_PASSWORD}@${DB_HOSTNAME}:${DB_PORT}/${DB_DATABASE_NAME}
