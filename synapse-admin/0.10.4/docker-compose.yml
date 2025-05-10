@@ -4,7 +4,7 @@ networks:
 
 services:
   synapse-admin:
-    image: awesometechnologies/synapse-admin:0.10.3
+    image: awesometechnologies/synapse-admin:0.10.4
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
