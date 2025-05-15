@@ -2,7 +2,7 @@
 
 一款可自托管的书签应用程序，带有人工智能功能，适合数据囤积者使用。
 
-> *Hoarder 是一个独立的非商业项目。它与 Hordr.app 或其所有者没有任何关联、支持或联系。*
+> *karakeep（原名Hoarder） 是一个独立的非商业项目。它与 Hordr.app 或其所有者没有任何关联、支持或联系。*
 
 [![主页截图](https://github.com/hoarder-app/hoarder/raw/main/screenshots/homepage.png?raw=true)](https://github.com/hoarder-app/hoarder/blob/main/screenshots/homepage.png?raw=true)
 
