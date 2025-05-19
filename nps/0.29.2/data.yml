@@ -24,17 +24,22 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: "true"
-      envKey: TLS_ENABLE_SWITCH
-      labelEn: Whether TLS is enabled for server-client communication
-      labelZh: 服务端与客户端的通信是否启用 TLS
+    - default: 8026
+      edit: true
+      envKey: NPS_BRIDGE_WS_PORT
+      labelEn: Server-Client Communication WS Port
+      labelZh: 服务端客户端 WS 通信端口
       required: true
-      type: select
-      values:
-        - label: "True"
-          value: "true"
-        - label: "False"
-          value: "false"
+      rule: paramPort
+      type: number
+    - default: 8027
+      edit: true
+      envKey: NPS_BRIDGE_WSS_PORT
+      labelEn: Server-Client Communication WSS Port
+      labelZh: 服务端客户端 WSS 通信端口
+      required: true
+      rule: paramPort
+      type: number
     - default: http://localhost:40209
       edit: true
       envKey: NPS_WEB_HOST
