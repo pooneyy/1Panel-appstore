@@ -13,6 +13,7 @@
                                 <span id="caseudp" langtag="info-caseudp"></span>
                                 <span id="casehttpProxy" langtag="info-casehttpproxy"></span>
                                 <span id="casesocks5" langtag="info-casesocks5"></span>
+                                <span id="casemixProxy" langtag="info-casemixproxy"></span>
                                 <span id="casesecret" langtag="info-casesecret"></span>
                                 <span id="casep2p" langtag="info-casep2p"></span>
                                 <span id="casefile" langtag="info-casefile"></span>
@@ -20,8 +21,9 @@
                             <select class="form-control selectpicker" id="type" name="type">
                                 <option value="tcp" langtag="scheme-tcp"></option>
                                 <option value="udp" langtag="scheme-udp"></option>
-                                <option value="httpProxy" langtag="scheme-httpProxy"></option>
-                                <option value="socks5" langtag="scheme-socks5"></option>
+                                <option value="mixProxy" langtag="scheme-mixProxy"></option>
+                                {{/*<option value="httpProxy" langtag="scheme-httpProxy"></option>*/}}
+                                {{/*<option value="socks5" langtag="scheme-socks5"></option>*/}}
                                 <option value="secret" langtag="scheme-secret"></option>
                                 <option value="p2p" langtag="scheme-p2p"></option>
                                 {{/*<option value="file" langtag="scheme-file"></option>*/}}
@@ -52,6 +54,17 @@
                         <label class="control-label font-bold" langtag="word-serverport"></label>
                         <div class="col-sm-12">
                             <input class="form-control" langtag="info-suchasport" name="port" placeholder="" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group" id="mix_proxy">
+                        <label class="control-label font-bold" langtag="scheme-mixproxy"></label>
+                        <div class="col-sm-12">
+						    <input name="enable_http" type="checkbox" value="1" checked>
+                            <span class="help-block m-b-none" langtag="word-enablehttpproxy"></span>
+                        </div>
+                        <div class="col-sm-12">
+						    <input name="enable_socks5" type="checkbox" value="1" checked>
+                            <span class="help-block m-b-none" langtag="word-enablehttpproxy"></span>
                         </div>
                     </div>
                     {{if eq true .allow_flow_limit}}
@@ -145,11 +158,12 @@
 
 <script>
     var arr = []
-    arr["all"] = ["auth", "port", "target", "password", "flow_reset", "flow_limit", "time_limit", "local_path", "strip_pre", "proxy_protocol", "local_proxy", "client_id", "server_ip"]
+    arr["all"] = ["auth", "port", "target", "password", "flow_reset", "flow_limit", "time_limit", "mix_proxy", "local_path", "strip_pre", "proxy_protocol", "local_proxy", "client_id", "server_ip"]
     arr["tcp"] = ["port", "target", "proxy_protocol", "local_proxy", "client_id", "server_ip", "flow_reset", "flow_limit", "time_limit"]
     arr["udp"] = ["port", "target", "local_proxy", "client_id", "server_ip", "flow_reset", "flow_limit", "time_limit"]
-    arr["socks5"] = ["auth", "port", "client_id", "server_ip", "flow_reset", "flow_limit", "time_limit"]
-    arr["httpProxy"] = ["auth", "port", "client_id", "server_ip", "flow_reset", "flow_limit", "time_limit"]
+    arr["mixProxy"] = ["auth", "port", "client_id", "server_ip", "mix_proxy", "flow_reset", "flow_limit", "time_limit"]
+    //arr["socks5"] = ["auth", "port", "client_id", "server_ip", "flow_reset", "flow_limit", "time_limit"]
+    //arr["httpProxy"] = ["auth", "port", "client_id", "server_ip", "flow_reset", "flow_limit", "time_limit"]
     arr["secret"] = ["target", "password", "client_id", "server_ip", "flow_reset", "flow_limit", "time_limit"]
     arr["p2p"] = ["target", "password", "client_id", "server_ip", "flow_reset", "flow_limit", "time_limit"]
     arr["file"] = ["port", "local_path", "strip_pre", "client_id", "server_ip", "flow_reset", "flow_limit", "time_limit"]
