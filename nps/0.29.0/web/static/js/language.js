@@ -130,6 +130,19 @@
 })(jQuery);
 
 $(document).ready(function () {
+    const savedTheme = localStorage.getItem('nps-theme');
+    const html = document.documentElement;
+    const icon = document.querySelector('#theme-toggle i');
+
+    if (savedTheme === 'dark') {
+        html.setAttribute('theme', 'dark-mode');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    } else {
+        html.removeAttribute('theme');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
     $('body').cloudLang();
     $('body').on('click', 'li[lang]', function () {
         $('#languagemenu').attr('lang', $(this).attr('lang'));
@@ -161,6 +174,7 @@ function submitform(action, url, postdata) {
         }
     });
     switch (action) {
+        case 'clear':
         case 'delete':
             var langobj = languages['content']['confirm'][action];
             action = (langobj[languages['current']] || langobj[languages['default']] || 'Are you sure you want to ' + action + ' it?');
@@ -263,5 +277,23 @@ function showMsg(text, type = 'success', dur = 1500, cb) {
         w.parentNode.removeChild(w);
         if (typeof cb === 'function') cb();
     }, dur);
+}
+
+function toggleTheme() {
+    const html = document.documentElement;
+    const icon = document.querySelector('#theme-toggle i');
+    const isDark = html.getAttribute('theme') === 'dark-mode';
+
+    if (isDark) {
+        html.removeAttribute('theme');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        localStorage.setItem('nps-theme', 'light');
+    } else {
+        html.setAttribute('theme', 'dark-mode');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        localStorage.setItem('nps-theme', 'dark');
+    }
 }
 
