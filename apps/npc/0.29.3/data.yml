@@ -15,12 +15,6 @@ additionalProperties:
       required: true
       rule: paramCommon
       type: text
-    - default: "true"
-      envKey: TLS_ENABLE_SWITCH
-      labelEn: Whether TLS is enabled for server-client communication
-      labelZh: 服务端与客户端的通信是否启用 TLS
-      required: true
-      type: select
       values:
         - label: "True"
           value: "true"
