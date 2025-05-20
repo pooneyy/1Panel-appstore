@@ -1,6 +1,6 @@
 services:
   nps:
-    image: duan2001/nps:v0.29.2
+    image: duan2001/nps:v0.29.3
     container_name: ${CONTAINER_NAME}
     ports:
       - ${PANEL_APP_PORT_HTTP}:${PANEL_APP_PORT_HTTP}
@@ -14,6 +14,7 @@ services:
     restart: always
     volumes:
       - ./conf:/conf
+      - ./web:/web
       - /etc/localtime:/etc/localtime:ro
     environment:
       NPS_WEB_HOST: ${NPS_WEB_HOST}
