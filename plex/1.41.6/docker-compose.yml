@@ -4,7 +4,7 @@ networks:
 
 services:
   plex:
-    image: linuxserver/plex:1.41.6
+    image: linuxserver/plex:1.41.7
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
