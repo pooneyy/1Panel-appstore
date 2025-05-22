@@ -4,10 +4,7 @@ networks:
 
 services:
   bili-fetcher-api:
-    image: bilibili-api:latest
-    build:
-      context: https://github.com/2977094657/BilibiliHistoryFetcher.git
-      dockerfile: docker/Dockerfile.cpu
+    image: qyg2297248353/bili-fetcher:v1.5.5.1
     container_name: api-${CONTAINER_NAME}
     restart: always
     networks:
@@ -23,10 +20,7 @@ services:
       - DOCKER_ENV=true
 
   bili-fetcher-web:
-    image: bilibili-frontend:latest
-    build:
-      context: https://github.com/2977094657/BiliHistoryFrontend.git
-      dockerfile: Dockerfile
+    image: qyg2297248353/bili-fetcher-web:v1.3.6.2
     depends_on:
       - bili-fetcher-api
     container_name: ${CONTAINER_NAME}
