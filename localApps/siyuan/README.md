@@ -40,24 +40,24 @@
 * [🌟 星标历史](#-星标历史)
 * [🗺️ 路线图](#️-路线图)
 * [🚀 下载安装](#-下载安装)
-  * [应用市场](#应用市场)
-  * [安装包](#安装包)
-  * [Docker 部署](#docker-部署)
-  * [Unraid 部署](#unraid-部署)
-  * [宝塔面板 部署](#宝塔面板部署)
-  * [内部预览版](#内部预览版)
+    * [应用市场](#应用市场)
+    * [安装包](#安装包)
+    * [Docker 部署](#docker-部署)
+    * [Unraid 部署](#unraid-部署)
+    * [宝塔面板 部署](#宝塔面板部署)
+    * [内部预览版](#内部预览版)
 * [🏘️ 社区](#️-社区)
 * [🛠️ 开发指南](#️-开发指南)
 * [❓ 常见问题和解答](#-常见问题和解答)
-  * [思源是如何存储数据的？](#思源是如何存储数据的)
-  * [支持通过第三方同步盘进行数据同步吗？](#支持通过第三方同步盘进行数据同步吗)
-  * [思源是开源的吗？](#思源是开源的吗)
-  * [如何升级到新版本？](#如何升级到新版本)
-  * [有的块（比如在列表项中的段落块）找不到块标怎么办？](#有的块比如在列表项中的段落块找不到块标怎么办)
-  * [数据仓库密钥遗失怎么办？](#数据仓库密钥遗失怎么办)
-  * [使用需要付费吗？](#使用需要付费吗)
+    * [思源是如何存储数据的？](#思源是如何存储数据的)
+    * [支持通过第三方同步盘进行数据同步吗？](#支持通过第三方同步盘进行数据同步吗)
+    * [思源是开源的吗？](#思源是开源的吗)
+    * [如何升级到新版本？](#如何升级到新版本)
+    * [有的块（比如在列表项中的段落块）找不到块标怎么办？](#有的块比如在列表项中的段落块找不到块标怎么办)
+    * [数据仓库密钥遗失怎么办？](#数据仓库密钥遗失怎么办)
+    * [使用需要付费吗？](#使用需要付费吗)
 * [🙏 鸣谢](#-鸣谢)
-  * [贡献者列表](#贡献者列表)
+    * [贡献者列表](#贡献者列表)
 
 ---
 
@@ -78,26 +78,26 @@
 大部分功能是免费的，即使是在商业环境下使用。
 
 * 内容块
-  * 块级引用和双向链接
-  * 自定义属性
-  * SQL 查询嵌入
-  * 协议 `siyuan://`
+    * 块级引用和双向链接
+    * 自定义属性
+    * SQL 查询嵌入
+    * 协议 `siyuan://`
 * 编辑器
-  * Block 风格
-  * Markdown 所见即所得
-  * 列表大纲
-  * 块缩放聚焦
-  * 百万字大文档编辑
-  * 数学公式、图表、流程图、甘特图、时序图、五线谱等
-  * 网页剪藏
-  * PDF 标注双链
+    * Block 风格
+    * Markdown 所见即所得
+    * 列表大纲
+    * 块缩放聚焦
+    * 百万字大文档编辑
+    * 数学公式、图表、流程图、甘特图、时序图、五线谱等
+    * 网页剪藏
+    * PDF 标注双链
 * 导出
-  * 块引用和嵌入块 
-  * 带 assets 文件夹的标准 Markdown
-  * PDF、Word 和 HTML
-  * 复制到微信公众号、知乎和语雀
+    * 块引用和嵌入块
+    * 带 assets 文件夹的标准 Markdown
+    * PDF、Word 和 HTML
+    * 复制到微信公众号、知乎和语雀
 * 数据库
-  * 表格视图
+    * 表格视图
 * 闪卡间隔重复
 * 接入 OpenAI 接口支持人工智能写作和问答聊天
 * Tesseract OCR
@@ -114,17 +114,17 @@
 
 ![思源笔记架构设计](https://b3logfile.com/file/2023/05/SiYuan_Arch-Sgu8vXT.png "思源笔记架构设计")
 
-| Project                                                  | Description  | Forks                                                                           | Stars                                                                                | 
-|----------------------------------------------------------|--------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| [lute](https://github.com/88250/lute)                    | 编辑器引擎        | ![GitHub forks](https://img.shields.io/github/forks/88250/lute)                 | ![GitHub Repo stars](https://img.shields.io/github/stars/88250/lute)                 |
+| Project                                                  | Description    | Forks                                                                           | Stars                                                                                | 
+|----------------------------------------------------------|----------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| [lute](https://github.com/88250/lute)                    | 编辑器引擎          | ![GitHub forks](https://img.shields.io/github/forks/88250/lute)                 | ![GitHub Repo stars](https://img.shields.io/github/stars/88250/lute)                 |
 | [chrome](https://github.com/siyuan-note/siyuan-chrome)   | Chrome/Edge 扩展 | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/siyuan-chrome)  | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/siyuan-chrome)  |
-| [bazaar](https://github.com/siyuan-note/bazaar)          | 社区集市         | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/bazaar)         | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/bazaar)         |
-| [dejavu](https://github.com/siyuan-note/dejavu)          | 数据仓库         | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/dejavu)         | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/dejavu)         |
-| [petal](https://github.com/siyuan-note/petal)            | 插件 API       | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/petal)          | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/petal)          |
-| [android](https://github.com/siyuan-note/siyuan-android) | Android App  | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/siyuan-android) | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/siyuan-android) |
-| [ios](https://github.com/siyuan-note/siyuan-ios)         | iOS App      | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/siyuan-ios)     | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/siyuan-ios)     |
-| [harmony](https://github.com/siyuan-note/siyuan-harmony)         | 鸿蒙 App       | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/siyuan-harmony)     | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/siyuan-harmony)     |
-| [riff](https://github.com/siyuan-note/riff)              | 间隔重复         | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/riff)           | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/riff)           |
+| [bazaar](https://github.com/siyuan-note/bazaar)          | 社区集市           | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/bazaar)         | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/bazaar)         |
+| [dejavu](https://github.com/siyuan-note/dejavu)          | 数据仓库           | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/dejavu)         | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/dejavu)         |
+| [petal](https://github.com/siyuan-note/petal)            | 插件 API         | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/petal)          | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/petal)          |
+| [android](https://github.com/siyuan-note/siyuan-android) | Android App    | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/siyuan-android) | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/siyuan-android) |
+| [ios](https://github.com/siyuan-note/siyuan-ios)         | iOS App        | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/siyuan-ios)     | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/siyuan-ios)     |
+| [harmony](https://github.com/siyuan-note/siyuan-harmony) | 鸿蒙 App         | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/siyuan-harmony) | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/siyuan-harmony) |
+| [riff](https://github.com/siyuan-note/riff)              | 间隔重复           | ![GitHub forks](https://img.shields.io/github/forks/siyuan-note/riff)           | ![GitHub Repo stars](https://img.shields.io/github/stars/siyuan-note/riff)           |
 
 ## 🌟 星标历史
 
@@ -188,7 +188,8 @@
 
 #### 启动入口
 
-入口点在构建 Docker 镜像时设置：`ENTRYPOINT ["/opt/siyuan/entrypoint.sh"]`。该脚本允许更改将在容器内运行的用户的 `PUID` 和 `PGID`。这对于解决从主机挂载目录时的权限问题尤为重要。`PUID` 和 `PGID` 可以作为环境变量传递，这样在访问主机挂载的目录时就能更容易地确保正确的权限。
+入口点在构建 Docker 镜像时设置：`ENTRYPOINT ["/opt/siyuan/entrypoint.sh"]`。该脚本允许更改将在容器内运行的用户的 `PUID` 和
+`PGID`。这对于解决从主机挂载目录时的权限问题尤为重要。`PUID` 和 `PGID` 可以作为环境变量传递，这样在访问主机挂载的目录时就能更容易地确保正确的权限。
 
 使用 `docker run b3log/siyuan` 运行容器时，请带入以下参数：
 
@@ -211,11 +212,12 @@ docker run -d \
 * `PGID`: 自定义组 ID（可选，如果未提供，默认为 `1000`）
 * `workspace_dir_host`：宿主机上的工作空间文件夹路径
 * `workspace_dir_container`：容器内工作空间文件夹路径，和后面 `--workspace` 指定成一样的
-  * 另外，也可以通过 `SIYUAN_WORKSPACE_PATH` 环境变量设置路径。如果两者都设置了，命令行的值将优先。
+    * 另外，也可以通过 `SIYUAN_WORKSPACE_PATH` 环境变量设置路径。如果两者都设置了，命令行的值将优先。
 * `accessAuthCode`：访问授权码，请**务必修改**，否则任何人都可以读写你的数据
-  * 另外，也可以通过 `SIYUAN_ACCESS_AUTH_CODE` 环境变量设置授权码。如果两者都设置了，命令行的值将优先。
+    * 另外，也可以通过 `SIYUAN_ACCESS_AUTH_CODE` 环境变量设置授权码。如果两者都设置了，命令行的值将优先。
 
-为了简化，建议将 workspace 文件夹路径在宿主机和容器上配置为一致的，比如将 `workspace_dir_host` 和 `workspace_dir_container` 都配置为 `/siyuan/workspace`，对应的启动命令示例：
+为了简化，建议将 workspace 文件夹路径在宿主机和容器上配置为一致的，比如将 `workspace_dir_host` 和
+`workspace_dir_container` 都配置为 `/siyuan/workspace`，对应的启动命令示例：
 
 ```bash
 docker run -d \
@@ -229,14 +231,15 @@ docker run -d \
 
 #### Docker Compose
 
-对于使用 Docker Compose 运行思源的用户，可以通过环境变量 `PUID` 和 `PGID` 来自定义用户和组的 ID。下面是一个 Docker Compose 配置示例：
+对于使用 Docker Compose 运行思源的用户，可以通过环境变量 `PUID` 和 `PGID` 来自定义用户和组的 ID。下面是一个 Docker Compose
+配置示例：
 
 ```yaml
 version: "3.9"
 services:
   main:
     image: b3log/siyuan
-    command: ['--workspace=/siyuan/workspace/', '--accessAuthCode=${AuthCode}']
+    command: [ '--workspace=/siyuan/workspace/', '--accessAuthCode=${AuthCode}' ]
     ports:
       - 6806:6806
     volumes:
@@ -258,13 +261,15 @@ services:
 
 #### 用户权限
 
-在图片中，“entrypoint.sh ”脚本确保以指定的 “PUID ”和 “PGID ”创建 “siyuan ”用户和组。因此，当主机创建工作区文件夹时，请注意设置文件夹的用户和组所有权，使其与计划使用的 `PUID` 和 `PGID` 匹配。例如
+在图片中，“entrypoint.sh ”脚本确保以指定的 “PUID ”和 “PGID ”创建 “siyuan ”用户和组。因此，当主机创建工作区文件夹时，请注意设置文件夹的用户和组所有权，使其与计划使用的
+`PUID` 和 `PGID` 匹配。例如
 
 ```bash
 chown -R 1001:1002 /siyuan/workspace
 ```
 
-如果使用自定义的 `PUID` 和 `PGID` 值，入口点脚本将确保在容器内创建正确的用户和组，并相应调整挂载卷的所有权。无需在 `docker run` 或 `docker-compose` 中手动传递 `-u`，因为环境变量会处理自定义。
+如果使用自定义的 `PUID` 和 `PGID` 值，入口点脚本将确保在容器内创建正确的用户和组，并相应调整挂载卷的所有权。无需在
+`docker run` 或 `docker-compose` 中手动传递 `-u`，因为环境变量会处理自定义。
 
 #### 隐藏端口
 
@@ -322,13 +327,13 @@ Publish parameters: --accessAuthCode=******（访问授权码）
 2. 首次会提示安装 `Docker` 和 `Docker Compose` 服务，点击立即安装，若已安装请忽略
 3. 安装完成后在 `Docker-应用商店-实用工具` 中找到 `思源笔记`，点击`安装`，也可以在搜索框直接搜索
 4. 设置域名等基本信息，点击 `确定`
-   * 名称：应用名称，默认 `siyuan_随机字符`
-   * 版本选择：默认 `latest`
-   * 域名：如你需要通过域名访问，请在此处填写你的域名
-   * 允许外部访问：如你需通过 `IP+Port` 直接访问，请勾选，如你已经设置了域名，请不要勾选此处
-   * 端口：默认 `6806`，可自行修改
-   * 访问授权码：默认随机生成
-   * 内存限制：0为不限制，根据实际需要设置
+    * 名称：应用名称，默认 `siyuan_随机字符`
+    * 版本选择：默认 `latest`
+    * 域名：如你需要通过域名访问，请在此处填写你的域名
+    * 允许外部访问：如你需通过 `IP+Port` 直接访问，请勾选，如你已经设置了域名，请不要勾选此处
+    * 端口：默认 `6806`，可自行修改
+    * 访问授权码：默认随机生成
+    * 内存限制：0为不限制，根据实际需要设置
 5. 提交后面板会自动进行应用初始化，大概需要`1-3`分钟，初始化完成后即可访问
 
 #### 访问思源笔记
@@ -394,10 +399,13 @@ Publish parameters: --accessAuthCode=******（访问授权码）
 ### 如何升级到新版本？
 
 * 如果是通过应用商店安装的，请通过应用商店更新
-* 如果是桌面端通过安装包安装的，可打开 <kbd>设置</kbd> - <kbd>关于</kbd> - <kbd>自动下载更新安装包</kbd> 选项，这样思源会自动下载最新版安装包并提示安装
+* 如果是桌面端通过安装包安装的，可打开 <kbd>设置</kbd> - <kbd>关于</kbd> - <kbd>自动下载更新安装包</kbd>
+  选项，这样思源会自动下载最新版安装包并提示安装
 * 如果是通过手动安装包安装的，请再次下载安装包安装
 
-可在 <kbd>设置</kbd> - <kbd>关于</kbd> - <kbd>当前版本</kbd> 中 <kbd>检查更新</kbd>，也可以通过关注[官方下载](https://b3log.org/siyuan/download.html)或者 [GitHub Releases](https://github.com/siyuan-note/siyuan/releases) 来获取新版本。
+可在 <kbd>设置</kbd> - <kbd>关于</kbd> - <kbd>当前版本</kbd> 中 <kbd>检查更新</kbd>
+，也可以通过关注[官方下载](https://b3log.org/siyuan/download.html)
+或者 [GitHub Releases](https://github.com/siyuan-note/siyuan/releases) 来获取新版本。
 
 **注意**：切勿将工作空间放置于安装目录下，因为更新版本会清空安装目录下的所有文件
 
@@ -407,14 +415,15 @@ Publish parameters: --accessAuthCode=******（访问授权码）
 
 ### 数据仓库密钥遗失怎么办？
 
-* 如果之前在多个设备上正确初始化过数据仓库密钥的话，那么该密钥在所有设备上都是相同的，可以在 <kbd>设置</kbd> - <kbd>关于</kbd> - <kbd>数据仓库密钥</kbd> - <kbd>复制密钥字符串</kbd> 找回
+* 如果之前在多个设备上正确初始化过数据仓库密钥的话，那么该密钥在所有设备上都是相同的，可以在 <kbd>设置</kbd> - <kbd>
+  关于</kbd> - <kbd>数据仓库密钥</kbd> - <kbd>复制密钥字符串</kbd> 找回
 * 如果之前没有正确配置（比如多个设备上密钥不一致）或者所有设备均不可用，已经无法获得密钥字符串，则可通过如下步骤重置密钥：
 
-  1. 手动备份好数据，可通过 <kbd>导出 Data</kbd> 或者直接在文件系统上复制 <kbd>工作空间/data/</kbd> 文件夹
-  2. <kbd>设置</kbd> - <kbd>关于</kbd> - <kbd>数据仓库密钥</kbd> - <kbd>重置数据仓库</kbd>
-  3. 重新初始化数据仓库密钥，在一台设备上初始化密钥以后，其他设备导入密钥
-  4. 云端使用新的同步目录，旧的同步目录已经无法使用，可以删除
-  5. 已有的云端快照已经无法使用，可以删除
+    1. 手动备份好数据，可通过 <kbd>导出 Data</kbd> 或者直接在文件系统上复制 <kbd>工作空间/data/</kbd> 文件夹
+    2. <kbd>设置</kbd> - <kbd>关于</kbd> - <kbd>数据仓库密钥</kbd> - <kbd>重置数据仓库</kbd>
+    3. 重新初始化数据仓库密钥，在一台设备上初始化密钥以后，其他设备导入密钥
+    4. 云端使用新的同步目录，旧的同步目录已经无法使用，可以删除
+    5. 已有的云端快照已经无法使用，可以删除
 
 ### 使用需要付费吗？
 

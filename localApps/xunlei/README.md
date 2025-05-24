@@ -3,9 +3,13 @@
 [![GitHub Stars][1]][2] [![Docker Pulls][3]][5] [![Docker Version][4]][5]
 
 [1]: https://img.shields.io/github/stars/cnk3x/xunlei?style=flat
+
 [2]: https://star-history.com/#cnk3x/xunlei&Date
+
 [3]: https://img.shields.io/docker/pulls/cnk3x/xunlei.svg
+
 [4]: https://img.shields.io/docker/v/cnk3x/xunlei
+
 [5]: https://hub.docker.com/r/cnk3x/xunlei
 
 从迅雷群晖套件中提取出来用于其他设备的迅雷远程下载服务程序。仅供研究学习测试。 \
