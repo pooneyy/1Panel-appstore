@@ -1,0 +1,28 @@
+additionalProperties:
+  formFields:
+    - default: "8384"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: WebUI 端口
+      labelEn: WebUI port
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: "22000"
+      edit: true
+      envKey: PANEL_APP_PORT_SYNC
+      labelZh: 同步端口
+      labelEn: Sync Port
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: "21027"
+      edit: true
+      envKey: PANEL_APP_PORT_DISCOVERY
+      labelZh: 服务发现端口
+      labelEn: Discovery Port
+      required: true
+      rule: paramPort
+      type: number

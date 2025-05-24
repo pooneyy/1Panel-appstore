@@ -1,0 +1,26 @@
+networks:
+  1panel-network:
+    external: true
+
+services:
+  syncthing:
+    container_name: ${CONTAINER_NAME}
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Shanghai
+      - HOME=/data
+    image: linuxserver/syncthing:latest
+    labels:
+      createdBy: "Apps"
+    networks:
+      - 1panel-network
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:8384
+      - ${PANEL_APP_PORT_SYNC}:22000/tcp
+      - ${PANEL_APP_PORT_SYNC}:22000/udp
+      - ${PANEL_APP_PORT_DISCOVERY}:21027/udp
+    restart: always
+    volumes:
+      - ./data/config:/config
+      - ./data/data:/data
