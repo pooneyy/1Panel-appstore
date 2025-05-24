@@ -3,6 +3,9 @@ name: Renovate
 on:
   schedule:
     - cron: "0 0 * * *"
+  push:
+    branches:
+      - custom
   workflow_dispatch:
     inputs:
       manual-trigger:
