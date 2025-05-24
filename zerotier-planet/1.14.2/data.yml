@@ -1,0 +1,44 @@
+additionalProperties:
+  formFields:
+    - default: "3443"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelZh: WebUI 端口
+      labelEn: WebUI port
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: "9994"
+      edit: true
+      envKey: PANEL_APP_PORT_API
+      labelZh: API 端口
+      labelEn: API Port
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: "3000"
+      edit: true
+      envKey: PANEL_APP_PORT_FILE
+      labelZh: 文件传输端口
+      labelEn: File transfer port
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: ""
+      edit: true
+      envKey: IP_ADDR4
+      labelZh: 公网 IPV4/IPV6
+      labelEn: Public IPV4/IPV6
+      required: false
+      type: text
+
+    - default: ""
+      edit: true
+      envKey: IP_ADDR6
+      labelZh: 公网 IPV4/IPV6
+      labelEn: Public IPV6/IPV6
+      required: false
+      type: text
