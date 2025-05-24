@@ -1,0 +1,36 @@
+networks:
+  1panel-network:
+    external: true
+services:
+  movie-pilot:
+    container_name: ${CONTAINER_NAME}
+    environment:
+      - NGINX_PORT=3000
+      - PORT=3001
+      - PUID=0
+      - PGID=0
+      - UMASK=022
+      - TZ=Asia/Shanghai
+      - SUPERUSER=${SUPERUSER}
+
+    image: jxxghp/moviepilot-v2:2.4.9
+    labels:
+      createdBy: Apps
+    networks:
+      - 1panel-network
+    logging:
+      driver: json-file
+      options:
+        max-size: 5m
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+      - ${PANEL_APP_PORT_API}:3001
+    restart: always
+    stdin_open: true
+    tty: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data/config:/config
+      - ./data/ms-playwright:/moviepilot/.cache/ms-playwright
+      - ./data/download:/download
+      - ./data/media:/media
