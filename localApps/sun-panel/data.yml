@@ -1,0 +1,19 @@
+name: Sun Panel
+tags:
+  - 工具
+title: 开源的文件同步客户端与服务器软件
+description: 开源的文件同步客户端与服务器软件，采用Go语言编写。它可以在本地网络上的设备之间或通过Internet在远程设备之间同步文件，使用了其独有的对等自由块交换协议
+additionalProperties:
+  key: sun-panel
+  name: Sun Panel
+  tags:
+    - Tool
+  shortDescZh: 一个服务器、NAS导航面板、Homepage、浏览器首页
+  shortDescEn: A server, NAS navigation panel, Homepage, Browser homepage
+  type: website
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://syncthing.net
+  github: https://github.com/syncthing/syncthing
+  document: https://docs.syncthing.net
