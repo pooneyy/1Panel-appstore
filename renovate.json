@@ -5,6 +5,7 @@
     "githubaction@githubaction.com"
   ],
   "rebaseWhen": "never",
+  "ignorePaths": ["apps/**"],
   "packageRules": [
     {
       "packageNames": ["docker-compose"],
