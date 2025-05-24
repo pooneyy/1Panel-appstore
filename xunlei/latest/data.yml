@@ -1,0 +1,27 @@
+additionalProperties:
+  formFields:
+    - default: "40163"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Port
+      labelZh: 端口
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: "xunlei"
+      edit: true
+      envKey: XL_DASHBOARD_USERNAME
+      labelEn: Dashboard Username
+      labelZh: 控制台用户名
+      required: true
+      type: text
+
+    - default: "xunlei"
+      edit: true
+      envKey: XL_DASHBOARD_PASSWORD
+      labelEn: Dashboard Password
+      labelZh: 控制台密码
+      required: true
+      rule: paramComplexity
+      type: password
