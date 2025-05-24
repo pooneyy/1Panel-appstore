@@ -66,7 +66,8 @@ To run Syncthing in Docker, see [the Docker README][16].
 ## Vote on features/bugs
 
 We'd like to encourage you to [vote][12] on issues that matter to you.
-This helps the team understand what are the biggest pain points for our users, and could potentially influence what is being worked on next.
+This helps the team understand what are the biggest pain points for our users, and could potentially influence what is
+being worked on next.
 
 ## Getting in Touch
 
@@ -98,17 +99,31 @@ Please see the Syncthing [documentation site][6] [[source]][17].
 All code is licensed under the [MPLv2 License][7].
 
 [1]: https://docs.syncthing.net/specs/bep-v1.html
+
 [2]: https://docs.syncthing.net/intro/getting-started.html
+
 [3]: https://github.com/syncthing/syncthing/blob/main/etc
+
 [5]: https://docs.syncthing.net/dev/building.html
+
 [6]: https://docs.syncthing.net/
+
 [7]: https://github.com/syncthing/syncthing/blob/main/LICENSE
+
 [8]: https://forum.syncthing.net/
+
 [10]: https://github.com/syncthing/syncthing/issues
+
 [11]: https://docs.syncthing.net/users/contrib.html#gui-wrappers
+
 [12]: https://www.bountysource.com/teams/syncthing/issues
+
 [13]: https://github.com/syncthing/syncthing/blob/main/GOALS.md
+
 [14]: https://github.com/syncthing/syncthing/raw/main/assets/logo-text-128.png
+
 [15]: https://syncthing.net/
+
 [16]: https://github.com/syncthing/syncthing/blob/main/README-Docker.md
+
 [17]: https://github.com/syncthing/docs
