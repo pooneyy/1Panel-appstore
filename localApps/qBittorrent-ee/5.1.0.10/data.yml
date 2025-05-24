@@ -1,0 +1,20 @@
+additionalProperties:
+  formFields:
+    - default: 40118
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: WebUI Port
+      labelZh: 网页端口
+      required: true
+      rule: paramPort
+      type: number
+
+    - default: 40119
+      edit: true
+      envKey: PANEL_APP_PORT_PEER
+      labelEn: Peer Port
+      labelZh: BT端口
+      required: true
+      rule: paramPort
+      type: number
+
