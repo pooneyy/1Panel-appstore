@@ -6,6 +6,7 @@
   "gitIgnoredAuthors": [
     "githubaction@githubaction.com"
   ],
+  "dependencyDashboard": true,
   "rebaseWhen": "never",
   "ignorePaths": [
     "apps/**"
