@@ -3,7 +3,7 @@ networks:
     external: true
 services:
   alist:
-    image: xhofe/alist:v3.44.0
+    image: xhofe/alist:v3.45.0-ffmpeg
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
