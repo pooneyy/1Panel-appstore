@@ -4,8 +4,8 @@
 app_name=$1
 old_version=$2
 
-# find all docker-compose files under apps/$app_name (there should be only one)
-docker_compose_files=$(find apps/$app_name/$old_version -name docker-compose.yml)
+# find all docker-compose files under localApps/$app_name (there should be only one)
+docker_compose_files=$(find localApps/$app_name/$old_version -name docker-compose.yml)
 
 for docker_compose_file in $docker_compose_files
 do
@@ -21,6 +21,6 @@ do
 	  # Trim the "v" prefix
 	  trimmed_version=${version/#"v"}
 
-      mv apps/$app_name/$old_version apps/$app_name/$trimmed_version
+      mv localApps/$app_name/$old_version localApps/$app_name/$trimmed_version
     fi
 done
