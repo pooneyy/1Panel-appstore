@@ -45,7 +45,7 @@
 
 | 应用名称 | 版本 | 应用介绍 |
 | -------- | ---- | -------- |
-| **[EasyTier](https://github.com/EasyTier/Easytier)** | v2.2.4 | 一个简单、安全、去中心化的内网穿透 VPN 组网方案，使用 Rust 语言和 Tokio 框架实现。 |
+| **[EasyTier](https://github.com/EasyTier/Easytier)** | v2.3.0 | 一个简单、安全、去中心化的内网穿透 VPN 组网方案，使用 Rust 语言和 Tokio 框架实现。 |
 | **[NPC](https://github.com/djylb/nps)** | v0.29.3 | NPS客户端，轻量级、高性能、功能强大的**内网穿透**代理工具。(djylb二开版本) |
 | **[NPS](https://github.com/djylb/nps)** | v0.29.3| 一款轻量级、高性能、功能强大的内网穿透代理服务器(djylb二开版本) |
 | **[SafeLine](https://github.com/chaitin/SafeLine)** | V7.6.2 | SafeLine 是一款简单好用, 效果突出的 **`Web 应用防火墙(WAF)`**，可以保护 Web 服务不受黑客攻击。 |
@@ -61,7 +61,7 @@
 
 | 应用名称 | 版本 | 应用介绍 |
 | -------- | ---- | -------- |
-| **[XiaoMusic](https://github.com/xiaomusic/xiaomusic)** | 0.3.79 | 使用小爱/红米音箱播放音乐，音乐使用 yt-dlp 下载 |
+| **[XiaoMusic](https://github.com/hanxi/xiaomusic)** | 0.3.79 | 使用小爱/红米音箱播放音乐，音乐使用 yt-dlp 下载 |
 | **[Nezha](https://github.com/naiba/nezha/)** | v1.12.4 | 哪吒面板v1 - 开源、轻量、易用的服务器监控、运维工具 |
 
 ### 🚀 使用方法
