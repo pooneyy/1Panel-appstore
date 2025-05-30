@@ -6,6 +6,7 @@
   "gitIgnoredAuthors": [
     "githubaction@githubaction.com"
   ],
+  "forkProcessing": "enabled",
   "dependencyDashboard": true,
   "rebaseWhen": "never",
   "ignorePaths": [
