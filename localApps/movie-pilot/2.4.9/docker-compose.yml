@@ -13,7 +13,7 @@ services:
       - TZ=Asia/Shanghai
       - SUPERUSER=${SUPERUSER}
 
-    image: jxxghp/moviepilot-v2:2.4.9
+    image: jxxghp/moviepilot-v2:2.5.1
     labels:
       createdBy: Apps
     networks:
