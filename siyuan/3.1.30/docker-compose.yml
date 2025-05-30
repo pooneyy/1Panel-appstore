@@ -10,7 +10,7 @@ services:
     environment:
       - RUN_IN_CONTAINER=true
       - TZ=Asia/Shanghai
-    image: b3log/siyuan:v3.1.30
+    image: b3log/siyuan:v3.1.31
     labels:
       createdBy: Apps
     networks:
