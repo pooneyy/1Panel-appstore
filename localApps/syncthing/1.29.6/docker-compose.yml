@@ -10,7 +10,7 @@ services:
       - PGID=0
       - TZ=Asia/Shanghai
       - HOME=/data
-    image: linuxserver/syncthing:1.29.6
+    image: linuxserver/syncthing:1.29.7
     labels:
       createdBy: "Apps"
     networks:
