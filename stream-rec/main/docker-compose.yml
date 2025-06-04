@@ -18,6 +18,7 @@ services:
       - ${ENV_FILE:-/etc/1panel/envs/default.env}
     volumes:
       - ${STREAM_REC_ROOT_PATH}/records:/opt/records
+      - ${STREAM_REC_ROOT_PATH}/rclone:/root/.config/rclone
       - ${STREAM_REC_ROOT_PATH}/download:/download
     environment:
       - TZ=Asia/Shanghai

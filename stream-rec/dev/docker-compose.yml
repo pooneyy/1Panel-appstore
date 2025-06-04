@@ -4,7 +4,7 @@ networks:
 
 services:
   stream-rec-backend:
-    image: streamrec/stream-rec:v0.7.2
+    image: streamrec/stream-rec:dev
     container_name: ${CONTAINER_NAME}-backend
     labels:
       createdBy: "Apps"
@@ -32,7 +32,7 @@ services:
   stream-rec-frontend:
     depends_on:
       - stream-rec-backend
-    image: streamrec/stream-rec-front:v0.7.2
+    image: streamrec/stream-rec-front:dev
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
