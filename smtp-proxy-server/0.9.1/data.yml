@@ -16,3 +16,10 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
+    - default: ""
+      edit: true
+      envKey: PROXY_URL
+      labelZh: 服务地址
+      labelEn: Server Address
+      required: true
+      type: text
