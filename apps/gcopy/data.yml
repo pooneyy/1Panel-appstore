@@ -1,0 +1,23 @@
+name: gcopy
+tags:
+  - 实用工具
+title: 不同操作系统之间的剪贴板同步服务
+description: 适用于不同设备的剪贴板同步服务，可以同步文本、屏幕截图和文件
+additionalProperties:
+  key: gcopy
+  name: gcopy
+  tags:
+    - Tool
+    - local
+  shortDescZh: 不同操作系统之间的剪贴板同步服务
+  shortDescEn: A clipboard synchronization service
+  description:
+    zh: 适用于不同设备的剪贴板同步服务，可以同步文本、屏幕截图和文件
+    en: A clipboard synchronization service between different operating systems.
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://gcopy.llaoj.cn/zh
+  github: https://github.com/llaoj/gcopy
+  document: https://github.com/llaoj/gcopy/blob/main/docs/zh-CN/README.md

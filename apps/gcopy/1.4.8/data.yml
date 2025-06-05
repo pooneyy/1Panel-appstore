@@ -1,0 +1,34 @@
+name: gcopy
+tags:
+    - Other
+title: gcopy
+description: A 1Panel deployment for gcopy
+additionalProperties:
+    key: gcopy
+    name: gcopy
+    tags:
+        - Other
+    shortDescZh: gcopy 应用
+    shortDescEn: gcopy Application
+    type: website
+    crossVersionUpdate: true
+    architectures:
+        - amd64
+        - arm64
+    formFields:
+        - default: "3376"
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP1
+          labelEn: Service Port 3376
+          labelZh: 服务端口 3376
+          required: true
+          rule: paramPort
+          type: number
+        - default: "3375"
+          edit: true
+          envKey: PANEL_APP_PORT_HTTP2
+          labelEn: Service Port 3375
+          labelZh: 服务端口 3375
+          required: true
+          rule: paramPort
+          type: number
