@@ -62,12 +62,12 @@ additionalProperties:
       label:
         en: Password
         zh: 数据库用户密码
-    - default: ""
-      disabled: true
+    - default: affine
       envKey: PANEL_REDIS_ROOT_PASSWORD
       labelEn: Password
       labelZh: redis 密码
-      type: text
+      random: true
+      type: password
       label:
         en: Password
         zh: redis 密码
