@@ -1,61 +1,22 @@
-# Hexo
+- # 使用[PairDrop](https://pairdrop.net/)*发送*
 
-> 一个快速、简单且功能强大的博客框架，由[Node.js](https://nodejs.org/)提供支持。
+  [**在网页浏览器中**](https://pairdrop.net/) 共享本地文件。
+  灵感源自 Apple 的 AirDrop。Snapdrop
+  的分支。
 
-[网站](https://hexo.io/)| [文档](https://hexo.io/docs/)| [安装指南](https://hexo.io/docs/#Installation)| [贡献指南](https://hexo.io/docs/contributing)| [行为准则](https://github.com/hexojs/hexo/blob/master/CODE_OF_CONDUCT.md)| [API](https://hexo.io/api/) | [Twitter](https://twitter.com/hexojs)
+  ## 特征
 
-## 特征
+  可在所有平台上运行的本地网络上的文件共享。
 
-- 快速生成
-- 支持 GitHub Flavored Markdown 和大多数 Octopress 插件
-- 一条命令即可部署到 GitHub Pages、Heroku 等。
-- 强大的 API，实现无限扩展
-- 数百个[主题](https://hexo.io/themes/)和[插件](https://hexo.io/plugins/)
+  - 一种可行、类似 AirDrop 的多平台解决方案。
+    - 通过点对点连接将图像、文档或文本发送到同一本地网络上的设备。
+  - 互联网传输
+    - 加入临时公共房间，通过互联网轻松传输文件。
+  - Web 应用程序
+    - 适用于所有配备现代网络浏览器的设备。
 
-## 快速入门
+  想从手机发送文件到笔记本电脑吗？
+  想和使用安卓和 iOS 系统的好友分享原始画质的照片吗？
+  想在 Linux 系统之间点对点共享私人文件吗？
 
-**安装 Hexo**
-
-```
-$ npm install hexo-cli -g
-```
-
-在 macOS 和 Linux 上使用[brew](https://brew.sh/)安装：
-
-```
-$ brew install hexo
-```
-
-**设置你的博客**
-
-```
-$ hexo init blog
-$ cd blog
-```
-
-**启动服务器**
-
-```
-$ hexo server
-```
-
-**创建新帖子**
-
-```
-$ hexo new "Hello Hexo"
-```
-
-**生成静态文件**
-
-```
-$ hexo generate
-```
-
-## 更多信息
-
-- 阅读[文档](https://hexo.io/)
-- 访问[精彩 Hexo](https://github.com/hexojs/awesome-hexo)列表
-- [在故障排除](https://hexo.io/docs/troubleshooting.html)中寻找解决方案
-- 加入[Google Group](https://groups.google.com/group/hexo)、[Discord](https://discord.gg/teM2Anj)、[Gitter](https://gitter.im/hexojs/hexo)或[Telegram上的讨论](https://t.me/hexojs)
-- 请参阅wiki 上的[插件列表](https://hexo.io/plugins/)和[主题列表](https://hexo.io/themes/)
-- 关注[@hexojs](https://twitter.com/hexojs)了解最新消息
+  [![屏幕截图 GIF 显示 PairDrop 正在使用中](https://github.com/schlagmichdoch/PairDrop/raw/master/docs/pairdrop_screenshot_mobile.gif)](https://github.com/schlagmichdoch/PairDrop/blob/master/docs/pairdrop_screenshot_mobile.gif)
