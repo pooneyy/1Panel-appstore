@@ -1,23 +1,23 @@
-name: gcopy
+name: PairDrop
 tags:
   - 实用工具
-title: 不同操作系统之间的剪贴板同步服务
-description: 适用于不同设备的剪贴板同步服务，可以同步文本、屏幕截图和文件
+title: 跨平台传输文件
+description: 跨平台传输文件，无需设置，无需注册
 additionalProperties:
-  key: gcopy
-  name: gcopy
+  key: pairdrop
+  name: pairdrop
   tags:
     - Tool
     - local
-  shortDescZh: 不同操作系统之间的剪贴板同步服务
-  shortDescEn: A clipboard synchronization service
+  shortDescZh: 跨平台传输文件
+  shortDescEn: Transfer Files Cross-Platform
   description:
-    zh: 适用于不同设备的剪贴板同步服务，可以同步文本、屏幕截图和文件
-    en: A clipboard synchronization service between different operating systems.
+    zh: PairDrop：跨平台传输文件，无需设置，无需注册
+    en: Transfer Files Cross-Platform. No Setup, No Signup.
   type: tool
   crossVersionUpdate: true
   limit: 0
   recommend: 0
-  website: https://gcopy.llaoj.cn/zh
-  github: https://github.com/llaoj/gcopy
-  document: https://github.com/llaoj/gcopy/blob/main/docs/zh-CN/README.md
+  website: https://pairdrop.net/
+  github: https://github.com/schlagmichdoch/PairDrop
+  document: https://github.com/schlagmichdoch/PairDrop
