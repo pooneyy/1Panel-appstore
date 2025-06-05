@@ -1,4 +1,3 @@
-name: affine
 services:
   affine:
     image: ghcr.io/toeverything/affine-graphql:stable
@@ -20,8 +19,11 @@ services:
       - REDIS_SERVER_HOST=redis
       - DATABASE_URL=postgresql://${DB_USERNAME}:${DB_PASSWORD}@postgres:5432/${DB_DATABASE:-affine}
       - AFFINE_INDEXER_ENABLED=false
+    networks:
+            - 1panel-network
     restart: always
-
+    labels:
+        createdBy: Apps
   affine_migration:
     image: ghcr.io/toeverything/affine-graphql:stable
     container_name: ${CONTAINER_NAME}_migration_job
@@ -30,6 +32,8 @@ services:
       - ${UPLOAD_LOCATION}:/root/.affine/storage
       - ${CONFIG_LOCATION}:/root/.affine/config
     command: ['sh', '-c', 'node ./scripts/self-host-predeploy.js']
+    networks:
+        - 1panel-network
     environment:
       - REDIS_SERVER_HOST=redis
       - DATABASE_URL=postgresql://${DB_USERNAME}:${DB_PASSWORD}@postgres:5432/${DB_DATABASE:-affine}
@@ -39,7 +43,8 @@ services:
         condition: service_healthy
       redis:
         condition: service_healthy
-
+    labels:
+        createdBy: Apps
   redis:
     image: redis
     container_name: ${CONTAINER_NAME}_redis
@@ -48,6 +53,10 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+        - 1panel-network
+    labels:
+        createdBy: Apps
     restart: always
 
   postgres:
@@ -55,6 +64,10 @@ services:
     container_name: ${CONTAINER_NAME}_postgres
     volumes:
       - ${DB_DATA_LOCATION}:/var/lib/postgresql/data
+    networks:
+        - 1panel-network
+    labels:
+        createdBy: Apps
     environment:
       POSTGRES_USER: ${DB_USERNAME}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
