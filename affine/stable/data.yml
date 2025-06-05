@@ -46,7 +46,6 @@ additionalProperties:
       labelEn: Upload Location
       labelZh: 上传目录
       required: true
-      rule: paramCommon
       type: text
       label:
         en: Upload Location
@@ -56,7 +55,6 @@ additionalProperties:
       labelEn: Config Location
       labelZh: 配置目录
       required: true
-      rule: paramCommon
       type: text
       label:
         en: Config Location
@@ -66,7 +64,6 @@ additionalProperties:
       labelEn: Postgre Data Location
       labelZh: Postgre 数据目录
       required: true
-      rule: paramCommon
       type: text
       label:
         en: Postgre Data Location
