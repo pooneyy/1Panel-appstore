@@ -1,0 +1,75 @@
+services:
+    affine:
+        image: ghcr.io/toeverything/affine-graphql:stable
+        container_name: ${CONTAINER_NAME}
+        restart: always
+        ports:
+            - ${PANEL_APP_PORT_HTTP}:3010
+        depends_on:
+          redis:
+            condition: service_healthy
+          postgres:
+            condition: service_healthy
+          affine_migration:
+            condition: service_completed_successfully
+        volumes:
+            - ./data/storage:/root/.affine/storage
+            - ./data/config:/root/.affine/config
+        networks:
+            - 1panel-network
+        environment:
+            - REDIS_SERVER_HOST=redis
+            - DATABASE_URL=postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@postgres:5432/${PANEL_DB_NAME:-affine}
+            - AFFINE_INDEXER_ENABLED=false
+        labels:
+            createdBy: Apps
+    affine_migration:
+        image: ghcr.io/toeverything/affine-graphql:stable
+        container_name: ${CONTAINER_NAME}-migration
+        volumes:
+            - ./data/storage:/root/.affine/storage
+            - ./data/config:/root/.affine/config
+        networks:
+            - 1panel-network
+        environment:
+            - REDIS_SERVER_HOST=redis
+            - DATABASE_URL=postgresql://${PANEL_DB_USER}:${PANEL_DB_USER_PASSWORD}@postgres:5432/${PANEL_DB_NAME:-affine}
+            - AFFINE_INDEXER_ENABLED=false
+        depends_on:
+          postgres:
+            condition: service_healthy
+          redis:
+            condition: service_healthy
+        labels:
+            createdBy: Apps
+        command:
+            - sh
+            - -c
+            - node ./scripts/self-host-predeploy.js
+    postgres:
+        image: pgvector/pgvector:pg16
+        container_name: ${CONTAINER_NAME}-postgres
+        restart: always
+        volumes:
+            - ./data/postgres/data:/var/lib/postgresql/data
+        networks:
+            - 1panel-network
+        environment:
+            - POSTGRES_USER= ${PANEL_DB_USER}
+            - POSTGRES_PASSWORD= ${PANEL_DB_USER_PASSWORD}
+            - POSTGRES_DB= ${PANEL_DB_NAME:-affine}
+            - POSTGRES_INITDB_ARGS= '--data-checksums'
+            - POSTGRES_HOST_AUTH_METHOD= trust
+        labels:
+            createdBy: Apps
+    redis:
+        image: redis
+        container_name: ${CONTAINER_NAME}-redis
+        restart: always
+        networks:
+            - 1panel-network
+        labels:
+            createdBy: Apps
+networks:
+    1panel-network:
+        external: true
