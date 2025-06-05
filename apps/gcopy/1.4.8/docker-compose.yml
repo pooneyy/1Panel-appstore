@@ -19,7 +19,7 @@ services:
             - --smtp-ssl
     gcopy-frontend:
         image: llaoj/gcopy-frontend
-        container_name: ${CONTAINER_NAME}
+        container_name: ${CONTAINER_NAME}-frontend
         restart: always
         ports:
             - ${PANEL_APP_PORT_HTTP2}:3375
