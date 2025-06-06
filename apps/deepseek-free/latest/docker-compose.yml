@@ -1,0 +1,15 @@
+services:
+    deepseek-free-api:
+        image: vinlic/deepseek-free-api:latest
+        container_name: ${CONTAINER_NAME}
+        ports:
+            - ${PANEL_APP_PORT_HTTP1}:8000
+        networks:
+            - 1panel-network
+        environment:
+            - TZ=Asia/Shanghai
+        labels:
+            createdBy: Apps
+networks:
+    1panel-network:
+        external: true
