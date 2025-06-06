@@ -1,19 +1,24 @@
-name: 1Panel Apps
+name: Deepseek-Free-API
 tags:
-  - 建站
-title: 适配 1Panel 应用商店的通用应用模板
-description: 适配 1Panel 应用商店的通用应用模板
+  - AI / 大模型
+title: DeepSeek-V3 & R1大模型逆向API
+description: DeepSeek V3 Free 服务
 additionalProperties:
-  key: 1panel-apps
-  name: 1Panel Apps
+  key: deepseek
+  name: deepseek-free-api
   tags:
-    - Website
-  shortDescZh: 适配 1Panel 应用商店的通用应用模板
-  shortDescEn: Universal app template for the 1Panel App Store
+    - AI
+    - Tools
+  shortDescZh: DeepSeek-V3 & R1大模型逆向API
+  shortDescEn: A 1Panel deployment for deepseek-free-api
   type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
-  website: https://github.com/okxlin/appstore
-  github: https://github.com/okxlin/appstore
-  document: https://github.com/okxlin/appstore
+  architectures:
+    - amd64
+    - arm64
+
+  website: https://github.com/LLM-Red-Team/deepseek-free-api
+  github: https://platform.deepseek.com/
+  document: https://github.com/LLM-Red-Team/deepseek-free-api
