@@ -1,5 +1,5 @@
 services:
-    deepseek-free-api:
+    kimi-free-api:
         image: vinlic/kimi-free-api:latest
         container_name: ${CONTAINER_NAME}
         ports:
