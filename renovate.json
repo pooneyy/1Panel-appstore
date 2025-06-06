@@ -21,6 +21,12 @@
     },
     {
       "matchFileNames": [
+        "apps/redis/8.*/*.yml"
+      ],
+      "allowedVersions": "/^8.*/"
+    },
+    {
+      "matchFileNames": [
         "apps/redis/7.*/*.yml"
       ],
       "allowedVersions": "/^7.*/"
