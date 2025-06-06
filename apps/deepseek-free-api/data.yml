@@ -5,7 +5,7 @@ title: DeepSeek-V3 & R1大模型逆向API
 description: DeepSeek V3 Free 服务
 additionalProperties:
   key: deepseek-free-api
-  name: deepseek-free-api
+  name: Deepseek-Free-API
   tags:
     - AI
     - Tools
