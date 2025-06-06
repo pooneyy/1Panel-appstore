@@ -3,7 +3,7 @@ services:
         image: vinlic/deepseek-free-api:latest
         container_name: ${CONTAINER_NAME}
         ports:
-            - ${PANEL_APP_PORT_HTTP1}:8000
+            - ${PANEL_APP_PORT_HTTP}:8000
         networks:
             - 1panel-network
         environment:
