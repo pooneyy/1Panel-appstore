@@ -19,6 +19,6 @@ additionalProperties:
     - amd64
     - arm64
 
-  website: https://github.com/LLM-Red-Team/deepseek-free-api
-  github: https://platform.deepseek.com/
+  website: https://platform.deepseek.com/
+  github: https://github.com/LLM-Red-Team/deepseek-free-api
   document: https://github.com/LLM-Red-Team/deepseek-free-api
