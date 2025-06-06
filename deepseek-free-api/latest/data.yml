@@ -1,6 +1,6 @@
 additionalProperties:
     formFields:
-        - default: "8100"
+        - default: "8001"
           edit: true
           envKey: PANEL_APP_PORT_HTTP
           labelEn: Service Port
