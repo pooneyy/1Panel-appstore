@@ -39,6 +39,14 @@
 | **[Kimi-Free-API](https://github.com/LLM-Red-Team/kimi-free-api)** | latest | 🚀 KIMI AI 长文本大模型逆向API   |
 | **[Qwen-Free-API](https://github.com/LLM-Red-Team/qwen-free-api)** | latest | 🚀 阿里通义千问2.5大模型逆向API  |
 | **[GLM-Free-API](https://github.com/LLM-Red-Team/glm-free-api)** | latest | 🚀 智谱清言ChatGLM-4-Plus大模型逆向API  |
+| **[Jimeng-Free-API](https://github.com/LLM-Red-Team/jimeng-free-api)** | latest | 🚀 即梦3.0逆向API【特长：图像生成顶流】 |
+| **[Spark-Free-API](https://github.com/LLM-Red-Team/spark-free-api)** | latest | 🚀 讯飞星火大模型逆向API【特长：办公助手】 |
+| **[Minimax-Free-API](https://github.com/LLM-Red-Team/minimax-free-api)** | latest | 🚀 MiniMax大模型海螺AI逆向API【特长：超自然语音】 |
+| **[Spark-Free-API](https://github.com/LLM-Red-Team/step-free-api)** | latest | 🚀 阶跃星辰跃问Step 多模态大模型逆向API【特长：超强多模态】 |
+| **[Metaso-Free-API](https://github.com/LLM-Red-Team/metaso-free-api)** | latest | 🚀 秘塔AI搜索逆向API【特长：超强检索超长输出】 |
+
+支持一键部署AI免费API接口，使用方式请参考应用内README介绍
+![LLM-Free-API](https://raw.githubusercontent.com/arch3rPro/1Panel-Appstore/dev/LLM_Free-API.png)
 
 #### 📝 文档与内容管理
 
