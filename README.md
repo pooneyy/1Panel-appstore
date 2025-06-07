@@ -79,7 +79,7 @@
 
 | 应用名称 | 版本 | 应用介绍 |
 | -------- | ---- | -------- |
-| **[XiaoMusic](https://github.com/hanxi/xiaomusic)** | 0.3.79 | 使用小爱/红米音箱播放音乐，音乐使用 yt-dlp 下载 |
+| **[XiaoMusic](https://github.com/hanxi/xiaomusic)** | 0.3.82 | 使用小爱/红米音箱播放音乐，音乐使用 yt-dlp 下载 |
 | **[Nezha](https://github.com/naiba/nezha/)** | v1.12.4 | 哪吒面板v1 - 开源、轻量、易用的服务器监控、运维工具 |
 
 ### 🚀 使用方法
