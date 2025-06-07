@@ -31,6 +31,15 @@
 
 以下是当前在本仓库中提供的应用列表及其版本信息：
 
+#### 🤖LLM免费API接口
+
+| 应用名称                                                     | 版本   | 应用介绍                        |
+| ------------------------------------------------------------ | ------ | ------------------------------- |
+| **[DeepSeek-Free-API](https://github.com/LLM-Red-Team/deepseek-free-api)** | latest | 🚀 DeepSeek-V3 & R1大模型逆向API |
+| **[Kimi-Free-API](https://github.com/LLM-Red-Team/kimi-free-api)** | latest | 🚀 KIMI AI 长文本大模型逆向API   |
+| **[Qwen-Free-API](https://github.com/LLM-Red-Team/qwen-free-api)** | latest | 🚀 阿里通义千问2.5大模型逆向API  |
+| **[GLM-Free-API](https://github.com/LLM-Red-Team/glm-free-api)** | latest | 🚀 智谱清言ChatGLM-4-Plus大模型逆向API  |
+
 #### 📝 文档与内容管理
 
 | 应用名称 | 版本 | 应用介绍 |
