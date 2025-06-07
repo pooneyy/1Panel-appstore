@@ -46,7 +46,7 @@
 | **[Metaso-Free-API](https://github.com/LLM-Red-Team/metaso-free-api)** | latest | 🚀 秘塔AI搜索逆向API【特长：超强检索超长输出】 |
 
 支持一键部署AI免费API接口，使用方式请参考应用内README介绍
-![LLM-Free-API](https://raw.githubusercontent.com/arch3rPro/1Panel-Appstore/dev/LLM_Free-API.png)
+![LLM-Free-API](https://github.com/arch3rPro/1Panel-Appstore/blob/dev/LLM_Free-API.png?raw=true)
 
 #### 📝 文档与内容管理
 
