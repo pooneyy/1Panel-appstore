@@ -14,5 +14,5 @@ additionalProperties:
       labelZh: 访问密码
       required: true
       edit: true
-      rule: passwordStrength
+      rule: paramComplexity
       type: password
