@@ -13,9 +13,8 @@ additionalProperties:
       envKey: PASSWORD
       labelEn: Password
       labelZh: 密码
-      random: true
       required: true
-      rule: paramComplexity
+      type: text
     - default: "./data"
       edit: true
       envKey: DATA_PATH
