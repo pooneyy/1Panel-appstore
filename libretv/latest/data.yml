@@ -8,11 +8,18 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-#    - default: ""
-#      edit: true
-#      envKey: PASSWORD
-#      labelEn: Password
-#      labelZh: 密码
-#      random: true
-#      required: false
-#      rule: paramComplexity
+    - default: ""
+      edit: true
+      envKey: PASSWORD
+      labelEn: Password
+      labelZh: 密码
+      random: true
+      required: true
+      rule: paramComplexity
+    - default: "./data"
+      edit: true
+      envKey: DATA_PATH
+      labelEn: Data Path
+      labelZh: 数据路径
+      required: true
+      type: text
