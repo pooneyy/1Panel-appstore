@@ -15,10 +15,3 @@ additionalProperties:
       labelZh: 密码
       required: true
       type: text
-    - default: "./data"
-      edit: true
-      envKey: DATA_PATH
-      labelEn: Data Path
-      labelZh: 数据路径
-      required: true
-      type: text
