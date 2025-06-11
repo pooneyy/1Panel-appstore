@@ -7,6 +7,7 @@ additionalProperties:
   key: syncthing
   name: Syncthing
   tags:
+    - WebSite
     - Tool
   shortDescZh: 开源的文件同步客户端与服务器软件
   shortDescEn: Open source file synchronization client and server software

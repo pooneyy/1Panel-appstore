@@ -7,6 +7,7 @@ additionalProperties:
   key: zerotier-planet
   name: Zerotier Planet
   tags:
+    - WebSite
     - Tool
   shortDescZh: 创建和管理虚拟软件定义网络
   shortDescEn: Create and manage virtual software-defined networks
