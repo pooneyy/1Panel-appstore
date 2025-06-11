@@ -3,7 +3,7 @@ networks:
     external: true
 services:
   alist:
-    image: xhofe/alist:v3.40.0
+    image: qyg2297248353/alist:v3.40.0
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
