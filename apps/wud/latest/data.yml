@@ -24,5 +24,5 @@ additionalProperties:
       labelZh: web 界面管理密码（Htpasswd生成的）
       random: false
       required: true
-      rule: paramComplexity
+      rule: paramCommon
       type: password
