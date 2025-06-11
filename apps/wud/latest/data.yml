@@ -1,0 +1,28 @@
+additionalProperties:
+  formFields:
+    - default: "43210"
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Service Port 3000
+      labelZh: 服务端口 3000
+      required: true
+      rule: paramPort
+      type: number
+    - default: admin
+      edit: true
+      envKey: WUD_AUTH_BASIC_ADMIN_USER
+      labelEn: Web Interface Management Account
+      labelZh: web 界面管理账号
+      random: false
+      required: true
+      rule: paramCommon
+      type: text
+    - default: "$$apr1$$mTDFnkAQ$$1oPM9Qhsc.0PZv5G70CPv1"
+      edit: true
+      envKey: WUD_AUTH_BASIC_ADMIN_HASH
+      labelEn: Web Interface Management Password By Htpasswd
+      labelZh: web 界面管理密码（Htpasswd生成的）
+      random: false
+      required: true
+      rule: paramComplexity
+      type: password
