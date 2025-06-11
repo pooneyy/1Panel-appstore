@@ -7,11 +7,10 @@ additionalProperties:
   key: xunlei
   name: 迅雷
   tags:
-    - WebSite
     - Tool
   shortDescZh: 提取自群晖平台的迅雷下载套件
   shortDescEn: Thunder download kit extracted from Synology platform
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
