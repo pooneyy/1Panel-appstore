@@ -10,7 +10,7 @@ additionalProperties:
         - Tool
     shortDescZh: 自动检测 Docker 容器基础镜像的工具
     shortDescEn: Docker container updates made easy
-    type: tool
+    type: website
     crossVersionUpdate: true
     limit: 1
     recommend: 0
