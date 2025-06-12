@@ -75,12 +75,18 @@
 | **[LobeChat-Data](https://github.com/lobehub/lobe-chat)** | 1.73.0 | LobeChat服务端数据库版 - 开源、现代设计的 ChatGPT/LLMs UI/框架 |
 | **[Dify](https://github.com/langgenius/dify)** | 1.1.1 | Dify 是一个开源的 LLM 应用开发平台。支持 AI 工作流、RAG 管道、Agent、模型管理、可观测性等功能 |
 
-#### 🎵 多媒体与监控
+#### 🎵 多媒体管理
 
 | 应用名称 | 版本 | 应用介绍 |
 | -------- | ---- | -------- |
 | **[XiaoMusic](https://github.com/hanxi/xiaomusic)** | 0.3.82 | 使用小爱/红米音箱播放音乐，音乐使用 yt-dlp 下载 |
+
+#### ⚡ 运维监控
+
+| 应用名称 | 版本 | 应用介绍 |
+| -------- | ---- | -------- |
 | **[Nezha](https://github.com/naiba/nezha/)** | v1.12.4 | 哪吒面板v1 - 开源、轻量、易用的服务器监控、运维工具 |
+| **[Cup](https://github.com/sergi0g/cup/)** | latest | 支持Web和Cli方式检查容器镜像更新 |
 
 ### 🚀 使用方法
 
