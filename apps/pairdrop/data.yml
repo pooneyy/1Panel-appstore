@@ -14,7 +14,7 @@ additionalProperties:
   description:
     zh: PairDrop：跨平台传输文件，无需设置，无需注册
     en: Transfer Files Cross-Platform. No Setup, No Signup.
-  type: tool
+  type: website
   crossVersionUpdate: true
   limit: 0
   recommend: 0
