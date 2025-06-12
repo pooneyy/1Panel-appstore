@@ -12,6 +12,10 @@ services:
     network_mode: ${NETWORK_MODE:-host}
     tty: true
     stdin_open: true
+    ulimits:
+      nofile:
+        soft: 524288
+        hard: 524288
     ports:
       - ${PANEL_APP_PORT_HTTP:-8080}:${PANEL_APP_PORT_HTTP:-8080}
     env_file:
