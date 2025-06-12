@@ -1,20 +1,3 @@
-# 交流群
-
-**Telegram**
-
-- TG交流群：https://t.me/+JduuWfhSEPdlNDk1
-
-**QQ Group**
-
-- 1群：692635772
-- 2群：785620313
-- 3群：316239544
-- 4群：1027678459
-
-# 微信公众号
-
-![二维码](assets/wechat.png)
-
 # 功能特性
 
 - ✅ 支持 Linux/AMD64、Linux/ARM64 架构
@@ -24,7 +7,6 @@
 
 # 目录
 
-- [0: 广告](#0-广告)
 - [1：ZeroTier 介绍](#1zerotier-介绍)
 - [2：为什么要自建PLANET 服务器](#2为什么要自建planet-服务器)
 - [3：开始安装](#3开始安装)
@@ -68,38 +50,6 @@
 - [捐助和支持](#捐助和支持)
 - [鸣谢](#鸣谢)
 
-# 0: 广告
-
-## 托管方案一：自运营容器服务
-
-**寻找便捷的解决方案？**
-
-我们提供专业的托管服务：
-
-- 免费试用3天
-- 年费仅需99￥
-- 高速带宽：300Mbit
-- 流量政策：
-    - 每月100G转发流量
-    - P2P连接后不计流量
-    - 超出后每10元100G
-- 优质线路：宁波电信机房
-- 联系方式：
-    - Telegram：[https://t.me/uxkram](https://t.me/uxkram)
-    - 或加入QQ群咨询群主
-
-测速图如下：
-
-<img src="./assets/nb-speed-test.png" width = "800" height = "" alt="图片名称" align=center />
-
-## 0.2 托管方案二：雨云容器服务
-
-[![通过雨云一键部署](https://rainyun-apps.cn-nb1.rains3.com/materials/deploy-on-rainyun-cn.svg)](https://app.rainyun.com/apps/rca/store/6215?ref=220429)
-
-### 0.3 微信公众号广告：欢迎关注公众号获取最新动态和技术分享
-
-<img src="./assets/wx_qrcode_pub.jpg" width = "300" height = "" alt="图片名称" align=center />
-
 # 1：ZeroTier 介绍
 
 `ZeroTier` 是一款强大的 P2P VPN
@@ -110,8 +60,6 @@ NAS。最重要的是，设备之间是点对点直连的，无需经过中转�
 后面也没问题。它使用了 STUN 等技术，可以穿透大多数类型的 NAT，实现设备间的直接通信。如果实在无法直连，才会通过中转服务器进行通信。
 
 简单来说，`ZeroTier` 就像是一个跨越互联网的"虚拟交换机"，让分布在世界各地的设备，都能像在同一个局域网内一样方便地相互访问。
-
-![zerotier](assets/zerotier-network.png)
 
 **ZeroTier 网络中的关键概念**
 
@@ -263,8 +211,6 @@ cd docker-zerotier-planet
 
 访问 `http://ip:3443` 进入controller页面
 
-![ui](assets/ztncui.png)
-
 使用默认账号为:`admin`
 
 默认密码为:`password`
@@ -277,19 +223,13 @@ cd docker-zerotier-planet
 
 创建成功后系统会自动生成一个网络ID，这个ID在后续客户端配置时会用到，请记录下来。
 
-![ui](assets/ztncui_create_net.png)
-
 得到网络 `id`
-
-![ui](assets/ztncui_net_id.png)
 
 ### 3.5.2 分配网络IP:
 
 选中easy setup
-![assign_id](./assets/easy_setup.png)
 
 生成ip范围
-![ip_addr](./assets/network_addr.png)
 
 # 4.客户端配置
 
@@ -308,11 +248,7 @@ ZeroTier 支持多种主流操作系统的客户端，包括:
 
 Win+S 搜索 `服务`
 
-![ui](assets/service.png)
-
 找到ZeroTier One，并且重启服务
-
-![ui](assets/restart_service.png)
 
 ### 4.2 加入网络
 
@@ -328,11 +264,7 @@ PS C:\Windows\system32>
 
 登录管理后台可以看到有个个新的客户端，勾选`Authorized`就行
 
-![ui](assets/join_net.png)
-
 IP assignment 里面会出现zerotier的内网ip
-
-![ip](./assets/allow_devices.png)
 
 执行如下命令：
 
@@ -553,51 +485,6 @@ services:
 - [ ] 多planet支持
 - [x] 3443端口自定义支持
 - [ ] planet和controller分离部署
-
-# 风险声明
-
-本项目仅供学习和研究使用，不鼓励用于商业用途。我们不对任何因使用本项目而导致的任何损失负责。
-
-# 类似项目
-
-- [wireguard一键脚本](https://github.com/xubiaolin/wireguard-onekey)
-
-# 捐助和支持
-
-如果觉得本项目对您有帮助，欢迎通过扫描下方赞赏码捐助项目 :)
-
-<img src="assets/donate.png" alt="donate" width="400" height="400" />
-
-# 鸣谢
-
-感谢以下网友投喂，你们的支持和鼓励是我不懈更新的动力
-
-按时间顺序排序：
-
-- 随性
-- 我
-- 你好
-- Calvin
-- 小猪猪的饲养员
-- 情若犹在
-- 天天星期天
-- 啊乐
-- 夏末秋至
-- **忠
-- 岸芷汀兰
-- Kimi Chen
-- 匿名
-- 阳光报告旷课
-- 濂溪先生
-- Water
-- 匿名
-- 匿名
-- 陆
-- 精钢葫芦娃
-- 唯
-- 王小新
-- 匿名
-- Duck不必
 
 # 参考链接
 

@@ -74,41 +74,6 @@ A server, NAS navigation panel, Homepage, Browser homepage.
 
 [Deployment Tutorial](https://sun-panel-doc.enianteam.com/usage/quick_deploy.html)
 
-## 🍵 Donate
-
-> Open-source development is not easy. If you feel that my project has helped you, you are welcome
-> to [donate](./doc/donate.md) or buy me a cup of tea☕ (please leave your nickname or name in the note if possible). Your
-> support is my motivation, thank you.
-
-
-<a href="https://www.paypal.me/hslrs">
-<img height="60" src="./doc/images/donate/paypal.png" target="_blank"></img> 
-</a>
-
-|                                                          |                                                           |
-|----------------------------------------------------------|-----------------------------------------------------------|
-| <img height="300" src="./doc/images/donate/weixin.png"/> | <img height="300" src="./doc/images/donate/alipay.png" /> |
-
-## 🏖️ Communication group & community
-
-Author：**[红烧猎人](https://blog.enianteam.com/u/sun/content/11)**
-
-[Github Discussions](https://github.com/hslr-s/sun-panel/discussions)
-
-QQ交流群，进不去可以点上方连接联系作者
-
-<img src="./doc/images/qq_group_qr2.png"  height="350" />
-
-## ❤️ Thanks
-
-- [Roc](https://github.com/RocCheng)
-- [jackloves111](https://github.com/jackloves111)
-- [Rock.L](https://github.com/gitlyp)
-
----
-
-[![Star History Chart](https://api.star-history.com/svg?repos=hslr-s/sun-panel&type=Date)](https://star-history.com/#hslr-s/sun-panel&Date)
-
 - 账户密码
 
 ```

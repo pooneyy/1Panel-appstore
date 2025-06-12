@@ -56,8 +56,6 @@
     * [有的块（比如在列表项中的段落块）找不到块标怎么办？](#有的块比如在列表项中的段落块找不到块标怎么办)
     * [数据仓库密钥遗失怎么办？](#数据仓库密钥遗失怎么办)
     * [使用需要付费吗？](#使用需要付费吗)
-* [🙏 鸣谢](#-鸣谢)
-    * [贡献者列表](#贡献者列表)
 
 ---
 
@@ -432,17 +430,3 @@ Publish parameters: --accessAuthCode=******（访问授权码）
 会员特权需要付费后才能使用，请参考[定价](https://b3log.org/siyuan/pricing.html)。
 
 如果你没有会员特权需求但又想支持开发，欢迎进行捐赠：[靠爱发电 - 链滴](https://ld246.com/sponsor)
-
-## 🙏 鸣谢
-
-思源的诞生离不开众多的开源项目和贡献者，请参考项目源代码 kernel/go.mod、app/package.json 和项目首页。
-
-思源的成长离不开用户的反馈和宣传推广，感谢所有人对思源的帮助 ❤️
-
-### 贡献者列表
-
-欢迎加入我们，一起为思源贡献代码。
-
-<a href="https://github.com/siyuan-note/siyuan/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=siyuan-note/siyuan" />
-</a>
