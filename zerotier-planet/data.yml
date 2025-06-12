@@ -12,7 +12,7 @@ additionalProperties:
   shortDescEn: Create and manage virtual software-defined networks
   type: website
   crossVersionUpdate: true
-  limit: 0
-  website: https://www.zerotier.com/
-  github: https://github.com/zerotier/ZeroTierOne/
-  document: https://docs.zerotier.com/
+  limit: 1
+  website: https://github.com/xubiaolin/docker-zerotier-planet
+  github: https://github.com/xubiaolin/docker-zerotier-planet
+  document: https://github.com/xubiaolin/docker-zerotier-planet
