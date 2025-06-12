@@ -87,6 +87,7 @@
 | -------- | ---- | -------- |
 | **[Nezha](https://github.com/naiba/nezha/)** | v1.12.4 | 哪吒面板v1 - 开源、轻量、易用的服务器监控、运维工具 |
 | **[Cup](https://github.com/sergi0g/cup/)** | latest | 支持Web和Cli方式检查容器镜像更新 |
+| **[Wud](https://github.com/sergi0g/cup/)** | latest | 监控Docker基础镜像自动更新 |
 
 ### 🚀 使用方法
 
