@@ -46,6 +46,7 @@
 | **[Metaso-Free-API](https://github.com/LLM-Red-Team/metaso-free-api)** | latest | 🚀 秘塔AI搜索逆向API【特长：超强检索超长输出】 |
 
 支持一键部署AI免费API接口，使用方式请参考应用内README介绍
+
 ![LLM-Free-API](https://github.com/arch3rPro/1Panel-Appstore/blob/dev/LLM_Free-API.png?raw=true)
 
 #### 📝 文档与内容管理
@@ -88,7 +89,7 @@
 | **[Nezha](https://github.com/naiba/nezha/)** | v1.12.4 | 哪吒面板v1 - 开源、轻量、易用的服务器监控、运维工具 |
 | **[Cup](https://github.com/sergi0g/cup/)** | latest | 支持Web和Cli方式检查容器镜像更新 |
 | **[Wud](https://github.com/sergi0g/cup/)** | latest | 监控Docker基础镜像自动更新 |
-
+| **[Hubcmd-UI](https://github.com/dqzboy/Docker-Proxy)** | latest | Docker镜像加速命令查询获取、镜像搜索、配置教程文档展示UI面板 |
 ### 🚀 使用方法
 
 #### 📋 添加脚本到 1Panel 计划任务
