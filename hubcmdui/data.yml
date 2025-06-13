@@ -1,11 +1,11 @@
-name: HubCMD-UI
+name: Hubcmd-ui
 tags:
     - Other
 title: HubCMD-UI Docker镜像加速UI面板
 description: Docker镜像加速命令查询获取、镜像搜索、配置教程文档展示UI面板
 additionalProperties:
     key: hubcmdui
-    name: HubCMD-UI
+    name: Hubcmd-ui
     tags:
         - Tool
     shortDescZh: Docker镜像加速查询UI面板
