@@ -1,0 +1,53 @@
+name: "⏰为应用催更"
+description: "报告缺陷来帮助我们完善。 / Create a report to help us improve"
+title: "[需要更新应用] 哪个应用需要更新？ / Which app needs an update?"
+labels:
+  - Update Needed
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Welcome!
+
+  - type: input
+    attributes:
+      label: 应用名称 / App Name
+      description: 
+        于此填入待更新的应用所在的文件夹（例如`gitlab-jh`）。
+        
+        Enter the folder name of the app that needs an update (for example, `gitlab-jh`).
+      placeholder: (e.g. gitlab-jh)
+    validations:
+      required: true
+
+  - type: input
+    attributes:
+      label: 应用版本 / App Version
+      description: 
+        有些应用有`latest`版和带版本号的版本，于此填入需要更新的版本所在的文件夹（例如`18.0.1-jh.0`）
+        
+        Some apps have `latest` and versioned versions, enter the folder name of the version that needs an update here (for example, `18.0.1-jh.0`).
+      placeholder: (e.g. 18.0.1-jh.0)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 应用镜像当前的版本 / App's Image Current Version
+      description: 
+        于此填入当前版本完整的镜像名 （例如`registry.gitlab.cn/omnibus/gitlab-jh:18.0.1-jh.0`）
+        
+        Enter the full image name of the current version here (for example, `registry.gitlab.cn/omnibus/gitlab-jh:18.0.1-jh.0`).
+      placeholder: |
+        (e.g. registry.gitlab.cn/omnibus/gitlab-jh:18.0.1-jh.0)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 应用镜像最新的版本 / App's Image Latest Version
+      description: 于此填入最新版本完整的镜像名（例如`registry.gitlab.cn/omnibus/gitlab-jh:18.0.2-jh.0`） / Enter the full image name of the latest version here (for example, `registry.gitlab.cn/omnibus/gitlab-jh:18.0.2-jh.0`).
+      placeholder: |
+        (e.g. registry.gitlab.cn/omnibus/gitlab-jh:18.0.2-jh.0)
+    validations:
+      required: false

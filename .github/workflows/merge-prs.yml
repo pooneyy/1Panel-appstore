@@ -1,0 +1,40 @@
+name: Auto Merge Open PRs
+on:
+  schedule:
+    - cron: 0 0 3/3 * *
+  workflow_dispatch:
+
+jobs:
+  merge-prs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: 登录到 GitHub CLI
+        run: gh auth login --with-token <<< "${{ github.token }}"
+        
+      - name: 获取可合并的 PR
+        id: get-prs
+        run: |
+          pr_list=$( gh pr list --state open --json number,mergeable --limit 1000 --jq 'sort_by(.number) | .[] | .number' )
+          
+          pr_list=$(echo "$pr_list" | tr '\n' ' ')
+          
+          echo "PRs to merge: $pr_list"
+          echo "pr_list=$pr_list" >> $GITHUB_OUTPUT
+          
+      - name: 合并 PR
+        run: |
+          for pr in ${{ steps.get-prs.outputs.pr_list }}; do
+            if ! gh pr merge $pr --merge --delete-branch --body ""; then
+              echo "⚠️ 合并 PR #$pr 失败"
+            else
+              echo "✅ 合并 PR #$pr 成功"
+            fi
+            sleep 3
+          done

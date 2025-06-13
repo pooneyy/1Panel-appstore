@@ -1,16 +1,8 @@
- 中文 | [English](https://github.com/okxlin/appstore/blob/localApps/README-en.md)
-***
-
-## 打赏链接
-
-[**点我打赏，用爱发电**](https://afdian.com/a/dockerapps)
-
-[![**点我打赏，用爱发电**](https://github.com/okxlin/appstore/raw/localApps/docs/afdian-logo.png)](https://afdian.com/a/dockerapps)
+ 中文 | [English](https://github.com/pooneyy/1Panel-appstore/blob/localApps/README-en.md)
 
 * * *
 ## 目录
 
-- [打赏链接](#打赏链接)
 - [目录](#目录)
 - [免责声明](#免责声明)
   - [1. 镜像容器适配](#1-镜像容器适配)
@@ -52,12 +44,6 @@
 
 致力于一键运行各种 Docker 应用。无需复杂配置，享受便利和高效。
 
-### 1Panel第三方应用商店应用分类合集与介绍
-
-- https://1p.131.gs
-
-**感谢作者[@包子叔](https://github.com/baozishu)**
-
 ## 2. 使用方式
 
 默认`1Panel`安装在`/opt/`路径下，如果不是按需修改以下。
@@ -72,7 +58,7 @@
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-git clone -b localApps https://ghp.ci/https://github.com/okxlin/appstore /opt/1panel/resource/apps/local/appstore-localApps
+git clone -b localApps https://ghp.ci/https://github.com/pooneyy/1Panel-appstore /opt/1panel/resource/apps/local/appstore-localApps
 
 cp -rf /opt/1panel/resource/apps/local/appstore-localApps/apps/* /opt/1panel/resource/apps/local/
 
@@ -85,7 +71,7 @@ rm -rf /opt/1panel/resource/apps/local/appstore-localApps
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-wget -P /opt/1panel/resource/apps/local https://ghp.ci/https://github.com/okxlin/appstore/archive/refs/heads/localApps.zip
+wget -P /opt/1panel/resource/apps/local https://ghp.ci/https://github.com/pooneyy/1Panel-appstore/archive/refs/heads/localApps.zip
 
 unzip -o -d /opt/1panel/resource/apps/local/ /opt/1panel/resource/apps/local/localApps.zip
 
@@ -104,7 +90,7 @@ rm -rf /opt/1panel/resource/apps/local/localApps.zip
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-git clone -b localApps https://github.com/okxlin/appstore /opt/1panel/resource/apps/local/appstore-localApps
+git clone -b localApps https://github.com/pooneyy/1Panel-appstore /opt/1panel/resource/apps/local/appstore-localApps
 
 cp -rf /opt/1panel/resource/apps/local/appstore-localApps/apps/* /opt/1panel/resource/apps/local/
 
@@ -117,7 +103,7 @@ rm -rf /opt/1panel/resource/apps/local/appstore-localApps
 
 `1Panel`计划任务类型`Shell 脚本`的计划任务框里，添加并执行以下命令，或者终端运行以下命令，
 ```shell
-wget -P /opt/1panel/resource/apps/local https://github.com/okxlin/appstore/archive/refs/heads/localApps.zip
+wget -P /opt/1panel/resource/apps/local https://github.com/pooneyy/1Panel-appstore/archive/refs/heads/localApps.zip
 
 unzip -o -d /opt/1panel/resource/apps/local/ /opt/1panel/resource/apps/local/localApps.zip
 
@@ -161,4 +147,4 @@ cat ./data/hbbs/id_ed25519.pub
 
 ## 4. 应用一览图
 
-![](https://github.com/okxlin/appstore/raw/localApps/docs/app-list.png)
+![](https://github.com/pooneyy/1Panel-appstore/raw/localApps/docs/app-list.png)
