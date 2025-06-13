@@ -6,10 +6,12 @@ services:
             - 1panel-network
         restart: always
         ports:
-            - ${PANEL_APP_PORT_HTTP}:80
+            - ${PANEL_APP_PORT_HTTP}:8080
         environment:
-            - PASSWORD=${PANEL_APP_PASSWORD}  # 关键配置
-        command: ["/docker-entrypoint.sh", "nginx", "-g", "daemon off;"] 
+            - PASSWORD=${PANEL_APP_PASSWORD}
+            - ADMINPASSWORD=${PANEL_APP_ADMIN_PASSWORD}
+        volumes:
+            - ./data:/app
         labels:
             createdBy: "Apps"
 networks:
