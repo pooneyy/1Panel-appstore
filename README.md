@@ -81,6 +81,7 @@
 | 应用名称 | 版本 | 应用介绍 |
 | -------- | ---- | -------- |
 | **[XiaoMusic](https://github.com/hanxi/xiaomusic)** | 0.3.82 | 使用小爱/红米音箱播放音乐，音乐使用 yt-dlp 下载 |
+| **[Openlist](https://github.com/AlistGo/alist)** | main | OpenList-开源支持多存储的文件列表程序和私人网盘 |
 
 #### ⚡ 运维监控
 
