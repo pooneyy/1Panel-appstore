@@ -1,37 +1,73 @@
-# qBittorrent
 
-qBittorrent是一个跨平台的开源、自由的BitTorrent客户端，其图形用户界面是通过Qt所写，后端使用libtorrent。
+# 本应用介绍
 
-![qBittorrent](https://file.lifebus.top/imgs/qbittorrent_cover.jpg)
+基于镜像
+> - https://hub.docker.com/r/jarylc/qbittorrent
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+- 数据目录："./data"
+- 默认账号：admin
+- 密码：adminadmin
+- 开启中文，默认为PT下载做的设置，但未优化参数。
 
-## 特性
+> 原项目相关
+>> - https://www.qbittorrent.org/
+>> - https://github.com/qbittorrent/qBittorrent
 
-+ DHT, PEX, 加密连接, 本地节点发现, UPnP, NAT-PMP 端口中继, µTP, 磁力链接, PT下载
-+ 带宽管理
-+ 可以指定网络接口
-+ 易于管理torrent, tracker 和节点（torrent的队列、优先顺序，和其中文件各自分别的下载顺序）
-+ Unicode支持
-+ 75种语言的本地化。
-+ 综合的搜索引擎，接口类似eMule。
-+ IP过滤: 文件类型 eMule dat, 或 PeerGuardian
-+ 支持IPv6
-+ 集成RSS阅读器，可以订阅并下载
-+ 内置torrrent搜索引擎（同时搜索多个torrent网站）
-+ Web界面
-+ Torrent创建工具
+# 原项目介绍
 
-## 安装说明
+- qBittorrent是一个跨平台的开源、自由的BitTorrent客户端，其图形用户界面是通过Qt所写，后端使用libtorrent。
+- 由贝尔福- 蒙贝利亚尔理工大学的克里斯托夫·迪梅，在2006年3月开始开发。
 
-您必须在设置的 Web UI 部分更改用户名/密码。
+qBittorrent - A BitTorrent client in Qt
+------------------------------------------
 
-如果不更改密码，每次容器启动时都会生成一个新密码。
+[![AppVeyor Status](https://ci.appveyor.com/api/projects/status/github/qbittorrent/qBittorrent?branch=master&svg=true)](https://ci.appveyor.com/project/qbittorrent/qBittorrent)
+[![GitHub Actions CI Status](https://github.com/qbittorrent/qBittorrent/workflows/GitHub%20Actions%20CI/badge.svg)](https://github.com/qbittorrent/qBittorrent/actions)
+[![Coverity Status](https://scan.coverity.com/projects/5494/badge.svg)](https://scan.coverity.com/projects/5494)
+********************************
+### Description:
+qBittorrent is a bittorrent client programmed in C++ / Qt that uses
+libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.
 
-> 用户名：admin
->
-> 密码：{日志中查询}
+It aims to be a good alternative to all other bittorrent clients
+out there. qBittorrent is fast, stable and provides unicode
+support as well as many features.
 
----
+The free [IP to Country Lite database](https://db-ip.com/db/download/ip-to-country-lite) by [DB-IP](https://db-ip.com/) is used for resolving the countries of peers. The database is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+### Installation:
+For installation, follow the instructions from INSTALL file, but simple:
+
+```
+./configure
+make && make install
+qbittorrent
+```
+
+will install and execute qBittorrent hopefully without any problem.
+
+### Public key:
+Starting from v3.3.4 all source tarballs and binaries are signed.<br />
+The key currently used is 4096R/[5B7CC9A2](https://pgp.mit.edu/pks/lookup?op=get&search=0x6E4A2D025B7CC9A2) with fingerprint `D8F3DA77AAC6741053599C136E4A2D025B7CC9A2`.<br />
+You can also download it from [here](https://github.com/qbittorrent/qBittorrent/raw/master/5B7CC9A2.asc).<br />
+**PREVIOUSLY** the following key was used to sign the v3.3.4 source tarballs and v3.3.4 Windows installer **only**: 4096R/[520EC6F6](https://pgp.mit.edu/pks/lookup?op=get&search=0xA1ACCAE4520EC6F6) with fingerprint `F4A5FD201B117B1C2AB590E2A1ACCAE4520EC6F6`.<br />
+
+### Misc:
+For more information please visit:
+https://www.qbittorrent.org
+
+or our wiki here:
+http://wiki.qbittorrent.org
+
+Use the forum for troubleshooting before reporting bugs:
+http://forum.qbittorrent.org
+
+Please report any bug (or feature request) to:
+http://bugs.qbittorrent.org
+
+Official IRC channel:
+[#qbittorrent on irc.libera.chat](ircs://irc.libera.chat:6697/qbittorrent)
+
+------------------------------------------
+sledgehammer999 \<sledgehammer999@qbittorrent.org\>
+
