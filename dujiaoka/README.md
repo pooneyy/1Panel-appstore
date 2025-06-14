@@ -1,48 +1,25 @@
-# 独角数卡
+<p align="center"><img src="https://i.loli.net/2020/04/07/nAzjDJlX7oc5qEw.png" width="400"></p>
 
-🦄独角数卡(自动售货系统)-开源站长自动化售货解决方案、高效、稳定、快速！🚀🚀🎉🎉
+<p align="center">
+<a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue" alt="license MIT"></a>
+<a href="https://github.com/assimon/dujiaoka/releases/tag/2.0.4"><img src="https://img.shields.io/badge/version-2.0.4-red" alt="version 2.0.4"></a>
+<a href="https://www.php.net/releases/7_4_0.php"><img src="https://img.shields.io/badge/PHP-7.4-lightgrey" alt="php74"></a>
+<a href="https://shang.qq.com/wpa/qunwpa?idkey=37b6b06f7c941dae20dcd5784088905d6461064d7f33478692f0c4215546cee0"><img src="https://img.shields.io/badge/QQ%E7%BE%A4-568679748-green" alt="QQ群：568679748"></a>
+</p>
 
-![异次元店铺系统](https://file.lifebus.top/imgs/dujiaoka_cover.png)
+## 独角数卡
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+开源式站长自动化售货解决方案、高效、稳定、快速！
 
-## 接口集成
+## 默认后台
 
-+ 支付宝当面付
-+ 支付宝PC支付
-+ 支付宝手机支付
-+ payjs微信扫码.
-+ Paysapi(支付宝/微信).
-+ 码支付(QQ/支付宝/微信)
-+ 微信企业扫码支付
-+ Paypal支付(默认美元)
-+ V免签支付
-+ 全网易支付支持(通用彩虹版)
-+ stripe
+- 后台路径 `/admin`
+- 默认管理员账号 `admin`
+- 默认管理员密码 `admin`
 
-## 环境说明
+## 使用说明
 
-+ MySQL 5.7+
-+ Redis 支持(可选)
-
-## 安装说明
-
-> 后台默认路径 `/admin`
->
-> 默认管理员账号 admin
->
-> 默认管理员密码 admin
-
-### `应用密钥` 配置
-
-该密钥由固定头部`base64:`加上`32位字符串的Base64编码`组成，例如：`base64:xxxxx`。
-
-使用 `openssl` 生成密钥：
-
-```bash
-openssl rand -base64 32
-```
-
----
-
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+- 1. 安装时需要先创建 MySQL 数据库
+- 2. 首次安装，不需要在意运行是否正常，需要先填写应用目录下的配置文件，例如`/opt/1panel/apps/local/dujiaoka/dujiaoka/data/env.conf`，然后重建应用
+- 3. 填写`env.conf`完成后，然后访问端口进入初始化安装，填写相关数据库与 redis 信息，要与`env.conf`一致
+- 4. 完成安装后点击编辑应用参数，将`是否进行初始化安装`的选项改为`false`，保存确定后就会重建应用

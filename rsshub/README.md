@@ -1,63 +1,100 @@
-# RssHub
+<p align="center">
+<img src="https://docs.rsshub.app/logo.png" alt="RSSHub" width="100">
+</p>
+<h1 align="center">RSSHub</h1>
 
-万物皆可 RSS
+> 🍰 Everything is RSSible
 
-![RssHub](https://file.lifebus.top/imgs/rsshub_cover.png)
+[![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/rsshub)
+[![npm publish](https://img.shields.io/github/actions/workflow/status/DIYgod/RSSHub/npm-publish.yml?branch=master&label=npm%20publish&logo=npm&style=flat-square)](https://www.npmjs.com/package/rsshub)
+[![docker publish](https://img.shields.io/github/actions/workflow/status/DIYgod/RSSHub/docker-release.yml?branch=master&label=docker%20publish&logo=docker&style=flat-square)](https://hub.docker.com/r/diygod/rsshub)
+[![test](https://img.shields.io/github/actions/workflow/status/DIYgod/RSSHub/test.yml?branch=master&label=test&logo=github&style=flat-square)](https://github.com/DIYgod/RSSHub/actions/workflows/test.yml?query=event%3Apush+branch%3Amaster)
+[![Test coverage](https://img.shields.io/codecov/c/github/DIYgod/RSSHub.svg?style=flat-square&logo=codecov)](https://app.codecov.io/gh/DIYgod/RSSHub/branch/master)
+[![CodeFactor](https://www.codefactor.io/repository/github/diygod/rsshub/badge)](https://www.codefactor.io/repository/github/diygod/rsshub)
+[![DeepScan grade](https://deepscan.io/api/teams/6244/projects/8135/branches/92448/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=6244&pid=8135&bid=92448)
 
-从任何内容生成 RSS/Atom/JSON 订阅源
+## Introduction
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything.
 
-## 安装说明
+RSSHub delivers millions of contents aggregated from all kinds of sources, our vibrant open source community is ensuring the deliver of RSSHub's new routes, new features and bug fixes.
 
-我们建议您使用 Redis 作为缓存数据库，以提高性能。
+RSSHub can be used with browser extension [RSSHub Radar](https://github.com/DIYgod/RSSHub-Radar) and mobile auxiliary app [RSSBud](https://github.com/Cay-Zhang/RSSBud) (iOS) and [RSSAid](https://github.com/LeetaoGoooo/RSSAid) (Android)
 
-> `Redis 缓存地址` 配置
-
-如果您想要使用 Redis 作为缓存，请填写对应配置。
-
-格式：`redis://username:password@host:port/cache_index`
-
-示例：
-
-```
-# 用户名 + 密码模式
-redis://username:password@localhost:6379/0
-
-# 密码模式
-redis://:password@localhost:6379/0
-
-# 无密码模式
-redis://localhost:6379/0
-```
-
-## 使用说明
-
-请参考官方文档：[RssHub 使用说明](https://docs.rsshub.app/zh/guide/)
-
-## 配置说明
-
-一些站点的RSS Feed需要登录后才能访问，这时候就需要配置一些鉴权配置
-
-具体配置方法请参考官方文档：[RssHub 配置说明](https://docs.rsshub.app/zh/deploy/config/)
-
-## 注意事项
-
-1. 请勿滥用本软件，否则后果自负
-2. 请遵守各网站的使用规定
-3. 请勿将本软件用于商业用途
-4. 请勿将本软件用于违法用途
-5. 请勿将本软件用于违反道德用途
-6. 请勿将本软件用于违反社会公德用途
-7. 请勿将本软件用于违反国家法律用途
-8. 请勿将本软件用于违反国家政策用途
-9. 请勿将本软件用于违反国家战略用途
-10. 请勿将本软件用于违反国家安全用途
-11. 请勿将本软件用于违反国家利益用途
-12. 请勿将本软件用于违反国家尊严用途
-13. 请勿将本软件用于违反国家权益用途
-14. 总而言之，请遵守法律法规，文明上网
+[English docs](https://docs.rsshub.app/en) | [Telegram Group](https://t.me/rsshub) | [Telegram Channel](https://t.me/awesomeRSSHub)
 
 ---
 
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+RSSHub 是一个开源、简单易用、易于扩展的 RSS 生成器，可以给任何奇奇怪怪的内容生成 RSS 订阅源。RSSHub 借助于开源社区的力量快速发展中，目前已适配数百家网站的上千项内容
+
+可以配合浏览器扩展 [RSSHub Radar](https://github.com/DIYgod/RSSHub-Radar) 和 移动端辅助 App [RSSBud](https://github.com/Cay-Zhang/RSSBud) (iOS) 与 [RSSAid](https://github.com/LeetaoGoooo/RSSAid) (Android) 食用
+
+[中文文档](https://docs.rsshub.app) | [Telegram 群](https://t.me/rsshub) | [Telegram 频道](https://t.me/awesomeRSSHub)
+
+## Special Thanks
+
+### Contributors
+
+[![](https://opencollective.com/RSSHub/contributors.svg?width=890)](https://github.com/DIYgod/RSSHub/graphs/contributors)
+
+Logo designer [sheldonrrr](https://dribbble.com/sheldonrrr)
+
+### Backers
+
+<a href="https://www.cloudflare.com" target="_blank"><img height="50px" src="https://i.imgur.com/7Ph27Fq.png"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.netlify.com" target="_blank"><img height="40px" src="https://i.imgur.com/cU01915.png"></a>
+
+## Related Projects
+
+-   [RSSHub Radar](https://github.com/DIYgod/RSSHub-Radar) | 一个可以帮助你快速发现和订阅当前网站 RSS 和 RSSHub 的浏览器扩展
+-   [RSSBud](https://github.com/Cay-Zhang/RSSBud) ([TestFlight 公测](https://testflight.apple.com/join/rjCVzzHP)) | iOS 平台的 RSSHub Radar，专为移动生态优化
+-   [RSSAid](https://github.com/LeetaoGoooo/RSSAid)  | 基于 Flutter 构建的 Android 平台的 RSSHub Radar
+-   [DocSearch](https://github.com/Fatpandac/DocSearch) | Link RSSHub DocSearch into Raycast
+
+## Join Us
+
+We welcome all pull requests. Suggestions and feedback are also welcomed [here](https://github.com/DIYgod/RSSHub/issues).
+
+Refer to [Join Us](https://docs.rsshub.app/en/joinus/quick-start.html)
+
+见 [参与我们](https://docs.rsshub.app/joinus/quick-start.html)
+
+## Deployment
+
+Refer to [Deployment](https://docs.rsshub.app/en/install/)
+
+见 [部署](https://docs.rsshub.app/install/)
+
+## Support RSSHub
+
+Refer to [Support RSSHub](https://docs.rsshub.app/en/support/)
+
+见 [支持 RSSHub](https://docs.rsshub.app/support/)
+
+RSSHub is open source and completely free under the MIT license. However, just like any other open source project, as the project grows, the hosting, development and maintenance requires funding support.
+
+You can support RSSHub via donations.
+
+### Recurring Donation
+
+Recurring donors will be rewarded via express issue response, or even have your name displayed on our GitHub page and website.
+
+-   Become a Sponser on [GitHub](https://github.com/sponsors/DIYgod)
+-   Become a Sponser on [Open Collective](https://opencollective.com/RSSHub)
+-   Become a Sponser on [Patreon](https://www.patreon.com/DIYgod)
+-   Become a Sponser on [爱发电](https://afdian.net/@diygod)
+-   Contact us directly: i@diygod.me
+
+### One-time Donation
+
+We accept donations via the following ways:
+
+-   [WeChat Pay](https://archive.diygod.me/images/wx.jpg)
+-   [Alipay](https://archive.diygod.me/images/zfb.jpg)
+-   [Paypal](https://www.paypal.me/DIYgod)
+
+## Author
+
+**RSSHub** © [DIYgod](https://github.com/DIYgod), Released under the [MIT](./LICENSE) License.<br>
+Authored and maintained by DIYgod with help from contributors ([list](https://github.com/DIYgod/RSSHub/contributors)).
+
+> Blog [@DIYgod](https://diygod.me) · GitHub [@DIYgod](https://github.com/DIYgod) · Twitter [@DIYgod](https://twitter.com/DIYgod) · Telegram Channel [@awesomeDIYgod](https://t.me/awesomeDIYgod)

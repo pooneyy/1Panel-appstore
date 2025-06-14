@@ -1,15 +1,19 @@
-﻿additionalProperties:
+name: MDC-NG
+tags:
+  - 多媒体
+title: 你的次世代媒体库管理方案
+description: 你的次世代媒体库管理方案
+additionalProperties:
   key: mdc-ng
   name: MDC-NG
   tags:
-    - WebSite
-    - Tool
-    - Local
-  shortDescZh: 成人电影数据采集工具
+    - Media
+  shortDescZh: 你的次世代媒体库管理方案
   shortDescEn: Yet another Movie Data Capture tool
-  type: website
+  type: tool
   crossVersionUpdate: true
   limit: 0
-  website: https://github.com/mdc-ng/mdc-ng/
-  github: https://github.com/mdc-ng/mdc-ng/
-  document: https://github.com/mdc-ng/mdc-ng/
+  recommend: 0
+  website: https://hub.docker.com/r/mdcng/mdc
+  github: https://github.com/mdc-ng/mdc-ng
+  document: https://github.com/mdc-ng/mdc-ng

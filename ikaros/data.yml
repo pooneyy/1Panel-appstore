@@ -1,14 +1,18 @@
+name: Ikaros
+tags:
+  - 建站
+title: 专注于 ACGMN 的内容管理系统 (CMS)
+description: 专注于 ACGMN 的内容管理系统 (CMS)
 additionalProperties:
   key: ikaros
-  name: ikaros
+  name: Ikaros
   tags:
-    - WebSite
-    - Local
-  shortDescZh: 打通下载软件与媒体服务，安心享受影片
-  shortDescEn: Connect download software and media services, enjoy movies with peace of mind
+    - Website
+  shortDescZh: 专注于 ACGMN 的内容管理系统 (CMS)
+  shortDescEn: Dedicated to ACGMN's Content Management System (CMS)
   type: website
   crossVersionUpdate: true
   limit: 0
-  website: https://github.com/Suwmlee/ikaros/
-  github: https://github.com/Suwmlee/ikaros/
-  document: https://github.com/Suwmlee/ikaros/
+  website: https://ikaros.run
+  github: https://github.com/ikaros-dev/ikaros
+  document: https://docs.ikaros.run

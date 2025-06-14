@@ -1,15 +1,19 @@
+name: ZeroTier-Planet
+tags:
+  - 工具
+title: 具有 Web UI 的 ZeroTier 网络控制器
+description: 具有 Web UI 的 ZeroTier 网络控制器
 additionalProperties:
   key: zerotier-planet
-  name: Zerotier Planet
+  name: ZeroTier-Planet
   tags:
-    - WebSite
     - Tool
-    - Local
-  shortDescZh: 创建和管理虚拟软件定义网络
-  shortDescEn: Create and manage virtual software-defined networks
-  type: website
+  shortDescZh: 具有 Web UI 的 ZeroTier 网络控制器
+  shortDescEn: Zerotier network controller with web UI in a Docker container
+  type: tool
   crossVersionUpdate: true
-  limit: 0
-  website: https://www.zerotier.com/
-  github: https://github.com/zerotier/ZeroTierOne/
-  document: https://docs.zerotier.com/
+  limit: 1
+  recommend: 0
+  website: https://github.com/Jonnyan404/zerotier-planet
+  github: https://github.com/Jonnyan404/zerotier-planet
+  document: https://github.com/Jonnyan404/zerotier-planet

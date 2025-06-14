@@ -1,14 +1,19 @@
-﻿additionalProperties:
+name: Element Web
+tags:
+  - 工具
+title: 一款围绕您构建的安全通信平台
+description: 一款围绕您构建的安全通信平台
+additionalProperties:
   key: element-web
   name: Element Web
   tags:
-    - WebSite
-    - Local
-  shortDescZh: 一个用于Web的光泽Matrix协作客户端
-  shortDescEn: A glossy Matrix collaboration client for the web.
-  type: website
+    - Tool
+  shortDescZh: 一款围绕您构建的安全通信平台
+  shortDescEn: A secure communications platform built around you
+  type: tool
   crossVersionUpdate: true
   limit: 0
-  website: https://element.io/
-  github: https://github.com/element-hq/element-web/
-  document: https://element.io/user-guide/
+  recommend: 0
+  website: https://element.io
+  github: https://github.com/vector-im/element-web
+  document: https://github.com/vector-im/element-web

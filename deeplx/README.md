@@ -1,121 +1,199 @@
-# DeepLX
+# 使用说明
 
-强大的 DeepL 翻译 API
+使用例子`http://IP:Port/translate`
 
-![DeepLX](https://file.lifebus.top/imgs/deeplx_cover.png)
+# 原始相关
+***
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+[![GitHub Workflow][1]](https://github.com/OwO-Network/DeepLX/actions)
+[![Go Version][2]](https://github.com/OwO-Network/DeepLX/blob/main/go.mod)
+[![Go Report][3]](https://goreportcard.com/badge/github.com/OwO-Network/DeepLX)
+[![Maintainability][4]](https://codeclimate.com/github/OwO-Network/DeepLX/maintainability)
+[![GitHub License][5]](https://github.com/OwO-Network/DeepLX/blob/main/LICENSE)
+[![Docker Pulls][6]](https://hub.docker.com/r/missuo/deeplx)
+[![Releases][7]](https://github.com/OwO-Network/DeepLX/releases)
 
-## 简介
+[1]: https://img.shields.io/github/actions/workflow/status/OwO-Network/DeepLX/build.yml?logo=github
+[2]: https://img.shields.io/github/go-mod/go-version/OwO-Network/DeepLX?logo=go
+[3]: https://goreportcard.com/badge/github.com/OwO-Network/DeepLX
+[4]: https://api.codeclimate.com/v1/badges/b5b30239174fc6603aca/maintainability
+[5]: https://img.shields.io/github/license/OwO-Network/DeepLX
+[6]: https://img.shields.io/docker/pulls/missuo/deeplx?logo=docker
+[7]: https://img.shields.io/github/v/release/OwO-Network/DeepLX?logo=smartthings
 
-DeepLX 最初由 zu1k 命名并发布，尽管 zu1k 此后已停止维护它并删除了相关存储库。
+## **Related Projects**
+| Link                                       | Description                            | Maintainer        |
+| ------------------------------------------ | -------------------------------------- | ----------------- |
+| [OwO-Network/PyDeepLX](https://github.com/OwO-Network/PyDeepLX) | Python Package for DeepLX              | OwO-Network       |
+| [OwO-Network/gdeeplx](https://github.com/OwO-Network/gdeeplx)   | Golang Package for DeepLX              | OwO-Network       |
+| [ifyour/deeplx](https://github.com/ifyour/deeplx)               | JS Package for DeepLX (JavaScript)     | ifyour            |
 
-感谢zu1k的贡献。
+## Discussion Group
+[Telegram Group](https://t.me/+8KDGHKJCxEVkNzll)
 
-这是zu1k设计的DeepLX Docker镜像的备份，没有任何修改。
+## Description
+- `DeepLX` is listening to `0.0.0.0:1188` by default. You can modify the listening port by yourself.
+- `DeepLX` is using `DeepL` Free API.
+- `DeepLX` is unlimited to the number of requests.
 
-## 安装说明
+## Usage
+### Request Parameters
+- text: string
+- source_lang: string
+- target_lang: string
 
-### http代理服务器地址
-
-> 基本格式
-
-```shell
-# 无鉴权代理
-http://127.0.0.1:7890
-# 有鉴权代理
-http://<username>:<password>@127.0.0.1:7890
-```
-
-### 访问令牌以保护您的 API
-
-> 请注意，如果您不使用访问令牌，您的 API 可能会被滥用。
-
-接口调用时，您可以使用 `X-Access-Token` 请求头来传递访问令牌。
-
-### DeepL官方提供的API Auth Key
-
-开通DeepL API后，您将获得一个API Auth Key，您可以使用它来访问DeepL API。
-
-### DeepL Pro 帐户 dl_session cookie
-
-如果您有DeepL Pro帐户，您可以使用 `dl_session` cookie 来访问DeepL API。
-
-## 接口简介
-
-### 免费端点
-
-模拟DeepL iOS客户端发起翻译请求。无限制，但在一定时间内频繁请求会导致429错误。
-
-接口：`/translate`
-请求方式：POST
-请求头：
-
-| Header          | Description                           | Value                      |
-|:----------------|:--------------------------------------|:---------------------------|
-| `Content-Type`  | The content type of the request body. | `application/json`         |
-| `Authorization` | The access token to protect your API. | `Bearer your_access_token` |
-
-> 如果无法使用 `Authorization` 请求头，您可以使用 `URL Params` 传递 `Authorization`。
->
-> 例如：`/translate?token=your_access_token`
-
-请求体：
-
-| 参数名           | 字段类型     | 描述      | 是否必须   |
-|:--------------|:---------|:--------|:-------|
-| `text`        | `string` | 待翻译字段。  | `true` |
-| `source_lang` | `string` | 源语言代码   | `true` |
-| `target_lang` | `string` | 目标语言代码。 | `true` |
-
-请求体 JSON 示例：
-
-```json
-{
-  "text": "你听说过这个吗？",
-  "source_lang": "ZH",
-  "target_lang": "EN"
-}
-```
-
-响应体：
-
+### Response
 ```json
 {
   "alternatives": [
-    "Did you hear about this?",
-    "You've heard about this?",
-    "You've heard of this?"
+    "no one else",
+    "there is no other person (idiom); there is no one else",
+    "there is no other person"
   ],
   "code": 200,
-  "data": "Have you heard about this?",
-  "id": 8356681003,
-  "method": "Free",
+  "data": "there is no one else",
+  "id": 8352115005,
   "source_lang": "ZH",
   "target_lang": "EN"
 }
 ```
+### Specify the port (Optional)
+**Thanks to [cijiugechu](https://github.com/cijiugechu) for [his contribution](https://github.com/OwO-Network/DeepLX/commit/4a0920579ea868b0f05ccdff6bceae316bfd5dc8) to make this feature possible for this project!**
+```bash
+./deeplx -p 3333
+# or
+./deeplx -port 3333
+```
+### Set access password (Optional)
+**To prevent abuse of your public API, you can use a token to restrict translation requests.**
+```bash
+./deeplx -token hellodeeplx
+```
 
-### 专业端点
+```
+curl -X POST http://localhost:1188/translate \
+-H "Content-Type: application/json" \
+-H "Authorization: Bearer your_access_token" \
+-d '{
+    "text": "Hello, world!",
+    "source_lang": "EN",
+    "target_lang": "DE"
+}'
 
-模拟 DeepL 专业版账户发起翻译请求。无限制，可有效避免 429 问题，但需要提供专业账户的 dl_session 参数，否则无法使用。
+```
 
-接口：`/v1/translate`
-请求方式：POST
+### Run with Docker
+```bash
+# ghcr.io
+docker run -itd -p 1188:1188 ghcr.io/owo-network/deeplx:latest
 
-> 其他参数与免费端点相同。
+# dockerhub
+docker run -itd -p 1188:1188 missuo/deeplx:latest
+```
 
-### 官方端点
+### Run with Docker Compose
+```bash
+mkdir deeplx
+cd deeplx
+wget https://raw.githubusercontent.com/OwO-Network/DeepLX/main/docker-compose.yaml
+# docker compose v1
+docker-compose up -d
+# or docker compose v2
+docker compose up -d
+```
 
-模拟 DeepL 官方 API 发起翻译请求。无限制，但在一定时间内频繁请求将导致 429 错误。
+### Run on Linux Server
+```bash
+bash <(curl -Ls https://raw.githubusercontent.com/OwO-Network/DeepLX/main/install.sh)
+# or
+bash <(curl -Ls https://qwq.mx/deeplx)
+```
 
-接口：`/v2/translate`
-请求方式：POST
+### Run on Mac
+#### Homebrew (Recommended)
+**Homebrew has been fixed in the latest version and works perfectly.**
+```bash
+brew tap owo-network/brew
+brew install deeplx
+brew services start owo-network/brew/deeplx
 
-> 其他参数与免费端点相同。
->
-> 更多官方API配置请参考 [DeepL 官方文档](https://developers.deepl.com/docs/api-reference/translate)
+# Update to the latest version
+brew update
+brew upgrade deeplx
+brew services restart owo-network/brew/deeplx
 
----
+# View the currently installed version
+brew list --versions deeplx
+```
 
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+#### Manual
+1. Download  the latest release of DeepL X.
+```bash
+sudo mv deeplx_darwin_amd64 /usr/local/bin/deeplx
+sudo chmod +x /usr/local/bin/deeplx
+```
+
+2. Download the `me.missuo.deeplx.plist` to `~/Library/LaunchAgents`.
+```bash
+wget https://raw.githubusercontent.com/OwO-Network/DeepLX/main/me.missuo.deeplx.plist -O ~/Library/LaunchAgents/me.missuo.deeplx.plist
+```
+3. Run following command.
+```bash
+launchctl load ~/Library/LaunchAgents/me.missuo.deeplx.plist
+launchctl start ~/Library/LaunchAgents/me.missuo.deeplx.plist
+```
+
+### Install from AUR
+```bash
+paru -S deeplx-bin
+```
+
+After installation, start the daemon with the following command.
+
+```bash
+systemctl daemon-reload
+systemctl enable deeplx
+
+```
+## Setup on [Bob App](https://bobtranslate.com/)
+1. Install [bob-plugin-deeplx](https://github.com/missuo/bob-plugin-deeplx) on Bob.
+
+2. Setup the API. (If you use Brew to install locally you can skip this step)
+![c5c19dd89df6fae1a256d](https://missuo.ru/file/c5c19dd89df6fae1a256d.png)
+
+## Setup on [immersive-translate](https://github.com/immersive-translate/immersive-translate)
+**It is not recommended, because the `immersive-translate` will send many requests in a short time, which will cause the `DeepL API` to block your IP.**
+
+1. Install Latest [immersive-translate ](https://github.com/immersive-translate/immersive-translate/releases) on your browser.
+
+2. Click on **Developer Settings** in the bottom left corner. **Enable Beta experimental features**.
+
+3. Set the URL. (If you are not deploying locally, you need to change 127.0.0.1 to the IP of your server)
+
+![6a48ba28621f2465028f0](https://missuo.ru/file/6a48ba28621f2465028f0.png)
+
+## Use in Python
+```python
+import httpx, json
+
+deeplx_api = "http://127.0.0.1:1188/translate"
+
+data = {
+	"text": "Hello World",
+	"source_lang": "EN",
+	"target_lang": "ZH"
+}
+
+post_data = json.dumps(data)
+r = httpx.post(url = deeplx_api, data = post_data).text
+print(r)
+```
+
+## Backup the Docker Image of zu1k
+```shell
+docker run -itd -p 1188:80 missuo/deeplx-bk
+```
+**This docker image is not related to this project, as the original author deleted the image, it is only for backup.**
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FOwO-Network%2FDeepLX.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FOwO-Network%2FDeepLX?ref=badge_large)

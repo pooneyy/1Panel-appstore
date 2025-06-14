@@ -1,15 +1,19 @@
-﻿additionalProperties:
+name: Radarr
+tags:
+  - 多媒体
+title: 电影收藏管理器
+description: 电影收藏管理器
+additionalProperties:
   key: radarr
   name: Radarr
   tags:
-    - WebSite
-    - Storage
-    - Local
-  shortDescZh: 电影组织者/管理员，适用于 Usenet 和 torrent 用户
-  shortDescEn: Movie organizer and manager, suitable for Usenet and torrent users
-  type: website
+    - Media
+  shortDescZh: 电影收藏管理器
+  shortDescEn: Movie organizer/manager
+  type: tool
   crossVersionUpdate: true
   limit: 0
-  website: https://radarr.video/
-  github: https://github.com/Radarr/Radarr/
-  document: https://wiki.servarr.com/radarr/
+  recommend: 0
+  website: https://radarr.video
+  github: https://github.com/Radarr/Radarr
+  document: https://radarr.video/docs/

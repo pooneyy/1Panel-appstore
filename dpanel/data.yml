@@ -1,15 +1,19 @@
-﻿additionalProperties:
+name: DPanel
+tags:
+  - 实用工具
+title: Docker 可视化面板系统
+description: Docker 可视化面板系统
+additionalProperties:
   key: dpanel
   name: DPanel
   tags:
-    - WebSite
     - Tool
-    - Local
-  shortDescZh: Docker可视化管理面板
-  shortDescEn: Docker visual management panel
-  type: website
+  shortDescZh: Docker 可视化面板系统
+  shortDescEn: Docker Visualization Panel System
+  type: tool
   crossVersionUpdate: true
   limit: 0
-  website: https://dpanel.cc/
-  github: https://github.com/donknap/dpanel/
-  document: https://dpanel.cc/
+  recommend: 0
+  website: https://donknap.github.io/dpanel-docs
+  github: https://github.com/donknap/dpanel
+  document: https://donknap.github.io/dpanel-docs

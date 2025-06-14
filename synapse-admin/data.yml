@@ -1,15 +1,19 @@
+name: Synapse-admin
+tags:
+  - 工具
+title: Synapse 管理界面
+description: Synapse 管理界面
 additionalProperties:
   key: synapse-admin
-  name: Synapse Admin
+  name: Synapse-admin
   tags:
-    - WebSite
-    - Middleware
-    - Local
-  shortDescZh: 用于安全、分散通信的开放网络
-  shortDescEn: An open network for secure, decentralised communication
-  type: website
+    - Tool
+  shortDescZh: Synapse 管理界面
+  shortDescEn: Synapse admin ui
+  type: tool
   crossVersionUpdate: true
   limit: 0
-  website: https://matrix.org/
-  github: https://github.com/Awesome-Technologies/synapse-admin/
-  document: https://matrix.org/
+  recommend: 0
+  website: https://hub.docker.com/r/awesometechnologies/synapse-admin
+  github: https://github.com/Awesome-Technologies/synapse-admin
+  document: https://github.com/Awesome-Technologies/synapse-admin

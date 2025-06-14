@@ -1,122 +1,119 @@
-# PhotoPrism
+PhotoPrism: Browse Your Life in Pictures
+========================================
 
-面向去中心化网络的人工智能照片应用程序
+[![License: AGPL](https://img.shields.io/badge/license-AGPL-blue.svg)](https://docs.photoprism.app/license/agpl/)
+[![GitHub contributors](https://img.shields.io/github/contributors/photoprism/photoprism.svg)](https://www.photoprism.app/about/team)
+[![Documentation](https://img.shields.io/badge/read-the%20docs-4aa087.svg)](https://docs.photoprism.app/)
+[![Community Chat](https://img.shields.io/badge/chat-on%20gitter-4aa087.svg)](https://link.photoprism.app/chat)
+[![GitHub Discussions](https://img.shields.io/badge/ask-%20on%20github-4d6a91.svg)](https://link.photoprism.app/discussions)
+[![Mastodon](https://dl.photoprism.app/img/badges/badge-mastodon.svg)](https://floss.social/@photoprism)
+[![Twitter](https://dl.photoprism.app/img/badges/badge-twitter.svg)](https://link.photoprism.app/twitter)
 
-![PhotoPrism](https://file.lifebus.top/imgs/photoprism_cover.png)
+PhotoPrism® is an AI-Powered Photos App for the [Decentralized Web](https://en.wikipedia.org/wiki/Decentralized_web).
+It makes use of the latest technologies to tag and find pictures automatically without getting in your way.
+You can run it at home, on a private server, or in the cloud.
 
-PhotoPrism® 是一款适用于去中心化网络的人工智能照片应用程序。它利用最新技术自动标记和查找图片，而不会妨碍您。您可以在家中、私人服务器上或在云中运行它。
+![](https://dl.photoprism.app/img/ui/desktop-1000px.jpg)
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+To get a first impression, you are welcome to play with our [public demo](https://try.photoprism.app/). Be careful not to upload any private pictures.
 
-## 特性
+## Feature Overview ##
 
-我们的使命是提供对用户和隐私最友好的解决方案，让您的图片井然有序且易于访问。这就是为什么 PhotoPrism
-是从头开始构建的，可以在您需要的任何地方运行，而不会影响自由、隐私或功能：
+**Our mission is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.** That's why PhotoPrism was built from the ground up to run wherever you need it, without compromising freedom, privacy, or functionality:
 
-+ 浏览所有照片和视频，无需担心RAW 转换、重复或视频格式
-+ 使用强大的搜索过滤器轻松查找特定图片
-+ 认出家人和朋友的面孔
-+ 根据图片内容和位置自动分类
-+ 将鼠标悬停在相册和搜索结果中的实时照片上即可播放它们
-+ 由于用户界面是渐进式 Web 应用程序，因此它提供了类似本机应用程序的体验，您可以方便地将其安装在所有主要操作系统和移动设备的主屏幕上
-+ 包括四张高分辨率世界地图，带回您最喜欢的旅行的回忆
-+ 元数据从 Exif、XMP 和其他来源（例如 Google Photos）中提取并合并
-+ 还可以搜索更多图像属性，例如Colors 、 Chroma和Quality
-+ 使用PhotoSync在后台安全备份 iOS 和 Android 手机
-+ WebDAV 客户端（例如 Microsoft 的 Windows Explorer 和 Apple 的 Finder）可以直接连接到
-  PhotoPrism，允许您从计算机中打开、编辑和删除文件，就像它们是本地文件一样
+* Browse [all your photos](https://docs.photoprism.app/user-guide/organize/browse/) and [videos](https://try.photoprism.app/library/videos) without worrying about [RAW conversion, duplicates or video formats](https://docs.photoprism.app/user-guide/settings/library/)
+* Easily find specific pictures using [powerful search filters](https://try.photoprism.app/library/browse?view=cards&q=flower%20color%3Ared)
+* Recognizes [the faces of your family and friends](https://try.photoprism.app/library/people)
+* [Automatic classification](https://try.photoprism.app/library/labels) of pictures based on their content and location
+* [Play Live Photos](https://try.photoprism.app/library/live) by hovering over them in [albums](https://try.photoprism.app/library/albums) and [search results](https://try.photoprism.app/library/browse?view=cards&q=type%3Alive)
+* Since the [User Interface](https://try.photoprism.app/) is a [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps),
+  it provides a native app-like experience, and you can conveniently install it on the home screen of all major operating systems and mobile devices
+* Includes four high-resolution [World Maps](https://try.photoprism.app/library/places) to bring back the memories of your favorite trips
+* Metadata is extracted and merged from Exif, XMP, and other sources such as Google Photos
+* Many more image properties like [Colors](https://try.photoprism.app/library/browse?view=cards&q=color:red), [Chroma](https://try.photoprism.app/library/browse?view=cards&q=mono%3Atrue), and [Quality](https://try.photoprism.app/library/review) can be searched as well
+* Use [PhotoSync](https://link.photoprism.app/photosync) to securely backup iOS and Android phones in the background
+* WebDAV clients such as Microsoft's Windows Explorer and Apple's Finder [can connect directly](https://docs.photoprism.app/user-guide/sync/webdav/) to PhotoPrism, allowing you to open, edit, and delete files from your computer as if they were local
 
-## 环境说明
+Being completely [**self-funded and independent**](https://link.photoprism.app/membership), we can promise you that we will [never sell your data](https://www.photoprism.app/privacy) and that we will [always be transparent](https://www.photoprism.app/terms) about our software and services. Your data will never be shared with Google, Amazon, Microsoft or Apple unless you intentionally upload files to one of their services. 🔒
 
-由于 `PhotoPrism` 有依赖于 `FFmpeg`，所以需要在安装时进行自动安装。
+## Getting Started ##
+<img align="right" width="25%" src="https://www.photoprism.app/user/pages/01.home/03._screenshots/iphone-maps-hybrid-540px.png">
 
-`PhotoPrism` 会自动安装 `FFmpeg`，并且会在初始化时进行检测。
+Step-by-step installation instructions for our self-hosted [community edition](https://www.photoprism.app/get) can be found 
+on [docs.photoprism.app](https://docs.photoprism.app/getting-started/) -
+all you need is a Web browser and [Docker](https://docs.docker.com/get-docker/) to run the server. 
+It is available for Mac, Linux, and Windows.
 
-由于使用 `TensorFlow` 进行人脸识别，等相关数据处理，所以需要在安装时进行自动安装。
+The [stable version](https://docs.photoprism.app/release-notes/) and development 
+preview have been built into a single [multi-arch image](https://link.photoprism.app/docker-hub) for 64-bit AMD, Intel,
+and ARM processors. That means, [Raspberry Pi](https://docs.photoprism.app/getting-started/raspberry-pi/) 3 / 4 owners can pull 
+from the same repository, enjoy the exact same functionality, and can follow the regular 
+[installation instructions](https://docs.photoprism.app/getting-started/docker-compose/) 
+after going through a short list of [requirements](https://docs.photoprism.app/getting-started/raspberry-pi/).
 
-`PhotoPrism` 会自动安装 `TensorFlow`，并且会在初始化时进行检测。
+Existing users are advised to update their `docker-compose.yml` config based on our examples
+available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
 
-建议用户开启 至少 `4GB` 交换分区，增大内存使用。
+## Support Our Mission 💎 ##
 
-## 安装说明
+**PhotoPrism is 100% self-funded and independent.** Your [continued support](https://link.photoprism.app/membership) helps us [provide more features to the public](https://www.photoprism.app/oss/faq#what-functionality-is-generally-available), release [regular updates](https://docs.photoprism.app/release-notes/), and remain independent!
 
-推荐使用 `MariaDB` 数据库，作为 `PhotoPrism` 的数据库存储。
+Our members [enjoy additional features](https://www.photoprism.app/kb/personal), including access to [interactive world maps](https://try.photoprism.app/library/places), and can join our private chat room to [connect with our team](https://www.photoprism.app/about/team). We currently have the following membership options:
 
-### `数据库 地址` 配置
+- You can [sign up directly on our website](https://link.photoprism.app/membership) and pay with credit card or SEPA through Stripe, so you don't need to [link an external account](https://www.photoprism.app/kb/activation) and can easily upgrade or downgrade at any time
+- Alternatively, [Patreon](https://link.photoprism.app/patreon) also supports PayPal, additional currencies, and lets you choose between monthly and annual billing for all tiers
 
-格式：`host:port`
+If you currently support us through [GitHub Sponsors](https://link.photoprism.app/sponsor), you can also [register on our website](https://my.photoprism.app/register) and use the *Activate GitHub Sponsors Membership* button to link your account. For details on this and how to [link your Patreon account](https://www.patreon.com/pledges), see our [Activation Guide](https://www.photoprism.app/kb/activation).
 
-示例：`127.0.0.1:3306`
+You are [welcome to contact us](https://www.photoprism.app/contact) for change requests, membership questions, and business partnerships.
 
-### `认证模式` 配置
+[View Membership FAQ ›](https://www.photoprism.app/kb/membership) [Sign Up ›](https://link.photoprism.app/membership)
 
-默认值：`密码`
+### Why Your Support Matters ###
 
-程序必须登录才能使用。
+- Your continued support helps us provide regular updates and remain independent, so we can fulfill our mission and protect your privacy
+- Sustained funding is key to quickly releasing new features requested by you and other community members
+- Being self-funded and independent, we can personally promise you that we will never sell your data and that we will always be transparent about our software and services
 
-如果您选择: `公开`
+Please also leave [a star](https://github.com/photoprism/photoprism/stargazers) on GitHub if you like this project. It provides additional motivation to keep going.
 
-那么任何人都将允许访问程序。
+**A big thank you to all current and past sponsors, whose generous support has been and continues to be essential to the success of the project!**
 
-### 硬件驱动挂载
+[View Sponsors ›](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) [View Credits ›](https://docs.photoprism.app/credits/)
 
-默认仅挂载: `/dev/dri`,如果您的设备不存在硬件驱动，请使用删除完整 `devices` 配置。
+## Getting Support ##
 
-可以通过 `ls /dev/` 查看存在的设备驱动。
+Visit [docs.photoprism.app/user-guide](https://docs.photoprism.app/user-guide/) to learn how to [sync](https://docs.photoprism.app/user-guide/sync/webdav/), [organize](https://docs.photoprism.app/user-guide/library/), and [share](https://docs.photoprism.app/user-guide/share/) your pictures. If you need help installing our software at home, you are welcome to post your question in [GitHub Discussions](https://link.photoprism.app/discussions) or ask in our [Community Chat](https://link.photoprism.app/chat).
+Common problems can be quickly diagnosed and solved using our [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/). Eligible [members](https://link.photoprism.app/membership) are also welcome to email us for technical support and advice.
 
-```yml
-devices:
-  - /dev/dri:/dev/dri
-  # - /dev/nvidia0:/dev/nvidia0
-  # - /dev/nvidiactl:/dev/nvidiactl
-  # - /dev/nvidia-modeset:/dev/nvidia-modeset
-  # - /dev/nvidia-nvswitchctl:/dev/nvidia-nvswitchctl
-  # - /dev/nvidia-uvm:/dev/nvidia-uvm
-  # - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
-  # - /dev/video11:/dev/video11
-```
+## Upcoming Features and Enhancements ##
 
-如果您的设备存在其他硬件驱动，可以选择挂载。删除 `# ` 号即可。格式为：`宿主机路径:容器路径`。
+Our [Project Roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress and what features will be implemented next. You are invited to give ideas you like a thumbs-up, so we know what's most popular.
 
-格式请与 `- /dev/dri:/dev/dri` 保持一致。
+Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, enhancements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
 
-### `视频编码器` 配置
+**Because sustained funding is key to quickly releasing new features, we encourage you to support our mission by [signing up as a sponsor](https://link.photoprism.app/sponsor) or purchasing a [commercial license](https://www.photoprism.app/teams). Ultimately, that's what's best for the product and the community.**
 
-`PhotoPrism` 支持 `FFmpeg` 视频编码器，需要安装 `FFmpeg`。
+## GitHub Issues ⚠️ ##
 
-初始化时，`PhotoPrism` 会自动进行 `FFmpeg` 的安装。
+We kindly ask you not to report bugs via GitHub Issues **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app. Thank you for your careful consideration!
 
-使用 `FFmpeg` 时，需要选择 `软解`。
+- When reporting a problem, always include the software versions you are using and other information about your environment such as [browser, browser plugins](https://docs.photoprism.app/getting-started/troubleshooting/browsers/), operating system, [storage type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#storage), [memory size](https://docs.photoprism.app/getting-started/troubleshooting/performance/#memory), and [processor](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu)
+- Note that all issue **subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for discussions, questions or expressing personal opinions
+- [Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions) if you need help, it could be a local configuration problem, or a misunderstanding in how the software works
+- This gives our team the opportunity to [improve the docs](https://docs.photoprism.app/getting-started/troubleshooting/) and provide best-in-class support to you, instead of handling unclear/duplicate bug reports or triggering a flood of notifications by responding to comments
 
-如果您的设备存在其他硬件驱动，可以选择 `硬解` 的方式加速 `视频转码`。
+## Connect with the Community ##
 
-很不幸的是 Windows 下不能很好的映射驱动程序，所以 `硬解` 选项在 Windows 下不可用。
+Follow us on [Twitter](https://link.photoprism.app/twitter) and join the [Community Chat](https://link.photoprism.app/chat)
+to get regular updates, connect with other users, and discuss your ideas. Our [Code of Conduct](https://www.photoprism.app/code-of-conduct) explains the "dos and don’ts" when interacting with other community members.
 
-### `视频分辨率限制` 配置
+Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) with anything that is on your mind. We appreciate your feedback! Due to the high volume of emails we receive, our team may be unable to get back to you immediately. We do our best to respond within five business days or less.
 
-默认值： `1920`，表达为 `1920x1080`。
+## Every Contribution Makes a Difference ##
 
-当转码低于此分辨率的视频时，`PhotoPrism` 会保持原始分辨率，不会将其放大处理。
+We welcome [contributions](https://github.com/photoprism/photoprism/blob/develop/CONTRIBUTING.md) of any kind, including blog posts, tutorials, testing, writing documentation, and pull requests. Our [Developer Guide](https://docs.photoprism.app/developer-guide/) contains all the information necessary for you to get started.
 
-### `视频比特率限制` 配置
+----
 
-默认值： `32`，单位为 `Mbit/s`。
-
-如果有需要，可以根据自己的需求进行调整。
-
-## 设备同步 PhotoSync
-
-<div style="text-align: center; display: flex; justify-content: center; gap: 20px;">
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <img src="https://file.lifebus.top/imgs/photosync_app_store_qr.png" alt="App Store" style="width: 256px;">
-    <a href="https://apps.apple.com/cn/app/photosync-%E4%BC%A0%E8%BE%93%E5%92%8C%E5%A4%87%E4%BB%BD%E7%85%A7%E7%89%87%E4%B8%8E%E8%A7%86%E9%A2%91/id415850124" style="text-align: center;">App Store</a>
-  </div>
-  <div style="display: flex; flex-direction: column; align-items: center;">
-    <img src="https://file.lifebus.top/imgs/photosync_google_play_qr.png" alt="Google Play" style="width: 256px;">
-    <a href="https://play.google.com/store/apps/details?id=com.touchbyte.photosync" style="text-align: center;">Google Play</a>
-  </div>
-</div>
-
----
-
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+*PhotoPrism® is a [registered trademark](https://www.photoprism.app/trademark). By using the software and services we provide, you agree to our [Terms of Service](https://www.photoprism.app/terms), [Privacy Policy](https://www.photoprism.app/privacy), and [Code of Conduct](https://www.photoprism.app/code-of-conduct). Docs are [available](https://link.photoprism.app/github-docs) under the [CC BY-NC-SA 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/); [additional terms](https://github.com/photoprism/photoprism/blob/develop/assets/README.md) may apply.*
