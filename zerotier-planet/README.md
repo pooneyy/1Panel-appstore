@@ -1,36 +1,62 @@
-# Zerotier Planet 服务端
+# 使用说明
 
-包含 ZeroTier One 和 ztncui 的 Docker 映像，用于在容器中设置具有 Web 用户界面的独立 ZeroTier 网络控制器。
+- 默认用户名`admin`
 
-![Zerotier Planet](https://file.lifebus.top/imgs/ztncui_cover.png)
+# 原始相关
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+# 一分钟自建zerotier-planet
 
-## 简介
+私有部署zeroteir-planet服务
+基于 [ztncui](https://github.com/key-networks/ztncui-aio) 整理成 docker-compose.yml 文件.
 
-ZeroTier 这一类 P2P VPN 是在互联网的基础上将自己的所有设备组成一个私有的网络，可以理解为互联网连接的局域网。最常见的场景就是在公司可以用手机直接访问家里的
-NAS，而且是点对点直连，数据传输并不经由第三方服务器中转。
+**特别感谢** <https://github.com/Jonnyan404/zerotier-planet/issues/11#issuecomment-1059961262> 这个issue中各位用户的贡献，基于此issue中 `@jqtmviyu` 的步骤和`kaaass`的 [mkmoonworld](https://github.com/kaaass/ZeroTierOne/releases/tag/mkmoonworld-1.0) 制作成目前的patch（集成planet和moon）。
 
-ZeroTier 在多设备之间建立了一个 Peer to Peer VPN（P2PVPN） 连接，如：在笔记本电脑、台式机、嵌入式设备、云资源和应用。这些设备只需要通过
-ZeroTier One ( ZeroTier 的客户端) 在不同设备之间建立直接连接，即使它们位于 NAT 之后。连接到虚拟 LAN 的任何计算机和设备通常通过
-NAT 或路由器设备与 Internet 连接，ZeroTier One 使用 STUN 和隧道来建立 NAT 后设备之间的 VPN 直连。
+# 必要条件
 
-简单一点说，ZeroTier 就是通过 P2P 等方式实现形如交换机或路由器上 LAN 设备的内网互联。
+- 具有公网ip的服务器
+- 安装 docker
+- 安装 docker-compose
+- 防火墙开放TCP端口 4000/9993/3180 和UDP端口 9993
 
-### 专有名词
+# 用法
 
-PLANET ：行星服务器，Zerotier 根服务器
+```
+git clone https://github.com/Jonnyan404/zerotier-planet
+OR
+git clone https://gitee.com/Jonnyan404/zerotier-planet
 
-MOON ：卫星服务器，用户自建的私有根服务器，起到代理加速的作用
+cd zerotier-planet
+docker-compose up -d
+# 以下步骤为创建planet和moon
+docker cp mkmoonworld-x86_64 ztncui:/tmp
+docker cp patch.sh ztncui:/tmp
+docker exec -it ztncui bash /tmp/patch.sh
+docker restart ztncui
+```
 
-LEAF ：网络客户端，就是每台连接到网络节点。
+然后浏览器访问 `http://ip:4000` 打开web控制台界面。
 
-## 安装说明
+浏览器访问 `http://ip:3180` 打开planet和moon文件下载页面（亦可在项目根目录的`./ztncui/etc/myfs/`里获取）。
 
-> 默认用户名：`admin`
->
-> 默认密码：`password`
 
----
+- 用户名:admin
+- 密码:mrdoc.fun
 
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+# 各客户端配置planet
+
+限于篇幅，请到 <https://www.mrdoc.fun/doc/443/> 查阅
+
+
+
+### 私有 zerotier-planet 的优势:
+- 解除官方 25 的设备连接数限制
+- 提升手机客户端连接的稳定性
+
+# 同类型项目推荐
+
+https://github.com/xubiaolin/docker-zerotier-planet
+
+# Reference Link
+
+- <https://www.mrdoc.fun/doc/443/>
+- <https://github.com/key-networks/ztncui-aio>

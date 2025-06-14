@@ -1,81 +1,62 @@
-# Emby
+## 使用说明
 
-Emby是一个主从式架构的媒体服务器软件，可以用来整理服务器上的视频和音频，并将音频和视频流式传输到客户端设备。
 
-![Emby](https://file.lifebus.top/imgs/emby_cover.png)
+> 如果需要显卡加速，安装的时候，请选择编辑`compose`文件，然后编辑显卡加速相关的配置。
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+***
+已添加功能：
+## 1. emby-erx Emby 增强/美化 插件
 
-## 简介
+- 作者：[https://github.com/Nolovenodie/emby-crx](https://github.com/Nolovenodie/emby-crx)  
+开启请在/config/config/ext.sh 添加媒体库ID 再重启容器和Ctrl+F5刷新网页
 
-Emby（原名Media Browser）是一个主从式架构的媒体服务器软件，可以用来整理服务器上的视频和音频，并将音频和视频流式传输到客户端设备。
+## 2. dd-danmaku Emby 弹幕库插件
 
-Emby服务器端支持Microsoft Windows、Linux、MacOS、FreeBSD，客户端支持HTML5网页，Android和IOS等移动操作系统，Roku、Amazon Fire
-TV、Chromecast和Apple TV等流媒体设备，LG智能电视和三星智能电视等智能电视，以及PlayStation3、PlayStation4、Xbox 360和Xbox
-One等游戏机。
+- 作者：[https://github.com/RyoLee/dd-danmaku](https://github.com/RyoLee/dd-danmaku)  
+开启/关闭 请在/config/config/ext.sh 中设置
 
-Emby原本是大部分源代码是开源的，带有部分闭源工具，但是自从3.5.3版本开始变为闭源软件，Jellyfin为Emby开源分支基础上发展来的。
+## 3. emby调用外部播放器
 
-## 安装说明
+- 作者：[https://github.com/bpking1/embyExternalUrl](https://github.com/bpking1/embyExternalUrl) 开启/关闭 请在/config/config/ext.sh 中设置
 
-### 开启 `投屏服务(DLNA)` 与 `网络唤醒服务(WOL)` 功能
+安卓与电视客户端：[http://res.ssr0.cn:8000/?/Emby/](http://res.ssr0.cn:8000/?/Emby/)
 
-开启后，可以在局域网内的设备上投屏观看视频。 需要选择主机网络(host)模式。
+ext.sh (docker/config/ext.sh)扩展脚本：  
+脚本更新需要自己手动添加，或者删除原脚本重启容器更新
+```bash
+#!/bin/sh
 
-### 硬件驱动挂载
+######## 说明 2023-07-30 ########
+#一个sh脚本，容器每次启动时运行
+#方便自定义添加功能
+#################################
 
-默认仅挂载: `/dev/dri`,如果您的设备不存在硬件驱动，请使用删除完整 `devices` 配置。
 
-可以通过 `ls /dev/` 查看存在的设备驱动。
+echo "Emby扩展启动脚本"
 
-```yml
-devices:
-  - /dev/dri:/dev/dri
-  # - /dev/nvidia0:/dev/nvidia0
-  # - /dev/nvidiactl:/dev/nvidiactl
-  # - /dev/nvidia-modeset:/dev/nvidia-modeset
-  # - /dev/nvidia-nvswitchctl:/dev/nvidia-nvswitchctl
-  # - /dev/nvidia-uvm:/dev/nvidia-uvm
-  # - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
-  # - /dev/video11:/dev/video11
+#去掉下行注释可以关闭次脚本
+#exit 0
+
+########下面可以自行添加功能########
+
+## 修改容器hosts
+
+#echo -e "13.226.210.20     api.themoviedb.org" >> /etc/hosts
+#echo -e "13.225.142.99     api4.thetvdb.com" >> /etc/hosts
+
+## Emby-crx 美化 媒体库ID为空时不启用
+
+## 媒体库id，用逗号分隔。进入媒体库后url里的parentId
+## MediaId="21466,21463"
+MediaId=""
+
+## 扩展插件: 
+# embyLaunchPotplayer 外部播放
+# ede.user 弹幕
+# actorPlus 未知演员隐藏
+extmod='["embyLaunchPotplayer","ede.user","actorPlus"]'
+
+sed -i '/\ extmod/s/\[.*\]/'$extmod'/g' /system/dashboard-ui/ext.js
+
+exit 0
 ```
-
-如果您的设备存在其他硬件驱动，可以选择挂载。删除 `# ` 号即可。格式为：`宿主机路径:容器路径`。
-
-格式请与 `- /dev/dri:/dev/dri` 保持一致。
-
-## 特别版说明
-
-### 插件支持
-
-#### emby-erx Emby 增强/美化 插件
-
-> 开启请在 `{持久化目录}/config/config/ext.sh` 添加媒体库ID
-
-![emby-erx 插件](https://file.lifebus.top/imgs/emby_erx_plugin.png)
-
-#### dd-danmaku Emby 弹幕库插件
-
-> 开启请在 `{持久化目录}/config/config/ext.sh` 中设置
-
-![dd-danmaku 插件](https://file.lifebus.top/imgs/emby_dd_danmaku_plugin.png)
-
-#### embyExternalUrl Emby 调用外部播放器
-
-> 开启请在 `{持久化目录}/config/config/ext.sh` 中设置
-
-![embyExternalUrl 插件](https://file.lifebus.top/imgs/emby_external_url_plugin.png)
-
-### 使用说明
-
-#### 激活 Emby Premiere
-
-密钥：`疯狂星期四V我50`
-
-#### 电视直播
-
-添加直播源后,再手动刷新一下指南数据
-
----
-
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)

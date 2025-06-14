@@ -1,14 +1,19 @@
-﻿additionalProperties:
+name: Amilys Emby Server
+tags:
+  - 多媒体
+title: 一个免费的个人媒体服务器 (开心版)
+description: 一个免费的个人媒体服务器 (开心版)
+additionalProperties:
   key: emby-amilys
-  name: Emby Amilys版
+  name: Amilys Emby Server
   tags:
     - Media
-    - Local
-  shortDescZh: 主从式架构的媒体服务器软件
-  shortDescEn: A media server software with master-slave architecture
-  type: website
+  shortDescZh: 一个免费的个人媒体服务器 (开心版)
+  shortDescEn: A free personal media server
+  type: tool
   crossVersionUpdate: true
   limit: 0
-  website: https://hub.docker.com/r/lovechen/embyserver
-  github: https://hub.docker.com/r/lovechen/embyserver
-  document: https://hub.docker.com/r/lovechen/embyserver
+  recommend: 0
+  website: https://hub.docker.com/r/amilys/embyserver
+  github: https://github.com/amilys
+  document: https://hub.docker.com/r/amilys/embyserver

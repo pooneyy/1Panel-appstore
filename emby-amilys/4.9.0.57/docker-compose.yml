@@ -1,38 +1,30 @@
-networks:
-  1panel-network:
-    external: true
-
 services:
-  emby:
-    image: amilys/embyserver:4.9.0.57
+  emby-amilys:
     container_name: ${CONTAINER_NAME}
-    labels:
-      createdBy: "Apps"
     restart: always
-    network_mode: ${NETWORK_MODE}
+    networks:
+      - 1panel-network
     ports:
-      - ${PANEL_APP_PORT_HTTP}:8096
-    devices:
-      - /dev/dri:/dev/dri
-      # - /dev/nvidia0:/dev/nvidia0
-      # - /dev/nvidiactl:/dev/nvidiactl
-      # - /dev/nvidia-modeset:/dev/nvidia-modeset
-      # - /dev/nvidia-nvswitchctl:/dev/nvidia-nvswitchctl
-      # - /dev/nvidia-uvm:/dev/nvidia-uvm
-      # - /dev/nvidia-uvm-tools:/dev/nvidia-uvm-tools
-      # - /dev/video11:/dev/video11
+      - "${PANEL_APP_PORT_HTTP}:8096"
+      - "${PANEL_APP_PORT_HTTPS}:8920"
     volumes:
-      - /etc/timezone:/etc/timezone
-      - /etc/localtime:/etc/localtime
-      - ${EMBY_ROOT_PATH}/config:/config
-      - ${EMBY_ROOT_PATH}/mnt:/mnt
-      - ${CUSTOM_MOUNT_DIRECTORY_1:-./default_mount_1}:${CUSTOM_MOUNT_DIRECTORY_1:-/default_mount_1}
-      - ${CUSTOM_MOUNT_DIRECTORY_2:-./default_mount_2}:${CUSTOM_MOUNT_DIRECTORY_2:-/default_mount_2}
-      - ${CUSTOM_MOUNT_DIRECTORY_3:-./default_mount_3}:${CUSTOM_MOUNT_DIRECTORY_3:-/default_mount_3}
+      - "${DATA_PATH}:/config"
+      - "${MOUNT_PATH}:/mnt/share1"
+      - "${MOUNT_PATH2}:/mnt/share2"
     environment:
-      - UID=0
-      - GID=0
-      - GIDLIST=0
-      - HTTP_PROXY=${HTTP_PROXY:-}
-      - HTTPS_PROXY=${HTTP_PROXY:-}
-      - NO_PROXY=localhost,127.0.0.1,::1
+      - UID=1000
+      - GID=1000
+      - GIDLIST=1000,0
+      - TZ=${TIME_ZONE}
+      # - NVIDIA_VISIBLE_DEVICES=all # 映射NVIDIA显卡
+      # - NVIDIA_DRIVER_CAPABILITIES=all # 映射NVIDIA显卡
+    #runtime: nvidia # Expose NVIDIA GPUs
+    devices:
+      - /dev/dri:/dev/dri # VAAPI/NVDEC/NVENC render nodes
+      #- /dev/vchiq:/dev/vchiq # MMAL/OMX on Raspberry Pi
+    image: amilys/embyserver:4.9.0.57
+    labels:  
+      createdBy: "Apps"
+networks:  
+  1panel-network:  
+    external: true

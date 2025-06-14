@@ -1,65 +1,47 @@
-# Slink
+# 使用说明
 
-Slink 是一个使用 Symfony 和 SvelteKit 构建的自托管图片分享平台。
+必须要开启`https`的情况下才能正常注册登录账号。
 
-![Slink](https://file.lifebus.top/imgs/slink_cover.png)
+按照要求创建账号，例如邮箱`admin@localhost.com`，
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+如果创建账号正常，则会提示除了邮箱外还可以复制对应`uuid`，
 
-## 简介
+那么则需要执行相关命令激活此账号。
 
-解决了与朋友、家人和同事分享图片而不依赖第三方服务的问题。它还为艺术家提供了一个平台，让他们可以与社区分享自己的作品。
-此外，开发人员可能会发现将其用于托管个人项目屏幕截图很有用，然后可以在 GitHub、个人网站、博客等地方使用。
-
-## 特性
-
-+ 认证：用户可以注册并登录平台。
-+ 用户批准：在用户可以上传图片之前需要获得他们的批准。
-+ 图片上传：可以上传 SVG、PNG、JPG、WEBP、BMP、ICO 或 GIF 格式的图片。
-+ 分享链接：用户可以分享上传的图片链接，并自定义图片大小。
-+ 上传历史：提供了用户上传的所有图片的概览。
-+ 存储提供商：支持本地和 SMB 存储提供商。
-+ 探索图片：展示由其他用户上传的公共图片的列表页面。
-+ 暗色模式：应用程序支持暗色和亮色模式。
-
-## 安装说明
-
-### 公共列表
-
-> 只有标记为公共的图像才会在这里显示。
-
-应用包含一个可选的图片列表页面，用户可以在该页面上浏览其他用户上传的图片。
-
-### 存储提供商
-
-应用支持两种存储提供者：本地和 SMB。本地存储提供者将图像存储在本地文件系统中，而 SMB 存储提供者将图像存储在远程 SMB
-服务器上。默认情况下，应用使用本地存储提供者。
-
-### 用户批准
-
-默认情况下，应用程序在用户上传图片前需要获得批准。
-
-您需要使用 CLI 命令手动激活用户
-
-> 邮箱激活
-
-```shell
-docker exec -it slink slink user:activate --email=<user-email>
+- 1. 宿主机执行的方式
 ```
-
-> 用户ID 激活
-
-```shell
+# 邮箱方式
+docker exec -it slink slink user:activate --email=admin@localhost.com
+```
+```
+# uuid 方式
 docker exec -it slink slink user:activate --uuid=<user-id>
 ```
 
-### 安全
+- 2. 容器管理页面连接容器终端执行的方式
+```
+# 邮箱方式
+slink user:activate --email=admin@localhost.com
+```
+```
+# uuid 方式
+slink user:activate --uuid=<user-id>
+```
 
-Slink 支持用户认证和用户审批以防止未经授权访问应用。然而，建议使用反向代理如 Nginx 或 Traefik 添加额外的安全功能，如
-SSL、速率限制等。
+- 3. 有得到终端返回信息例如以下，则表示账号激活成功，可以正常登录了。
 
-如果不想将整个应用公开，仅可以通过反向代理公开 /image 路由。
+```
+User `admin@localhost.com` has been activated ✓
+```
 
----
+***
+# Slink: Image Sharing Platform
 
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/andrii-kryvoviaz/slink/release.yml?logo=github)
+![Docker Image Version (latest semver)](https://img.shields.io/docker/v/anirdev/slink?color=blue)
+![Docker Pulls](https://img.shields.io/docker/pulls/anirdev/slink?logo=docker)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/andrii-kryvoviaz/slink/blob/main/LICENSE)
+
+**Slink** is a self-hosted image sharing platform built with [Symfony](https://symfony.com/) and [SvelteKit](https://kit.svelte.dev/)️.
+
+Solves the problem of sharing images with friends, family, and colleagues without relying on third-party services. It also offers a platform for artists to share their work with the community. Additionally, developers may find it useful for self-hosting screenshots of personal projects, which can then be used on GitHub, portfolios, blogs, etc.

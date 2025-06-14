@@ -1,16 +1,19 @@
-﻿additionalProperties:
+name: Certimate
+tags:
+  - 安全
+title: 开源的 SSL 证书管理工具
+description: 开源的 SSL 证书管理工具
+additionalProperties:
   key: certimate
   name: Certimate
   tags:
-    - WebSite
-    - Tool
-    - Middleware
-    - Local
-  shortDescZh: SSL证书管理工具
-  shortDescEn: SSL Certificate Management Tool
-  type: website
+    - Security
+  shortDescZh: 开源的 SSL 证书管理工具
+  shortDescEn: Open source SSL certificate management tool
+  type: tool
   crossVersionUpdate: true
   limit: 0
-  website: https://docs.certimate.me/
-  github: https://github.com/usual2970/certimate/
-  document: https://docs.certimate.me/docs/intro/
+  recommend: 0
+  website: https://docs.certimate.me
+  github: https://github.com/usual2970/certimate
+  document: https://docs.certimate.me

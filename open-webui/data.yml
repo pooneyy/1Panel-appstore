@@ -1,15 +1,19 @@
+name: Open WebUI
+tags:
+  - AI / 大模型
+title: 大语言模型 (LLMs) 的用户友好型网络界面
+description: 大语言模型 (LLMs) 的用户友好型网络界面
 additionalProperties:
   key: open-webui
-  name: Open Webui
+  name: Open WebUI
   tags:
-    - WebSite
     - AI
-    - Local
-  shortDescZh: 用户友好的 AI 界面
-  shortDescEn: User-friendly AI interface
-  type: website
+  shortDescZh: 大语言模型 (LLMs) 的用户友好型网络界面
+  shortDescEn: User-friendly WebUI for LLMs
+  type: tool
   crossVersionUpdate: true
   limit: 0
-  website: https://openwebui.com/
-  github: https://github.com/open-webui/open-webui/
-  document: https://docs.openwebui.com/
+  recommend: 0
+  website: https://openwebui.com
+  github: https://github.com/open-webui/open-webui
+  document: https://docs.openwebui.com

@@ -1,19 +1,106 @@
-# Synapse Admin
+[![GitHub license](https://img.shields.io/github/license/Awesome-Technologies/synapse-admin)](https://github.com/Awesome-Technologies/synapse-admin/blob/master/LICENSE)
+[![Build Status](https://api.travis-ci.com/Awesome-Technologies/synapse-admin.svg?branch=master)](https://app.travis-ci.com/github/Awesome-Technologies/synapse-admin)
+[![build-test](https://github.com/Awesome-Technologies/synapse-admin/actions/workflows/build-test.yml/badge.svg)](https://github.com/Awesome-Technologies/synapse-admin/actions/workflows/build-test.yml)
+[![gh-pages](https://github.com/Awesome-Technologies/synapse-admin/actions/workflows/edge_ghpage.yml/badge.svg)](https://awesome-technologies.github.io/synapse-admin/)
+[![docker-release](https://github.com/Awesome-Technologies/synapse-admin/actions/workflows/docker-release.yml/badge.svg)](https://hub.docker.com/r/awesometechnologies/synapse-admin)
+[![github-release](https://github.com/Awesome-Technologies/synapse-admin/actions/workflows/github-release.yml/badge.svg)](https://github.com/Awesome-Technologies/synapse-admin/releases)
 
-Synapse 是一个开源的 Matrix 家庭服务器实现，由 Element 开发和维护。Matrix 是安全且可互操作实时通信的开放标准。
+# Synapse admin ui
 
-![Synapse](https://file.lifebus.top/imgs/synapse_cover.png)
+This project is built using [react-admin](https://marmelab.com/react-admin/).
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+## Usage
 
-## 安装说明
+### Supported Synapse
 
-本应用为 Synapse 服务器的管理工具，用于管理 Synapse 服务器的配置文件，用户，房间等信息。
+It needs at least [Synapse](https://github.com/matrix-org/synapse) v1.52.0 for all functions to work as expected!
 
-### 移动客户端
+You get your server version with the request `/_synapse/admin/v1/server_version`.
+See also [Synapse version API](https://matrix-org.github.io/synapse/develop/admin_api/version_api.html).
 
-[![Download on the App Store](http://www.tananaev.com/badges/app-store.svg)](https://apps.apple.com/us/app/element-messenger/id1083446067) [![Get it on Google Play](http://www.tananaev.com/badges/google-play.svg)](https://play.google.com/store/apps/details?id=im.vector.app) [![Get it on F-Droid](http://www.tananaev.com/badges/f-droid.svg)](https://f-droid.org/packages/im.vector.app/)
+After entering the URL on the login page of synapse-admin the server version appears below the input field.
 
----
+### Prerequisites
 
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+You need access to the following endpoints:
+
+- `/_matrix`
+- `/_synapse/admin`
+
+See also [Synapse administration endpoints](https://matrix-org.github.io/synapse/develop/reverse_proxy.html#synapse-administration-endpoints)
+
+### Use without install
+
+You can use the current version of Synapse Admin without own installation direct
+via [GitHub Pages](https://awesome-technologies.github.io/synapse-admin/).
+
+**Note:**
+If you want to use the deployment, you have to make sure that the admin endpoints (`/_synapse/admin`) are accessible for your browser.
+**Remember: You have no need to expose these endpoints to the internet but to your network.**
+If you want your own deployment, follow the [Step-By-Step Install Guide](#step-by-step-install) below.
+
+### Step-By-Step install
+
+You have three options:
+
+1.  [Download the tarball and serve with any webserver](#steps-for-1)
+2.  [Download the source code from github and run using nodejs](#steps-for-2)
+3.  [Run the Docker container](#steps-for-3)
+
+#### Steps for 1)
+
+- make sure you have a webserver installed that can serve static files (any webserver like nginx or apache will do)
+- configure a vhost for synapse admin on your webserver
+- download the .tar.gz from the latest release: https://github.com/Awesome-Technologies/synapse-admin/releases/latest
+- unpack the .tar.gz
+- move or symlink the `synapse-admin-x.x.x` into your vhosts root dir
+- open the url of the vhost in your browser
+
+#### Steps for 2)
+
+- make sure you have installed the following: git, yarn, nodejs
+- download the source code: `git clone https://github.com/Awesome-Technologies/synapse-admin.git`
+- change into downloaded directory: `cd synapse-admin`
+- download dependencies: `yarn install`
+- start web server: `yarn start`
+
+You can fix the homeserver, so that the user can no longer define it himself.
+Either you define it at startup (e.g. `REACT_APP_SERVER=https://yourmatrixserver.example.com yarn start`)
+or by editing it in the [.env](.env) file. See also the
+[documentation](https://create-react-app.dev/docs/adding-custom-environment-variables/).
+
+#### Steps for 3)
+
+- run the Docker container from the public docker registry: `docker run -p 8080:80 awesometechnologies/synapse-admin` or use the [docker-compose.yml](docker-compose.yml): `docker-compose up -d`
+
+  > note: if you're building on an architecture other than amd64 (for example a raspberry pi), make sure to define a maximum ram for node. otherwise the build will fail.
+
+  ```yml
+  version: "3"
+
+  services:
+    synapse-admin:
+      container_name: synapse-admin
+      hostname: synapse-admin
+      build:
+        context: https://github.com/Awesome-Technologies/synapse-admin.git
+        # args:
+        #   - NODE_OPTIONS="--max_old_space_size=1024"
+        #   # see #266, PUBLIC_URL must be without surrounding quotation marks
+        #   - PUBLIC_URL=/synapse-admin
+        #   - REACT_APP_SERVER="https://matrix.example.com"
+      ports:
+        - "8080:80"
+      restart: unless-stopped
+  ```
+
+- browse to http://localhost:8080
+
+## Screenshots
+
+![Screenshots](./screenshots.jpg)
+
+## Development
+
+- Use `yarn test` to run all style, lint and unit tests
+- Use `yarn fix` to fix the coding style

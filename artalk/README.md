@@ -1,95 +1,82 @@
+# 使用说明
+## Artalk 设置账号密码
+
+以下两种方式相同。
+
+### 1. 宿主机
+```
+docker exec -it artalk artalk admin
+```
+
+- 修改`artalk`改为容器名
+- 如 `1Panel-localartalk-tYWg`
+- 更改后
+```
+docker exec -it 1Panel-localartalk-tYWg artalk admin
+```
+
+### 2. 面板执行
+
+面板`容器`界面，连接容器终端，执行以下命令
+
+```
+artalk admin
+```
+
+# 原始相关
+<p align="center">
+<img src="https://user-images.githubusercontent.com/22412567/171680920-6e74b77c-c565-487b-bff1-4f94976ecbe7.png" alt="Artalk" width="100%">
+</p>
+
 # Artalk
 
-一个自托管的评论系统
+[![](https://img.shields.io/npm/v/artalk.svg?style=flat-square)](https://www.npmjs.com/package/artalk)
+[![](https://img.shields.io/npm/dt/artalk.svg?style=flat-square)](https://www.npmjs.com/package/artalk)
+[![](https://badgen.net/bundlephobia/minzip/artalk?style=flat-square)](https://bundlephobia.com/package/artalk)
+[![Docker Pulls](https://img.shields.io/docker/pulls/artalk/artalk-go?style=flat-square)](https://hub.docker.com/r/artalk/artalk-go)
+[![CircleCI](https://circleci.com/gh/ArtalkJS/Artalk/tree/master.svg?style=svg)](https://circleci.com/gh/ArtalkJS/Artalk/tree/master)
 
-![Artalk](https://file.lifebus.top/imgs/artalk_cover.png)
+> 🌌 Golang 自托管评论系统
 
-Artalk 是一款简单易用但功能丰富的评论系统，你可以开箱即用地部署并置入任何博客、网站、Web 应用。
-
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
-
-## 亮点
-
-🍃 前端 ~40KB，纯天然 Vanilla JS
-
-🍱 后端 Golang，高效轻量跨平台
-
-🐳 通过 Docker 一键部署，方便快捷
-
-🌈 开源程序，自托管，隐私至上
-
-## 特性
-
-| 特性  | 描述                       |
-|:---:|:-------------------------|
-| 📚  | 侧边栏: 快速管理、直观浏览           |
-| 🔐  | 社交登录: 通过社交账号快速登录         |
-| 💌  | 邮件通知: 多种发送方式、邮件模板        |
-| 📢  | 多元推送: 多种推送方式、通知模版        |
-| 🔔  | 站内通知: 红点标记、提及列表          |
-| 🔒  | 验证码: 多种验证类型、频率限制         |
-| 🚫  | 评论审核: 内容检测、垃圾拦截          |
-| 📸  | 图片上传: 自定义上传、支持图床         |
-| 📝  | Markdown: 支持 Markdown 语法 |
-| 😄  | 表情包: 兼容 OwO，快速集成         |
-| 🌐  | 多站点: 站点隔离、集中管理           |
-| 👤  | 管理员: 密码验证、徽章标识           |
-| 📑  | 页面管理: 快速查看、标题一键跳转        |
-| 📊  | 浏览量统计: 轻松统计网页浏览量         |
-| 📖  | 层级结构: 嵌套分页列表、滚动加载        |
-| 🔼  | 评论投票: 赞同或反对评论            |
-| 🔄  | 评论排序: 多种排序方式，自由选择        |
-| 🔍  | 评论搜索: 快速搜索评论内容           |
-| 🔝  | 评论置顶: 重要消息置顶显示           |
-| 👀  | 仅看作者: 仅显示作者的评论           |
-| 🔗  | 评论跳转: 快速跳转到引用的评论         |
-| 💾  | 自动保存: 输入内容防丢功能           |
-| 🌍  | IP 属地: 用户 IP 属地展示        |
-| 📦  | 数据迁移: 自由迁移、快速备份          |
-| 🖼️ | 图片灯箱: 图片灯箱快速集成           |
-| 📱  | 图片懒加载: 延迟加载图片，优化体验       |
-| 📐  | Latex: Latex 公式解析集成      |
-| 🌙  | 夜间模式: 夜间模式切换             |
-| 🔧  | 扩展插件: 创造更多可能性            |
-| 🌐  | 多语言: 多国语言切换              |
-| 💻  | 命令行: 命令行操作管理能力           |
-| 📜  | API 文档: 提供 OpenAPI 格式文档  |
-| 🚀  | 程序升级: 版本检测，一键升级          |
-
-## 安装说明
-
-### `应用密钥` 配置
-
-数据加密密钥，非管理员密码。
-
-### `管理员密码` 配置
-
-管理员密码，用于登录后台管理。
-
-基本格式：`(加密方式)加密后的密码`
-
-示例密码：`123456`
-
-#### 加密方式：`md5`
-
-填写案例：`(md5)e10adc3949ba59abbe56e057f20f883e`
-
-#### 加密方式：`bcrypt`
-
-填写案例：`(bcrypt)$2a$10$yS/EhHU1xqjNpboe8DWkb.AvWdBb5/.Ny3reXy8SltlVaquiSGwzu`
-
-### `受信任的域名 (多个域名用空格分隔)` 配置
-
-填写允许访问的域名，多个域名用空格分隔。
-
-如果您需要将插件使用在以下博客地址：
-
-+ `https://blog1.com`
-
-+ `https://blog2.com`
-
-填写案例：`https://blog1.com https://blog2.com`
+[English](https://github.com/ArtalkJS/Artalk/blob/master/README.en.md) / [官方文档](https://artalk.js.org) / [最新版本](https://github.com/ArtalkJS/Artalk/releases)
 
 ---
 
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+- 🍃 轻量 (~30kB)
+- 👨‍👧‍👦 安全 (自托管)
+- 🐳 易上手 (防脱发)
+- 🍱 Golang 后端 (快速 / 跨平台)
+- 🌊 Vanilla × TypeScript × Vite (纯天然 / 无依赖)
+
+## 特性
+
+- 侧 边 栏 ：支持多站点集中化管理
+- 通知中心：红点的标记 / 提及列表
+- 身份验证：徽标自定义 / 密码验证
+- 评论审核：反垃圾检测 / 频率限制
+- 表情符号：插入表情包 / 快速导入
+- 邮件提醒：模版自定义 / 多管理员
+- 站点隔离：管理员分配 / 多个站点
+- 页面管理：标题可显示 / 快速跳转
+- 图片上传：上传到本地 / 多种图床
+- 多元推送：支持 钉钉 飞书 TG
+- 无限层级：可切换为平铺模式
+- 评论投票：赞同还是反对评论
+- 评论排序：按热度或时间排序
+- 评论置顶：重要消息置顶显示
+- 只看作者：仅显示作者的评论
+- 说说模式：仅自己可发布评论
+- 异步处理：发送评论无需等待
+- 滚动加载：评论内容分页处置
+- 自动保存：用户输入防丢功能
+- 自动填充：用户链接自动填充
+- 实时预览：评论内容实时预览
+- 夜间模式：防止眼部疾病伤害
+- 评论折叠：这个不打算给你康
+- 数据备份：防止评论数据丢失
+- 数据迁移：快速切换评论系统
+- Markdown：默认支持 MD 语法
+- 支持 Latex：提供集成 Katex 插件
+- 使用 [Vite](https://github.com/vitejs/vite)：属于开发者的极致体验
+
+更多内容请查看：[“**介绍文档**”](https://artalk.js.org/guide/intro.html)

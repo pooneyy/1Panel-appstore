@@ -1,25 +1,101 @@
-# Transmission
+## About
 
-Transmission是一种BitTorrent客户端，特点是一个跨平台的后端和其上的简洁的用户界面。
+Transmission is a fast, easy, and free BitTorrent client. It comes in several flavors:
+  * A native macOS GUI application
+  * GTK+ and Qt GUI applications for Linux, BSD, etc.
+  * A Qt-based Windows-compatible GUI application
+  * A headless daemon for servers and routers
+  * A web UI for remote controlling any of the above
+  
+Visit https://transmissionbt.com/ for more information.
 
-![Transmission](https://file.lifebus.top/imgs/transmission_logo.png)
+## Documentation
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+[Transmission's documentation](https://github.com/transmission/transmission/blob/main/docs/README.md) is currently out-of-date, but the team has recently begun a new project to update it and is looking for volunteers. If you're interested, please feel free to submit pull requests!
 
-## 应用说明
+## Command line interface notes
 
-Transmission 是一个快速、轻量级的 BitTorrent 客户端，支持多种操作系统。
+Transmission is fully supported in transmission-remote, the preferred cli client.
 
-## 安装说明
+Three standalone tools to examine, create, and edit .torrent files exist: transmission-show, transmission-create, and transmission-edit, respectively.
 
-### 主题安装
+Prior to development of transmission-remote, the standalone client transmission-cli was created. Limited to a single torrent at a time, transmission-cli is deprecated and exists primarily to support older hardware dependent upon it. In almost all instances, transmission-remote should be used instead.
 
-启动程序后，进入持久化目录 `/home/transmission`，在 `config` 目录下创建 目录 `themes` 主题目录
+Different distributions may choose to package any or all of these tools in one or more separate packages.
 
-将主题下载后解压到 `themes` 目录下， 获得主题路径 `/config/themes/<主题目录名称>` 修改参数，重启程序即可。
+## Building
 
-参数不需要 `/home/transmission` 前缀，只需要填写 `/config/themes/<主题目录名称>` 即可。
+Transmission has an Xcode project file (Transmission.xcodeproj) for building in Xcode.
 
----
+For a more detailed description, and dependencies, visit [How to Build Transmission](https://github.com/transmission/transmission/blob/main/docs/Building-Transmission.md) in docs
 
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+### Building a Transmission release from the command line
+
+    $ tar xf transmission-3.00.tar.xz
+    $ cd transmission-3.00
+    $ mkdir build
+    $ cd build
+    # Use -DCMAKE_BUILD_TYPE=RelWithDebInfo to build optimzed binary with debug information. (preferred)
+    # Use -DCMAKE_BUILD_TYPE=Release to build full optimized binary.
+    $ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+    $ make
+    $ sudo make install
+
+### Building Transmission from the nightly builds
+
+Download a tarball from https://build.transmissionbt.com/job/trunk-linux/ and follow the steps from the previous section.
+
+If you're new to building programs from source code, this is typically easier than building from Git.
+
+### Building Transmission from Git (first time)
+
+    $ git clone https://github.com/transmission/transmission Transmission
+    $ cd Transmission
+    $ git submodule update --init --recursive
+    $ mkdir build
+    $ cd build
+    # Use -DCMAKE_BUILD_TYPE=RelWithDebInfo to build optimzed binary with debug information. (preferred)
+    # Use -DCMAKE_BUILD_TYPE=Release to build full optimized binary.
+    $ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+    $ make
+    $ sudo make install
+
+### Building Transmission from Git (updating)
+
+    $ cd Transmission/build
+    $ make clean
+    $ git submodule foreach --recursive git clean -xfd
+    $ git pull --rebase --prune
+    $ git submodule update --init --recursive
+    # Use -DCMAKE_BUILD_TYPE=RelWithDebInfo to build optimzed binary with debug information. (preferred)
+    # Use -DCMAKE_BUILD_TYPE=Release to build full optimized binary.
+    $ cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo ..
+    $ make
+    $ sudo make install
+
+## Contributing
+
+### Code Style
+
+You would want to setup your editor to make use of the .clang-format file located in the root of this repository and the eslint/prettier rules in web/package.json.
+
+If for some reason you are unwilling or unable to do so, there is a shell script which you can use: `./code_style.sh`
+
+### Translations
+
+See [language translations](https://github.com/transmission/transmission/blob/main/docs/Translating.md).
+
+## Sponsors
+
+<table>
+ <tbody>
+  <tr>
+   <td align="center"><img alt="[MacStadium]" src="https://uploads-ssl.webflow.com/5ac3c046c82724970fc60918/5c019d917bba312af7553b49_MacStadium-developerlogo.png" height="30"/></td>
+   <td>macOS CI builds are running on a M1 Mac Mini provided by <a href="https://www.macstadium.com/opensource">MacStadium</a></td>
+  </tr>
+  <tr>
+   <td align="center"><img alt="[SignPath]" src="https://avatars.githubusercontent.com/u/34448643" height="30"/></td>
+   <td>Free code signing on Windows provided by <a href="https://signpath.io/">SignPath.io</a>, certificate by <a href="https://signpath.org/">SignPath Foundation</a></td>
+  </tr>
+ </tbody>
+</table>

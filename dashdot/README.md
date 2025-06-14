@@ -1,33 +1,80 @@
-# Dash.
+<!-- markdownlint-disable -->
+<h1>
+  <img src="https://github.com/MauriceNino/dashdot/raw/main/.github/images/banner_muted.png" alt="dash. - a modern server dashboard">
+</h1>
 
-一个简单、现代的服务器仪表板，主要用于较小的私人服务器
+<p align="center">
+  <a href="https://github.com/MauriceNino/dashdot/actions/workflows/deploy.yaml?branch=main" target="_blank">
+    <img title="GitHub Actions" src="https://github.com/MauriceNino/dashdot/actions/workflows/deploy.yaml/badge.svg?branch=main">
+  </a>
 
-![Dash.](https://file.lifebus.top/imgs/dashdot_cover.png)
+  <a href="https://discord.gg/3teHFBNQ9W" target="_blank">
+    <img title="Discord" src="https://discord.com/api/guilds/986251291577688064/widget.png?style=shield">
+  </a>
+</p>
+<p align="center">
+  <i>Feel free to join the <b>Discord</b> and <b>star the repo</b> if you like the project!</i>
+</p>
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+<br/>
 
-## 安装说明
+<p align="center">
+  <b>dash.</b> (or <b>dashdot</b>) is a modern server dashboard,
+  running on the latest tech, designed with glassmorphism in mind.
+  It is intended to be used for smaller VPS and private servers.
+</p>
+<br />
+<p align="center">
+  <a href="https://dash.mauz.dev" target="_blank">Live Demo</a>
+ |
+  <a href="https://hub.docker.com/r/mauricenino/dashdot" target="_blank">Docker Image</a>
+</p>
 
-<div style="border: 1px solid #FFC107; padding: 10px; border-radius: 5px; color: #856404; background-color: #FFF3CD; display: inline-block; width: 100%; max-width: 60%; margin-top: 10px;">
-    <div style="display: flex; align-items: center;">
-        <span style="font-size: 24px; margin-right: 8px;">⚠️</span>
-        <div>
-            <strong style="font-size: 16px;">警告</strong><br>
-            <span style="font-size: 14px; color: #333;">该应用申请使用 `特权模式`， 将允许应用在容器内部执行特权操作，如挂载宿主机目录、访问宿主机设备等。</span>
-        </div>
-    </div>
-</div>
+#
 
-<div style="border: 1px solid #FFC107; padding: 10px; border-radius: 5px; color: #856404; background-color: #FFF3CD; display: inline-block; width: 100%; max-width: 60%; margin-top: 10px;">
-    <div style="display: flex; align-items: center;">
-        <span style="font-size: 24px; margin-right: 8px;">⚠️</span>
-        <div>
-            <strong style="font-size: 16px;">警告</strong><br>
-            <span style="font-size: 14px; color: #333;">该应用申请挂载 `根目录`， 该容器将可以访问主机上的所有目录以及文件</span>
-        </div>
-    </div>
-</div>
+<a href="https://ko-fi.com/mauricenino" target="_blank">
+  <img 
+    align="right"
+    width="160"
+    style="padding-left: 20px; padding-bottom: 10px"
+    alt="Consider sponsoring the development of this project"
+    src="https://cdn.ko-fi.com/cdn/kofi2.png?v=3"
+  />
+</a>
 
----
+<!-- markdownlint-enable -->
 
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+**dash.** is a open-source project, so any contribution is highly appreciated.
+If you are interested in further developing this project, have a look at the
+[Contributing.md](https://github.com/MauriceNino/dashdot/blob/main/.github/CONTRIBUTING.md).
+
+In case you want to financially support this project, you can visit my
+[GitHub Sponsors](https://github.com/sponsors/MauriceNino), or my [Ko-Fi](https://ko-fi.com/mauricenino).
+
+## Preview
+
+<!-- markdownlint-disable -->
+
+| Dark-Mode                                                                                    | Light-Mode                                                                                     |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| <img src="https://github.com/MauriceNino/dashdot/raw/main/apps/docs/static/img/screenshot_darkmode.png" alt="Screenshot of the dark-mode" /> | <img src="https://github.com/MauriceNino/dashdot/raw/main/apps/docs/static/img/screenshot_lightmode.png" alt="Screenshot of the light-mode" /> |
+
+
+## Quick Install (Docker)
+
+Images are hosted on [DockerHub](https://hub.docker.com/r/mauricenino/dashdot),
+and are available for both AMD64 and ARM devices.
+
+```bash
+docker container run -it \
+  -p 80:3001 \
+  -v /:/mnt/host:ro \
+  --privileged \
+  mauricenino/dashdot
+```
+
+To get more information on why which flag is needed, or if you want to use other
+install options instead (`docker-compose`, or from source), have a look at the
+[installation options](https://getdashdot.com/docs/install).
+
+To read more about configuration options, you can visit the [configuration options](https://getdashdot.com/docs/config).
