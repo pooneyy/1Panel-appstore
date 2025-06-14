@@ -2,6 +2,16 @@
 ## 申明
 由于原Alist项目所有者、文档、代码以及社群都被大幅度修改，原开发者Xhofe已经离开，当前最后版本为v3.45.0，基于此版本进行封存；后续基于开源社区维护OpenList进行更新；安装时，请选择openlist版本。
 
+## 版本说明
+
+- alist-3.45.0 原版Alist封存，不建议部署
+- openlist 开源主版本，不包含其他工具，体积最小
+- openlist-ffmpeg 添加ffmpeg视频处理工具
+- openlist-aria2  添加aria2下载器工具
+- openlist-aio    添加ffmpeg和aria2的All-in-one版本
+
+请根据自身需求，选择相应的版本，分支项目还处于初期阶段，建议不要部署在生产环境
+
 
 ## 账号密码
 
