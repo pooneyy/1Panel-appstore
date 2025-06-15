@@ -28,9 +28,8 @@
       "allowedVersions": "/^v8.*/"
     },
     {
-      "matchPackageNames": ["heimdall**"],
-      "allowedVersions": "^!/\\d{4}\\.\\d{1,2}\\.\\d{1,2}$/",
-      "enabled": false
+      "matchPackageNames": ["linuxserver/heimdall"],
+      "allowedVersions": "<2021"
     },
     {
       "matchPackageNames": ["kibana"],
