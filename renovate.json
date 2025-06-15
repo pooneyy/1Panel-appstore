@@ -32,6 +32,16 @@
       "allowedVersions": "<2021"
     },
     {
+      "matchPackageNames": ["linuxserver/qbittorrent"],
+      "matchCurrentVersion": "<=20",
+      "allowedVersions": "<20"
+    },
+    {
+      "matchPackageNames": ["linuxserver/transmission"],
+      "matchCurrentVersion": "<=20",
+      "allowedVersions": "<20"
+    },
+    {
       "matchPackageNames": ["kibana"],
       "matchCurrentVersion": "/^8.*/",
       "allowedVersions": "/^8.*/"
