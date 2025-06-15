@@ -38,8 +38,7 @@
     },
     {
       "matchPackageNames": ["linuxserver/transmission"],
-      "matchCurrentVersion": "<=20",
-      "allowedVersions": "<20"
+      "allowedVersions": "<2021"
     },
     {
       "matchPackageNames": ["kibana"],
