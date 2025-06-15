@@ -21,7 +21,7 @@ services:
     image: "jarylc/qbittorrent:latest"
     labels:  
       createdBy: "Apps"
-   
+
 networks:  
   1panel-network:  
     external: true
