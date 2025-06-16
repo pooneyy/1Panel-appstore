@@ -508,7 +508,7 @@ services:
       test: [ 'CMD', 'redis-cli', 'ping' ]
 
   sandbox:
-    image: langgenius/dify-sandbox:0.2.10
+    image: langgenius/dify-sandbox:0.2.12
     container_name: sandbox-${CONTAINER_NAME}
     restart: always
     environment:
