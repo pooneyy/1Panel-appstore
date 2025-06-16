@@ -15,5 +15,5 @@ additionalProperties:
   limit: 1
   recommend: 0
   website: https://ehang-io.github.io/nps
-  github: https://github.com/yisier/nps
-  document: https://ehang-io.github.io/nps
+  github: https://github.com/ehang-io/nps
+  document: https://ehang-io.github.io/nps/#/?id=nps

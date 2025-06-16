@@ -1,10 +1,24 @@
 additionalProperties:
   formFields:
-    - default: "./data"
+    - default: "./data/data"
       edit: true
       envKey: DATA_PATH
       labelEn: Data Path
       labelZh: 数据路径
+      required: true
+      type: text
+    - default: "./data/config.toml"
+      disabled: true
+      envKey: CONFIG_FILE_PATH
+      labelEn: Configuration file path
+      labelZh: 配置文件路径
+      required: true
+      type: text
+    - default: "/root/config.toml"
+      disabled: true
+      envKey: CONFIG_FILE_PATH_INTERNAL
+      labelEn: Configuration file path(inside container)
+      labelZh: 配置文件路径 (容器内部)
       required: true
       type: text
     - default: "Asia/Shanghai"
@@ -28,10 +42,10 @@ additionalProperties:
       labelZh: 主机名
       required: true
       type: text
-    - default: "-i <ip> --network-name <用户> --network-secret <密码> -e tcp://<服务器地址>:11010 -l <监听地址>"
-      edit: true
+    - default: "-c /root/config.toml"
+      disabled: true
       envKey: COMMAND
-      labelEn: Command (modified as required)
-      labelZh: 命令 (按需修改)
+      labelEn: Command
+      labelZh: 命令
       required: true
       type: text
