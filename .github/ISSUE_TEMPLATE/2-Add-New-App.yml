@@ -1,0 +1,51 @@
+name: "📝提交新应用 / Add New App"
+description: "报告缺陷来帮助我们完善。 / Create a report to help us improve"
+title: "[需要增加应用] 需要增加哪个应用？ / Which app needs to be added?"
+labels:
+  - Add New App
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Welcome!
+
+  - type: input
+    attributes:
+      label: 应用名称 / App Name
+      description: 
+        想要添加哪个应用？请填于此。
+        Which app do you want to add? Please fill in here.
+      placeholder: (e.g. gitlab-jh)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 想要添加的应用有官方的 Docker 镜像吗？/ Do the app you want to add have official Docker images?
+      description: 
+        没有官方镜像的应用将不能被添加。
+
+        Apps without official Docker images will not be added.
+      placeholder: (e.g. registry.gitlab.cn/omnibus/gitlab-jh:18.0.1-jh.0:18.0.1-jh.0)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 该应用文档的URL / The URL of the app's documentation
+      description: 
+        该应用文档的URL，最好能定位到使用 Docker Compose 安装的部分。例如 https://gitlab.cn/docs/jh/install/docker.html#%E4%BD%BF%E7%94%A8-docker-compose-%E5%AE%89%E8%A3%85%E6%9E%81%E7%8B%90gitlab
+      placeholder: |
+        (e.g. https://gitlab.cn/docs/jh/install/docker.html#%E4%BD%BF%E7%94%A8-docker-compose-%E5%AE%89%E8%A3%85%E6%9E%81%E7%8B%90gitlab)
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: 该应用的 Logo / The app's logo
+      description: 
+        应用无水印 logo , 以正方形为佳，最好是 180 * 180 px，复制图片后，粘贴到此处。
+
+        The app's logo without watermark, it's best to be square, preferably 180 * 180 px, copy the image and paste it here.
+    validations:
+      required: false
