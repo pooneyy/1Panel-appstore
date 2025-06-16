@@ -8,7 +8,7 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: ""
+    - default: "copilot"
       edit: true
       envKey: SECRET_KEY
       labelEn: secretKey

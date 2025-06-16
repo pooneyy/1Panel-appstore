@@ -1,11 +1,11 @@
-name: DockerCopilot
+name: Docker-Copilot
 tags:
     - 实用工具
 title: DockerCopilot
 description: docker容器管理工具
 additionalProperties:
-    key: dockercopilot
-    name: DockerCopilot
+    key: docker-copilot
+    name: Docker-Copilot
     tags:
         - Tools
     shortDescZh: 一键更新容器
