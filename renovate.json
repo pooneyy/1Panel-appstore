@@ -1,45 +1,134 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": [
+    "config:recommended"
+  ],
   "gitIgnoredAuthors": [
     "githubaction@githubaction.com"
   ],
   "rebaseWhen": "never",
   "packageRules": [
     {
-      "packageNames": ["docker-compose"],
+      "matchPackageNames": [
+        "docker-compose"
+      ],
       "automerge": true
     },
     {
-      "matchFileNames": ["apps/mysql/5.5.*/*.yml"],
+      "matchPackageNames": [
+        "*.aliyuncs.com/**",
+        "*.gitlab.cn/**",
+        "*.myhuaweicloud.com/**"
+        ],
+      "enabled": false
+    },
+    {
+      "matchPackageNames": ["elasticsearch"],
+      "matchCurrentVersion": "/^v8.*/",
+      "allowedVersions": "/^v8.*/"
+    },
+    {
+      "matchPackageNames": ["linuxserver/heimdall"],
+      "allowedVersions": "<2021"
+    },
+    {
+      "matchPackageNames": ["linuxserver/qbittorrent"],
+      "matchCurrentVersion": "<=20",
+      "allowedVersions": "<20"
+    },
+    {
+      "matchPackageNames": ["linuxserver/transmission"],
+      "allowedVersions": "<2021"
+    },
+    {
+      "matchPackageNames": ["kibana"],
+      "matchCurrentVersion": "/^8.*/",
+      "allowedVersions": "/^8.*/"
+    },
+    {
+      "matchPackageNames": ["linuxserver/qbittorrent"],
+      "matchCurrentVersion": "<=20",
+      "allowedVersions": "<20"
+    },
+    {
+      "matchPackageNames": ["photoprism/photoprism"],
+      "matchCurrentVersion": "/^\\d{6}$/",
+      "allowedVersions": "/^\\d{6}$/"
+    },
+    {
+      "matchPackageNames": ["wushuo894/ani-rss"],
+      "matchCurrentVersion": "/^v1.*/",
+      "allowedVersions": "<2"
+    },
+    {
+      "matchPackageNames": ["xhofe/alist"],
+      "matchCurrentVersion": "v3.40.0",
+      "allowedVersions": "v3.40.0"
+    },
+    {
+      "matchPackageNames":[
+        "mysql**",
+        "node**",
+        "postgres**",
+        "redis**"
+      ],
+      "enabled": false
+    },
+    {
+      "matchFileNames": [
+        "apps/mysql/5.5.*/*.yml"
+      ],
       "allowedVersions": "/^5.5.*/"
     },
     {
-      "matchFileNames": ["apps/mysql/5.6.*/*.yml"],
+      "matchFileNames": [
+        "apps/mysql/5.6.*/*.yml"
+      ],
       "allowedVersions": "/^5.6.*/"
     },
     {
-      "matchFileNames": ["apps/mysql/5.7.*/*.yml"],
+      "matchFileNames": [
+        "apps/mysql/5.7.*/*.yml"
+      ],
       "allowedVersions": "/^5.7.*/"
     },
     {
-      "matchFileNames": ["apps/mysql/8.0.*/*.yml"],
+      "matchFileNames": [
+        "apps/mysql/8.0.*/*.yml"
+      ],
       "allowedVersions": "/^8.0.*/"
     },
     {
-      "matchFileNames": ["apps/mysql/8.4.*/*.yml"],
+      "matchFileNames": [
+        "apps/mysql/8.4.*/*.yml"
+      ],
       "allowedVersions": "/^8.4.*/"
     },
     {
-      "matchFileNames": ["apps/php-unofficial/7.4.*/*.yml"],
+      "matchFileNames": [
+        "apps/php-unofficial/7.4.*/*.yml",
+        "apps/php-unofficial/7.4.*/Dockerfile"
+      ],
       "allowedVersions": "/^7.4.*/"
     },
     {
-      "matchFileNames": ["apps/php-unofficial/8.1.*/*.yml"],
+      "matchFileNames": [
+        "apps/php-unofficial/8.1.*/*.yml",
+        "apps/php-unofficial/8.1.*/Dockerfile"
+      ],
       "allowedVersions": "/^8.1.*/"
     },
     {
-      "matchFileNames": ["apps/reader/2.7.*/*.yml"],
+      "matchFileNames": [
+        "apps/php-unofficial/8.4.*/*.yml",
+        "apps/php-unofficial/8.4.*/Dockerfile"
+      ],
+      "allowedVersions": "/^8.4.*/"
+    },
+    {
+      "matchFileNames": [
+        "apps/reader/2.7.*/*.yml"
+      ],
       "allowedVersions": "/^2.7.*/"
     }
   ],
