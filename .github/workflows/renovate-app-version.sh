@@ -26,13 +26,16 @@ do
         echo "Trimmed version: $trimmed_version"
         if [ "$old_version" != "$trimmed_version" ]; then
             echo "将 apps/$app_name/$old_version 重命名为 apps/$app_name/$trimmed_version"
+            echo "移动前: "
+            find apps/$app_name
             if [ ! -d "apps/$app_name/$trimmed_version" ]; then
                 mv apps/$app_name/$old_version apps/$app_name/$trimmed_version
             else
                 echo "apps/$app_name/$trimmed_version 文件夹已存在"
                 exit 1
             fi
-            
+            echo "移动后: "
+            find apps/$app_name
         fi
     fi
 done
