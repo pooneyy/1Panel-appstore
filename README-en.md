@@ -20,6 +20,7 @@
     - [2.2.2 Getting Apps via Compressed Package](#222-getting-apps-via-compressed-package)
 - [3. Remarks](#3-remarks)
 - [4. App Overview](#4-app-overview)
+- [5. Contributors](#5-contributors)
 
 
 ***
@@ -152,3 +153,9 @@ cat ./data/hbbs/id_ed25519.pub
 ## 4. App Overview
 
 ![](https://github.com/pooneyy/1Panel-appstore/raw/localApps/docs/app-list.png)
+
+## 5. Contributors
+
+Thanks goes to these wonderful people:
+
+[![Contributors](https://contrib.rocks/image?repo=OpenListTeam/OpenList)](https://github.com/OpenListTeam/OpenList/graphs/contributors)

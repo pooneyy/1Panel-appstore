@@ -19,6 +19,7 @@
     - [2.2.2 使用压缩包方式获取应用](#222-使用压缩包方式获取应用)
 - [3. 备注](#3-备注)
 - [4. 应用一览图](#4-应用一览图)
+- [5. 致谢](#5-致谢)
 
 
 ***
@@ -154,3 +155,9 @@ cat ./data/hbbs/id_ed25519.pub
 ## 4. 应用一览图
 
 ![](https://github.com/pooneyy/1Panel-appstore/raw/localApps/docs/app-list.png)
+
+## 5. 致谢
+
+历史不会埋没每一个人，感谢每一位为开源做出贡献的人
+
+[![Contributors](https://contrib.rocks/image?repo=pooneyy/1Panel-appstore)](https://github.com/pooneyy/1Panel-appstore/graphs/contributors)
