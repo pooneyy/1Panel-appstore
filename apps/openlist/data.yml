@@ -29,9 +29,9 @@ additionalProperties:
     github: https://github.com/OpenListTeam/OpenList
     document: https://openlistteam.github.io/docs/
     architectures:
-      - amd64
-      - arm64
-      - arm/v7
-      - arm/v6
-      - s390x
+        - amd64
+        - arm64
+        - arm/v7
+        - arm/v6
+        - s390x
 

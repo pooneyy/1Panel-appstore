@@ -4,7 +4,6 @@
 
 ## 版本说明
 
-- alist-3.45.0 原版Alist封存，不建议部署
 - openlist 开源主版本，不包含其他工具，体积最小
 - openlist-ffmpeg 添加ffmpeg视频处理工具
 - openlist-aria2  添加aria2下载器工具
