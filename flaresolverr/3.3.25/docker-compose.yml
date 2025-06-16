@@ -4,7 +4,7 @@ networks:
 
 services:
   flaresolverr:
-    image: flaresolverr/flaresolverr:v3.3.24
+    image: flaresolverr/flaresolverr:v3.3.25
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"
