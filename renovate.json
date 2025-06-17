@@ -9,6 +9,8 @@
   "forkProcessing": "enabled",
   "dependencyDashboard": true,
   "rebaseWhen": "never",
+  "platformAutomerge": true,
+  "automergeType": "pr",
   "ignorePaths": [
     "apps/**"
   ],
