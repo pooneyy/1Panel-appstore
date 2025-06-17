@@ -10,6 +10,7 @@
   "dependencyDashboard": true,
   "rebaseWhen": "never",
   "platformAutomerge": true,
+  "automerge": true,
   "automergeType": "pr",
   "ignorePaths": [
     "apps/**"
