@@ -1,123 +1,79 @@
-<p align="center">
-  <a href="https://github.com/woodpecker-ci/woodpecker/">
-    <img alt="Woodpecker" src="https://github.com/woodpecker-ci/woodpecker/raw/main/docs/static/img/logo.svg" width="220"/>
-  </a>
-</p>
-<br/>
-<p align="center">
-  <a href="https://ci.woodpecker-ci.org/woodpecker-ci/woodpecker" title="Build Status">
-    <img src="https://ci.woodpecker-ci.org/api/badges/woodpecker-ci/woodpecker/status.svg">
-  </a>
-  <a href="https://codecov.io/gh/woodpecker-ci/woodpecker">
-    <img src="https://codecov.io/gh/woodpecker-ci/woodpecker/branch/main/graph/badge.svg"/>
-  </a>
-  <a href="https://translate.woodpecker-ci.org/engage/woodpecker-ci/">
-    <img src="https://translate.woodpecker-ci.org/widgets/woodpecker-ci/-/ui/svg-badge.svg" alt="Translation status" />
-  </a>
-  <a href="https://discord.gg/fcMQqSMXJy" title="Join the Discord chat at https://discord.gg/fcMQqSMXJy">
-    <img src="https://img.shields.io/discord/838698813463724034.svg?label=discord">
-  </a>
-  <a href="https://matrix.to/#/#woodpecker:matrix.org" title="Join the Matrix space at https://matrix.to/#/#woodpecker:matrix.org">
-    <img src="https://img.shields.io/matrix/woodpecker:matrix.org?label=matrix">
-  </a>
-  <a href="https://goreportcard.com/badge/github.com/woodpecker-ci/woodpecker" title="Go Report Card">
-    <img src="https://goreportcard.com/badge/github.com/woodpecker-ci/woodpecker">
-  </a>
-  <a href="https://godoc.org/github.com/woodpecker-ci/woodpecker" title="GoDoc">
-    <img src="https://godoc.org/github.com/woodpecker-ci/woodpecker?status.svg">
-  </a>
-  <a href="https://github.com/woodpecker-ci/woodpecker/releases/latest" title="GitHub release">
-    <img src="https://img.shields.io/github/v/release/woodpecker-ci/woodpecker?sort=semver">
-  </a>
-  <a href="https://hub.docker.com/r/woodpeckerci/woodpecker-server" title="Docker pulls">
-    <img src="https://img.shields.io/docker/pulls/woodpeckerci/woodpecker-server">
-  </a>
-  <a href="https://opensource.org/licenses/Apache-2.0" title="License: Apache-2.0">
-    <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg">
-  </a>
-  <a href="https://bestpractices.coreinfrastructure.org/projects/5309">
-    <img src="https://bestpractices.coreinfrastructure.org/projects/5309/badge">
-  </a>
-  <a href="https://www.tickgit.com/browse?repo=github.com/woodpecker-ci/woodpecker" title="TODOs">
-    <img src="https://badgen.net/https/api.tickgit.com/badgen/github.com/woodpecker-ci/woodpecker">
-  </a>
-</p>
-<br/>
+[![Woodpecker](https://github.com/woodpecker-ci/woodpecker/raw/main/docs/static/img/logo.svg)](https://github.com/woodpecker-ci/woodpecker/)
 
-# Woodpecker
+ [![](https://ci.woodpecker-ci.org/api/badges/woodpecker-ci/woodpecker/status.svg)](https://ci.woodpecker-ci.org/woodpecker-ci/woodpecker "Build Status")[![](https://codecov.io/gh/woodpecker-ci/woodpecker/branch/main/graph/badge.svg) ](https://codecov.io/gh/woodpecker-ci/woodpecker)[![Translation status](https://translate.woodpecker-ci.org/widgets/woodpecker-ci/-/ui/svg-badge.svg) ](https://translate.woodpecker-ci.org/engage/woodpecker-ci/)[![](https://img.shields.io/discord/838698813463724034.svg?label=discord) ](https://discord.gg/fcMQqSMXJy "Join the Discord chat at https://discord.gg/fcMQqSMXJy")[![](https://img.shields.io/matrix/woodpecker:matrix.org?label=matrix) ](https://matrix.to/#/#woodpecker:matrix.org "Join the Matrix space at https://matrix.to/#/#woodpecker:matrix.org")[![](https://goreportcard.com/badge/github.com/woodpecker-ci/woodpecker) ](https://goreportcard.com/badge/github.com/woodpecker-ci/woodpecker "Go Report Card")[![](https://godoc.org/github.com/woodpecker-ci/woodpecker?status.svg) ](https://godoc.org/github.com/woodpecker-ci/woodpecker "GoDoc")[![](https://img.shields.io/github/v/release/woodpecker-ci/woodpecker?sort=semver) ](https://github.com/woodpecker-ci/woodpecker/releases/latest "GitHub release")[![](https://img.shields.io/docker/pulls/woodpeckerci/woodpecker-server) ](https://hub.docker.com/r/woodpeckerci/woodpecker-server "Docker pulls")[![](https://img.shields.io/badge/License-Apache%202.0-blue.svg) ](https://opensource.org/licenses/Apache-2.0 "License: Apache-2.0")[![](https://bestpractices.coreinfrastructure.org/projects/5309/badge) ](https://bestpractices.coreinfrastructure.org/projects/5309)[![](https://badgen.net/https/api.tickgit.com/badgen/github.com/woodpecker-ci/woodpecker)](https://www.tickgit.com/browse?repo=github.com/woodpecker-ci/woodpecker "TODOs")
 
-> Woodpecker is a community fork of the Drone CI system.
+# 啄木鸟
+
+> 啄木鸟是 Drone CI 系统的一个社区分支。
 
 ![woodpecker](https://github.com/woodpecker-ci/woodpecker/raw/main/docs/docs/woodpecker.png)
 
-## 🫶 Support
+## 🫶 支持
 
-Please consider to donate and become a backer. 🙏 [[Become a backer](https://opencollective.com/woodpecker-ci#category-CONTRIBUTE)]
+请考虑捐赠并成为赞助者。🙏 [ [成为赞助者](https://opencollective.com/woodpecker-ci#category-CONTRIBUTE) ]
 
-<a href="https://opencollective.com/woodpecker-ci" target="_blank"><img src="https://opencollective.com/woodpecker-ci/backers.svg?width=890"></a>
+[![](https://opencollective.com/woodpecker-ci/backers.svg?width=890)](https://opencollective.com/woodpecker-ci)
 
-## 🚀 Usage
+## 🚀 使用方法
 
 ### .woodpecker.yml
 
-- Place your pipeline in a file named `.woodpecker.yml` in your repository
-- Pipeline steps can be named as you like
-- Run any command in the commands section
+*   将您的流水线放在仓库中名为 `.woodpecker.yml` 的文件中
+*   流水线步骤可以自定义命名
+*   在命令部分运行任意命令
 
-[Read More](https://woodpecker-ci.org/docs/usage/intro)
+[了解更多](https://woodpecker-ci.org/docs/usage/intro)
 
-### Build steps are containers
+### 构建步骤是容器
 
-- Define any Docker image as context
-- Install the needed tools in custom Docker images, use them as context
+*   定义任意 Docker 镜像作为上下文
+*   安装所需工具到自定义 Docker 镜像中，并将它们用作上下文
 
-[Read More](https://woodpecker-ci.org/docs/usage/pipeline-syntax#steps)
+[了解更多](https://woodpecker-ci.org/docs/usage/pipeline-syntax#steps)
 
-### Plugins
+### 插件
 
-Woodpecker has [official plugins](https://woodpecker-ci.org/plugins), but you can also use your own.
+Woodpecker 有[官方插件](https://woodpecker-ci.org/plugins) ，但你也可以使用自己的。
 
-[Read More](https://woodpecker-ci.org/docs/usage/plugins/plugins)
+[了解更多](https://woodpecker-ci.org/docs/usage/plugins/plugins)
 
-## 📖 Documentation
+## 文档
 
-https://woodpecker-ci.org/
+[https://woodpecker-ci.org/](https://woodpecker-ci.org/)
 
-## ✨ Contribute
+## ✨ 贡献
 
-See [Contributing Guide](https://github.com/woodpecker-ci/woodpecker/blob/main/CONTRIBUTING.md)
+查看 [贡献指南](https://github.com/woodpecker-ci/woodpecker/blob/main/CONTRIBUTING.md)
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://woodpecker-ci.org/docs/next/development/getting-started#gitpod)
 
-## 📣 Translate
+## 📣 翻译
 
-We use an own [Weblate](https://weblate.org/en/) instance at [translate.woodpecker-ci.org](https://translate.woodpecker-ci.org).
+我们使用一个自有的 [Weblate](https://weblate.org/en/) 实例，地址为 [translate.woodpecker-ci.org](https://translate.woodpecker-ci.org)。
 
-<a href="https://translate.woodpecker-ci.org/engage/woodpecker-ci/">
-  <img src="https://translate.woodpecker-ci.org/widgets/woodpecker-ci/-/ui/multi-blue.svg" alt="Translation status" />
-</a>
+[![Translation status](https://translate.woodpecker-ci.org/widgets/woodpecker-ci/-/ui/multi-blue.svg)](https://translate.woodpecker-ci.org/engage/woodpecker-ci/)
 
-## 👋 Who uses Woodpecker?
+## 👋 谁在使用 Woodpecker？
 
-[Codeberg](https://codeberg.org), the Woodpecker project itself, and many others.
+[Codeberg](https://codeberg.org)，Woodpecker 项目本身，以及许多其他项目。
 
-Leave a [comment](https://github.com/woodpecker-ci/woodpecker/issues/122) if you're using it as well.
+如果你也在使用，请留下一个 [评论](https://github.com/woodpecker-ci/woodpecker/issues/122) 。
 
-Also consider using the topic `WoodpeckerCI` in your repository, so others can learn from your config and use the hashtag `#WoodpeckerCI` when talking about the project on social media!
+也考虑在你的仓库中使用主题 `WoodpeckerCI`，这样其他人可以从你的配置中学习，并在社交媒体上讨论项目时使用标签 `#WoodpeckerCI`！
 
-Here are some places where people mention Woodpecker:
+这里有一些地方提到了 Woodpecker：
 
-- [GitHub](https://github.com/topics/WoodpeckerCI)
-- [Codeberg](https://codeberg.org/explore/repos?q=woodpeckerci&topic=1)
-- [Twitter](https://twitter.com/search?q=%23WoodpeckerCI&src=typed_query)
-- [Fediverse](https://mastodon.social/tags/WoodpeckerCI)
+*   [GitHub](https://github.com/topics/WoodpeckerCI)
+*   [Codeberg](https://codeberg.org/explore/repos?q=woodpeckerci&topic=1)
+*   [Twitter](https://twitter.com/search?q=%23WoodpeckerCI&src=typed_query)
+*   [联邦宇宙](https://mastodon.social/tags/WoodpeckerCI)
 
-## ✨ Stars over time
+## ✨ 标星趋势
 
 [![Stargazers over time](https://starchart.cc/woodpecker-ci/woodpecker.svg)](https://starchart.cc/woodpecker-ci/woodpecker)
 
-## License
+## 许可证
 
-Woodpecker is Apache 2.0 licensed with the source files in this repository having a header indicating which license they are under and what copyrights apply.
+Woodpecker 采用 Apache 2.0 许可证，此仓库中的源文件包含版权声明及其适用的许可证信息。
 
-Files under the `docs/` folder are licensed under Creative Commons Attribution-ShareAlike 4.0 International Public License.
+`docs/` 文件夹下的文件采用 Creative Commons Attribution-ShareAlike 4.0 International Public License 许可。

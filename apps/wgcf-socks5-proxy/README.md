@@ -1,15 +1,15 @@
 # wgcf-docker
 
-CloudFlare warp in docker
+CloudFlare warp 的 docker 版
 
-fork from: https://github.com/Neilpang/wgcf-docker
+派生自: [https://github.com/Neilpang/wgcf-docker](https://github.com/Neilpang/wgcf-docker)
 
-#### What improvements did I make:
+#### 我做了哪些改进：
 
-1. Limit the alpine version to 3.17 to avoid errors caused by version issues.
-2. Added socks5 proxy service
+1.  限制使用 3.17 版本的 Alpine，以避免因版本问题导致的错误。
+2.  添加了 socks5 代理服务
 
-Run example:
+运行示例：
 
 ```shell
 docker run --rm -it \
@@ -22,59 +22,59 @@ docker run --rm -it \
      activeliang/wgcf-socks5-proxy -6
 ```
 
-Now you can use the socks proxy on the host machine:
+现在您可以在宿主机上使用 socks 代理：
 
 ```shell
 curl --socks5 127.0.0.1:7889 -6 ip.p3terx.com
 ```
 
-## Configurable SOCKS5 Proxy with Environment Variables
+## 可配置的 SOCKS5 代理通过环境变量
 
-This SOCKS5 proxy supports configuration through environment variables. You can customize the proxy settings using the following variables: USER, PASSWORD, PORT, and HOST. Authentication (auth) will only be enabled if both the USER and PASSWORD variables are provided.
+此 SOCKS5 代理支持通过环境变量进行配置。您可以使用以下变量自定义代理设置：USER、PASSWORD、PORT 和 HOST。只有当提供了 USER 和 PASSWORD 变量时，认证（auth）才会被启用。
 
-### Usage
+### 使用方法
 
-To configure the SOCKS5 proxy, follow these steps:
+要配置 SOCKS5 代理，请按照以下步骤操作：
 
-1. Set the following environment variables:
+1.  设置以下环境变量：
+    
+    *   USER：认证的用户名（可选）。
+    *   PASSWORD：认证的密码（可选）。
+    *   端口：代理服务器的端口号（默认：1080）
+    *   代理服务器的主机地址（默认：0.0.0.0）。
+    
+    注意：只有当 USER 和 PASSWORD 变量都提供时，才会启用身份验证。如果缺少任何一个，身份验证将不会启用。
+    
+2.  使用您首选的方法启动 SOCKS5 代理，并将环境变量作为参数传递。
+    
+    示例：
+    
+    ```bash
+     PASSWORD=mypassword PORT=1080 HOST=0.0.0.0 start_proxy.sh
+    docker run --rm -it \
+      --name wgcf \
+      --sysctl net.ipv6.conf.all.disable_ipv6=0 \
+      --privileged --cap-add net_admin \
+      -v /lib/modules:/lib/modules \
+      -v $(pwd)/wgcf:/wgcf \
+      -p 7889:1080 \
+      -e USER=myuser \
+      -e PASSWORD=mypassword \
+      -e PORT=1080 \
+      -e HOST=0.0.0.0 \
+      activeliang/wgcf-socks5-proxy -6
+    ```
+    
+    此命令将使用指定的配置启动 SOCKS5 代理。
+    
+3.  SOCKS5 代理将在指定的主机和端口上可用。仅当提供了 USER 和 PASSWORD 变量时才会强制执行身份验证。
+    
 
-   - USER: The username for authentication (optional).
-   - PASSWORD: The password for authentication (optional).
-   - PORT: The port number for the proxy server (default: 1080).
-   - HOST: The host address for the proxy server (default: 0.0.0.0).
+就这样！你现在可以使用环境变量配置 SOCKS5 代理，并可以通过提供 USER 和 PASSWORD 变量来启用身份验证。
 
-   Note: Authentication will be enabled only if both the USER and PASSWORD variables are provided. If either one is missing, authentication will not be enabled.
+## 以下是原始项目的 README
 
-2. Start the SOCKS5 proxy using your preferred method, passing the environment variables as arguments.
-
-   Example:
-
-   ```bash
-    PASSWORD=mypassword PORT=1080 HOST=0.0.0.0 start_proxy.sh
-   docker run --rm -it \
-     --name wgcf \
-     --sysctl net.ipv6.conf.all.disable_ipv6=0 \
-     --privileged --cap-add net_admin \
-     -v /lib/modules:/lib/modules \
-     -v $(pwd)/wgcf:/wgcf \
-     -p 7889:1080 \
-     -e USER=myuser \
-     -e PASSWORD=mypassword \
-     -e PORT=1080 \
-     -e HOST=0.0.0.0 \
-     activeliang/wgcf-socks5-proxy -6
-   ```
-
-   This command will start the SOCKS5 proxy with the specified configuration.
-
-3. The SOCKS5 proxy will be accessible on the specified host and port. Authentication will be enforced only if both the USER and PASSWORD variables are provided.
-
-That's it! You can now configure the SOCKS5 proxy using environment variables, with the option to enable authentication by providing both the USER and PASSWORD variables.
-
-
-## The following is the readme of the original project
-
-1. Run a single container:
+1.  运行单个容器：
 
 ```
 
@@ -121,7 +121,7 @@ docker run --rm -it \
 
 ```
 
-or:
+或者：
 
 ```
 docker run --rm -it \
@@ -168,7 +168,7 @@ docker run --rm -it \
 
 ```
 
-2. If aonther container needs to use the wgcf network, run it like:
+2.  如果另一个容器需要使用 wgcf 网络，可以这样运行：
 
 ```
 
@@ -176,7 +176,7 @@ docker run --rm  -it  --network container:wgcf  curlimages/curl curl ipinfo.io
 
 ```
 
-3. Docker-compose example:
+3.  Docker-compose 示例：
 
 ```
 Enable both ipv4 and ipv6 by default:
@@ -264,7 +264,7 @@ services:
 
 ```
 
-or:
+或者：
 
 ```
 

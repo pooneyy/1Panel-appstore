@@ -10,19 +10,20 @@
 ```
 
 # 原始相关
-***
+
+* * *
 
 ![](https://github.com/ngoduykhanh/wireguard-ui/workflows/wireguard-ui%20build%20release/badge.svg)
 
 # wireguard-ui
 
-A web user interface to manage your WireGuard setup.
+一个用于管理你的 WireGuard 配置的网络用户界面。
 
-## Features
+## 功能
 
-- Friendly UI
-- Authentication
-- Manage extra client information (name, email, etc)
-- Retrieve client config using QR code / file / email
+*   友好界面
+*   认证
+*   管理额外的客户端信息（名称、邮箱等）
+*   使用二维码/文件/邮箱检索客户端配置
 
 ![wireguard-ui 0.3.7](https://user-images.githubusercontent.com/37958026/177041280-e3e7ca16-d4cf-4e95-9920-68af15e780dd.png)

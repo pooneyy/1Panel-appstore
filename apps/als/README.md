@@ -1,52 +1,55 @@
 [![docker image build](https://github.com/wikihost-opensource/als/actions/workflows/docker-image.yml/badge.svg)](https://github.com/wikihost-opensource/als/actions/workflows/docker-image.yml)
 
-# ALS - Another Looking-glass Server
+# ALS - 另一个镜像服务器
 
-## Quick start
+## 快速上手
+
 ```
 docker run -d --name looking-glass --restart always --network host wikihostinc/looking-glass-server
 ```
 
 [DEMO](http://lg.hk1-bgp.hkg.50network.com/)
 
-## Host Requirements
- - Can run docker (yes, only docker is required)
+## 主机要求
 
-## Image Environment Variables
-| Key                       | Example                                                                | Default                                                    | Description                                                                             |
-| ------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| LISTEN_IP                 | 127.0.0.1                                                              | (all ip)                                                   | which IP address will be listen use                                                     |
-| HTTP_PORT                 | 80                                                                     | 80                                                         | which HTTP port should use                                                              |
-| SPEEDTEST_FILE_LIST       | 100MB 1GB                                                              | 1MB 10MB 100MB 1GB                                         | size of static test files, separate with space                                          |
-| LOCATION                  | "this is location"                                                     | (from maxmind database, ip via PUBLIC_IPV4 or PUBLIC_IPV6) | location string                                                                         |
-| MAXMIND_KEY               | THE_KEY                                                                | (empty)                                                    | about more https://dev.maxmind.com/geoip/geolite2-free-geolocation-data                 |
-| PUBLIC_IPV4               | 1.1.1.1                                                                | (fetch from http://ifconfig.co)                            | The IPv4 address of the server                                                          |
-| PUBLIC_IPV6               | fe80::1                                                                | (fetch from http://ifconfig.co)                            | The IPv6 address of the server                                                          |
-| DISPLAY_TRAFFIC           | true                                                                   | true                                                       | Toggle the streaming traffic graph                                                      |
-| ENABLE_SPEEDTEST          | true                                                                   | true                                                       | Toggle the speedtest feature                                                            |
-| UTILITIES_PING            | true                                                                   | true                                                       | Toggle the ping feature                                                                 |
-| UTILITIES_SPEEDTESTDOTNET | true                                                                   | true                                                       | Toggle the speedtest.net feature                                                        |
-| UTILITIES_FAKESHELL       | true                                                                   | true                                                       | Toggle the HTML Shell feature                                                           |
-| UTILITIES_IPERF3          | true                                                                   | true                                                       | Toggle the iperf3 feature                                                               |
-| UTILITIES_IPERF3_PORT_MIN | 30000                                                                  | 30000                                                      | iperf3 listen port range - from                                                         |
-| UTILITIES_IPERF3_PORT_MAX | 31000                                                                  | 31000                                                      | iperf3 listen port range - to                                                           |
-| SPONSOR_MESSAGE           | "Test message" or "/tmp/als_readme.md" or "http://some_host/114514.md" | ''                                                         | Show server sponsor message (support markdown file, required mapping file to container) |
+*   可以运行 docker（是的，只需要 docker 即可）
 
+## 图像环境变量
 
-## Features
-- [x] HTML 5 Speed Test
-- [x] Ping - IPv4
-- [x] iPerf3 server
-- [x] Streaming traffic graph
-- [x] Speedtest.net Client
-- [x] Online shell box (limited commands)
+| 键 | 示例 | 默认 | 描述 |
+| --- | --- | --- | --- |
+| LISTEN\_IP | 127.0.0.1 | (all ip) | 哪个 IP 地址将被监听使用 |
+| HTTP\_PORT | 80 | 80 | 应该使用哪个 HTTP 端口 |
+| SPEEDTEST\_FILE\_LIST | 100MB 1GB | 1MB 10MB 100MB 1GB | 静态测试文件的大小，用空格隔开 |
+| LOCATION | "这是位置" | (from maxmind 数据库，ip 通过 PUBLIC\_IPV4 或 PUBLIC\_IPV6) | 位置字符串 |
+| MAXMIND\_KEY | THE\_KEY | (空) | 关于更多详情：https://dev.maxmind.com/geoip/geolite2-free-geolocation-data |
+| PUBLIC\_IPV4 | 1.1.1.1 | （从 http://ifconfig.co 获取） | 服务器的 IPv4 地址 |
+| PUBLIC\_IPV6 | fe80::1 | （从 http://ifconfig.co 获取） | 服务器的 IPv6 地址 |
+| DISPLAY\_TRAFFIC | true | true | 切换流媒体流量图 |
+| ENABLE\_SPEEDTEST | true | true | 切换速度测试功能 |
+| UTILITIES\_PING | true | true | 启用 ping 功能 |
+| UTILITIES\_SPEEDTESTDOTNET | true | true | 启用 speedtest.net 功能 |
+| UTILITIES\_FAKESHELL | true | true | 启用 HTML 壳功能 |
+| UTILITIES\_IPERF3 | true | true | 启用 iperf3 功能 |
+| UTILITIES\_IPERF3\_PORT\_MIN | 30000 | 30000 | iperf3 监听端口范围 - 起始 |
+| UTILITIES\_IPERF3\_PORT\_MAX | 31000 | 31000 | iperf3 监听端口范围 - 终止 |
+| SPONSOR\_MESSAGE | "测试消息" 或 "/tmp/als\_readme.md" 或 "http://some\_host/114514.md" | '' | 显示服务器赞助商信息（支持 markdown 文件，需要映射文件到容器） |
 
-## Thanks to
-https://github.com/librespeed/speedtest
+## 功能
 
-## License
+- [x] HTML 5 速度测试
+- [x] IPv4 - 平行传输
+- [x] iPerf3 服务器
+- [x] 流媒体流量图
+- [x] Speedtest.net 客户端
+- [x] 在线 Shell 箱（限用命令）
 
-Code is licensed under MIT Public License.
+## 感谢
 
-* If you wish to support my efforts, keep the "Powered by LookingGlass" link intact.
+[https://github.com/librespeed/speedtest](https://github.com/librespeed/speedtest)
 
+## 许可证
+
+代码采用 MIT 公开许可协议授权。
+
+*   如果您愿意支持我的努力，请保留“Powered by LookingGlass”链接。

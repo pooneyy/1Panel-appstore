@@ -1,72 +1,74 @@
-# Stream-Rec
+[![Syncthing](https://github.com/syncthing/syncthing/raw/main/assets/logo-text-128.png)](https://syncthing.net/)
 
-Stream-rec 是一个自动录制各种直播平台的工具。
+* * *
 
-![Stream-Rec](https://file.lifebus.top/imgs/stream_rec_cover.png)
+[![MPLv2 License](https://img.shields.io/badge/license-MPLv2-blue.svg?style=flat-square)](https://www.mozilla.org/MPL/2.0/) [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/88/badge)](https://bestpractices.coreinfrastructure.org/projects/88) [![Go Report Card](https://goreportcard.com/badge/github.com/syncthing/syncthing)](https://goreportcard.com/report/github.com/syncthing/syncthing)
 
-![](https://img.shields.io/badge/%E6%96%B0%E7%96%86%E8%90%8C%E6%A3%AE%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E5%AE%A4-%E6%8F%90%E4%BE%9B%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81-blue)
+## 目标
 
-## 特性
+Syncthing 是一个**持续文件同步程序** 。它可以在两台或多台计算机之间同步文件。我们力求实现以下目标。这些目标按重要性排序，最重要的目标排在最前面。以下为目标列表的摘要版本 - 如需更多注释，请参阅完整的[目标文档](https://github.com/syncthing/syncthing/blob/main/GOALS.md) 。
 
-基于 Kotlin, Ktor, 和 ffmpeg。
+Syncthing 应该是：
 
-+ 自动录播，可配置录制质量，路径，格式，并发量，分段录制（时间或文件大小），分段上传，根据直播标题和开始时间自动命名文件。
-+ 自动弹幕录制（XML格式），可使用 DanmakuFactory 进行弹幕转换，或配合AList来实现弹幕自动挂载。
-+ 使用 SQLite 持久化存储录播和上传信息
-+ 支持 Rclone 上传到云存储
-+ 使用 Web 界面进行配置
-+ 支持 Docker
+1.  **防止数据丢失**
+    
+    保护用户的数据至关重要。我们采取一切合理措施以避免损坏用户的文件。
+    
+2.  **抵御攻击者**
+    
+    再次强调，保护用户的数据至关重要。无论我们还有哪些其他目标，我们绝不能让用户的数据容易被未经授权的第三方窃听或篡改。
+    
+3.  **易于使用**
+    
+    Syncthing 应该易于接近、易于理解且包容性强。
+    
+4.  **自动运行**
+    
+    用户交互仅在必要时才应被要求。
+    
+5.  **普遍可用**
+    
+    Syncthing 应在每台常见计算机上运行。我们深知最新技术并非每个人都能获得。
+    
+6.  **个人用户**
+    
+    Syncthing 主要是为了赋予个人用户安全、安全且易于使用的文件同步能力。
+    
+7.  **其他一切**
+    
+    有很多我们关心的事情没有列在上面。只要这些价值不与上述目标相冲突，优化它们是可以接受的。
+    
 
-## 直播平台支持列表
+## 快速入门
 
-| 平台      | 录制 | 弹幕 | 链接格式                                          |
-|---------|----|----|-----------------------------------------------|
-| 抖音      | ✅  | ✅  | `https://www.live.douyin.com/{抖音id}`          |
-| 斗鱼      | ✅  | ✅  | `https://www.douyu.com/{直播间}`                 |
-| 虎牙      | ✅  | ✅  | `https://www.huya.com/{直播间}`                  |
-| PandaTV | ✅  | ✅  | `https://www.pandalive.co.kr/live/play/{直播间}` |
-| Twitch  | ✅  | ✅  | `https://www.twitch.tv/{直播间}`                 |
+请参阅[入门指南](https://docs.syncthing.net/intro/getting-started.html) 。
 
-## 安装说明
+系统中可以在 [etc 目录](https://github.com/syncthing/syncthing/blob/main/etc) 找到一些在后台运行 Syncthing 的示例。此外，还有适用于 Windows、Mac 和 Linux 的几种 [图形界面实现](https://docs.syncthing.net/users/contrib.html#gui-wrappers) 。
 
-> 默认账户
->
-> 用户名：stream-rec
->
-> 密码：stream-rec 或 `登录密码 (初始化)` 配置
+## Docker
 
-### 必须修改配置
+要在 Docker 中运行 Syncthing，请参阅 [Docker README](https://github.com/syncthing/syncthing/blob/main/README-Docker.md)。
 
-+ `WebSocket API 地址`
+## 投票表决功能/bug
 
-默认值：`ws://stream-rec-backend:12555/live/update`
+我们鼓励您就您关心的问题进行投票。这有助于团队了解用户遇到的最大痛点，并可能影响接下来的工作重点。
 
-需要获取：
+## 联系方式
 
-+ 宿主机 IP 地址
-+ 配置项 `API 端口`, 默认值：`12555`
+最好的联系点是论坛。如果您发现了一个显然是 bug 的问题，请在 GitHub 问题跟踪器中报告它。
 
-填写格式：`ws://{宿主机 IP 地址}:{API 端口}/live/update`
+## 构建
 
-### 可修改配置
+从源代码构建 Syncthing 很简单。在从发布版本提取源代码包或通过 git 检出代码后，您只需运行 \`go run build.go\`，二进制文件将创建在 \`./bin\` 目录中。有关构建过程的更多细节，请参阅相关指南。
 
-+ `NextAuth 服务器地址`
+## 已签名的发布版本
 
-默认值：`http://localhost:15275/`
+从 v0.10.15 版本起，发布的二进制文件使用密钥 D26E6ED000654A3E 进行 GPG 签名，该密钥可在 [https://syncthing.net/security.html](https://syncthing.net/security.html) 和大多数密钥服务器上获取。
 
-需要获取：
+此外，还内置了一个自动更新机制（在某些分发渠道中被禁用），该机制使用编译时嵌入的 ECDSA 签名。macOS 二进制文件也已正确代码签名。
 
-+ 宿主机 IP 地址
-+ 配置项 `WebUI 端口`, 默认值：`15275`
+## 文档
 
-填写格式：`http://{宿主机 IP 地址}:{WebUI 端口}/`
+请参阅 Syncthing 的 [文档站点](https://docs.syncthing.net/) [\[源代码\]](https://github.com/syncthing/docs)。
 
-### 无法修改项目
-
-+ `API 地址`
-
-当前部署方式为 前后端合并部署，请勿强制修改参数值。
-
----
-
-![Ms Studio](https://file.lifebus.top/imgs/ms_blank_001.png)
+所有代码均采用 [MPLv2 License](https://github.com/syncthing/syncthing/blob/main/LICENSE) 许可。

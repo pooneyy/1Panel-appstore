@@ -1,25 +1,20 @@
-<div alt style="text-align: center; transform: scale(.5);">
-	<picture>
-		<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tldraw/tldraw/main/assets/github-hero-dark-draw.png" />
-		<img alt="tldraw" src="https://raw.githubusercontent.com/tldraw/tldraw/main/assets/github-hero-light-draw.png" />
-	</picture>
-</div>
+ ![tldraw](https://raw.githubusercontent.com/tldraw/tldraw/main/assets/github-hero-light-draw.png)
 
 # tldraw
 
-Welcome to the public monorepo for [tldraw](https://tldraw.com).
+欢迎访问 tldraw 的公共单库仓库 [tldraw](https://tldraw.com)。
 
-## What is tldraw?
+## 什么是 tldraw？
 
-tldraw is a collaborative digital whiteboard available at [tldraw.com](https://tldraw.com). Its editor, user interface, and other underlying libraries are open source and available in this repository. They are also distributed on npm. You can use tldraw to create a drop-in whiteboard for your product or as the foundation on which to build your own infinite canvas applications.
+tldraw 是一个可协作的数字白板，可在 [tldraw.com](https://tldraw.com) 上使用。其编辑器、用户界面和其他底层库是开源的，并且在此仓库中提供。它们还通过 npm 分发。您可以使用 tldraw 为您的产品创建一个可插入的白板，或者以此为基础构建自己的无限画布应用程序。
 
-Learn more at [tldraw.dev](https://tldraw.dev).
+访问 [tldraw.dev](https://tldraw.dev) 以获取更多信息。
 
-> **Note** This repo contains source code for the **current version** of tldraw. You can find the source for the original version [here](https://github.com/tldraw/tldraw-v1).
+> **注意** 本仓库包含 tldraw 当前版本的源代码。您可以在这里找到原始版本的源代码 [here](https://github.com/tldraw/tldraw-v1)。
 
-## Installation & Usage
+## 安装与使用
 
-To learn more about using tldraw in your React application, follow our guide [here](https://tldraw.dev/installation) or see the [examples sandbox](https://stackblitz.com/github/tldraw/tldraw/tree/examples?file=src%2F1-basic%2FBasicExample.tsx).
+要了解如何在您的 React 应用程序中使用 tldraw，请遵循我们的指南 [here](https://tldraw.dev/installation) 或查看 [examples sandbox](https://stackblitz.com/github/tldraw/tldraw/tree/examples?file=src%2F1-basic%2FBasicExample.tsx)。
 
 ```tsx
 import { Tldraw } from '@tldraw/tldraw'
@@ -34,79 +29,79 @@ export default function () {
 }
 ```
 
-## Local development
+## 本地开发
 
-To run the local development server, first clone this repo.
+要运行本地开发服务器，首先克隆此仓库。
 
-Install dependencies:
+安装依赖：
 
 ```bash
 yarn
 ```
 
-Start the local development server:
+启动本地开发服务器：
 
 ```bash
 yarn dev
 ```
 
-Open the example project at `localhost:5420`.
+在 `localhost:5420` 打开示例项目。
 
-### Examples
+### 示例
 
-Our development server contains several examples that demonstrates different ways that you can customize tldraw or use its APIs. Each example is found in the [**apps/examples**](https://github.com/tldraw/tldraw/tree/main/apps/examples) folder.
+我们的开发服务器包含多个示例，展示了您如何自定义 tldraw 或使用其 API 的不同方法。每个示例都位于 [**apps/examples**](https://github.com/tldraw/tldraw/tree/main/apps/examples) 文件夹中。
 
-- eg: `localhost:5420` for the basic example.
-- eg: `localhost:5420/api` for the API example.
+*   例如：在基本示例中使用 `localhost:5420`。
+*   示例：`localhost:5420/api` 用于 API 示例。
 
-To learn more about using tldraw, [visit our docs](https://tldraw.dev).
+要了解更多关于使用 tldraw 的信息，请访问我们的文档：[docs](https://tldraw.dev)。
 
-## About this repository
+## 关于此仓库
 
-### Top-level layout
+### 顶层布局
 
-This repository's contents is divided across four primary sections:
+这个仓库的内容分为四个主要部分：
 
-- `/apps` contains the source for our applications
-- `/packages` contains the source for our public packages
-- `/scripts` contains scripts used for building and publishing
-- `/assets` contains icons and translations relied on by the app
-- `/docs` contains the content for our docs site at [tldraw.dev](https://tldraw.dev)
+*   `/apps` 包含我们的应用程序源代码
+*   `/packages` 包含我们的公共包源代码
+*   `/scripts` 包含用于构建和发布的脚本
+*   `/assets` 包含应用程序依赖的图标和翻译
+*   `/docs` 包含我们 docs 站点 [tldraw.dev](https://tldraw.dev) 的内容
 
-### Applications
+### 应用程序
 
-- `examples`: our local development / examples project
-- `vscode`: our [Visual Studio Code extension](https://marketplace.visualstudio.com/items?itemName=tldraw-org.tldraw-vscode)
+*   `examples`: 我们的本地开发 / 示例项目
+*   `vscode`: 我们的 [Visual Studio Code 扩展](https://marketplace.visualstudio.com/items?itemName=tldraw-org.tldraw-vscode)
 
 ### Packages
 
-- `assets`: a library for working with tldraw's fonts and translations
-- `editor`: the tldraw editor
-- `state`: a signals library, also known as signia
-- `store`: an in-memory reactive database
-- `tldraw`: the main tldraw package containing both the editor and the UI
-- `tlschema`: shape definitions and migrations
-- `utils`: low-level data utilities shared by other libraries
-- `validate`: a validation library used for run-time validation
+*   `assets`: 一个用于处理 tldraw 字体和翻译的库
+*   `editor`: tldraw 编辑器
+*   `state`: 一个信号库，也被称为 signia
+*   `store`: 一个内存中的响应式数据库
+*   `tldraw`: tldraw 主包，包含编辑器和 UI
+*   `tlschema`: 形状定义和迁移
+*   `utils`: 其他库共享的基础数据工具
+*   `validate`: 用于运行时验证的验证库
 
-## Community
+## 社区
 
-Have questions, comments or feedback? [Join our discord](https://discord.gg/rhsyWMUJxd) or [start a discussion](https://github.com/tldraw/tldraw/discussions/new).
+有问题、评论或反馈？加入我们的 [discord](https://discord.gg/rhsyWMUJxd) 或 [发起讨论](https://github.com/tldraw/tldraw/discussions/new) 。
 
-## Distributions
+## 分发
 
-You can find tldraw on npm [here](https://www.npmjs.com/package/@tldraw/tldraw?activeTab=versions).
+您可以在 npm 上找到 tldraw [这里](https://www.npmjs.com/package/@tldraw/tldraw?activeTab=versions) 。
 
-At the moment the tldraw package is in alpha. We also ship a canary version which is always up to date with the main branch of this repo.
+目前，tldraw 包处于测试版。我们还提供了一个 Canary 版本，该版本始终与本仓库的主要分支保持最新。
 
-## License
+## 许可证
 
-The source code for various apps and packages in this repository (as well as our 2.0+ distributions and releases) are currently licensed under Apache-2.0. These licenses are subject to change in our upcoming 2.0 release. If you are planning to use tldraw in a commercial product, please reach out at [hello@tldraw.com](mailto://hello@tldraw.com).
+本仓库中各种应用程序和包的源代码（以及我们的 2.0 及以上版本的分发和发布）目前采用 Apache-2.0 许可证。这些许可条款将在我们即将发布的 2.0 版本中发生变化。如果您计划在商业产品中使用 tldraw，请联系 [hello@tldraw.com](mailto://hello@tldraw.com)。
 
-## Contribution
+## 贡献
 
-Please see our [contributing guide](https://github.com/tldraw/tldraw/blob/main/CONTRIBUTING.md). Found a bug? Please [submit an issue](https://github.com/tldraw/tldraw/issues/new).
+请参阅我们的[贡献指南](https://github.com/tldraw/tldraw/blob/main/CONTRIBUTING.md) 。发现错误了吗？请[提交一个问题](https://github.com/tldraw/tldraw/issues/new) 。
 
-## Contact
+## 联系
 
-Find us on Twitter at [@tldraw](https://twitter.com/tldraw) or email [hello@tldraw.com](mailto://hello@tldraw.com). You can also [join our discord](https://discord.gg/rhsyWMUJxd) for quick help and support.
+在 Twitter 上关注我们 [@tldraw](https://twitter.com/tldraw) 或发送邮件至 [hello@tldraw.com](mailto://hello@tldraw.com)。您还可以加入我们的 [Discord](https://discord.gg/rhsyWMUJxd) 获取快速帮助和支持。

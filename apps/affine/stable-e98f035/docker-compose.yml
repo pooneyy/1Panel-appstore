@@ -4,7 +4,7 @@ networks:
 
 services:
   affine:
-    image: ghcr.io/toeverything/affine-graphql:stable-1623f5d
+    image: ghcr.io/toeverything/affine-graphql:stable-e98f035
     container_name: ${CONTAINER_NAME}
     labels:
       createdBy: "Apps"

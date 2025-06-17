@@ -1,70 +1,55 @@
 # 使用说明
 
 控制台默认账户密码
+
 ```
 Email:    admin@example.com
 Password: changeme
 ```
 
-
 # 原始相关
 
-<p align="center">
-	<img src="https://nginxproxymanager.com/github.png">
-	<br><br>
-	<img src="https://img.shields.io/badge/version-2.10.3-green.svg?style=for-the-badge">
-	<a href="https://hub.docker.com/repository/docker/jc21/nginx-proxy-manager">
-		<img src="https://img.shields.io/docker/stars/jc21/nginx-proxy-manager.svg?style=for-the-badge">
-	</a>
-	<a href="https://hub.docker.com/repository/docker/jc21/nginx-proxy-manager">
-		<img src="https://img.shields.io/docker/pulls/jc21/nginx-proxy-manager.svg?style=for-the-badge">
-	</a>
-</p>
+![](https://nginxproxymanager.com/github.png)
+![](https://img.shields.io/badge/version-2.10.3-green.svg?style=for-the-badge) [![](https://img.shields.io/docker/stars/jc21/nginx-proxy-manager.svg?style=for-the-badge) ](https://hub.docker.com/repository/docker/jc21/nginx-proxy-manager)[![](https://img.shields.io/docker/pulls/jc21/nginx-proxy-manager.svg?style=for-the-badge)](https://hub.docker.com/repository/docker/jc21/nginx-proxy-manager)
 
-This project comes as a pre-built docker image that enables you to easily forward to your websites
-running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.
+这个项目提供了一个预构建的 Docker 镜像，使你可以轻松地将流量转发到家中的网站或其他网站，包括免费的 SSL，无需深入了解 Nginx 或 Let's Encrypt。
 
-- [Quick Setup](#quick-setup)
-- [Full Setup](https://nginxproxymanager.com/setup/)
-- [Screenshots](https://nginxproxymanager.com/screenshots/)
+*   [快速设置](#quick-setup)
+*   [完整设置](https://nginxproxymanager.com/setup/)
+*   [截图](https://nginxproxymanager.com/screenshots/)
 
-## Project Goal
+## 项目目标
 
-I created this project to fill a personal need to provide users with a easy way to accomplish reverse
-proxying hosts with SSL termination and it had to be so easy that a monkey could do it. This goal hasn't changed.
-While there might be advanced options they are optional and the project should be as simple as possible
-so that the barrier for entry here is low.
+我创建这个项目是为了满足个人需求，为用户提供一种简单的方式来实现带有 SSL 终止的反向代理，并且必须简单到连猴子都能操作。这个目标没有改变。虽然可能有高级选项，但它们是可选的，项目应该尽可能简单，以便降低入门门槛。
 
-<a href="https://www.buymeacoffee.com/jc21" target="_blank"><img src="http://public.jc21.com/github/by-me-a-coffee.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+[![Buy Me A Coffee](http://public.jc21.com/github/by-me-a-coffee.png)](https://www.buymeacoffee.com/jc21)
 
+## 功能
 
-## Features
+*   基于 [Tabler](https://tabler.github.io/) 的美观且安全的管理界面
+*   无需了解 Nginx，即可轻松创建转发域名、重定向、流媒体和 404 主机
+*   免费使用 Let's Encrypt 生成 SSL 证书或提供您自己的自定义 SSL 证书
+*   为您的主机提供访问列表和基本的 HTTP 认证
+*   高级 Nginx 配置可供超级用户使用
+*   用户管理、权限设置和审计日志
 
-- Beautiful and Secure Admin Interface based on [Tabler](https://tabler.github.io/)
-- Easily create forwarding domains, redirections, streams and 404 hosts without knowing anything about Nginx
-- Free SSL using Let's Encrypt or provide your own custom SSL certificates
-- Access Lists and basic HTTP Authentication for your hosts
-- Advanced Nginx configuration available for super users
-- User management, permissions and audit log
+## 托管家庭网络
 
+这里不会详细介绍，但这是初学者需要了解的基本知识。
 
-## Hosting your home network
+1.  你的家庭路由器的某个地方会有端口转发设置。登录进去找到它。
+2.  为托管此项目的服务器添加端口转发，端口号为80和443。
+3.  配置你的域名详细信息，使其指向你的服务器，既可以使用静态 IP，也可以使用类似 DuckDNS 或 Amazon Route53 的服务
+4.  使用 Nginx Proxy Manager 作为你的网关，将请求转发到你的其他基于 Web 的服务
 
-I won't go in to too much detail here but here are the basics for someone new to this self-hosted world.
+## 快速设置
 
-1. Your home router will have a Port Forwarding section somewhere. Log in and find it
-2. Add port forwarding for port 80 and 443 to the server hosting this project
-3. Configure your domain name details to point to your home, either with a static ip or a service like DuckDNS or [Amazon Route53](https://github.com/jc21/route53-ddns)
-4. Use the Nginx Proxy Manager as your gateway to forward to your other web based services
+1.  安装 Docker 和 Docker-Compose
 
-## Quick Setup
+*   [Docker 安装文档](https://docs.docker.com/install/)
+*   [Docker-Compose 安装文档](https://docs.docker.com/compose/install/)
 
-1. Install Docker and Docker-Compose
-
-- [Docker Install documentation](https://docs.docker.com/install/)
-- [Docker-Compose Install documentation](https://docs.docker.com/compose/install/)
-
-2. Create a docker-compose.yml file similar to this:
+2.  创建一个类似于以下内容的 docker-compose.yml 文件：
 
 ```yml
 version: '3.8'
@@ -81,9 +66,9 @@ services:
       - ./letsencrypt:/etc/letsencrypt
 ```
 
-This is the bare minimum configuration required. See the [documentation](https://nginxproxymanager.com/setup/) for more.
+这是所需的最小配置。更多信息请参见 [文档](https://nginxproxymanager.com/setup/) 。
 
-3. Bring up your stack by running
+3.  运行以下命令提升你的堆栈：
 
 ```bash
 docker-compose up -d
@@ -93,30 +78,28 @@ docker compose up -d
 
 ```
 
-4. Log in to the Admin UI
+4.  登录 Admin UI
 
-When your docker container is running, connect to it on port `81` for the admin interface.
-Sometimes this can take a little bit because of the entropy of keys.
+当你的 docker 容器运行时，在端口 `81` 连接到管理界面。有时这可能需要一点时间，因为密钥的随机性可能会有所不同。
 
 [http://127.0.0.1:81](http://127.0.0.1:81)
 
-Default Admin User:
+默认管理员用户：
+
 ```
 Email:    admin@example.com
 Password: changeme
 ```
 
-Immediately after logging in with this default user you will be asked to modify your details and change your password.
+登录此默认用户后，系统会立即要求你修改个人信息并更改密码。
 
+## 贡献者
 
-## Contributors
+特别感谢 [所有贡献者](https://github.com/NginxProxyManager/nginx-proxy-manager/graphs/contributors) 。
 
-Special thanks to [all of our contributors](https://github.com/NginxProxyManager/nginx-proxy-manager/graphs/contributors).
+## 获取支持
 
-
-## Getting Support
-
-1. [Found a bug?](https://github.com/NginxProxyManager/nginx-proxy-manager/issues)
-2. [Discussions](https://github.com/NginxProxyManager/nginx-proxy-manager/discussions)
-3. [Development Gitter](https://gitter.im/nginx-proxy-manager/community)
-4. [Reddit](https://reddit.com/r/nginxproxymanager)
+1.  [发现 bug 了？](https://github.com/NginxProxyManager/nginx-proxy-manager/issues)
+2.  [讨论](https://github.com/NginxProxyManager/nginx-proxy-manager/discussions)
+3.  [开发 Gitter](https://gitter.im/nginx-proxy-manager/community)
+4.  [Reddit](https://reddit.com/r/nginxproxymanager)

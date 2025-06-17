@@ -1,7 +1,8 @@
 # 使用说明
+
 当第一次部署时，假如出现异常问题，如容器未找到等，解决方式如下：
 
-点击`已安装应用` > 找到应用 > 点`参数` > 点`编辑 `> 点`高级设置 `> 点击右下角`确认`。
+点击`已安装应用` > 找到应用 > 点`参数` > 点`编辑` \> 点`高级设置` \> 点击右下角`确认`。
 
 采用的从源码编译镜像的方式，国内机子的话，假如因为各种网络原因，连接不上`github`，
 
@@ -16,18 +17,17 @@ meowfacts
 ![Known Vulnerabilities](https://snyk.io/test/github/wh-iterabb-it/meowfacts/badge.svg) 
 [![codecov](https://codecov.io/gh/wh-iterabb-it/meowfacts/branch/main/graph/badge.svg)](https://codecov.io/gh/wh-iterabb-it/meowfacts)
 
+## 描述：
 
-## Description:
+一个简单的 API，通过 GET 请求返回关于猫的随机事实
 
-A simple api that returns a random fact about cats on a GET request
+### 示例用法
 
-### Example Usage
-
-``` 
+```
 curl https://meowfacts.herokuapp.com/
 ```
 
-Response
+响应
 
 ```json
 {
@@ -37,16 +37,15 @@ Response
 }
 ```
 
+### 高级用法
 
-### Advanced Usage
-
-You can request more than one fact at a time by using the GET param `count`
+您可以通过使用 GET 参数 `count` 一次请求多个事实
 
 ```bash
 curl https://meowfacts.herokuapp.com/?count=3
 ```
 
-Response
+响应
 
 ```json
 {
@@ -58,13 +57,13 @@ Response
 }
 ```
 
-You can request a specific fact if you know the ID / order it is buy passing the GET param `id`
+您可以请求一个特定的信息，如果您知道其 ID/顺序，可以通过传递 GET 参数 `id` 来获取
 
 ```bash
 curl https://meowfacts.herokuapp.com/?id=3
 ```
 
-Response
+响应
 
 ```json
 {
@@ -74,15 +73,15 @@ Response
 }
 ```
 
-### Language Support 
+### 语言支持
 
-You can request the response in different languages by using the GET param `lang`
+您可以通过使用 GET 参数 `lang` 来请求不同语言的响应
 
 ```bash
 curl https://meowfacts.herokuapp.com/?lang=ukr
 ```
 
-Response
+响应
 
 ```json
 {
@@ -92,86 +91,85 @@ Response
 }
 ```
 
-#### Supported Languages
+#### 支持的语言
 
-The supported languages are listed below, you can use any of the `lang Values` in the first column as a `lang` param. 
+支持的语言列表如下，您可以使用第一列中的任何 `lang Values` 作为 `lang` 参数。
 
-"?lang=esp" and "?lang=esp-mx" will both return spanish for your response, and simply using the `ISO-639-1` code will default to esp-mx for simplicity. 
+"?lang=esp"和"?lang=esp-mx"都将返回西班牙语作为您的响应，并且仅使用 `ISO-639-1` 代码将默认为 esp-mx，以便简化。
 
-| LANG Variable | [ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) | Language Name | Localization (country) |
-| :---: | :---: | :---: | :---: |
-| `eng-us`  | `eng` | English | USA |
-| `ces-cz` or `cze-cz` | `cze` (B) `ces` (T) | Czech | CZ |
-| `ger-de`  | `ger` | German | DE |
-| `esp-es`  | `esp` | Spanish | ES |
-| `esp-mx`  | `esp` | Spanish (default) | MX |
-| `rus-ru`  | `rus` | Russian | RUS |
-| `por-br`  | `por` | Portuguese | BR |
-| `tl-fil`  | `fil` | Filipino | PH |
-| `ukr-ua`  | `ukr` | Ukrainian | UA |
-| `urd-ur`  | `urd` | Urdu | UR |
-| `ita-it`  | `ita` | Italian | IT |
-| `zho-tw` | `zho` | Chinese | TW (Taiwan) |
+| LANG 变量 | ISO 639-1 | 语言名称 | 本地化（国家） |
+| --- | --- | --- | --- |
+| eng-us | eng | 英文 | USA |
+| ces-cz 或 cze-cz | cze (B) ces (T) | 捷克语 | CZ |
+| ger-de | ger | 德语 | DE |
+| esp-es | esp | 西班牙语 | ES |
+| esp-mx | esp | 西班牙语（默认） | MX |
+| rus-ru | rus | 俄语 | RUS |
+| por-br | por | 葡萄牙语 | BR |
+| tl-fil | fil | 菲律宾语 | PH |
+| ukr-ua | ukr | 乌克兰语 | UA |
+| urd-ur | urd | 乌尔都语 | UR |
+| ita-it | ita | 意大利语 | IT |
+| zho-tw | zho | 中文 | TW（台湾） |
 
+帮助我们扩展和改进此 API 的国际化（点击展开）
 
-<details>
-  <summary>Help us expand and improve Internationalization on this API  (Click to expand)</summary>
-  <h3>Help us expand and improve Internationalization on this API</h3>
-  
-  <p><b>Note:</b> We are trying to follow the browser's language tags, which are formally defined in <a href="https://datatracker.ietf.org/doc/html/rfc5646">RFC 5646</a>, which rely on the <a href="https://en.wikipedia.org/wiki/ISO_639">ISO 639</a> standard (quite often the <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">639-1 code list</a>) for <a href="https://en.wikipedia.org/wiki/Language_code">language codes</a> to be used.</p> 
+### 帮助我们扩展和改进此 API 的国际化
 
-<p>We would love it if you helped this project by taking a look at our <a href="https://github.com/wh-iterabb-it/meowfacts/issues/175">Call for Contributors</a> to see if you can make a contribution that helps us be more inclusive and support more languages. </p>
-</details>
+注意：我们正在尝试遵循浏览器的语言标签，这些标签在 RFC 5646 中正式定义，它们依赖于 ISO 639 标准（通常是 639-1 代码列表）来使用语言代码。
 
+我们非常希望您能通过查看我们的《贡献者招募》来帮助我们，看看您是否能够做出贡献，让我们更加包容并支持更多语言。
 
-### Documentation
+### 文档
 
-<div align="center">
-  <p>
-    <a href="https://app.swaggerhub.com/apis-docs/wh-iterabb-it/meowfacts/1.0.0">
-      <img width="200" height="72" src="https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SW-logo-clr.png" />
-    </a>
-  </p>
-  <p>
-    <a href="https://rapidapi.com/wh-iterabb-it-wh-iterabb-it-default/api/meowfacts/">
-      <img width="200" height="52" src="https://rapidapi.com/static-assets/default/dark-logo-78e48dc1-ca3f-4d67-a6f5-74032f439c8b.svg" />
-    </a>
-  </p>
-    <p>
-    <a href="https://meow-facts.netlify.app/">
-      <img width="200" height="52" src="https://img.shields.io/badge/Community_Documentation-FFFFFF.svg?logo=bookstack&logoColor=blue&style=for-the-badge" />
-    </a>
-  </p>
-</div>
+[![](https://raw.githubusercontent.com/swagger-api/swagger.io/wordpress/images/assets/SW-logo-clr.png)](https://app.swaggerhub.com/apis-docs/wh-iterabb-it/meowfacts/1.0.0)
 
+[![](https://rapidapi.com/static-assets/default/dark-logo-78e48dc1-ca3f-4d67-a6f5-74032f439c8b.svg)](https://rapidapi.com/wh-iterabb-it-wh-iterabb-it-default/api/meowfacts/)
 
-## Local Development
+[![](https://img.shields.io/badge/Community_Documentation-FFFFFF.svg?logo=bookstack&logoColor=blue&style=for-the-badge)](https://meow-facts.netlify.app/)
 
-### Installation
+## 本地开发
+
+### 安装
 
 ```
 npm install
 ```
 
-Basic usage
+基本用法
 
 ```
 npm run start
 ```
 
-### Dedication && Funding
+### 奉献与资助
+
+这个 API 专门为开心果而设；在困难时期，她给我带来了极大的安慰。言语无法表达我对她的感激之情。
+
+![My cat, Sleeping on her back on a table, she did this everywhere because the fan would cool her belly.](https://i.imgur.com/2EGh2Bp.jpg)
+
+如果您喜欢这个 API，或者只是喜欢猫，请向以下地址捐款：
+
+[纽约动物项目网站](https://www.animalprojectnyc.org/)
+
+[纽约动物项目 Paypal 链接](https://www.paypal.me/animalproject)
+
+《NYC 动物项目》是一家位于纽约市中心的努力实现“零安乐”的猫收容所，完全依赖寄养者和小额捐赠。我可以亲自告诉您，作为他们的志愿者，即使是几分钱的捐赠也会对这个非常小的组织产生差异。我从他们那里寄养了许多小猫，Pistachio 是那个未被领养的小不点。她很害羞，但当她安定下来后，就非常外向。我强烈推荐如果您能的话，去寄养和领养。them, and Pistachio was the runt that went un-adopted. She was shy, but very outgoing when she got settled. I highly recommend to foster and adopt if you can.</p>
+
+</div>
 
 
+them, and Pistachio was the runt that went un-adopted. She was shy, but very outgoing when she got settled. I highly recommend to foster and adopt if you can.</p>
+
+</div>
 
 
-<div align="center">
-<p>This api is dedicated to pistachio; she brought me great comfort in dire times. Words can't describe the debt I owe to her. </p>
-  <img width="500" height="500" alt="My cat, Sleeping on her back on a table, she did this everywhere because the fan would cool her belly." src="https://i.imgur.com/2EGh2Bp.jpg" />
-  <p>If you enjoy this api, or just love cats, please donate to:</p>
-  <p><a href="https://www.animalprojectnyc.org/">NYC Animal Project Website</a></p>
-  <p><a href="https://www.paypal.me/animalproject">NYC Animal Project Paypal Link</a></p>
-  
-  <p align="justify"><strong>NYC Animal Project</strong> is a struggling `no kill` cat shelter in the heart of new york that relies entirely on fosters and help from small donations. I can say personally having volunteered for them, even a few cents donation would make a difference for the very small organization. I fostered many kittens from them, and Pistachio was the runt that went un-adopted. She was shy, but very outgoing when she got settled. I highly recommend to foster and adopt if you can.</p>
+them, and Pistachio was the runt that went un-adopted. She was shy, but very outgoing when she got settled. I highly recommend to foster and adopt if you can.</p>
+
+</div>
+
+
+them, and Pistachio was the runt that went un-adopted. She was shy, but very outgoing when she got settled. I highly recommend to foster and adopt if you can.</p>
 
 </div>
 

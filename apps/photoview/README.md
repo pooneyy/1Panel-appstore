@@ -1,135 +1,122 @@
-<img src="https://github.com/photoview/photoview/raw/master/screenshots/photoview-logo.svg" height="92px" alt="photoview logo" />
+![photoview logo](https://github.com/photoview/photoview/raw/master/screenshots/photoview-logo.svg)
 
-[![License](https://img.shields.io/github/license/viktorstrate/photoview)](./LICENSE.md)
-[![GitHub contributors](https://img.shields.io/github/contributors/viktorstrate/photoview)](https://github.com/viktorstrate/photoview/graphs/contributors)
-[![Docker Pulls](https://img.shields.io/docker/pulls/viktorstrate/photoview)](https://hub.docker.com/r/viktorstrate/photoview)
-[![Docker builds](https://github.com/photoview/photoview/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/photoview/photoview/actions/workflows/build.yml)
-[![codecov](https://codecov.io/gh/photoview/photoview/branch/master/graph/badge.svg?token=AATZKC93F7)](https://codecov.io/gh/photoview/photoview)
+[![License](https://img.shields.io/github/license/viktorstrate/photoview)](./LICENSE.md) [![GitHub contributors](https://img.shields.io/github/contributors/viktorstrate/photoview)](https://github.com/viktorstrate/photoview/graphs/contributors) [![Docker Pulls](https://img.shields.io/docker/pulls/viktorstrate/photoview)](https://hub.docker.com/r/viktorstrate/photoview) [![Docker builds](https://github.com/photoview/photoview/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/photoview/photoview/actions/workflows/build.yml) [![codecov](https://codecov.io/gh/photoview/photoview/branch/master/graph/badge.svg?token=AATZKC93F7)](https://codecov.io/gh/photoview/photoview)
 
 ![screenshot](https://github.com/photoview/photoview/raw/master/screenshots/timeline.png)
 
-Photoview is a simple and user-friendly photo gallery that's made for photographers and aims to provide an easy and fast way to navigate directories, with thousands of high-resolution photos.
+Photoview 是一款简单易用的照片画廊，专为摄影师设计，旨在提供一种快速简便的目录导航方式，支持数千张高分辨率照片。
 
-You configure Photoview to look for photos and videos within a directory on your file system. The scanner automatically picks up your media and start to generate thumbnail images to make browsing super fast.
+您可以在文件系统中的某个目录中配置 Photoview 来查找照片和视频。扫描器会自动检测您的媒体，并生成缩略图以使浏览速度极快。
 
-When your media has been scanned they show up on the website, organised in the same way as on the filesystem.
+当您的媒体被扫描后，它们会在网站上显示出来，组织方式与文件系统中的相同。
 
-> If you have questions regarding setup or development,
-feel free to join the Discord server https://discord.gg/jQ392948u9
+> 如果您有关于安装或开发的问题，欢迎加入 Discord 服务器 [https://discord.gg/jQ392948u9](https://discord.gg/jQ392948u9)
 
-## Demo site
+## 演示站点
 
-Visit https://photos.qpqp.dk/
+访问 [https://photos.qpqp.dk/](https://photos.qpqp.dk/)
 
-Username: **demo**
-Password: **demo**
+用户名: **demo** 密码: **demo**
 
-## Contents
+## 内容
 
-- [Demo site](#demo-site)
-- [Contents](#contents)
-- [Main features](#main-features)
-- [Supported platforms](#supported-platforms)
-- [Why yet another self-hosted photo gallery](#why-yet-another-self-hosted-photo-gallery)
-- [Getting started - Setup with Docker](#getting-started---setup-with-docker)
-  - [Initial Setup](#initial-setup)
-- [Set up development environment](#set-up-development-environment)
-  - [Local setup](#local-setup)
-  - [Start API server](#start-api-server)
-  - [Start UI server](#start-ui-server)
-- [Sponsors](#sponsors)
+*   [演示站点](#demo-site)
+*   [内容](#contents)
+*   [主要功能](#main-features)
+*   [支持的平台](#supported-platforms)
+*   [为什么又一个自托管的照片画廊](#why-yet-another-self-hosted-photo-gallery)
+*   [快速入门 - 使用 Docker 部署](#getting-started---setup-with-docker)
+    *   [初始设置](#initial-setup)
+*   [设置开发环境](#set-up-development-environment)
+    *   [本地设置](#local-setup)
+    *   [启动 API 服务器](#start-api-server)
+    *   [启动 UI 服务器](#start-ui-server)
+*   [赞助商](#sponsors)
 
-## Main features
+## 主要功能
 
-- **Closely tied to the file system**. The website presents the images found on the local filesystem of the server, directories are mapped to albums.
-- **User management**. Each user is created along with a path on the local filesystem, photos within that path can be accessed by that user.
-- **Sharing**. Albums, as well as individual media, can easily be shared with a public link, the link can optionally be password protected.
-- **Made for photography**. Photoview is built with photographers in mind, and thus supports **RAW** file formats, and **EXIF** parsing.
-- **Video support**. Many common video formats are supported. Videos will automatically be optimized for web.
-- **Face recognition**. Faces will automatically be detected in photos, and photos of the same person will be grouped together.
-- **Performant**. Thumbnails are automatically generated and photos first load when they are visible on the screen. In full screen, thumbnails are displayed until the high resolution image has been fully loaded.
-- **Secure**. All media resources are protected with a cookie-token, all passwords are properly hashed, and the API uses a strict [CORS policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
+*   **紧密关联文件系统** 。网站展示服务器本地文件系统中的图片，目录映射为相册。
+*   **用户管理** 。每个用户在本地文件系统中创建一个路径，该路径内的照片可以被该用户访问。
+*   **分享** 。相册以及单个媒体内容可以轻松通过公共链接分享，链接可以选配密码保护。
+*   **专为摄影设计** 。Photoview 是为摄影师打造的，因此支持 **RAW** 文件格式和 **EXIF** 解析。
+*   **视频支持** 。支持许多常见的视频格式。视频会自动优化以适应网络播放。
+*   **人脸识别** 。照片中会自动检测人脸，相同人物的照片会被归类在一起。
+*   **性能出色** 。会自动生成缩略图，照片在屏幕上可见时才会加载。在全屏模式下，会先显示缩略图，直到高分辨率图片完全加载完毕。
+*   **安全** 。所有媒体资源都使用了 cookie-token 保护，所有密码都进行了妥善哈希处理，API 使用了严格的 [CORS 策略](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) 。
 
-## Supported platforms
+## 支持的平台
 
-- [Docker](https://hub.docker.com/r/viktorstrate/photoview/)
-- [Arch Linux Aur](https://aur.archlinux.org/packages/photoview)
-- [Unraid](https://forums.unraid.net/topic/103028-support-photoview-corneliousjd-repo/)
-- EmbassyOS: [announcement](https://start9labs.medium.com/new-service-photoview-72ee681b2ff0), [repo](https://github.com/Start9Labs/embassyos-photoview-wrapper)
-- [YunoHost](https://github.com/YunoHost-Apps/photoview_ynh)
+*   [Docker](https://hub.docker.com/r/viktorstrate/photoview/)
+*   [Arch Linux Aur](https://aur.archlinux.org/packages/photoview)
+*   [Unraid](https://forums.unraid.net/topic/103028-support-photoview-corneliousjd-repo/)
+*   EmbassyOS: [公告](https://start9labs.medium.com/new-service-photoview-72ee681b2ff0) , [仓库](https://github.com/Start9Labs/embassyos-photoview-wrapper)
+*   [YunoHost](https://github.com/YunoHost-Apps/photoview_ynh)
 
-## Why yet another self-hosted photo gallery
+## 为何再添一个自托管照片画廊
 
-There exists a lot of open-source self-hosted photo galleries already. Here are some, just to mention a few.
+已经存在很多开源的自托管照片画廊了。这里列举几个，仅作参考。
 
-- [Piwigo](https://github.com/Piwigo/Piwigo)
-- [LibrePhotos](https://github.com/LibrePhotos/librephotos)
-- [Photoprism](https://github.com/photoprism/photoprism)
-- [Lychee](https://github.com/LycheeOrg/Lychee)
+*   [Piwigo](https://github.com/Piwigo/Piwigo)
+*   [LibrePhotos](https://github.com/LibrePhotos/librephotos)
+*   [Photoprism](https://github.com/photoprism/photoprism)
+*   [Lychee](https://github.com/LycheeOrg/Lychee)
 
-So why another one?
-I love taking photos, and I store all of them on my local fileserver.
-This is great because I can organize my photos directly on the filesystem so it's easy to move them or take backups. I want to be able to control where and how the photos are stored.
+那么为什么还要再做一个呢？我喜欢拍照，并且把所有的照片都存储在我的本地文件服务器上。这样很好，因为我可以直接在文件系统上组织我的照片，方便移动或备份。
 
-The problem is however that RAW images are extremely tedious to navigate from a fileserver, even over the local network.
+然而，问题是 RAW 格式的照片从文件服务器上导航起来非常麻烦，即使是局域网内也是如此。
 
-My server holds a lot of old family pictures, that I would like my family to have access to as well.
-And some of the pictures I would like to easily be able to share with other people without the hassle of them having to make an account first.
+我的服务器上有很多旧的家庭照片，我也希望我的家人能够访问这些照片。还有一些照片，我希望可以直接分享给其他人，而不需要他们先注册账号。
 
-Thus I need a solution that can do the following:
+因此，我需要一个解决方案，能够做到以下几点：
 
-- A scan based approach that automatically organises my photos
-- Support RAW and EXIF parsing
-- Have support for multiple users and ways to share albums and photos also publicly
-- Be simple and fast to use
+*   基于扫描的自动整理照片的方法
+*   支持 RAW 和 EXIF 解析
+*   支持多个用户，并且可以分享相册和照片，也可以公开分享
+*   简单快速易用
 
-All of the photo galleries can do a lot of what I need, but no single one can do it all.
+所有的照片画廊都能做到我需要的很多事情，但没有一个能全部做到。
 
-## Getting started - Setup with Docker
+## 开始使用 - 使用 Docker 部署
 
-> This section describes how to get Photoview up and running on your server with Docker.
-> Make sure you have Docker and docker-compose installed and running on your server
+> 本节描述了如何在服务器上使用 Docker 部署 Photoview。请确保您的服务器上已安装并运行了 Docker 和 docker-compose。
 
-1. Make a new `docker-compose.yml` file on your computer, and copy the content of [docker-compose.example.yml](/docker-compose.example.yml) to the new file.
-2. Edit `docker-compose.yml`, find the comments starting with `Change This:`, and change the values, to properly match your setup. If you are just testing locally, you don't have to change anything.
-3. Start the server by running the following command
+1.  在您的计算机上创建一个新的 `docker-compose.yml` 文件，并将 [docker-compose.example.yml](/docker-compose.example.yml) 文件的内容复制到新文件中。
+2.  编辑 `docker-compose.yml`，找到以 `Change This:` 开头的注释，并更改相应的值，以正确匹配您的设置。如果您只是本地测试，无需进行任何更改。
+3.  通过运行以下命令启动服务器
 
 ```bash
 $ docker-compose up -d
 ```
 
-If the endpoint or the port hasn't been changed in the `docker-compose.yml` file, Photoview can now be accessed at http://localhost:8000
+如果 `docker-compose.yml` 文件中未更改端点或端口，则 Photoview 现在可以通过 [http://localhost:8000](http://localhost:8000) 访问
 
-### Initial Setup
+### 初始设置
 
-If everything is setup correctly, you should be presented with an initial setup wizard, when accessing the website the first time.
+如果一切设置正确，在首次访问网站时，你应该会被呈现一个初始设置向导。
 
 ![Initial setup](https://github.com/photoview/photoview/raw/master/screenshots/initial-setup.png)
 
-Enter a new username and password.
+请输入一个新的用户名和密码。
 
-For the photo path, enter the path in the docker container where your photos are located.
-This can be set from the `docker-compose.yml` file under `api` -> `volumes`.
-The default location is `/photos`
+对于照片路径，请输入 Docker 容器中存放照片的路径。这个路径可以在 \`docker-compose.yml\` 文件下的 \`api\` -> \`volumes\` 中设置。默认位置是 \`/photos\`。
 
-A new admin user will be created, with access to the photos located at the path provided under the initial setup.
+将会创建一个新的管理员用户，该用户可以访问初始设置中提供的路径下的照片。
 
-The photos will have to be scanned before they show up, you can start a scan manually, by navigating to `Settings` and clicking on `Scan All`
+照片在显示之前需要进行扫描，你可以通过导航到`设置`并点击`扫描所有`来手动开始扫描
 
-## Set up development environment
+## 设置开发环境
 
-### Local setup
+### 本地设置
 
-1. Install a local mysql server, and make a new database
-2. Rename `/api/example.env` to `.env` and update the `MYSQL_URL` field
-3. Rename `/ui/example.env` to `.env`
+1.  安装本地 MySQL 服务器，并创建一个新的数据库
+2.  将 `/api/example.env` 重命名为 `.env`，并更新 `MYSQL_URL` 字段
+3.  将 `/ui/example.env` 重命名为 `.env`
 
-### Start API server
+### 启动 API 服务器
 
-Make sure [golang](https://golang.org/) is installed.
+确保安装了 [golang](https://golang.org/)
 
-Some C libraries are needed to compile the API, see [go-face requirements](https://github.com/Kagami/go-face#requirements) for more details.
-They can be installed as shown below:
+一些 C 库需要编译 API，请参阅 [go-face 要求](https://github.com/Kagami/go-face#requirements) 以获取更多详细信息。这些库可以按照以下方式安装：
 
 ```sh
 # Ubuntu
@@ -144,7 +131,7 @@ brew install dlib libheif
 
 ```
 
-Then run the following commands:
+然后运行以下命令：
 
 ```bash
 cd ./api
@@ -152,10 +139,9 @@ go install
 go run server.go
 ```
 
-### Start UI server
+### 启动 UI 服务器
 
-Make sure [node](https://nodejs.org/en/) is installed.
-In a new terminal window run the following commands:
+请确保 [node](https://nodejs.org/en/) 已安装。在新的终端窗口中运行以下命令：
 
 ```bash
 cd ./ui
@@ -163,47 +149,8 @@ npm install
 npm start
 ```
 
-The site can now be accessed at [localhost:1234](http://localhost:1234).
-And the graphql playground at [localhost:4001](http://localhost:4001)
+现在可以访问站点：[localhost:1234](http://localhost:1234)。GraphQL Playground 可以在：[localhost:4001](http://localhost:4001)
 
-## Sponsors
+## 赞助商
 
-<table>
-<tr>
-  <td>
-    <a href="https://github.com/ericerkz">
-      <img src="https://avatars.githubusercontent.com/u/79728329?v=4" height="auto" width="100" style="border-radius:50%"><br/>
-      <b>@ericerkz</b>
-    </a>
-  </td>
-  <td>
-    <a href="https://github.com/robin-moser">
-      <img src="https://avatars.githubusercontent.com/u/26254821?v=4" height="auto" width="100" style="border-radius:50%"><br/>
-      <b>@robin-moser</b>
-    </a>
-  </td>
-  <td>
-    <a href="https://github.com/Revorge">
-      <img src="https://avatars.githubusercontent.com/u/32901816?v=4" height="auto" width="100" style="border-radius:50%"><br/>
-      <b>@Revorge</b>
-    </a>
-  </td>
-  <td>
-    <a href="https://github.com/deexno">
-      <img src="https://avatars.githubusercontent.com/u/50229919?v=4" height="auto" width="100" style="border-radius:50%"><br/>
-      <b>@deexno</b>
-    </a>
-  </td>
-  <td>
-    <a href="https://github.com/FKrauss">
-      <img src="https://avatars.githubusercontent.com/u/4820683?v=4" height="auto" width="100" style="border-radius:50%"><br/>
-      <b>@FKrauss</b>
-    </a>
-  </td>
-  <td>
-    <a href="https://github.com/jupblb">
-      <img src="https://avatars.githubusercontent.com/u/3370617?v=4" height="auto" width="100" style="border-radius:50%"><br/>
-      <b>@jupblb</b>
-    </a>
-  </td>
-</table>
+<table data-immersive-translate-walked="b3c9fbac-a639-4f50-892e-9b53bd2befa6"><tbody data-immersive-translate-walked="b3c9fbac-a639-4f50-892e-9b53bd2befa6"><tr data-immersive-translate-walked="b3c9fbac-a639-4f50-892e-9b53bd2befa6"><td data-immersive-translate-walked="b3c9fbac-a639-4f50-892e-9b53bd2befa6">@ericerkz</td><td data-immersive-translate-walked="b3c9fbac-a639-4f50-892e-9b53bd2befa6">@robin-moser</td><td data-immersive-translate-walked="b3c9fbac-a639-4f50-892e-9b53bd2befa6">@Revorge</td><td data-immersive-translate-walked="b3c9fbac-a639-4f50-892e-9b53bd2befa6">@deexno</td><td data-immersive-translate-walked="b3c9fbac-a639-4f50-892e-9b53bd2befa6">@FKrauss</td><td data-immersive-translate-walked="b3c9fbac-a639-4f50-892e-9b53bd2befa6">@jupblb</td></tr></tbody></table>

@@ -1,80 +1,80 @@
-The [LinuxServer.io](https://linuxserver.io/) team brings you another container release featuring:
+The [LinuxServer.io](https://linuxserver.io/) 团队为您带来了另一个容器发布，包含：
 
-- regular and timely application updates
-- easy user mappings (PGID, PUID)
-- custom base image with s6 overlay
-- weekly base OS updates with common layers across the entire LinuxServer.io ecosystem to minimise space usage, down time and bandwidth
-- regular security updates
+*   定期且及时的应用更新
+*   简单的用户映射（PGID, PUID）
+*   自定义基础镜像，带有 s6 覆盖
+*   每周为基础操作系统进行更新，并在整个 LinuxServer.io 生态系统中使用共同的层，以最小化空间使用、停机时间和带宽
+*   常规安全更新
 
-Find us at:
+访问我们：
 
-- [Blog](https://blog.linuxserver.io/) \- all the things you can do with our containers including How-To guides, opinions and much more!
-- [Discord](https://discord.gg/YWrKVTn) \- realtime support / chat with the community and the team.
-- [Discourse](https://discourse.linuxserver.io/) \- post on our community forum.
-- [Fleet](https://fleet.linuxserver.io/) \- an online web interface which displays all of our maintained images.
-- [GitHub](https://github.com/linuxserver) \- view the source for all of our repositories.
-- [Open Collective](https://opencollective.com/linuxserver) \- please consider helping us by either donating or contributing to our budget
+*   \[Blog\] - 有关我们容器的所有功能，包括使用指南、观点等内容！
+*   [Discord](https://discord.gg/YWrKVTn) - 实时支持/与社区和团队进行聊天。
+*   [Discourse](https://discourse.linuxserver.io/) - 在我们的社区论坛发帖。
+*   [Fleet](https://fleet.linuxserver.io/) - 一个在线的网页界面，显示我们维护的所有镜像。
+*   [GitHub](https://github.com/linuxserver) - 查看我们所有仓库的源代码。
+*   [Open Collective](https://opencollective.com/linuxserver) - 请考虑通过捐赠或资助我们的预算来帮助我们
 
-[WPS Office](https://www.wps.com/) is a lightweight, feature-rich comprehensive office suite with high compatibility. As a handy and professional office software, WPS Office allows you to edit files in Writer, Presentation, Spreadsheet, and PDF to improve your work efficiency.
+[WPS Office](https://www.wps.com/) 是一款轻量、功能丰富且兼容性高的综合办公套件。作为一款便捷且专业的办公软件，WPS Office 允许你在 Writer、Presentation、Spreadsheet 和 PDF 中编辑文件，从而提高工作效率。
 
 [![wps-office](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/wps-office-icon.png)](https://www.wps.com/)
 
-## Supported Architectures
+## 支持的架构
 
-We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) and our announcement [here](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/).
+我们利用 docker manifest 来实现多平台支持。更多详细信息请参阅 docker [这里](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) 和 我们的公告 [这里](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/) 。
 
-Simply pulling `lscr.io/linuxserver/wps-office:latest` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
+简单地拉取 `lscr.io/linuxserver/wps-office:latest` 应该会获取到正确的架构图像，但你也可以通过标签拉取特定的架构图像。
 
-The architectures supported by this image are:
+此图像支持的架构有：
 
-| Architecture | Available | Tag |
+| 架构 | 可用 | Tag |
 | --- | --- | --- |
-| x86-64 | ✅   | amd64-&lt;version tag&gt; |
-| arm64 | ❌   |     |
-| armhf | ❌   |     |
+| x86-64 | ✅ | amd64-<版本标签> |
+| arm64 | ❌ |  |
+| armhf | ❌ |  |
 
-## Application Setup
+## 应用设置
 
-The application can be accessed at:
+应用可通过以下地址访问：
 
-- http://yourhost:3000/
-- https://yourhost:3001/
+*   [http://yourhost:3000/](http://yourhost:3000/)
+*   [https://yourhost:3001/](https://yourhost:3001/)
 
-### Options in all KasmVNC based GUI containers
+### KasmVNC 基础的 GUI 容器中的选项
 
-This container is based on [Docker Baseimage KasmVNC](https://github.com/linuxserver/docker-baseimage-kasmvnc) which means there are additional environment variables and run configurations to enable or disable specific functionality.
+此容器基于 [Docker Baseimage KasmVNC](https://github.com/linuxserver/docker-baseimage-kasmvnc)，这意味着存在额外的环境变量和运行配置，可以启用或禁用特定功能。
 
-#### Optional environment variables
+#### 可选的环境变量
 
-| Variable | Description |
+| 变量 | 描述 |
 | --- | --- |
-| CUSTOM_PORT | Internal port the container listens on for http if it needs to be swapped from the default 3000. |
-| CUSTOM\_HTTPS\_PORT | Internal port the container listens on for https if it needs to be swapped from the default 3001. |
-| CUSTOM_USER | HTTP Basic auth username, abc is default. |
-| PASSWORD | HTTP Basic auth password, abc is default. If unset there will be no auth |
-| SUBFOLDER | Subfolder for the application if running a subfolder reverse proxy, need both slashes IE `/subfolder/` |
-| TITLE | The page title displayed on the web browser, default "KasmVNC Client". |
-| FM_HOME | This is the home directory (landing) for the file manager, default "/config". |
-| START_DOCKER | If set to false a container with privilege will not automatically start the DinD Docker setup. |
-| DRINODE | If mounting in /dev/dri for [DRI3 GPU Acceleration](https://www.kasmweb.com/kasmvnc/docs/master/gpu_acceleration.html) allows you to specify the device to use IE `/dev/dri/renderD128` |
+| CUSTOM\_PORT | 容器监听的内部端口，用于 http，如果需要从默认的 3000 端口更改。 |
+| CUSTOM\_HTTPS\_PORT | 容器监听的内部端口，用于 https，如果需要从默认的 3001 端口更改。 |
+| CUSTOM\_USER | HTTP 基本认证用户名，默认为 abc。 |
+| PASSWORD | HTTP 基本认证密码，默认为 abc。如果未设置，则无需认证。 |
+| SUBFOLDER | 如果运行子文件夹反向代理，则需要在应用中创建一个子文件夹，例如 \`/subfolder/\`。 |
+| TITLE | 网页浏览器中显示的页面标题，默认为“KasmVNC 客户端”。 |
+| FM\_HOME | 这是文件管理器的主目录（起始目录），默认为 \`/config\`。 |
+| START\_DOCKER | 如果设置为 false，则不会自动启动 DinD Docker 环境。 |
+| DRINODE | 如果在 /dev/dri 挂载以启用 DRI3 GPU 加速 ，你可以指定要使用的设备，例如 /dev/dri/renderD128 |
 
-#### Optional run configurations
+#### 可选运行配置
 
-| Variable | Description |
+| 变量 | 描述 |
 | --- | --- |
-| `--privileged` | Will start a Docker in Docker (DinD) setup inside the container to use docker in an isolated environment. For increased performance mount the Docker directory inside the container to the host IE `-v /home/user/docker-data:/var/lib/docker`. |
-| `-v /var/run/docker.sock:/var/run/docker.sock` | Mount in the host level Docker socket to either interact with it via CLI or use Docker enabled applications. |
-| `--device /dev/dri:/dev/dri` | Mount a GPU into the container, this can be used in conjunction with the `DRINODE` environment variable to leverage a host video card for GPU accelerated appplications. Only **Open Source** drivers are supported IE (Intel,AMDGPU,Radeon,ATI,Nouveau) |
+| \--privileged | 将在容器内部启动一个 Docker 在 Docker (DinD) 设置，以便在隔离环境中使用 Docker。为了提高性能，请将 Docker 目录挂载到主机上，例如 -v /home/user/docker-data:/var/lib/docker |
+| \-v /var/run/docker.sock:/var/run/docker.sock | 在主机级别挂载 Docker 套接字，以便通过命令行界面与之交互或使用 Docker 启动的应用程序。 |
+| \--device /dev/dri:/dev/dri | 将 GPU 挂载到容器中，可以与 DRINODE 环境变量结合使用，以利用主机的显卡进行 GPU 加速的应用程序。仅支持开源驱动程序（如 Intel、AMDGPU、Radeon、ATI、Nouveau） |
 
-### Lossless mode
+### 无损模式
 
-This container is capable of delivering a true lossless image at a high framerate to your web browser by changing the Stream Quality preset to "Lossless", more information [here](https://www.kasmweb.com/docs/latest/how_to/lossless.html#technical-background). In order to use this mode from a non localhost endpoint the HTTPS port on 3001 needs to be used. If using a reverse proxy to port 3000 specific headers will need to be set as outlined [here](https://github.com/linuxserver/docker-baseimage-kasmvnc#lossless).
+此容器可以通过将 Stream Quality 预设更改为“无损”模式，在高帧率下将真正的无损图像传输到您的网络浏览器。更多信息请参阅 [此处](https://www.kasmweb.com/docs/latest/how_to/lossless.html#technical-background) 。要从非本地主机端点使用此模式，需要使用 3001 端口的 HTTPS。如果通过反向代理访问端口 3000，则需要设置特定的标头，具体请参阅 [此处](https://github.com/linuxserver/docker-baseimage-kasmvnc#lossless) 。
 
-## Usage
+## 使用方法
 
-Here are some example snippets to help you get started creating a container.
+以下是一些示例片段，帮助你开始创建容器。
 
-### docker-compose (recommended, [click here for more info](https://docs.linuxserver.io/general/docker-compose))
+### docker-compose（推荐，\[点击这里获取更多信息\](#0)）
 
 ```
 ---
@@ -98,7 +98,7 @@ services:
     restart: unless-stopped 
 ```
 
-### docker cli ([click here for more info](https://docs.docker.com/engine/reference/commandline/cli/))
+### docker cli（\[点击这里获取更多信息\](#0)）
 
 ```
 docker run -d \
@@ -115,44 +115,44 @@ docker run -d \
   lscr.io/linuxserver/wps-office:latest 
 ```
 
-## Parameters
+## 参数
 
-Container images are configured using parameters passed at runtime (such as those above). These parameters are separated by a colon and indicate `<external>:<internal>` respectively. For example, `-p 8080:80` would expose port `80` from inside the container to be accessible from the host's IP on port `8080` outside the container.
+容器镜像通过在运行时传递参数（如上文所示）进行配置。这些参数通过冒号分隔，分别表示外部和内部。例如，\`-p 8080:80\` 会将容器内部的端口 \`80\` 映射到主机的 IP 地址上的端口 \`8080\`。
 
-| Parameter | Function |
+| 参数 | 功能 |
 | --- | --- |
-| `-p 3000` | WPS Office desktop gui. |
-| `-p 3001` | WPS Office desktop gui HTTPS. |
-| `-e PUID=1000` | for UserID - see below for explanation |
-| `-e PGID=1000` | for GroupID - see below for explanation |
-| `-e TZ=Etc/UTC` | specify a timezone to use, see this [list](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List). |
-| `-v /config` | Users home directory in the container, stores program settings and documents |
-| `--shm-size=` | This is needed for electron applications to function properly. |
-| `--security-opt seccomp=unconfined` | For Docker Engine only, many modern gui apps need this to function on older hosts as syscalls are unknown to Docker. |
+| \-p 3000 | WPS Office 桌面界面。 |
+| \-p 3001 | WPS Office 桌面界面 HTTPS。 |
+| \-e PUID=1000 | for UserID - 请参见下方说明 |
+| \-e PGID=1000 | for GroupID - 请参见下方说明 |
+| \-e TZ=Etc/UTC | 指定要使用的时区，参见此 列表 。 |
+| \-v /config | 容器中的用户主目录，用于存储程序设置和文档 |
+| \--shm-size= | 这对于电子应用程序的正常运行是必需的。 |
+| \--security-opt seccomp=unconfined | 仅对 Docker 引擎而言，许多现代的 GUI 应用在较旧的主机上运行时需要此设置，因为 Docker 不认识这些系统调用。 |
 
-## Environment variables from files (Docker secrets)
+## 环境变量从文件（Docker 秘钥）
 
-You can set any environment variable from a file by using a special prepend `FILE__`.
+你可以通过使用一个特殊的前缀 \``FILE__`\` 来从文件中设置任何环境变量。
 
-As an example:
+例如：
 
 ```
 -e FILE__PASSWORD=/run/secrets/mysecretpassword 
 ```
 
-Will set the environment variable `PASSWORD` based on the contents of the `/run/secrets/mysecretpassword` file.
+将根据 \`/run/secrets/mysecretpassword\` 文件的内容设置环境变量 \``PASSWORD`\`。
 
-## Umask for running applications
+## 运行应用程序的 umask
 
-For all of our images we provide the ability to override the default umask settings for services started within the containers using the optional `-e UMASK=022` setting. Keep in mind umask is not chmod it subtracts from permissions based on it's value it does not add. Please read up [here](https://en.wikipedia.org/wiki/Umask) before asking for support.
+对于所有图像，我们提供了使用可选的 \`-e UMASK=022\` 设置来覆盖容器内启动的服务的默认 umask 设置的能力。请注意，umask 不是 chmod，它的值会从权限中减去，而不是增加。在请求支持之前，请先阅读 [这里](https://en.wikipedia.org/wiki/Umask) 。
 
-## User / Group Identifiers
+## 用户 / 组标识符
 
-When using volumes (`-v` flags) permissions issues can arise between the host OS and the container, we avoid this issue by allowing you to specify the user `PUID` and group `PGID`.
+使用卷（-v 标志）时，可能会在主机操作系统和容器之间出现权限问题，我们通过允许您指定用户 PUID 和组 PGID 来避免这个问题。
 
-Ensure any volume directories on the host are owned by the same user you specify and any permissions issues will vanish like magic.
+确保主机上的任何卷目录由您指定的同一用户拥有，任何权限问题都会神奇地消失。
 
-In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as below:
+在这个实例中 `PUID=1000` 和 `PGID=1000`，要找到你的值，请使用 `id user`，如下所示：
 
 ```
  $ id username
@@ -161,42 +161,42 @@ In this instance `PUID=1000` and `PGID=1000`, to find yours use `id user` as bel
 
 ## Docker Mods
 
-We publish various [Docker Mods](https://github.com/linuxserver/docker-mods) to enable additional functionality within the containers. The list of Mods available for this image (if any) as well as universal mods that can be applied to any one of our images can be accessed via the dynamic badges above.
+我们发布了各种 [Docker Mods](https://github.com/linuxserver/docker-mods) 以在容器中启用额外的功能。此镜像可用的 Mods 列表（如果有）以及可以应用于我们任何镜像的通用 Mods 可通过上方的动态徽章访问。
 
-## Support Info
+## 支持信息
 
-- Shell access whilst the container is running: `docker exec -it wps-office /bin/bash`
-- To monitor the logs of the container in realtime: `docker logs -f wps-office`
-- container version number
-    - `docker inspect -f '{{ index .Config.Labels "build_version" }}' wps-office`
-- image version number
-    - `docker inspect -f '{{ index .Config.Labels "build_version" }}' lscr.io/linuxserver/wps-office:latest`
+*   在容器运行时访问 Shell: `docker exec -it wps-office /bin/bash`
+*   实时监控容器的日志：`docker logs -f wps-office`
+*   容器版本号
+    *   `docker inspect -f '{{ index .Config.Labels "build_version" }}' wps-office`
+*   image 版本号
+    *   `docker inspect -f '{{ index .Config.Labels "build_version" }}' lscr.io/linuxserver/wps-office:latest`
 
-## Updating Info
+## 更新信息
 
-Most of our images are static, versioned, and require an image update and container recreation to update the app inside. With some exceptions (ie. nextcloud, plex), we do not recommend or support updating apps inside the container. Please consult the [Application Setup](#application-setup) section above to see if it is recommended for the image.
+我们的大多数镜像都是静态的、版本化的，需要更新镜像并重新创建容器才能更新应用程序。除了少数例外（例如 nextcloud、plex），我们不建议或支持在容器内部更新应用程序。请参阅上方的[应用程序设置](#application-setup)部分，查看该镜像是否推荐进行更新。
 
-Below are the instructions for updating containers:
+以下是更新容器的步骤：
 
-### Via Docker Compose
+### 通过 Docker Compose
 
-- Update all images: `docker-compose pull`
-    - or update a single image: `docker-compose pull wps-office`
-- Let compose update all containers as necessary: `docker-compose up -d`
-    - or update a single container: `docker-compose up -d wps-office`
-- You can also remove the old dangling images: `docker image prune`
+*   更新所有镜像：`docker-compose pull`
+    *   或更新单个镜像： `docker-compose pull wps-office`
+*   让 Compose 更新所有必要的容器：`docker-compose up -d`
+    *   或更新单个容器： `docker-compose up -d wps-office`
+*   你也可以移除旧的孤立镜像：\`docker image prune\`
 
-### Via Docker Run
+### 通过 Docker Run
 
-- Update the image: `docker pull lscr.io/linuxserver/wps-office:latest`
-- Stop the running container: `docker stop wps-office`
-- Delete the container: `docker rm wps-office`
-- Recreate a new container with the same docker run parameters as instructed above (if mapped correctly to a host folder, your `/config` folder and settings will be preserved)
-- You can also remove the old dangling images: `docker image prune`
+*   更新镜像： `docker pull lscr.io/linuxserver/wps-office:latest`
+*   停止运行中的容器：`docker stop wps-office`
+*   删除容器：`docker rm wps-office`
+*   使用相同的 \`docker run\` 参数重新创建一个新的容器（如果正确映射到主机文件夹，您的 `/config` 文件夹和设置将被保留）
+*   你也可以移除旧的孤立镜像：\`docker image prune\`
 
-### Via Watchtower auto-updater (only use if you don't remember the original parameters)
+### 通过 Watchtower 自动更新程序（仅在您不记得原始参数时使用）
 
-- Pull the latest image at its tag and replace it with the same env variables in one run:
+*   拉取最新标签的镜像并在一次运行中用相同的环境变量替换它：
     
     ```
     docker run --rm \
@@ -205,18 +205,18 @@ Below are the instructions for updating containers:
     --run-once wps-office 
     ```
     
-- You can also remove the old dangling images: `docker image prune`
+*   你也可以移除旧的孤立镜像：\`docker image prune\`
     
 
-**Note:** We do not endorse the use of Watchtower as a solution to automated updates of existing Docker containers. In fact we generally discourage automated updates. However, this is a useful tool for one-time manual updates of containers where you have forgotten the original parameters. In the long term, we highly recommend using [Docker Compose](https://docs.linuxserver.io/general/docker-compose).
+\*\*注意\*\*：我们不推荐使用 Watchtower 来自动化现有 Docker 容器的更新。实际上，我们一般不建议自动化更新。然而，这个工具对于一次性手动更新忘记原始参数的容器是有用的。从长远来看，我们强烈建议使用 Docker Compose。
 
-### Image Update Notifications - Diun (Docker Image Update Notifier)
+### 镜像更新通知 - Diun（Docker Image Update Notifier）
 
-- We recommend [Diun](https://crazymax.dev/diun/) for update notifications. Other tools that automatically update containers unattended are not recommended or supported.
+*   我们推荐使用 [Diun](https://crazymax.dev/diun/) 获取更新通知。其他在无人干预的情况下自动更新容器的工具不被推荐或支持。
 
-## Building locally
+## 本地构建
 
-If you want to make local modifications to these images for development purposes or just to customize the logic:
+如果您为了开发目的或只是自定义逻辑而对这些镜像进行本地修改：
 
 ```
 git clone https://github.com/linuxserver/docker-wps-office.git
@@ -227,14 +227,14 @@ docker build \
   -t lscr.io/linuxserver/wps-office:latest . 
 ```
 
-The ARM variants can be built on x86_64 hardware using `multiarch/qemu-user-static`
+在 x86\_64 硬件上可以使用 `multiarch/qemu-user-static` 构建 ARM 变体。
 
 ```
 docker run --rm --privileged multiarch/qemu-user-static:register --reset 
 ```
 
-Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64`.
+注册后，您可以使用 `-f Dockerfile.aarch64` 定义要使用的 Dockerfile。
 
-## Versions
+## 版本
 
-- **21.04.23:** \- Initial release.
+*   **21.04.23：** - 初始发布。

@@ -3,147 +3,149 @@
 部署完成后按照页面提示，在终端执行命令，开启服务。
 
 # 原始相关
-***
+
+* * *
+
 [![License](https://img.shields.io/badge/License-GNU%20AGPL%20V3-green.svg?style=flat)](https://www.gnu.org/licenses/agpl-3.0.en.html) ![Release](https://img.shields.io/badge/Release-v7.4.0-blue.svg?style=flat)
 
-## Overview
+## 概述
 
-[ONLYOFFICE Docs](https://www.onlyoffice.com/office-suite.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS)* is a free collaborative online office suite comprising viewers and editors for texts, spreadsheets and presentations, forms and PDF, fully compatible with Office Open XML formats: .docx, .xlsx, .pptx and enabling collaborative editing in real time.
+[ONLYOFFICE Docs](https://www.onlyoffice.com/office-suite.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS)\* 是一个免费的协作在线办公套件，包含文本、电子表格和演示文稿的查看器和编辑器，以及表单和 PDF，完全兼容 Office Open XML 格式：.docx、.xlsx、.pptx，并支持实时协作编辑。
 
-ONLYOFFICE Docs can be used as a part of [ONLYOFFICE Workspace](https://www.onlyoffice.com/workspace.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubCS) or with [third-party sync&share solutions](https://www.onlyoffice.com/all-connectors.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS) (e.g. Nextcloud, ownCloud, Seafile) to enable collaborative editing within their interface.
+ONLYOFFICE Docs 可以作为 [ONLYOFFICE Workspace](https://www.onlyoffice.com/workspace.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubCS) 的一部分使用，或者与 [第三方同步与分享解决方案](https://www.onlyoffice.com/all-connectors.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS) （例如 Nextcloud、ownCloud、Seafile）结合使用，以在其界面中实现协作编辑。
 
-It has three editions - [Community, Enterprise, and Developer](#onlyoffice-docs-editions). 
+它有三个版本 - [社区版、企业版和开发者版](#onlyoffice-docs-editions) 。
 
-\* Starting from version 6.0, Document Server is distributed under a new name - ONLYOFFICE Docs.
+\* 自从 6.0 版本起，Document Server 以新的名称 ONLYOFFICE Docs 进行分发。
 
-## Components
+## 组件
 
-ONLYOFFICE Docs contains the following components:
+ONLYOFFICE Docs 包含以下组件：
 
-* [server](https://github.com/ONLYOFFICE/server) - the backend server software layer which is the base for all other components of ONLYOFFICE Docs.
-* [core](https://github.com/ONLYOFFICE/core) - server core components of ONLYOFFICE Docs which enable the conversion between the most popular office document formats (DOC, DOCX, ODT, RTF, TXT, PDF, HTML, EPUB, XPS, DjVu, XLS, XLSX, ODS, CSV, PPT, PPTX, ODP).
-* [sdkjs](https://github.com/ONLYOFFICE/sdkjs) - JavaScript SDK for the ONLYOFFICE Docs which contains API for all the included components client-side interaction.
-* [web-apps](https://github.com/ONLYOFFICE/web-apps) - the frontend for ONLYOFFICE Docs which builds the program interface and allows the user create, edit, save and export text, spreadsheet and presentation documents using the common interface of a document editor.
-* [dictionaries](https://github.com/ONLYOFFICE/dictionaries) - the dictionaries of various languages used for spellchecking in ONLYOFFICE Docs.
+*   [服务器](https://github.com/ONLYOFFICE/server) \- 作为 ONLYOFFICE Docs 所有其他组件基础的后端服务器软件层。
+*   [core](https://github.com/ONLYOFFICE/core) - ONLYOFFICE Docs 的核心服务器组件，支持将最流行的办公文档格式（DOC, DOCX, ODT, RTF, TXT, PDF, HTML, EPUB, XPS, DjVu, XLS, XLSX, ODS, CSV, PPT, PPTX, ODP）相互转换。
+*   [sdkjs](https://github.com/ONLYOFFICE/sdkjs) - ONLYOFFICE Docs 的 JavaScript SDK，包含所有内置组件的客户端交互 API。
+*   [web-apps](https://github.com/ONLYOFFICE/web-apps) - ONLYOFFICE Docs 的前端，构建程序界面，允许用户使用文档编辑器的通用界面创建、编辑、保存和导出文本、电子表格和演示文稿文档。
+*   [dictionaries](https://github.com/ONLYOFFICE/dictionaries) - 用于 ONLYOFFICE Docs 拼写检查的各种语言词典。
 
-## Plugins
+## 插件
 
-ONLYOFFICE Docs offer support for plugins allowing developers to add specific features to the editors that are not directly related to the OOXML format. For more information see [our API](https://api.onlyoffice.com/plugin/basic) or visit github [plugins repo](https://github.com/ONLYOFFICE/onlyoffice.github.io).
+ONLYOFFICE Docs 提供插件支持，允许开发者向编辑器添加与 OOXML 格式不直接相关的特定功能。更多信息请参见 [我们的 API](https://api.onlyoffice.com/plugin/basic) 或访问 github [插件仓库](https://github.com/ONLYOFFICE/onlyoffice.github.io) 。
 
-## Functionality
+## 功能
 
-ONLYOFFICE Docs includes the following editors:
+ONLYOFFICE Docs 包含以下编辑器：
 
-* [ONLYOFFICE Document Editor](https://www.onlyoffice.com/document-editor.aspx?utm_source=GitHub&utm_medium=social&utm_campaign=GitHubDesktop)
-* [ONLYOFFICE Spreadsheet Editor](https://www.onlyoffice.com/spreadsheet-editor.aspx?utm_source=GitHub&utm_medium=social&utm_campaign=GitHubDesktop)
-* [ONLYOFFICE Presentation Editor](https://www.onlyoffice.com/presentation-editor.aspx?utm_source=GitHub&utm_medium=social&utm_campaign=GitHubDesktop)
-* [ONLYOFFICE Form Creator](https://www.onlyoffice.com/form-creator.aspx?utm_source=GitHub&utm_medium=social&utm_campaign=GitHubDesktop)
-* [ONLYOFFICE PDF reader and converter](https://www.onlyoffice.com/pdf-reader.aspx?utm_source=GitHub&utm_medium=social&utm_campaign=GitHubDesktop)
+*   [ONLYOFFICE 文档编辑器](https://www.onlyoffice.com/document-editor.aspx?utm_source=GitHub&utm_medium=social&utm_campaign=GitHubDesktop)
+*   [ONLYOFFICE 表格编辑器](https://www.onlyoffice.com/spreadsheet-editor.aspx?utm_source=GitHub&utm_medium=social&utm_campaign=GitHubDesktop)
+*   [ONLYOFFICE 演示文稿编辑器](https://www.onlyoffice.com/presentation-editor.aspx?utm_source=GitHub&utm_medium=social&utm_campaign=GitHubDesktop)
+*   [ONLYOFFICE 表单创建器](https://www.onlyoffice.com/form-creator.aspx?utm_source=GitHub&utm_medium=social&utm_campaign=GitHubDesktop)
+*   [ONLYOFFICE PDF 阅读器和转换器](https://www.onlyoffice.com/pdf-reader.aspx?utm_source=GitHub&utm_medium=social&utm_campaign=GitHubDesktop)
 
-The editors allow you to create, edit, save and export text, spreadsheet and presentation documents and additionally have the features:
+编辑器允许您创建、编辑、保存和导出文本、电子表格和演示文稿文档，并且还具有以下功能：
 
-* Collaborative editing
-* Hieroglyph support
-* Reviewing
-* Spell-checking
+*   协作编辑
+*   象形文字支持
+*   审阅
+*   拼写检查
 
-## ONLYOFFICE Docs editions
+## ONLYOFFICE Docs 版本
 
-ONLYOFFICE offers different versions of its online document editors that can be deployed on your own servers.
+ONLYOFFICE 提供不同版本的在线文档编辑器，您可以将其部署到自己的服务器上。
 
-ONLYOFFICE Docs (packaged as Document Server):
+ONLYOFFICE Docs（打包为 Document Server）:
 
-* Community Edition (`onlyoffice-documentserver` package)
-* Enterprise Edition (`onlyoffice-documentserver-ee` package)
-* Developer Edition (`onlyoffice-documentserver-de` package)
+*   社区版（`onlyoffice-documentserver` 包）
+*   企业版（`onlyoffice-documentserver-ee` 包）
+*   开发者版（`onlyoffice-documentserver-de` 包）
 
-The table below will help you to make the right choice.
+以下表格将帮助您做出正确的选择。
 
-| Pricing and licensing | Community Edition | Enterprise Edition | Developer Edition |
-| ------------- | ------------- | ------------- | ------------- |
-| | [Get it now](https://www.onlyoffice.com/download-docs.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS#docs-community)  | [Start Free Trial](https://www.onlyoffice.com/download-docs.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS#docs-enterprise)  | [Start Free Trial](https://www.onlyoffice.com/download-docs.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS#docs-developer)  |
-| Cost  | FREE  | [Go to the pricing page](https://www.onlyoffice.com/docs-enterprise-prices.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS)  | [Go to the pricing page](https://www.onlyoffice.com/developer-edition-prices.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS)  |
-| Simultaneous connections | up to 20 maximum  | As in chosen pricing plan | As in chosen pricing plan |
-| Number of users | up to 20 recommended | As in chosen pricing plan | As in chosen pricing plan |
-| Clusterization | - | + | + |
-| License | GNU AGPL v.3 | Proprietary | Proprietary |
-| **Support** | **Community Edition** | **Enterprise Edition** | **Developer Edition** |
-| Documentation | [Help Center](https://helpcenter.onlyoffice.com/installation/docs-community-index.aspx) | [Help Center](https://helpcenter.onlyoffice.com/installation/docs-enterprise-index.aspx) | [Help Center](https://helpcenter.onlyoffice.com/installation/docs-developer-index.aspx) |
-| Standard support | [GitHub](https://github.com/ONLYOFFICE/DocumentServer/issues) or paid | One year support included | One year support included |
-| Premium support | [Contact Us](mailto:sales@onlyoffice.com) | [Contact Us](mailto:sales@onlyoffice.com) | [Contact Us](mailto:sales@onlyoffice.com) |
-| **Services** | **Community Edition** | **Enterprise Edition** | **Developer Edition** |
-| Conversion Service                | + | + | + |
-| Document Builder Service          | + | + | + |
-| **Interface** | **Community Edition** | **Enterprise Edition** | **Developer Edition** |
-| Tabbed interface                       | + | + | + |
-| Dark theme                             | + | + | + |
-| 125%, 150%, 175%, 200% scaling         | + | + | + |
-| White label                            | - | - | + |
-| Integrated test example (node.js)      | + | + | + |
-| Mobile web editors                     | - | +** | +** |
-| **Plugins & Macros** | **Community Edition** | **Enterprise Edition** | **Developer Edition** |
-| Plugins                           | + | + | + |
-| Macros                            | + | + | + |
-| **Collaborative capabilities** | **Community Edition** | **Enterprise Edition** | **Developer Edition** |
-| Two co-editing modes              | + | + | + |
-| Comments                          | + | + | + |
-| Built-in chat                     | + | + | + |
-| Review and tracking changes       | + | + | + |
-| Display modes of tracking changes | + | + | + |
-| Version history                   | + | + | + |
-| **Document Editor features** | **Community Edition** | **Enterprise Edition** | **Developer Edition** |
-| Font and paragraph formatting   | + | + | + |
-| Object insertion                | + | + | + |
-| Adding Content control          | + | + | + |
-| Editing Content control         | + | + | + |
-| Layout tools                    | + | + | + |
-| Table of contents               | + | + | + |
-| Navigation panel                | + | + | + |
-| Mail Merge                      | + | + | + |
-| Comparing Documents             | + | + | + |
-| **Spreadsheet Editor features** | **Community Edition** | **Enterprise Edition** | **Developer Edition** |
-| Font and paragraph formatting   | + | + | + |
-| Object insertion                | + | + | + |
-| Functions, formulas, equations  | + | + | + |
-| Table templates                 | + | + | + |
-| Pivot tables                    | + | + | + |
-| Data validation                 | + | + | + |
-| Conditional formatting          | + | + | + |
-| Sparklines                      | + | + | + |
-| Sheet Views                     | + | + | + |
-| **Presentation Editor features** | **Community Edition** | **Enterprise Edition** | **Developer Edition** |
-| Font and paragraph formatting   | + | + | + |
-| Object insertion                | + | + | + |
-| Transitions                     | + | + | + |
-| Presenter mode                  | + | + | + |
-| Notes                           | + | + | + |
-| **Form creator features** | **Community Edition** | **Enterprise Edition** | **Developer Edition** |
-| Adding form fields              | + | + | + |
-| Form preview                    | + | + | + |
-| Saving as PDF                   | + | + | + |
-| **Security features** | **Community Edition** | **Enterprise Edition** | **Developer Edition** |
-| End-to-end encryption via Private Rooms***  | + | + | - |
-| | [Get it now](https://www.onlyoffice.com/download-docs.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS#docs-community)  | [Start Free Trial](https://www.onlyoffice.com/download-docs.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS#docs-enterprise)  | [Start Free Trial](https://www.onlyoffice.com/download-docs.aspx?utm_source=github&utm_medium=cpc&utm_campaign=GitHubDS#docs-developer)  |
+| 定价与许可 | 社区版 | 企业版 | 开发者版 |
+| --- | --- | --- | --- |
+|  | 立即获取 | 免费试用 | 免费试用 |
+| 费用 | FREE | 前往定价页面 | 前往定价页面 |
+| 同时连接数 | 最多 20 人 | 如所选定价计划 | 如所选定价计划 |
+| 用户数量 | 最多 20 项推荐 | 如所选定价计划所示 | 如所选定价计划所示 |
+| 聚类 | \- | + | + |
+| 许可证 | GNU AGPL v.3 | 专有 | 专有 |
+| 支持 | 社区版 | 企业版 | 开发者版 |
+| 文档 | 帮助中心 | 帮助中心 | 帮助中心 |
+| 标准支持 | GitHub 或付费 | 包含一年支持 | 包含一年支持 |
+| 高级支持 | 联系我们 | 联系我们 | 联系我们 |
+| 服务 | 社区版 | 企业版 | 开发者版 |
+| 转换服务 | + | + | + |
+| 文档构建服务 | + | + | + |
+| 接口 | 社区版 | 企业版 | 开发者版 |
+| 标签页界面 | + | + | + |
+| 暗主题 | + | + | + |
+| 125%, 150%, 175%, 200% 放大比例 | + | + | + |
+| 白标 | \- | \- | + |
+| 集成测试示例（node.js） | + | + | + |
+| 移动网页编辑器 | \- | +\*\* | +\*\* |
+| 插件与宏 | 社区版 | 企业版 | 开发者版 |
+| 插件 | + | + | + |
+| 宏 | + | + | + |
+| 协作功能 | 社区版 | 企业版 | 开发者版 |
+| 双人编辑模式 | + | + | + |
+| 评论 | + | + | + |
+| 内置聊天 | + | + | + |
+| 审阅和跟踪更改 | + | + | + |
+| 显示跟踪更改模式 | + | + | + |
+| 版本历史 | + | + | + |
+| 文档编辑器功能 | 社区版 | 企业版 | 开发者版 |
+| 字体和段落格式化 | + | + | + |
+| 对象插入 | + | + | + |
+| 添加内容控件 | + | + | + |
+| 编辑内容控件 | + | + | + |
+| 布局工具 | + | + | + |
+| 目录 | + | + | + |
+| 导航栏 | + | + | + |
+| 邮件合并 | + | + | + |
+| 比较文档 | + | + | + |
+| 电子表格编辑器功能 | 社区版 | 企业版 | 开发者版 |
+| 字体和段落格式 | + | + | + |
+| 对象插入 | + | + | + |
+| 函数、公式、方程 | + | + | + |
+| 表格模板 | + | + | + |
+| 透视表 | + | + | + |
+| 数据验证 | + | + | + |
+| 条件格式 | + | + | + |
+| 火花图 | + | + | + |
+| 工作表视图 | + | + | + |
+| 沉浸式翻译功能 | 社区版 | 企业版 | 开发者版 |
+| 字体和段落格式化 | + | + | + |
+| 插入对象 | + | + | + |
+| 过渡效果 | + | + | + |
+| 演示者模式 | + | + | + |
+| 注释 | + | + | + |
+| 表单创建者功能 | 社区版 | 企业版 | 开发者版 |
+| 添加表单字段 | + | + | + |
+| 表单预览 | + | + | + |
+| 保存为 PDF | + | + | + |
+| 安全功能 | 社区版 | 企业版 | 开发者版 |
+| 端到端加密的私密房间\*\*\* | + | + | \- |
+|  | 立即获取 | 免费试用 | 免费试用 |
 
-\** If supported by DMS  
-\*** End-to-end encryption via Private Rooms requires ONLYOFFICE Workspace
+\*\* 如果 DMS 支持
+\*\*\* 通过私人房间进行端到端加密需要 ONLYOFFICE Workspace
 
-## How to Install on a local server
+## 如何在本地服务器上安装
 
-The easiest way to install ONLYOFFICE Docs is to use **the Docker image** ([the official source code](https://github.com/ONLYOFFICE/Docker-DocumentServer))
+安装 ONLYOFFICE Docs 最简单的方法是使用 **官方 Docker 镜像** ( [官方源代码](https://github.com/ONLYOFFICE/Docker-DocumentServer) )
 
-* [Installing ONLYOFFICE Docs Docker](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx)
-* [Installing ONLYOFFICE Docs for Linux](https://helpcenter.onlyoffice.com/installation/docs-community-install-ubuntu.aspx)
-* [Installing ONLYOFFICE Docs for Windows](https://helpcenter.onlyoffice.com/installation/docs-community-install-windows.aspx)
+*   [安装 ONLYOFFICE Docs Docker](https://helpcenter.onlyoffice.com/installation/docs-community-install-docker.aspx)
+*   [安装 ONLYOFFICE Docs for Linux](https://helpcenter.onlyoffice.com/installation/docs-community-install-ubuntu.aspx)
+*   [安装 ONLYOFFICE Docs for Windows](https://helpcenter.onlyoffice.com/installation/docs-community-install-windows.aspx)
 
-## How to Build
+## 如何构建
 
-Instructions for building ONLYOFFICE Docs for a local server from source code are in [our helpcenter](https://helpcenter.onlyoffice.com/installation/docs-community-compile.aspx).
+从源代码构建 ONLYOFFICE Docs 以供本地服务器使用的方法请参阅 [我们的帮助中心](https://helpcenter.onlyoffice.com/installation/docs-community-compile.aspx) 。
 
-## License
+## 许可证
 
-ONLYOFFICE Docs is licensed under the GNU Affero Public License, version 3.0. See [LICENSE](https://onlyo.co/38YZGJh) for more information.
+ONLYOFFICE Docs 采用 GNU Affero 公开许可证，版本 3.0。更多详情请参见 [LICENSE](https://onlyo.co/38YZGJh)。
 
-## User Feedback and Support
+## 用户反馈与支持
 
-If you have any problems with or questions about ONLYOFFICE Docs, please visit our official forum to find answers to your questions: [forum.onlyoffice.com](https://forum.onlyoffice.com) or you can ask and answer ONLYOFFICE development questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice).
+如果您在使用 ONLYOFFICE Docs 时遇到任何问题或有任何疑问，请访问我们的官方论坛以获取答案：[forum.onlyoffice.com](https://forum.onlyoffice.com)，或者您可以在 [Stack Overflow](https://stackoverflow.com/questions/tagged/onlyoffice) 上提问和回答 ONLYOFFICE 开发相关的问题。

@@ -1,74 +1,80 @@
-# WeekToDo | FOSS Minimalist Weekly Planner
----
-![GitHub all releases](https://img.shields.io/github/downloads/zuntek/weektodoweb/total) 
-[![vue3](https://img.shields.io/badge/vue-3.x-brightgreen.svg)](https://vuejs.org/)
+# WeekToDo | FOSS 极简主义周计划应用
 
-WeekToDo is a free minimalist weekly planner app focused on privacy. Schedule your tasks and projects with to do lists and a calendar. Available for Windows, Mac, Linux or online.
+* * *
+
+![GitHub all releases](https://img.shields.io/github/downloads/zuntek/weektodoweb/total) [![vue3](https://img.shields.io/badge/vue-3.x-brightgreen.svg)](https://vuejs.org/)
+
+WeekToDo 是一款注重隐私的免费极简主义周计划应用。您可以使用待办事项列表和日历来安排任务和项目。适用于 Windows、Mac、Linux 或在线使用。
 
 ![Logo](https://weektodo.me/weektodo-preview.webp)
 
-## Features
+## 功能
 
-- Cross platform
-- Light/dark mode toggle
-- Custom To-do Lists
-- Drag and Drop
-- Multi-language
-- Sub-tasks
-- Markdown Support
-- Customizable user interface
-- Local Storage
-- Task Colors
-- Task Time
-- Recurring Tasks
-- Notifications and reminders
+*   跨平台
+*   明/暗模式切换
+*   自定义待办事项列表
+*   拖放
+*   多语言
+*   子任务
+*   Markdown 支持
+*   可定制的用户界面
+*   本地存储
+*   任务颜色
+*   任务时间
+*   重复任务
+*   通知与提醒
 
-## Roadmap
+## 路线图
 
-- Touch mode
-- Mobile Version
-- Sync across devices
-- Workspaces
-- Themes
+*   触摸模式
+    
+*   移动版本
+    
+*   设备间同步
+    
+*   工作区
+    
+*   主题
+    
 
-  
-## Installation
+## 安装
 
-### Download installer 
+### 下载安装程序
 
-[Windows / Linux / macOS](https://github.com/zuntek/weektodoweb/releases/latest
-) 
+[Windows / Linux / macOS](https://github.com/zuntek/weektodoweb/releases/latest)
 
-### External Stores
+### 外部存储
 
-#### Windows 
+#### Windows
 
 [Uptodown](https://weektodo.uptodown.com/windows)
 
-#### macOS 
+#### macOS
 
 [Macupdate](https://www.macupdate.com/app/mac/63506/weektodo)
 
-#### Linux 
+#### Linux
 
-Snapd can be installed from the command line:
+Snapd 可以从命令行安装：
 
 ```bash
 sudo apt update
 sudo apt install snapd
 ```
-To install WeekToDo, simply use the following command:
+
+要安装 WeekToDo，只需使用以下命令：
+
 ```bash
 sudo snap install weektodo
-```    
+```
 
-## Build and Run From Source
+## 从源代码构建和运行
 
-If you want to understand how WeekToDo works or want to debug an issue, you'll want to get the source, build it, and run it locally.
+如果你想了解 WeekToDo 的工作原理或调试某个问题，你需要获取源代码、构建并本地运行它。
 
-### Installing Prerequisites
+### 安装前置条件
 
-You'll need git, a recent version of [Node.JS](https://nodejs.org/en/) (currently v16.X is recommended), [Yarn](https://yarnpkg.com/) and [Electron](https://www.electronjs.org/).
+你需要安装 git，以及最新版本的 Node.JS（目前推荐使用 v16.X），Yarn 和 Electron。
 
 ```
 git clone https://github.com/manuelernestog/weektodo
@@ -77,52 +83,49 @@ yarn install
 yarn run serve // to run web version
 yarn run electron:serve // to run native version
 ```
-## Contributing
 
-You can support this project in several ways:
+## 贡献
 
-### Donate
+你可以通过多种方式支持这个项目：
 
-https://weektodo.me/support-us
+### 捐赠
 
-### Share
+[https://weektodo.me/support-us](https://weektodo.me/support-us)
 
-- [Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweektodo.me%2F)
-- [Twitter](https://twitter.com/intent/tweet?url=https%3A%2F%2Fweektodo.me%2F&text=)
-- [Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fweektodo.me%2F&title=)
+### 分享
 
-### Rate the app
+*   [Facebook](https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fweektodo.me%2F)
+*   [Twitter](https://twitter.com/intent/tweet?url=https%3A%2F%2Fweektodo.me%2F&text=)
+*   [Linkedin](https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fweektodo.me%2F&title=)
 
-- [ProductHunt](https://www.producthunt.com/posts/weektodo)
-- [AlternativeTo](https://alternativeto.net/software/weektodo/about/)
-- [SassHub](https://www.saashub.com/weektodo-reviews/new)
+### 评价应用
 
-### Translations
+*   [ProductHunt](https://www.producthunt.com/posts/weektodo)
+*   [AlternativeTo](https://alternativeto.net/software/weektodo/about/)
+*   [SassHub](https://www.saashub.com/weektodo-reviews/new)
 
-Currently the system is developed in multiple languages, you can send me a correction of any error or you can add your language if it's not available.
+### 翻译
 
-You can find the base file with all the used words in english [here](src/assets/languages/en.json/)
+目前系统支持多种语言，您可以纠正任何错误，或者如果您使用的语言尚未包含，可以添加您的语言。
 
-For add a new language Fork the repo and create a Pull Request creating a new file of the `translations/en.json` and name he file acording the [language code](https://gist.github.com/Josantonius/b455e315bc7f790d14b136d61d9ae469). 
+您可以在[这里](src/assets/languages/en.json/)找到包含所有使用词汇的英文基础文件。
 
-If this is to dificult, you can donwload this [file](src/assets/languages/en.json/), translate it and send the file to the email contact@weektodo.me
- 
-## Contributing
+要添加新语言，请克隆仓库并创建一个新的翻译文件，该文件应基于 `translations/en.json`，并根据[语言代码](https://gist.github.com/Josantonius/b455e315bc7f790d14b136d61d9ae469)命名文件。
 
-Weektodo is open-source. Pull requests and contributions are welcome! There are three ways to contribute: grab a [bug report](https://github.com/manuelernestog/issues?q=is%3Aopen+is%3Aissue+label%3Abug) or [feature suggestion](https://github.com/manuelernestog/issues?q=is%3Aissue+is%3Aopen+label%3Afeature) that has been marked `accepted` and dig in.
+如果这太困难，您可以下载[此文件](src/assets/languages/en.json/) ，进行翻译后，将文件发送到邮箱 [contact@weektodo.me](mailto:contact@weektodo.me)。
 
-Read [Contributing.md](https://github.com/manuelernestog/weektodo/blob/main/CONTRIBUTING.md) for more information.
+## 贡献
+
+Weektodo 是开源项目。欢迎提交拉取请求和贡献！有三种贡献方式：选择一个已被标记为 `accepted` 的 [bug 报告](https://github.com/manuelernestog/issues?q=is%3Aopen+is%3Aissue+label%3Abug) 或 [功能建议](https://github.com/manuelernestog/issues?q=is%3Aissue+is%3Aopen+label%3Afeature) 并开始参与。
+
+请阅读 [Contributing.md](https://github.com/manuelernestog/weektodo/blob/main/CONTRIBUTING.md) 以获取更多信息。
 
 ## Author
 
-- [Manuel Ernesto Garcia](https://manuelernestogr.bio.link/)
+*   [Manuel Ernesto Garcia](https://manuelernestogr.bio.link/)
 
-## Contributors
+## 贡献者
 
-<a href="https://github.com/manuelernestog/weektodo/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=manuelernestog/weektodo" />
-</a>
+[![](https://contrib.rocks/image?repo=manuelernestog/weektodo)](https://github.com/manuelernestog/weektodo/graphs/contributors)
 
-Made with [contrib.rocks](https://contrib.rocks).
-
-  
+使用了 [contrib.rocks](https://contrib.rocks) 制作。

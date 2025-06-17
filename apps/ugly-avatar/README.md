@@ -1,3 +1,3 @@
 # ugly-face
 
-This project is under Attribution-NonCommercial 4.0 International License. This means no commercial use for the project. I thought about this for a time. If you want to use this as part of your website that needs an avatar generator, you are free to use it. If you however, buid an app solely on this code as your main project, I am highly against that practice. I don't want to have the frustration of "oh someone copied my code and made money with it".
+本项目采用 Attribution-NonCommercial 4.0 International License 许可。这意味着项目不得用于商业用途。我考虑了这个问题一段时间。如果你打算将此项目作为网站中需要头像生成器的一部分来使用，你可以自由使用。然而，如果你仅基于此代码构建一个应用程序作为你的主要项目，我非常反对这种做法。我不想因为“有人复制了我的代码并以此获利”而感到沮丧。

@@ -28,6 +28,11 @@
       "allowedVersions": "/^v8.*/"
     },
     {
+      "matchPackageNames": ["kingwrcy/moments"],
+      "matchCurrentVersion": "<1",
+      "allowedVersions": "<1"
+    },
+    {
       "matchPackageNames": ["linuxserver/heimdall"],
       "allowedVersions": "<2021"
     },

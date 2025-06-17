@@ -1,276 +1,174 @@
-&nbsp;
-<p align="center">
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="doc/adguard_home_darkmode.svg">
-        <img alt="AdGuard Home" src="https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/doc/adguard_home_lightmode.svg" width="300px">
-    </picture>
-</p>
-<h3 align="center">Privacy protection center for you and your devices</h3>
-<p align="center">
-    Free and open source, powerful network-wide ads & trackers blocking DNS
-    server.
-</p>
-<p align="center">
-    <a href="https://adguard.com/">AdGuard.com</a> |
-    <a href="https://github.com/AdguardTeam/AdGuardHome/wiki">Wiki</a> |
-    <a href="https://reddit.com/r/Adguard">Reddit</a> |
-    <a href="https://twitter.com/AdGuard">Twitter</a> |
-    <a href="https://t.me/adguard_en">Telegram</a>
-    <br/><br/>
-    <a href="https://codecov.io/github/AdguardTeam/AdGuardHome?branch=master">
-      <img src="https://img.shields.io/codecov/c/github/AdguardTeam/AdGuardHome/master.svg" alt="Code Coverage"/>
-    </a>
-    <a href="https://goreportcard.com/report/AdguardTeam/AdGuardHome">
-      <img src="https://goreportcard.com/badge/github.com/AdguardTeam/AdGuardHome" alt="Go Report Card"/>
-    </a>
-    <a href="https://hub.docker.com/r/adguard/adguardhome">
-        <img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/adguard/adguardhome.svg?maxAge=604800"/>
-    </a>
-    <br/>
-    <a href="https://github.com/AdguardTeam/AdGuardHome/releases">
-        <img src="https://img.shields.io/github/release/AdguardTeam/AdGuardHome/all.svg" alt="Latest release"/>
-    </a>
-    <a href="https://snapcraft.io/adguard-home">
-        <img alt="adguard-home" src="https://snapcraft.io/adguard-home/badge.svg"/>
-    </a>
-</p>
-<br/>
-<p align="center">
-    <img src="https://cdn.adtidy.org/public/Adguard/Common/adguard_home.gif" width="800"/>
-</p>
-<hr/>
+ ![AdGuard Home](https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/doc/adguard_home_lightmode.svg)
 
-AdGuard Home is a network-wide software for blocking ads and tracking. After you
-set it up, it'll cover ALL your home devices, and you don't need any client-side
-software for that.
+### 隐私保护中心，守护你和你的设备
 
-It operates as a DNS server that re-routes tracking domains to a “black hole”,
-thus preventing your devices from connecting to those servers.  It's based on
-software we use for our public [AdGuard DNS] servers, and both share a lot of
-code.
+免费开源，强大的网络范围广告和追踪者阻断 DNS 服务器。
 
-[AdGuard DNS]: https://adguard-dns.io/
+[AdGuard.com](https://adguard.com/) | [Wiki](https://github.com/AdguardTeam/AdGuardHome/wiki) | [Reddit](https://reddit.com/r/Adguard) | [Twitter](https://twitter.com/AdGuard) | [Telegram](https://t.me/adguard_en)
+ [![Code Coverage](https://img.shields.io/codecov/c/github/AdguardTeam/AdGuardHome/master.svg)](https://codecov.io/github/AdguardTeam/AdGuardHome?branch=master)[![Go Report Card](https://goreportcard.com/badge/github.com/AdguardTeam/AdGuardHome) ](https://goreportcard.com/report/AdguardTeam/AdGuardHome)[![Docker Pulls](https://img.shields.io/docker/pulls/adguard/adguardhome.svg?maxAge=604800)](https://hub.docker.com/r/adguard/adguardhome)
+ [![Latest release](https://img.shields.io/github/release/AdguardTeam/AdGuardHome/all.svg)](https://github.com/AdguardTeam/AdGuardHome/releases)[![adguard-home](https://snapcraft.io/adguard-home/badge.svg)](https://snapcraft.io/adguard-home)
 
+![](https://cdn.adtidy.org/public/Adguard/Common/adguard_home.gif)
 
+* * *
 
- *  [Getting Started](#getting-started)
-     *  [Automated install (Unix)](#automated-install-linux-and-mac)
-     *  [Alternative methods](#alternative-methods)
-     *  [Guides](#guides)
-     *  [API](#api)
- *  [Comparing AdGuard Home to other solutions](#comparison)
-     *  [How is this different from public AdGuard DNS servers?](#comparison-adguard-dns)
-     *  [How does AdGuard Home compare to Pi-Hole](#comparison-pi-hole)
-     *  [How does AdGuard Home compare to traditional ad blockers](#comparison-adblock)
-     *  [Known limitations](#comparison-limitations)
- *  [How to build from source](#how-to-build)
-     *  [Prerequisites](#prerequisites)
-     *  [Building](#building)
- *  [Contributing](#contributing)
-     *  [Test unstable versions](#test-unstable-versions)
-     *  [Reporting issues](#reporting-issues)
-     *  [Help with translations](#translate)
-     *  [Other](#help-other)
- *  [Projects that use AdGuard Home](#uses)
- *  [Acknowledgments](#acknowledgments)
- *  [Privacy](#privacy)
+AdGuard Home 是一种网络范围内的软件，用于屏蔽广告和跟踪。设置完成后，它会覆盖你家中的所有设备，无需任何客户端软件。
 
+它作为 DNS 服务器运行，将跟踪域名重定向到“黑洞”，从而防止您的设备连接到这些服务器。它基于我们用于公共 AdGuard DNS 服务器的软件，并且两者共享大量代码。
 
+*   [开始使用](#getting-started)
+    *   [自动安装（Unix）](#automated-install-linux-and-mac)
+    *   [替代方法](#alternative-methods)
+    *   [指南](#guides)
+    *   [API](#api)
+*   [将 AdGuard Home 与其他解决方案进行比较](#comparison)
+    *   [这与公共 AdGuard DNS 服务器有何不同？](#comparison-adguard-dns)
+    *   [AdGuard Home 与 Pi-Hole 相比如何](#comparison-pi-hole)
+    *   [AdGuard Home 与传统广告拦截器相比如何](#comparison-adblock)
+    *   [已知限制](#comparison-limitations)
+*   [如何从源代码构建](#how-to-build)
+    *   [先决条件](#prerequisites)
+    *   [构建](#building)
+*   [贡献](#contributing)
+    *   [测试不稳定版本](#test-unstable-versions)
+    *   [报告问题](#reporting-issues)
+    *   [翻译帮助](#translate)
+    *   [其他](#help-other)
+*   [使用 AdGuard Home 的项目](#uses)
+*   [致谢](#acknowledgments)
+*   [隐私](#privacy)
 
-##  <a href="#getting-started" id="getting-started" name="getting-started">Getting Started</a>
+## [开始使用](#getting-started)
 
-   ###  <a href="#automated-install-linux-and-mac" id="automated-install-linux-and-mac" name="automated-install-linux-and-mac">Automated install (Unix)</a>
+### [自动化安装（Unix）](#automated-install-linux-and-mac)
 
-To install with `curl` run the following command:
+使用 \``curl`\` 安装，请运行以下命令：
 
 ```sh
 curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
 ```
 
-To install with `wget` run the following command:
+使用 \``wget`\` 安装，请运行以下命令：
 
 ```sh
 wget --no-verbose -O - https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
 ```
 
-To install with `fetch` run the following command:
+使用 \``fetch`\` 安装，请运行以下命令：
 
 ```sh
 fetch -o - https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -v
 ```
 
-The script also accepts some options:
+脚本还接受一些选项：
 
- *  `-c <channel>` to use specified channel;
- *  `-r` to reinstall AdGuard Home;
- *  `-u` to uninstall AdGuard Home;
- *  `-v` for verbose output.
+*   `-c <channel>` 使用指定的渠道;
+*   `-r` 重新安装 AdGuard Home;
+*   `-u` 卸载 AdGuard Home;
+*   `-v` 显示详细输出。
 
-Note that options `-r` and `-u` are mutually exclusive.
+注意，选项 `-r` 和 `-u` 互斥。
 
+### [替代方法](#alternative-methods)
 
+#### [手动安装](#manual-installation)
 
-   ###  <a href="#alternative-methods" id="alternative-methods" name="alternative-methods">Alternative methods</a>
+请阅读我们 Wiki 上的 **[入门指南](https://github.com/AdguardTeam/AdGuardHome/wiki/Getting-Started)** 文章，了解如何手动安装 AdGuard Home，以及如何配置设备使用它。
 
-  ####  <a href="#manual-installation" id="manual-installation" name="manual-installation">Manual installation</a>
+#### [Docker](#docker)
 
-Please read the **[Getting Started][wiki-start]** article on our Wiki to learn
-how to install AdGuard Home manually, and how to configure your devices to use
-it.
+您可以在 [Docker Hub](https://hub.docker.com/r/adguard/adguardhome) 使用我们的官方 Docker 镜像。
 
-  ####  <a href="#docker" id="docker" name="docker">Docker</a>
+#### [Snap Store](#snap-store)
 
-You can use our official Docker image on [Docker Hub].
+如果您正在运行 **Linux**，可以通过 [Snap Store](https://snapcraft.io/adguard-home) 安全且方便地安装 AdGuard Home。
 
-  ####  <a href="#snap-store" id="snap-store" name="snap-store">Snap Store</a>
+### [指南](#guides)
 
-If you're running **Linux,** there's a secure and easy way to install AdGuard
-Home: get it from the [Snap Store].
+请参阅我们的 [Wiki](https://github.com/AdguardTeam/AdGuardHome/wiki)。
 
-[Docker Hub]: https://hub.docker.com/r/adguard/adguardhome
-[Snap Store]: https://snapcraft.io/adguard-home
-[wiki-start]: https://github.com/AdguardTeam/AdGuardHome/wiki/Getting-Started
+### [API](#api)
 
+如果您想集成 AdGuard Home，可以使用我们的 [REST API](https://github.com/AdguardTeam/AdGuardHome/tree/master/openapi)。或者，您可以使用这个 [python 客户端](https://pypi.org/project/adguardhome/) ，它用于构建 [AdGuard Home Hass.io 插件](https://www.home-assistant.io/integrations/adguard/) 。
 
+## [与其他解决方案相比，AdGuard Home 有何不同？](#comparison)
 
-   ###  <a href="#guides" id="guides" name="guides">Guides</a>
+### [这与公共 AdGuard DNS 服务器有何不同？](#comparison-adguard-dns)
 
-See our [Wiki][wiki].
+运行自己的 AdGuard Home 服务器可以让你做到远不止使用公共 DNS 服务器所能做的。这是一个完全不同的层次。你自己试试看：
 
-[wiki]: https://github.com/AdguardTeam/AdGuardHome/wiki
+*   选择服务器具体拦截和允许的内容。
+    
+*   监控网络活动。
+    
+*   添加您自己的自定义过滤规则。
+    
+*   **最重要的是，这是您自己的服务器，也只有您能掌控。**
+    
 
+### [AdGuard Home 与 Pi-Hole 有何不同？](#comparison-pi-hole)
 
+到目前为止，AdGuard Home 与 Pi-Hole 很多方面都有相似之处。两者都使用所谓的“DNS 漏洞利用”方法来屏蔽广告和追踪器，并且都允许用户自定义屏蔽内容。
 
-   ###  <a href="#api" id="api" name="api">API</a>
+我们不会止步于此。DNS 漏洞利用可以作为一个不错的起点，但这仅仅是个开始。
 
-If you want to integrate with AdGuard Home, you can use our [REST API][openapi].
-Alternatively, you can use this [python client][pyclient], which is used to
-build the [AdGuard Home Hass.io Add-on][hassio].
+AdGuard Home 提供了许多开箱即用的功能，无需安装和配置额外的软件。我们希望它简单到即使是普通用户也能在最少的努力下完成设置。
 
-[hassio]:   https://www.home-assistant.io/integrations/adguard/
-[openapi]:  https://github.com/AdguardTeam/AdGuardHome/tree/master/openapi
-[pyclient]: https://pypi.org/project/adguardhome/
+\*\*免责声明：\*\* 列出的一些功能可以通过安装额外的软件或通过使用 SSH 终端手动重新配置 Pi-Hole 组成的一部分工具来添加。然而，在我们看来，这不能合法地算作 Pi-Hole 的功能。
 
+| 功能 | AdGuard Home | Pi-Hole |
+| --- | --- | --- |
+| 拦截广告和跟踪器 | ✅ | ✅ |
+| 自定义屏蔽列表 | ✅ | ✅ |
+| 内置 DHCP 服务器 | ✅ | ✅ |
+| Admin 界面使用 HTTPS | ✅ | 是的，但你需要手动配置 lighttpd |
+| 加密的 DNS 上游服务器（DNS-over-HTTPS、DNS-over-TLS、DNSCrypt） | ✅ | ❌（需要额外软件） |
+| 跨平台 | ✅ | ❌（不原生支持，仅可通过 Docker 实现） |
+| 运行作为 HTTPS-over-DNS 或 TLS-over-DNS 服务器 | ✅ | ❌ 需要额外软件 |
+| 阻止钓鱼和恶意软件域名 | ✅ | ❌ 需要非默认黑名单 |
+| 家长控制（屏蔽成人网站） | ✅ | ❌ |
+| 强制使用安全搜索 | ✅ | ❌ |
+| 每客户端（设备）配置 | ✅ | ✅ |
+| 访问设置（选择谁可以使用 AGH DNS） | ✅ | ❌ |
+| 以非 root 权限运行 | ✅ | ❌ |
 
+### [AdGuard Home 与传统广告拦截器有何不同](#comparison-adblock)
 
-##  <a href="#comparison" id="comparison" name="comparison">Comparing AdGuard Home to other solutions</a>
+视情况而定。
 
-   ###  <a href="#comparison-adguard-dns" id="comparison-adguard-dns" name="comparison-adguard-dns">How is this different from public AdGuard DNS servers?</a>
+DNS 黑洞能够拦截大量广告，但缺乏传统广告拦截器的灵活性和功能。你可以通过阅读 [这篇文章](https://adguard.com/blog/adguard-vs-adaway-dns66.html) 来了解这两种方法之间的差异，该文章将 AdGuard for Android（一种传统广告拦截器）与主机级别广告拦截器（在功能上几乎与基于 DNS 的拦截器相同）进行了比较。这种级别的保护对一些用户来说已经足够。
 
-Running your own AdGuard Home server allows you to do much more than using a
-public DNS server.  It's a completely different level.  See for yourself:
+此外，使用基于 DNS 的阻塞器还可以帮助在智能电视、智能音箱或其他类型的物联网设备（在这些设备上无法安装传统广告拦截器）上阻止广告、跟踪和分析请求。
 
- *  Choose what exactly the server blocks and permits.
+### [已知限制](#comparison-limitations)
 
- *  Monitor your network activity.
+以下是一些 DNS 级别阻塞器无法阻止的示例：
 
- *  Add your own custom filtering rules.
+*   YouTube、Twitch 的广告；
+    
+*   Facebook、Twitter、Instagram 的赞助帖子。
+    
 
- *  **Most importantly, it's your own server, and you are the only one who's in
-    control.**
+本质上，任何与内容共享域的广告都无法被 DNS 级别的阻塞器拦截。
 
+未来是否有处理这种情况的可能性？DNS 从来都不足以做到这一点。我们唯一的办法是使用内容阻塞代理，就像我们在独立的 AdGuard 应用程序中所做的那样。未来我们将为 AdGuard Home 带来这一功能支持。不幸的是，即使在这种情况下，仍然会有无法拦截或需要相当复杂配置的情况。
 
+## [如何从源代码构建](#how-to-build)
 
-   ###  <a href="#comparison-pi-hole" id="comparison-pi-hole" name="comparison-pi-hole">How does AdGuard Home compare to Pi-Hole</a>
+### [前提条件](#prerequisites)
 
-At this point, AdGuard Home has a lot in common with Pi-Hole.  Both block ads
-and trackers using the so-called “DNS sinkholing” method and both allow
-customizing what's blocked.
+运行 \`make init\` 来准备开发环境。
 
-<aside>
-We're not going to stop here.  DNS sinkholing is not a bad starting point, but
-this is just the beginning.
-</aside>
+你需要以下内容来构建 AdGuard Home：
 
-AdGuard Home provides a lot of features out-of-the-box with no need to install
-and configure additional software.  We want it to be simple to the point when
-even casual users can set it up with minimal effort.
+*   Go v1.19 或更新版本；
+*   Node.js v10.16.2 或更高版本；
+*   npm v6.14 或更高版本；
+*   yarn v1.22.5 或更高版本。
 
-**Disclaimer:** some of the listed features can be added to Pi-Hole by
-installing additional software or by manually using SSH terminal and
-reconfiguring one of the utilities Pi-Hole consists of.  However, in our
-opinion, this cannot be legitimately counted as a Pi-Hole's feature.
+### [构建](#building)
 
-| Feature                                                                 | AdGuard&nbsp;Home | Pi-Hole                                                   |
-|-------------------------------------------------------------------------|-------------------|-----------------------------------------------------------|
-| Blocking ads and trackers                                               | ✅                | ✅                                                        |
-| Customizing blocklists                                                  | ✅                | ✅                                                        |
-| Built-in DHCP server                                                    | ✅                | ✅                                                        |
-| HTTPS for the Admin interface                                           | ✅                | Kind of, but you'll need to manually configure lighttpd   |
-| Encrypted DNS upstream servers (DNS-over-HTTPS, DNS-over-TLS, DNSCrypt) | ✅                | ❌ (requires additional software)                         |
-| Cross-platform                                                          | ✅                | ❌ (not natively, only via Docker)                        |
-| Running as a DNS-over-HTTPS or DNS-over-TLS server                      | ✅                | ❌ (requires additional software)                         |
-| Blocking phishing and malware domains                                   | ✅                | ❌ (requires non-default blocklists)                      |
-| Parental control (blocking adult domains)                               | ✅                | ❌                                                        |
-| Force Safe search on search engines                                     | ✅                | ❌                                                        |
-| Per-client (device) configuration                                       | ✅                | ✅                                                        |
-| Access settings (choose who can use AGH DNS)                            | ✅                | ❌                                                        |
-| Running [without root privileges][wiki-noroot]                          | ✅                | ❌                                                        |
-
-[wiki-noroot]: https://github.com/AdguardTeam/AdGuardHome/wiki/Getting-Started#running-without-superuser
-
-
-
-   ###  <a href="#comparison-adblock" id="comparison-adblock" name="comparison-adblock">How does AdGuard Home compare to traditional ad blockers</a>
-
-It depends.
-
-DNS sinkholing is capable of blocking a big percentage of ads, but it lacks
-the flexibility and the power of traditional ad blockers.  You can get a good
-impression about the difference between these methods by reading [this
-article][blog-adaway], which compares AdGuard for Android (a traditional ad
-blocker) to hosts-level ad blockers (which are almost identical to DNS-based
-blockers in their capabilities).  This level of protection is enough for some
-users.
-
-Additionally, using a DNS-based blocker can help to block ads, tracking and
-analytics requests on other types of devices, such as SmartTVs, smart speakers
-or other kinds of IoT devices (on which you can't install traditional ad
-blockers).
-
-
-
-   ###  <a href="#comparison-limitations" id="comparison-limitations" name="comparison-limitations">Known limitations</a>
-
-Here are some examples of what cannot be blocked by a DNS-level blocker:
-
- *  YouTube, Twitch ads;
-
- *  Facebook, Twitter, Instagram sponsored posts.
-
-Essentially, any advertising that shares a domain with content cannot be blocked
-by a DNS-level blocker.
-
-Is there a chance to handle this in the future?  DNS will never be enough to do
-this.  Our only option is to use a content blocking proxy like what we do in the
-standalone AdGuard applications.  We're [going to bring][issue-1228] this
-feature support to AdGuard Home in the future.  Unfortunately, even in this
-case, there still will be cases when this won't be enough or would require quite
-a complicated configuration.
-
-[blog-adaway]: https://adguard.com/blog/adguard-vs-adaway-dns66.html
-[issue-1228]:  https://github.com/AdguardTeam/AdGuardHome/issues/1228
-
-
-
-##  <a href="#how-to-build" id="how-to-build" name="how-to-build">How to build from source</a>
-
-   ###  <a href="#prerequisites" id="prerequisites" name="prerequisites">Prerequisites</a>
-
-Run `make init` to prepare the development environment.
-
-You will need this to build AdGuard Home:
-
- *  [Go](https://golang.org/dl/) v1.19 or later;
- *  [Node.js](https://nodejs.org/en/download/) v10.16.2 or later;
- *  [npm](https://www.npmjs.com/) v6.14 or later;
- *  [yarn](https://yarnpkg.com/) v1.22.5 or later.
-
-
-
-   ###  <a href="#building" id="building" name="building">Building</a>
-
-Open your terminal and execute these commands:
+在终端中执行以下命令：
 
 ```sh
 git clone https://github.com/AdguardTeam/AdGuardHome
@@ -278,252 +176,164 @@ cd AdGuardHome
 make
 ```
 
-**NOTE:**  The non-standard `-j` flag is currently not supported, so building
-with `make -j 4` or setting your `MAKEFLAGS` to include, for example, `-j 4` is
-likely to break the build.  If you do have your `MAKEFLAGS` set to that, and you
-don't want to change it, you can override it by running `make -j 1`.
+\*\*注意：\*\* 非标准的 `-j` 标志目前不被支持，因此使用 `make -j 4` 或设置 `MAKEFLAGS` 包含例如 `-j 4` 可能会破坏构建过程。如果你的 `MAKEFLAGS` 已经设置为这个值，并且你不想更改它，可以通过运行 `make -j 1` 来覆盖它。
 
-Check the [`Makefile`][src-makefile] to learn about other commands.
+查看 `Makefile` 了解其他命令。
 
-  #### <a href="#building-cross" id="building-cross" name="building-cross">Building for a different platform</a>
+#### [为不同的平台进行构建](#building-cross)
 
-You can build AdGuard Home for any OS/ARCH that Go supports.  In order to do
-this, specify `GOOS` and `GOARCH` environment variables as macros when running
-`make`.
+你可以为 Go 支持的任何操作系统/架构构建 AdGuard Home。为了做到这一点，在运行时将 `GOOS` 和 `GOARCH` 环境变量指定为宏。 使用 \`make\` 命令。
 
-For example:
+例如：
 
 ```sh
 env GOOS='linux' GOARCH='arm64' make
 ```
 
-or:
+或者：
 
 ```sh
 make GOOS='linux' GOARCH='arm64'
 ```
 
-  ####  <a href="#preparing-releases" id="preparing-releases" name="preparing-releases">Preparing releases</a>
+#### [准备发布](#preparing-releases)
 
-You'll need [`snapcraft`] to prepare a release build.  Once installed, run the
-following command:
+你需要 [`snapcraft`](https://snapcraft.io/) 来准备发布构建。安装完成后，运行以下命令：
 
 ```sh
 make build-release CHANNEL='...' VERSION='...'
 ```
 
-See the [`build-release` target documentation][targ-release].
+请参阅 [`build-release` 目标文档](https://github.com/AdguardTeam/AdGuardHome/tree/master/scripts#build-releasesh-build-a-release-for-all-platforms) 。
 
-  ####  <a href="#docker-image" id="docker-image" name="docker-image">Docker image</a>
+#### [Docker 镜像](#docker-image)
 
-Run `make build-docker` to build the Docker image locally (the one that we
-publish to DockerHub).  Please note, that we're using [Docker Buildx][buildx] to
-build our official image.
+运行 \``make build-docker`\` 以在本地构建 Docker 镜像（我们发布到 DockerHub 的镜像）。请注意，我们使用 [Docker Buildx](https://docs.docker.com/buildx/working-with-buildx/) 来构建官方镜像。
 
-You may need to prepare before using these builds:
+在使用这些构建之前，您可能需要做一些准备工作：
 
- *  (Linux-only) Install Qemu:
-
+*   （仅限 Linux）安装 Qemu：
+    
     ```sh
     docker run --rm --privileged multiarch/qemu-user-static --reset -p yes --credential yes
     ```
-
- *  Prepare the builder:
-
+    
+*   准备构建器：
+    
     ```sh
     docker buildx create --name buildx-builder --driver docker-container --use
     ```
+    
 
-See the [`build-docker` target documentation][targ-docker].
+参见 [`build-docker` 目标文档](https://github.com/AdguardTeam/AdGuardHome/tree/master/scripts#build-dockersh-build-a-multi-architecture-docker-image) 。
 
-  ####  <a href="#debugging-the-frontend" id="debugging-the-frontend" name="debugging-the-frontend">Debugging the frontend</a>
+#### [前端调试](#debugging-the-frontend)
 
-When you need to debug the frontend without recompiling the production version
-every time, for example to check how your labels would look on a form, you can
-run the frontend build a development environment.
+当您需要调试前端而无需每次重新编译生产版本，例如检查您的标签在表单中会如何显示时，可以运行前端构建开发环境。
 
-1.  In a separate terminal, run:
-
+1.  在另一个终端中运行：
+    
     ```sh
     ( cd ./client/ && env NODE_ENV='development' npm run watch )
     ```
+    
+2.  运行 `AdGuardHome` 二进制文件并添加 `--local-frontend` 标志，这将指示 AdGuard Home 忽略内置前端文件并使用 `./build/` 目录中的文件。
+    
+3.  现在，您在 `./client/` 目录中所做的任何更改都应该重新编译并在 Web UI 中可用。请确保禁用浏览器缓存，以确保您实际获取到重新编译的版本。
+    
 
-2.  Run your `AdGuardHome` binary with the `--local-frontend` flag, which
-    instructs AdGuard Home to ignore the built-in frontend files and use those
-    from the `./build/` directory.
+## [贡献](#contributing)
 
-3.  Now any changes you make in the `./client/` directory should be recompiled
-    and become available on the web UI.  Make sure that you disable the browser
-    cache to make sure that you actually get the recompiled version.
+欢迎您 fork 本仓库，进行更改并 [提交拉取请求](https://github.com/AdguardTeam/AdGuardHome/pulls) 。不过请确保遵循我们的 [代码规范](https://github.com/AdguardTeam/CodeGuidelines/) 。
 
-[`snapcraft`]:  https://snapcraft.io/
-[buildx]:       https://docs.docker.com/buildx/working-with-buildx/
-[src-makefile]: https://github.com/AdguardTeam/AdGuardHome/blob/master/Makefile
-[targ-docker]:  https://github.com/AdguardTeam/AdGuardHome/tree/master/scripts#build-dockersh-build-a-multi-architecture-docker-image
-[targ-release]: https://github.com/AdguardTeam/AdGuardHome/tree/master/scripts#build-releasesh-build-a-release-for-all-platforms
+请注意，我们不期望人们同时对程序的 UI 部分和后端部分进行贡献。理想情况下，后端部分（如配置、API 和功能本身）应首先实现。UI 部分可以在不同的 pull request 中由不同的人稍后实现。
 
+### [测试不稳定版本](#test-unstable-versions)
 
+您可以使用两种更新渠道：
 
-## <a href="#contributing" id="contributing" name="contributing">Contributing</a>
+*   `beta`: AdGuard Home 的 beta 版本。较为稳定的版本，通常每两周或更频繁地发布一次。
+    
+*   `edge`: AdGuard Home 开发分支的最新版本。此渠道每天都会推送新更新。
+    
 
-You are welcome to fork this repository, make your changes and [submit a pull
-request][pr].  Please make sure you follow our [code guidelines][guide] though.
+有三种方式可以安装不稳定版本：
 
-Please note that we don't expect people to contribute to both UI and backend
-parts of the program simultaneously.  Ideally, the backend part is implemented
-first, i.e. configuration, API, and the functionality itself.  The UI part can
-be implemented later in a different pull request by a different person.
-
-[guide]: https://github.com/AdguardTeam/CodeGuidelines/
-[pr]:    https://github.com/AdguardTeam/AdGuardHome/pulls
-
-
-
-   ###  <a href="#test-unstable-versions" id="test-unstable-versions" name="test-unstable-versions">Test unstable versions</a>
-
-There are two update channels that you can use:
-
- *  `beta`: beta versions of AdGuard Home.  More or less stable versions,
-    usually released every two weeks or more often.
-
- *  `edge`: the newest version of AdGuard Home from the development branch.  New
-    updates are pushed to this channel daily.
-
-There are three options how you can install an unstable version:
-
-1.  [Snap Store]: look for the `beta` and `edge` channels.
-
-2.  [Docker Hub]: look for the `beta` and `edge` tags.
-
-3.  Standalone builds.  Use the automated installation script or look for the
-    available builds [on the Wiki][wiki-platf].
-
-    Script to install a beta version:
-
+1.  [Snap Store](https://snapcraft.io/adguard-home): 查找 `beta` 和 `edge` 渠道。
+    
+2.  [Docker Hub](https://hub.docker.com/r/adguard/adguardhome): 查找 `beta` 和 `edge` 标签。
+    
+3.  独立构建。使用自动化安装脚本，或在维基上查找可用的构建 [on the Wiki](https://github.com/AdguardTeam/AdGuardHome/wiki/Platforms)。
+    
+    安装测试版本的脚本：
+    
     ```sh
     curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -c beta
     ```
-
-    Script to install an edge version:
-
+    
+    安装边缘版本的脚本：
+    
     ```sh
     curl -s -S -L https://raw.githubusercontent.com/AdguardTeam/AdGuardHome/master/scripts/install.sh | sh -s -- -c edge
     ```
-[wiki-platf]: https://github.com/AdguardTeam/AdGuardHome/wiki/Platforms
+    
 
+### [报告问题](#reporting-issues)
 
+如果遇到任何问题或有建议，请访问 [此页面](https://github.com/AdguardTeam/AdGuardHome/issues) 并点击“新建问题”按钮。
 
-   ###  <a href="#reporting-issues" id="reporting-issues" name="reporting-issues">Report issues</a>
+### [帮助进行翻译](#translate)
 
-If you run into any problem or have a suggestion, head to [this page][iss] and
-click on the “New issue” button.
+如果您想帮助翻译 AdGuard Home，请了解我们在 [知识库](https://kb.adguard.com/en/general/adguard-translations) 中关于翻译 AdGuard 产品的更多信息。您可以在 [CrowdIn 上的 AdGuardHome 项目](https://crowdin.com/project/adguard-applications/en#/adguard-home) 中贡献自己的力量。
 
-[iss]: https://github.com/AdguardTeam/AdGuardHome/issues
+### [其他](#help-other)
 
+另一种贡献方式是查找标记为 `help wanted` 的问题，询问该问题是否可以参与，并提交修复漏洞或实现新功能的 PR。
 
+## [使用 AdGuard Home 的项目](#uses)
 
-   ###  <a href="#translate" id="translate" name="translate">Help with translations</a>
+*   [AdGuard Home Remote](https://apps.apple.com/app/apple-store/id1543143740)：由 [Joost](https://rocketscience-it.nl/) 开发的 iOS 应用。
+    
+*   [Python 库](https://github.com/frenck/python-adguardhome)由 [@frenck](https://github.com/frenck)
+    
+*   [Home Assistant 插件](https://github.com/hassio-addons/addon-adguard-home) 由 [@frenck](https://github.com/frenck) 提供。
+    
+*   [OpenWrt LUCI 应用程序](https://github.com/kongfl888/luci-app-adguardhome)由 [@kongfl888](https://github.com/kongfl888) (原作者为 [@rufengsuixing](https://github.com/rufengsuixing)).
+    
+*   [AdGuard Home 的 Prometheus 导出器](https://github.com/ebrianne/adguard-exporter)由 [@ebrianne](https://github.com/ebrianne) 编写.
+    
+*   [基于终端的 AdGuard Home 实例实时流量监控和统计](https://github.com/Lissy93/AdGuardian-Term)由 [@Lissy93](https://github.com/Lissy93)
+    
+*   [AdGuard Home 在 GLInet 路由器上](https://forum.gl-inet.com/t/adguardhome-on-gl-routers/10664)由 [Gl-Inet](https://gl-inet.com/).
+    
+*   [Cloudron 应用](https://git.cloudron.io/cloudron/adguard-home-app)由 [@gramakri](https://github.com/gramakri)。
+    
+*   [Asuswrt-Merlin-AdGuardHome-Installer](https://github.com/jumpsmm7/Asuswrt-Merlin-AdGuardHome-Installer) 由 [@jumpsmm7](https://github.com/jumpsmm7) 即 [@SomeWhereOverTheRainBow](https://www.snbforums.com/members/somewhereovertherainbow.64179/) 提供。
+    
+*   [Node.js 库](https://github.com/Andrea055/AdguardHomeAPI)由 [@Andrea055](https://github.com/Andrea055/) 开发。
+    
 
-If you want to help with AdGuard Home translations, please learn more about
-translating AdGuard products [in our Knowledge Base][kb-trans].  You can
-contribute to the [AdGuardHome project on CrowdIn][crowdin].
+## [致谢](#acknowledgments)
 
-[crowdin]:  https://crowdin.com/project/adguard-applications/en#/adguard-home
-[kb-trans]: https://kb.adguard.com/en/general/adguard-translations
+如果没有以下人员的帮助，这款软件是不可能实现的：
 
+*   [Go](https://golang.org/dl/) 及其库：
+    *   [gcache](https://github.com/bluele/gcache)
+    *   [miekg 的 dns](https://github.com/miekg/dns)
+    *   [go-yaml](https://github.com/go-yaml/yaml)
+    *   [service](https://godoc.org/github.com/kardianos/service)
+    *   [dnsproxy](https://github.com/AdguardTeam/dnsproxy)
+    *   [urlfilter](https://github.com/AdguardTeam/urlfilter)
+*   [Node.js](https://nodejs.org/) 和其库：
+    *   和许多更多的 Node.js 包。
+    *   [React.js](https://reactjs.org)
+    *   [Tabler](https://github.com/tabler/tabler)
+*   [whotracks.me 数据](https://github.com/cliqz-oss/whotracks.me)
 
+你可能之前见过这里提到了 [CoreDNS](https://coredns.io)，但我们已经停止在 AdGuard Home 中使用它。
 
-   ###  <a href="#help-other" id="help-other" name="help-other">Other</a>
+要查看所有使用的 Node.js 包的完整列表，请查看 [`client/package.json`](https://github.com/AdguardTeam/AdGuardHome/blob/master/client/package.json) 文件。
 
-Another way you can contribute is by [looking for issues][iss-help] marked as
-`help wanted`, asking if the issue is up for grabs, and sending a PR fixing the
-bug or implementing the feature.
+## [隐私](#privacy)
 
-[iss-help]: https://github.com/AdguardTeam/AdGuardHome/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22
-
-
-
-## <a href="#uses" id="uses" name="uses">Projects that use AdGuard Home</a>
-
-<!--
-    TODO(a.garipov): Use reference links.
--->
-
- *  [AdGuard Home Remote](https://apps.apple.com/app/apple-store/id1543143740):
-    iOS app by [Joost](https://rocketscience-it.nl/).
-
- *  [Python library](https://github.com/frenck/python-adguardhome) by
-    [@frenck](https://github.com/frenck).
-
- *  [Home Assistant add-on](https://github.com/hassio-addons/addon-adguard-home)
-    by [@frenck](https://github.com/frenck).
-
- *  [OpenWrt LUCI app](https://github.com/kongfl888/luci-app-adguardhome) by
-    [@kongfl888](https://github.com/kongfl888) (originally by
-    [@rufengsuixing](https://github.com/rufengsuixing)).
-
- *  [Prometheus exporter for AdGuard
-    Home](https://github.com/ebrianne/adguard-exporter) by
-    [@ebrianne](https://github.com/ebrianne).
-
- *  [Terminal-based, real-time traffic monitoring and statistics for your AdGuard Home
-    instance](https://github.com/Lissy93/AdGuardian-Term) by
-    [@Lissy93](https://github.com/Lissy93)
-
- *  [AdGuard Home on GLInet
-    routers](https://forum.gl-inet.com/t/adguardhome-on-gl-routers/10664) by
-    [Gl-Inet](https://gl-inet.com/).
-
- *  [Cloudron app](https://git.cloudron.io/cloudron/adguard-home-app) by
-    [@gramakri](https://github.com/gramakri).
-
- *  [Asuswrt-Merlin-AdGuardHome-Installer](https://github.com/jumpsmm7/Asuswrt-Merlin-AdGuardHome-Installer)
-    by [@jumpsmm7](https://github.com/jumpsmm7) aka
-    [@SomeWhereOverTheRainBow](https://www.snbforums.com/members/somewhereovertherainbow.64179/).
-
- *  [Node.js library](https://github.com/Andrea055/AdguardHomeAPI) by
-    [@Andrea055](https://github.com/Andrea055/).
-
-
-
-## <a href="#acknowledgments" id="acknowledgments" name="acknowledgments">Acknowledgments</a>
-
-<!--
-    TODO(a.garipov): Use reference links.
--->
-
-This software wouldn't have been possible without:
-
- *  [Go](https://golang.org/dl/) and its libraries:
-     *  [gcache](https://github.com/bluele/gcache)
-     *  [miekg's dns](https://github.com/miekg/dns)
-     *  [go-yaml](https://github.com/go-yaml/yaml)
-     *  [service](https://godoc.org/github.com/kardianos/service)
-     *  [dnsproxy](https://github.com/AdguardTeam/dnsproxy)
-     *  [urlfilter](https://github.com/AdguardTeam/urlfilter)
- *  [Node.js](https://nodejs.org/) and its libraries:
-     *  And many more Node.js packages.
-     *  [React.js](https://reactjs.org)
-     *  [Tabler](https://github.com/tabler/tabler)
- *  [whotracks.me data](https://github.com/cliqz-oss/whotracks.me)
-
-You might have seen that [CoreDNS] was mentioned here before, but we've stopped
-using it in AdGuard Home.
-
-For the full list of all Node.js packages in use, please take a look at
-[`client/package.json`][src-packagejson] file.
-
-[CoreDNS]:         https://coredns.io
-[src-packagejson]: https://github.com/AdguardTeam/AdGuardHome/blob/master/client/package.json
-
-
-
-##  <a href="#privacy" id="privacy" name="privacy">Privacy</a>
-
-Our main idea is that you are the one, who should be in control of your data.
-So it is only natural, that AdGuard Home does not collect any usage statistics,
-and does not use any web services unless you configure it to do so.  See also
-the [full privacy policy][privacy] with every bit that *could in theory be sent*
-by AdGuard Home is available.
-
-[privacy]: https://adguard.com/en/privacy/home.html
+我们的主要理念是，数据应该是你自己的，因此 AdGuard Home 不会收集任何使用统计数据，也不会使用任何网络服务，除非你进行相应的配置。有关 AdGuard Home 可能发送的所有详细信息，请参阅*完整的隐私政策* ，其中包含了所有理论上可能被发送的内容。

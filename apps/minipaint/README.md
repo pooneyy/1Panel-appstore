@@ -1,63 +1,61 @@
 # miniPaint
 
-Online image editor lets you create, edit images using HTML5 technologies.
-No need to buy, download, install or have obsolete flash. No ads.
-Key features: layers, filters, HTML5, open source, Photoshop alternative.
+在线图片编辑器，使用 HTML5 技术创建和编辑图片。无需购买、下载或安装，也无需使用过时的 Flash。无广告。主要功能：图层、滤镜、HTML5、开源、Photoshop 替代品。
 
-miniPaint operates directly in the browser. You can create images, paste from the clipboard (ctrl+v) 
-or upload from the computer (using menu or drag & drop). Nothing will be sent to any server. Everything stays in your 
-browser. 
+miniPaint 直接在浏览器中运行。您可以创建图片、从剪贴板粘贴（Ctrl+V）或从电脑上传（使用菜单或拖放）。任何内容都不会发送到任何服务器，一切都在您的浏览器中保存。
 
 ## URL:
-**https://viliusle.github.io/miniPaint/**
 
-## Preview:
-![miniPaint](https://raw.githubusercontent.com/viliusle/miniPaint/master/images/preview.gif)
-(generated using miniPaint)
+**[https://viliusle.github.io/miniPaint/](https://viliusle.github.io/miniPaint/)**
 
-**Change log:** [/miniPaint/releases](https://github.com/viliusle/miniPaint/releases)
+## 预览：
 
-## Browser Support
-- Chrome
-- Firefox
-- Opera
-- Edge
-- Safari
+![miniPaint](https://raw.githubusercontent.com/viliusle/miniPaint/master/images/preview.gif)(使用 miniPaint 生成)
 
-## Features
+**变更日志：**[/miniPaint/releases](https://github.com/viliusle/miniPaint/releases)
 
-- **Files**: open images, directories, URL, data URL, drag and drop, save (PNG, JPG, BMP, WEBP, animated GIF, TIFF, JSON 
-(layers data), print.
-- **Edit**: Undo, cut, copy, paste, selection, paste from clipboard.
-- **Image**: information, EXIF, trim, zoom, resize (Hermite resample, default resize), rotate, flip, 
-color corrections (brightness, contrast, hue, saturation, luminance), auto adjust colors, grid, histogram, negative.
-- **Layers**: multiple layers system, differences, merge, flatten, Transparency support.
-- **Effects**: Black and White, Blur (box, Gaussian, stack, zoom), Bulge/Pinch, Denoise, Desaturate, Dither, Dot Screen, 
-Edge, Emboss, Enrich, Gamma, Grains, GrayScale, Heatmap, JPG Compression, Mosaic, Oil, Sepia, Sharpen, Solarize, 
-Tilt Shift, Vignette, Vibrance, Vintage, Blueprint, Night Vision, Pencil, also Instagram Filters: 1977, Aden, Clarendon, 
-Gingham, Inkwell, Lo-fi, Toaster, Valencia, X-Pro II.
-- **Tools**: pencil, brush, magic wand, erase, fill, color picker, letters, crop, blur, sharpen, desaturate, clone,
- borders, sprites, key-points, color zoom, replace color, restore alpha, content fill.
-- **Help**: keyboard shortcuts, translations.
+## 浏览器支持
 
-## Embed
-To embed this app in the other page, use this HTML code:
+*   Chrome
+*   Firefox
+*   Opera
+*   Edge
+*   Safari
 
-    <iframe style="width:100%; height:1000px;" id="miniPaint" src="https://viliusle.github.io/miniPaint/" allow="camera"></iframe>
+## 功能
 
-## Build instructions
-See [Wiki > Build instructions](https://github.com/viliusle/miniPaint/wiki/Build-instructions)
+*   **Files**: 打开图像、目录、URL、数据 URL、拖放、保存（PNG、JPG、BMP、WEBP、动画 GIF、TIFF、JSON（图层数据）、打印。
+*   **Edit**: 撤销、剪切、复制、粘贴、选择、从剪贴板粘贴。
+*   **Image**: 信息、EXIF、裁剪、缩放（使用 Hermite 重采样，默认缩放）、旋转、翻转、色彩校正（亮度、对比度、色相、饱和度、亮度）、自动调整色彩、网格、直方图、负片。
+*   **层次** : 多层系统，差异，合并，扁平化，透明度支持。
+*   **效果** : 黑白，模糊（方框、高斯、堆叠、缩放），凸起/挤压，去噪，去饱和，抖动，网点，边缘，浮雕，丰富，伽马，颗粒，灰度，热图，JPG 压缩，马赛克，油画，铜版画，强化，太阳能化，倾斜移位，渐隐，饱和度，复古，蓝本，夜视，铅笔，以及 Instagram 滤镜：1977，腺，克拉伦顿，格丁根，墨水黑，低-fi，烤箱，瓦伦西亚，X-Pro II。
+*   **工具** : 铅笔，画笔，魔术棒，橡皮擦，填充，颜色拾取器，文字，裁剪，模糊，锐化，去饱和，克隆，边框，精灵，关键点，颜色放大，替换颜色，恢复透明度，内容填充。
+*   **帮助** : 键盘快捷键，翻译。
 
-## Wiki
-See [Wiki](https://github.com/viliusle/miniPaint/wiki)
+## 嵌入
 
-## Contributors
-<a align="center" href="https://github.com/viliusle/miniPaint/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=viliusle/miniPaint" />
-</a>
+要在其他页面中嵌入此应用，请使用以下 HTML 代码：
 
-## License
+```
+<iframe style="width:100%; height:1000px;" id="miniPaint" src="https://viliusle.github.io/miniPaint/" allow="camera"></iframe>
+```
+
+## 构建说明
+
+详见 [Wiki > 构建说明](https://github.com/viliusle/miniPaint/wiki/Build-instructions)
+
+## 维基
+
+See [维基](https://github.com/viliusle/miniPaint/wiki)
+
+## 贡献者
+
+[![](https://contrib.rocks/image?repo=viliusle/miniPaint)](https://github.com/viliusle/miniPaint/graphs/contributors)
+
+## 许可证
+
 MIT License
 
-## Support
-Please use the GitHub issues for support, features, issues or use mail www.viliusl@gmail.com for contacts.
+## 支持
+
+请使用 GitHub 问题跟踪器进行支持、功能请求、问题反馈，或通过邮件 [www.viliusl@gmail.com](mailto:www.viliusl@gmail.com) 联系我们。
