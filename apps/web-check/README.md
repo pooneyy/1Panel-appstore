@@ -1,449 +1,411 @@
-<h1 align="center">Web-Check</h1>
+# Web-Check
 
+![](https://i.ibb.co/q1gZN2p/web-check-logo.png)
+***任何网站的全面、按需开源情报***
+**🌐 [web-check.xyz](https://web-check.xyz/)**
 
-<p align="center">
-<img src="https://i.ibb.co/q1gZN2p/web-check-logo.png" width="96" /><br />
-<b><i>Comprehensive, on-demand open source intelligence for any website</i></b>
-<br />
-<b>🌐 <a href="https://web-check.xyz/">web-check.xyz</a></b><br />
+* * *
 
-</p>
+## 关于
 
----
+了解给定网站的内部运作：发现潜在的攻击向量，分析服务器架构，查看安全配置，并了解该网站使用了哪些技术。
 
-## About
-Get an insight into the inner-workings of a given website: uncover potential attack vectors, analyse server architecture, view security configurations, and learn what technologies a site is using.
+目前仪表板将显示：IP 信息、SSL 证书链、DNS 记录、Cookies、头部信息、域名信息、搜索爬取规则、页面映射、服务器位置、重定向记录、开放端口、 traceroute、DNS 安全扩展、站点性能、跟踪器、关联主机名、碳足迹。敬请期待，我会很快添加更多功能！
 
-Currently the dashboard will show: IP info, SSL chain, DNS records, cookies, headers, domain info, search crawl rules, page map, server location, redirect ledger, open ports, traceroute, DNS security extensions, site performance, trackers, associated hostnames, carbon footprint. Stay tuned, as I'll add more soon!
+目标是帮助您轻松了解、优化和保护您的网站。
 
-The aim is to help you easily understand, optimize and secure your website.
+### 截图
 
-### Screenshot
 [![Screenshot](https://raw.githubusercontent.com/Lissy93/web-check/master/.github/screenshots/web-check-screenshot7.png)](https://web-check.as93.net/)
 
 ### Live Demo
-A hosted version can be accessed at: **[web-check.as93.net](https://web-check.as93.net)**
 
-### Mirror
-The source for this repo is mirrored to CodeBerg, available at: **[codeberg.org/alicia/web-check](https://codeberg.org/alicia/web-check)**
+托管版本可访问：**[web-check.as93.net](https://web-check.as93.net)**
 
-### Motivation
-Often when you're looking into a website, there's several things you always initially check.
-Think: Whois, SSL chain, DNS records, tech stack, security protocols, crawl rules, sitemap, redirects, basic performance, open ports, server info, etc.
-None of this is hard to find with a series of basic curl commands, or a combination of online tools. But it's just so much easier to have everything presented clearly and visible in one place :)
+### 镜像
 
-### Features
+此仓库的源代码镜像到了 CodeBerg，地址为：**[codeberg.org/alicia/web-check](https://codeberg.org/alicia/web-check)**
 
-<details>
-<summary><h4>Expand to see all features</h4></summary>
+### 动机
 
-<sup>**Note** _this list needs updating, many more jobs have been added since..._</sup>
+当你查看一个网站时，通常会先检查一些基本内容。比如：Whois 查询、SSL 证书链、DNS 记录、技术栈、安全协议、爬虫规则、站点地图、重定向、基本性能、开放端口、服务器信息等。这些信息大多可以通过一系列基本的 curl 命令或组合使用在线工具来获取。但把这些信息清晰地集中展示在一个地方会方便得多 :)
 
-<details>
-<summary><b>IP Address</b></summary>
+### 功能
 
-<img width="300" src="undefined?" align="right" />
+#### 展开查看所有功能
 
-###### Description
-The IP Address task involves mapping the user provided URL to its corresponding IP address through a process known as Domain Name System (DNS) resolution. An IP address is a unique identifier given to every device on the Internet, and when paired with a domain name, it allows for accurate routing of online requests and responses.
+请注意，此列表需要更新，自那以后已经添加了许多新的任务...
 
-###### Use Cases
-Identifying the IP address of a domain can be incredibly valuable for OSINT purposes. This information can aid in creating a detailed map of a target's network infrastructure, pinpointing the physical location of a server, identifying the hosting service, and even discovering other domains that are hosted on the same IP address. In cybersecurity, it's also useful for tracking the sources of attacks or malicious activities.
+**IP 地址** ![](undefined?)
 
-###### Useful Links
-- [https://en.wikipedia.org/wiki/IP_address](https://en.wikipedia.org/wiki/IP_address)
-- [https://tools.ietf.org/html/rfc791](https://tools.ietf.org/html/rfc791)
-- [https://www.cloudflare.com/learning/dns/what-is-dns/](https://www.cloudflare.com/learning/dns/what-is-dns/)
-- [https://www.whois.com/whois-lookup](https://www.whois.com/whois-lookup)
+###### 描述
 
-</details>
-<details>
-<summary><b>SSL</b></summary>
+IP 地址任务涉及通过域名系统（DNS）解析将用户提供的 URL 映射为其对应的 IP 地址。IP 地址是互联网上每个设备的唯一标识符，与域名配对后，可以准确地路由在线请求和响应。
 
-<img width="300" src="https://i.ibb.co/kB7LsV1/wc-ssl.png?" align="right" />
+###### 使用案例
 
-###### Description
-The SSL task involves checking if the site has a valid Secure Sockets Layer (SSL) certificate. SSL is a protocol for establishing authenticated and encrypted links between networked computers. It's commonly used for securing communications over the internet, such as web browsing sessions, email transmissions, and more. In this task, we reach out to the server and initiate a SSL handshake. If successful, we gather details about the SSL certificate presented by the server.
+识别域名的 IP 地址在开源情报（OSINT）方面具有巨大价值。这些信息可以帮助构建目标网络架构的详细地图，确定服务器的物理位置，识别托管服务，甚至发现同一 IP 地址上托管的其他域名。在网络安全领域，它还有助于追踪攻击或恶意活动的来源。
 
-###### Use Cases
-SSL certificates not only provide the assurance that data transmission to and from the website is secure, but they also provide valuable OSINT data. Information from an SSL certificate can include the issuing authority, the domain name, its validity period, and sometimes even organization details. This can be useful for verifying the authenticity of a website, understanding its security setup, or even for discovering associated subdomains or other services.
+###### 相关链接
 
-###### Useful Links
-- [https://en.wikipedia.org/wiki/Transport_Layer_Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)
-- [https://tools.ietf.org/html/rfc8446](https://tools.ietf.org/html/rfc8446)
-- [https://letsencrypt.org/docs/](https://letsencrypt.org/docs/)
-- [https://www.sslshopper.com/ssl-checker.html](https://www.sslshopper.com/ssl-checker.html)
+*   [https://en.wikipedia.org/wiki/IP\_address](https://en.wikipedia.org/wiki/IP_address)
+*   [https://tools.ietf.org/html/rfc791](https://tools.ietf.org/html/rfc791)
+*   [https://www.cloudflare.com/learning/dns/what-is-dns/](https://www.cloudflare.com/learning/dns/what-is-dns/)
+*   [https://www.whois.com/whois-lookup](https://www.whois.com/whois-lookup)
 
-</details>
-<details>
-<summary><b>DNS Records</b></summary>
+**SSL** ![](https://i.ibb.co/kB7LsV1/wc-ssl.png?)
 
-<img width="300" src="https://i.ibb.co/7Q1kMwM/wc-dns.png?" align="right" />
+###### 描述
 
-###### Description
-The DNS Records task involves querying the Domain Name System (DNS) for records associated with the target domain. DNS is a system that translates human-readable domain names into IP addresses that computers use to communicate. Various types of DNS records exist, including A (address), MX (mail exchange), NS (name server), CNAME (canonical name), and TXT (text), among others.
+SSL 任务涉及检查网站是否具有有效的安全套接字层（SSL）证书。SSL 是一种在网络计算机之间建立身份验证和加密连接的协议。它通常用于保护互联网上的通信，如网页浏览会话、电子邮件传输等。在这个任务中，我们会联系服务器并发起 SSL 握手。如果成功，我们将收集服务器提供的 SSL 证书的相关信息。
 
-###### Use Cases
-Extracting DNS records can provide a wealth of information in an OSINT investigation. For example, A and AAAA records can disclose IP addresses associated with a domain, potentially revealing the location of servers. MX records can give clues about a domain's email provider. TXT records are often used for various administrative purposes and can sometimes inadvertently leak internal information. Understanding a domain's DNS setup can also be useful in understanding how its online infrastructure is built and managed.
+###### 用例
 
-###### Useful Links
-- [https://en.wikipedia.org/wiki/List_of_DNS_record_types](https://en.wikipedia.org/wiki/List_of_DNS_record_types)
-- [https://tools.ietf.org/html/rfc1035](https://tools.ietf.org/html/rfc1035)
-- [https://mxtoolbox.com/DNSLookup.aspx](https://mxtoolbox.com/DNSLookup.aspx)
-- [https://www.dnswatch.info/](https://www.dnswatch.info/)
+SSL 证书不仅提供了数据传输到和从网站的安全保障，还提供了有价值的开源情报（OSINT）数据。从 SSL 证书中可以获取的信息包括颁发机构、域名、有效期限，有时甚至包括组织详情。这些信息可以用于验证网站的真实性、了解其安全设置，甚至发现关联的子域名或其他服务。
 
-</details>
-<details>
-<summary><b>Cookies</b></summary>
+###### 相关链接
 
-<img width="300" src="https://i.ibb.co/TTQ6DtP/wc-cookies.png?" align="right" />
+*   [https://en.wikipedia.org/wiki/Transport\_Layer\_Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)
+*   [https://tools.ietf.org/html/rfc8446](https://tools.ietf.org/html/rfc8446)
+*   [https://letsencrypt.org/docs/](https://letsencrypt.org/docs/)
+*   [https://www.sslshopper.com/ssl-checker.html](https://www.sslshopper.com/ssl-checker.html)
 
-###### Description
-The Cookies task involves examining the HTTP cookies set by the target website. Cookies are small pieces of data stored on the user's computer by the web browser while browsing a website. They hold a modest amount of data specific to a particular client and website, such as site preferences, the state of the user's session, or tracking information.
+**DNS 记录** ![](https://i.ibb.co/7Q1kMwM/wc-dns.png?)
 
-###### Use Cases
-Cookies provide a wealth of information in an OSINT investigation. They can disclose information about how the website tracks and interacts with its users. For instance, session cookies can reveal how user sessions are managed, and tracking cookies can hint at what kind of tracking or analytics frameworks are being used. Additionally, examining cookie policies and practices can offer insights into the site's security settings and compliance with privacy regulations.
+###### 描述
 
-###### Useful Links
-- [https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
-- [https://www.cookiepro.com/knowledge/what-is-a-cookie/](https://www.cookiepro.com/knowledge/what-is-a-cookie/)
-- [https://owasp.org/www-community/controls/SecureFlag](https://owasp.org/www-community/controls/SecureFlag)
-- [https://tools.ietf.org/html/rfc6265](https://tools.ietf.org/html/rfc6265)
+DNS 记录任务涉及查询域名系统（DNS）以获取与目标域名相关的记录。DNS 是一个将人类可读的域名转换为计算机用于通信的 IP 地址的系统。存在多种类型的 DNS 记录，包括 A（地址）、MX（邮件交换）、NS（名称服务器）、CNAME（标准名称）和 TXT（文本）等。
 
-</details>
-<details>
-<summary><b>Crawl Rules</b></summary>
+###### 用例
 
-<img width="300" src="https://i.ibb.co/KwQCjPf/wc-robots.png?" align="right" />
+提取 DNS 记录可以在开源情报（OSINT）调查中提供大量信息。例如，A 和 AAAA 记录可以揭示与域名相关的 IP 地址，可能揭示服务器的位置。MX 记录可以提供关于域名邮件服务提供商的线索。TXT 记录通常用于各种管理目的，有时可能会无意中泄露内部信息。了解域名的 DNS 设置也有助于理解其在线基础设施的构建和管理方式。
 
-###### Description
-The Crawl Rules task is focused on retrieving and interpreting the 'robots.txt' file from the target website. This text file is part of the Robots Exclusion Protocol (REP), a group of web standards that regulate how robots crawl the web, access and index content, and serve that content up to users. The file indicates which parts of the site the website owner doesn't want to be accessed by web crawler bots.
+###### 有用链接
 
-###### Use Cases
-The 'robots.txt' file can provide valuable information for an OSINT investigation. It often discloses the directories and pages that the site owner doesn't want to be indexed, potentially because they contain sensitive information. Moreover, it might reveal the existence of otherwise hidden or unlinked directories. Additionally, understanding crawl rules may offer insights into a website's SEO strategies.
+*   [https://en.wikipedia.org/wiki/List\_of\_DNS\_record\_types](https://en.wikipedia.org/wiki/List_of_DNS_record_types)
+*   [https://tools.ietf.org/html/rfc1035](https://tools.ietf.org/html/rfc1035)
+*   [https://mxtoolbox.com/DNSLookup.aspx](https://mxtoolbox.com/DNSLookup.aspx)
+*   [https://www.dnswatch.info/](https://www.dnswatch.info/)
 
-###### Useful Links
-- [https://developers.google.com/search/docs/advanced/robots/intro](https://developers.google.com/search/docs/advanced/robots/intro)
-- [https://www.robotstxt.org/robotstxt.html](https://www.robotstxt.org/robotstxt.html)
-- [https://moz.com/learn/seo/robotstxt](https://moz.com/learn/seo/robotstxt)
-- [https://en.wikipedia.org/wiki/Robots_exclusion_standard](https://en.wikipedia.org/wiki/Robots_exclusion_standard)
+**Cookies** ![](https://i.ibb.co/TTQ6DtP/wc-cookies.png?)
 
-</details>
-<details>
-<summary><b>Headers</b></summary>
+###### 描述
 
-<img width="300" src="https://i.ibb.co/t3xcwP1/wc-headers.png?" align="right" />
+Cookies 任务涉及检查目标网站设置的 HTTP Cookies。Cookies 是网页浏览器在用户浏览网站时存储在用户计算机上的少量数据。它们包含特定于特定客户端和网站的少量数据，例如站点偏好、用户的会话状态或跟踪信息。
 
-###### Description
-The Headers task involves extracting and interpreting the HTTP headers sent by the target website during the request-response cycle. HTTP headers are key-value pairs sent at the start of an HTTP response, or before the actual data. Headers contain important directives for how to handle the data being transferred, including cache policies, content types, encoding, server information, security policies, and more.
+###### 用例
 
-###### Use Cases
-Analyzing HTTP headers can provide significant insights in an OSINT investigation. Headers can reveal specific server configurations, chosen technologies, caching directives, and various security settings. This information can help to determine a website's underlying technology stack, server-side security measures, potential vulnerabilities, and general operational practices.
+Cookies 在 OSINT 调查中提供了丰富的信息。它们可以揭示网站如何跟踪和与用户互动。例如，会话 Cookie 可以显示用户会话是如何管理的，而跟踪 Cookie 则可能暗示正在使用的跟踪或分析框架的类型。此外，检查 Cookie 的政策和实践可以提供有关网站安全设置和隐私法规合规性的见解。
 
-###### Useful Links
-- [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
-- [https://tools.ietf.org/html/rfc7231#section-3.2](https://tools.ietf.org/html/rfc7231#section-3.2)
-- [https://www.w3schools.com/tags/ref_httpheaders.asp](https://www.w3schools.com/tags/ref_httpheaders.asp)
-- [https://owasp.org/www-project-secure-headers/](https://owasp.org/www-project-secure-headers/)
+###### 相关链接
 
-</details>
-<details>
-<summary><b>Quality Report</b></summary>
+*   [https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+*   [https://www.cookiepro.com/knowledge/what-is-a-cookie/](https://www.cookiepro.com/knowledge/what-is-a-cookie/)
+*   [https://owasp.org/www-community/controls/SecureFlag](https://owasp.org/www-community/controls/SecureFlag)
+*   [https://tools.ietf.org/html/rfc6265](https://tools.ietf.org/html/rfc6265)
 
-<img width="300" src="https://i.ibb.co/Kqg8rx7/wc-quality.png?" align="right" />
+**爬取规则** ![](https://i.ibb.co/KwQCjPf/wc-robots.png?)
 
-###### Description
-The Headers task involves extracting and interpreting the HTTP headers sent by the target website during the request-response cycle. HTTP headers are key-value pairs sent at the start of an HTTP response, or before the actual data. Headers contain important directives for how to handle the data being transferred, including cache policies, content types, encoding, server information, security policies, and more.
+###### 描述
 
-###### Use Cases
-Analyzing HTTP headers can provide significant insights in an OSINT investigation. Headers can reveal specific server configurations, chosen technologies, caching directives, and various security settings. This information can help to determine a website's underlying technology stack, server-side security measures, potential vulnerabilities, and general operational practices.
+爬取规则任务专注于从目标网站获取并解析 'robots.txt' 文件。这个文本文件是机器人排除协议（REP）的一部分，是一组用于规范机器人如何爬取网络、访问和索引内容以及向用户提供这些内容的网络标准。该文件指出了网站所有者不希望被网络爬虫机器人访问的网站部分。
 
-###### Useful Links
-- [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
-- [https://tools.ietf.org/html/rfc7231#section-3.2](https://tools.ietf.org/html/rfc7231#section-3.2)
-- [https://www.w3schools.com/tags/ref_httpheaders.asp](https://www.w3schools.com/tags/ref_httpheaders.asp)
-- [https://owasp.org/www-project-secure-headers/](https://owasp.org/www-project-secure-headers/)
+###### 用例
 
-</details>
-<details>
-<summary><b>Server Location</b></summary>
+'robots.txt' 文件可以为开源情报（OSINT）调查提供有价值的信息。它通常会披露站点所有者不希望被索引的目录和页面，可能是因为这些页面包含敏感信息。此外，它还可能揭示其他隐藏或未链接的目录的存在。另外，了解爬虫规则可能有助于了解网站的搜索引擎优化（SEO）策略。
 
-<img width="300" src="https://i.ibb.co/cXH2hfR/wc-location.png?" align="right" />
+###### 相关链接
 
-###### Description
-The Server Location task determines the physical location of a server hosting a website based on its IP address. The geolocation data typically includes the country, region, and often city where the server is located. The task also provides additional contextual information such as the official language, currency, and flag of the server's location country.
+*   [https://developers.google.com/search/docs/advanced/robots/intro](https://developers.google.com/search/docs/advanced/robots/intro)
+*   [https://www.robotstxt.org/robotstxt.html](https://www.robotstxt.org/robotstxt.html)
+*   [https://moz.com/learn/seo/robotstxt](https://moz.com/learn/seo/robotstxt)
+*   [https://en.wikipedia.org/wiki/Robots\_exclusion\_standard](https://en.wikipedia.org/wiki/Robots_exclusion_standard)
 
-###### Use Cases
-In the realm of OSINT, server location information can be very valuable. It can give an indication of the possible jurisdiction that laws the data on the server falls under, which can be important in legal or investigative contexts. The server location can also hint at the target audience of a website and reveal inconsistencies that could suggest the use of hosting or proxy services to disguise the actual location.
+**头部信息** ![](https://i.ibb.co/t3xcwP1/wc-headers.png?)
 
-###### Useful Links
-- [https://en.wikipedia.org/wiki/Geolocation_software](https://en.wikipedia.org/wiki/Geolocation_software)
-- [https://www.iplocation.net/](https://www.iplocation.net/)
-- [https://www.cloudflare.com/learning/cdn/glossary/geolocation/](https://www.cloudflare.com/learning/cdn/glossary/geolocation/)
-- [https://developers.google.com/maps/documentation/geolocation/intro](https://developers.google.com/maps/documentation/geolocation/intro)
+###### 描述
 
-</details>
-<details>
-<summary><b>Associated Domains and Hostnames</b></summary>
+Headers 任务涉及提取和解释目标网站在请求-响应周期中发送的 HTTP 头部信息。HTTP 头部是在 HTTP 响应开始时或在实际数据之前发送的关键值对。头部信息包含处理正在传输的数据的重要指令，包括缓存策略、内容类型、编码、服务器信息、安全策略等。
 
-<img width="300" src="https://i.ibb.co/25j1sT7/wc-hosts.png?" align="right" />
+###### 用例
 
-###### Description
-This task involves identifying and listing all domains and subdomains (hostnames) that are associated with the website's primary domain. This process often involves DNS enumeration to discover any linked domains and hostnames.
+在开源情报（OSINT）调查中，分析 HTTP 头部可以提供重要的见解。头部信息可以揭示特定的服务器配置、选择的技术、缓存指令以及各种安全设置。这些信息有助于确定网站的技术栈、服务器端的安全措施、潜在的漏洞以及一般的运营实践。
 
-###### Use Cases
-In OSINT investigations, understanding the full scope of a target's web presence is critical. Associated domains could lead to uncovering related projects, backup sites, development/test sites, or services linked to the main site. These can sometimes provide additional information or potential security vulnerabilities. A comprehensive list of associated domains and hostnames can also give an overview of the organization's structure and online footprint.
+###### 相关链接
 
-###### Useful Links
-- [https://en.wikipedia.org/wiki/Domain_Name_System](https://en.wikipedia.org/wiki/Domain_Name_System)
-- [https://resources.infosecinstitute.com/topic/dns-enumeration-pentest/](https://resources.infosecinstitute.com/topic/dns-enumeration-pentest/)
-- [https://subdomainfinder.c99.nl/](https://subdomainfinder.c99.nl/)
-- [https://securitytrails.com/blog/top-dns-enumeration-tools](https://securitytrails.com/blog/top-dns-enumeration-tools)
+*   [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+*   [https://tools.ietf.org/html/rfc7231#section-3.2](https://tools.ietf.org/html/rfc7231#section-3.2)
+*   [https://www.w3schools.com/tags/ref\_httpheaders.asp](https://www.w3schools.com/tags/ref_httpheaders.asp)
+*   [https://owasp.org/www-project-secure-headers/](https://owasp.org/www-project-secure-headers/)
 
-</details>
-<details>
-<summary><b>Redirect Chain</b></summary>
+**质量报告** ![](https://i.ibb.co/Kqg8rx7/wc-quality.png?)
 
-<img width="300" src="https://i.ibb.co/hVVrmwh/wc-redirects.png?" align="right" />
+###### 描述
 
-###### Description
-This task traces the sequence of HTTP redirects that occur from the original URL to the final destination URL. An HTTP redirect is a response with a status code that advises the client to go to another URL. Redirects can occur for several reasons, such as URL normalization (directing to the www version of the site), enforcing HTTPS, URL shorteners, or forwarding users to a new site location.
+Headers 任务涉及提取并解释目标网站在请求-响应周期中发送的 HTTP 头部信息。HTTP 头部是在 HTTP 响应开始时或在实际数据之前发送的关键值对。头部信息包含处理正在传输的数据的重要指令，包括缓存策略、内容类型、编码、服务器信息、安全策略等。
 
-###### Use Cases
-Understanding the redirect chain can be crucial for several reasons. From a security perspective, long or complicated redirect chains can be a sign of potential security risks, such as unencrypted redirects in the chain. Additionally, redirects can impact website performance and SEO, as each redirect introduces additional round-trip-time (RTT). For OSINT, understanding the redirect chain can help identify relationships between different domains or reveal the use of certain technologies or hosting providers.
+###### 应用场景
 
-###### Useful Links
-- [https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections](https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections)
-- [https://en.wikipedia.org/wiki/URL_redirection](https://en.wikipedia.org/wiki/URL_redirection)
-- [https://www.screamingfrog.co.uk/server-response-codes/](https://www.screamingfrog.co.uk/server-response-codes/)
-- [https://ahrefs.com/blog/301-redirects/](https://ahrefs.com/blog/301-redirects/)
+在 OSINT 调查中，分析 HTTP 头部可以提供重要的见解。头部信息可以揭示特定的服务器配置、选择的技术、缓存指令以及各种安全设置。这些信息有助于确定网站的基础技术栈、服务器端的安全措施、潜在的漏洞以及一般的运营实践。
 
-</details>
-<details>
-<summary><b>TXT Records</b></summary>
+###### 有用链接
 
-<img width="300" src="https://i.ibb.co/wyt21QN/wc-txt-records.png?" align="right" />
+*   [https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers)
+*   [https://tools.ietf.org/html/rfc7231#section-3.2](https://tools.ietf.org/html/rfc7231#section-3.2)
+*   [https://www.w3schools.com/tags/ref\_httpheaders.asp](https://www.w3schools.com/tags/ref_httpheaders.asp)
+*   [https://owasp.org/www-project-secure-headers/](https://owasp.org/www-project-secure-headers/)
 
-###### Description
-TXT records are a type of Domain Name Service (DNS) record that provides text information to sources outside your domain. They can be used for a variety of purposes, such as verifying domain ownership, ensuring email security, and even preventing unauthorized changes to your website.
+**服务器位置** ![](https://i.ibb.co/cXH2hfR/wc-location.png?)
 
-###### Use Cases
-In the context of OSINT, TXT records can be a valuable source of information. They may reveal details about the domain's email configuration, the use of specific services like Google Workspace or Microsoft 365, or security measures in place such as SPF and DKIM. Understanding these details can give an insight into the technologies used by the organization, their email security practices, and potential vulnerabilities.
+###### 描述
 
-###### Useful Links
-- [https://www.cloudflare.com/learning/dns/dns-records/dns-txt-record/](https://www.cloudflare.com/learning/dns/dns-records/dns-txt-record/)
-- [https://en.wikipedia.org/wiki/TXT_record](https://en.wikipedia.org/wiki/TXT_record)
-- [https://tools.ietf.org/html/rfc7208](https://tools.ietf.org/html/rfc7208)
-- [https://dmarc.org/wiki/FAQ](https://dmarc.org/wiki/FAQ)
+服务器位置任务是根据服务器的 IP 地址确定托管网站的物理位置。地理位置数据通常包括服务器所在国家、地区，有时还包括城市。该任务还提供有关服务器位置国家的官方语言、货币和国旗等额外上下文信息。
 
-</details>
-<details>
-<summary><b>Server Status</b></summary>
+###### 应用场景
 
-<img width="300" src="https://i.ibb.co/V9CNLBK/wc-status.png?" align="right" />
+在开源情报（OSINT）领域，服务器位置信息非常有价值。它可以提供服务器上数据可能受法律管辖的线索，这对于法律或调查情境中非常重要。服务器位置还可以暗示网站的目标受众，并揭示不一致之处，这些不一致可能表明使用了托管或代理服务来掩饰实际位置。
 
+###### 相关链接
 
-</details>
-<details>
-<summary><b>Open Ports</b></summary>
+*   [https://en.wikipedia.org/wiki/Geolocation\_software](https://en.wikipedia.org/wiki/Geolocation_software)
+*   [https://www.iplocation.net/](https://www.iplocation.net/)
+*   [https://www.cloudflare.com/learning/cdn/glossary/geolocation/](https://www.cloudflare.com/learning/cdn/glossary/geolocation/)
+*   [https://developers.google.com/maps/documentation/geolocation/intro](https://developers.google.com/maps/documentation/geolocation/intro)
 
-<img width="300" src="https://i.ibb.co/F8D1hmf/wc-ports.png?" align="right" />
+**关联域名和主机名** ![](https://i.ibb.co/25j1sT7/wc-hosts.png?)
 
-###### Description
-Open ports on a server are endpoints of communication which are available for establishing connections with clients. Each port corresponds to a specific service or protocol, such as HTTP (port 80), HTTPS (port 443), FTP (port 21), etc. The open ports on a server can be determined using techniques such as port scanning.
+###### 描述
 
-###### Use Cases
-In the context of OSINT, knowing which ports are open on a server can provide valuable information about the services running on that server. This information can be useful for understanding the potential vulnerabilities of the system, or for understanding the nature of the services the server is providing. For example, a server with port 22 open (SSH) might be used for remote administration, while a server with port 443 open is serving HTTPS traffic.
+此任务涉及识别并列出与网站主域名相关的所有域名和子域名（主机名）。这个过程通常涉及 DNS 枚举，以发现任何关联的域名和主机名。
 
-###### Useful Links
-- [https://www.netwrix.com/port_scanning.html](https://www.netwrix.com/port_scanning.html)
-- [https://nmap.org/book/man-port-scanning-basics.html](https://nmap.org/book/man-port-scanning-basics.html)
-- [https://www.cloudflare.com/learning/ddos/glossary/open-port/](https://www.cloudflare.com/learning/ddos/glossary/open-port/)
-- [https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
+###### 使用案例
 
-</details>
-<details>
-<summary><b>Traceroute</b></summary>
+在开源情报（OSINT）调查中，了解目标在网络上的完整存在范围至关重要。关联域名可能会揭示相关项目、备份站点、开发/测试站点或与主站点相关的服务。这些有时可以提供额外信息或潜在的安全漏洞。一个全面的关联域名和主机名列表也可以概述组织的结构和在线足迹。
 
-<img width="300" src="https://i.ibb.co/M59qgxP/wc-trace-route.png?" align="right" />
+###### 相关链接
 
-###### Description
-Traceroute is a network diagnostic tool used to track in real-time the pathway taken by a packet of information from one system to another. It records each hop along the route, providing details about the IPs of routers and the delay at each point.
+*   [https://en.wikipedia.org/wiki/Domain\_Name\_System](https://en.wikipedia.org/wiki/Domain_Name_System)
+*   [https://resources.infosecinstitute.com/topic/dns-enumeration-pentest/](https://resources.infosecinstitute.com/topic/dns-enumeration-pentest/)
+*   [https://subdomainfinder.c99.nl/](https://subdomainfinder.c99.nl/)
+*   [https://securitytrails.com/blog/top-dns-enumeration-tools](https://securitytrails.com/blog/top-dns-enumeration-tools)
 
-###### Use Cases
-In OSINT investigations, traceroute can provide insights about the routing paths and geography of the network infrastructure supporting a website or service. This can help to identify network bottlenecks, potential censorship or manipulation of network traffic, and give an overall sense of the network's structure and efficiency. Additionally, the IP addresses collected during the traceroute may provide additional points of inquiry for further OSINT investigation.
+**重定向链** ![](https://i.ibb.co/hVVrmwh/wc-redirects.png?)
 
-###### Useful Links
-- [https://www.cloudflare.com/learning/network-layer/what-is-traceroute/](https://www.cloudflare.com/learning/network-layer/what-is-traceroute/)
-- [https://tools.ietf.org/html/rfc1393](https://tools.ietf.org/html/rfc1393)
-- [https://en.wikipedia.org/wiki/Traceroute](https://en.wikipedia.org/wiki/Traceroute)
-- [https://www.ripe.net/publications/docs/ripe-611](https://www.ripe.net/publications/docs/ripe-611)
+###### 描述
 
-</details>
-<details>
-<summary><b>Carbon Footprint</b></summary>
+此任务追踪从原始 URL 到最终目标 URL 之间发生的 HTTP 重定向序列。HTTP 重定向是一种响应，其状态码建议客户端访问另一个 URL。重定向可能出于多种原因发生，例如 URL 规范化（将用户导向站点的 www 版本）、强制使用 HTTPS、URL 缩短，或转发用户到新的站点位置。
 
-<img width="300" src="https://i.ibb.co/dmbFxjN/wc-carbon.png?" align="right" />
+###### 应用场景
 
-###### Description
-This task calculates the estimated carbon footprint of a website. It's based on the amount of data being transferred and processed, and the energy usage of the servers that host and deliver the website. The larger the website and the more complex its features, the higher its carbon footprint is likely to be.
+了解重定向链对于多个方面都至关重要。从安全角度来看，长且复杂的重定向链可能是潜在安全风险的迹象，例如链中的未加密重定向。此外，重定向会影响网站性能和 SEO，因为每次重定向都会增加额外的往返时间（RTT）。对于开源情报（OSINT），了解重定向链有助于识别不同域名之间的关系，或揭示使用某些技术和托管提供商的情况。
 
-###### Use Cases
-From an OSINT perspective, understanding a website's carbon footprint doesn't directly provide insights into its internal workings or the organization behind it. However, it can still be valuable data in broader analyses, especially in contexts where environmental impact is a consideration. For example, it can be useful for activists, researchers, or ethical hackers who are interested in the sustainability of digital infrastructure, and who want to hold organizations accountable for their environmental impact.
+###### 相关链接
 
-###### Useful Links
-- [https://www.websitecarbon.com/](https://www.websitecarbon.com/)
-- [https://www.thegreenwebfoundation.org/](https://www.thegreenwebfoundation.org/)
-- [https://www.nature.com/articles/s41598-020-76164-y](https://www.nature.com/articles/s41598-020-76164-y)
-- [https://www.sciencedirect.com/science/article/pii/S0959652620307817](https://www.sciencedirect.com/science/article/pii/S0959652620307817)
+*   [https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections](https://developer.mozilla.org/en-US/docs/Web/HTTP/Redirections)
+*   [https://en.wikipedia.org/wiki/URL\_redirection](https://en.wikipedia.org/wiki/URL_redirection)
+*   [https://www.screamingfrog.co.uk/server-response-codes/](https://www.screamingfrog.co.uk/server-response-codes/)
+*   [https://ahrefs.com/blog/301-redirects/](https://ahrefs.com/blog/301-redirects/)
 
-</details>
-<details>
-<summary><b>Server Info</b></summary>
+**TXT 记录** ![](https://i.ibb.co/wyt21QN/wc-txt-records.png?)
 
-<img width="300" src="https://i.ibb.co/Mk1jx32/wc-server.png?" align="right" />
+###### 描述
 
-###### Description
-This task retrieves various pieces of information about the server hosting the target website. This can include the server type (e.g., Apache, Nginx), the hosting provider, the Autonomous System Number (ASN), and more. The information is usually obtained through a combination of IP address lookups and analysis of HTTP response headers.
+TXT 记录是域名服务（DNS）记录的一种，提供文本信息给您域名之外的来源。它们可以用于多种目的，例如验证域名所有权、确保电子邮件安全，甚至防止未经授权对网站进行更改。
 
-###### Use Cases
-In an OSINT context, server information can provide valuable clues about the organization behind a website. For instance, the choice of hosting provider could suggest the geographical region in which the organization operates, while the server type could hint at the technologies used by the organization. The ASN could also be used to find other domains hosted by the same organization.
+###### 应用场景
 
-###### Useful Links
-- [https://en.wikipedia.org/wiki/List_of_HTTP_header_fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
-- [https://en.wikipedia.org/wiki/Autonomous_system_(Internet)](https://en.wikipedia.org/wiki/Autonomous_system_(Internet))
-- [https://tools.ietf.org/html/rfc7231#section-7.4.2](https://tools.ietf.org/html/rfc7231#section-7.4.2)
-- [https://builtwith.com/](https://builtwith.com/)
+在开源情报（OSINT）的背景下，TXT 记录可以是一个有价值的信息来源。它们可能揭示有关域名电子邮件配置的细节，使用特定服务（如 Google Workspace 或 Microsoft 365）的情况，或已实施的安全措施（如 SPF 和 DKIM）。了解这些细节可以提供有关组织所使用的技术、电子邮件安全实践以及潜在漏洞的见解。
 
-</details>
-<details>
-<summary><b>Domain Info</b></summary>
+###### 有用链接
 
-<img width="300" src="https://i.ibb.co/89WLp14/wc-domain.png?" align="right" />
+*   [https://www.cloudflare.com/learning/dns/dns-records/dns-txt-record/](https://www.cloudflare.com/learning/dns/dns-records/dns-txt-record/)
+*   [https://en.wikipedia.org/wiki/TXT\_record](https://en.wikipedia.org/wiki/TXT_record)
+*   [https://tools.ietf.org/html/rfc7208](https://tools.ietf.org/html/rfc7208)
+*   [https://dmarc.org/wiki/FAQ](https://dmarc.org/wiki/FAQ)
 
-###### Description
-This task retrieves Whois records for the target domain. Whois records are a rich source of information, including the name and contact information of the domain registrant, the domain's creation and expiration dates, the domain's nameservers, and more. The information is usually obtained through a query to a Whois database server.
+**服务器状态** ![](https://i.ibb.co/V9CNLBK/wc-status.png?) **开放端口** ![](https://i.ibb.co/F8D1hmf/wc-ports.png?)
 
-###### Use Cases
-In an OSINT context, Whois records can provide valuable clues about the entity behind a website. They can show when the domain was first registered and when it's set to expire, which could provide insights into the operational timeline of the entity. The contact information, though often redacted or anonymized, can sometimes lead to additional avenues of investigation. The nameservers could also be used to link together multiple domains owned by the same entity.
+###### 描述
 
-###### Useful Links
-- [https://en.wikipedia.org/wiki/WHOIS](https://en.wikipedia.org/wiki/WHOIS)
-- [https://www.icann.org/resources/pages/whois-2018-01-17-en](https://www.icann.org/resources/pages/whois-2018-01-17-en)
-- [https://whois.domaintools.com/](https://whois.domaintools.com/)
+服务器上的开放端口是用于与客户端建立连接的通信端点。每个端口对应于特定的服务或协议，例如 HTTP（端口 80）、HTTPS（端口 443）、FTP（端口 21）等。可以使用端口扫描等技术来确定服务器上的开放端口。
 
-</details>
-<details>
-<summary><b>DNS Security Extensions</b></summary>
+###### 用例
 
-<img width="300" src="https://i.ibb.co/J54zVmQ/wc-dnssec.png?" align="right" />
+在开源情报（OSINT）的背景下，了解服务器上哪些端口是开放的可以提供有关该服务器上运行的服务的重要信息。这些信息可用于理解该系统的潜在漏洞，或了解服务器提供的服务的性质。例如，一个开放了端口 22（SSH）的服务器可能用于远程管理，而开放了端口 443 的服务器则在提供 HTTPS 流量。
 
-###### Description
-Without DNSSEC, it's possible for MITM attackers to spoof records and lead users to phishing sites. This is because the DNS system includes no built-in methods to verify that the response to the request was not forged, or that any other part of the process wasn’t interrupted by an attacker. The DNS Security Extensions (DNSSEC) secures DNS lookups by signing your DNS records using public keys, so browsers can detect if the response has been tampered with. Another solution to this issue is DoH (DNS over HTTPS) and DoT (DNS over TLD).
+###### 相关链接
 
-###### Use Cases
-DNSSEC information provides insight into an organization's level of cybersecurity maturity and potential vulnerabilities, particularly around DNS spoofing and cache poisoning. If no DNS secururity (DNSSEC, DoH, DoT, etc) is implemented, this may provide an entry point for an attacker.
+*   [https://www.netwrix.com/port\_scanning.html](https://www.netwrix.com/port_scanning.html)
+*   [https://nmap.org/book/man-port-scanning-basics.html](https://nmap.org/book/man-port-scanning-basics.html)
+*   [https://www.cloudflare.com/learning/ddos/glossary/open-port/](https://www.cloudflare.com/learning/ddos/glossary/open-port/)
+*   [https://en.wikipedia.org/wiki/List\_of\_TCP\_and\_UDP\_port\_numbers](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)
 
-###### Useful Links
-- [https://dnssec-analyzer.verisignlabs.com/](https://dnssec-analyzer.verisignlabs.com/)
-- [https://www.cloudflare.com/dns/dnssec/how-dnssec-works/](https://www.cloudflare.com/dns/dnssec/how-dnssec-works/)
-- [https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions)
-- [https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en)
-- [https://support.google.com/domains/answer/6147083](https://support.google.com/domains/answer/6147083)
-- [https://www.internetsociety.org/resources/deploy360/2013/dnssec-test-sites/](https://www.internetsociety.org/resources/deploy360/2013/dnssec-test-sites/)
+**跟踪路由** ![](https://i.ibb.co/M59qgxP/wc-trace-route.png?)
 
-</details>
+###### 描述
 
-</details>
+traceroute 是一种网络诊断工具，用于实时追踪信息包从一个系统到另一个系统的路径。它记录沿途的每个跳点，提供关于路由器的 IP 地址以及每个点的延迟详情。
 
-Read more here: **[web-check.as93.net/about](https://web-check.as93.net/about)**
+###### 用例
 
-_Note that not all checks will work for all sites. Sometimes it's not possible to determine some information, and the demo instance has some limitations imposed by Netlify for the lambda functions._
+在开源情报（OSINT）调查中，traceroute 可以提供有关支持网站或服务的网络基础设施的路由路径和地理信息的见解。这有助于识别网络瓶颈、潜在的网络流量审查或操控，并总体了解网络的结构和效率。此外，traceroute 收集的 IP 地址还可以为进一步的 OSINT 调查提供额外的查询点。
 
----
+###### 相关链接
 
-## Usage
+*   [https://www.cloudflare.com/learning/network-layer/what-is-traceroute/](https://www.cloudflare.com/learning/network-layer/what-is-traceroute/)
+*   [https://tools.ietf.org/html/rfc1393](https://tools.ietf.org/html/rfc1393)
+*   [https://en.wikipedia.org/wiki/Traceroute](https://en.wikipedia.org/wiki/Traceroute)
+*   [https://www.ripe.net/publications/docs/ripe-611](https://www.ripe.net/publications/docs/ripe-611)
 
-### Developing
+**碳足迹** ![](https://i.ibb.co/dmbFxjN/wc-carbon.png?)
 
-1. Clone the repo, `git clone git@github.com:Lissy93/web-check.git`
-2. Cd into it, `cd web-check`
-3. Install dependencies: `yarn`
-4. Start the dev server, with `yarn dev`
+###### 描述
 
-You'll need [Node.js](https://nodejs.org/en) (V 18.16.1 or later) installed, as well as [git](https://git-scm.com/).
-Some checks also require `chromium`, `traceroute` and `dns` to be installed within your environment. These jobs will just be skipped if those packages arn't present.
+此任务计算网站的估计碳足迹。这基于传输和处理的数据量以及托管和交付网站的服务器的能耗。网站规模越大，功能越复杂，其碳足迹很可能越高。
 
-### Deploying - Option #1: Netlify
+###### 应用场景
 
-Click the button below, to deploy to Netlify 👇
+从开源情报（OSINT）的角度来看，了解网站的碳足迹并不能直接提供对其内部运作或背后组织的见解。然而，在考虑环境影响的更广泛分析中，它仍然可以提供有价值的数据。例如，对于关注数字基础设施可持续性的活动家、研究人员或道德黑客来说，了解并关注组织的环境影响是有用的。
 
-[![Deploy to Netlify](https://img.shields.io/badge/Deploy-Netlify-%2330c8c9?style=for-the-badge&logo=netlify&labelColor=1e0e41 'Deploy Web-Check to Netlify, via 1-Click Script')](https://app.netlify.com/start/deploy?repository=https://github.com/lissy93/web-check)
+###### 有用链接
 
-### Deploying - Option #2: Docker
+*   [https://www.websitecarbon.com/](https://www.websitecarbon.com/)
+*   [https://www.thegreenwebfoundation.org/](https://www.thegreenwebfoundation.org/)
+*   [https://www.nature.com/articles/s41598-020-76164-y](https://www.nature.com/articles/s41598-020-76164-y)
+*   [https://www.sciencedirect.com/science/article/pii/S0959652620307817](https://www.sciencedirect.com/science/article/pii/S0959652620307817)
 
-Run `docker run -p 8888:3000 lissy93/web-check`, then open `http://localhost:3000`
+**服务器信息** ![](https://i.ibb.co/Mk1jx32/wc-server.png?)
 
-You can get the Docker image from:
-- DockerHub: [`lissy93/web-check`](https://hub.docker.com/r/lissy93/web-check)
-- GHCR: [`ghcr.io/lissy93/web-check`](https://github.com/Lissy93/web-check/pkgs/container/web-check)
-- Or build the image yourself by cloning the repo and running `docker build -t web-check .`
+###### 描述
 
-### Deploying - Option #3: From Source
+此任务会检索托管目标网站的服务器的各种信息。这可能包括服务器类型（例如，Apache、Nginx）、托管提供商、自治系统编号（ASN）等。通常通过 IP 地址查询和分析 HTTP 响应头来获取这些信息。
 
-Follow the instructions in the [Developing](#developing) section above, then run `yarn build` && `yarn start` to build and serve the application.
+###### 应用场景
 
-### Configuring
+在开源情报（OSINT）的背景下，服务器信息可以提供有关网站背后的组织的重要线索。例如，托管提供商的选择可能表明该组织运营的地理区域，而服务器类型则可能暗示该组织使用的技术。自治系统（ASN）也可以用来找到由同一组织托管的其他域名。
 
-By default, no configuration is needed. 
-But there are some optional environmental variables that you can set to give you access to some additional checks
+###### 相关链接
 
-- `GOOGLE_CLOUD_API_KEY` - A Google API key ([get here](https://cloud.google.com/api-gateway/docs/authenticate-api-keys)). This can be used to return quality metrics for a site
-- `TORRENT_IP_API_KEY` - A torrent API key ([get here](https://iknowwhatyoudownload.com/en/api/)). This will show torrents downloaded by an IP
-- `REACT_APP_SHODAN_API_KEY` - A Shodan API key ([get here](https://account.shodan.io/)). This will show associated host names for a given domain
-- `REACT_APP_WHO_API_KEY` - A WhoAPI key ([get here](https://whoapi.com/)). This will show more comprehensive WhoIs records than the default job
-- `SECURITY_TRAILS_API_KEY` - A Security Trails API key ([get here](https://securitytrails.com/corp/api)). This will show org info associated with the IP
-- `BUILT_WITH_API_KEY` - A BuiltWith API key ([get here](https://api.builtwith.com/)). This will show the main features of a site
+*   [https://en.wikipedia.org/wiki/List\_of\_HTTP\_header\_fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)
+*   [https://en.wikipedia.org/wiki/Autonomous\_system\_(Internet)](https://en.wikipedia.org/wiki/Autonomous_system_\(Internet\))
+*   [https://tools.ietf.org/html/rfc7231#section-7.4.2](https://tools.ietf.org/html/rfc7231#section-7.4.2)
+*   [https://builtwith.com/](https://builtwith.com/)
 
-The above keys can be added into an `.env` file in the projects root, or via the Netlify UI, or by passing directly to the Docker container.
+**域名信息** ![](https://i.ibb.co/89WLp14/wc-domain.png?)
 
----
+###### 描述
 
-## Community
+此任务会为目标域名检索 Whois 记录。Whois 记录是一个丰富的信息来源，包括域名注册人的姓名和联系方式、域名的创建和到期日期、域名的名称服务器等。这些信息通常通过向 Whois 数据库服务器发送查询来获取。
 
-### Contributing
+###### 使用案例
 
-Contributions of any kind are very welcome, and would be much appreciated.
-For Code of Conduct, see [Contributor Convent](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
+在开源情报（OSINT）的情境下，Whois 记录可以提供关于网站背后实体的重要线索。它们可以显示该域名首次注册的时间以及到期时间，这可能有助于了解该实体的运营时间线。尽管联系信息通常被删除或匿名化，但有时仍可引导进一步的调查。域名服务器也可以用来将同一实体拥有的多个域名联系起来。
 
-To get started, fork the repo, make your changes, add, commit and push the code, then come back here to open a pull request. If you're new to GitHub or open source, [this guide](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3#let-s-make-our-first-pull-request-) or the [git docs](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) may help you get started, but feel free to reach out if you need any support.
+###### 相关链接
+
+*   [https://en.wikipedia.org/wiki/WHOIS](https://en.wikipedia.org/wiki/WHOIS)
+*   [https://www.icann.org/resources/pages/whois-2018-01-17-en](https://www.icann.org/resources/pages/whois-2018-01-17-en)
+*   [https://whois.domaintools.com/](https://whois.domaintools.com/)
+
+**DNS 安全扩展** ![](https://i.ibb.co/J54zVmQ/wc-dnssec.png?)
+
+###### 描述
+
+没有 DNSSEC，中间人（MITM）攻击者有可能伪造记录并引导用户访问钓鱼网站。这是因为 DNS 系统中没有内置的方法来验证响应是否被篡改，或者整个过程是否被攻击者中断。DNS 安全扩展（DNSSEC）通过使用公钥对 DNS 记录进行签名，使浏览器能够检测到响应是否被篡改。另一个解决这个问题的方法是 DoH（HTTPS over DNS）和 DoT（TLS over DNS）。
+
+###### 应用场景
+
+DNSSEC 信息可以提供组织网络安全成熟度和潜在漏洞的洞察，特别是关于 DNS 伪造和缓存中毒。如果没有实施 DNS 安全（DNSSEC、DoH、DoT 等），这可能会为攻击者提供一个入口点。
+
+###### 相关链接
+
+*   [https://dnssec-analyzer.verisignlabs.com/](https://dnssec-analyzer.verisignlabs.com/)
+*   [https://www.cloudflare.com/dns/dnssec/how-dnssec-works/](https://www.cloudflare.com/dns/dnssec/how-dnssec-works/)
+*   [https://en.wikipedia.org/wiki/Domain\_Name\_System\_Security\_Extensions](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions)
+*   [https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en](https://www.icann.org/resources/pages/dnssec-what-is-it-why-important-2019-03-05-en)
+*   [https://support.google.com/domains/answer/6147083](https://support.google.com/domains/answer/6147083)
+*   [https://www.internetsociety.org/resources/deploy360/2013/dnssec-test-sites/](https://www.internetsociety.org/resources/deploy360/2013/dnssec-test-sites/)
+
+访问此处了解更多：**[web-check.as93.net/about](https://web-check.as93.net/about)**
+
+*请注意，并非所有检查都适用于所有站点。有时无法确定某些信息，而演示实例受到 Netlify 对 lambda 函数的一些限制。*
+
+* * *
+
+## 使用方法
+
+### 开发中
+
+1.  克隆仓库， `git clone git@github.com:Lissy93/web-check.git`
+2.  进入该目录：`cd web-check`
+3.  安装依赖：`yarn`
+4.  启动开发服务器，使用：`yarn dev`
+
+你需要安装 [Node.js](https://nodejs.org/en)（版本 18.16.1 或更高版本）以及 [git](https://git-scm.com/)。一些检查还需要在你的环境中安装 `chromium`、`traceroute` 和 `dns`。如果这些包不存在，这些任务将会被跳过。
+
+### 部署 - 方案 #1: Netlify
+
+请点击下方按钮，将项目部署到 Netlify 👇
+
+[![Deploy to Netlify](https://img.shields.io/badge/Deploy-Netlify-%2330c8c9?style=for-the-badge&logo=netlify&labelColor=1e0e41 "Deploy Web-Check to Netlify, via 1-Click Script")](https://app.netlify.com/start/deploy?repository=https://github.com/lissy93/web-check)
+
+### 部署 - 方案 #2: Docker
+
+运行 `docker run -p 8888:3000 lissy93/web-check` ，然后打开 `http://localhost:3000`
+
+您可以从以下地址获取 Docker 镜像：
+
+*   DockerHub: [`lissy93/web-check`](https://hub.docker.com/r/lissy93/web-check)
+*   GHCR: [`ghcr.io/lissy93/web-check`](https://github.com/Lissy93/web-check/pkgs/container/web-check)
+*   或者通过克隆仓库并运行 `docker build -t web-check .` 来自行构建镜像
+
+### 部署 - 方案 #3: 从源代码部署
+
+请遵循上方“开发”部分中的说明，然后运行 \`yarn build\` && \`yarn start\` 来构建并启动应用程序。
+
+### 配置
+
+默认情况下无需进行任何配置。但您可以设置一些可选的环境变量，以访问一些额外的检查功能
+
+*   `GOOGLE_CLOUD_API_KEY` - 一个 Google API 密钥（ [获取方式请参见此处](https://cloud.google.com/api-gateway/docs/authenticate-api-keys) ）。可以用于返回站点的质量指标
+*   `TORRENT_IP_API_KEY` - 一个 torrent API 密钥（ [获取方式请参见此处](https://iknowwhatyoudownload.com/en/api/) ）。可以显示由某个 IP 下载的种子文件
+*   `REACT_APP_SHODAN_API_KEY` - 一个 Shodan API 密钥（ [获取方式请参见此处](https://account.shodan.io/) ）。可以显示给定域名相关的主机名
+*   `REACT_APP_WHO_API_KEY` - 一个 WhoAPI 密钥（ [获取方式请参见此处](https://whoapi.com/) ）。可以显示比默认任务更全面的 WhoIs 记录
+*   `SECURITY_TRAILS_API_KEY` - 一个 Security Trails API 密钥（ [在这里获取](https://securitytrails.com/corp/api) ）。这将显示与 IP 相关联的组织信息
+*   `BUILT_WITH_API_KEY` - 一个 BuiltWith API 密钥（ [在这里获取](https://api.builtwith.com/) ）。这将显示站点的主要功能
+
+上述密钥可以添加到项目根目录下的 `.env` 文件中，或者通过 Netlify UI，或者直接传递给 Docker 容器。
+
+* * *
+
+## 社区
+
+### 贡献
+
+任何形式的贡献都十分欢迎，并将不胜感激。有关行为准则，请参见 [贡献者守则](https://www.contributor-covenant.org/version/2/1/code_of_conduct/) 。
+
+要开始，请克隆仓库，进行更改，添加、提交并推送代码，然后返回这里提交合并请求。如果你是 GitHub 或开源的新手，可以参考 [这份指南](https://www.freecodecamp.org/news/how-to-make-your-first-pull-request-on-github-3#let-s-make-our-first-pull-request-) 或 [git 文档](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) 来入门，但如果你需要任何支持，请随时联系我们。
 
 [![Submit a PR](https://img.shields.io/badge/Submit_a_PR-GitHub-%23060606?style=for-the-badge&logo=github&logoColor=fff)](https://github.com/Lissy93/web-check/compare)
 
+### 报告错误
 
-### Reporting Bugs
-
-If you've found something that doesn't work as it should, or would like to suggest a new feature, then go ahead and raise a ticket on GitHub.
-For bugs, please outline the steps needed to reproduce, and include relevant info like system info and resulting logs.
+如果发现有些功能无法正常工作，或者想要建议新功能，可以在 GitHub 上提交问题单。对于 bug，请描述重现该问题所需的步骤，并附上相关信息，如系统信息和日志结果。
 
 [![Raise an Issue](https://img.shields.io/badge/Raise_an_Issue-GitHub-%23060606?style=for-the-badge&logo=github&logoColor=fff)](https://github.com/Lissy93/web-check/issues/new/choose)
 
-### Supporting
+### 支持
 
 [![Sponsor Lissy93 on GitHub](https://img.shields.io/badge/Sponsor_on_GitHub-Lissy93-%23ff4dda?style=for-the-badge&logo=githubsponsors&logoColor=ff4dda)](https://github.com/sponsors/Lissy93)
 
+* * *
 
----
+## 许可证
 
+> ***[Lissy93/Web-Check](https://github.com/Lissy93/web-check)** 采用 [MIT](https://github.com/Lissy93/web-check/blob/HEAD/LICENSE) 许可证 © [Alicia Sykes](https://aliciasykes.com) 2023。*
+> 如需更多信息，请参见 TLDR Legal > MIT
 
-## License
-
-
-> _**[Lissy93/Web-Check](https://github.com/Lissy93/web-check)** is licensed under [MIT](https://github.com/Lissy93/web-check/blob/HEAD/LICENSE) © [Alicia Sykes](https://aliciasykes.com) 2023._<br>
-> <sup align="right">For information, see <a href="https://tldrlegal.com/license/mit-license">TLDR Legal > MIT</a></sup>
-
-<details>
-<summary>Expand License</summary>
+展开许可证
 
 ```
 The MIT License (MIT)
@@ -467,27 +429,7 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
-</details>
-
-<!-- License + Copyright -->
-<p  align="center">
-  <i>© <a href="https://aliciasykes.com">Alicia Sykes</a> 2023</i><br>
-  <i>Licensed under <a href="https://gist.github.com/Lissy93/143d2ee01ccc5c052a17">MIT</a></i><br>
-  <a href="https://github.com/lissy93"><img src="https://i.ibb.co/4KtpYxb/octocat-clean-mini.png" /></a><br>
-  <sup>Thanks for visiting :)</sup>
-</p>
-
-<!-- Dinosaur -->
-<!-- 
-                        . - ~ ~ ~ - .
-      ..     _      .-~               ~-.
-     //|     \ `..~                      `.
-    || |      }  }              /       \  \
-(\   \\ \~^..'                 |         }  \
- \`.-~  o      /       }       |        /    \
- (__          |       /        |       /      `.
-  `- - ~ ~ -._|      /_ - ~ ~ ^|      /- _      `.
-              |     /          |     /     ~-.     ~- _
-              |_____|          |_____|         ~ - . _ _~_-_
--->
-
+*© [Alicia Sykes](https://aliciasykes.com) 2023*
+*授权协议：MIT*
+[![](https://i.ibb.co/4KtpYxb/octocat-clean-mini.png)](https://github.com/lissy93)
+感谢访问 :))

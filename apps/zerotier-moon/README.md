@@ -1,171 +1,173 @@
-ZeroTier - Global Area Networking
-======
+# ZeroTier - 全球区域网络
 
-*This document is written for a software developer audience. For information on using ZeroTier, see the: [Website](https://www.zerotier.com), [Documentation Site](https://docs.zerotier.com), and [Discussion Forum](https://discuss.zerotier.com).*
+*本文档面向软件开发者读者。有关使用 ZeroTier 的信息，请参阅： [官方网站](https://www.zerotier.com) 、 [文档站点](https://docs.zerotier.com) 和 [讨论论坛](https://discuss.zerotier.com) 。*
 
-ZeroTier is a smart programmable Ethernet switch for planet Earth. It allows all networked devices, VMs, containers, and applications to communicate as if they all reside in the same physical data center or cloud region.
+ZeroTier 是一个智能可编程以太网交换机，适用于地球。它允许所有网络设备、虚拟机、容器和应用程序像它们位于同一个物理数据中心或云区域一样进行通信。
 
-This is accomplished by combining a cryptographically addressed and secure peer to peer network (termed VL1) with an Ethernet emulation layer somewhat similar to VXLAN (termed VL2). Our VL2 Ethernet virtualization layer includes advanced enterprise SDN features like fine grained access control rules for network micro-segmentation and security monitoring.
+这通过结合一个加密地址和安全的对等网络（称为 VL1）以及一个类似于 VXLAN 的以太网仿真层（称为 VL2）来实现。我们的 VL2 以太网虚拟化层包括精细粒度的访问控制规则等先进的企业级 SDN 功能，用于网络微分割和安全监控。
 
-All ZeroTier traffic is encrypted end-to-end using secret keys that only you control. Most traffic flows peer to peer, though we offer free (but slow) relaying for users who cannot establish peer to peer connections.
+所有 ZeroTier 流量均使用仅您控制的秘密密钥进行端到端加密。大多数流量通过对等方直接传输，尽管我们为无法建立对等连接的用户提供免费（但速度较慢）的中继服务。
 
-The goals and design principles of ZeroTier are inspired by among other things the original [Google BeyondCorp](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43231.pdf) paper and the [Jericho Forum](https://en.wikipedia.org/wiki/Jericho_Forum) with its notion of "deperimeterization."
+ZeroTier 的目标和设计原则受到诸如原始的 [Google BeyondCorp](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/43231.pdf) 论文和 [Jericho Forum](https://en.wikipedia.org/wiki/Jericho_Forum) 及其“去边界化”概念等众多因素的启发。
 
-Visit [ZeroTier's site](https://www.zerotier.com/) for more information and [pre-built binary packages](https://www.zerotier.com/download/). Apps for Android and iOS are available for free in the Google Play and Apple app stores.
+请访问 [ZeroTier 的网站](https://www.zerotier.com/)获取更多信息和[预构建的二进制包](https://www.zerotier.com/download/) 。Android 和 iOS 的应用程序可在 Google Play 和 Apple 应用商店免费下载。
 
-ZeroTier is licensed under the [BSL version 1.1](https://mariadb.com/bsl11/). See [LICENSE.txt](https://github.com/zerotier/ZeroTierOne/blob/dev/LICENSE.txt) and the [ZeroTier pricing page](https://www.zerotier.com/pricing) for details. ZeroTier is free to use internally in businesses and academic institutions and for non-commercial purposes. Certain types of commercial use such as building closed-source apps and devices based on ZeroTier or offering ZeroTier network controllers and network management as a SaaS service require a commercial license.
+ZeroTier 采用 [BSL 版本 1.1](https://mariadb.com/bsl11/) 许可。详情请参阅 [LICENSE.txt](https://github.com/zerotier/ZeroTierOne/blob/dev/LICENSE.txt) 和 [ZeroTier 的定价页面](https://www.zerotier.com/pricing) 。ZeroTier 在企业内部和学术机构中免费使用，适用于非商业用途。基于 ZeroTier 构建封闭源代码的应用程序和设备，或提供 ZeroTier 网络控制器和网络管理作为 SaaS 服务的某些商业用途需要商业许可。
 
-A small amount of third party code is also included in ZeroTier and is not subject to our BSL license. See [AUTHORS.md](https://github.com/zerotier/ZeroTierOne/blob/dev/AUTHORS.md) for a list of third party code, where it is included, and the licenses that apply to it. All of the third party code in ZeroTier is liberally licensed (MIT, BSD, Apache, public domain, etc.).
+ZeroTier 中还包含少量第三方代码，并不受我们的 BSL 许可协议约束。请参见 [AUTHORS.md](https://github.com/zerotier/ZeroTierOne/blob/dev/AUTHORS.md) 以获取第三方代码列表、它们的位置以及适用的许可协议。ZeroTier 中的所有第三方代码均采用宽松许可（MIT、BSD、Apache、公共领域等）。
 
-### Getting Started
+### 快速入门
 
-Everything in the ZeroTier world is controlled by two types of identifier: 40-bit/10-digit *ZeroTier addresses* and 64-bit/16-digit *network IDs*. These identifiers are easily distinguished by their length. A ZeroTier address identifies a node or "device" (laptop, phone, server, VM, app, etc.) while a network ID identifies a virtual Ethernet network that can be joined by devices.
+ZeroTier 世界中的所有内容均由两种类型的标识符控制：40 位/10 位的 *ZeroTier 地址*和 64 位/16 位的*网络 ID*。这些标识符通过长度很容易区分。ZeroTier 地址标识一个节点或“设备”（笔记本电脑、手机、服务器、虚拟机、应用程序等），而网络 ID 标识一个虚拟以太网网络，设备可以加入该网络。
 
-ZeroTier addresses can be thought of as port numbers on an enormous planet-wide enterprise Ethernet smart switch supporting VLANs. Network IDs are VLAN IDs to which these ports may be assigned. A single port can be assigned to more than one VLAN.
+ZeroTier 地址可以被视为一个巨大的全球企业以太网智能交换机上的端口号，该交换机支持 VLAN。网络 ID 是这些端口可以分配的 VLAN ID。一个端口可以分配给多个 VLAN。
 
-A ZeroTier address looks like `8056c2e21c` and a network ID looks like `8056c2e21c000001`. Network IDs are composed of the ZeroTier address of that network's primary controller and an arbitrary 24-bit ID that identifies the network on this controller. Network controllers are roughly analogous to SDN controllers in SDN protocols like [OpenFlow](https://en.wikipedia.org/wiki/OpenFlow), though as with the analogy between VXLAN and VL2 this should not be read to imply that the protocols or design are the same. You can use our convenient and inexpensive SaaS hosted controllers at [my.zerotier.com](https://my.zerotier.com/) or [run your own controller](controller/) if you don't mind messing around with JSON configuration files or writing scripts to do so.
+一个 ZeroTier 地址看起来像 \``8056c2e21c`\`，而一个网络 ID 看起来像 \``8056c2e21c000001`\`。网络 ID 由该网络主控制器的 ZeroTier 地址和一个任意的 24 位 ID 组成，该 ID 用于标识此控制器上的网络。网络控制器大致类似于 SDN 协议（如 OpenFlow）中的 SDN 控制器，尽管像 VXLAN 与 VL2 之间的类比一样，这不应被解读为意味着协议或设计相同。你可以使用我们方便且经济实惠的基于云的服务控制器访问 [my.zerotier.com](https://my.zerotier.com/)，或者如果你愿意处理 JSON 配置文件或编写脚本，也可以自己运行控制器。
 
-### Project Layout
+### 项目布局
 
-The base path contains the ZeroTier One service main entry point (`one.cpp`), self test code, makefiles, etc.
+基础路径包含 ZeroTier One 服务的主要入口点（`one.cpp`）、自我测试代码、Makefile 等。
 
- - `artwork/`: icons, logos, etc.
- - `attic/`: old stuff and experimental code that we want to keep around for reference.
- - `controller/`: the reference network controller implementation, which is built and included by default on desktop and server build targets.
- - `debian/`: files for building Debian packages on Linux.
- - `doc/`: manual pages and other documentation.
- - `ext/`: third party libraries, binaries that we ship for convenience on some platforms (Mac and Windows), and installation support files.
- - `include/`: include files for the ZeroTier core.
- - `java/`: a JNI wrapper used with our Android mobile app. (The whole Android app is not open source but may be made so in the future.)
- - `node/`: the ZeroTier virtual Ethernet switch core, which is designed to be entirely separate from the rest of the code and able to be built as a stand-alone OS-independent library. Note to developers: do not use C++11 features in here, since we want this to build on old embedded platforms that lack C++11 support. C++11 can be used elsewhere.
- - `osdep/`: code to support and integrate with OSes, including platform-specific stuff only built for certain targets.
- - `rule-compiler/`: JavaScript rules language compiler for defining network-level rules.
- - `service/`: the ZeroTier One service, which wraps the ZeroTier core and provides VPN-like connectivity to virtual networks for desktops, laptops, servers, VMs, and containers.
- - `windows/`: Visual Studio solution files, Windows service code, and the Windows task bar app UI.
- - `zeroidc/`: OIDC implementation used by ZeroTier service to log into SSO-enabled networks. (This part is written in Rust, and more Rust will be appearing in this repository in the future.)
+*   `artwork/`：图标、徽标等。
+*   `attic/`: 旧的代码和实验性代码，我们希望保留这些代码以便参考。
+*   `controller/`: 参考网络控制器的实现，这是在桌面和服务器构建目标中默认构建和包含的。
+*   `debian/`: 用于在 Linux 上构建 Debian 包的文件。
+*   `doc/`: 手册页和其他文档。
+*   `ext/`: 第三方库，我们在某些平台（Mac 和 Windows）上提供的方便使用的二进制文件，以及安装支持文件。
+*   `include/`: ZeroTier 核心的头文件。
+*   `java/`: 用于我们的 Android 移动应用的 JNI 封装。整个 Android 应用目前不是开源的，但未来可能会开源。
+*   `node/`: ZeroTier 虚拟以太网交换机的核心代码，设计为完全独立于其他代码，并能够作为独立的跨平台库进行构建。开发人员注意：不要在这里使用 C++11 特性，因为我们希望这个代码能够在缺乏 C++11 支持的旧嵌入式平台上进行构建。C++11 可以在其他地方使用。
+*   `osdep/`: 支持和集成到操作系统中的代码，包括仅针对某些目标构建的平台特定代码。
+*   `rule-compiler/`: 用于定义网络级别规则的 JavaScript 规则语言编译器。
+*   `service/`: ZeroTier One 服务，该服务封装了 ZeroTier 核心，并为桌面、笔记本、服务器、虚拟机和容器提供类似虚拟网络的连接性。
+*   `windows/`: Visual Studio 项目文件、Windows 服务代码以及 Windows 任务栏应用程序 UI。
+*   `zeroidc/`: ZeroTier 服务用于登录 SSO 启用网络的 OIDC 实现。（这部分是用 Rust 编写的，未来这个仓库中还会出现更多的 Rust 代码。）
 
-### Build and Platform Notes
+### 构建和平台注意事项
 
-To build on Mac and Linux just type `make`. On FreeBSD and OpenBSD `gmake` (GNU make) is required and can be installed from packages or ports. For Windows there is a Visual Studio solution in `windows/`.
+在 Mac 和 Linux 上构建只需输入 `make`。在 FreeBSD 和 OpenBSD 上需要 `gmake`（GNU make），可以从包或 ports 安装。对于 Windows，在 `windows/` 目录中有 Visual Studio 解决方案。
 
- - **Mac**
-   - Xcode command line tools for macOS 10.13 or newer are required.
-   - Rust for x86_64 and ARM64 targets *if SSO is enabled in the build*.
- - **Linux**
-   - The minimum compiler versions required are GCC/G++ 4.9.3 or CLANG/CLANG++ 3.4.2. (Install `clang` on CentOS 7 as G++ is too old.)
-   - Linux makefiles automatically detect and prefer clang/clang++ if present as it produces smaller and slightly faster binaries in most cases. You can override by supplying CC and CXX variables on the make command line.
-   - Rust for x86_64 and ARM64 targets *if SSO is enabled in the build*.
- - **Windows**
-   - Visual Studio 2022 on Windows 10 or newer.
-   - Rust for x86_64 and ARM64 targets *if SSO is enabled in the build*.
- - **FreeBSD**
-   - GNU make is required. Type `gmake` to build.
-   - `binutils` is required.  Type `pkg install binutils` to install.
-   - Rust for x86_64 and ARM64 targets *if SSO is enabled in the build*.
- - **OpenBSD**
-   - There is a limit of four network memberships on OpenBSD as there are only four tap devices (`/dev/tap0` through `/dev/tap3`).
-   - GNU make is required. Type `gmake` to build.
-   - Rust for x86_64 and ARM64 targets *if SSO is enabled in the build*.
+*   **Mac**
+    *   macOS 10.13 或更新版本所需的 Xcode 命令行工具是必需的。
+    *   x86\_64 和 ARM64 目标所需的 Rust *如果构建时启用了 SSO*。
+*   **Linux**
+    *   所需的最小编译器版本是 GCC/G++ 4.9.3 或 CLANG/CLANG++ 3.4.2。（在 CentOS 7 上安装 `clang`，因为 G++ 过于陈旧。）
+    *   Linux makefile 会自动检测并优先使用 clang/clang++，因为在大多数情况下它会产生更小且稍快的二进制文件。您可以通过在 make 命令行中提供 CC 和 CXX 变量来覆盖此设置。
+    *   Rust 用于 x86\_64 和 ARM64 目标 *如果构建时启用了 SSO*。
+*   **Windows**
+    *   Visual Studio 2022 在 Windows 10 或更新版本上。
+    *   Rust 用于 x86\_64 和 ARM64 目标 *如果构建时启用了 SSO*。
+*   **FreeBSD**
+    *   GNU make 是必需的。输入 `gmake` 来编译。
+    *   `binutils` 是必需的。输入 `pkg install binutils` 来安装。
+    *   x86\_64 和 ARM64 目标需要 Rust， *如果构建时启用了 SSO*。
+*   **OpenBSD**
+    *   OpenBSD 上最多只能有四个网络成员身份，因为只有四个 tap 设备（/dev/tap0 至 /dev/tap3）。
+    *   需要 GNU make。输入 gmake 来编译。
+    *   x86\_64 和 ARM64 目标需要 Rust，如果构建时启用了 SSO。
 
-Typing `make selftest` will build a *zerotier-selftest* binary which unit tests various internals and reports on a few aspects of the build environment. It's a good idea to try this on novel platforms or architectures.
+输入 make selftest 将构建一个 zerotier-selftest 可执行文件，该文件对各种内部组件进行单元测试，并报告构建环境的几个方面。在新的平台或架构上尝试这个是个好主意。
 
-### Running
+### 运行
 
-Running *zerotier-one* with `-h` option will show help.
+运行 \`zerotier-one\` 并使用 \`-h\` 选项可以显示帮助信息。
 
-On Linux and BSD, if you built from source, you can start the service with:
+在 Linux 和 BSD 上，如果你是从源代码编译的，可以使用以下命令启动服务：
 
-    sudo ./zerotier-one -d
+```
+sudo ./zerotier-one -d
+```
 
-On most distributions, macOS, and Windows, the installer will start the service and set it up to start on boot.
+在大多数发行版、macOS 和 Windows 上，安装程序会启动服务并设置为开机自启动。
 
-A home folder for your system will automatically be created.
+系统会自动为你创建一个主文件夹。
 
-The service is controlled via the JSON API, which by default is available at 127.0.0.1 port 9993. We include a *zerotier-cli* command line utility to make API calls for standard things like joining and leaving networks. The *authtoken.secret* file in the home folder contains the secret token for accessing this API. See [service/README.md](service/README.md) for API documentation.
+该服务通过 JSON API 控制， 默认情况下 API 可以在 127.0.0.1 的 9993 端口访问。我们提供了一个 *zerotier-cli* 命令行工具，用于执行标准操作（如加入和退出网络）的 API 调用。主文件夹中的 *authtoken.secret* 文件包含了访问此 API 的密钥。请参阅 [service/README.md](service/README.md) 获取 API 文档。
 
-Here's where home folders live (by default) on each OS:
+这是每个操作系统中默认的主文件夹位置：
 
- * **Linux**: `/var/lib/zerotier-one`
- * **FreeBSD** / **OpenBSD**: `/var/db/zerotier-one`
- * **Mac**: `/Library/Application Support/ZeroTier/One`
- * **Windows**: `\ProgramData\ZeroTier\One` (That's the default. The base 'shared app data' folder might be different if Windows is installed with a non-standard drive letter assignment or layout.)
+*   **Linux**: `/var/lib/zerotier-one`
+*   FreeBSD / OpenBSD: /var/db/zerotier-one
+*   Mac: `/Library/Application Support/ZeroTier/One`
+*   Windows: \\ProgramData\\ZeroTier\\One (That's the default. The base 'shared app data' folder might be different if Windows is installed with a non-standard drive letter assignment or layout.)
 
-### Basic Troubleshooting
+### 基本排查问题
 
-For most users, it just works.
+对于大多数用户来说，它就是这么工作的。
 
-If you are running a local system firewall, we recommend adding a rules permitting zerotier. If you installed binaries for Windows this should be done automatically. Other platforms might require manual editing of local firewall rules depending on your configuration.
+如果你正在运行本地系统防火墙，我们建议添加允许 zerotier 的规则。如果你在 Windows 上安装了二进制文件，这应该会自动完成。其他平台可能需要根据你的配置手动编辑本地防火墙规则。
 
-See the [documentation site](https://docs.zerotier.com/zerotier/troubleshooting) for more information.
+更多信息请参见 [文档站点](https://docs.zerotier.com/zerotier/troubleshooting) 。
 
-The Mac firewall can be found under "Security" in System Preferences. Linux has a variety of firewall configuration systems and tools.
+Mac 的防火墙可以在系统偏好设置中的“安全性”下找到。Linux 有不同的防火墙配置系统和工具。
 
-On CentOS check `/etc/sysconfig/iptables` for IPTables rules. For other distributions consult your distribution's documentation. You'll also have to check the UIs or documentation for commercial third party firewall applications like Little Snitch (Mac), McAfee Firewall Enterprise (Windows), etc. if you are running any of those. Some corporate environments might have centrally managed firewall software, so you might also have to contact IT.
+在 CentOS 中检查 `/etc/sysconfig/iptables` 以查看 IPTables 规则。对于其他发行版，请参阅相应发行版的文档。如果你正在运行 Little Snitch（Mac）或 McAfee Firewall Enterprise（Windows）等商业第三方防火墙应用程序，还需要检查其 UI 或文档。某些企业环境可能有集中管理的防火墙软件，因此你可能还需要联系 IT 部门。
 
-ZeroTier One peers will automatically locate each other and communicate directly over a local wired LAN *if UDP port 9993 inbound is open*. If that port is filtered, they won't be able to see each others' LAN announcement packets. If you're experiencing poor performance between devices on the same physical network, check their firewall settings. Without LAN auto-location peers must attempt "loopback" NAT traversal, which sometimes fails and in any case requires that every packet traverse your external router twice.
+ZeroTier One 对等节点会自动互相定位并在本地有线局域网中直接通信 *如果 UDP 端口 9993 入站是开放的* 。如果该端口被过滤，它们将无法看到彼此的局域网公告包。如果你在同一物理网络中的设备之间遇到性能不佳的问题，请检查其防火墙设置。如果没有局域网自动定位，对等节点必须尝试“回环”NAT 穿越，这有时会失败，并且无论如何，每包都需要经过你的外部路由器两次。
 
-Users behind certain types of firewalls and "symmetric" NAT devices may not be able to connect to external peers directly at all. ZeroTier has limited support for port prediction and will *attempt* to traverse symmetric NATs, but this doesn't always work. If P2P connectivity fails you'll be bouncing UDP packets off our relay servers resulting in slower performance. Some NAT router(s) have a configurable NAT mode, and setting this to "full cone" will eliminate this problem. If you do this you may also see a magical improvement for things like VoIP phones, Skype, BitTorrent, WebRTC, certain games, etc., since all of these use NAT traversal techniques similar to ours.
+某些类型防火墙和“对称”NAT 设备后的用户可能无法直接连接到外部节点。ZeroTier 支持有限的端口预测，并会尝试穿越对称 NAT，但这并不总是有效。如果 P2P 连接失败，UDP 数据包将通过我们的中继服务器进行转发，导致性能变慢。一些 NAT 路由器具有可配置的 NAT 模式，将其设置为“全锥型”可以解决这个问题。这样，您还可能在 VoIP 电话、Skype、BitTorrent、WebRTC、某些游戏等方面看到神奇的性能提升，因为所有这些都使用与我们相似的 NAT 穿越技术。
 
-If a firewall between you and the Internet blocks ZeroTier's UDP traffic, you will fall back to last-resort TCP tunneling to rootservers over port 443 (https impersonation). This will work almost anywhere but is *very slow* compared to UDP or direct peer to peer connectivity.
+如果您与互联网之间的防火墙阻止了 ZeroTier 的 UDP 流量，您将退回到作为最后手段的通过端口 443（https 冒充）的 TCP 隧道连接到根服务器。这几乎可以在任何地方工作，但与 UDP 或直接 P2P 连接相比，速度非常慢。
 
-Additional help can be found in our [knowledge base](https://zerotier.atlassian.net/wiki/spaces/SD/overview).
+您可以在我们的[知识库](https://zerotier.atlassian.net/wiki/spaces/SD/overview)中找到更多帮助。
 
 ### Prometheus Metrics
 
-Prometheus Metrics are available at the `/metrics` API endpoint.  This endpoint is protected by an API key stored in `metricstoken.secret` to prevent unwanted information leakage.  Information that could be gleaned from the metrics include joined networks and peers your instance is talking to. 
+Prometheus 指标在 `/metrics`API 端点处可用。该端点通过存储在 `metricstoken.secret` 中的 API 密钥进行保护，以防止意外信息泄露。从这些指标中可以获取到的信息包括你的实例正在与其通信的网络和节点。
 
-Access control is via the ZeroTier control interface itself and `metricstoken.secret`. This can be sent as a bearer auth token, via the `X-ZT1-Auth` HTTP header field, or appended to the URL as `?auth=<token>`. You can see the current metrics via `cURL` with the following command:
+访问控制通过 ZeroTier 控制接口本身和 `metricstoken.secret` 实现。可以将其作为 bearer auth 令牌发送，通过 `X-ZT1-Auth`HTTP 头字段，或者附加到 URL 中作为 `?auth=<token>`。你可以通过 `cURL` 查看当前的指标，使用以下命令：
 
-    // Linux
-    curl -H "X-ZT1-Auth: $(sudo cat /var/lib/zerotier-one/metricstoken.secret)" http://localhost:9993/metrics
+```
+// Linux
+curl -H "X-ZT1-Auth: $(sudo cat /var/lib/zerotier-one/metricstoken.secret)" http://localhost:9993/metrics
 
-    // macOS
-    curl -H "X-XT1-Auth: $(sudo cat /Library/Application\ Support/ZeroTier/One/metricstoken.secret)" http://localhost:9993/metrics
+// macOS
+curl -H "X-XT1-Auth: $(sudo cat /Library/Application\ Support/ZeroTier/One/metricstoken.secret)" http://localhost:9993/metrics
 
-    // Windows PowerShell (Admin)
-    Invoke-RestMethod -Headers @{'X-ZT1-Auth' = "$(Get-Content C:\ProgramData\ZeroTier\One\metricstoken.secret)"; } -Uri http://localhost:9993/metrics
+// Windows PowerShell (Admin)
+Invoke-RestMethod -Headers @{'X-ZT1-Auth' = "$(Get-Content C:\ProgramData\ZeroTier\One\metricstoken.secret)"; } -Uri http://localhost:9993/metrics
+```
 
-To configure a scrape job in Prometheus on the machine ZeroTier is running on, add this to your Prometheus `scrape_config`:
+要在 ZeroTier 运行的机器上配置 Prometheus 的抓取作业，将以下内容添加到你的 Prometheus`scrape_config` 中：
 
-    - job_name: zerotier-one
-      honor_labels: true
-      scrape_interval: 15s
-      metrics_path: /metrics
-      static_configs:
-      - targets:
-        - 127.0.0.1:9993
-        labels:
-          group: zerotier-one
-          node_id: $YOUR_10_CHARACTER_NODE_ID
-      authorization:
-        credentials: $YOUR_METRICS_TOKEN_SECRET
+```
+- job_name: zerotier-one
+  honor_labels: true
+  scrape_interval: 15s
+  metrics_path: /metrics
+  static_configs:
+  - targets:
+    - 127.0.0.1:9993
+    labels:
+      group: zerotier-one
+      node_id: $YOUR_10_CHARACTER_NODE_ID
+  authorization:
+    credentials: $YOUR_METRICS_TOKEN_SECRET
+```
 
-If neither of these methods are desirable, it is probably possible to distribute metrics via [Prometheus Proxy](https://github.com/pambrose/prometheus-proxy) or some other tool.  Note: We have not tested this internally, but will probably work with the correct configuration.
+如果这两种方法都不合适，可能可以通过或其他工具来分发指标。注意：我们尚未在内部测试过这一点，但应该在正确配置的情况下工作。
 
-Metrics are also available on disk in ZeroTier's working directory:
+Metrics 也会存储在 ZeroTier 工作目录的磁盘上：
 
-   // Linux
-   /var/lib/zerotier-one/metrics.prom
+// Linux /var/lib/zerotier-one/metrics.prom
 
-   // macOS
-   /Library/Application\ Support/ZeroTier/One/metrics.prom
+// macOS /Library/Application Support/ZeroTier/One/metrics.prom
 
-   //Windows
-   C:\ProgramData\ZeroTier\One\metrics.prom
+// Windows C:\\ProgramData\\ZeroTier\\One\\metrics.prom
 
-#### Available Metrics
+#### 可用指标
 
-| Metric Name | Labels | Metric Type | Description |
-| ---         | ---    | ---         | ---         |
-| zt_packet | packet_type, direction | Counter | ZeroTier packet type counts |
-| zt_packet_error | error_type, direction | Counter | ZeroTier packet errors|
-| zt_data | protocol, direction | Counter | number of bytes ZeroTier has transmitted or received |
-| zt_num_networks | | Gauge | number of networks this instance is joined to |
-| zt_network_multicast_groups_subscribed | network_id | Gauge | number of multicast groups networks are subscribed to |
-| zt_network_packets | network_id, direction | Counter | number of incoming/outgoing packets per network |
-| zt_peer_latency | node_id | Histogram | peer latency (ms) |
-| zt_peer_path_count | node_id, status | Gauge | number of paths to peer |
-| zt_peer_packets | node_id, direction | Counter | number of packets to/from a peer |
-| zt_peer_packet_errors | node_id | Counter | number of incoming packet errors from a peer |
+| 指标名称 | 标签 | 指标类型 | 描述 |
+| --- | --- | --- | --- |
+| zt\_packet | packet\_type, direction | Counter | ZeroTier 包类型计数 |
+| ZeroTier 包错误 | 错误类型, 方向 | 计数器 | ZeroTier 包错误 |
+| zt\_data | 协议, 方向 | Counter | ZeroTier 已传输或接收的字节数 |
+| zt\_num\_networks |  | 计数器 | 此实例加入的网络数量 |
+| zt\_network\_multicast\_groups\_subscribed | 网络 ID | Gauge | 网络订阅的组播组数量 |
+| 组播网络包 | 网络 ID, 方向 | Counter | 每网络的入站/出站数据包数量 |
+| zt\_peer\_latency | node\_id | Histogram | 对等延迟 (ms) |
+| zt\_peer\_path\_count | node\_id, 状态 | Gauge | 到对等体的路径数量 |
+| zt\_peer\_packets | node\_id, direction | Counter | 来自/发送给对等节点的数据包数量 |
+| zt\_peer\_packet\_errors | node\_id | Counter | 来自对等节点的入站数据包错误数量 |
 
-If there are other metrics you'd like to see tracked, ask us in an Issue or send us a Pull Request!
+如果您希望跟踪其他指标，请在 Issue 中告诉我们或向我们提交 Pull Request！

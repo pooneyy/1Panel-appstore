@@ -1,67 +1,63 @@
-# Nextcloud Server ☁
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nextcloud/server/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nextcloud/server/?branch=master)
-[![codecov](https://codecov.io/gh/nextcloud/server/branch/master/graph/badge.svg)](https://codecov.io/gh/nextcloud/server)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/209/badge)](https://bestpractices.coreinfrastructure.org/projects/209)
-[![Design](https://contribute.design/api/shield/nextcloud/server)](https://contribute.design/nextcloud/server)
+# Nextcloud 服务器 ☁
 
-**A safe home for all your data.**
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nextcloud/server/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/nextcloud/server/?branch=master) [![codecov](https://codecov.io/gh/nextcloud/server/branch/master/graph/badge.svg)](https://codecov.io/gh/nextcloud/server) [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/209/badge)](https://bestpractices.coreinfrastructure.org/projects/209) [![Design](https://contribute.design/api/shield/nextcloud/server)](https://contribute.design/nextcloud/server)
+
+**一个安全的数据家园。**
 
 ![](https://raw.githubusercontent.com/nextcloud/screenshots/master/nextcloud-hub-files-25-preview.png)
 
-## Why is this so awesome? 🤩
+## 为什么这么棒？🤩
 
-* 📁 **Access your Data** You can store your files, contacts, calendars, and more on a server of your choosing.
-* 🔄 **Sync your Data** You keep your files, contacts, calendars, and more synchronized amongst your devices.
-* 🙌 **Share your Data** …by giving others access to the stuff you want them to see or to collaborate with.
-* 🚀 **Expandable with hundreds of Apps** ...like [Calendar](https://github.com/nextcloud/calendar), [Contacts](https://github.com/nextcloud/contacts), [Mail](https://github.com/nextcloud/mail), [Video Chat](https://github.com/nextcloud/spreed) and all those you can discover in our [App Store](https://apps.nextcloud.com)
-* 🔒 **Security** with our encryption mechanisms, [HackerOne bounty program](https://hackerone.com/nextcloud) and two-factor authentication.
+*   📁 **访问您的数据** 您可以将文件、联系人、日历等存储在您选择的服务器上。
+*   🔄 **同步您的数据** 您可以在各种设备之间同步文件、联系人、日历以及其他内容。
+*   🙌 **分享您的数据** …通过给予他人访问您希望他们查看的内容或进行协作的权限。
+*   🚀 **支持数百款应用程序** …例如 [日历](https://github.com/nextcloud/calendar) 、 [联系人](https://github.com/nextcloud/contacts) 、 [邮件](https://github.com/nextcloud/mail) 、 [视频聊天](https://github.com/nextcloud/spreed) 以及您在我们的 [应用商店](https://apps.nextcloud.com) 中可以发现的所有其他应用
+*   🔒 **安全性** 通过我们的加密机制、[HackerOne 奖励计划](https://hackerone.com/nextcloud) 和双因素认证。
 
-Do you want to learn more about how you can use Nextcloud to access, share and protect your files, calendars, contacts, communication & more at home and in your organization? [**Learn about all our Features**](https://nextcloud.com/athome/).
+您想了解更多关于如何使用 Nextcloud 在家和组织中访问、共享和保护文件、日历、联系人、通信及其他内容的方法吗？\[了解更多所有功能\]
 
-## Get your Nextcloud 🚚
+## 获取您的 Nextcloud 🚚
 
-- ☑️ [**Simply sign up**](https://nextcloud.com/signup/) at one of our providers either through our website or through the apps directly.
-- 🖥 [**Install** a server by yourself](https://nextcloud.com/install/#instructions-server) on your hardware or by using one of our ready to use **appliances**
-- 📦 Buy one of the [awesome **devices** coming with a preinstalled Nextcloud](https://nextcloud.com/devices/)
-- 🏢 Find a [service **provider**](https://nextcloud.com/providers/) who hosts Nextcloud for you or your company
+*   ☑️ \[通过我们的网站或应用程序直接在我们的提供商中注册\]
+*   🖥 \[自行在您的硬件上安装服务器\] 或使用我们的即用型 \[设备\] 安装
+*   📦 购买一款预装了 Nextcloud 的 [awesome **device**](https://nextcloud.com/devices/)
+*   🏢 找一家为你或你的公司提供 Nextcloud 服务的 [service **provider**](https://nextcloud.com/providers/)
 
-Enterprise? Public Sector or Education user? You may want to have a look into [**Nextcloud Enterprise**](https://nextcloud.com/enterprise/) provided by Nextcloud GmbH.
+企业用户？公共部门用户或教育用户？你可能想了解一下由 Nextcloud GmbH 提供的 [**Nextcloud Enterprise**](https://nextcloud.com/enterprise/)。
 
 ## Get in touch 💬
 
-* [📋 Forum](https://help.nextcloud.com)
-* [👥 Facebook](https://www.facebook.com/nextclouders)
-* [🐣 Twitter](https://twitter.com/Nextclouders)
-* [🐘 Mastodon](https://mastodon.xyz/@nextcloud)
+*   [论坛](https://help.nextcloud.com)
+*   [Facebook](https://www.facebook.com/nextclouders)
+*   [Twitter](https://twitter.com/Nextclouders)
+*   [Mastodon](https://mastodon.xyz/@nextcloud)
 
-You can also [get support for Nextcloud](https://nextcloud.com/support)!
+你也可以[获得 Nextcloud 的支持](https://nextcloud.com/support) ！
 
+## 加入我们的团队 👪
 
-## Join the team 👪
+有很多方式可以贡献，开发只是其中一种！了解更多[如何参与](https://nextcloud.com/contribute/) ，包括作为译者、设计师、测试员，帮助他人，以及其他更多内容！😍
 
-There are many ways to contribute, of which development is only one! Find out [how to get involved](https://nextcloud.com/contribute/), including as a translator, designer, tester, helping others, and much more! 😍
+### 开发环境设置 👩‍💻
 
+1.  🚀 [设置本地开发环境](https://docs.nextcloud.com/server/latest/developer_manual/getting_started/devenv.html)
+2.  🐛 [选择一个合适的初学者问题](https://github.com/nextcloud/server/labels/good%20first%20issue)
+3.  👩‍🔧 创建一个分支并进行修改。记得在提交时使用 @0 进行签名
+4.  ⬆ 创建一个 [合并请求](https://opensource.guide/how-to-contribute/#opening-a-pull-request) ，并 `@mention` 提及问题中的审核人员
+5.  👍 在审查过程中解决出现的问题
+6.  🎉 等待合并！
 
-### Development setup 👩‍💻
+第三方组件作为 git 子模块处理，因此需要先初始化。除了常规的 git 检出操作外，还需要执行 \``git submodule update --init`\` 或类似命令，详情请参见 Git 文档。
 
-1. 🚀 [Set up your local development environment](https://docs.nextcloud.com/server/latest/developer_manual/getting_started/devenv.html)
-2. 🐛 [Pick a good first issue](https://github.com/nextcloud/server/labels/good%20first%20issue)
-3. 👩‍🔧 Create a branch and make your changes. Remember to sign off your commits using `git commit -sm "Your commit message"`
-4. ⬆ Create a [pull request](https://opensource.guide/how-to-contribute/#opening-a-pull-request) and `@mention` the people from the issue to review
-5. 👍 Fix things that come up during a review
-6. 🎉 Wait for it to get merged!
+默认包含在常规发布版本中的多个应用程序，如 首次运行向导 或 Activity，在 `master` 中缺失，需要手动安装，通过克隆它们到 `apps` 子文件夹中。
 
-Third-party components are handled as git submodules which have to be initialized first. So aside from the regular git checkout invoking `git submodule update --init` or a similar command is needed, for details see Git documentation.
+否则，git 检出可以像处理发布存档一样，通过使用 `stable*` 分支来处理。注意它们永远不应该在生产系统上使用。
 
-Several apps that are included by default in regular releases such as [First run wizard](https://github.com/nextcloud/firstrunwizard) or [Activity](https://github.com/nextcloud/activity) are missing in `master` and have to be installed manually by cloning them into the `apps` subfolder.
+### 前端代码开发 🏗
 
-Otherwise, git checkouts can be handled the same as release archives, by using the `stable*` branches. Note they should never be used on production systems.
+#### 构建 Vue 组件和脚本
 
-### Working with front-end code 🏗
-
-#### Building Vue components and scripts
-
-We are moving more and more toward using Vue.js in the front-end, starting with Settings. For building the code on changes, use these terminal commands in the root folder:
+我们越来越多地在前端使用 Vue.js，从设置模块开始。要在代码更改时构建代码，请在根文件夹中使用以下终端命令：
 
 ```bash
 # install dependencies
@@ -77,9 +73,9 @@ make watch-js
 make build-js-production
 ```
 
-#### Building styles
+#### 构建样式
 
-Styles are written in SCSS and compiled to css.
+样式用 SCSS 编写，并编译成 css。
 
 ```bash
 # install dependencies
@@ -92,72 +88,74 @@ npm run sass
 npm run sass:watch
 ```
 
-#### Committing changes
+#### 提交更改
 
-**When making changes, also commit the compiled files!**
+**在进行更改时，也要提交编译后的文件！**
 
-We still use Handlebars templates in some places in Files and Settings. We will replace these step-by-step with Vue.js, but in the meantime, you need to compile them separately.
+我们在 Files 和 Settings 中的一些地方仍然使用 Handlebars 模板。我们将逐步用 Vue.js 替换这些模板，但在那之前，你需要单独编译它们。
 
-If you don’t have Handlebars installed yet, you can do it with this terminal command:
+如果你还没有安装 Handlebars，可以使用这个终端命令进行安装：
+
 ```bash
 sudo npm install -g handlebars
 ```
 
-Then inside the root folder of your local Nextcloud development installation, run this command in the terminal every time you changed a `.handlebars` file to compile it:
+然后在本地 Nextcloud 开发安装的根文件夹中，每次修改了 `.handlebars` 文件后，都需要在终端中运行以下命令进行编译：
+
 ```bash
 ./build/compile-handlebars-templates.sh
 ```
 
-Before checking in JS changes, make sure to also build for production:
+在提交 JS 变更之前，请确保也要进行生产构建：
+
 ```bash
 make build-js-production
 ```
-Then add the compiled files for committing.
 
-To save some time, to only rebuild for a specific app, use the following and replace the module with the app name:
+然后添加编译文件进行提交。
+
+为了节省时间，仅重新构建特定的应用程序，请使用以下命令并用应用程序名称替换模块名称：
+
 ```bash
 MODULE=user_status make build-js-production
 ```
 
-Please note that if you used `make build-js` or `make watch-js` before, you'll notice that a lot of files were marked as changed, so might need to clear the workspace first.
+请注意，如果您之前使用了 \`make build-js\` 或 \`make watch-js\`，会发现很多文件被标记为已更改，因此可能需要先清理工作区。
 
-### Working with back-end code 🏗
+### 处理后端代码 🏗
 
-When changing back-end PHP code, in general, no additional steps are needed before checking in.
+在更改后端 PHP 代码时，通常在提交之前不需要额外的步骤。
 
-However, if new files were created, you will need to run the following command to update the autoloader files:
+然而，如果创建了新文件，您需要运行以下命令以更新自动加载器文件：
+
 ```bash
 build/autoloaderchecker.sh
 ```
 
-After that, please also include the autoloader file changes in your commits.
+之后，请确保将自动加载器文件的更改也包含在您的提交中。
 
-### Tools we use 🛠
+### 我们使用的工具 🛠
 
-- [👀 BrowserStack](https://browserstack.com) for cross-browser testing
-- [🌊 WAVE](https://wave.webaim.org/extension/) for accessibility testing
-- [🚨 Lighthouse](https://developers.google.com/web/tools/lighthouse/) for testing performance, accessibility, and more
+*   [👀 BrowserStack](https://browserstack.com) 用于跨浏览器测试
+*   [🌊 WAVE](https://wave.webaim.org/extension/) 用于无障碍测试
+*   [🚨 Lighthouse](https://developers.google.com/web/tools/lighthouse/) 用于测试性能、无障碍及其他更多内容
 
-#### Helpful bots at github :robot:
+#### GitHub 上的帮助机器人 :robot:
 
-- Comment on a pull request with `/update-3rdparty` to update the 3rd party submodule. It will update to the last commit of the 3rd party branch named like the PR target.
+*   在拉取请求中评论 `/update-3rdparty` 以更新第三方子模块。它将更新为与拉取请求目标同名的第三方分支的最新提交。
 
-## Contribution guidelines 📜
+## 贡献指南 📜
 
-All contributions to this repository from June 16, 2016, and onward are considered to be
-licensed under the AGPLv3 or any later version.
+从 2016 年 6 月 16 日起，此仓库的所有贡献均视为根据 AGPLv3 或任何后续版本进行许可。
 
-Nextcloud doesn't require a CLA (Contributor License Agreement).
-The copyright belongs to all the individual contributors. Therefore we recommend
-that every contributor adds the following line to the header of a file if they
-changed it substantially:
+Nextcloud 不需要 Contributor License Agreement (CLA)。版权归属于所有个体贡献者。因此，我们建议如果某文件被大幅修改，每个贡献者在文件头部添加以下行：
 
 ```
 @copyright Copyright (c) <year>, <your name> (<your email address>)
 ```
 
-Please read the [Code of Conduct](https://nextcloud.com/community/code-of-conduct/). This document offers some guidance to ensure Nextcloud participants can cooperate effectively in a positive and inspiring atmosphere, and to explain how together we can strengthen and support each other.
+请阅读[行为准则](https://nextcloud.com/community/code-of-conduct/) 。该文件为 Nextcloud 参与者提供了一些指导，以确保大家能在积极和鼓舞人心的氛围中有效合作，并解释了我们如何共同努力相互支持和加强。
 
-Please review the [guidelines for contributing](.github/CONTRIBUTING.md) to this repository.
+请审阅[贡献指南](.github/CONTRIBUTING.md) 。
 
-More information how to contribute: [https://nextcloud.com/contribute/](https://nextcloud.com/contribute/)
+更多关于如何贡献的信息：[https://nextcloud.com/contribute/](https://nextcloud.com/contribute/)

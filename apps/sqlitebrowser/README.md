@@ -1,23 +1,21 @@
 # DB Browser for SQLite
 
-## What it is
+## DB Browser for SQLite 是什么
 
-_DB Browser for SQLite_ (DB4S) is a high quality, visual, open source tool to
-create, design, and edit database files compatible with SQLite.
+*DB Browser for SQLite*（DB4S）是一个高质量、可视化、开源的工具，用于创建、设计和编辑与 SQLite 兼容的数据库文件。
 
-DB4S is for users and developers who want to create, search, and edit
-databases.  DB4S uses a familiar spreadsheet-like interface, so complicated SQL commands do not have to be learned.
+DB4S 适用于希望创建、搜索和编辑数据库的用户和开发者。DB4S 使用类似电子表格的熟悉界面，因此无需学习复杂的 SQL 命令。
 
-Controls and wizards are available for users to:
+控件和向导可供用户使用：
 
-* Create and compact database files
-* Create, define, modify and delete tables
-* Create, define, and delete indexes
-* Browse, edit, add, and delete records
-* Search records
-* Import and export records as text
-* Import and export tables from/to CSV files
-* Import and export databases from/to SQL dump files
-* Issue SQL queries and inspect the results
-* Examine a log of all SQL commands issued by the application
-* Plot simple graphs based on table or query data
+*   创建和压缩数据库文件
+*   创建、定义、修改和删除表
+*   创建、定义和删除索引
+*   浏览、编辑、添加和删除记录
+*   搜索记录
+*   将记录作为文本导入和导出
+*   从/到 CSV 文件导入和导出表格
+*   从/到 SQL 转储文件导入/导出数据库
+*   执行 SQL 查询并检查结果
+*   检查应用程序发出的所有 SQL 命令的日志
+*   根据表或查询数据绘制简单的图表

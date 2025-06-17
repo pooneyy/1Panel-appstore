@@ -2,141 +2,107 @@
 
 需要按需配置应用目录下`data`文件夹里的`prometheus.yml`，以自定义更多功能。
 
-
 # 原始相关
 
-<h1 align="center" style="border-bottom: none">
-    <a href="//prometheus.io" target="_blank"><img alt="Prometheus" src="https://raw.githubusercontent.com/prometheus/prometheus/main/documentation/images/prometheus-logo.svg"></a><br>Prometheus
-</h1>
+# [![Prometheus](https://raw.githubusercontent.com/prometheus/prometheus/main/documentation/images/prometheus-logo.svg)](//prometheus.io)
+普罗米修斯
 
-<p align="center">Visit <a href="//prometheus.io" target="_blank">prometheus.io</a> for the full documentation,
-examples and guides.</p>
+访问 [prometheus.io](//prometheus.io) 获取完整的文档、示例和指南。
 
-<div align="center">
+[![CI](https://github.com/prometheus/prometheus/actions/workflows/ci.yml/badge.svg)](https://github.com/prometheus/prometheus/actions/workflows/ci.yml) [![Docker Repository on Quay](https://quay.io/repository/prometheus/prometheus/status)](https://quay.io/repository/prometheus/prometheus) [![Docker Pulls](https://img.shields.io/docker/pulls/prom/prometheus.svg?maxAge=604800)](https://hub.docker.com/r/prom/prometheus/) [![Go Report Card](https://goreportcard.com/badge/github.com/prometheus/prometheus)](https://goreportcard.com/report/github.com/prometheus/prometheus) [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/486/badge)](https://bestpractices.coreinfrastructure.org/projects/486) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/prometheus/prometheus) [![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/prometheus.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:prometheus)
 
-[![CI](https://github.com/prometheus/prometheus/actions/workflows/ci.yml/badge.svg)](https://github.com/prometheus/prometheus/actions/workflows/ci.yml)
-[![Docker Repository on Quay](https://quay.io/repository/prometheus/prometheus/status)][quay]
-[![Docker Pulls](https://img.shields.io/docker/pulls/prom/prometheus.svg?maxAge=604800)][hub]
-[![Go Report Card](https://goreportcard.com/badge/github.com/prometheus/prometheus)](https://goreportcard.com/report/github.com/prometheus/prometheus)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/486/badge)](https://bestpractices.coreinfrastructure.org/projects/486)
-[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/prometheus/prometheus)
-[![Fuzzing Status](https://oss-fuzz-build-logs.storage.googleapis.com/badges/prometheus.svg)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=1&q=proj:prometheus)
+Prometheus 是一个[云原生计算基金会](https://cncf.io/)项目，是一个系统和服务监控系统。它以给定的时间间隔从配置的目标收集指标，评估规则表达式，显示结果，并可以在观察到指定条件时触发警报。
 
-</div>
+Prometheus 与其他指标和监控系统的区别在于：
 
-Prometheus, a [Cloud Native Computing Foundation](https://cncf.io/) project, is a systems and service monitoring system. It collects metrics
-from configured targets at given intervals, evaluates rule expressions,
-displays the results, and can trigger alerts when specified conditions are observed.
+*   **多维**数据模型（由度量名称和键/值维度集定义的时间序列）
+*   PromQL 是一种**强大而灵活的查询语言** ，可以利用这种维度
+*   不依赖分布式存储; **单个服务器节点是自治的**
+*   一种用于时间序列采集的 HTTP**Pull 模型**
+*   对于批处理作业，通过中间网关支持**推送时间序列**
+*   通过**服务发现**或**静态配置**发现目标
+*   支持多种**图形和仪表板模式**
+*   支持分层和水平**联合**
 
-The features that distinguish Prometheus from other metrics and monitoring systems are:
-
-* A **multi-dimensional** data model (time series defined by metric name and set of key/value dimensions)
-* PromQL, a **powerful and flexible query language** to leverage this dimensionality
-* No dependency on distributed storage; **single server nodes are autonomous**
-* An HTTP **pull model** for time series collection
-* **Pushing time series** is supported via an intermediary gateway for batch jobs
-* Targets are discovered via **service discovery** or **static configuration**
-* Multiple modes of **graphing and dashboarding support**
-* Support for hierarchical and horizontal **federation**
-
-## Architecture overview
+## 体系结构概述
 
 ![Architecture overview](https://raw.githubusercontent.com/prometheus/prometheus/main/documentation/images/architecture.svg)
 
-## Install
+## 安装
 
-There are various ways of installing Prometheus.
+安装 Prometheus 的方法有很多种。
 
-### Precompiled binaries
+### 预编译二进制文件
 
-Precompiled binaries for released versions are available in the
-[*download* section](https://prometheus.io/download/)
-on [prometheus.io](https://prometheus.io). Using the latest production release binary
-is the recommended way of installing Prometheus.
-See the [Installing](https://prometheus.io/docs/introduction/install/)
-chapter in the documentation for all the details.
+已发布版本的预编译二进制文件可在 在 [prometheus.io](https://prometheus.io) 上[*下载*部分](https://prometheus.io/download/) 。安装 Prometheus 的推荐方法是使用最新的生产版本二进制文件。有关所有详细信息，请参阅文档中的[安装](https://prometheus.io/docs/introduction/install/)章节。
 
-### Docker images
+### Docker 镜像
 
-Docker images are available on [Quay.io](https://quay.io/repository/prometheus/prometheus) or [Docker Hub](https://hub.docker.com/r/prom/prometheus/).
+Docker 镜像可以在 [Quay.io](https://quay.io/repository/prometheus/prometheus) 或 [Docker Hub](https://hub.docker.com/r/prom/prometheus/) 上找到。
 
-You can launch a Prometheus container for trying it out with
+你可以启动一个 Prometheus 容器，
 
 ```bash
 docker run --name prometheus -d -p 127.0.0.1:9090:9090 prom/prometheus
 ```
 
-Prometheus will now be reachable at <http://localhost:9090/>.
+Prometheus 现在可以通过 [http：//localhost：9090/](http://localhost:9090/) 访问。
 
-### Building from source
+### 从源代码构建
 
-To build Prometheus from source code, You need:
+要从源代码构建 Prometheus，您需要：
 
-* Go [version 1.17 or greater](https://golang.org/doc/install).
-* NodeJS [version 16 or greater](https://nodejs.org/).
-* npm [version 7 or greater](https://www.npmjs.com/).
+*   Go[1.17 或更高版本](https://golang.org/doc/install) 。
+*   NodeJS [版本 16 或更高](https://nodejs.org/) 。
+*   NPM [版本 7 或更高](https://www.npmjs.com/)版本。
 
-Start by cloning the repository:
+首先克隆存储库：
 
 ```bash
 git clone https://github.com/prometheus/prometheus.git
 cd prometheus
 ```
 
-You can use the `go` tool to build and install the `prometheus`
-and `promtool` binaries into your `GOPATH`:
+您可以使用 `go` 工具构建 `prometheus` 和 `promtool` 二进制文件并将其安装到 `GOPATH` 中：
 
 ```bash
 GO111MODULE=on go install github.com/prometheus/prometheus/cmd/...
 prometheus --config.file=your_config.yml
 ```
 
-*However*, when using `go install` to build Prometheus, Prometheus will expect to be able to
-read its web assets from local filesystem directories under `web/ui/static` and
-`web/ui/templates`. In order for these assets to be found, you will have to run Prometheus
-from the root of the cloned repository. Note also that these directories do not include the
-React UI unless it has been built explicitly using `make assets` or `make build`.
+*然而* ，当使用 `go install` 构建 Prometheus 时，Prometheus 将期望能够从 `web/ui/static` 下的本地文件系统目录读取其 web 资产， `web/ui/templates`.为了找到这些资产，您必须从克隆存储库的根目录运行 Prometheus。还要注意的是，这些目录不包括 React UI，除非它是使用 `make assets` 或 `make build` 显式构建的。
 
-An example of the above configuration file can be found [here.](https://github.com/prometheus/prometheus/blob/main/documentation/examples/prometheus.yml)
+可以在这里找到上述配置文件的示例 [。](https://github.com/prometheus/prometheus/blob/main/documentation/examples/prometheus.yml)
 
-You can also build using `make build`, which will compile in the web assets so that
-Prometheus can be run from anywhere:
+您也可以使用 `make build 进行`构建，它将在 Web 资产中编译，以便 Prometheus 可以从任何地方运行：
 
 ```bash
 make build
 ./prometheus --config.file=your_config.yml
 ```
 
-The Makefile provides several targets:
+Makefile 提供了几个目标：
 
-* *build*: build the `prometheus` and `promtool` binaries (includes building and compiling in web assets)
-* *test*: run the tests
-* *test-short*: run the short tests
-* *format*: format the source code
-* *vet*: check the source code for common errors
-* *assets*: build the React UI
+*   *build*：构建 `prometheus` 和 `promtool` 二进制文件（包括在 web 资产中的构建和编译）
+*   *test*：运行测试
+*   *test-short*：运行短测试
+*   *format*：格式化源代码
+*   *vet*：检查源代码中的常见错误
+*   *assets*：构建 React UI
 
-### Service discovery plugins
+### 服务发现插件
 
-Prometheus is bundled with many service discovery plugins.
-When building Prometheus from source, you can edit the [plugins.yml](./plugins.yml)
-file to disable some service discoveries. The file is a yaml-formated list of go
-import path that will be built into the Prometheus binary.
+Prometheus 捆绑了许多服务发现插件。当从源代码构建 Prometheus 时，您可以编辑 [plugins.yml](./plugins.yml) 文件来禁用某些服务发现。该文件是一个 yaml 格式的 go 导入路径列表，将内置到 Prometheus 二进制文件中。
 
-After you have changed the file, you
-need to run `make build` again.
+更改文件后，需要再次运行 `make build`。
 
-If you are using another method to compile Prometheus, `make plugins` will
-generate the plugins file accordingly.
+如果您使用其他方法编译 Prometheus，`make plugins` 将相应地生成插件文件。
 
-If you add out-of-tree plugins, which we do not endorse at the moment,
-additional steps might be needed to adjust the `go.mod` and `go.sum` files. As
-always, be extra careful when loading third party code.
+如果您添加树外插件（我们目前不支持），则可能需要额外的步骤来调整 `go.mod` 和 `go.sum` 文件。与往常一样，在加载第三方代码时要格外小心。
 
-### Building the Docker image
+### 构建 Docker 镜像
 
-The `make docker` target is designed for use in our CI system.
-You can build a docker image locally with the following commands:
+`make docker` 目标是为我们的 CI 系统设计的。您可以使用以下命令在本地构建 Docker 镜像：
 
 ```bash
 make promu
@@ -145,53 +111,45 @@ make npm_licenses
 make common-docker-amd64
 ```
 
-## Using Prometheus as a Go Library
+## 使用 Prometheus 作为 Go 库
 
-### Remote Write
+### 远程写入
 
-We are publishing our Remote Write protobuf independently at
-[buf.build](https://buf.build/prometheus/prometheus/assets).
+我们正在独立发布我们的远程写入 protobuf， [buf.build](https://buf.build/prometheus/prometheus/assets) 网站。
 
-You can use that as a library:
+您可以将其用作库：
 
 ```shell
 go get go.buf.build/protocolbuffers/go/prometheus/prometheus
 ```
 
-This is experimental.
+这是实验性的
 
-### Prometheus code base
+### 普罗米修斯代码库
 
-In order to comply with [go mod](https://go.dev/ref/mod#versions) rules,
-Prometheus release number do not exactly match Go module releases. For the
-Prometheus v2.y.z releases, we are publishing equivalent v0.y.z tags.
+为了遵守 [Go mod](https://go.dev/ref/mod#versions) 规则，Prometheus 版本号与 Go 模块版本不完全匹配。对于 Prometheus v2.y.z 版本，我们发布了等效的 v0.y.z 标签。
 
-Therefore, a user that would want to use Prometheus v2.35.0 as a library could do:
+因此，想要使用 Prometheus v2.35.0 作为库的用户可以这样做：
 
 ```shell
 go get github.com/prometheus/prometheus@v0.35.0
 ```
 
-This solution makes it clear that we might break our internal Go APIs between
-minor user-facing releases, as [breaking changes are allowed in major version
-zero](https://semver.org/#spec-item-4).
+这个解决方案清楚地表明，我们可能会在面向用户的次要版本之间破坏我们的内部 Go API，因为[在主要版本零中允许破坏性更改](https://semver.org/#spec-item-4) 。
 
-## React UI Development
+## React UI 开发
 
-For more information on building, running, and developing on the React-based UI, see the React app's [README.md](web/ui/README.md).
+有关在基于 React 的 UI 上构建、运行和开发的更多信息，请参阅 React 应用程序的 [README.md](web/ui/README.md)。
 
-## More information
+## 更多信息
 
-* Godoc documentation is available via [pkg.go.dev](https://pkg.go.dev/github.com/prometheus/prometheus). Due to peculiarities of Go Modules, v2.x.y will be displayed as v0.x.y.
-* See the [Community page](https://prometheus.io/community) for how to reach the Prometheus developers and users on various communication channels.
+*   Godoc 文档可通过 [pkg.go.dev](https://pkg.go.dev/github.com/prometheus/prometheus) 获得。由于 Go 模块的特殊性，v2.x.y 将显示为 v0.x.y。
+*   请参阅[社区页面](https://prometheus.io/community)了解如何通过各种沟通渠道与 Prometheus 开发人员和用户联系。
 
-## Contributing
+## 贡献
 
-Refer to [CONTRIBUTING.md](https://github.com/prometheus/prometheus/blob/main/CONTRIBUTING.md)
+请参阅 [CONTRIBUTING.md](https://github.com/prometheus/prometheus/blob/main/CONTRIBUTING.md)
 
-## License
+## 许可证
 
-Apache License 2.0, see [LICENSE](https://github.com/prometheus/prometheus/blob/main/LICENSE).
-
-[hub]: https://hub.docker.com/r/prom/prometheus/
-[quay]: https://quay.io/repository/prometheus/prometheus
+Apache 许可证 2.0，参见[许可证](https://github.com/prometheus/prometheus/blob/main/LICENSE) 。

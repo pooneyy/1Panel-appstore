@@ -8,36 +8,26 @@
 
 # 原始相关
 
-OpenLiteSpeed Web Server
-========
+# OpenLiteSpeed Web 服务器
 
-Description
---------
+## 描述
 
-OpenLiteSpeed is a high-performance, lightweight, open source HTTP server developed and copyrighted by 
-LiteSpeed Technologies. Users are free to download, use, distribute, and modify OpenLiteSpeed and its 
-source code in accordance with the precepts of the GPLv3 license.
+OpenLiteSpeed 是由 LiteSpeed Technologies 开发和版权持有的高性能、轻量级开源 HTTP 服务器。用户可以根据 GPLv3 许可证的条款自由下载、使用、分发和修改 OpenLiteSpeed 及其源代码。
 
-This is the official repository for OpenLiteSpeed's source code. It is maintained by LiteSpeed 
-Technologies.
+这是 OpenLiteSpeed 源代码的官方仓库，由 LiteSpeed Technologies 维护。
 
-Documentation
---------
+## 文档
 
-Users can find all OpenLiteSpeed documentation on the [OpenLiteSpeed site](https://openlitespeed.org), 
-but here are some quick links to important parts of the site:
+用户可以在 [OpenLiteSpeed 网站](https://openlitespeed.org) 上找到所有 OpenLiteSpeed 的文档，但这里有一些链接到网站上重要部分的快速链接：
 
-[Installation](https://openlitespeed.org/kb/category/installation/)
+[安装](https://openlitespeed.org/kb/category/installation/)
 
-[Configuration](https://openlitespeed.org/kb/category/configuration/)
+[配置](https://openlitespeed.org/kb/category/configuration/)
 
-[Road map](https://openlitespeed.org/mediawiki/index.php/Road_Map)
+[路线图](https://openlitespeed.org/mediawiki/index.php/Road_Map)
 
-[Release log](https://openlitespeed.org/release-log/)
+[发布日志](https://openlitespeed.org/release-log/)
 
-Get in Touch
---------
+## 联系我们
 
-OpenLiteSpeed has a [Google Group](https://groups.google.com/forum/#!forum/openlitespeed-development). If 
-you find a bug, want to request new features, or just want to talk about OpenLiteSpeed, this is the place
-to do it.
+OpenLiteSpeed 有一个 [Google 组](https://groups.google.com/forum/#!forum/openlitespeed-development) 。如果您发现了一个 bug，想要请求新功能，或者只是想讨论 OpenLiteSpeed，这里就是您应该去的地方。

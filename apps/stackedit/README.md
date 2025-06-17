@@ -1,26 +1,27 @@
 # 使用说明
 
-- 注意 镜像高达 `6g` 
+*   注意 镜像高达 `6g`
 
 # 原始相关
-***
+
+* * *
 
 # StackEdit
 
 [![Build Status](https://img.shields.io/travis/benweet/stackedit.svg?style=flat)](https://travis-ci.org/benweet/stackedit) [![NPM version](https://img.shields.io/npm/v/stackedit.svg?style=flat)](https://www.npmjs.org/package/stackedit)
 
-> Full-featured, open-source Markdown editor based on PageDown, the Markdown library used by Stack Overflow and the other Stack Exchange sites.
+> 基于 PageDown 的 Markdown 编辑器，PageDown 是 Stack Overflow 和其他 Stack Exchange 网站使用的 Markdown 库。
 
-https://stackedit.io/
+[https://stackedit.io/](https://stackedit.io/)
 
-### Ecosystem
+### 生态系统
 
-- [Chrome app](https://chrome.google.com/webstore/detail/iiooodelglhkcpgbajoejffhijaclcdg)
-- NEW! Embed StackEdit in any website with [stackedit.js](https://github.com/benweet/stackedit.js)
-- NEW! [Chrome extension](https://chrome.google.com/webstore/detail/ajehldoplanpchfokmeempkekhnhmoha) that uses stackedit.js
-- [Community](https://community.stackedit.io/)
+*   [Chrome 应用](https://chrome.google.com/webstore/detail/iiooodelglhkcpgbajoejffhijaclcdg)
+*   NEW! 将 StackEdit 嵌入任何网站使用 [stackedit.js](https://github.com/benweet/stackedit.js)
+*   NEW! 使用 stackedit.js 的 [Chrome 扩展程序](https://chrome.google.com/webstore/detail/ajehldoplanpchfokmeempkekhnhmoha)
+*   [社区](https://community.stackedit.io/)
 
-### Build
+### 构建
 
 ```bash
 # install dependencies
@@ -36,10 +37,9 @@ npm run build
 npm run build --report
 ```
 
-### Deploy with Helm
+### 使用 Helm 部署
 
-StackEdit Helm chart allows easy StackEdit deployment to any Kubernetes cluster.
-You can use it to configure deployment with your existing ingress controller and cert-manager.
+StackEdit Helm 图表允许轻松地将 StackEdit 部署到任何 Kubernetes 集群。您可以使用它配置与现有 ingress controller 和 cert-manager 的部署。
 
 ```bash
 # Add the StackEdit Helm repository
@@ -60,20 +60,20 @@ helm install --name stackedit stackedit/stackedit \
   --set wordpressSecret=$WORDPRESS_CLIENT_SECRET
 ```
 
-Later, to upgrade StackEdit to the latest version:
+稍后，要升级 StackEdit 到最新版本：
 
 ```bash
 helm repo update
 helm upgrade stackedit stackedit/stackedit
 ```
 
-If you want to uninstall StackEdit:
+如果您想卸载 StackEdit：
 
 ```bash
 helm delete --purge stackedit
 ```
 
-If you want to use your existing ingress controller and cert-manager issuer:
+如果您想使用现有的 ingress controller 和 cert-manager 颁发者：
 
 ```bash
 # See https://docs.cert-manager.io/en/latest/tutorials/acme/quick-start/index.html

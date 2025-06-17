@@ -8,40 +8,42 @@
 
 那么则需要执行相关命令激活此账号。
 
-- 1. 宿主机执行的方式
+*   1.  宿主机执行的方式
+
 ```
 # 邮箱方式
 docker exec -it slink slink user:activate --email=admin@localhost.com
 ```
+
 ```
 # uuid 方式
 docker exec -it slink slink user:activate --uuid=<user-id>
 ```
 
-- 2. 容器管理页面连接容器终端执行的方式
+*   2.  容器管理页面连接容器终端执行的方式
+
 ```
 # 邮箱方式
 slink user:activate --email=admin@localhost.com
 ```
+
 ```
 # uuid 方式
 slink user:activate --uuid=<user-id>
 ```
 
-- 3. 有得到终端返回信息例如以下，则表示账号激活成功，可以正常登录了。
+*   3.  有得到终端返回信息例如以下，则表示账号激活成功，可以正常登录了。
 
 ```
 User `admin@localhost.com` has been activated ✓
 ```
 
-***
-# Slink: Image Sharing Platform
+* * *
 
-![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/andrii-kryvoviaz/slink/release.yml?logo=github)
-![Docker Image Version (latest semver)](https://img.shields.io/docker/v/anirdev/slink?color=blue)
-![Docker Pulls](https://img.shields.io/docker/pulls/anirdev/slink?logo=docker)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/andrii-kryvoviaz/slink/blob/main/LICENSE)
+# Slink：图片分享平台
 
-**Slink** is a self-hosted image sharing platform built with [Symfony](https://symfony.com/) and [SvelteKit](https://kit.svelte.dev/)️.
+![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/andrii-kryvoviaz/slink/release.yml?logo=github) ![Docker Image Version (latest semver)](https://img.shields.io/docker/v/anirdev/slink?color=blue) ![Docker Pulls](https://img.shields.io/docker/pulls/anirdev/slink?logo=docker) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/andrii-kryvoviaz/slink/blob/main/LICENSE)
 
-Solves the problem of sharing images with friends, family, and colleagues without relying on third-party services. It also offers a platform for artists to share their work with the community. Additionally, developers may find it useful for self-hosting screenshots of personal projects, which can then be used on GitHub, portfolios, blogs, etc.
+**Slink** 是一个使用 [Symfony](https://symfony.com/) 和 [SvelteKit](https://kit.svelte.dev/)️ 构建的托管图片分享平台。
+
+解决了与朋友、家人和同事分享图片的问题，无需依赖第三方服务。它还为艺术家提供了一个与社区分享作品的平台。此外，开发者可能发现它对托管个人项目的截图很有用，这些截图可以用于 GitHub、作品集、博客等。
