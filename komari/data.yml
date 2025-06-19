@@ -1,38 +1,48 @@
-# 在应用商店列表顶部显示的应用名称
-name: Komari
-# 中文标签
-tags:
-  - 工具
-# 鼠标悬浮在应用上时显示的标题
-title: 轻量级的服务器状态监控工具
-# 应用详情页的完整描述
-description: Komari 是一个轻量级的服务器状态监控工具，界面美观，易于部署。
-# 应用的核心属性
+# additionalProperties 是固定写法
 additionalProperties:
-  # 应用的唯一英文ID，用于创建文件夹等
-  key: komari
-  # 应用名称
-  name: Komari
-  # 英文标签
-  tags:
-    - Tool
-  # 中文短描述
-  shortDescZh: 一个轻量级的服务器状态监控工具。
-  # 英文短描述
-  shortDescEn: A lightweight server status monitoring tool.
-  # 应用类型, 'tool' | 'website' | 'runtime'
-  type: tool
-  # 是否允许跨版本升级
-  crossVersionUpdate: true
-  # 允许安装的数量限制, 0 代表无限制
-  limit: 0
-  # 官网地址
-  website: https://github.com/komari-monitor/komari
-  # Github 地址
-  github: https://github.com/komari-monitor/komari
-  # 文档地址
-  document: https://github.com/komari-monitor/komari
-  # 支持的 CPU 架构
-  architectures:
-    - amd64
-    - arm64
+  # formFields 定义了安装时需要填写的表单字段
+  formFields:
+    # 第一个字段：端口号
+    - default: 25774
+      # 是否可编辑
+      edit: true
+      # 对应 docker-compose.yml 里的环境变量 ${PANEL_APP_PORT_HTTP}
+      envkey: PANEL_APP_PORT_HTTP
+      # 英文标签
+      labelEn: Port
+      # 中文标签
+      labelZh: 应用端口
+      # 是否必填
+      required: true
+      # 校验规则，paramPort 用于校验端口格式
+      rule: paramPort
+      # 字段类型，number 表示数字输入框
+      type: number
+
+    # 第二个字段：管理员用户名
+    - default: admin
+      edit: true
+      # 对应 docker-compose.yml 里的环境变量 ${ADMIN_USERNAME}
+      envkey: ADMIN_USERNAME
+      labelEn: Admin Username
+      labelZh: 管理员用户名
+      required: true
+      # 校验规则，paramCommon 用于校验常规字符串
+      rule: paramCommon
+      # 字段类型，text 表示文本输入框
+      type: text
+
+    # 第三个字段：管理员密码
+    - default: changeme
+      edit: true
+      # 对应 docker-compose.yml 里的环境变量 ${ADMIN_PASSWORD}
+      envkey: ADMIN_PASSWORD
+      labelEn: Admin Password
+      labelZh: 管理员密码
+      # 随机生成密码
+      random: true
+      required: true
+      # 校验规则，paramComplexity 用于校验密码复杂度
+      rule: paramComplexity
+      # 字段类型，password 表示密码输入框
+      type: password
