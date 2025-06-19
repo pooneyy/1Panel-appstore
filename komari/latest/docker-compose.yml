@@ -1,26 +1,19 @@
 version: "3"
 services:
   komari:
-    # 使用官方推荐的镜像
     image: ghcr.io/komari-monitor/komari:latest
-    # 容器名称，这是 1Panel 的标准变量，请勿修改
     container_name: ${CONTAINER_NAME}
-    # 总是重新启动，确保服务可用性
     restart: always
-    # 将用户定义的端口映射到容器的 25774 端口
     ports:
-      - ${PANEL_APP_PORT_HTTP}:25774
-    # 挂载数据目录，确保数据持久化
+      - "${PANEL_APP_PORT_HTTP}:25774"
     volumes:
       - ./data:/app/data
-    # 设置环境变量，允许用户自定义初始的用户名和密码
+    # 使用更明确的 YAML 数组格式定义环境变量
     environment:
-      - ADMIN_USERNAME=${ADMIN_USERNAME}
-      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
-    # 将容器连接到 1Panel 的网络
+      - "ADMIN_USERNAME=${ADMIN_USERNAME}"
+      - "ADMIN_PASSWORD=${ADMIN_PASSWORD}"
     networks:
       - 1panel-network
-    # 1Panel 要求的标签
     labels:
       createdBy: "Apps"
 
