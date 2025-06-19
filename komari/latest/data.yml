@@ -5,34 +5,31 @@ additionalProperties:
     # 字段1: 端口配置
     - default: 25774
       edit: true
-      # 唯一的 envkey，对应端口
-      envkey: PANEL_APP_PORT_HTTP 
+      # 修正：使用驼峰命名的 envKey
+      envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
       labelZh: 应用端口
       required: true
-      # 正确的规则：端口校验
       rule: paramPort
       type: number
     # 字段2: 用户名配置
     - default: admin
       edit: true
-      # 唯一的 envkey，对应用户名
-      envkey: ADMIN_USERNAME 
+      # 修正：使用驼峰命名的 envKey
+      envKey: ADMIN_USERNAME
       labelEn: Admin Username
       labelZh: 管理员用户名
       required: true
-      # 正确的规则：通用参数校验
       rule: paramCommon
       type: text
     # 字段3: 密码配置
     - default: changeme
       edit: true
-      # 唯一的 envkey，对应密码
-      envkey: ADMIN_PASSWORD 
+      # 修正：使用驼峰命名的 envKey
+      envKey: ADMIN_PASSWORD
       labelEn: Admin Password
       labelZh: 管理员密码
       random: true
       required: true
-      # 正确的规则：密码复杂度校验
       rule: paramComplexity
       type: password
