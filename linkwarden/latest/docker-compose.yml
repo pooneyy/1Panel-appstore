@@ -1,0 +1,41 @@
+services:
+    linkwarden:
+        image: ghcr.io/linkwarden/linkwarden:latest
+        container_name: ${CONTAINER_NAME}
+        restart: always
+        ports:
+            - ${PANEL_APP_PORT_HTTP}:3000
+        volumes:
+            - ./data:/data/data
+        networks:
+            - 1panel-network
+        environment:
+            - DATABASE_URL=postgresql://postgres:${POSTGRES_PASSWORD}@postgres:5432/postgres
+        depends_on:
+            - postgres
+            - meilisearch
+        labels:
+            createdBy: Apps
+    meilisearch:
+        image: getmeili/meilisearch:v1.12.8
+        container_name: ${CONTAINER_NAME}
+        restart: always
+        volumes:
+            - ./meili_data:/meili_data
+        networks:
+            - 1panel-network
+        labels:
+            createdBy: Apps
+    postgres:
+        image: postgres:16-alpine
+        container_name: ${CONTAINER_NAME}
+        restart: always
+        volumes:
+            - ./pgdata:/var/lib/postgresql/data
+        networks:
+            - 1panel-network
+        labels:
+            createdBy: Apps
+networks:
+    1panel-network:
+        external: true
