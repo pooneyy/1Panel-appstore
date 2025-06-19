@@ -2,47 +2,37 @@
 additionalProperties:
   # formFields 定义了安装时需要填写的表单字段
   formFields:
-    # 第一个字段：端口号
+    # 字段1: 端口配置
     - default: 25774
-      # 是否可编辑
       edit: true
-      # 对应 docker-compose.yml 里的环境变量 ${PANEL_APP_PORT_HTTP}
-      envkey: PANEL_APP_PORT_HTTP
-      # 英文标签
+      # 唯一的 envkey，对应端口
+      envkey: PANEL_APP_PORT_HTTP 
       labelEn: Port
-      # 中文标签
       labelZh: 应用端口
-      # 是否必填
       required: true
-      # 校验规则，paramPort 用于校验端口格式
+      # 正确的规则：端口校验
       rule: paramPort
-      # 字段类型，number 表示数字输入框
       type: number
-
-    # 第二个字段：管理员用户名
+    # 字段2: 用户名配置
     - default: admin
       edit: true
-      # 对应 docker-compose.yml 里的环境变量 ${ADMIN_USERNAME}
-      envkey: ADMIN_USERNAME
+      # 唯一的 envkey，对应用户名
+      envkey: ADMIN_USERNAME 
       labelEn: Admin Username
       labelZh: 管理员用户名
       required: true
-      # 校验规则，paramCommon 用于校验常规字符串
+      # 正确的规则：通用参数校验
       rule: paramCommon
-      # 字段类型，text 表示文本输入框
       type: text
-
-    # 第三个字段：管理员密码
+    # 字段3: 密码配置
     - default: changeme
       edit: true
-      # 对应 docker-compose.yml 里的环境变量 ${ADMIN_PASSWORD}
-      envkey: ADMIN_PASSWORD
+      # 唯一的 envkey，对应密码
+      envkey: ADMIN_PASSWORD 
       labelEn: Admin Password
       labelZh: 管理员密码
-      # 随机生成密码
       random: true
       required: true
-      # 校验规则，paramComplexity 用于校验密码复杂度
+      # 正确的规则：密码复杂度校验
       rule: paramComplexity
-      # 字段类型，password 表示密码输入框
       type: password
