@@ -14,6 +14,8 @@ services:
         depends_on:
             - postgres
             - meilisearch
+        env_file:
+            - .env
         labels:
             createdBy: Apps
     meilisearch:
@@ -22,6 +24,8 @@ services:
         restart: always
         volumes:
             - ./meili_data:/meili_data
+        env_file:
+            - .env
         networks:
             - 1panel-network
         labels:
@@ -32,6 +36,8 @@ services:
         restart: always
         volumes:
             - ./pgdata:/var/lib/postgresql/data
+        env_file:
+            - .env
         networks:
             - 1panel-network
         labels:
