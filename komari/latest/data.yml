@@ -20,7 +20,7 @@ additionalProperties:
       type: number
 
     # 第二个字段：管理员用户名
-    - default: "admin"
+    - default: admin
       edit: true
       # 对应 docker-compose.yml 里的环境变量 ${ADMIN_USERNAME}
       envkey: ADMIN_USERNAME
@@ -33,7 +33,7 @@ additionalProperties:
       type: text
 
     # 第三个字段：管理员密码
-    - default: ""
+    - default: changeme
       edit: true
       # 对应 docker-compose.yml 里的环境变量 ${ADMIN_PASSWORD}
       envkey: ADMIN_PASSWORD
