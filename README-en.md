@@ -12,12 +12,6 @@
 - [1. Introduction](#1-introduction)
   - [1Panel Third-Party App Store Categories and Introduction](#1panel-third-party-app-store-categories-and-introduction)
 - [2. Usage](#2-usage)
-  - [2.1 Domestic Network](#21-domestic-network)
-    - [2.1.1 Getting Apps via Git Command](#211-getting-apps-via-git-command)
-    - [2.1.2 Getting Apps via Compressed Package](#212-getting-apps-via-compressed-package)
-  - [2.2 International Network](#22-international-network)
-    - [2.2.1 Getting Apps via Git Command](#221-getting-apps-via-git-command)
-    - [2.2.2 Getting Apps via Compressed Package](#222-getting-apps-via-compressed-package)
 - [3. Remarks](#3-remarks)
 - [4. App Overview](#4-app-overview)
 - [5. Contributors](#5-contributors)
@@ -45,6 +39,13 @@ Before using this repository, please ensure that you have read, understood, and 
 These are some configurations of docker applications adapted for the `1Panel` store version 2.0.
 
 Dedicated to running various Docker applications with just one click. Enjoy convenience and efficiency without complex configurations.
+
+### Repository Branch Description
+- `localApps`：Main branch
+- `config`: Configuration file branch, specifically for editing the configuration files of this repository
+- `patch/*`: Used for temporary branches during editing
+- `renovate/*`: Temporarily created by the renovatebot
+- `script`: Branch for storing scripts
 
 ## 2. Usage
 
