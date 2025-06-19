@@ -18,7 +18,7 @@ services:
             createdBy: Apps
     meilisearch:
         image: getmeili/meilisearch:v1.12.8
-        container_name: ${CONTAINER_NAME}
+        container_name: ${CONTAINER_NAME}-Meilisearch
         restart: always
         volumes:
             - ./meili_data:/meili_data
@@ -28,7 +28,7 @@ services:
             createdBy: Apps
     postgres:
         image: postgres:16-alpine
-        container_name: ${CONTAINER_NAME}
+        container_name: ${CONTAINER_NAME}-Postgres
         restart: always
         volumes:
             - ./pgdata:/var/lib/postgresql/data

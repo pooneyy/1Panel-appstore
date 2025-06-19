@@ -8,3 +8,24 @@ additionalProperties:
           required: true
           rule: paramPort
           type: number
+        - default: ""
+          edit: true
+          envKey: NEXTAUTH_SECRET
+          labelEn: NEXTAuth Secret
+          labelZh: NEXTAuth 密钥
+          required: true
+          type: string
+        - default: ""
+          edit: true
+          envKey: POSTGRES_PASSWORD
+          labelEn: Postgres Password
+          labelZh: Postgres 数据库密码
+          required: true
+          type: string
+        - default: ""
+          edit: true
+          envKey: MEILI_MASTER_KEY
+          labelEn: Meilisearch Master Key
+          labelZh: Meilisearch 主密钥
+          required: true
+          type: string
