@@ -10,7 +10,6 @@
   - [2. Compliance with Laws](#2-compliance-with-laws)
   - [3. Acceptance of Disclaimer](#3-acceptance-of-disclaimer)
 - [1. Introduction](#1-introduction)
-  - [1Panel Third-Party App Store Categories and Introduction](#1panel-third-party-app-store-categories-and-introduction)
 - [2. Usage](#2-usage)
 - [3. Remarks](#3-remarks)
 - [4. App Overview](#4-app-overview)
