@@ -78,7 +78,7 @@ services:
       - .env
 
   lobe:
-    image: lobehub/lobe-chat-database:1.96.0
+    image: lobehub/lobe-chat-database:1.96.1
     container_name: lobe-chat
     network_mode: 'service:network-service'
     depends_on:
