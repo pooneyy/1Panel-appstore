@@ -28,32 +28,23 @@
       "allowedVersions": "/^v8.*/"
     },
     {
-      "matchPackageNames": ["kingwrcy/moments"],
-      "matchCurrentVersion": "<1",
-      "allowedVersions": "<1"
-    },
-    {
-      "matchPackageNames": ["linuxserver/heimdall"],
-      "allowedVersions": "<2021"
-    },
-    {
-      "matchPackageNames": ["linuxserver/qbittorrent"],
-      "matchCurrentVersion": "<=20",
-      "allowedVersions": "<20"
-    },
-    {
-      "matchPackageNames": ["linuxserver/transmission"],
-      "allowedVersions": "<2021"
-    },
-    {
       "matchPackageNames": ["kibana"],
       "matchCurrentVersion": "/^8.*/",
       "allowedVersions": "/^8.*/"
     },
     {
+      "matchPackageNames": ["kingwrcy/moments"],
+      "matchCurrentVersion": "<1",
+      "allowedVersions": "<1"
+    },
+    {
       "matchPackageNames": ["linuxserver/qbittorrent"],
       "matchCurrentVersion": "<=20",
       "allowedVersions": "<20"
+    },
+    {
+      "matchPackageNames": ["linuxserver/**"],
+      "allowedVersions": "<2021"
     },
     {
       "matchPackageNames": ["photoprism/photoprism"],
