@@ -23,6 +23,36 @@
       "enabled": false
     },
     {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_9.0_*",
+      "allowedVersions": "/^emulator_9.0_*/"
+    },
+    {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_10.0_*",
+      "allowedVersions": "/^emulator_10.0_*/"
+    },
+    {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_11.0_*",
+      "allowedVersions": "/^emulator_11.0_*/"
+    },
+    {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_12.0_*",
+      "allowedVersions": "/^emulator_12.0_*/"
+    },
+    {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_13.0_*",
+      "allowedVersions": "/^emulator_13.0_*/"
+    },
+    {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_14.0_*",
+      "allowedVersions": "/^emulator_14.0_*/"
+    },
+    {
       "matchPackageNames": ["elasticsearch"],
       "matchCurrentVersion": "/^v8.*/",
       "allowedVersions": "/^v8.*/"
