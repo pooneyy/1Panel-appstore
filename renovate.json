@@ -23,22 +23,39 @@
       "enabled": false
     },
     {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_9.0_*",
+      "allowedVersions": "/^emulator_9.0_*/"
+    },
+    {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_10.0_*",
+      "allowedVersions": "/^emulator_10.0_*/"
+    },
+    {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_11.0_*",
+      "allowedVersions": "/^emulator_11.0_*/"
+    },
+    {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_12.0_*",
+      "allowedVersions": "/^emulator_12.0_*/"
+    },
+    {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_13.0_*",
+      "allowedVersions": "/^emulator_13.0_*/"
+    },
+    {
+      "matchPackageNames": ["budtmo/docker-android"],
+      "matchCurrentVersion": "emulator_14.0_*",
+      "allowedVersions": "/^emulator_14.0_*/"
+    },
+    {
       "matchPackageNames": ["elasticsearch"],
       "matchCurrentVersion": "/^v8.*/",
       "allowedVersions": "/^v8.*/"
-    },
-    {
-      "matchPackageNames": ["linuxserver/heimdall"],
-      "allowedVersions": "<2021"
-    },
-    {
-      "matchPackageNames": ["linuxserver/qbittorrent"],
-      "matchCurrentVersion": "<=20",
-      "allowedVersions": "<20"
-    },
-    {
-      "matchPackageNames": ["linuxserver/transmission"],
-      "allowedVersions": "<2021"
     },
     {
       "matchPackageNames": ["kibana"],
@@ -46,9 +63,22 @@
       "allowedVersions": "/^8.*/"
     },
     {
+      "matchPackageNames": ["kingwrcy/moments"],
+      "matchCurrentVersion": "<1",
+      "allowedVersions": "<1"
+    },
+    {
+      "matchPackageNames": ["langgenius/dify-web", "langgenius/dify-api"],
+      "groupName": "Dify"
+    },
+    {
       "matchPackageNames": ["linuxserver/qbittorrent"],
       "matchCurrentVersion": "<=20",
       "allowedVersions": "<20"
+    },
+    {
+      "matchPackageNames": ["linuxserver/**"],
+      "allowedVersions": "<2021"
     },
     {
       "matchPackageNames": ["photoprism/photoprism"],
