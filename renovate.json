@@ -68,6 +68,10 @@
       "allowedVersions": "<1"
     },
     {
+      "matchPackageNames": ["langgenius/dify-web", "langgenius/dify-api"],
+      "groupName": "Dify"
+    },
+    {
       "matchPackageNames": ["linuxserver/qbittorrent"],
       "matchCurrentVersion": "<=20",
       "allowedVersions": "<20"
