@@ -53,6 +53,17 @@
       "allowedVersions": "/^emulator_14.0_*/"
     },
     {
+      "matchPackageNames": [
+        "chaitin/safeline-mgt", 
+        "chaitin/safeline-detector", 
+        "chaitin/safeline-tengine", 
+        "chaitin/safeline-luigi", 
+        "chaitin/safeline-fvm", 
+        "chaitin/safeline-chaos"
+    ],
+      "groupName": "SafeLine"
+    },
+    {
       "matchPackageNames": ["elasticsearch"],
       "matchCurrentVersion": "/^v8.*/",
       "allowedVersions": "/^v8.*/"
