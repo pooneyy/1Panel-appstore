@@ -5,7 +5,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.234
-    image: chaitin/safeline-mgt:8.9.1
+    image: chaitin/safeline-mgt:8.10.0
     volumes:
     - /etc/localtime:/etc/localtime:ro
     - ${SAFELINE_DIR}/resources/mgt:/app/data
@@ -72,7 +72,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.237
-    image: chaitin/safeline-luigi:8.9.1
+    image: chaitin/safeline-luigi:8.10.0
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ${SAFELINE_DIR}/resources/luigi:/app/data
@@ -94,7 +94,7 @@ services:
     networks:
       1panel-network:
         ipv4_address: ${SUBNET_PREFIX}.238
-    image: chaitin/safeline-fvm:8.9.1
+    image: chaitin/safeline-fvm:8.10.0
     volumes:
       - /etc/localtime:/etc/localtime:ro
     logging:
