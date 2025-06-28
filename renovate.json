@@ -83,6 +83,10 @@
       "groupName": "Dify"
     },
     {
+      "matchPackageNames": ["lobehub/lobe-chat-database", "lobehub/lobe-chat"],
+      "groupName": "Lobe Chat"
+    },
+    {
       "matchPackageNames": ["linuxserver/qbittorrent"],
       "matchCurrentVersion": "<=20",
       "allowedVersions": "<20"
