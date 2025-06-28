@@ -64,6 +64,10 @@
       "groupName": "SafeLine"
     },
     {
+      "matchPackageNames": ["duan2001/npc", "duan2001/nps"],
+      "groupName": "NPC & NPS by duan2001"
+    },
+    {
       "matchPackageNames": ["elasticsearch"],
       "matchCurrentVersion": "/^v8.*/",
       "allowedVersions": "/^v8.*/"
@@ -109,6 +113,11 @@
       "matchPackageNames": ["xhofe/alist"],
       "matchCurrentVersion": "v3.40.0",
       "allowedVersions": "v3.40.0"
+    },
+    {
+      "matchPackageNames": ["yisier1/npc", "yisier1/nps"],
+      "allowedVersions": "<0.27",
+      "groupName": "NPC & NPS by yisier1"
     },
     {
       "matchPackageNames":[
