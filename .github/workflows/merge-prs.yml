@@ -31,7 +31,7 @@ jobs:
       - name: 合并 PR
         run: |
           for pr in ${{ steps.get-prs.outputs.pr_list }}; do
-            if ! gh pr merge $pr --merge --delete-branch --body ""; then
+            if ! gh pr merge $pr --squash --delete-branch --body ""; then
               echo "⚠️ 合并 PR #$pr 失败"
             else
               echo "✅ 合并 PR #$pr 成功"
