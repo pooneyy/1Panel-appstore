@@ -1,5 +1,5 @@
-name: "⏰为应用催更"
-description: "报告缺陷来帮助我们完善。 / Create a report to help us improve"
+name: "⏰应用有新版本了！ / App has a new version!"
+description: "当前应用商店中的应用有新版本，才可填此表单。 / Fill in this form only if the app in the appstore has a new version."
 title: "[需要更新应用] 哪个应用需要更新？ / Which app needs an update?"
 labels:
   - Update Needed
@@ -8,6 +8,8 @@ body:
     attributes:
       value: |
         ## Welcome!
+        **当前应用商店中的应用有新版本，才可填此表单。**
+        **Fill in this form only if the app in the appstore has a new version.**
 
   - type: input
     attributes:
