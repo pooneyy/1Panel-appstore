@@ -3,27 +3,8 @@ networks:
     external: true
 
 services:
-  browserless:
-    image: browserless/chrome
-    container_name: browserless-${CONTAINER_NAME}
-    labels:
-      createdBy: "Apps"
-    restart: always
-    networks:
-      - 1panel-network
-    ulimits:
-      core:
-        hard: 0
-        soft: 0
-    expose:
-      - 3000
-    healthcheck:
-      test: [ "CMD", "curl", "-f", "http://localhost:3000/pressure" ]
-      interval: 30s
-      timeout: 10s
-      retries: 3
   rsshub:
-    image: diygod/rsshub:2025-06-12
+    image: diygod/rsshub:2025-07-01
     container_name: rsshub-${CONTAINER_NAME}
     depends_on:
       - browserless
@@ -55,6 +36,26 @@ services:
       - NODE_NAME=rsshub
     healthcheck:
       test: [ "CMD", "curl", "-f", "http://localhost:1200/healthz?key=${ACCESS_KEY}" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  browserless:
+    image: browserless/chrome
+    container_name: browserless-${CONTAINER_NAME}
+    labels:
+      createdBy: "Apps"
+    restart: always
+    networks:
+      - 1panel-network
+    ulimits:
+      core:
+        hard: 0
+        soft: 0
+    expose:
+      - 3000
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:3000/pressure" ]
       interval: 30s
       timeout: 10s
       retries: 3
