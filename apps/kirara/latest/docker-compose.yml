@@ -1,13 +1,15 @@
+version: "3.8"
 services:
-  gh-proxy:
-    image: wjqserver/ghproxy:latest
+  kirara-agent:
+    image: lss233/kirara-agent-framework:latest
     container_name: ${CONTAINER_NAME}
     restart: always
+    volumes:
+      - "${DATA_PATH}:/app/data"
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:8080"
     networks:
       - 1panel-network
-    ports:
-      - "${PANEL_APP_PORT_HTTP}:80"
-    image: stilleshan/gh-proxy:2024-02-19
     labels:  
       createdBy: "Apps"
 

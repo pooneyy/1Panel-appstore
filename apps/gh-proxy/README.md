@@ -1,118 +1,132 @@
-# gh-proxy
+# GHProxy
 
-## 简介
+![GitHub Release](https://img.shields.io/github/v/release/WJQSERVER-STUDIO/ghproxy?display_name=tag&style=flat)
+![pull](https://img.shields.io/docker/pulls/wjqserver/ghproxy.svg)
+![Docker Image Size (tag)](https://img.shields.io/docker/image-size/wjqserver/ghproxy/latest)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/WJQSERVER-STUDIO/ghproxy)
+[![Go Report Card](https://goreportcard.com/badge/github.com/WJQSERVER-STUDIO/ghproxy)](https://goreportcard.com/report/github.com/WJQSERVER-STUDIO/ghproxy)
 
-github release、archive以及项目文件的加速项目，支持clone，有Cloudflare Workers无服务器版本以及Python版本
 
-## 演示
+支持 Git clone、raw、releases的 Github 加速项目, 支持自托管的同时带来卓越的性能与极低的资源占用(Golang和HertZ带来的优势), 同时支持多种额外功能
 
-[https://gh.api.99988866.xyz/](https://gh.api.99988866.xyz/)
+## 项目说明
 
-演示站为公共服务，如有大规模使用需求请自行部署，演示站有点不堪重负
+### 项目特点
 
-![imagea272c95887343279.png](https://img.maocdn.cn/img/2021/04/24/imagea272c95887343279.png)
+- ⚡ **基于 Go 语言实现，跨平台的同时提供高并发性能**
+- 🌐 **使用字节旗下的 [HertZ](https://github.com/cloudwego/hertz) 作为 Web 框架**
+- 📡 **使用 [Touka-HTTPC](https://github.com/satomitouka/touka-httpc) 作为 HTTP 客户端**
+- 📥 **支持 Git clone、raw、releases 等文件拉取**
+- 🐳 **支持反代Docker, GHCR等镜像仓库**
+- 🎨 **支持多个前端主题**
+- 🚫 **支持自定义黑名单/白名单**
+- 🗄️ **支持 Git Clone 缓存（配合 [Smart-Git](https://github.com/WJQSERVER-STUDIO/smart-git)）**
+- 🐳 **支持自托管与Docker容器化部署**
+- ⚡ **支持速率限制**
+- ⚡ **支持带宽速率限制**
+- 🔒 **支持用户鉴权**
+- 🐚 **支持 shell 脚本多层嵌套加速**
 
-当然也欢迎[捐赠](#捐赠)以支持作者
+### 项目相关
 
-## python版本和cf worker版本差异
+[DEMO](https://ghproxy.1888866.xyz)
 
-- python版本支持进行文件大小限制，超过设定返回原地址 [issue #8](https://github.com/hunshcn/gh-proxy/issues/8)
+[TG讨论群组](https://t.me/ghproxy_go)
 
-- python版本支持特定user/repo 封禁/白名单 以及passby [issue #41](https://github.com/hunshcn/gh-proxy/issues/41)
+[相关文章](https://blog.wjqserver.com/categories/my-program/)
 
-## 使用
+[GHProxy项目文档](https://wjqserver-docs.pages.dev/docs/ghproxy/) 感谢 [@redbunnys](https://github.com/redbunnys)的维护
 
-直接在copy出来的url前加`https://gh.api.99988866.xyz/`即可
+### 使用示例
 
-也可以直接访问，在input输入
+```bash 
+# 下载文件
+https://ghproxy.1888866.xyz/raw.githubusercontent.com/WJQSERVER-STUDIO/tools-stable/main/tools-stable-ghproxy.sh
+https://ghproxy.1888866.xyz/https://raw.githubusercontent.com/WJQSERVER-STUDIO/tools-stable/main/tools-stable-ghproxy.sh
 
-***大量使用请自行部署，以上域名仅为演示使用。***
+# 克隆仓库
+git clone https://ghproxy.1888866.xyz/github.com/WJQSERVER-STUDIO/ghproxy.git
+git clone https://ghproxy.1888866.xyz/https://github.com/WJQSERVER-STUDIO/ghproxy.git
 
-访问私有仓库可以通过
+# Docker(OCI) 代理
+docker pull gh.example.com/wjqserver/ghproxy
+docker pull gh.example.com/adguard/adguardhome
 
-`git clone https://user:TOKEN@ghproxy.com/https://github.com/xxxx/xxxx` [#71](https://github.com/hunshcn/gh-proxy/issues/71)
+docker pull gh.example.com/docker.io/wjqserver/ghproxy
+docker pull gh.example.com/docker.io/adguard/adguardhome
 
-以下都是合法输入（仅示例，文件不存在）：
+docker pull gh.example.com/ghcr.io/openfaas/queue-worker 
+```
 
-- 分支源码：https://github.com/hunshcn/project/archive/master.zip
+## 部署说明
 
-- release源码：https://github.com/hunshcn/project/archive/v0.1.0.tar.gz
-
-- release文件：https://github.com/hunshcn/project/releases/download/v0.1.0/example.zip
-
-- 分支文件：https://github.com/hunshcn/project/blob/master/filename
-
-- commit文件：https://github.com/hunshcn/project/blob/1111111111111111111111111111/filename
-
-- gist：https://gist.githubusercontent.com/cielpy/351557e6e465c12986419ac5a4dd2568/raw/cmd.py
-
-## cf worker版本部署
-
-首页：https://workers.cloudflare.com
-
-注册，登陆，`Start building`，取一个子域名，`Create a Worker`。
-
-复制 [index.js](https://cdn.jsdelivr.net/gh/hunshcn/gh-proxy@master/index.js)  到左侧代码框，`Save and deploy`。如果正常，右侧应显示首页。
-
-`ASSET_URL`是静态资源的url（实际上就是现在显示出来的那个输入框单页面）
-
-`PREFIX`是前缀，默认（根路径情况为"/"），如果自定义路由为example.com/gh/*，请将PREFIX改为 '/gh/'，注意，少一个杠都会错！
-
-## Python版本部署
+可参考文章: https://blog.wjqserver.com/post/ghproxy-deploy-with-smart-git/
 
 ### Docker部署
 
+- Docker-cli
+
 ```
-docker run -d --name="gh-proxy-py" \
-  -p 0.0.0.0:80:80 \
-  --restart=always \
-  hunsh/gh-proxy-py:latest
-```
-
-第一个80是你要暴露出去的端口
-
-### 直接部署
-
-安装依赖（请使用python3）
-
-```pip install flask requests```
-
-按需求修改`app/main.py`的前几项配置
-
-*注意:* 可能需要在`return Response`前加两行
-```python3
-if 'Transfer-Encoding' in headers:
-    headers.pop('Transfer-Encoding')
+docker run -p 7210:8080 -v ./ghproxy/log/run:/data/ghproxy/log -v ./ghproxy/log/caddy:/data/caddy/log -v ./ghproxy/config:/data/ghproxy/config  --restart always wjqserver/ghproxy
 ```
 
-### 注意
+- Docker-Compose (建议使用)
 
-python版本的机器如果无法正常访问github.io会启动报错，请自行修改静态文件url
+  参看[docker-compose.yml](https://github.com/WJQSERVER-STUDIO/ghproxy/blob/main/docker/compose/docker-compose.yml)
 
-python版本默认走服务器（2021.3.27更新）
+### 二进制文件部署(不推荐)
 
-## Cloudflare Workers计费
+一键部署脚本:
 
-到 `overview` 页面可参看使用情况。免费版每天有 10 万次免费请求，并且有每分钟1000次请求的限制。
+```bash
+wget -O install.sh https://raw.githubusercontent.com/WJQSERVER-STUDIO/ghproxy/main/deploy/install.sh && chmod +x install.sh &&./install.sh
+```
 
-如果不够用，可升级到 $5 的高级版本，每月可用 1000 万次请求（超出部分 $0.5/百万次请求）。
+Dev一键部署脚本:
 
-## Changelog
+```bash
+wget -O install-dev.sh https://raw.githubusercontent.com/WJQSERVER-STUDIO/ghproxy/dev/deploy/install-dev.sh && chmod +x install-dev.sh && ./install-dev.sh
+```
 
-* 2020.04.10 增加对`raw.githubusercontent.com`文件的支持
-* 2020.04.09 增加Python版本（使用Flask）
-* 2020.03.23 新增了clone的支持
-* 2020.03.22 初始版本
+## 配置说明
 
-## 链接
+参看[项目文档](https://github.com/WJQSERVER-STUDIO/ghproxy/blob/main/docs/config.md)
 
-[我的博客](https://hunsh.net)
+### 前端页面
 
-## 参考
+参看[GHProxy-Frontend](https://github.com/WJQSERVER-STUDIO/GHProxy-Frontend)
 
-[jsproxy](https://github.com/EtherDream/jsproxy/)
+## 项目简史
 
-## 捐赠
+**本项目是[WJQSERVER-STUDIO/ghproxy-go](https://github.com/WJQSERVER-STUDIO/ghproxy-go)的重构版本,实现了原项目原定功能的同时,进一步优化了性能**
+关于此项目的详细开发过程,请参看Commit记录与[CHANGELOG.md](https://github.com/WJQSERVER-STUDIO/ghproxy/blob/main/CHANGELOG.md)
 
-![wx.png](https://img.maocdn.cn/img/2021/04/24/image.md.png)
-![ali.png](https://www.helloimg.com/images/2021/04/24/BK9vmb.md.png)
+- v3.0.0 迁移到HertZ框架, 进一步提升效率
+- v2.4.1 对路径匹配进行优化
+- v2.0.0 对`proxy`核心模块进行了重构,大幅优化内存占用
+- v1.0.0 迁移至本仓库,并再次重构内容实现
+- v0.2.0 重构项目实现
+
+## LICENSE
+
+本项目使用WJQserver Studio License 2.0 [WJQserver Studio License 2.0](https://wjqserver-studio.github.io/LICENSE/LICENSE.html)
+
+在v2.3.0之前, 本项目使用WJQserver Studio License 1.2
+
+在v1.0.0版本之前,本项目继承于[WJQSERVER-STUDIO/ghproxy-go](https://github.com/WJQSERVER-STUDIO/ghproxy-go)的APACHE2.0 LICENSE VERSION
+
+## 赞助
+
+如果您觉得本项目对您有帮助,欢迎赞助支持,您的赞助将用于Demo服务器开支及开发者时间成本支出,感谢您的支持!
+
+为爱发电,开源不易
+
+爱发电: https://afdian.com/a/wjqserver
+
+USDT(TRC20): `TNfSYG6F2vkiibd6J6mhhHNWDgWgNdF5hN`
+
+### 捐赠列表
+
+| 赞助人    |金额|
+|--------|------|
+| starry | 8 USDT (TRC20)   |
