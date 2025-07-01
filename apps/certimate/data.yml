@@ -15,5 +15,5 @@ additionalProperties:
   limit: 0
   recommend: 0
   website: https://docs.certimate.me
-  github: https://github.com/usual2970/certimate
+  github: https://github.com/certimate-go/certimate
   document: https://docs.certimate.me
