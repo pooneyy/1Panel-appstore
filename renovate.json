@@ -78,11 +78,6 @@
       "allowedVersions": "/^8.*/"
     },
     {
-      "matchPackageNames": ["kingwrcy/moments"],
-      "matchCurrentVersion": "<1",
-      "allowedVersions": "<1"
-    },
-    {
       "matchPackageNames": ["langgenius/dify-web", "langgenius/dify-api"],
       "groupName": "Dify"
     },
