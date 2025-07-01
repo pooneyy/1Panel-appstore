@@ -1,13 +1,14 @@
 services:
-  gh-proxy:
-    image: wjqserver/ghproxy:latest
+  magic-resume:
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:80"
-    image: stilleshan/gh-proxy:2024-02-19
+      - "${PANEL_APP_PORT_HTTP}:3000"
+    environment:
+      - NODE_ENV=production
+    image: siyueqingchen/magic-resume:main
     labels:  
       createdBy: "Apps"
 

@@ -1,6 +1,6 @@
 additionalProperties:
   formFields:
-    - default: 40170
+    - default: 40250
       edit: true
       envKey: PANEL_APP_PORT_HTTP
       labelEn: Port
@@ -8,10 +8,3 @@ additionalProperties:
       required: true
       rule: paramPort
       type: number
-    - default: "./data"
-      disabled: true
-      envKey: DATA_PATH
-      labelEn: Data Path
-      labelZh: 数据路径
-      required: true
-      type: text
