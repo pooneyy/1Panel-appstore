@@ -1,19 +1,19 @@
 services:
-  keepassxc:
+  nzbget:
     container_name: ${CONTAINER_NAME}
-    image: linuxserver/keepassxc:latest
+    image: nzbgetcom/nzbget:v25.1
     restart: always
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:3000"
+      - "${PANEL_APP_PORT_HTTP}:6789"
     environment:
       - TZ=Asia/Shanghai
       - PUID=1000
       - PGID=1000
     volumes:
       - ./config:/config
-      - ./db:/db
+      - ./downloads:/downloads
     labels:
       createdBy: "Apps"
 networks:

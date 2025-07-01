@@ -19,7 +19,7 @@ services:
       - SUBFOLDER=/
       - TITLE=Kali Linux
     shm_size: "1gb"
-    image: lscr.io/linuxserver/kali-linux:latest
+    image: linuxserver/kali-linux:latest
     labels:
       createdBy: "Apps"
 networks:

@@ -1,19 +1,19 @@
 services:
-  keepassxc:
+  netbox:
     container_name: ${CONTAINER_NAME}
-    image: linuxserver/keepassxc:latest
+    image: linuxserver/netbox:4.3.3
     restart: always
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:3000"
+      - "${PANEL_APP_PORT_HTTP}:8000"
     environment:
       - TZ=Asia/Shanghai
       - PUID=1000
       - PGID=1000
     volumes:
       - ./config:/config
-      - ./db:/db
+      - ./data:/data
     labels:
       createdBy: "Apps"
 networks:

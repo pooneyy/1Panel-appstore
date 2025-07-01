@@ -1,7 +1,7 @@
 services:
   netbox:
     container_name: ${CONTAINER_NAME}
-    image: lscr.io/linuxserver/netbox:latest
+    image: linuxserver/netbox:latest
     restart: always
     networks:
       - 1panel-network
