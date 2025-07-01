@@ -1,16 +1,19 @@
+version: "3.8"
 services:
-  moments1:
+  clear:
+    image: eastwind996/clear:v1.0.4
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:3000"
+      - "${PANEL_APP_PORT_HTTP}:8080"
     volumes:
       - "${DATA_PATH}:/app/data"
-      - /etc/localtime:/etc/localtime:ro
-      - /etc/timezone:/etc/timezone:ro
-    image: kingwrcy/moments:1.0.7
+    environment:
+      - "TWIKOO_THROTTLE=1000"
+      - "TWIKOO_PORT=8080"
+    image: imaegoo/twikoo:latest
     labels:  
       createdBy: "Apps"
 
