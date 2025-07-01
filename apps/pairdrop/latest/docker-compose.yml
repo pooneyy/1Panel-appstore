@@ -1,7 +1,7 @@
 version: "3"
 services:
     pairdrop:
-        image: lscr.io/linuxserver/pairdrop:latest
+        image: linuxserver/pairdrop:latest
         container_name: ${CONTAINER_NAME}
         restart: always
         ports:

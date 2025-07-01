@@ -1,7 +1,7 @@
 services:
   nzbget:
     container_name: ${CONTAINER_NAME}
-    image: lscr.io/linuxserver/nzbget:latest
+    image: linuxserver/nzbget:latest
     restart: always
     networks:
       - 1panel-network

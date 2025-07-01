@@ -1,19 +1,18 @@
 services:
-  keepassxc:
+  adguardhome-sync:
     container_name: ${CONTAINER_NAME}
-    image: linuxserver/keepassxc:latest
     restart: always
     networks:
       - 1panel-network
     ports:
-      - "${PANEL_APP_PORT_HTTP}:3000"
-    environment:
-      - TZ=Asia/Shanghai
-      - PUID=1000
-      - PGID=1000
+      - "${PANEL_APP_PORT_HTTP}:8080"
     volumes:
       - ./config:/config
-      - ./db:/db
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Asia/Shanghai
+    image: linuxserver/adguardhome-sync:0.7.6
     labels:
       createdBy: "Apps"
 networks:
