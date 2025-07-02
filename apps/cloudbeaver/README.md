@@ -1,70 +1,68 @@
-# CloudBeaver Community
+# CloudBeaver 社区版
 
-<img src="https://github.com/dbeaver/cloudbeaver/wiki/images/cloudbeaver-logo.png" width="250"/>
+![](https://github.com/dbeaver/cloudbeaver/wiki/images/cloudbeaver-logo.png)
 
-Cloud Database Manager - Community Edition.  
-CloudBeaver is a web server which provides rich web interface. Server itself is a Java application, web part is written on TypeScript and React.  
-It is free to use and open-source (licensed under [Apache 2](https://github.com/dbeaver/cloudbeaver/blob/devel/LICENSE) license).  
-See out [WIKI](https://github.com/dbeaver/cloudbeaver/wiki) for more details.  
+Cloud 数据库管理器 - 社区版。
+CloudBeaver 是一个 web 服务器，提供丰富的 web 界面。服务器本身是一个 Java 应用程序，web 部分使用 TypeScript 和 React 编写。
+它免费提供使用，并且是开源的（采用 [Apache 2](https://github.com/dbeaver/cloudbeaver/blob/devel/LICENSE) 许可证）。 %%
+访问 [WIKI](https://github.com/dbeaver/cloudbeaver/wiki) 以获取更多细节。
 
 ![](https://github.com/dbeaver/cloudbeaver/wiki/images/demo_screenshot_1.png)
 
-## Run in Docker
+## 使用 Docker 运行
 
-- [Official Docker repository](https://hub.docker.com/r/dbeaver/cloudbeaver)
-- [Running instructions](https://github.com/dbeaver/cloudbeaver/wiki/Run-Docker-Container)
+*   [官方 Docker 仓库](https://hub.docker.com/r/dbeaver/cloudbeaver)
+*   [运行说明](https://github.com/dbeaver/cloudbeaver/wiki/Run-Docker-Container)
 
-## Demo server
+## 演示服务器
 
-You can see live demo of CloudBeaver here: https://demo.cloudbeaver.io  
+您可以在以下地址查看 CloudBeaver 的实时演示：\[https://demo.cloudbeaver.io\](https://demo.cloudbeaver.io)
 
-[Database access instructions](https://github.com/dbeaver/cloudbeaver/wiki/Demo-Server)
+[数据库访问说明](https://github.com/dbeaver/cloudbeaver/wiki/Demo-Server)
 
-## Changelog
+## 更新日志
 
 ### CloudBeaver 23.1.3 - 2023-07-24
 
-- Users can simultaneously edit resources, allowing them to work together;
-- We have improved the UX in the search bar - users can delete a query or request by clicking on the cross icon;
-- The search request considers file names and exclude the .sql file extension for now;
-- Different bug fixes and enhancements have been made.
+*   用户可以同时编辑资源，从而可以协同工作；
+*   我们改进了搜索栏的用户体验——用户可以通过点击叉号图标删除查询或请求；
+*   搜索请求目前会考虑文件名，但不包括.sql 文件扩展名；
+*   已进行了不同的错误修复和增强。
 
 ### CloudBeaver 23.1.2 - 2023-07-10
 
-- We have improved the SQL Editor functionality by adding support for displaying tables with nested arrays of objects;
-- The ability to compress files during export allows for faster download speeds, particularly for larger files;
-- New Settings panel displays the product configuration settings such as Minimum fetch size, Maximum fetch size, and Default fetch size from the Data Editor;
-- Different bug fixes and enhancements have been made.
+*   我们改进了 SQL 编辑器的功能，增加了显示嵌套对象数组的表格的支持；
+*   导出时压缩文件的能力可以提高下载速度，尤其是对于大文件；
+*   新的设置面板显示来自数据编辑器的最小获取大小、最大获取大小和默认获取大小等产品配置设置；
+*   不同问题已修复并增加了多项改进。
 
 ### CloudBeaver 23.1.1 - 2023-06-26
 
-- Connections are consistently displayed now when they are pre-configured into the workspace in the Global Configuration json file.
-- Different bug fixes and enhancements have been made.
+*   现在，当连接在全局配置 json 文件中预配置到工作空间时，连接将始终显示。
+*   不同问题已修复并增加了多项改进。
 
 ### CloudBeaver 23.1.0 - 2023-06-05
 
-Changes since 23.0.0
+自 23.0.0 版以来的更改
 
-- Data viewer:
-  - New grouping panel menu was added in the Data Viewer. This panel extracts unique values from the database column for count. Users can drag and drop the column to the grouping panel and get the results immediately. Sorting, filtering and exporting of the results are available on the Grouping panel. 
-- SQL Editor:
-  - We improved the performance of the SQL-editor - as a result, handling scripts with up to 10 000 lines does not present any challenges;
-  - In the SQL-editor, pressing Tab/Space followed by Enter now causes the cursor to move to a new line;
-  - In the SQL editor, when the cursor goes back on the query, the previous hints are displayed;
-  - Error when running SQL with semicolon has been fixed.
-- Connections:
-  - If there is an error in saving the data, the tab for the chosen connection dialog will stay open to allow corrections;
-  - The URL-configuration for PostgreSQL now correctly displays only a single database.
-- Driver management:
-  - The CE version now offers the updated sqlite-jdbc driver, version 3.41.2;
-  - CloudBeaver has the option to connect to H2 database version 2;
-  - The internal CloudBeaver database is upgraded to the newest H2 version 2 to avoid vulnerability issues. The database will be safely upgraded automatically for the servers with default configurations. You can perform this upgrade manually if you have a custom configuration for this database in your infrastructure.
-- Connections:
-  - Option to increase the maximum size of text files displayed in the value panel (using the sqlTextPreviewMaxLength parameter) has been added;
-  - Support for custom logging configuration has been added. An external configuration file can be used instead of the default configuration.
+*   数据查看器：
+    *   在数据查看器中新增了分组面板菜单。此面板可以从数据库列中提取用于计数的唯一值。用户可以将列拖放到分组面板中并立即获得结果。分组面板中还提供了对结果进行排序、过滤和导出的功能。
+*   SQL 编辑器:
+    *   我们改进了 SQL 编辑器的性能——现在处理包含多达 10000 行的脚本不再有任何挑战；
+    *   在 SQL 编辑器中，按下 Tab/Space 后跟 Enter 键会使光标移动到新行；
+    *   在 SQL 编辑器中，当光标返回查询时，会显示之前的提示；
+    *   运行包含分号的 SQL 时的错误已修复。
+*   连接：
+    *   如果保存数据时出现错误，将打开所选连接对话框的选项卡以允许进行修正；
+    *   PostgreSQL 的 URL 配置现在正确地只显示一个数据库。
+*   驱动管理：
+    *   CE 版本现在提供了更新的 sqlite-jdbc 驱动，版本为 3.41.2；
+    *   CloudBeaver 可以连接到 H2 数据库版本 2；
+    *   CloudBeaver 内部数据库升级到最新的 H2 版本 2 以避免安全漏洞问题。对于默认配置的服务器，数据库将安全地自动升级。如果您在基础设施中为该数据库设置了自定义配置，可以手动执行此升级。
+*   连接：
+    *   现在可以在值面板中显示更大尺寸的文本文件（通过使用 sqlTextPreviewMaxLength 参数）；
+    *   增加了对自定义日志配置的支持。可以使用外部配置文件替代默认配置。
 
+### 旧版本的 CloudBeaver
 
-### Old CloudBeaver releases
-
-You can find information about earlier releases on the CloudBeaver wiki https://github.com/dbeaver/cloudbeaver/wiki/Releases.
-
+您可以在 CloudBeaver 维基上找到关于早期版本的信息：[https://github.com/dbeaver/cloudbeaver/wiki/Releases](https://github.com/dbeaver/cloudbeaver/wiki/Releases)。

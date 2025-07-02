@@ -1,57 +1,54 @@
-<div align="center" width="100%">
-    <img src="https://github.com/louislam/dockge/raw/master/frontend/public/icon.svg" width="128" alt="" />
-</div>
+![](https://github.com/louislam/dockge/raw/master/frontend/public/icon.svg)
 
 # Dockge
 
-A fancy, easy-to-use and reactive self-hosted docker compose.yaml stack-oriented manager.
+一个花哨、易于使用且反应灵敏的自托管 docker compose.yaml 堆栈式管理器。
 
 ![GitHub Repo stars](https://img.shields.io/github/stars/louislam/dockge?logo=github) ![Docker Pulls](https://img.shields.io/docker/pulls/louislam/dockge?logo=docker) ![Docker Image Version (latest semver)](https://img.shields.io/docker/v/louislam/dockge/latest?label=docker%20image%20ver.) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/louislam/dockge/master?logo=github)
 
-<img src="https://github.com/louislam/dockge/assets/1336778/26a583e1-ecb1-4a8d-aedf-76157d714ad7" width="900" alt="" />
+![](https://github.com/louislam/dockge/assets/1336778/26a583e1-ecb1-4a8d-aedf-76157d714ad7)
 
-View Video: https://youtu.be/AWAlOQeNpgU?t=48
+观看视频：\[https://youtu.be/AWAlOQeNpgU?t=48\](https://youtu.be/AWAlOQeNpgU?t=48)
 
-## ⭐ Features
+## ⭐ 特点
 
-- Manage `compose.yaml`
-  - Create/Edit/Start/Stop/Restart/Delete
-  - Update Docker Images
-- Interactive Editor for `compose.yaml`
-- Interactive Web Terminal
-- Reactive
-   - Everything is just responsive. Progress (Pull/Up/Down) and terminal output are in real-time
-- Easy-to-use & fancy UI
-   - If you love Uptime Kuma's UI/UX, you will love this one too
-- Convert `docker run ...` commands into `compose.yaml`
-- File based structure
-   - Dockge won't kidnap your compose files, they are stored on your drive as usual. You can interact with them using normal `docker compose` commands
-   <img src="https://github.com/louislam/dockge/assets/1336778/cc071864-592e-4909-b73a-343a57494002" width=300 />
-
+*   管理 `compose.yaml`
+    *   创建/编辑/启动/停止/重启/删除
+    *   更新 Docker 镜像
+*   `compose.yaml` 的交互式编辑器
+*   交互式网络终端
+*   响应式
+    *   一切都很响应。进度（下拉/上拉）和终端输出都是实时的
+*   易于使用且界面精美
+    *   如果你喜欢 Uptime Kuma 的 UI/UX，你也会喜欢这个
+*   将 `docker run ...` 命令转换为 `compose.yaml`
+*   基于文件的架构
+    *   Docker 不会绑架你的 compose 文件，它们会像往常一样存储在你的驱动器上。你可以使用正常的 `docker compose` 命令与之交互![](https://github.com/louislam/dockge/assets/1336778/cc071864-592e-4909-b73a-343a57494002)
 
 ![](https://github.com/louislam/dockge/assets/1336778/89fc1023-b069-42c0-a01c-918c495f1a6a)
 
-## 🔧 How to Install
+## 🔧 如何安装
 
-Requirements:
-- [Docker](https://docs.docker.com/engine/install/) 20+ / Podman
-- (Podman only) podman-docker (Debian: `apt install podman-docker`)
-- OS:
-  - Major Linux distros that can run Docker/Podman such as:
-     - ✅ Ubuntu
-     - ✅ Debian (Bullseye or newer)
-     - ✅ Raspbian (Bullseye or newer)
-     - ✅ CentOS
-     - ✅ Fedora
-     - ✅ ArchLinux
-  - ❌ Debian/Raspbian Buster or lower is not supported
-  - ❌ Windows (Will be supported later)
-- Arch: armv7, arm64, amd64 (a.k.a x86_64)
+要求：
 
-### Basic
+*   [Docker](https://docs.docker.com/engine/install/) 20+ / Podman
+*   （仅限 Podman）podman-docker（Debian：`apt install podman-docker`）
+*   操作系统：
+    *   可以运行 Docker/Podman 的主要 Linux 发行版，例如：
+        *   ✅ Ubuntu
+        *   ✅ Debian（Bullseye 或更新版）
+        *   ✅ Raspbian（Bullseye 或更新版）
+        *   ✅ CentOS
+        *   ✅ Fedora
+        *   ✅ ArchLinux
+    *   ❌ Debian/Raspbian Buster 或更低版本不受支持
+    *   ❌ Windows（将稍后支持）
+*   架构：armv7, arm64, amd64（即 x86\_64）
 
-- Default Stacks Directory: `/opt/stacks`
-- Default Port: 5001
+### 基本
+
+*   默认栈目录：`/opt/stacks`
+*   默认端口：5001
 
 ```
 # Create directories that store your stacks and stores Dockge's stack
@@ -68,34 +65,32 @@ docker compose up -d
 # docker-compose up -d
 ```
 
-Dockge is now running on http://localhost:5001
+Dockge 现在运行在 [http://localhost:5001](http://localhost:5001)
 
-### Advanced
+### 高级
 
-If you want to store your stacks in another directory, you can generate your compose.yaml file by using the following URL with custom query strings.
+如果您想将栈存储在其他目录，可以使用以下带有自定义查询字符串的 URL 生成您的 compose.yaml 文件。
 
 ```
 # Download your compose.yaml
 curl "https://dockge.kuma.pet/compose.yaml?port=5001&stacksPath=/opt/stacks" --output compose.yaml
 ```
 
-- port=`5001`
-- stacksPath=`/opt/stacks`
+*   port=`5001`
+*   stacksPath=`/opt/stacks`
 
-Interactive compose.yaml generator is available on: 
-https://dockge.kuma.pet
+交互式 compose.yaml 生成器可在以下网址获取： [https://dockge.kuma.pet](https://dockge.kuma.pet)
 
-## How to Update
+## 如何更新
 
 ```bash
 cd /opt/dockge
 docker compose pull && docker compose up -d
 ```
 
-## Screenshots
+## 屏幕截图
 
 ![](https://github.com/louislam/dockge/assets/1336778/e7ff0222-af2e-405c-b533-4eab04791b40)
-
 
 ![](https://github.com/louislam/dockge/assets/1336778/7139e88c-77ed-4d45-96e3-00b66d36d871)
 
@@ -103,63 +98,64 @@ docker compose pull && docker compose up -d
 
 ![](https://github.com/louislam/dockge/assets/1336778/a4478d23-b1c4-4991-8768-1a7cad3472e3)
 
+## 动机
 
-## Motivations
+*   我已经使用 Portainer 一段时间了，但在堆栈管理方面，我有时对其不太满意。例如，有时我尝试部署堆栈时，加载图标会空转几分钟而没有进展。有时错误信息也不清晰。
+*   尝试使用 ES 模块 + TypeScript 进行开发（最初，我计划使用 Deno 或 Bun.js，但它们不支持 arm64，所以我退回到 Node.js）
 
-- I have been using Portainer for some time, but for the stack management, I am sometimes not satisfied with it. For example, sometimes when I try to deploy a stack, the loading icon keeps spinning for a few minutes without progress. And sometimes error messages are not clear.
-- Try to develop with ES Module + TypeScript (Originally, I planned to use Deno or Bun.js, but they don't have support for arm64, so I stepped back to Node.js)
+如果您喜欢这个项目，请考虑给它一个⭐。
 
-If you love this project, please consider giving it a ⭐.
+## 🗣️ 社区和贡献
 
+### 错误报告
 
-## 🗣️ Community and Contribution
+[https://github.com/louislam/dockge/issues](https://github.com/louislam/dockge/issues)
 
-### Bug Report
-https://github.com/louislam/dockge/issues
+### 寻求帮助/讨论
 
-### Ask for Help / Discussions
-https://github.com/louislam/dockge/discussions
+[https://github.com/louislam/dockge/discussions](https://github.com/louislam/dockge/discussions)
 
 ### Translation
-If you want to translate Dockge into your language, please read [Translation Guide](https://github.com/louislam/dockge/blob/master/frontend/src/lang/README.md)
 
-### Create a Pull Request
+如果您想将 Dockge 翻译成您的语言，请阅读[翻译指南](https://github.com/louislam/dockge/blob/master/frontend/src/lang/README.md)
 
-Be sure to read the [guide](https://github.com/louislam/dockge/blob/master/CONTRIBUTING.md), as we don't accept all types of pull requests and don't want to waste your time.
+### 创建一个拉取请求
 
-## FAQ
+请务必阅读[指南](https://github.com/louislam/dockge/blob/master/CONTRIBUTING.md) ，因为我们不接受所有类型的拉取请求，也不希望浪费您的时间。
+
+## 常见问题
 
 #### "Dockge"?
 
-"Dockge" is a coinage word which is created by myself. I originally hoped it sounds like `Dodge`, but apparently many people called it `Dockage`, it is also acceptable.
+"Dockge" 是一个我创造的合成词。我最初希望它听起来像 `Dodge`，但显然很多人称之为 `Dockage`，这也是可以接受的。
 
-The naming idea came from Twitch emotes like `sadge`, `bedge` or `wokege`. They all end in `-ge`.
+命名灵感来自 Twitch 表情包，如 `sadge`、`bedge` 或 `wokege`。它们都以 `-ge` 结尾。
 
-#### Can I manage a single container without `compose.yaml`?
+#### 我能否在不使用 `compose.yaml` 的情况下管理单个容器？
 
-The main objective of Dockge is to try to use the docker `compose.yaml` for everything. If you want to manage a single container, you can just use Portainer or Docker CLI.
+Dockge 的主要目标是尝试使用 docker `compose.yaml` 来处理所有事情。如果您只想管理单个容器，您可以直接使用 Portainer 或 Docker CLI。
 
-#### Can I manage existing stacks?
+#### 我能管理现有的堆栈吗？
 
-Yes, you can. However, you need to move your compose file into the stacks directory:
+是的，您可以。但是，您需要将您的 compose 文件移动到堆栈目录：
 
-1. Stop your stack
-2. Move your compose file into `/opt/stacks/<stackName>/compose.yaml`
-3. In Dockge, click the " Scan Stacks Folder" button in the top-right corner's dropdown menu
-4. Now you should see your stack in the list
+1.  停止您的堆栈
+2.  将你的 compose 文件移动到 `/opt/stacks/<stackName>/compose.yaml`
+3.  在 Dockge 中，点击右上角下拉菜单中的“扫描堆叠文件夹”按钮
+4.  现在你应该能在列表中看到你的堆叠
 
-#### Is Dockge a Portainer replacement?
+#### Dockge 是 Portainer 的替代品吗？
 
-Yes or no. Portainer provides a lot of Docker features. While Dockge is currently only focusing on docker-compose with a better user interface and better user experience.
+是的或否。Portainer 提供了许多 Docker 功能。而 Dockge 目前仅专注于 docker-compose，拥有更好的用户界面和用户体验。
 
-If you want to manage your container with docker-compose only, the answer may be yes.
+如果您只想使用 docker-compose 来管理容器，答案可能是“是”。
 
-If you still need to manage something like docker networks, single containers, the answer may be no.
+如果您还需要管理像 docker 网络、单个容器这样的功能，答案可能是“否”。
 
-#### Can I install both Dockge and Portainer?
+#### 我能否同时安装 Dockge 和 Portainer？
 
-Yes, you can.
+是的，你可以。
 
-## Others
+## 其他人
 
-Dockge is built on top of [Compose V2](https://docs.docker.com/compose/migrate/). `compose.yaml`  also known as `docker-compose.yml`.
+Dockge 是基于 [Compose V2](https://docs.docker.com/compose/migrate/) 构建的。 `compose.yaml` 也称为 `docker-compose.yml`。

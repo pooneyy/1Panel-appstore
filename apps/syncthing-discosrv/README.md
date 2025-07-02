@@ -1,129 +1,74 @@
-[![Syncthing][14]][15]
+[![Syncthing](https://github.com/syncthing/syncthing/raw/main/assets/logo-text-128.png)](https://syncthing.net/)
 
----
+* * *
 
-[![MPLv2 License](https://img.shields.io/badge/license-MPLv2-blue.svg?style=flat-square)](https://www.mozilla.org/MPL/2.0/)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/88/badge)](https://bestpractices.coreinfrastructure.org/projects/88)
-[![Go Report Card](https://goreportcard.com/badge/github.com/syncthing/syncthing)](https://goreportcard.com/report/github.com/syncthing/syncthing)
+[![MPLv2 License](https://img.shields.io/badge/license-MPLv2-blue.svg?style=flat-square)](https://www.mozilla.org/MPL/2.0/) [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/88/badge)](https://bestpractices.coreinfrastructure.org/projects/88) [![Go Report Card](https://goreportcard.com/badge/github.com/syncthing/syncthing)](https://goreportcard.com/report/github.com/syncthing/syncthing)
 
-## Goals
+## 目标
 
-Syncthing is a **continuous file synchronization program**. It synchronizes
-files between two or more computers. We strive to fulfill the goals below.
-The goals are listed in order of importance, the most important one being
-the first. This is the summary version of the goal list - for more
-commentary, see the full [Goals document][13].
+Syncthing 是一个**持续文件同步程序** 。它可以在两台或多台计算机之间同步文件。我们力求实现以下目标。这些目标按重要性排序，最重要的目标排在最前面。以下为目标列表的摘要版本 - 如需更多注释，请参阅完整的[目标文档](https://github.com/syncthing/syncthing/blob/main/GOALS.md) 。
 
-Syncthing should be:
+Syncthing 应该是：
 
-1. **Safe From Data Loss**
+1.  **防止数据丢失**
+    
+    保护用户的数据至关重要。我们采取一切合理措施以避免损坏用户的文件。
+    
+2.  **抵御攻击者**
+    
+    再次强调，保护用户的数据至关重要。无论我们还有哪些其他目标，我们绝不能让用户的数据容易被未经授权的第三方窃听或篡改。
+    
+3.  **易于使用**
+    
+    Syncthing 应该易于接近、易于理解且包容性强。
+    
+4.  **自动运行**
+    
+    用户交互仅在必要时才应被要求。
+    
+5.  **普遍可用**
+    
+    Syncthing 应在每台常见计算机上运行。我们深知最新技术并非每个人都能获得。
+    
+6.  **个人用户**
+    
+    Syncthing 主要是为了赋予个人用户安全、安全且易于使用的文件同步能力。
+    
+7.  **其他一切**
+    
+    有很多我们关心的事情没有列在上面。只要这些价值不与上述目标相冲突，优化它们是可以接受的。
+    
 
-   Protecting the user's data is paramount. We take every reasonable
-   precaution to avoid corrupting the user's files.
+## 快速入门
 
-2. **Secure Against Attackers**
+请参阅[入门指南](https://docs.syncthing.net/intro/getting-started.html) 。
 
-   Again, protecting the user's data is paramount. Regardless of our other
-   goals we must never allow the user's data to be susceptible to
-   eavesdropping or modification by unauthorized parties.
-
-3. **Easy to Use**
-
-   Syncthing should be approachable, understandable and inclusive.
-
-4. **Automatic**
-
-   User interaction should be required only when absolutely necessary.
-
-5. **Universally Available**
-
-   Syncthing should run on every common computer. We are mindful that the
-   latest technology is not always available to any given individual.
-
-6. **For Individuals**
-
-   Syncthing is primarily about empowering the individual user with safe,
-   secure and easy to use file synchronization.
-
-7. **Everything Else**
-
-   There are many things we care about that don't make it on to the list. It
-   is fine to optimize for these values, as long as they are not in conflict
-   with the stated goals above.
-
-## Getting Started
-
-Take a look at the [getting started guide][2].
-
-There are a few examples for keeping Syncthing running in the background
-on your system in [the etc directory][3]. There are also several [GUI
-implementations][11] for Windows, Mac and Linux.
+系统中可以在 [etc 目录](https://github.com/syncthing/syncthing/blob/main/etc) 找到一些在后台运行 Syncthing 的示例。此外，还有适用于 Windows、Mac 和 Linux 的几种 [图形界面实现](https://docs.syncthing.net/users/contrib.html#gui-wrappers) 。
 
 ## Docker
 
-To run Syncthing in Docker, see [the Docker README][16].
+要在 Docker 中运行 Syncthing，请参阅 [Docker README](https://github.com/syncthing/syncthing/blob/main/README-Docker.md)。
 
-## Vote on features/bugs
+## 投票表决功能/bug
 
-We'd like to encourage you to [vote][12] on issues that matter to you.
-This helps the team understand what are the biggest pain points for our users, and could potentially influence what is
-being worked on next.
+我们鼓励您就您关心的问题进行投票。这有助于团队了解用户遇到的最大痛点，并可能影响接下来的工作重点。
 
-## Getting in Touch
+## 联系方式
 
-The first and best point of contact is the [Forum][8].
-If you've found something that is clearly a
-bug, feel free to report it in the [GitHub issue tracker][10].
+最好的联系点是论坛。如果您发现了一个显然是 bug 的问题，请在 GitHub 问题跟踪器中报告它。
 
-## Building
+## 构建
 
-Building Syncthing from source is easy. After extracting the source bundle from
-a release or checking out git, you just need to run `go run build.go` and the
-binaries are created in `./bin`. There's [a guide][5] with more details on the
-build process.
+从源代码构建 Syncthing 很简单。在从发布版本提取源代码包或通过 git 检出代码后，您只需运行 \`go run build.go\`，二进制文件将创建在 \`./bin\` 目录中。有关构建过程的更多细节，请参阅相关指南。
 
-## Signed Releases
+## 已签名的发布版本
 
-As of v0.10.15 and onwards release binaries are GPG signed with the key
-D26E6ED000654A3E, available from https://syncthing.net/security.html and
-most key servers.
+从 v0.10.15 版本起，发布的二进制文件使用密钥 D26E6ED000654A3E 进行 GPG 签名，该密钥可在 [https://syncthing.net/security.html](https://syncthing.net/security.html) 和大多数密钥服务器上获取。
 
-There is also a built in automatic upgrade mechanism (disabled in some
-distribution channels) which uses a compiled in ECDSA signature. macOS
-binaries are also properly code signed.
+此外，还内置了一个自动更新机制（在某些分发渠道中被禁用），该机制使用编译时嵌入的 ECDSA 签名。macOS 二进制文件也已正确代码签名。
 
-## Documentation
+## 文档
 
-Please see the Syncthing [documentation site][6] [[source]][17].
+请参阅 Syncthing 的 [文档站点](https://docs.syncthing.net/) [\[源代码\]](https://github.com/syncthing/docs)。
 
-All code is licensed under the [MPLv2 License][7].
-
-[1]: https://docs.syncthing.net/specs/bep-v1.html
-
-[2]: https://docs.syncthing.net/intro/getting-started.html
-
-[3]: https://github.com/syncthing/syncthing/blob/main/etc
-
-[5]: https://docs.syncthing.net/dev/building.html
-
-[6]: https://docs.syncthing.net/
-
-[7]: https://github.com/syncthing/syncthing/blob/main/LICENSE
-
-[8]: https://forum.syncthing.net/
-
-[10]: https://github.com/syncthing/syncthing/issues
-
-[11]: https://docs.syncthing.net/users/contrib.html#gui-wrappers
-
-[12]: https://www.bountysource.com/teams/syncthing/issues
-
-[13]: https://github.com/syncthing/syncthing/blob/main/GOALS.md
-
-[14]: https://github.com/syncthing/syncthing/raw/main/assets/logo-text-128.png
-
-[15]: https://syncthing.net/
-
-[16]: https://github.com/syncthing/syncthing/blob/main/README-Docker.md
-
-[17]: https://github.com/syncthing/docs
+所有代码均采用 [MPLv2 License](https://github.com/syncthing/syncthing/blob/main/LICENSE) 许可。

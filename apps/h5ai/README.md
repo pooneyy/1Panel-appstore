@@ -1,73 +1,36 @@
 # h5ai
 
-[![license][license-img]][github] [![web][web-img]][web] [![github][github-img]][github]
+[![license](https://img.shields.io/badge/license-MIT-a0a060.svg?style=flat-square)](https://github.com/lrsjng/h5ai) [![web](https://img.shields.io/badge/web-larsjung.de/h5ai-a0a060.svg?style=flat-square)](https://larsjung.de/h5ai/) [![github](https://img.shields.io/badge/github-lrsjng/h5ai-a0a060.svg?style=flat-square)](https://github.com/lrsjng/h5ai)
 
-A modern HTTP web server index for Apache httpd, lighttpd, and nginx.
+现代 HTTP 网络服务器索引，适用于 Apache httpd、lighttpd 和 nginx。
 
+## 重要
 
-## Important
+*   不要安装来自 `src` 文件夹的任何文件，它们需要预处理才能正确工作！
+*   找到预处理的软件包和详细的安装说明 [项目页面](https://larsjung.de/h5ai/) .
+*   对于错误报告和功能请求，请使用[问题](https://github.com/lrsjng/h5ai/issues) 。
 
-* Do **not** install any files from the `src` folder, they need to be
-  preprocessed to work correctly!
-* Find a preprocessed package and detailed install instructions on the
-  [project page][web].
-* For bug reports and feature requests please use [issues][github-issues].
+## 构建
 
+有针对最新[版本](https://release.larsjung.de/h5ai/)的安装准备包和 [开发版本](https://release.larsjung.de/h5ai/develop/) 。但若要自行构建 **h5ai**，则可以使用 `git clone` 或下载仓库。在根目录下运行以下命令，以在 `build` 文件夹中找到一个全新的 zip 文件（仅在 Linux 上测试，需要安装 [`node 10.0+`](https://nodejs.org)，可能在其他配置下也能工作）。
 
-## Build
-
-There are installation ready packages for the latest [releases][release] and
-[dev builds][develop]. But to build **h5ai** yourself either `git clone` or
-download the repository. From within the root folder run the following
-commands to find a fresh zipball in folder `build` (tested on linux only,
-requires [`node 10.0+`][node] to be installed, might work on other
-configurations).
-
-~~~sh
+```sh
 > npm install
 > npm run build
-~~~
+```
 
+## 许可证
 
-## License
+MIT 许可证 (MIT)
 
-The MIT License (MIT)
+版权所有 (c) 2020 Lars Jung ([https://larsjung.de](https://larsjung.de))
 
-Copyright (c) 2020 Lars Jung (https://larsjung.de)
+本协议授予任何获得本软件及其相关文档副本（以下简称“软件”）的个人免费使用软件的权利，不受限制地处理软件，包括但不限于使用、复制、修改、合并、发布、分发、再许可和/或销售软件的副本，并允许向软件提供者提供软件的个人进行上述操作，但须遵守以下条件：
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+上述版权声明和本许可声明应包含在软件的所有副本或主要部分中。
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+软件按“原样”提供，不提供任何形式的保证，无论是明示的、暗示的，包括但不限于适销性、特定用途适用性和非侵权性保证。在任何情况下，作者或版权所有者不对任何索赔、损害或其他责任负责，无论这些责任是因合同行为、侵权行为或其他行为引起的，无论这些责任是否与软件或其使用或其他方式有关。
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+## 参考文献
 
-
-## References
-
-**h5ai** profits from other projects, all of them licensed under the MIT license
-too. Exceptions are some [Material Design icons][material-design-icons] (CC BY 4.0).
-
-
-[web]: https://larsjung.de/h5ai/
-[github]: https://github.com/lrsjng/h5ai
-[github-issues]: https://github.com/lrsjng/h5ai/issues
-[release]: https://release.larsjung.de/h5ai/
-[develop]: https://release.larsjung.de/h5ai/develop/
-[node]: https://nodejs.org
-[material-design-icons]: https://github.com/google/material-design-icons
-
-[license-img]: https://img.shields.io/badge/license-MIT-a0a060.svg?style=flat-square
-[web-img]: https://img.shields.io/badge/web-larsjung.de/h5ai-a0a060.svg?style=flat-square
-[github-img]: https://img.shields.io/badge/github-lrsjng/h5ai-a0a060.svg?style=flat-square
+从其他项目中获利，所有这些项目都同样采用 MIT 许可。例外情况是一些[材料设计图标](https://github.com/google/material-design-icons) （CC BY 4.0）。

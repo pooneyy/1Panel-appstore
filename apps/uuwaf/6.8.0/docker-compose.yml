@@ -24,8 +24,8 @@ services:
     links:
       - wafdb
     depends_on:
-       wafdb:
-         condition: service_healthy
+      wafdb:
+        condition: service_healthy
   wafdb:
     image: "percona/percona-server:8.4.5"
     container_name:  ${CONTAINER_NAME}-db
@@ -43,11 +43,11 @@ services:
       - MYSQL_MAX_CONNECTIONS=${MYSQL_MAX_CONNECTIONS}
       - MYSQL_ROOT_PASSWORD=${PANEL_DB_USER_PASSWORD}
     healthcheck:
-     test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"]
-     start_period: 3s
-     interval: 5s
-     timeout: 3s
-     retries: 7
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "--silent"]
+      start_period: 3s
+      interval: 5s
+      timeout: 3s
+      retries: 7
 volumes:
   wafshared:
     name: wafshared

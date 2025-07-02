@@ -1,26 +1,24 @@
 ![](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/firefox-logo.png)
 
+[Firefox](https://www.mozilla.org/en-US/firefox/) 浏览器，也称为 Mozilla Firefox 或简称为 Firefox，是由 Mozilla 基金会和其子公司 Mozilla Corporation 开发的一款免费开源的网页浏览器。Firefox 使用 Gecko 布局引擎来渲染网页，该引擎实现了当前和预期的网页标准。
 
-[Firefox](https://www.mozilla.org/en-US/firefox/) Browser, also known as Mozilla Firefox or simply Firefox, is a free and open-source web browser developed by the Mozilla Foundation and its subsidiary, the Mozilla Corporation. Firefox uses the Gecko layout engine to render web pages, which implements current and anticipated web standards.
+## 支持的架构
 
+我们使用 Docker 清单来实现多平台意识。更多信息请参阅 Docker [此处](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) 和我们的公告 [此处](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/) 。
 
-## Supported Architectures
+简单地拉取 `lscr.io/linuxserver/firefox:latest` 应该可以检索到适合您架构的正确镜像，但您也可以通过标签拉取特定的架构镜像。
 
-We utilise the docker manifest for multi-platform awareness. More information is available from docker [here](https://github.com/docker/distribution/blob/master/docs/spec/manifest-v2-2.md#manifest-list) and our announcement [here](https://blog.linuxserver.io/2019/02/21/the-lsio-pipeline-project/).
+此镜像支持的架构如下：
 
-Simply pulling `lscr.io/linuxserver/firefox:latest` should retrieve the correct image for your arch, but you can also pull specific arch images via tags.
-
-The architectures supported by this image are:
-
-| Architecture | Available | Tag |
+| 架构 | 可用 | 标签 |
 | --- | --- | --- |
-| x86-64 | ✅   | amd64-&lt;version tag&gt; |
-| arm64 | ✅   | arm64v8-&lt;version tag&gt; |
-| armhf | ❌   |     |
+| x86-64 | ✅ | amd64-<版本标签> |
+| arm64 | ✅ | arm64v8-<版本标签> |
+| armhf | ❌ |  |
 
-## Application Setup
+## 应用设置
 
-The application can be accessed at:
+该应用可通过以下链接访问：
 
-- http://yourhost:3000/
-- https://yourhost:3001/
+*   [http://yourhost:3000/](http://yourhost:3000/)
+*   [https://yourhost:3001/](https://yourhost:3001/)

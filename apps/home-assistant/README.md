@@ -1,6 +1,7 @@
 # 使用说明
 
-- 默认访问地址
+*   默认访问地址
+
 ```
 IP:8123
 ```
@@ -9,25 +10,16 @@ IP:8123
 
 # Home Assistant [![Chat Status](https://img.shields.io/discord/330944238910963714.svg)](https://www.home-assistant.io/join-chat/)
 
-Open source home automation that puts local control and privacy first.
-Powered by a worldwide community of tinkerers and DIY enthusiasts.
-Perfect to run on a Raspberry Pi or a local server.
+开源智能家居自动化系统，将本地控制和隐私放在首位。由全球的 DIY 爱好者和技术爱好者社区支持。非常适合在树莓派或本地服务器上运行。
 
-Check out [home-assistant.io](https://home-assistant.io) for [ademo](https://demo.home-assistant.io), [installation instructions](https://home-assistant.io/getting-started/),[tutorials](https://home-assistant.io/getting-started/automation/) and [documentation](https://home-assistant.io/docs/).
+访问 [home-assistant.io](https://home-assistant.io) 获取[演示](https://demo.home-assistant.io) 、 [安装说明](https://home-assistant.io/getting-started/) 、 [教程](https://home-assistant.io/getting-started/automation/)和[文档](https://home-assistant.io/docs/) 。
 
 [![screenshot-states](https://raw.githubusercontent.com/home-assistant/core/master/docs/screenshots.png)](https://demo.home-assistant.io)
 
-## Featured integrations
+## 特色集成
 
 [![screenshot-integrations](https://raw.githubusercontent.com/home-assistant/core/dev/docs/screenshot-integrations.png)](https://home-assistant.io/integrations/)
 
-The system is built using a modular approach so support for other
-devices or actions can be implemented easily. See also the [section on
-architecture](https://developers.home-assistant.io/docs/architecture_index/)
-and the [section on creating your own
-components](https://developers.home-assistant.io/docs/creating_component_index/).
+系统采用模块化方法构建，因此可以轻松实现其他设备或动作的支持。请参阅[架构部分](https://developers.home-assistant.io/docs/architecture_index/)和[创建自己的组件部分](https://developers.home-assistant.io/docs/creating_component_index/) 。
 
-If you run into issues while using Home Assistant or during development
-of a component, check the [Home Assistant help
-section](https://home-assistant.io/help/) of our website for further
-help and information.
+如果您在使用 Home Assistant 或开发组件时遇到问题，请访问我们网站上的 [Home Assistant 帮助部分](https://home-assistant.io/help/)以获取更多帮助和信息。

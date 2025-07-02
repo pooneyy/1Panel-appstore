@@ -1,0 +1,12 @@
+services:
+  starvpn-node:
+    image: registry.cn-beijing.aliyuncs.com/ld_beijing/stars.node:1.1.7
+    container_name: starvpn.node
+    restart: always
+    environment:
+      - SERVER_ADDR=${SERVER_ADDR}
+      - ALLOW_COMMUNITY=${STARS_ACCOUNT}
+      - TOKEN=${TOKEN}
+    volumes:
+      - ./data:/data
+    network_mode: host

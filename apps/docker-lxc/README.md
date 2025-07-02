@@ -1,41 +1,40 @@
-# Running stateful linux containers in docker ![](https://img.shields.io/docker/pulls/micwy/lxc.svg?v_DATE)
+# 运行具有状态的 Linux 容器在 Docker 中![](https://img.shields.io/docker/pulls/micwy/lxc.svg?v_DATE)
 
-> :warning: This is a complete rewrite, using LXC only without vagrant. It is able to run LXC containers created with v0.1 but
-> config and usage differs. Use tag v0.1 to get the old version.
+> :warning: 这是一个完整的重写，仅使用 LXC，不使用 vagrant。它可以运行使用 v0.1 创建的 LXC 容器，但配置和使用方式不同。使用标签 v0.1 获取旧版本。
 
-Docker Hub: [micwy/lxc](https://hub.docker.com/r/micwy/lxc) 
+Docker Hub: [micwy/lxc](https://hub.docker.com/r/micwy/lxc)
 
-I'm very impressed, how much pulls this image gets. Please let me know how you use this (just create an issue at github), I'll add this to the "Use-Cases" section.
+我非常惊讶，这个镜像的拉取次数有多少。请告诉我你是如何使用它的（只需在 github 上创建一个问题），我会将其添加到“用例”部分。
 
-## Why?
+## 为什么？
 
-In some cases, it might be usefull to run full-blown operating systems in a docker environment which have "state", primarily meaning to have a persitent root volume. With docker only, this is not possible since docker does not allow / to be a volume. This is where LXC comes into play. LXC provides a process isolation similar to docker but with statefull root filesystems. Unfortunately, with the rise of docker, management tools for docker are much more widespread and sophisticated than those for LXC.
+在某些情况下，在具有“状态”的 docker 环境中运行完整的操作系统可能很有用，这主要意味着拥有一个持久的根卷。仅使用 docker 是不可能的，因为 docker 不允许/成为一个卷。这就是 LXC 发挥作用的地方。LXC 提供与 docker 类似的过程隔离，但具有状态化的根文件系统。不幸的是，随着 docker 的兴起，docker 的管理工具比 LXC 的管理工具更为广泛和复杂。
 
-This project allows to use a single LXC container within a docker container to get best of both worlds.
+这个项目允许在 docker 容器内使用单个 LXC 容器，以获得两者的最佳效果。
 
-## Features
+## 功能
 
-* Runs a single LXC container in docker with full OS and persistent root
-* Use features unique to docker for your lxc containers (e.g. docker-compose, exposed ports, traefik for ingress, kubernetes as platform)
-* The LXC container uses the same limits and network stack as the docker container, so things like exposed ports works as expected
-* Proper signal handling in both directions (shutting down the docker container properly shuts down the LXC container. Poweroff in LXC shuts down the docker container)
-* LXCFS support: Within the container, uptime and limits are displayed correctly
-* Shell-Wrapper: If /bin/sh is invoked with "docker exec", a shell in the LXC container is spawned. So a console in most management tools opens directly within the LXC container, not in the surrounding docker container
-* Creation of initial root filesystems: for some distributions, an initial root filesystem can simply be set up, using an environment variable
-* Adding of initial SSH key via environment variable to get instant log-in
+*   在 docker 中运行单个 LXC 容器，具有完整的操作系统和持久的根
+*   使用 docker 特有的功能为您的 LXC 容器（例如：docker-compose、暴露端口、traefik 用于入口、Kubernetes 作为平台）
+*   LXC 容器使用与 docker 容器相同的限制和网络堆栈，因此像暴露端口这样的功能按预期工作
+*   双向正确的信号处理（正确关闭 docker 容器可以正确关闭 LXC 容器。在 LXC 中关机可以关闭 docker 容器）
+*   LXCFS 支持：在容器内，显示正确的运行时间和限制
+*   Shell-Wrapper：如果使用“docker exec”调用/bin/sh，则会在 LXC 容器中启动一个 shell。因此，大多数管理工具中的控制台会直接在 LXC 容器内打开，而不是在周围的 docker 容器中
+*   创建初始根文件系统：对于某些发行版，可以通过环境变量简单地设置初始根文件系统
+*   通过环境变量添加初始 SSH 密钥以实现即时登录
 
-### Some Use-Cases
+### 一些用例
 
-* Provide "home containers" for your users, each with own ssh access and persistent state
-* Run a linux remote desktop server on kubernetes
-* Easily run statefull software (like froxlor control panel or plesk) on docker/kubernetes
+*   为您的用户提供“家庭容器”，每个容器都有自己的 ssh 访问权限和持久状态
+*   在 Kubernetes 上运行 Linux 远程桌面服务器
+*   轻松在 Docker/Kubernetes 上运行有状态软件（如 froxlor 控制面板或 plesk）
 
-### Ideas / Backlog
+### 想法 / 待办事项
 
-* Support more distribution root filesystems
-* Import rootfs from vagrant-lxc boxes
+*   支持更多分发根文件系统
+*   从 vagrant-lxc 盒子导入 rootfs
 
-## How to run
+## 如何运行
 
 ```
 docker run -d \
@@ -47,15 +46,15 @@ docker run -d \
   -e DISTRIBUTION=alpine \
   -e INITIAL_SSH_KEY="ssh-rsa AAAA...Q== my-initial-ssh-key" \
   micwy/lxc
- ```
+```
 
-* "privileged" is currently required to run LXC on the container
-* The hostname is passed into the lxc container
-* The volume /data contains the root filesystem (under /data/rootfs) and some additional files (temporary root fs during system creation, lxc config)
+*   目前运行 LXC 在容器中需要"privileged"权限
+*   主机名传递到 lxc 容器
+*   卷/data 包含根文件系统（位于/data/rootfs）和一些附加文件（系统创建期间的临时根文件系统，lxc 配置）
 
-### Running on Kubernetes
+### 运行于 Kubernetes
 
-Here's an example yaml to run this on kubernetes. If there's some interest, I can also provide a helm chart.
+以下是一个在 Kubernetes 上运行的 yaml 示例。如果有兴趣，我也可以提供 helm 图表。
 
 ```
 ---
@@ -114,41 +113,45 @@ spec:
 
 ```
 
-### Environment variables
+### 环境变量
 
-* DISTRIBUTION: triggers a distribution specific setup script if /data/rootfs does not exist (see below)
-* INITIAL_SSH_KEY: if set, it is copied to /root/.ssh/authorized keys on startup if that file does not exist yet
-* USE_LXCFS (default false): if true, mount [LXCFS](https://github.com/lxc/lxcfs) into the LXC container
-    * :warning: May not work with systemd!
-* COPY_RESOLV_CONF (default true): if true, copy resolv.conf from docker container into the LXC container
+*   DISTRIBUTION：如果/data/rootfs 不存在，则触发特定分布的设置脚本（见下文）
+*   INITIAL\_SSH\_KEY：如果设置，则在启动时将其复制到/root/.ssh/authorized\_keys，如果该文件尚不存在
+*   USE\_LXCFS（默认为 false）：如果为 true，则将 [LXCFS](https://github.com/lxc/lxcfs) 挂载到 LXC 容器中
+    *   :warning: 可能与 systemd 不兼容！
+*   COPY\_RESOLV\_CONF（默认为 true）：如果为 true，则将 docker 容器中的 resolv.conf 复制到 LXC 容器中
 
-### Additional volumes
+### 附加卷
 
-* the directory /vol of the docker container is mounted with "rbind" into /vol on the LXC container
-* Every docker-volume that is mounted to /vol/something will appear as /vol/something on LXC
+*   docker 容器的目录/vol 使用“rbind”挂载到 LXC 容器的/vol 上
+*   每个挂载到/vol/something 的 docker-volume 将显示为/vol/something 在 LXC 上
 
-### Available distribution setup scripts
+### 可用的分发设置脚本
 
 #### DISTRIBUTION: alpine
 
-Installs alpine if rootfs does not exist.
+如果 rootfs 不存在，则安装 alpine。
 
-Features:
-* Quite minimal image with bash, nano and openssh
+特性：
 
-Supported environment variables:
-* ALPINE_ARCH: (default x86_64): architecture of the rootfs
-* ALPINE_VERSION: (default latest-stable): alpine version to install
-* ALPINE_EXTRA_PACKAGES: additional packages to install along with the rootfs
+*   非常简约的 bash、nano 和 openssh 图像
 
-#### DISTRIBUTION: archlinux
+支持的环镜变量：
 
-Installs archlinux if rootfs does not exist.
+*   ALPINE\_ARCH:（默认 x86\_64）：rootfs 的架构
+*   ALPINE\_VERSION: (默认最新稳定版): 安装的 alpine 版本
+*   ALPINE\_EXTRA\_PACKAGES: 伴随 rootfs 一起安装的额外软件包
 
-Features:
-* Basic system image with common tools and openssh
+#### 分发：archlinux
 
-Supported environment variables:
-* ARCHLINUX_INSTALL_TRIZEN: (default: true): if true, install the trizen package manager for AUR packages
-* ARCHLINUX_EXTRA_PACKAGES: additional packages to install along with the rootfs. Installation will be run with trizen if installed, otherwise with pacman
-* ARCHLINUX_MIRRORLIST_COUNTRY (default: Germany - I confess, I'm biased): Country to use for create an initial packman mirror list
+如果 rootfs 不存在，则安装 archlinux。
+
+特性：
+
+*   基本系统镜像，包含常用工具和 openssh
+
+支持的环镜变量：
+
+*   ARCHLINUX\_INSTALL\_TRIZEN: （默认：true）：如果为 true，则为 AUR 软件包安装 trizen 包管理器
+*   ARCHLINUX\_EXTRA\_PACKAGES：与 rootfs 一起安装的附加包。如果已安装，将使用 trizen 运行安装，否则使用 pacman。
+*   ARCHLINUX\_MIRRORLIST\_COUNTRY（默认：德国 - 我必须承认，我有偏见）：用于创建初始 packman 镜像列表的国家。
