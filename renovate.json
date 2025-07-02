@@ -60,8 +60,12 @@
         "chaitin/safeline-luigi", 
         "chaitin/safeline-fvm", 
         "chaitin/safeline-chaos"
-    ],
+      ],
       "groupName": "SafeLine"
+    },
+    {
+      "matchPackageNames": ["davidsarkany/geekbench"],
+      "enabled": false
     },
     {
       "matchPackageNames": ["duan2001/npc", "duan2001/nps"],
@@ -113,6 +117,10 @@
       "matchPackageNames": ["yisier1/npc", "yisier1/nps"],
       "allowedVersions": "<0.27",
       "groupName": "NPC & NPS by yisier1"
+    },
+    {
+      "matchPackageNames": ["zabbix/**"],
+      "groupName": "Zabbix"
     },
     {
       "matchPackageNames":[
