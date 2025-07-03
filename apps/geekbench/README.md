@@ -2,9 +2,9 @@
 
 [![docker stars](https://badgen.net/docker/stars/davidsarkany/geekbench?icon=docker&label=stars)](https://hub.docker.com/r/davidsarkany/geekbench) [![docker pulls](https://badgen.net/docker/pulls/davidsarkany/geekbench)](https://hub.docker.com/r/davidsarkany/geekbench)
 
-Unofficial build of Geekbench, forked from [chrisdaish/geekbench](https://github.com/chrisdaish/docker-geekbench).
+Geekbench 非官方构建版本，源自 [chrisdaish/geekbench](https://github.com/chrisdaish/docker-geekbench)。
 
-### Usage
+### 使用方法
 
 #### Geekbench 6
 

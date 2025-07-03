@@ -14,8 +14,8 @@ SSCMS 基于 .NET Core，能够以最低的成本、最少的人力投入在最�
 
 项目发布的正式版本存放在 `master` 分支
 
-| 编译状态                                                                                                                                                                                     | 版本号                                                     | 发布日期                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 编译状态 | 版本号 | 发布日期 |
+| ---- | ---- | ---- |
 | [![Build status](https://sscms.visualstudio.com/cms/_apis/build/status/siteserver.cms?branchName=master)](https://sscms.visualstudio.com/cms/_build/latest?definitionId=1&branchName=master) | ![Nuget version](https://img.shields.io/nuget/v/SSCMS.svg) | ![master last commit](https://img.shields.io/github/last-commit/siteserver/cms/master.svg) |
 
 ## 开发文档

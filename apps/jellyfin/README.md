@@ -1,176 +1,133 @@
-<h1 align="center">Jellyfin</h1>
-<h3 align="center">The Free Software Media System</h3>
+# Jellyfin
 
----
+### 免费软件媒体系统
 
-<p align="center">
-<img alt="Logo Banner" src="https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/banner-logo-solid.svg?sanitize=true"/>
-<br/>
-<br/>
-<a href="https://github.com/jellyfin/jellyfin">
-<img alt="GPL 2.0 License" src="https://img.shields.io/github/license/jellyfin/jellyfin.svg"/>
-</a>
-<a href="https://github.com/jellyfin/jellyfin/releases">
-<img alt="Current Release" src="https://img.shields.io/github/release/jellyfin/jellyfin.svg"/>
-</a>
-<a href="https://translate.jellyfin.org/projects/jellyfin/jellyfin-core/?utm_source=widget">
-<img alt="Translation Status" src="https://translate.jellyfin.org/widgets/jellyfin/-/jellyfin-core/svg-badge.svg"/>
-</a>
-<a href="https://dev.azure.com/jellyfin-project/jellyfin/_build?definitionId=29">
-<img alt="Azure Builds" src="https://dev.azure.com/jellyfin-project/jellyfin/_apis/build/status/Jellyfin%20Server"/>
-</a>
-<a href="https://hub.docker.com/r/jellyfin/jellyfin">
-<img alt="Docker Pull Count" src="https://img.shields.io/docker/pulls/jellyfin/jellyfin.svg"/>
-</a>
-<br/>
-<a href="https://opencollective.com/jellyfin">
-<img alt="Donate" src="https://img.shields.io/opencollective/all/jellyfin.svg?label=backers"/>
-</a>
-<a href="https://features.jellyfin.org">
-<img alt="Submit Feature Requests" src="https://img.shields.io/badge/fider-vote%20on%20features-success.svg"/>
-</a>
-<a href="https://matrix.to/#/#jellyfinorg:matrix.org">
-<img alt="Chat on Matrix" src="https://img.shields.io/matrix/jellyfin:matrix.org.svg?logo=matrix"/>
-</a>
-<a href="https://www.reddit.com/r/jellyfin">
-<img alt="Join our Subreddit" src="https://img.shields.io/badge/reddit-r%2Fjellyfin-%23FF5700.svg"/>
-</a>
-<a href="https://github.com/jellyfin/jellyfin/releases.atom">
-<img alt="Release RSS Feed" src="https://img.shields.io/badge/rss-releases-ffa500?logo=rss" />
-</a>
-<a href="https://github.com/jellyfin/jellyfin/commits/master.atom">
-<img alt="Master Commits RSS Feed" src="https://img.shields.io/badge/rss-commits-ffa500?logo=rss" />
-</a>
-</p>
+* * *
 
----
+![Logo Banner](https://raw.githubusercontent.com/jellyfin/jellyfin-ux/master/branding/SVG/banner-logo-solid.svg?sanitize=true)
+ [![GPL 2.0 License](https://img.shields.io/github/license/jellyfin/jellyfin.svg)](https://github.com/jellyfin/jellyfin)[![Current Release](https://img.shields.io/github/release/jellyfin/jellyfin.svg) ](https://github.com/jellyfin/jellyfin/releases)[![Translation Status](https://translate.jellyfin.org/widgets/jellyfin/-/jellyfin-core/svg-badge.svg) ](https://translate.jellyfin.org/projects/jellyfin/jellyfin-core/?utm_source=widget)[![Azure Builds](https://dev.azure.com/jellyfin-project/jellyfin/_apis/build/status/Jellyfin%20Server) ](https://dev.azure.com/jellyfin-project/jellyfin/_build?definitionId=29)[![Docker Pull Count](https://img.shields.io/docker/pulls/jellyfin/jellyfin.svg)](https://hub.docker.com/r/jellyfin/jellyfin)
+ [![Donate](https://img.shields.io/opencollective/all/jellyfin.svg?label=backers)](https://opencollective.com/jellyfin)[![Submit Feature Requests](https://img.shields.io/badge/fider-vote%20on%20features-success.svg) ](https://features.jellyfin.org)[![Chat on Matrix](https://img.shields.io/matrix/jellyfin:matrix.org.svg?logo=matrix) ](https://matrix.to/#/#jellyfinorg:matrix.org)[![Join our Subreddit](https://img.shields.io/badge/reddit-r%2Fjellyfin-%23FF5700.svg) ](https://www.reddit.com/r/jellyfin)[![Release RSS Feed](https://img.shields.io/badge/rss-releases-ffa500?logo=rss) ](https://github.com/jellyfin/jellyfin/releases.atom)[![Master Commits RSS Feed](https://img.shields.io/badge/rss-commits-ffa500?logo=rss)](https://github.com/jellyfin/jellyfin/commits/master.atom)
 
-Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. Jellyfin is descended from Emby's 3.5.2 release and ported to the .NET Core framework to enable full cross-platform support. There are no strings attached, no premium licenses or features, and no hidden agendas: just a team who want to build something better and work together to achieve it. We welcome anyone who is interested in joining us in our quest!
+* * *
 
-For further details, please see [our documentation page](https://jellyfin.org/docs/). To receive the latest updates, get help with Jellyfin, and join the community, please visit [one of our communication channels](https://jellyfin.org/docs/general/getting-help). For more information about the project, please see our [about page](https://jellyfin.org/docs/general/about).
+Jellyfin 是一个免费软件媒体系统，让您掌控媒体管理和流媒体播放。它是 Emby 和 Plex 等专有软件的替代品，通过多个应用程序从专用服务器向终端设备提供媒体。Jellyfin 源自 Emby 的 3.5.2 版本，并移植到.NET Core 框架以实现全平台支持。没有任何附加条件，没有高级许可证或功能，也没有隐藏议程：只有一个想要打造更好产品并共同努力实现目标的团队。我们欢迎任何有兴趣加入我们追求的人！
 
-<strong>Want to get started?</strong><br/>
-Check out our <a href="https://jellyfin.org/downloads">downloads page</a> or our <a href="https://jellyfin.org/docs/general/installation/">installation guide</a>, then see our <a href="https://jellyfin.org/docs/general/quick-start">quick start guide</a>. You can also <a href="https://jellyfin.org/docs/general/installation/source">build from source</a>.<br/>
+有关详细信息，请参阅[我们的文档页面](https://jellyfin.org/docs/) 。要获取最新更新，获取 Jellyfin 的帮助并加入社区，请访问[我们的沟通渠道之一](https://jellyfin.org/docs/general/getting-help) 。有关项目的更多信息，请参阅我们的[关于页面](https://jellyfin.org/docs/general/about) 。
 
-<strong>Something not working right?</strong><br/>
-Open an <a href="https://jellyfin.org/docs/general/contributing/issues">Issue</a> on GitHub.<br/>
+**想要开始吗？**
+查看我们的[下载页面](https://jellyfin.org/downloads)或我们的[安装指南](https://jellyfin.org/docs/general/installation/) ，然后查看我们的[快速入门指南](https://jellyfin.org/docs/general/quick-start) 。您还可以[从源代码构建](https://jellyfin.org/docs/general/installation/source) 。
 
-<strong>Want to contribute?</strong><br/>
-Check out our <a href="https://jellyfin.org/contribute">contributing choose-your-own-adventure</a> to see where you can help, then see our <a href="https://jellyfin.org/docs/general/contributing/">contributing guide</a> and our <a href="https://jellyfin.org/docs/general/community-standards">community standards</a>.<br/>
+**有什么问题吗？**
+在 GitHub 上[提交问题](https://jellyfin.org/docs/general/contributing/issues) 。
 
-<strong>New idea or improvement?</strong><br/>
-Check out our <a href="https://features.jellyfin.org/?view=most-wanted">feature request hub</a>.<br/>
+**想要贡献？**
+查看我们的[贡献选择冒险](https://jellyfin.org/contribute) ，看看你可以在哪里提供帮助，然后查看我们的[贡献指南](https://jellyfin.org/docs/general/contributing/)和我们的[社区标准](https://jellyfin.org/docs/general/community-standards) 。
 
-<strong>Don't see Jellyfin in your language?</strong><br/>
-Check out our <a href="https://translate.jellyfin.org">Weblate instance</a> to help translate Jellyfin and its subprojects.<br/>
+**有新想法或改进建议？**
+查看我们的[功能请求中心](https://features.jellyfin.org/?view=most-wanted) 。
 
-<a href="https://translate.jellyfin.org/engage/jellyfin/?utm_source=widget">
-<img src="https://translate.jellyfin.org/widgets/jellyfin/-/jellyfin-web/multi-auto.svg" alt="Detailed Translation Status"/>
-</a>
+**没看到 Jellyfin 支持你的语言？**
+访问我们的 [Weblate 实例](https://translate.jellyfin.org)来帮助翻译 Jellyfin 及其子项目。
 
----
+[![Detailed Translation Status](https://translate.jellyfin.org/widgets/jellyfin/-/jellyfin-web/multi-auto.svg)](https://translate.jellyfin.org/engage/jellyfin/?utm_source=widget)
 
-## Jellyfin Server
+* * *
 
-This repository contains the code for Jellyfin's backend server. Note that this is only one of many projects under the Jellyfin GitHub [organization](https://github.com/jellyfin/) on GitHub. If you want to contribute, you can start by checking out our [documentation](https://jellyfin.org/docs/general/contributing/index.html) to see what to work on.
+## Jellyfin 服务器
 
-## Server Development
+此存储库包含 Jellyfin 后端服务器的代码。请注意，这仅仅是 GitHub 上 Jellyfin GitHub [组织](https://github.com/jellyfin/)下的众多项目之一。如果你想贡献，可以从查看我们的[文档](https://jellyfin.org/docs/general/contributing/index.html)开始，了解可以做什么工作。
 
-These instructions will help you get set up with a local development environment in order to contribute to this repository. Before you start, please be sure to completely read our [guidelines on development contributions](https://jellyfin.org/docs/general/contributing/development.html). Note that this project is supported on all major operating systems except FreeBSD, which is still incompatible.
+## 服务器开发
 
-### Prerequisites
+以下说明将帮助您设置本地开发环境，以便为这个仓库做出贡献。在开始之前，请务必完全阅读我们关于开发贡献的[指南](https://jellyfin.org/docs/general/contributing/development.html) 。请注意，本项目支持所有主流操作系统，除了 FreeBSD，它仍然不兼容。
 
-Before the project can be built, you must first install the [.NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet) on your system.
+### 先决条件
 
-Instructions to run this project from the command line are included here, but you will also need to install an IDE if you want to debug the server while it is running. Any IDE that supports .NET 6 development will work, but two options are recent versions of [Visual Studio](https://visualstudio.microsoft.com/downloads/) (at least 2022) and [Visual Studio Code](https://code.visualstudio.com/Download).
+在构建项目之前，您必须首先在您的系统上安装 [.NET 7.0 SDK](https://dotnet.microsoft.com/download/dotnet)。
 
-[ffmpeg](https://github.com/jellyfin/jellyfin-ffmpeg) will also need to be installed.
+在此包含运行此项目的命令行说明，但如果您想在服务器运行时进行调试，还需要安装一个 IDE。任何支持.NET 6 开发的 IDE 都可以使用，但两种选项是 [Visual Studio](https://visualstudio.microsoft.com/downloads/) 的最新版本（至少 2022 年）和 [Visual Studio Code](https://code.visualstudio.com/Download)。
 
-### Cloning the Repository
+[ffmpeg](https://github.com/jellyfin/jellyfin-ffmpeg) 也需要安装。
 
-After dependencies are installed you will need to clone a local copy of this repository. If you just want to run the server from source you can clone this repository directly, but if you are intending to contribute code changes to the project, you should [set up your own fork](https://jellyfin.org/docs/general/contributing/development.html#set-up-your-copy-of-the-repo) of the repository. The following example shows how you can clone the repository directly over HTTPS.
+### 克隆仓库
+
+在安装依赖项之后，您需要克隆此仓库的本地副本。如果您只想从源代码运行服务器，可以直接克隆此仓库，但如果您打算向项目贡献代码更改，您应该 [设置自己的仓库分支](https://jellyfin.org/docs/general/contributing/development.html#set-up-your-copy-of-the-repo) 。以下示例显示了如何直接通过 HTTPS 克隆仓库。
 
 ```bash
 git clone https://github.com/jellyfin/jellyfin.git
 ```
 
-### Installing the Web Client
+### 安装 Web 客户端
 
-The server is configured to host the static files required for the [web client](https://github.com/jellyfin/jellyfin-web) in addition to serving the backend by default. Before you can run the server, you will need to get a copy of the web client since they are not included in this repository directly.
+服务器配置为托管 [Web 客户端](https://github.com/jellyfin/jellyfin-web)所需的静态文件，同时默认提供后端服务。在您运行服务器之前，您需要获取 Web 客户端的副本，因为这些文件并未直接包含在本存储库中。
 
-Note that it is also possible to [host the web client separately](#hosting-the-web-client-separately) from the web server with some additional configuration, in which case you can skip this step.
+请注意，您还可以通过一些额外的配置将 [Web 客户端单独托管](#hosting-the-web-client-separately)在 Web 服务器之外，在这种情况下，您可以跳过此步骤。
 
-There are three options to get the files for the web client.
+获取 Web 客户端文件有三种选项。
 
-1. Download one of the finished builds from the [Azure DevOps pipeline](https://dev.azure.com/jellyfin-project/jellyfin/_build?definitionId=27). You can download the build for a specific release by looking at the [branches tab](https://dev.azure.com/jellyfin-project/jellyfin/_build?definitionId=27&_a=summary&repositoryFilter=6&view=branches) of the pipelines page.
-2. Build them from source following the instructions on the [jellyfin-web repository](https://github.com/jellyfin/jellyfin-web)
-3. Get the pre-built files from an existing installation of the server. For example, with a Windows server installation the client files are located at `C:\Program Files\Jellyfin\Server\jellyfin-web`
+1.  从 [Azure DevOps 管道](https://dev.azure.com/jellyfin-project/jellyfin/_build?definitionId=27)下载一个完成的构建。您可以通过查看管道页面的[分支选项卡](https://dev.azure.com/jellyfin-project/jellyfin/_build?definitionId=27&_a=summary&repositoryFilter=6&view=branches)来下载特定版本的构建。
+2.  从源代码构建，按照 [jellyfin-web 仓库](https://github.com/jellyfin/jellyfin-web)上的说明进行
+3.  从现有服务器安装中获取预构建文件。例如，在 Windows 服务器安装中，客户端文件位于 `C:\Program Files\Jellyfin\Server\jellyfin-web`
 
-### Running The Server
+### 运行服务器
 
-The following instructions will help you get the project up and running via the command line, or your preferred IDE.
+以下说明将帮助您通过命令行或您首选的 IDE 启动项目。
 
-#### Running With Visual Studio
+#### 使用 Visual Studio 运行
 
-To run the project with Visual Studio you can open the Solution (`.sln`) file and then press `F5` to run the server.
+要使用 Visual Studio 运行项目，您可以打开解决方案文件（`.sln`），然后按 `F5` 键运行服务器。
 
-#### Running With Visual Studio Code
+#### 使用 Visual Studio Code 运行
 
-To run the project with Visual Studio Code you will first need to open the repository directory with Visual Studio Code using the `Open Folder...` option.
+要使用 Visual Studio Code 运行项目，您首先需要使用`打开文件夹...` 选项，用 Visual Studio Code 打开仓库目录。
 
-Second, you need to [install the recommended extensions for the workspace](https://code.visualstudio.com/docs/editor/extension-gallery#_recommended-extensions). Note that extension recommendations are classified as either "Workspace Recommendations" or "Other Recommendations", but only the "Workspace Recommendations" are required.
+其次，您需要[安装工作空间推荐扩展](https://code.visualstudio.com/docs/editor/extension-gallery#_recommended-extensions) 。请注意，扩展推荐分为“工作空间推荐”和“其他推荐”两类，但仅需要“工作空间推荐”。
 
-After the required extensions are installed, you can run the server by pressing `F5`.
+安装所需扩展后，您可以通过按下 `F5` 来运行服务器。
 
-#### Running From The Command Line
+#### 从命令行运行
 
-To run the server from the command line you can use the `dotnet run` command. The example below shows how to do this if you have cloned the repository into a directory named `jellyfin` (the default directory name) and should work on all operating systems.
+要从命令行运行服务器，您可以使用 `dotnet run` 命令。以下示例展示了如果您已将仓库克隆到名为 `jellyfin`（默认目录名）的目录中，应该如何操作，并且应在所有操作系统上有效。
 
 ```bash
 cd jellyfin                          # Move into the repository directory
 dotnet run --project Jellyfin.Server --webdir /absolute/path/to/jellyfin-web/dist # Run the server startup project
 ```
 
-A second option is to build the project and then run the resulting executable file directly. When running the executable directly you can easily add command line options. Add the `--help` flag to list details on all the supported command line options.
+第二种选项是先构建项目，然后直接运行生成的可执行文件。直接运行可执行文件时，您可以轻松添加命令行选项。添加 `--help` 标志可以列出所有支持的命令行选项的详细信息。
 
-1. Build the project
+1.  构建项目
 
 ```bash
 dotnet build                       # Build the project
 cd Jellyfin.Server/bin/Debug/net7.0 # Change into the build output directory
 ```
 
-2. Execute the build output. On Linux, Mac, etc. use `./jellyfin` and on Windows use `jellyfin.exe`.
+2.  执行构建输出。在 Linux、Mac 等系统上，使用 `./jellyfin`，在 Windows 上使用 `jellyfin.exe`。
 
-### Running The Tests
+### 运行测试
 
-This repository also includes unit tests that are used to validate functionality as part of a CI pipeline on Azure. There are several ways to run these tests.
+此存储库还包括用于在 Azure 上的 CI 管道中验证功能的单元测试。有几种方法可以运行这些测试。
 
-1. Run tests from the command line using `dotnet test`
-2. Run tests in Visual Studio using the [Test Explorer](https://docs.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer)
-3. Run individual tests in Visual Studio Code using the associated [CodeLens annotation](https://github.com/OmniSharp/omnisharp-vscode/wiki/How-to-run-and-debug-unit-tests)
+1.  使用 `dotnet test` 从命令行运行测试
+2.  使用[测试资源管理器](https://docs.microsoft.com/en-us/visualstudio/test/run-unit-tests-with-test-explorer)在 Visual Studio 中运行测试
+3.  使用相关的 [CodeLens 批注](https://github.com/OmniSharp/omnisharp-vscode/wiki/How-to-run-and-debug-unit-tests)在 Visual Studio Code 中运行单个测试
 
-### Advanced Configuration
+### 高级配置
 
-The following sections describe some more advanced scenarios for running the server from source that build upon the standard instructions above.
+以下章节描述了从源代码运行服务器的一些更高级场景，这些场景基于上述标准说明。
 
-#### Hosting The Web Client Separately
+#### 单独托管 Web 客户端
 
-It is not necessary to host the frontend web client as part of the backend server. Hosting these two components separately may be useful for frontend developers who would prefer to host the client in a separate webpack development server for a tighter development loop. See the [jellyfin-web](https://github.com/jellyfin/jellyfin-web#getting-started) repo for instructions on how to do this.
+没有必要将前端 Web 客户端作为后端服务器的一部分进行托管。将这两个组件分别托管可能对希望在前端开发服务器中单独托管客户端以实现更紧密的开发循环的前端开发者来说很有用。有关如何操作的说明，请参阅 [jellyfin-web](https://github.com/jellyfin/jellyfin-web#getting-started) 仓库。
 
-To instruct the server not to host the web content, there is a `nowebclient` configuration flag that must be set. This can specified using the command line
-switch `--nowebclient` or the environment variable `JELLYFIN_NOWEBCONTENT=true`.
+要指示服务器不托管网页内容，必须设置一个 `nowebclient` 配置标志。这可以通过命令行开关 `--nowebclient` 或环境变量 `JELLYFIN_NOWEBCONTENT=true` 来指定。
 
-Since this is a common scenario, there is also a separate launch profile defined for Visual Studio called `Jellyfin.Server (nowebcontent)` that can be selected from the 'Start Debugging' dropdown in the main toolbar.
+由于这是一个常见场景，还有一个单独的 Visual Studio 启动配置文件，称为 `Jellyfin.Server (nowebcontent)` ，可以从主工具栏的“开始调试”下拉菜单中选择。
 
-**NOTE:** The setup wizard can not be run if the web client is hosted separately.
+**注意：** 如果网页客户端是单独托管的，则无法运行设置向导。
 
----
-<p align="center">
-This project is supported by:
-<br/>
-<br/>
-<a href="https://www.digitalocean.com"><img src="https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_horizontal_blue.svg" height="50px" alt="DigitalOcean"></a>
-    &nbsp;
-<a href="https://www.jetbrains.com"><img src="https://gist.githubusercontent.com/anthonylavado/e8b2403deee9581e0b4cb8cd675af7db/raw/fa104b7d73f759d7262794b94569f1b89df41c0b/jetbrains.svg" height="50px" alt="JetBrains logo"></a>
-</p>
+* * *
+
+本项目由以下组织支持：
+[![DigitalOcean](https://opensource.nyc3.cdn.digitaloceanspaces.com/attribution/assets/SVG/DO_Logo_horizontal_blue.svg)](https://www.digitalocean.com)   [![JetBrains logo](https://gist.githubusercontent.com/anthonylavado/e8b2403deee9581e0b4cb8cd675af7db/raw/fa104b7d73f759d7262794b94569f1b89df41c0b/jetbrains.svg)](https://www.jetbrains.com)

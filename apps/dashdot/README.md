@@ -1,69 +1,28 @@
-<!-- markdownlint-disable -->
-<h1>
-  <img src="https://github.com/MauriceNino/dashdot/raw/main/.github/images/banner_muted.png" alt="dash. - a modern server dashboard">
-</h1>
+# ![dash. - a modern server dashboard](https://github.com/MauriceNino/dashdot/raw/main/.github/images/banner_muted.png)
 
-<p align="center">
-  <a href="https://github.com/MauriceNino/dashdot/actions/workflows/deploy.yaml?branch=main" target="_blank">
-    <img title="GitHub Actions" src="https://github.com/MauriceNino/dashdot/actions/workflows/deploy.yaml/badge.svg?branch=main">
-  </a>
+ [![](https://github.com/MauriceNino/dashdot/actions/workflows/deploy.yaml/badge.svg?branch=main "GitHub Actions")](https://github.com/MauriceNino/dashdot/actions/workflows/deploy.yaml?branch=main)[![](https://discord.com/api/guilds/986251291577688064/widget.png?style=shield "Discord")](https://discord.gg/3teHFBNQ9W)
 
-  <a href="https://discord.gg/3teHFBNQ9W" target="_blank">
-    <img title="Discord" src="https://discord.com/api/guilds/986251291577688064/widget.png?style=shield">
-  </a>
-</p>
-<p align="center">
-  <i>Feel free to join the <b>Discord</b> and <b>star the repo</b> if you like the project!</i>
-</p>
+*欢迎加入 **Discord** 并 **star** 仓库，如果您喜欢这个项目！*
 
-<br/>
+**dash.**（或 **dashdot**）是一个现代服务器仪表板，基于最新技术，以玻璃质感设计，旨在用于较小的 VPS 和私人服务器。
 
-<p align="center">
-  <b>dash.</b> (or <b>dashdot</b>) is a modern server dashboard,
-  running on the latest tech, designed with glassmorphism in mind.
-  It is intended to be used for smaller VPS and private servers.
-</p>
-<br />
-<p align="center">
-  <a href="https://dash.mauz.dev" target="_blank">Live Demo</a>
- |
-  <a href="https://hub.docker.com/r/mauricenino/dashdot" target="_blank">Docker Image</a>
-</p>
+[在线演示](https://dash.mauz.dev) | [容器镜像](https://hub.docker.com/r/mauricenino/dashdot)
 
-#
+[![Consider sponsoring the development of this project](https://cdn.ko-fi.com/cdn/kofi2.png?v=3)](https://ko-fi.com/mauricenino)
 
-<a href="https://ko-fi.com/mauricenino" target="_blank">
-  <img 
-    align="right"
-    width="160"
-    style="padding-left: 20px; padding-bottom: 10px"
-    alt="Consider sponsoring the development of this project"
-    src="https://cdn.ko-fi.com/cdn/kofi2.png?v=3"
-  />
-</a>
+**dash. 是一个开源项目，因此任何贡献都备受赞赏。 如果您有兴趣进一步开发此项目，请查看 [Contributing.md](https://github.com/MauriceNino/dashdot/blob/main/.github/CONTRIBUTING.md).**
 
-<!-- markdownlint-enable -->
+如果您想从经济上支持这个项目，您可以访问我的 [GitHub 赞助](https://github.com/sponsors/MauriceNino) ，或者我的 [Ko-Fi](https://ko-fi.com/mauricenino)。
 
-**dash.** is a open-source project, so any contribution is highly appreciated.
-If you are interested in further developing this project, have a look at the
-[Contributing.md](https://github.com/MauriceNino/dashdot/blob/main/.github/CONTRIBUTING.md).
+## 预览
 
-In case you want to financially support this project, you can visit my
-[GitHub Sponsors](https://github.com/sponsors/MauriceNino), or my [Ko-Fi](https://ko-fi.com/mauricenino).
+| 暗黑模式 | 亮色模式 |
+| --- | --- |
+|  |  |
 
-## Preview
+## 快速安装（Docker）
 
-<!-- markdownlint-disable -->
-
-| Dark-Mode                                                                                    | Light-Mode                                                                                     |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| <img src="https://github.com/MauriceNino/dashdot/raw/main/apps/docs/static/img/screenshot_darkmode.png" alt="Screenshot of the dark-mode" /> | <img src="https://github.com/MauriceNino/dashdot/raw/main/apps/docs/static/img/screenshot_lightmode.png" alt="Screenshot of the light-mode" /> |
-
-
-## Quick Install (Docker)
-
-Images are hosted on [DockerHub](https://hub.docker.com/r/mauricenino/dashdot),
-and are available for both AMD64 and ARM devices.
+镜像托管在 [DockerHub](https://hub.docker.com/r/mauricenino/dashdot)，适用于 AMD64 和 ARM 设备。
 
 ```bash
 docker container run -it \
@@ -73,8 +32,6 @@ docker container run -it \
   mauricenino/dashdot
 ```
 
-To get more information on why which flag is needed, or if you want to use other
-install options instead (`docker-compose`, or from source), have a look at the
-[installation options](https://getdashdot.com/docs/install).
+要了解更多关于为什么需要哪个标志，或者如果您想使用其他安装选项（如 `docker-compose` 或从源代码安装），请查看 [安装选项](https://getdashdot.com/docs/install) 。
 
-To read more about configuration options, you can visit the [configuration options](https://getdashdot.com/docs/config).
+要了解更多关于配置选项的信息，您可以访问[配置选项](https://getdashdot.com/docs/config) 。

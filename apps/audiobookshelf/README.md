@@ -1,91 +1,75 @@
-<br />
-<div align="center">
-   <img alt="Audiobookshelf Banner" src="https://github.com/advplyr/audiobookshelf/raw/master/images/banner.svg" width="600">
+![Audiobookshelf Banner](https://github.com/advplyr/audiobookshelf/raw/master/images/banner.svg)
 
-  <p align="center">
-    <br />
-    <a href="https://audiobookshelf.org/docs">Documentation</a>
-    ·
-    <a href="https://audiobookshelf.org/guides">User Guides</a>
-    ·
-    <a href="https://audiobookshelf.org/support">Support</a>
-  </p>
-</div>
+[文档](https://audiobookshelf.org/docs) · [用户指南](https://audiobookshelf.org/guides) · [支持](https://audiobookshelf.org/support)
 
-# About
+# 关于
 
-Audiobookshelf is a self-hosted audiobook and podcast server.
+Audiobookshelf 是一个自托管的有声书和播客服务器。
 
-### Features
+### 功能
 
-* Fully **open-source**, including the [android & iOS app](https://github.com/advplyr/audiobookshelf-app) *(in beta)*
-* Stream all audio formats on the fly
-* Search and add podcasts to download episodes w/ auto-download
-* Multi-user support w/ custom permissions
-* Keeps progress per user and syncs across devices
-* Auto-detects library updates, no need to re-scan
-* Upload books and podcasts w/ bulk upload drag and drop folders
-* Backup your metadata + automated daily backups
-* Progressive Web App (PWA)
-* Chromecast support on the web app and android app
-* Fetch metadata and cover art from several sources
-* Chapter editor and chapter lookup (using [Audnexus API](https://audnex.us/))
-* Merge your audio files into a single m4b
-* Embed metadata and cover image into your audio files (using [Tone](https://github.com/sandreas/tone))
-* Basic ebook support and ereader
-  * Epub, pdf, cbr, cbz
-  * Send ebook to device (i.e. Kindle)
-* Open RSS feeds for podcasts and audiobooks
+*   完全 **开源** ，包括 [Android & iOS 应用](https://github.com/advplyr/audiobookshelf-app) *(内测中)*
+*   实时流式传输所有音频格式
+*   搜索并添加播客以自动下载集数
+*   支持多用户，并可自定义权限
+*   按用户保存进度并在设备间同步
+*   自动检测库更新，无需重新扫描
+*   批量上传书籍和播客，支持拖放文件夹
+*   备份元数据，并提供每日自动备份
+*   渐进式网络应用（PWA）
+*   支持通过网页和安卓应用使用 Chromecast
+*   从多个来源获取元数据和封面艺术
+*   章节编辑和章节查找（使用 Audnexus API）
+*   将你的音频文件合并为一个 m4b 文件
+*   将元数据和封面图片嵌入到你的音频文件中（使用 Tone）
+*   基本的电子书支持和电子阅读器
+    *   Epub, pdf, cbr, cbz
+    *   将电子书发送到设备（例如：Kindle）
+*   打开播客和有声书的 RSS 订阅源
 
-Is there a feature you are looking for? [Suggest it](https://github.com/advplyr/audiobookshelf/issues/new/choose)
+您在寻找某个功能吗？ [提出来](https://github.com/advplyr/audiobookshelf/issues/new/choose)
 
-Join us on [Discord](https://discord.gg/pJsjuNCKRq) or [Matrix](https://matrix.to/#/#audiobookshelf:matrix.org)
+加入我们，在 [Discord](https://discord.gg/pJsjuNCKRq) 或 [Matrix](https://matrix.to/#/#audiobookshelf:matrix.org)
 
-### Android App (beta)
-Try it out on the [Google Play Store](https://play.google.com/store/apps/details?id=com.audiobookshelf.app)
+### Android 应用（测试版）
 
-### iOS App (beta)
-Available using Test Flight: https://testflight.apple.com/join/wiic7QIW - [Join the discussion](https://github.com/advplyr/audiobookshelf-app/discussions/60)
+在 [Google Play 商店](https://play.google.com/store/apps/details?id=com.audiobookshelf.app)试用
 
-### Build your own tools & clients
-Check out the [API documentation](https://api.audiobookshelf.org/)
+### iOS App（测试版）
 
-<br />
+通过 Test Flight 获取：[https://testflight.apple.com/join/wiic7QIW](https://testflight.apple.com/join/wiic7QIW) - [加入讨论](https://testflight.apple.com/join/wiic7QIW)
 
-<img alt="Library Screenshot" src="https://github.com/advplyr/audiobookshelf/raw/master/images/DemoLibrary.png" />
+### 自建工具与客户端
 
-<br />
+查看 [API 文档](API 文档)
 
-# Organizing your audiobooks
+![Library Screenshot](https://github.com/advplyr/audiobookshelf/raw/master/images/DemoLibrary.png)
 
-#### Directory structure and folder names are important to Audiobookshelf!
+# 整理有声书
 
- See [documentation](https://audiobookshelf.org/docs#book-directory-structure) for supported directory structure, folder naming conventions, and audio file metadata usage.
+#### 目录结构和文件夹名称对 Audiobookshelf 非常重要！
 
-<br />
+请参阅[文档](https://audiobookshelf.org/docs#book-directory-structure)了解支持的目录结构、文件夹命名约定以及音频文件元数据的使用方法。
 
-# Installation
+# 安装
 
-See [install docs](https://www.audiobookshelf.org/docs)
+请参阅[安装文档](https://www.audiobookshelf.org/docs)
 
-<br />
+# 反向代理设置
 
-# Reverse Proxy Set Up
+#### 重要！Audiobookshelf 需要建立 WebSocket 连接。
 
-#### Important! Audiobookshelf requires a websocket connection.
+#### 注意：子文件夹路径（例如 /audiobooks）尚未支持。详见 [issue](https://github.com/advplyr/audiobookshelf/issues/385)
 
-#### Note: Subfolder paths (e.g. /audiobooks) are not supported yet. See [issue](https://github.com/advplyr/audiobookshelf/issues/385)
+### NGINX 反向代理管理器
 
-### NGINX Proxy Manager
+启用 WebSockets 支持
 
-Toggle websockets support.
+![NGINX Web socket](https://user-images.githubusercontent.com/67830747/153679106-b2a7f5b9-0702-48c6-9740-b26b401986e9.png)
 
-<img alt="NGINX Web socket" src="https://user-images.githubusercontent.com/67830747/153679106-b2a7f5b9-0702-48c6-9740-b26b401986e9.png" />
+### NGINX 反向代理
 
-### NGINX Reverse Proxy
-
-Add this to the site config file on your nginx server after you have changed the relevant parts in the <> brackets, and inserted your certificate paths.
-
+在你的 Nginx 服务器的站点配置文件中添加以下内容，更改 <> 中的相关部分，并插入你的证书路径，然后保存文件。
 
 ```bash
 server
@@ -114,17 +98,18 @@ server
 }
 ```
 
-### Apache Reverse Proxy
+### Apache 反向代理
 
-Add this to the site config file on your Apache server after you have changed the relevant parts in the <> brackets, and inserted your certificate paths.
+在你的 Apache 服务器的站点配置文件中添加以下内容，更改 <> 中的相关部分，并插入你的证书路径，然后保存文件。
 
-For this to work you must enable at least the following mods using `a2enmod`:
-  - `ssl`
-  - `proxy`
-  - `proxy_http`
-  - `proxy_balancer`
-  - `proxy_wstunnel`
-  - `rewrite`
+要使此功能正常工作，你必须使用 `a2enmod` 启用以下模块中的至少一个：
+
+*   `ssl`
+*   `proxy`
+*   `proxy_http`
+*   `proxy_balancer`
+*   `proxy_wstunnel`
+*   `rewrite`
 
 ```bash
 <IfModule mod_ssl.c>
@@ -149,9 +134,8 @@ For this to work you must enable at least the following mods using `a2enmod`:
 </IfModule>
 ```
 
-Some SSL certificates like those signed by Let's Encrypt require ACME validation. To allow Let's Encrypt to write and confirm 
-the ACME challenge, edit your VirtualHost definition to prevent proxying traffic that queries `/.well-known` and instead
-serve that directly:
+某些由 Let's Encrypt 签名的 SSL 证书（如 Let's Encrypt 证书）需要进行 ACME 验证。为了允许 Let's Encrypt 写入并确认 ACME 挑战，请编辑您的 VirtualHost 定义，以防止代理查询 `/.well-known` 的流量，而是直接提供这些内容：
+
 ```bash
 <VirtualHost *:443>
     # ...
@@ -169,36 +153,32 @@ serve that directly:
 </VirtualHost>    
 ```
 
+### SWAG 反向代理
 
-### SWAG Reverse Proxy
+[请参阅 LinuxServer.io 配置示例](https://github.com/linuxserver/reverse-proxy-confs/blob/master/audiobookshelf.subdomain.conf.sample)
 
-[See LinuxServer.io config sample](https://github.com/linuxserver/reverse-proxy-confs/blob/master/audiobookshelf.subdomain.conf.sample)
+### Synology 反向代理
 
-### Synology Reverse Proxy
+1.  打开控制面板 > 应用程序门户
+2.  切换到反向代理选项卡
+3.  选择您想要启用 Websockets 的代理规则，然后点击编辑
+4.  切换到“自定义标头”选项卡
+5.  点击创建 > WebSocket
+6.  点击保存
 
-1. Open Control Panel > Application Portal
-2. Change to the Reverse Proxy tab
-3. Select the proxy rule for which you want to enable Websockets and click on Edit
-4. Change to the "Custom Header" tab
-5. Click Create > WebSocket
-6. Click Save
+[来自 @silentArtifact](https://github.com/advplyr/audiobookshelf/issues/241#issuecomment-1036732329)
 
-[from @silentArtifact](https://github.com/advplyr/audiobookshelf/issues/241#issuecomment-1036732329)
+### [Traefik 反向代理](https://doc.traefik.io/traefik/)
 
-### [Traefik Reverse Proxy](https://doc.traefik.io/traefik/)
+与 CORS 相关的中间件会导致在登录时应用程序报告未知错误。为了避免这种情况，请不要为该站点的路由器应用以下标头：
 
-Middleware relating to CORS will cause the app to report Unknown Error when logging in. To prevent this don't apply any of the following headers to the router for this site:
+*   accessControlAllowMethods
+*   accessControlAllowOriginList
+*   accessControlMaxAge
 
-<ul>
-   <li>accessControlAllowMethods</li>
-   <li>accessControlAllowOriginList</li>
-   <li>accessControlMaxAge</li>
-</ul>
+来自 @Dondochaka 和 @BeastleeUK
 
-From [@Dondochaka](https://discord.com/channels/942908292873723984/942914154254176257/945074590374318170) and [@BeastleeUK](https://discord.com/channels/942908292873723984/942914154254176257/970366039294611506)
-<br />
-
-### Example Caddyfile - [Caddy Reverse Proxy](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy)
+### 示例 Caddyfile - [Caddy 反向代理](https://caddyserver.com/docs/caddyfile/directives/reverse_proxy)
 
 ```
 subdomain.domain.com {
@@ -207,78 +187,56 @@ subdomain.domain.com {
 }
 ```
 
+# 从源代码运行
 
-# Run from source
+# 贡献
 
-# Contributing
+该应用使用 [NodeJs](https://nodejs.org/) 构建。
 
-This application is built using [NodeJs](https://nodejs.org/).
+### Dev Container 设置
 
-### Dev Container Setup
-The easiest way to begin developing this project is to use a dev container. An introduction to dev containers in VSCode can be found [here](https://code.visualstudio.com/docs/devcontainers/containers).
+开始开发这个项目最简单的方法是使用开发容器。在 VSCode 中使用开发容器的介绍可以在这里找到 [这里](https://code.visualstudio.com/docs/devcontainers/containers) 。
 
-Required Software:
-* [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-* [VSCode](https://code.visualstudio.com/download)
+所需软件：
 
-*Note, it is possible to use other container software than Docker and IDEs other than VSCode. However, this setup is more complicated and not covered here.*
+*   [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+*   [VSCode](https://code.visualstudio.com/download)
 
-<div>
-<details>
-<summary>Install the required software on Windows with <a href=(https://docs.microsoft.com/en-us/windows/package-manager/winget/#production-recommended)>winget</a></summary>
+*请注意，除了使用 Docker 作为容器软件，还可以使用其他容器软件；除了使用 VSCode 作为 IDE，还可以使用其他 IDE。然而，这种设置更为复杂，这里不予涵盖。*
 
-<p>
-Note: This requires a PowerShell prompt with winget installed.  You should be able to copy and paste the code block to install.  If you use an elevated PowerShell prompt, UAC will not pop up during the installs.
+在 Windows 上使用安装所需的软件
+
+注意：这需要一个带有 winget 的 PowerShell 提示符。你应该能够复制并粘贴代码块进行安装。如果你使用的是提升的 PowerShell 提示符，安装过程中不会弹出 UAC 提示。
 
 ```PowerShell
 winget install -e --id Docker.DockerDesktop; `
 winget install -e --id Microsoft.VisualStudioCode
 ```
 
-</p>
-</details>
-</div>
-
-<div>
-<details>
-<summary>Install the required software on MacOS with <a href=(https://snapcraft.io/)>homebrew</a></summary>
-
-<p>
+在 MacOS 上使用安装所需的软件
 
 ```sh
 brew install --cask docker visual-studio-code
 ```
 
-</p>
-</details>
-</div>
-
-<div style="padding-bottom: 1em">
-<details>
-<summary>Install the required software on Linux with <a href=(https://brew.sh/)>snap</a></summary>
-
-<p>
+使用 snap 在 Linux 上安装所需的软件
 
 ```sh
-sudo snap install docker; \
+sudo snap install docker; 
 sudo snap install code --classic
 ```
 
-</p>
-</details>
-</div>
+安装这些包后，您现在可以安装 VSCode 的 [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) 扩展。安装完此扩展后，打开命令面板（`ctrl+shift+p` 或 `cmd+shift+p`），然后选择命令 `>Dev Containers: Rebuild and Reopen in Container` 。这将导致开发环境容器被构建并启动。
 
-After installing these packages, you can now install the [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) extension for VSCode. After installing this extension open the command pallet (`ctrl+shift+p` or `cmd+shift+p`) and select the command `>Dev Containers: Rebuild and Reopen in Container`. This will cause the development environment container to be built and launched.
+现在您可以开始开发了！
 
-You are now ready to start development!
+### 手动设置环境
 
-### Manual Environment Setup
+如果你不想使用开发容器，仍然可以开发这个项目。首先，你需要安装 [NodeJs](https://nodejs.org/)（版本 16）和 [FFmpeg](https://ffmpeg.org/)。
 
-If you don't want to use the dev container, you can still develop this project. First, you will need to install [NodeJs](https://nodejs.org/) (version 16) and [FFmpeg](https://ffmpeg.org/).
+接下来，你需要在项目的根目录中创建一个 `dev.js` 文件。这个文件包含配置信息和与你的开发环境相关的路径。你可以在 `.devcontainer/dev.js` 中找到这个文件的一个示例。
 
-Next you will need to create a `dev.js` file in the project's root directory. This contains configuration information and paths unique to your development environment. You can find an example of this file in `.devcontainer/dev.js`.
-
-You are now ready to build the client:
+你现在可以构建客户端了：
 
 ```sh
 npm ci
@@ -288,21 +246,20 @@ npm run generate
 cd ..
 ```
 
-### Development Commands
+### 开发命令
 
-After setting up your development environment, either using the dev container or using your own custom environment, the following commands will help you run the server and client.
+设置完开发环境后（无论是使用开发容器还是自定义环境），以下命令可以帮助你运行服务器和客户端。
 
-To run the server, you can use the command `npm run dev`. This will use the client that was built when you ran `npm run generate` in the client directory or when you started the dev container. If you make changes to the server, you will need to restart the server. If you make changes to the client, you will need to run the command `(cd client; npm run generate)` and then restart the server. By default the client runs at `localhost:3333`, though the port can be configured in `dev.js`.
+要运行服务器，可以使用命令 ``npm run dev``。这将使用你在客户端目录中运行 ``npm run generate`` 时构建的客户端，或者在启动开发容器时构建的客户端。如果你对服务器进行了修改，需要重启服务器。如果你对客户端进行了修改，需要运行命令 ``(cd client; npm run generate)``，然后重启服务器。默认情况下，客户端运行在 ``localhost:3333``，但端口可以在 ``dev.js`` 中进行配置。
 
-You can also build a version of the client that supports live reloading. To do this, start the server, then run the command `(cd client; npm run dev)`. This will run a separate instance of the client at `localhost:3000` that will be automatically updated as you make changes to the client.
+你也可以构建一个支持实时重载的客户端版本。要实现这一点，先启动服务器，然后运行命令 ``(cd client; npm run dev)``。这将在 ``localhost:3000`` 上运行一个客户端实例，并且当你对客户端进行修改时会自动更新。
 
-If you are using VSCode, this project includes a couple of pre-defined targets to speed up this process. First, if you build the project (`ctrl+shift+b` or `cmd+shift+b`) it will automatically generate the client. Next, there are debug commands for running the server and client. You can view these targets using the debug panel (bring it up with (`ctrl+shift+d` or `cmd+shift+d`):
+如果你使用的是 VSCode，这个项目包含几个预定义的目标来加快这个过程。首先，如果你构建项目（`ctrl+shift+b` 或 `cmd+shift+b`），它会自动生成客户端。接下来，有调试命令可以运行服务器和客户端。你可以通过调试面板查看这些目标（使用 `ctrl+shift+d` 或 `cmd+shift+d` 打开调试面板）：
 
-* `Debug server`—Run the server.
-* `Debug client (nuxt)`—Run the client with live reload.
-* `Debug server and client (nuxt)`—Runs both the preceding two debug targets.
+*   `Debug server`—运行服务器。
+*   `Debug client (nuxt)`—运行客户端并启用实时重载。
+*   `Debug server and client (nuxt)` —运行上述两个调试目标。
 
+# 如何支持
 
-# How to Support
-
-[See the incomplete "How to Support" page](https://www.audiobookshelf.org/support)
+[查看不完整的“支持方式”页面](https://www.audiobookshelf.org/support)

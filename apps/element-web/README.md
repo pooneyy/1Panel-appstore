@@ -1,105 +1,66 @@
-[![Chat](https://img.shields.io/matrix/element-web:matrix.org?logo=matrix)](https://matrix.to/#/#element-web:matrix.org)
-![Tests](https://github.com/vector-im/element-web/actions/workflows/tests.yaml/badge.svg)
-![Static Analysis](https://github.com/vector-im/element-web/actions/workflows/static_analysis.yaml/badge.svg)
-[![Weblate](https://translate.element.io/widgets/element-web/-/element-web/svg-badge.svg)](https://translate.element.io/engage/element-web/)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=element-web)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=coverage)](https://sonarcloud.io/summary/new_code?id=element-web)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=element-web)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=bugs)](https://sonarcloud.io/summary/new_code?id=element-web)
+[![Chat](https://img.shields.io/matrix/element-web:matrix.org?logo=matrix)](https://matrix.to/#/#element-web:matrix.org) ![Tests](https://github.com/vector-im/element-web/actions/workflows/tests.yaml/badge.svg) ![Static Analysis](https://github.com/vector-im/element-web/actions/workflows/static_analysis.yaml/badge.svg) [![Weblate](https://translate.element.io/widgets/element-web/-/element-web/svg-badge.svg)](https://translate.element.io/engage/element-web/) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=element-web) [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=coverage)](https://sonarcloud.io/summary/new_code?id=element-web) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=element-web) [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=element-web&metric=bugs)](https://sonarcloud.io/summary/new_code?id=element-web)
 
-# Element
+# 元素
 
-Element (formerly known as Vector and Riot) is a Matrix web client built using the [Matrix
-React SDK](https://github.com/matrix-org/matrix-react-sdk).
+Element（以前称为 Vector 和 Riot）是一个使用 [Matrix React SDK](https://github.com/matrix-org/matrix-react-sdk) 构建的 Matrix 网络客户端。
 
-# Supported Environments
+# 支持的环境
 
-Element has several tiers of support for different environments:
+Element 对不同环境提供了几个支持层级：
 
--   Supported
-    -   Definition: Issues **actively triaged**, regressions **block** the release
-    -   Last 2 major versions of Chrome, Firefox, and Edge on desktop OSes
-    -   Last 2 versions of Safari
-    -   Latest release of official Element Desktop app on desktop OSes
-    -   Desktop OSes means macOS, Windows, and Linux versions for desktop devices
-        that are actively supported by the OS vendor and receive security updates
--   Experimental
-    -   Definition: Issues **accepted**, regressions **do not block** the release
-    -   Element as an installed PWA via current stable version of Chrome
-    -   Mobile web for current stable version of Chrome, Firefox, and Safari on Android, iOS, and iPadOS
--   Not supported
-    -   Definition: Issues only affecting unsupported environments are **closed**
-    -   Everything else
+*   支持
+    *   定义：问题被**积极处理** ，回归问题**阻止**发布
+    *   桌面操作系统上最后两个主要版本的 Chrome、Firefox 和 Edge
+    *   Safari 的最后两个版本
+    *   桌面操作系统上官方 Element Desktop 应用的最新版本
+    *   桌面操作系统指的是活跃受 OS 厂商支持并接收安全更新的 macOS、Windows 和 Linux 版本
+*   实验性功能
+    *   定义：接受的问题，回归问题不阻碍发布
+    *   通过当前稳定版 Chrome 安装的 PWA 元素
+    *   当前稳定版 Chrome、Firefox 和 Safari 在 Android、iOS 和 iPadOS 上的移动网页版本
+*   不支持
+    *   定义：仅影响不支持环境的问题将被 **关闭**
+    *   其他所有内容
 
-For accessing Element on an Android or iOS device, we currently recommend the
-native apps [element-android](https://github.com/vector-im/element-android)
-and [element-ios](https://github.com/vector-im/element-ios).
+要访问 Element 在 Android 或 iOS 设备上，我们目前推荐使用原生应用 element-android 和 element-ios。
 
-# Getting Started
+# 快速入门
 
-The easiest way to test Element is to just use the hosted copy at <https://app.element.io>.
-The `develop` branch is continuously deployed to <https://develop.element.io>
-for those who like living dangerously.
+测试 Element 最简单的方法就是使用托管版本 [https://app.element.io](https://app.element.io)。喜欢冒险的人可以将 `develop` 分支持续部署到 [https://develop.element.io](https://develop.element.io)。
 
-To host your own copy of Element, the quickest bet is to use a pre-built
-released version of Element:
+要托管您自己的 Element 版本，最快的方法是使用 Element 的预构建发布版本：
 
-1. Download the latest version from <https://github.com/vector-im/element-web/releases>
-1. Untar the tarball on your web server
-1. Move (or symlink) the `element-x.x.x` directory to an appropriate name
-1. Configure the correct caching headers in your webserver (see below)
-1. Configure the app by copying `config.sample.json` to `config.json` and
-   modifying it. See the [configuration docs](https://github.com/vector-im/element-web/blob/develop/docs/config.md) for details.
-1. Enter the URL into your browser and log into Element!
+1.  从 [https://github.com/vector-im/element-web/releases](https://github.com/vector-im/element-web/releases) 下载最新版本
+2.  在您的 Web 服务器上解压 tarball
+3.  将 `element-x.x.x` 目录移动到一个合适的名称
+4.  在你的 Web 服务器上配置正确的缓存头（参见下方）
+5.  配置应用程序：将 `config.sample.json` 复制到 `config.json` 并进行修改。详情请参见 [配置文档](https://github.com/vector-im/element-web/blob/develop/docs/config.md) 。
+6.  在浏览器中输入 URL 并登录 Element！
 
-Releases are signed using gpg and the OpenPGP standard, and can be checked against the public key located
-at <https://packages.riot.im/element-release-key.asc>.
+发布使用 gpg 并遵循 OpenPGP 标准进行签名，您可以在此处验证签名：\[https://packages.riot.im/element-release-key.asc\](https://packages.riot.im/element-release-key.asc)
 
-Note that for the security of your chats will need to serve Element
-over HTTPS. Major browsers also do not allow you to use VoIP/video
-chats over HTTP, as WebRTC is only usable over HTTPS.
-There are some exceptions like when using localhost, which is
-considered a [secure context](https://developer.mozilla.org/docs/Web/Security/Secure_Contexts)
-and thus allowed.
+请注意，为了保证聊天的安全性，您需要通过 HTTPS 服务 Element。主要浏览器也不允许通过 HTTP 进行 VoIP 或视频聊天，因为 WebRTC 只能在 HTTPS 下使用。不过，当使用本地主机时，这被视为一个 [安全上下文](https://developer.mozilla.org/docs/Web/Security/Secure_Contexts) ，因此是允许的。
 
-To install Element as a desktop application, see [Running as a desktop
-app](#running-as-a-desktop-app) below.
+要将 Element 安装为桌面应用程序，请参阅下方的 [以桌面应用方式运行](#running-as-a-desktop-app) 。
 
-# Important Security Notes
+# 重要安全注意事项
 
-## Separate domains
+## 分离的域名
 
-We do not recommend running Element from the same domain name as your Matrix
-homeserver. The reason is the risk of XSS (cross-site-scripting)
-vulnerabilities that could occur if someone caused Element to load and render
-malicious user generated content from a Matrix API which then had trusted
-access to Element (or other apps) due to sharing the same domain.
+我们不建议从与你的 Matrix 服务器相同的域名运行 Element。原因是，如果有人导致 Element 加载并渲染来自 Matrix API 的恶意用户生成内容，而这些内容由于共享相同的域名，获得了对 Element（或其他应用）的信任访问权限，那么可能会出现跨站脚本（XSS）漏洞。
 
-We have put some coarse mitigations into place to try to protect against this
-situation, but it's still not good practice to do it in the first place. See
-<https://github.com/vector-im/element-web/issues/1977> for more details.
+我们已经实施了一些粗略的缓解措施，以尽量保护自己不受这种情况的影响， 但首先这样做仍然不是良好的实践。更多详情请参阅 [https://github.com/vector-im/element-web/issues/1977](https://github.com/vector-im/element-web/issues/1977)。
 
-## Configuration best practices
+## 配置最佳实践
 
-Unless you have special requirements, you will want to add the following to
-your web server configuration when hosting Element Web:
+除非有特殊需求，否则在托管 Element Web 时，您需要在 web 服务器配置中添加以下内容：
 
--   The `X-Frame-Options: SAMEORIGIN` header, to prevent Element Web from being
-    framed and protect from [clickjacking][owasp-clickjacking].
--   The `frame-ancestors 'self'` directive to your `Content-Security-Policy`
-    header, as the modern replacement for `X-Frame-Options` (though both should be
-    included since not all browsers support it yet, see
-    [this][owasp-clickjacking-csp]).
--   The `X-Content-Type-Options: nosniff` header, to [disable MIME
-    sniffing][mime-sniffing].
--   The `X-XSS-Protection: 1; mode=block;` header, for basic XSS protection in
-    legacy browsers.
+*   \`X-Frame-Options: SAMEORIGIN\` 头，以防止 Element Web 被嵌入框架，并保护免受点击劫持攻击。
+*   将 \`frame-ancestors 'self'\` 指令添加到 \`Content-Security-Policy\` 头中，作为 \`X-Frame-Options\` 的现代替代方案（尽管两者都应被使用）。 由于并非所有浏览器都支持，因此包含在此处，请参阅 [this](https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html#content-security-policy-frame-ancestors-examples))。
+*   The `X-Content-Type-Options: nosniff` 头，用于禁用 MIME 类型推断。
+*   The `X-XSS-Protection: 1; mode=block;` 头，用于在旧版浏览器中提供基本的 XSS 保护。
 
-[mime-sniffing]: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing
-[owasp-clickjacking-csp]: https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html#content-security-policy-frame-ancestors-examples
-[owasp-clickjacking]: https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html
-
-If you are using nginx, this would look something like the following:
+如果你使用的是 nginx，配置会类似于以下内容：
 
 ```
 add_header X-Frame-Options SAMEORIGIN;
@@ -108,7 +69,7 @@ add_header X-XSS-Protection "1; mode=block";
 add_header Content-Security-Policy "frame-ancestors 'self'";
 ```
 
-For Apache, the configuration looks like:
+对于 Apache，配置如下：
 
 ```
 Header set X-Frame-Options SAMEORIGIN
@@ -117,80 +78,59 @@ Header set X-XSS-Protection "1; mode=block"
 Header set Content-Security-Policy "frame-ancestors 'self'"
 ```
 
-Note: In case you are already setting a `Content-Security-Policy` header
-elsewhere, you should modify it to include the `frame-ancestors` directive
-instead of adding that last line.
+注意：如果你已经在其他地方设置了 `Content-Security-Policy` 头，你应该修改它以包含 `frame-ancestors` 指令，而不是添加最后一行。
 
-# Building From Source
+# 从源代码构建
 
-Element is a modular webapp built with modern ES6 and uses a Node.js build system.
-Ensure you have the latest LTS version of Node.js installed.
+Element 是一个基于现代 ES6 构建的模块化 web 应用，并使用 Node.js 构建系统。请确保安装了最新版本的 LTS Node.js。
 
-Using `yarn` instead of `npm` is recommended. Please see the Yarn [install
-guide](https://classic.yarnpkg.com/en/docs/install) if you do not have it already.
+使用 \``yarn`\` 而不是 \``npm`\` 是推荐的。如果你还没有安装，请参阅 Yarn 的 [安装指南](https://classic.yarnpkg.com/en/docs/install) 。
 
-1. Install or update `node.js` so that your `node` is at least the current recommended LTS.
-1. Install `yarn` if not present already.
-1. Clone the repo: `git clone https://github.com/vector-im/element-web.git`.
-1. Switch to the element-web directory: `cd element-web`.
-1. Install the prerequisites: `yarn install`.
-    - If you're using the `develop` branch, then it is recommended to set up a
-      proper development environment (see [Setting up a dev
-      environment](#setting-up-a-dev-environment) below). Alternatively, you
-      can use <https://develop.element.io> - the continuous integration release of
-      the develop branch.
-1. Configure the app by copying `config.sample.json` to `config.json` and
-   modifying it. See the [configuration docs](https://github.com/vector-im/element-web/blob/develop/docs/config.md) for details.
-1. `yarn dist` to build a tarball to deploy. Untaring this file will give
-   a version-specific directory containing all the files that need to go on your
-   web server.
+1.  安装或更新 \``node.js`\`，确保你的 \``node`\` 至少是当前推荐的 LTS 版本。
+2.  如果还没有安装，请安装 \``yarn`\`。
+3.  克隆仓库： `git clone https://github.com/vector-im/element-web.git`
+4.  切换到 element-web 目录：\`\`\`cd element-web\`\`\`.
+5.  安装依赖项：\`\`\`yarn install\`\`\`.
+    *   如果你使用的是 \`\`\`develop\`\`\` 分支，建议设置一个完整的开发环境（参见下方的 [设置开发环境](#setting-up-a-dev-environment) ）。或者，你可以使用 [https://develop.element.io](https://develop.element.io) - \`\`\`develop\`\`\` 分支的持续集成发布版本。
+6.  通过复制 \`\`\`config.sample.json\`\`\` 并重命名为 \`\`\`config.json\`\`\` 并进行修改来配置应用。详情请参见 [配置文档](https://github.com/vector-im/element-web/blob/develop/docs/config.md) 。
+7.  运行 \``yarn dist`\` 来构建一个 tarball 用于部署。解压此文件会得到一个版本特定的目录，其中包含需要上传到你的 web 服务器的所有文件。
 
-Note that `yarn dist` is not supported on Windows, so Windows users can run `yarn build`,
-which will build all the necessary files into the `webapp` directory. The version of Element
-will not appear in Settings without using the dist script. You can then mount the
-`webapp` directory on your web server to actually serve up the app, which is
-entirely static content.
+请注意，在 Windows 上不支持\``yarn dist`\`，因此 Windows 用户可以运行\``yarn build`\`，这将会把所有必要的文件构建到\``webapp`\`目录中。Element 的版本 不会在设置中出现，除非使用 dist 脚本。然后你可以挂载 将 \``webapp`\` 目录部署到你的 Web 服务器上，以实际提供该应用，该应用完全是静态内容。
 
-# Running as a Desktop app
+# 以桌面应用方式运行
 
-Element can also be run as a desktop app, wrapped in Electron. You can download a
-pre-built version from <https://element.io/get-started> or, if you prefer,
-build it yourself.
+Element 也可以作为一个桌面应用运行，使用 Electron 包装。您可以在 [https://element.io/get-started](https://element.io/get-started) 下载预构建版本，或者如果您愿意，可以自行构建。
 
-To build it yourself, follow the instructions at <https://github.com/vector-im/element-desktop>.
+要自行构建，请按照 [https://github.com/vector-im/element-desktop](https://github.com/vector-im/element-desktop) 中的说明操作。
 
-Many thanks to @aviraldg for the initial work on the Electron integration.
+非常感谢 @aviraldg 在 Electron 集成方面的初始工作。
 
-Other options for running as a desktop app:
+其他作为桌面应用运行的选项：
 
--   @asdf:matrix.org points out that you can use nativefier and it just works(tm)
+*   @asdf:matrix.org 指出，你可以使用 nativefier，它就能正常工作（tm）
 
 ```bash
 yarn global add nativefier
 nativefier https://app.element.io/
 ```
 
-The [configuration docs](https://github.com/vector-im/element-web/blob/develop/docs/config.md#desktop-app-configuration) show how to
-override the desktop app's default settings if desired.
+配置文档 [展示了如何覆盖桌面应用的默认设置](https://github.com/vector-im/element-web/blob/develop/docs/config.md#desktop-app-configuration) （如果需要的话）。
 
-# Running from Docker
+# 使用 Docker 运行
 
-The Docker image can be used to serve element-web as a web server. The easiest way to use
-it is to use the prebuilt image:
+Docker 镜像可以用来作为 web 服务器运行 element-web。最简单的方法是使用预构建的镜像：
 
 ```bash
 docker run -p 80:80 vectorim/element-web
 ```
 
-To supply your own custom `config.json`, map a volume to `/app/config.json`. For example,
-if your custom config was located at `/etc/element-web/config.json` then your Docker command
-would be:
+要提供你自己的自定义 `config.json`，将一个卷映射到 `/app/config.json`。例如，如果你的自定义配置文件位于 `/etc/element-web/config.json`，那么你的 Docker 命令将是：
 
 ```bash
 docker run -p 80:80 -v /etc/element-web/config.json:/app/config.json vectorim/element-web
 ```
 
-To build the image yourself:
+自行构建镜像：
 
 ```bash
 git clone https://github.com/vector-im/element-web.git element-web
@@ -199,8 +139,7 @@ git checkout master
 docker build .
 ```
 
-If you're building a custom branch, or want to use the develop branch, check out the appropriate
-element-web branch and then run:
+如果你正在构建自定义分支，或者想要使用 develop 分支，请检出相应的 element-web 分支，然后运行：
 
 ```bash
 docker build -t \
@@ -212,24 +151,21 @@ docker build -t \
     .
 ```
 
-# Running in Kubernetes
+# 在 Kubernetes 中运行
 
-The provided element-web docker image can also be run from within a Kubernetes cluster.
-See the [Kubernetes example](https://github.com/vector-im/element-web/blob/develop/docs/kubernetes.md) for more details.
+提供的 element-web docker 镜像也可以在 Kubernetes 集群内部运行。更多详情请参见 [Kubernetes 示例](https://github.com/vector-im/element-web/blob/develop/docs/kubernetes.md) 。
 
 # config.json
 
-Element supports a variety of settings to configure default servers, behaviour, themes, etc.
-See the [configuration docs](https://github.com/vector-im/element-web/blob/develop/docs/config.md) for more details.
+Element 支持多种设置来配置默认服务器、行为、主题等。更多详情请参见 [配置文档](https://github.com/vector-im/element-web/blob/develop/docs/config.md) 。
 
-# Labs Features
+# 实验室功能
 
-Some features of Element may be enabled by flags in the `Labs` section of the settings.
-Some of these features are described in [labs.md](https://github.com/vector-im/element-web/blob/develop/docs/labs.md).
+Element 的一些功能可能需要在设置中的“实验”部分启用标志才能启用。其中一些功能在 [labs.md](https://github.com/vector-im/element-web/blob/develop/docs/labs.md) 中有描述。
 
-# Caching requirements
+# 缓存要求
 
-Element requires the following URLs not to be cached, when/if you are serving Element from your own webserver:
+当你从自己的 web 服务器提供 Element 时，Element 需要以下 URL 不被缓存：
 
 ```
 /config.*.json
@@ -239,49 +175,27 @@ Element requires the following URLs not to be cached, when/if you are serving El
 /index.html
 ```
 
-We also recommend that you force browsers to re-validate any cached copy of Element on page load by configuring your
-webserver to return `Cache-Control: no-cache` for `/`. This ensures the browser will fetch a new version of Element on
-the next page load after it's been deployed. Note that this is already configured for you in the nginx config of our
-Dockerfile.
+我们还建议通过配置 web 服务器，使其在页面加载时返回 `Cache-Control: no-cache` 对于 `/`，强制浏览器重新验证任何缓存的 Element 副本。这可以确保在部署后，浏览器会在下一次页面加载时获取 Element 的新版本。请注意，这已经在我们 Dockerfile 的 nginx 配置中为你配置好了。
 
-# Development
+# 开发
 
-Before attempting to develop on Element you **must** read the [developer guide
-for `matrix-react-sdk`](https://github.com/matrix-org/matrix-react-sdk#developer-guide), which
-also defines the design, architecture and style for Element too.
+在尝试对 Element 进行开发之前，你**必须**阅读 [matrix-react-sdk 的开发指南](https://github.com/matrix-org/matrix-react-sdk#developer-guide) ，该指南还定义了 Element 的设计、架构和样式。
 
-Read the [Choosing an issue](https://github.com/vector-im/element-web/blob/develop/docs/choosing-an-issue.md) page for some guidance
-about where to start. Before starting work on a feature, it's best to ensure
-your plan aligns well with our vision for Element. Please chat with the team in
-[#element-dev:matrix.org](https://matrix.to/#/#element-dev:matrix.org) before
-you start so we can ensure it's something we'd be willing to merge.
+阅读[选择问题](https://github.com/vector-im/element-web/blob/develop/docs/choosing-an-issue.md)页面以获得一些指导 在开始工作之前，最好先确定从哪里开始。在着手开发一个新功能之前，最好确保 你的计划与我们对 Element 的愿景非常契合。请与团队进行交流。 在开始之前，请访问 [#element-dev:matrix.org](https://matrix.to/#/#element-dev:matrix.org)，以便我们可以确认这是否是我们愿意合并的内容。
 
-You should also familiarise yourself with the ["Here be Dragons" guide
-](https://docs.google.com/document/d/12jYzvkidrp1h7liEuLIe6BMdU0NUjndUYI971O06ooM)
-to the tame & not-so-tame dragons (gotchas) which exist in the codebase.
+你也应该熟悉一下《Here be Dragons》指南，了解代码库中存在的 tame 和不那么 tame 的 dragons（注意事项）。
 
-The idea of Element is to be a relatively lightweight "skin" of customisations on
-top of the underlying `matrix-react-sdk`. `matrix-react-sdk` provides both the
-higher and lower level React components useful for building Matrix communication
-apps using React.
+Element 的设计理念是作为底层 matrix-react-sdk 的相对轻量级“皮肤”，在其上进行自定义。matrix-react-sdk 提供了构建基于 React 的 Matrix 通信应用所需的高、低级别 React 组件。
 
-Please note that Element is intended to run correctly without access to the public
-internet. So please don't depend on resources (JS libs, CSS, images, fonts)
-hosted by external CDNs or servers but instead please package all dependencies
-into Element itself.
+请注意，Element 设计为在不连接公共互联网的情况下也能正确运行。因此，请不要依赖由外部 CDN 或服务器托管的资源（如 JS 库、CSS、图片、字体），而是将所有依赖项打包到 Element 本身中。
 
-CSS hot-reload is available as an opt-in development feature. You can enable it
-by defining a `CSS_HOT_RELOAD` environment variable, in a `.env` file in the root
-of the repository. See `.env.example` for documentation and an example.
+CSS 热重载作为可选的开发功能可用。你可以在仓库根目录的 .env 文件中定义一个 CSS\_HOT\_RELOAD 环境变量来启用它。请参阅 .env.example 文件以获取文档和示例。
 
-# Setting up a dev environment
+# 设置开发环境
 
-Much of the functionality in Element is actually in the `matrix-react-sdk` and
-`matrix-js-sdk` modules. It is possible to set these up in a way that makes it
-easy to track the `develop` branches in git and to make local changes without
-having to manually rebuild each time.
+Element 的许多功能实际上在 `matrix-react-sdk` 中实现的，并 \`matrix-js-sdk\` 模块。可以设置这些模块以便于跟踪 git 中的 \`develop\` 分支，并且可以在本地进行修改而无需每次手动重新构建。
 
-First clone and build `matrix-js-sdk`:
+首先克隆并构建 `matrix-js-sdk`：
 
 ```bash
 git clone https://github.com/matrix-org/matrix-js-sdk.git
@@ -291,7 +205,7 @@ yarn install
 popd
 ```
 
-Then similarly with `matrix-react-sdk`:
+然后像 \``matrix-react-sdk`\` 一样：
 
 ```bash
 git clone https://github.com/matrix-org/matrix-react-sdk.git
@@ -302,17 +216,16 @@ yarn install
 popd
 ```
 
-Clone the repo and switch to the `element-web` directory:
+克隆仓库并切换到 `element-web` 目录：
 
 ```bash
 git clone https://github.com/vector-im/element-web.git
 cd element-web
 ```
 
-Configure the app by copying `config.sample.json` to `config.json` and
-modifying it. See the [configuration docs](https://github.com/vector-im/element-web/blob/develop/docs/config.md) for details.
+通过复制 `config.sample.json` 为 `config.json` 并对其进行修改来配置应用。详情请参阅 [配置文档](https://github.com/vector-im/element-web/blob/develop/docs/config.md) 。
 
-Finally, build and start Element itself:
+最后，构建并启动 Element 本身：
 
 ```bash
 yarn link matrix-js-sdk
@@ -321,7 +234,7 @@ yarn install
 yarn start
 ```
 
-Wait a few seconds for the initial build to finish; you should see something like:
+等待几秒钟以完成初始构建；你应该会看到类似的内容：
 
 ```
 [element-js] <s> [webpack.Progress] 100%
@@ -330,21 +243,15 @@ Wait a few seconds for the initial build to finish; you should see something lik
 [element-js] ℹ ｢wdm｣: Compiled successfully.
 ```
 
-Remember, the command will not terminate since it runs the web server
-and rebuilds source files when they change. This development server also
-disables caching, so do NOT use it in production.
+请记住，该命令不会终止，因为它会运行 Web 服务器并在源文件更改时重建文件。此开发服务器还禁用了缓存，因此请勿在生产环境中使用它。
 
-Open <http://127.0.0.1:8080/> in your browser to see your newly built Element.
+在浏览器中打开 [http://127.0.0.1:8080/](http://127.0.0.1:8080/) 查看您新构建的 Element。
 
-**Note**: The build script uses inotify by default on Linux to monitor directories
-for changes. If the inotify limits are too low your build will fail silently or with
-`Error: EMFILE: too many open files`. To avoid these issues, we recommend a watch limit
-of at least `128M` and instance limit around `512`.
+**注意** ：构建脚本默认在 Linux 上使用 inotify 监控目录 以检测更改。如果 inotify 限制过低，您的构建可能会静默失败或失败。 为了避免这些问题，我们建议设置最多监视器数量为至少 128M，并且实例数量约为 512。
 
-You may be interested in issues [#15750](https://github.com/vector-im/element-web/issues/15750) and
-[#15774](https://github.com/vector-im/element-web/issues/15774) for further details.
+你可能对问题 [#15750](https://github.com/vector-im/element-web/issues/15750) 感兴趣和 \[1#15774\](#1) 以获取更多信息。
 
-To set a new inotify watch and instance limit, execute:
+要设置新的 inotify 监视器和实例限制，请执行：
 
 ```
 sudo sysctl fs.inotify.max_user_watches=131072
@@ -352,7 +259,7 @@ sudo sysctl fs.inotify.max_user_instances=512
 sudo sysctl -p
 ```
 
-If you wish, you can make the new limits permanent, by executing:
+如果你愿意，可以通过执行以下命令使新的限制永久生效：
 
 ```
 echo fs.inotify.max_user_watches=131072 | sudo tee -a /etc/sysctl.conf
@@ -360,38 +267,34 @@ echo fs.inotify.max_user_instances=512 | sudo tee -a /etc/sysctl.conf
 sudo sysctl -p
 ```
 
----
+* * *
 
-When you make changes to `matrix-react-sdk` or `matrix-js-sdk` they should be
-automatically picked up by webpack and built.
+当你对 `matrix-react-sdk` 或 `matrix-js-sdk` 进行修改时，webpack 应该会自动检测并构建这些更改。
 
-If any of these steps error with, `file table overflow`, you are probably on a mac
-which has a very low limit on max open files. Run `ulimit -Sn 1024` and try again.
-You'll need to do this in each new terminal you open before building Element.
+如果在执行这些步骤时遇到`文件表溢出`错误，你可能使用的是 mac 系统，其最大打开文件数的限制非常低。可以运行 `ulimit -Sn 1024` 并重新尝试。在每次打开新的终端窗口进行构建 Element 之前，都需要执行此操作。
 
-## Running the tests
+## 运行测试
 
-There are a number of application-level tests in the `tests` directory; these
-are designed to run with Jest and JSDOM. To run them
+在 \``tests`\` 目录中有若干应用级测试；这些测试设计为与 Jest 和 JSDOM 一起运行。要运行这些测试，请参阅相关文档。
 
 ```
 yarn test
 ```
 
-### End-to-End tests
+### 端到端测试
 
-See [matrix-react-sdk](https://github.com/matrix-org/matrix-react-sdk/#end-to-end-tests) for how to run the end-to-end tests.
+有关如何运行端到端测试，请参阅 [matrix-react-sdk](https://github.com/matrix-org/matrix-react-sdk/#end-to-end-tests)。
 
-# Translations
+# 翻译
 
-To add a new translation, head to the [translating doc](https://github.com/vector-im/element-web/blob/develop/docs/translating.md).
+要添加新的翻译，请前往 [翻译文档](https://github.com/vector-im/element-web/blob/develop/docs/translating.md) 。
 
-For a developer guide, see the [translating dev doc](https://github.com/vector-im/element-web/blob/develop/docs/translating-dev.md).
+对于开发人员指南，请参阅[翻译开发文档](https://github.com/vector-im/element-web/blob/develop/docs/translating-dev.md) 。
 
-[<img src="https://translate.element.io/widgets/element-web/-/multi-auto.svg" alt="translationsstatus" width="340">](https://translate.element.io/engage/element-web/?utm_source=widget)
+[![translationsstatus](https://translate.element.io/widgets/element-web/-/multi-auto.svg)](https://translate.element.io/engage/element-web/?utm_source=widget)
 
-# Triaging issues
+# 处理问题
 
-Issues are triaged by community members and the Web App Team, following the [triage process](https://github.com/vector-im/element-meta/wiki/Triage-process).
+问题由社区成员和 Web 应用团队按照[处理流程](https://github.com/vector-im/element-meta/wiki/Triage-process)进行分类处理。
 
-We use [issue labels](https://github.com/vector-im/element-meta/wiki/Issue-labelling) to sort all incoming issues.
+我们使用[问题标签](https://github.com/vector-im/element-meta/wiki/Issue-labelling)来整理所有收到的问题。

@@ -3,15 +3,20 @@
 **Headscale 服务器地址，只能用经过域名反向代理的地址。**
 
 # 原始相关
-***
+
+* * *
+
 # Headscale-UI
-A web frontend for the [headscale](https://github.com/juanfont/headscale) Tailscale-compatible coordination server.
 
-## Installation
-Headscale-UI is currently released as a static site: just take the release and host with your favorite web server. Headscale-UI expects to be served from the `/web` path to avoid overlap with headscale on the same domain. Note that due to CORS (see https://github.com/juanfont/headscale/issues/623), headscale UI *must* be served on the same subdomain, or CORS headers injected via reverse proxy.
+一个适用于 [headscale](https://github.com/juanfont/headscale) Tailscale 兼容协调服务器的网页前端。
 
-### Docker Installation
-If you are using docker, you can install `headscale` alongside `headscale-ui`, like so:
+## 安装
+
+Headscale-UI 目前以静态站点的形式发布：只需获取发布版本，并用您喜欢的网页服务器进行托管。Headscale-UI 预期将从 `/web` 路径提供服务，以避免与同一域名上的 headscale 发生冲突。请注意，由于 CORS（见 [https://github.com/juanfont/headscale/issues/623](https://github.com/juanfont/headscale/issues/623)），headscale UI *必须* 在同一子域名上提供服务，或者通过反向代理注入 CORS 标头。
+
+### Docker 安装
+
+如果您使用 docker，可以像这样安装 `headscale` 和 `headscale-ui`：
 
 ```yaml
 version: '3.5'
@@ -34,17 +39,21 @@ services:
       # - 9443:443
 ```
 
-Headscale UI serves on port 443 and uses a self signed cert by default. You will need to add a `config.yaml` file under your `container-config` folder so that `headscale` has all of the required settings declared. An example from the official `headscale` repo is [here](https://github.com/juanfont/headscale/blob/main/config-example.yaml). 
+Headscale UI 在 443 端口上运行，默认使用自签名的证书。您需要在 `container-config` 文件夹下添加一个 `config.yaml` 文件，以便 `headscale` 声明所有必需的设置。官方 `headscale` 仓库的一个示例[在这里](https://github.com/juanfont/headscale/blob/main/config-example.yaml) 。
 
-### Additional Docker Settings
-The docker container lets you set the following settings:
-| Variable | Description | Example |
-|----|----|----|
-| HTTP_PORT | Sets the HTTP port to an alternate value | `80` |
-| HTTPS_PORT | Sets the HTTPS port to an alternate value | `443` |
+### 额外的 Docker 设置
 
-### Proxy Settings
-You will need a reverse proxy to install `headscale-ui` on your domain. Here is an example [Caddy Config](https://caddyserver.com/) to achieve this:
+Docker 容器允许您设置以下设置：
+
+| 变量 | 描述 | 示例 |
+| --- | --- | --- |
+| HTTP\_PORT | 设置 HTTP 端口号为其他值 | 80 |
+| HTTPS\_PORT | 设置 HTTPS 端口号为其他值 | 443 |
+
+### 代理设置
+
+您需要在您的域名上安装 `headscale-ui` 时需要一个反向代理。以下是一个实现此功能的示例 [Caddy 配置](https://caddyserver.com/) ：
+
 ```
 https://hs.yourdomain.com.au {
 	reverse_proxy /web* https://headscale-ui {
@@ -59,8 +68,10 @@ https://hs.yourdomain.com.au {
 
 ```
 
-### Cross Domain Installation
-If you do not want to configure headscale-ui on the same subdomain as headscale, you must intercept headscale traffic via your reverse proxy to fix CORS (see https://github.com/juanfont/headscale/issues/623). Here is an example fix with Caddy, replacing your headscale UI domain with `hs-ui.yourdomain.com.au`:
+### 跨域安装
+
+如果您不想在与 headscale 相同的子域名上配置 headscale-ui，您必须通过反向代理拦截 headscale 流量以修复 CORS（见 [https://github.com/juanfont/headscale/issues/623](https://github.com/juanfont/headscale/issues/623)）。以下是一个使用 Caddy 的示例修复，将您的 headscale UI 域名替换为 `hs-ui.yourdomain.com.au`：
+
 ```
 https://hs.yourdomain.com.au {
 	@hs-options {
@@ -89,40 +100,49 @@ https://hs.yourdomain.com.au {
 
 ```
 
-### Other Configurations
-See [Other Configurations](https://github.com/gurucomputing/headscale-ui/blob/master/documentation/configuration.md) for further proxy examples, such as Traefik
+### 其他配置
 
-## Versioning
-The following versions correspond to the appropriate headscale version
-| Headscale Version | HS-UI Version |
-|-------------------|---------------|
-| 19+               | 2023-01-30+   |
-| <19               | <2023-01-30   |
+查看[其他配置](https://github.com/gurucomputing/headscale-ui/blob/master/documentation/configuration.md)以获取更多代理示例，例如 Traefik
 
-## Troubleshooting
-Make sure you are using the latest version of headscale. Headscale-UI is only tested against:
+## 版本控制
 
-* The current stable version of headscale
-* Chrome/Chrome Mobile
-* Firefox/Firefox Mobile
+以下版本对应适当的 Headscale 版本
 
-Note that while mobile is checked for functionality, the web experience is not mobile optimised.
+| Headscale 版本 | HS-UI 版本 |
+| --- | --- |
+| 19+ | 2023-01-30+ |
+| <19 | <2023-01-30 |
 
-If you are getting errors about preflight checks, it's probably CORS related. Make sure your UI sits on the same subdomain as headscale or inject CORS headers.
+## 故障排除
 
-### Errors related to "Missing Bearer Prefix"
-Your API key is either not saved or you haven't configured your reverse proxy. Create an API key in `headscale` (via command line) with `headscale apikeys create` or `docker exec <headscale container> headscale apikeys create` and save it in `settings`.
+请确保您正在使用最新的 headscale 版本。Headscale-UI 仅针对以下版本进行测试：
 
-HS-UI *has* to be ran on the same subdomain as headscale or you need to configure CORS. Yes you need to use a reverse proxy to do this. Use a reverse proxy. If you are trying to use raw IPs and ports, it *will* not work.
+*   当前 headscale 的稳定版本
+*   Chrome/Chrome 移动版
+*   Firefox/Firefox 移动版
 
-## Security
-see [security](https://github.com/gurucomputing/headscale-ui/blob/master/SECURITY.md) for details
+请注意，虽然已检查移动版的功能，但网页体验并未针对移动设备进行优化。
 
-## Development
-see [development](https://github.com/gurucomputing/headscale-ui/blob/master/documentation/development.md) for details
+如果您收到有关预检检查的错误，这可能是 CORS 相关的问题。请确保您的 UI 位于与 headscale 相同的子域名上，或者注入 CORS 头。
 
-## Style Guide
-see [style](https://github.com/gurucomputing/headscale-ui/blob/master/documentation/style.md) for details
+### 与“缺少 Bearer 前缀”相关的错误
 
-## Architecture
-See [architecture](https://github.com/gurucomputing/headscale-ui/blob/master/documentation/architecture.md) for details
+您的 API 密钥可能未保存，或者您尚未配置反向代理。在 `headscale`（通过命令行）中使用 `headscale apikeys create` 或 `docker exec <headscale container> headscale apikeys create` 创建 API 密钥，并将其保存在`设置`中。
+
+HS-UI *必须*在与 headscale 相同的子域名上运行或您需要配置 CORS。是的，您需要使用反向代理来完成此操作。使用反向代理。如果您尝试使用原始 IP 和端口，它*将不会工作* 。
+
+## 安全
+
+详情见[安全](https://github.com/gurucomputing/headscale-ui/blob/master/SECURITY.md)
+
+## 开发
+
+详情见[开发](https://github.com/gurucomputing/headscale-ui/blob/master/documentation/development.md)
+
+## 风格指南
+
+查看[样式](https://github.com/gurucomputing/headscale-ui/blob/master/documentation/style.md)详情
+
+## 架构
+
+查看[架构](https://github.com/gurucomputing/headscale-ui/blob/master/documentation/architecture.md)详情

@@ -1,6 +1,7 @@
 # 使用说明
 
-- 默认账户密码
+*   默认账户密码
+
 ```
 username：admin@localhost
 password：admin
@@ -8,314 +9,303 @@ password：admin
 
 # 原始相关
 
-<!-- DONATELINKS -->
 [![Donate using PayPal](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-PayPal-green.svg)](https://www.paypal.com/donate/?business=E8JMYD2LQ8MMA&no_recurring=0&item_name=I+rely+on+donations+to+maintain+and+improve+the+Joplin+open+source+project.+Thank+you+for+your+help+-+it+makes+a+difference%21&currency_code=EUR) [![Sponsor on GitHub](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/GitHub-Badge.svg)](https://github.com/sponsors/laurent22/) [![Become a patron](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Patreon-Badge.svg)](https://www.patreon.com/joplin) [![Donate using IBAN](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/badges/Donate-IBAN.svg)](https://joplinapp.org/donate/#donations)
-<!-- DONATELINKS -->
 
-<img width="64" src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/LinuxIcons/256x256.png" align="left" /> **Joplin** is a free, open source note taking and to-do application, which can handle a large number of notes organised into notebooks. The notes are searchable, can be copied, tagged and modified either from the applications directly or from your own text editor. The notes are in [Markdown format](#markdown).
+![](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/LinuxIcons/256x256.png)Joplin 是一个免费的开源笔记和待办事项应用程序，可以处理大量组织在笔记本中的笔记。笔记可以搜索、复制、标记和修改，既可以从中应用程序直接操作，也可以从您自己的文本编辑器操作。笔记以 [Markdown 格式](#markdown) 存储。
 
-Notes exported from Evernote [can be imported](#importing) into Joplin, including the formatted content (which is converted to Markdown), resources (images, attachments, etc.) and complete metadata (geolocation, updated time, created time, etc.). Plain Markdown files can also be imported.
+Evernote 导出的笔记可以导入 Joplin，包括格式化的内容（转换为 Markdown）、资源（图片、附件等）和完整的元数据（地理位置、更新时间、创建时间等）。纯 Markdown 文件也可以导入。
 
-The notes can be securely [synchronised](#synchronisation) using [end-to-end encryption](#encryption) with various cloud services including Nextcloud, Dropbox, OneDrive and [Joplin Cloud](https://joplinapp.org/plans/).
+笔记可以通过 [端到端加密](#encryption) 安全地与 Nextcloud、Dropbox、OneDrive 和 [Joplin Cloud](https://joplinapp.org/plans/) 等各种云服务同步。
 
-Full text search is available on all platforms to quickly find the information you need. The app can be customised using plugins and themes, and you can also easily create your own.
+所有平台上都支持全文搜索，以便快速找到您需要的信息。该应用程序可以通过插件和主题进行自定义，您也可以轻松创建自己的自定义设置。
 
-The application is available for Windows, Linux, macOS, Android and iOS. A [Web Clipper](https://github.com/laurent22/joplin/blob/dev/readme/clipper.md), to save web pages and screenshots from your browser, is also available for [Firefox](https://addons.mozilla.org/firefox/addon/joplin-web-clipper/) and [Chrome](https://chrome.google.com/webstore/detail/joplin-web-clipper/alofnhikmmkdbbbgpnglcpdollgjjfek?hl=en-GB).
+该应用程序适用于 Windows、Linux、macOS、Android 和 iOS。此外，Firefox 和 Chrome 浏览器还提供了名为的网页和屏幕截图保存工具。
 
-<div class="top-screenshot"><img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/home-top-img.png" style="max-width: 100%; max-height: 35em;"></div>
+![](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/home-top-img.png)
 
-# Installation
+# 安装
 
-Three types of applications are available: for **desktop** (Windows, macOS and Linux), for **mobile** (Android and iOS) and for **terminal** (Windows, macOS, Linux and FreeBSD). All the applications have similar user interfaces and can synchronise with each other.
+有三种类型的应用程序：适用于桌面（Windows、macOS 和 Linux）、适用于移动设备（Android 和 iOS）以及适用于终端（Windows、macOS、Linux 和 FreeBSD）。所有应用程序具有相似的用户界面，并且可以相互同步。
 
-## Desktop applications
+## 桌面应用程序
 
-Operating System | Download
----|---
-Windows (32 and 64-bit) | <a href='https://objects.joplinusercontent.com/v2.11.11/Joplin-Setup-2.11.11.exe?source=JoplinWebsite&type=New'><img alt='Get it on Windows' width="134px" src='https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/BadgeWindows.png'/></a>
-macOS | <a href='https://objects.joplinusercontent.com/v2.11.11/Joplin-2.11.11.dmg?source=JoplinWebsite&type=New'><img alt='Get it on macOS' width="134px" src='https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/BadgeMacOS.png'/></a>
-Linux | <a href='https://objects.joplinusercontent.com/v2.11.11/Joplin-2.11.11.AppImage?source=JoplinWebsite&type=New'><img alt='Get it on Linux' width="134px" src='https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/BadgeLinux.png'/></a>
+| 操作系统 | 下载 |
+| --- | --- |
+| Windows（32 位和 64 位） |  |
+| macOS |  |
+| Linux |  |
 
-**On Windows**, you may also use the <a href='https://objects.joplinusercontent.com/v2.11.11/JoplinPortable.exe?source=JoplinWebsite&type=New'>Portable version</a>. The [portable application](https://en.wikipedia.org/wiki/Portable_application) allows installing the software on a portable device such as a USB key. Simply copy the file JoplinPortable.exe in any directory on that USB key ; the application will then create a directory called "JoplinProfile" next to the executable file.
+在 Windows 上，你也可以使用 [便携版](https://objects.joplinusercontent.com/v2.11.11/JoplinPortable.exe?source=JoplinWebsite&type=New) 。便携应用程序允许将软件安装在便携设备（如 USB 驱动器）上。只需将 JoplinPortable.exe 文件复制到 USB 驱动器上的任意目录；应用程序随后会在可执行文件旁边创建一个名为 "JoplinProfile" 的目录。
 
-**On Linux**, the recommended way is to use the following installation script as it will handle the desktop icon too:
+在 Linux 上，推荐使用以下安装脚本，因为它还会处理桌面图标：
 
-<pre><code style="word-break: break-all">wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash</code></pre>
+```
+wget -O - https://raw.githubusercontent.com/laurent22/joplin/dev/Joplin_install_and_update.sh | bash
+```
 
-The install and update script supports the [following flags](https://github.com/laurent22/joplin/blob/dev/Joplin_install_and_update.sh#L50) (around line 50 at the time of this writing).
+安装和更新脚本支持以下标志（以本文撰写时第 50 行左右为准）。
 
-## Mobile applications
+## 移动应用程序
 
-Operating System | Download | Alt. Download
----|---|---
-Android | <a href='https://play.google.com/store/apps/details?id=net.cozic.joplin&utm_source=GitHub&utm_campaign=README&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' height="40px" src='https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/BadgeAndroid.png'/></a> | or download the [APK file](https://objects.joplinusercontent.com/v2.11.31/joplin-v2.11.31.apk?source=JoplinWebsite&type=New)
-iOS | <a href='https://itunes.apple.com/us/app/joplin/id1315599797'><img alt='Get it on the App Store' height="40px" src='https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/BadgeIOS.png'/></a> | -
+| 操作系统 | 下载 | Alt. Download |
+| --- | --- | --- |
+| Android |  | 或下载 APK 文件 |
+| iOS |  | - |
 
-## Terminal application
+## 终端应用
 
-Operating system | Method
------------------|----------------
-macOS, Linux, or Windows (via [WSL](https://msdn.microsoft.com/en-us/commandline/wsl/faq?f=255&MSPPError=-2147217396)) | **Important:** First, [install Node 12+](https://nodejs.org/en/download/package-manager/).<br/><br/>`NPM_CONFIG_PREFIX=~/.joplin-bin npm install -g joplin`<br/>`sudo ln -s ~/.joplin-bin/bin/joplin /usr/bin/joplin`<br><br>By default, the application binary will be installed under `~/.joplin-bin`. You may change this directory if needed. Alternatively, if your npm permissions are setup as described [here](https://docs.npmjs.com/getting-started/fixing-npm-permissions#option-2-change-npms-default-directory-to-another-directory) (Option 2) then simply running `npm -g install joplin` would work.
+| 操作系统 | 方法 |
+| --- | --- |
+| macOS、Linux 或 Windows（通过 WSL） | 重要： 首先，请安装 Node 12+。NPM_CONFIG_PREFIX=~/.joplin-bin npm install -g joplinsudo ln -s ~/.joplin-bin/bin/joplin /usr/bin/joplin默认情况下，应用程序二进制文件将安装在 ~/.joplin-bin 目录下。如果需要，您可以更改此目录。或者，如果您按照 此处 （选项 2）描述的 npm 权限设置，则只需运行 npm -g install joplin 即可。 |
 
-To start it, type `joplin`.
+要启动它，请输入 `joplin`。
 
-For usage information, please refer to the full [Joplin Terminal Application Documentation](https://joplinapp.org/terminal/).
+如需使用信息，请参阅完整的 [Joplin 终端应用程序文档](https://joplinapp.org/terminal/) 。
 
-## Web Clipper
+## 网页剪辑器
 
-The Web Clipper is a browser extension that allows you to save web pages and screenshots from your browser. For more information on how to install and use it, see the [Web Clipper Help Page](https://github.com/laurent22/joplin/blob/dev/readme/clipper.md).
+Web 剪辑器是浏览器扩展程序，允许您从浏览器中保存网页和屏幕截图。如需安装和使用方法，请参阅 [Web 剪辑器帮助页面](https://github.com/laurent22/joplin/blob/dev/readme/clipper.md) 。
 
-## Unofficial Alternative Distributions
+## 非官方替代发行版
 
-There are a number of unofficial alternative Joplin distributions. If you do not want to or cannot use appimages or any of the other officially supported releases then you may wish to consider these.
+存在一些非官方的 Joplin 替代发行版。如果你不想或不能使用 appimages 或其他任何官方支持的版本，那么你可能希望考虑这些发行版。
 
-However these come with a caveat in that they are not officially supported so certain issues may not be supportable by the main project. Rather support requests, bug reports and general advice would need to go to the maintainers of these distributions.
+然而，这些发行版带有警告，即它们没有官方支持，因此某些问题可能无法得到主要项目的支持。相反，支持请求、错误报告和一般建议需要提交给这些发行版的维护者。
 
-A community maintained list of these distributions can be found here: [Unofficial Joplin distributions](https://discourse.joplinapp.org/t/unofficial-alternative-joplin-distributions/23703)
+这些发行版的社区维护列表可以在这里找到： [非官方 Joplin 发行版](https://discourse.joplinapp.org/t/unofficial-alternative-joplin-distributions/23703)
 
-# Sponsors
+# 赞助商
 
-<!-- SPONSORS-ORG -->
-<a href="https://seirei.ne.jp"><img title="Serei Network" width="256" src="https://joplinapp.org/images/sponsors/SeireiNetwork.png"/></a> <a href="https://www.hosting.de/nextcloud/?mtm_campaign=managed-nextcloud&amp;mtm_kwd=joplinapp&amp;mtm_source=joplinapp-webseite&amp;mtm_medium=banner"><img title="Hosting.de" width="256" src="https://joplinapp.org/images/sponsors/HostingDe.png"/></a> <a href="https://residence-greece.com/"><img title="Greece Golden Visa" width="256" src="https://joplinapp.org/images/sponsors/ResidenceGreece.jpg"/></a> <a href="https://grundstueckspreise.info/"><img title="SP Software GmbH" width="256" src="https://joplinapp.org/images/sponsors/Grundstueckspreise.png"/></a> <a href="https://tranio.com/spain/"><img title="Property for sale in Spain" width="256" src="https://joplinapp.org/images/sponsors/TranioOverseasProperty.jpg"/></a> <a href="https://citricsheep.com"><img title="Citric Sheep" width="256" src="https://joplinapp.org/images/sponsors/CitricSheep.png"/></a>
-<!-- SPONSORS-ORG -->
+[![](https://joplinapp.org/images/sponsors/SeireiNetwork.png "Serei Network")](https://seirei.ne.jp) [![](https://joplinapp.org/images/sponsors/HostingDe.png "Hosting.de")](https://www.hosting.de/nextcloud/?mtm_campaign=managed-nextcloud&mtm_kwd=joplinapp&mtm_source=joplinapp-webseite&mtm_medium=banner) [![](https://joplinapp.org/images/sponsors/ResidenceGreece.jpg "Greece Golden Visa")](https://residence-greece.com/) [![](https://joplinapp.org/images/sponsors/Grundstueckspreise.png "SP Software GmbH")](https://grundstueckspreise.info/) [![](https://joplinapp.org/images/sponsors/TranioOverseasProperty.jpg "Property for sale in Spain")](https://tranio.com/spain/) [![](https://joplinapp.org/images/sponsors/CitricSheep.png "Citric Sheep")](https://citricsheep.com)
 
 * * *
 
-<!-- SPONSORS-GITHUB -->
-|       |       |       |       |
-| :---: | :---: | :---: | :---: |
-| <img width="50" src="https://avatars2.githubusercontent.com/u/215668?s=96&v=4"/></br>[avanderberg](https://github.com/avanderberg) | <img width="50" src="https://avatars2.githubusercontent.com/u/67130?s=96&v=4"/></br>[chr15m](https://github.com/chr15m) | <img width="50" src="https://avatars2.githubusercontent.com/u/2793530?s=96&v=4"/></br>[CyberXZT](https://github.com/CyberXZT) | <img width="50" src="https://avatars2.githubusercontent.com/u/1307332?s=96&v=4"/></br>[dbrandonjohnson](https://github.com/dbrandonjohnson) |
-| <img width="50" src="https://avatars2.githubusercontent.com/u/14873877?s=96&v=4"/></br>[dchecks](https://github.com/dchecks) | <img width="50" src="https://avatars2.githubusercontent.com/u/56287?s=96&v=4"/></br>[fats](https://github.com/fats) | <img width="50" src="https://avatars2.githubusercontent.com/u/49439044?s=96&v=4"/></br>[fourstepper](https://github.com/fourstepper) | <img width="50" src="https://avatars2.githubusercontent.com/u/64712218?s=96&v=4"/></br>[Hegghammer](https://github.com/Hegghammer) |
-| <img width="50" src="https://avatars2.githubusercontent.com/u/3266447?s=96&v=4"/></br>[iamwillbar](https://github.com/iamwillbar) | <img width="50" src="https://avatars2.githubusercontent.com/u/1310474?s=96&v=4"/></br>[jknowles](https://github.com/jknowles) | <img width="50" src="https://avatars2.githubusercontent.com/u/11947658?s=96&v=4"/></br>[KentBrockman](https://github.com/KentBrockman) | <img width="50" src="https://avatars2.githubusercontent.com/u/5588131?s=96&v=4"/></br>[kianenigma](https://github.com/kianenigma) |
-| <img width="50" src="https://avatars2.githubusercontent.com/u/24908652?s=96&v=4"/></br>[konishi-t](https://github.com/konishi-t) | <img width="50" src="https://avatars2.githubusercontent.com/u/42319182?s=96&v=4"/></br>[marcdw1289](https://github.com/marcdw1289) | <img width="50" src="https://avatars2.githubusercontent.com/u/126279083?s=96&v=4"/></br>[matmoly](https://github.com/matmoly) | <img width="50" src="https://avatars2.githubusercontent.com/u/1788010?s=96&v=4"/></br>[maxtruxa](https://github.com/maxtruxa) |
-| <img width="50" src="https://avatars2.githubusercontent.com/u/29300939?s=96&v=4"/></br>[mcejp](https://github.com/mcejp) | <img width="50" src="https://avatars2.githubusercontent.com/u/31054972?s=96&v=4"/></br>[saarantras](https://github.com/saarantras) | <img width="50" src="https://avatars2.githubusercontent.com/u/327998?s=96&v=4"/></br>[sif](https://github.com/sif) | <img width="50" src="https://avatars2.githubusercontent.com/u/765564?s=96&v=4"/></br>[taskcruncher](https://github.com/taskcruncher) |
-| <img width="50" src="https://avatars2.githubusercontent.com/u/333944?s=96&v=4"/></br>[tateisu](https://github.com/tateisu) |       |       |       |
-<!-- SPONSORS-GITHUB -->
-
-<!-- TOC -->
-# Table of contents
-
-- Applications
-
-	- [Desktop application](https://github.com/laurent22/joplin/blob/dev/readme/desktop.md)
-	- [Mobile applications](https://github.com/laurent22/joplin/blob/dev/readme/mobile.md)
-	- [Terminal application](https://github.com/laurent22/joplin/blob/dev/readme/terminal.md)
-	- [Web Clipper](https://github.com/laurent22/joplin/blob/dev/readme/clipper.md)
-
-- Support
-
-	- [Joplin Forum](https://discourse.joplinapp.org)
-	- [Markdown Guide](https://github.com/laurent22/joplin/blob/dev/readme/markdown.md)
-	- [How to enable end-to-end encryption](https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md)
-	- [What is a conflict?](https://github.com/laurent22/joplin/blob/dev/readme/conflict.md)
-	- [How to enable debug mode](https://github.com/laurent22/joplin/blob/dev/readme/debugging.md)
-	- [About the Rich Text editor limitations](https://github.com/laurent22/joplin/blob/dev/readme/rich_text_editor.md)
-	- [External links](https://github.com/laurent22/joplin/blob/dev/readme/external_links.md)
-	- [FAQ](https://github.com/laurent22/joplin/blob/dev/readme/faq.md)
-
-- Joplin Cloud
-
-	- [Sharing a notebook](https://github.com/laurent22/joplin/blob/dev/readme/share_notebook.md)
-	- [Publishing a note](https://github.com/laurent22/joplin/blob/dev/readme/publish_note.md)
-	- [Email to Note](https://github.com/laurent22/joplin/blob/dev/readme/email_to_note.md)
-
-- Joplin API - Get Started
-
-	- [Joplin API Overview](https://github.com/laurent22/joplin/blob/dev/readme/api/overview.md)
-	- [Plugin development](https://github.com/laurent22/joplin/blob/dev/readme/api/get_started/plugins.md)
-	- [Plugin tutorial](https://github.com/laurent22/joplin/blob/dev/readme/api/tutorials/toc_plugin.md)
-
-
-- Joplin API - References
-
-	- [Plugin API](https://joplinapp.org/api/references/plugin_api/classes/joplin.html)
-	- [Data API](https://github.com/laurent22/joplin/blob/dev/readme/api/references/rest_api.md)
-	- [Plugin manifest](https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_manifest.md)
-	- [Plugin loading rules](https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_loading_rules.md)
-	- [Plugin theming](https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_theming.md)
-
-- Development
-
-	- [How to build the apps](https://github.com/laurent22/joplin/blob/dev/BUILD.md)
-	- [Writing a technical spec](https://github.com/laurent22/joplin/blob/dev/readme/technical_spec.md)
-	- [Desktop application styling](https://github.com/laurent22/joplin/blob/dev/readme/spec/desktop_styling.md)
-	- [Note history spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/history.md)
-	- [Synchronisation spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/sync.md)
-	- [Sync Lock spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/sync_lock.md)
-	- [Synchronous Scroll spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/sync_scroll.md)
-	- [Overall Architecture spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/architecture.md)
-	- [Plugin Architecture spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/plugins.md)
-	- [Search Sorting spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/search_sorting.md)
-	- [E2EE: Technical spec](https://github.com/laurent22/joplin/blob/dev/readme/spec/e2ee.md)
-	- [E2EE: Workflow](https://github.com/laurent22/joplin/blob/dev/readme/spec/e2ee/workflow.md)
-	- [Server: File URL Format](https://github.com/laurent22/joplin/blob/dev/readme/spec/server_file_url_format.md)
-	- [Server: Delta Sync](https://github.com/laurent22/joplin/blob/dev/readme/spec/server_delta_sync.md)
-	- [Server: Sharing](https://github.com/laurent22/joplin/blob/dev/readme/spec/server_sharing.md)
-	- [Read-only items](https://github.com/laurent22/joplin/blob/dev/readme/spec/read_only.md)
+|  |  |  |  |
+| --- | --- | --- | --- |
+| avanderberg | chr15m | CyberXZT | dbrandonjohnson |
+| dchecks | fats | 四步进器 | Hegghammer |
+| iamwillbar | jknowles | KentBrockman | kianenigma |
+| konishi-t | marcdw1289 | matmoly | maxtruxa |
+| mcejp | saarantras | sif | taskcruncher |
+| 比例 |  |  |  |
+
+# 目录
+
+*   应用程序
+    
+    *   [桌面应用程序](https://github.com/laurent22/joplin/blob/dev/readme/desktop.md)
+    *   [移动应用程序](https://github.com/laurent22/joplin/blob/dev/readme/mobile.md)
+    *   [终端应用](https://github.com/laurent22/joplin/blob/dev/readme/terminal.md)
+    *   [网页剪辑器](https://github.com/laurent22/joplin/blob/dev/readme/clipper.md)
+*   支持
+    
+    *   [Joplin 论坛](https://discourse.joplinapp.org)
+    *   [Markdown Guide](https://github.com/laurent22/joplin/blob/dev/readme/markdown.md)
+    *   [如何启用端到端加密](https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md)
+    *   [什么是冲突？](https://github.com/laurent22/joplin/blob/dev/readme/conflict.md)
+    *   [如何启用调试模式](https://github.com/laurent22/joplin/blob/dev/readme/debugging.md)
+    *   [Rich Text 编辑器的限制](https://github.com/laurent22/joplin/blob/dev/readme/rich_text_editor.md)
+    *   [外部链接](https://github.com/laurent22/joplin/blob/dev/readme/external_links.md)
+    *   [常见问题](https://github.com/laurent22/joplin/blob/dev/readme/faq.md)
+*   Joplin 云
+    
+    *   [共享笔记本](https://github.com/laurent22/joplin/blob/dev/readme/share_notebook.md)
+    *   [发布便签](https://github.com/laurent22/joplin/blob/dev/readme/publish_note.md)
+    *   [邮件转笔记](https://github.com/laurent22/joplin/blob/dev/readme/email_to_note.md)
+*   Joplin API - 快速上手
+    
+    *   [Joplin API 概览](https://github.com/laurent22/joplin/blob/dev/readme/api/overview.md)
+    *   [插件开发](https://github.com/laurent22/joplin/blob/dev/readme/api/get_started/plugins.md)
+    *   [插件教程](https://github.com/laurent22/joplin/blob/dev/readme/api/tutorials/toc_plugin.md)
+*   Joplin API - 参考资料
+    
+    *   [插件 API](https://joplinapp.org/api/references/plugin_api/classes/joplin.html)
+    *   [数据 API](https://github.com/laurent22/joplin/blob/dev/readme/api/references/rest_api.md)
+    *   [插件清单](https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_manifest.md)
+    *   [插件加载规则](https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_loading_rules.md)
+    *   [插件主题化](https://github.com/laurent22/joplin/blob/dev/readme/api/references/plugin_theming.md)
+*   开发
+    
+    *   [如何构建应用](https://github.com/laurent22/joplin/blob/dev/BUILD.md)
+    *   [编写技术规范](https://github.com/laurent22/joplin/blob/dev/readme/technical_spec.md)
+    *   [桌面应用程序样式化](https://github.com/laurent22/joplin/blob/dev/readme/spec/desktop_styling.md)
+    *   [注释历史规范](https://github.com/laurent22/joplin/blob/dev/readme/spec/history.md)
+    *   [同步规范](https://github.com/laurent22/joplin/blob/dev/readme/spec/sync.md)
+    *   [同步锁规范](https://github.com/laurent22/joplin/blob/dev/readme/spec/sync_lock.md)
+    *   [同步滚动规范](https://github.com/laurent22/joplin/blob/dev/readme/spec/sync_scroll.md)
+    *   [整体架构规范](https://github.com/laurent22/joplin/blob/dev/readme/spec/architecture.md)
+    *   [插件架构规范](https://github.com/laurent22/joplin/blob/dev/readme/spec/plugins.md)
+    *   [搜索排序规范](https://github.com/laurent22/joplin/blob/dev/readme/spec/search_sorting.md)
+    *   [端到端加密：技术规范](https://github.com/laurent22/joplin/blob/dev/readme/spec/e2ee.md)
+    *   [E2EE：工作流](https://github.com/laurent22/joplin/blob/dev/readme/spec/e2ee/workflow.md)
+    *   [服务器: 文件 URL 格式](https://github.com/laurent22/joplin/blob/dev/readme/spec/server_file_url_format.md)
+    *   [服务器: 差异同步](https://github.com/laurent22/joplin/blob/dev/readme/spec/server_delta_sync.md)
+    *   [服务器: 共享](https://github.com/laurent22/joplin/blob/dev/readme/spec/server_sharing.md)
+    *   [只读项](https://github.com/laurent22/joplin/blob/dev/readme/spec/read_only.md)
+*   Google Summer of Code 2022
+    
+    *   [Google 夏令营 2022](https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/index.md)
+    *   [如何提交 GSoC 拉取请求](https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/pull_request_guidelines.md)
+    *   [项目想法](https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/ideas.md)
+*   关于
+    
+    *   [桌面应用变更日志](https://github.com/laurent22/joplin/blob/dev/readme/changelog.md)
+    *   [更新日志（Android）](https://github.com/laurent22/joplin/blob/dev/readme/changelog_android.md)
+    *   [iOS 变更日志](https://github.com/laurent22/joplin/blob/dev/readme/changelog_ios.md)
+    *   [命令行应用变更日志](https://github.com/laurent22/joplin/blob/dev/readme/changelog_cli.md)
+    *   [更新日志（服务器）](https://github.com/laurent22/joplin/blob/dev/readme/changelog_server.md)
+    *   [设计原则](https://github.com/laurent22/joplin/blob/dev/readme/principles.md)
+    *   [数据统计](https://github.com/laurent22/joplin/blob/dev/readme/stats.md)
+    *   [品牌指南](https://joplinapp.org/brand)
+    *   [捐赠](https://github.com/laurent22/joplin/blob/dev/readme/donate.md)
+
+# 功能
+
+*   桌面、移动和终端应用程序。
+*   [Web Clipper](https://github.com/laurent22/joplin/blob/dev/readme/clipper.md) 适用于 Firefox 和 Chrome。
+*   端到端加密（E2EE）。
+*   笔记历史（修订）。
+*   与 Nextcloud、Dropbox、WebDAV 和 OneDrive 等多种服务同步。
+*   离线优先，因此即使没有互联网连接，设备上的所有数据也始终可用。
+*   导入 Enex 文件（Evernote 导出格式）和 Markdown 文件。
+*   导出 JEX 文件（Joplin 导出格式）和原始文件。
+*   支持笔记、待办事项、标签和笔记本。
+*   可根据多个标准对笔记进行排序——标题、更新时间等。
+*   支持提醒（通知）功能，适用于移动和桌面应用程序。
+*   支持 Markdown 格式的笔记，在桌面和移动应用程序中会以图片和格式呈现。支持额外功能，如数学公式和复选框。
+*   支持选择 Markdown 和富文本（WYSIWYG）编辑器。
+*   文件附件支持 - 图片直接显示，其他文件链接可打开，并在相应应用程序中打开。
+*   PDF、视频和音频文件的内联显示。
+*   Goto Anything 功能。
+*   搜索功能。
+*   地理位置支持。
+*   支持多种语言。
+*   外部编辑器支持 - 在 Joplin 中点击一下即可打开笔记到您喜欢的外部编辑器。
+*   通过插件和数据 API 扩展功能。
+*   支持自定义 CSS，可用于自定义渲染的 Markdown 和整体用户界面。
+*   可自定义布局，允许切换、移动和调整各种元素的大小。
+*   键盘快捷键可编辑，并允许绑定大多数 Joplin 命令，具有导出/导入功能。
+*   多配置文件支持。
 
-- Google Summer of Code 2022
+# 导入
 
-	- [Google Summer of Code 2022](https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/index.md)
-	- [How to submit a GSoC pull request](https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/pull_request_guidelines.md)
-	- [Project Ideas](https://github.com/laurent22/joplin/blob/dev/readme/gsoc2022/ideas.md)
+## 从 Evernote 导入
 
-- About
+Joplin 是为替代 Evernote 设计的，因此可以导入完整的 Evernote 笔记本，以及笔记、标签、资源（附加文件）和笔记元数据（如作者、地理位置等）通过 ENEX 文件。从数据角度来看，只有两项可能会略有不同：
 
-	- [Changelog (Desktop App)](https://github.com/laurent22/joplin/blob/dev/readme/changelog.md)
-	- [Changelog (Android)](https://github.com/laurent22/joplin/blob/dev/readme/changelog_android.md)
-	- [Changelog (iOS)](https://github.com/laurent22/joplin/blob/dev/readme/changelog_ios.md)
-	- [Changelog (CLI App)](https://github.com/laurent22/joplin/blob/dev/readme/changelog_cli.md)
-	- [Changelog (Server)](https://github.com/laurent22/joplin/blob/dev/readme/changelog_server.md)
-	- [Guiding principles](https://github.com/laurent22/joplin/blob/dev/readme/principles.md)
-	- [Stats](https://github.com/laurent22/joplin/blob/dev/readme/stats.md)
-	- [Brand guidelines](https://joplinapp.org/brand)
-	- [Donate](https://github.com/laurent22/joplin/blob/dev/readme/donate.md)
-<!-- TOC -->
+*   识别数据 - 特别是扫描（或拍摄）的文档，Evernote 会与它们关联识别数据。这是 Evernote 在文档中识别出的文本。当笔记导入 Joplin 时，这些数据不会被保留。然而，如果将来在搜索工具或其他 Joplin 部分支持这项功能，由于实际的图片仍然可用，应该可以重新生成这些识别数据。
+    
+*   颜色、字体大小和字体类型 - Evernote 中的文本存储为 HTML 格式，在导入过程中会转换为 Markdown。对于主要由纯文本或基本格式（加粗、斜体、项目符号、链接等）组成的笔记，这种转换是无损的，一旦重新渲染为 HTML 格式，笔记应该与原始格式非常相似。表格也会被导入并转换为 Markdown 表格。对于非常复杂的笔记，可能会丢失一些格式数据，特别是颜色、字体大小和字体类型不会被导入。然而，文本本身总是会完整地被导入，无论其格式如何。如果需要保留这些额外的数据，Joplin 也允许导入 ENEX 文件为 HTML 格式。
+    
 
-# Features
+要导入 Evernote 数据，请首先按照此处 [描述](https://help.evernote.com/hc/en-us/articles/209005557-How-to-back-up-export-and-restore-import-notes-and-notebooks) 将 Evernote 笔记本导出为 ENEX 文件。然后按照以下步骤操作：
 
-- Desktop, mobile and terminal applications.
-- [Web Clipper](https://github.com/laurent22/joplin/blob/dev/readme/clipper.md) for Firefox and Chrome.
-- End To End Encryption (E2EE).
-- Note history (revisions).
-- Synchronisation with various services, including Nextcloud, Dropbox, WebDAV and OneDrive.
-- Offline first, so the entire data is always available on the device even without an internet connection.
-- Import Enex files (Evernote export format) and Markdown files.
-- Export JEX files (Joplin Export format) and raw files.
-- Support notes, to-dos, tags and notebooks.
-- Sort notes by multiple criteria - title, updated time, etc.
-- Support for alarms (notifications) in mobile and desktop applications.
-- Markdown notes, which are rendered with images and formatting in the desktop and mobile applications. Support for extra features such as math notation and checkboxes.
-- Choice of both Markdown and Rich Text (WYSIWYG) editors.
-- File attachment support - images are displayed, other files are linked and can be opened in the relevant application.
-- Inline display of PDF, video and audio files.
-- Goto Anything feature.
-- Search functionality.
-- Geo-location support.
-- Supports multiple languages.
-- External editor support - open notes in your favorite external editor with one click in Joplin.
-- Extensible functionality through plugin and data APIs.
-- Custom CSS support for customisation of both the rendered markdown and overall user interface.
-- Customisable layout allows toggling, movement and sizing of various elements.
-- Keyboard shortcuts are editable and allow binding of most Joplin commands with export/import functionality.
-- Multiple profile support.
+在 **桌面应用程序** 中，打开“文件”>“导入”>“ENEX”，并选择您的文件。笔记将被导入到一个新的独立笔记本中。如果需要，可以将笔记移动到不同的笔记本，或重命名笔记本等。
 
-# Importing
+在终端应用中，在命令行模式下输入 `import /path/to/file.enex`。这将把笔记导入一个以文件名命名的新笔记本。
 
-## Importing from Evernote
+## 从 Markdown 文件导入
 
-Joplin was designed as a replacement for Evernote and so can import complete Evernote notebooks, as well as notes, tags, resources (attached files) and note metadata (such as author, geo-location, etc.) via ENEX files. In terms of data, the only two things that might slightly differ are:
+Joplin 可以从普通的 Markdown 文件导入笔记。你可以导入整个 Markdown 文件目录，也可以导入单独的文件。
 
-- Recognition data - Evernote images, in particular scanned (or photographed) documents have [recognition data](https://en.wikipedia.org/wiki/Optical_character_recognition) associated with them. It is the text that Evernote has been able to recognise in the document. This data is not preserved when the note are imported into Joplin. However, should it become supported in the search tool or other parts of Joplin, it should be possible to regenerate this recognition data since the actual image would still be available.
+在**桌面应用程序**中：
 
-- Colour, font sizes and faces - Evernote text is stored as HTML and this is converted to Markdown during the import process. For notes that are mostly plain text or with basic formatting (bold, italic, bullet points, links, etc.) this is a lossless conversion, and the note, once rendered back to HTML should be very similar. Tables are also imported and converted to Markdown tables. For very complex notes, some formatting data might be lost - in particular colours, font sizes and font faces will not be imported. The text itself however is always imported in full regardless of formatting. If it is essential that this extra data is preserved then Joplin also allows import of ENEX files as HTML.
+*   **文件导入** : 请转到文件 > 导入 > MD - Markdown (文件)，然后选择要导入的 Markdown 文件。该文件将被导入到当前选中的笔记本中。
+*   **目录导入** : 请转到文件 > 导入 > MD - Markdown (目录)，然后选择要导入的目录的顶层目录。导入的目录结构将在 Joplin 中的笔记本 > 子笔记本 > 笔记结构中得以保留。
 
-To import Evernote data, first export your Evernote notebooks to ENEX files as described [here](https://help.evernote.com/hc/en-us/articles/209005557-How-to-back-up-export-and-restore-import-notes-and-notebooks). Then follow these steps:
+在 **终端应用** 中，在 [命令行模式](https://github.com/laurent22/joplin/blob/dev/readme/terminal.md#command-line-mode) 下，输入 `import --format md /path/to/file.md` 或 `import --format md /path/to/directory/` 。
 
-In the **desktop application**, open File > Import > ENEX and select your file. The notes will be imported into a new separate notebook. If needed they can then be moved to a different notebook, or the notebook can be renamed, etc.
+## 从其他应用导入
 
-In the **terminal application**, in [command-line mode](https://github.com/laurent22/joplin/blob/dev/readme/terminal.md#command-line-mode), type `import /path/to/file.enex`. This will import the notes into a new notebook named after the filename.
+一般来说，将任何应用程序中的笔记导入 Joplin 的方法是将笔记转换为 ENEX 文件（Evernote 格式），然后使用上述方法导入这些 ENEX 文件。大多数笔记应用程序都支持 ENEX 文件，因此操作应该相对简单。对于特定应用程序的帮助，请参见以下内容：
 
-## Importing from Markdown files
+*   Standard Notes：请参见 [此教程](https://programadorwebvalencia.com/migrate-notes-from-standard-notes-to-joplin/)
+*   Tomboy Notes：将笔记导出为 ENEX 文件（如 [此处所述](https://askubuntu.com/questions/243691/how-can-i-export-my-tomboy-notes-into-evernote/608551) ），然后将这些 ENEX 文件导入 Joplin。
+*   OneNote：首先 [将 OneNote 中的笔记导入 Evernote](https://discussion.evernote.com/topic/107736-is-there-a-way-to-import-from-onenote-into-evernote-on-the-mac/)。然后从 Evernote 导出 ENEX 文件并将其导入 Joplin。
+*   NixNote：与 Evernote 同步后，导出 ENEX 文件并导入 Joplin。更多信息请参见[该帖子](https://discourse.joplinapp.org/t/import-from-nixnote/183/3) 。
 
-Joplin can import notes from plain Markdown file. You can either import a complete directory of Markdown files or individual files.
+# 导出
 
-In the **desktop application**:
-* **File import**: Go to File > Import > MD - Markdown (file) and select the Markdown file. This file will then be imported to the currently selected Notebook.
-* **Directory import**: Go to File > Import > MD - Markdown (directory) and select the top level of the directory that is being imported. Directory (folder) structure will be preserved in the Notebook > Subnotebook > Note structure within Joplin.
+Joplin 可以导出为 JEX 格式（Joplin 导出文件），这是一种 tar 文件，可以包含多个笔记、笔记本等。这是一种无损格式，所有笔记以及元数据（如地理位置、更新时间、标签等）都会被保留。这种格式便于备份，并且可以重新导入到 Joplin 中。还提供了一种“原始”格式。这种格式与 JEX 格式相同，只是数据保存在一个目录中，每个项目由单个文件表示。Joplin 还可以导出为其他格式，包括 HTML 和 PDF，可以针对单个笔记、笔记本或所有内容进行导出。
 
-In the **terminal application**, in [command-line mode](https://github.com/laurent22/joplin/blob/dev/readme/terminal.md#command-line-mode), type `import --format md /path/to/file.md` or `import --format md /path/to/directory/`.
+# 同步
 
-## Importing from other applications
+Joplin 的一个目标是避免绑定到任何特定的公司或服务，无论是 Evernote、Google 还是 Microsoft。因此，同步设计时没有依赖于任何特定的服务。同步过程大多在抽象层次上进行，访问外部服务（如 Nextcloud 或 Dropbox）是通过轻量级驱动程序完成的。通过创建简单的提供类似文件系统接口的驱动程序，可以轻松支持新的服务，即提供读取、写入、删除和列出项的能力。还可以轻松地从一个服务切换到另一个服务，甚至可以同时同步到多个服务。在同步过程中，每个笔记、笔记本、标签以及项目之间的关系都以纯文本文件的形式传输，这意味着数据也可以转移到其他应用程序，可以轻松备份、检查等。
 
-In general the way to import notes from any application into Joplin is to convert the notes to ENEX files (Evernote format) and to import these ENEX files into Joplin using the method above. Most note-taking applications support ENEX files so it should be relatively straightforward. For help about specific applications, see below:
+目前，与 Nextcloud、WebDAV、Dropbox、OneDrive 或本地文件系统同步是可能的。要启用同步，请按照以下说明操作。之后，应用程序将在运行时在后台自动同步，或者您可以点击“同步”以手动开始同步。Joplin 会在本地应用程序做出任何内容更改后自动后台同步。
 
-* Standard Notes: Please see [this tutorial](https://programadorwebvalencia.com/migrate-notes-from-standard-notes-to-joplin/)
-* Tomboy Notes: Export the notes to ENEX files [as described here](https://askubuntu.com/questions/243691/how-can-i-export-my-tomboy-notes-into-evernote/608551) for example, and import these ENEX files into Joplin.
-* OneNote: First [import the notes from OneNote into Evernote](https://discussion.evernote.com/topic/107736-is-there-a-way-to-import-from-onenote-into-evernote-on-the-mac/). Then export the ENEX file from Evernote and import it into Joplin.
-* NixNote: Synchronise with Evernote, then export the ENEX files and import them into Joplin. More info [in this thread](https://discourse.joplinapp.org/t/import-from-nixnote/183/3).
+如果已安装了**终端客户端** ，还可以通过在终端中输入 `joplin sync` 来在用户界面之外进行同步。这可以用于设置一个 cron 脚本，在固定的时间间隔内进行同步。例如，这会每 30 分钟执行一次：
 
-# Exporting
+`*/30 * * * * /path/to/joplin sync`
 
-Joplin can export to the JEX format (Joplin Export file), which is a tar file that can contain multiple notes, notebooks, etc. This is a lossless format in that all the notes, but also metadata such as geo-location, updated time, tags, etc. are preserved. This format is convenient for backup purposes and can be re-imported into Joplin. A "raw" format is also available. This is the same as the JEX format except that the data is saved to a directory and each item represented by a single file.
-Joplin is also capable of exporting to a number of other formats including HTML and PDF which can be done for single notes, notebooks or everything.
+## Nextcloud 同步
 
-# Synchronisation
+![](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/nextcloud-logo-background.png)[Nextcloud](https://nextcloud.com/) 是一个自托管的私有云解决方案。它可以存储文档、图片和视频，也可以存储日历、密码以及其他无数种事物，并可以将其同步到你的笔记本电脑或手机上。由于你可以托管自己的 Nextcloud 服务器，因此你既拥有设备上的数据，也拥有用于同步的基础设施。因此，它非常适合 Joplin。该平台还得到了良好的支持，并且拥有强大的社区，所以它很可能会长期存在——由于它是开源的，所以不会被关闭，可以在服务器上一直运行下去，只要有人愿意。
 
-One of the goals of Joplin is to avoid being tied to any particular company or service, whether it is Evernote, Google or Microsoft. As such the synchronisation is designed without any hard dependency to any particular service. Most of the synchronisation process is done at an abstract level and access to external services, such as Nextcloud or Dropbox, is done via lightweight drivers. It is easy to support new services by creating simple drivers that provide a filesystem-like interface, i.e. the ability to read, write, delete and list items. It is also simple to switch from one service to another or to even sync to multiple services at once. Each note, notebook, tags, as well as the relation between items is transmitted as plain text files during synchronisation, which means the data can also be moved to a different application, can be easily backed up, inspected, etc.
+在 **桌面应用程序** 或 **移动应用程序** 中，进入 [配置界面](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md) ，选择 Nextcloud 作为同步目标。然后输入 WebDAV 地址（在页面左下角的设置中可以找到，通常为 `https://example.com/nextcloud/remote.php/webdav/Joplin` ），请确保在 Nextcloud 中创建一个名为“Joplin”的目录，然后设置用户名和密码。如果不起作用，请参阅 [此处的说明](https://github.com/laurent22/joplin/issues/61#issuecomment-373282608) 以获取更多详细信息。
 
-Currently, synchronisation is possible with Nextcloud, WebDAV, Dropbox, OneDrive or the local filesystem. To enable synchronisation please follow the instructions below. After that, the application will synchronise in the background whenever it is running, or you can click on "Synchronise" to start a synchronisation manually. Joplin will background sync automatically after any content change is made on the local application.
+在终端应用中，您需要设置 `sync.target` 配置变量以及所有 `sync.5.path`、`sync.5.username` 和 `sync.5.password` 配置变量，分别对应 Nextcloud WebDAV 的 URL、您的用户名和密码。这可以通过命令行模式使用以下方式完成：
 
-If the **terminal client** has been installed, it is possible to also synchronise outside of the user interface by typing `joplin sync` from the terminal. This can be used to setup a cron script to synchronise at a regular interval. For example, this would do it every 30 minutes:
+```
+:config sync.5.path https://example.com/nextcloud/remote.php/webdav/Joplin
+:config sync.5.username YOUR_USERNAME
+:config sync.5.password YOUR_PASSWORD
+:config sync.target 5
+```
 
-` */30 * * * * /path/to/joplin sync`
+如果同步不工作，请查看应用配置文件目录中的日志，通常是因为 URL 或密码配置错误。日志会指出具体的问题。
 
-## Nextcloud synchronisation
+## WebDAV 同步
 
-<img src="https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/nextcloud-logo-background.png" width="100" align="left"> <a href="https://nextcloud.com/">Nextcloud</a> is a self-hosted, private cloud solution. It can store documents, images and videos but also calendars, passwords and countless other things and can sync them to your laptop or phone. As you can host your own Nextcloud server, you own both the data on your device and infrastructure used for synchronisation. As such it is a good fit for Joplin. The platform is also well supported and with a strong community, so it is likely to be around for a while - since it's open source anyway, it is not a service that can be closed, it can exist on a server for as long as one chooses.
+选择“WebDAV”同步目标，并遵循上述 Nextcloud 的相同步骤（对于终端应用，您需要选择同步目标 6 而不是 5）。
 
-In the **desktop application** or **mobile application**, go to the [Configuration screen](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md) and select Nextcloud as the synchronisation target. Then input the WebDAV URL (to get it, click on Settings in the bottom left corner of the page, in Nextcloud), this is normally `https://example.com/nextcloud/remote.php/webdav/Joplin` (**make sure to create the "Joplin" directory in Nextcloud**), and set the username and password. If it does not work, please [see this explanation](https://github.com/laurent22/joplin/issues/61#issuecomment-373282608) for more details.
+与 Joplin 兼容的 WebDAV 兼容服务：
 
-In the **terminal application**, you will need to set the `sync.target` config variable and all the `sync.5.path`, `sync.5.username` and `sync.5.password` config variables to, respectively the Nextcloud WebDAV URL, your username and your password. This can be done from the command line mode using:
+*   [Apache WebDAV 模块](https://httpd.apache.org/docs/current/mod/mod_dav.html)
+*   [DriveHQ](https://www.drivehq.com)
+*   [Fastmail](https://www.fastmail.com/)
+*   [HiDrive](https://www.strato.fr/stockage-en-ligne/) 来自 Strato。 [安装帮助](https://github.com/laurent22/joplin/issues/309)
+*   [Nginx WebDAV 模块](https://nginx.org/en/docs/http/ngx_http_dav_module.html)
+*   [Nextcloud](https://nextcloud.com/)
+*   [OwnCloud](https://owncloud.org/)
+*   [Seafile](https://www.seafile.com/)
+*   [Stack](https://www.transip.nl/stack/)
+*   [Synology WebDAV 服务器](https://www.synology.com/en-us/dsm/packages/WebDAVServer)
+*   [WebDAV Nav](https://www.schimera.com/products/webdav-nav-server/)，一个 macOS 服务器。
+*   [Zimbra](https://www.zimbra.com/)
 
-	:config sync.5.path https://example.com/nextcloud/remote.php/webdav/Joplin
-	:config sync.5.username YOUR_USERNAME
-	:config sync.5.password YOUR_PASSWORD
-	:config sync.target 5
+## Dropbox 同步
 
-If synchronisation does not work, please consult the logs in the app profile directory - it is often due to a misconfigured URL or password. The log should indicate what the exact issue is.
+在与 Dropbox 同步时，Joplin 会在 Dropbox 中创建一个子目录，在 ``/Apps/Joplin`` 中读写笔记和笔记本。应用程序不会访问此目录之外的任何内容。
 
-## WebDAV synchronisation
+在 **桌面应用** 或 **移动应用** 中，选择“Dropbox”作为同步目标（默认已选中）。然后，要启动同步过程，请在侧边栏中点击“同步”按钮并按照提示操作。
 
-Select the "WebDAV" synchronisation target and follow the same instructions as for Nextcloud above (for the **terminal application** you will need to select sync target 6 rather than 5)
+在终端应用程序中，要启动同步过程，请输入 `:sync`。您将被要求点击一个链接以授权该应用程序。
 
-WebDAV-compatible services that are known to work with Joplin:
+## OneDrive 同步
 
-- [Apache WebDAV Module](https://httpd.apache.org/docs/current/mod/mod_dav.html)
-- [DriveHQ](https://www.drivehq.com)
-- [Fastmail](https://www.fastmail.com/)
-- [HiDrive](https://www.strato.fr/stockage-en-ligne/) from Strato. [Setup help](https://github.com/laurent22/joplin/issues/309)
-- [Nginx WebDAV Module](https://nginx.org/en/docs/http/ngx_http_dav_module.html)
-- [Nextcloud](https://nextcloud.com/)
-- [OwnCloud](https://owncloud.org/)
-- [Seafile](https://www.seafile.com/)
-- [Stack](https://www.transip.nl/stack/)
-- [Synology WebDAV Server](https://www.synology.com/en-us/dsm/packages/WebDAVServer)
-- [WebDAV Nav](https://www.schimera.com/products/webdav-nav-server/), a macOS server.
-- [Zimbra](https://www.zimbra.com/)
+在与 OneDrive 同步时，Joplin 会在 OneDrive 中创建一个子目录，路径为 /Apps/Joplin，并在此目录中读取和写入笔记和笔记本。该应用程序不会访问此目录之外的任何内容。
 
-## Dropbox synchronisation
+在桌面应用程序或移动应用程序中，选择“OneDrive”作为同步目标，在 [配置界面](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md) 中。然后，要启动同步过程，请点击侧边栏中的“同步”按钮并按照指示操作。
 
-When syncing with Dropbox, Joplin creates a sub-directory in Dropbox, in `/Apps/Joplin` and reads/writes the notes and notebooks in it. The application does not have access to anything outside this directory.
+在**终端应用**中，要启动同步过程，请输入 `:sync`。系统会要求您点击链接进行授权（只需输入您的 Microsoft 凭证 - 您无需注册 OneDrive 即可）。
 
-In the **desktop application** or **mobile application**, select "Dropbox" as the synchronisation target in the [Configuration screen](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md) (it is selected by default). Then, to initiate the synchronisation process, click on the "Synchronise" button in the sidebar and follow the instructions.
+## S3 同步
 
-In the **terminal application**, to initiate the synchronisation process, type `:sync`. You will be asked to follow a link to authorise the application.
+从 Joplin 2.x.x 版本开始，Joplin 支持多个 S3 提供商。我们将提供一些需要根据您选择的提供商进行配置的选项。我们已经测试了 UpCloud、AWS 和 Linode，其他提供商也应该可以正常工作。
 
-## OneDrive synchronisation
+在**桌面应用**或**移动应用**中，选择“S3（测试版）”作为同步目标，在[配置界面](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md)中进行设置。
 
-When syncing with OneDrive, Joplin creates a sub-directory in OneDrive, in /Apps/Joplin and reads/writes the notes and notebooks in it. The application does not have access to anything outside this directory.
+*   **S3 Bucket:** 桶的名称，例如 `joplin-bucket`
+*   **S3 URL:** 完整的 URL；对于 AWS，应为 `https://s3.<regionName>.amazonaws.com/`
+*   **S3 Access Key & S3 Secret Key:** 用户的编程访问密钥。要在 AWS 上创建新的密钥和密钥，请访问 [IAM 安全凭证](https://console.aws.amazon.com/iam/home#/security_credentials) 。对于其他提供商，请遵循其文档。
+*   **S3 Region:** 一些提供商要求您提供桶所在的区域。这通常以“eu-west1”或类似的形式表示，具体取决于您的区域。对于不需要指定区域的提供商，您可以留空。
+*   **强制路径风格** : 此设置使 Joplin 能够使用较旧的 S3 路径风格与 S3 提供商进行通信。根据您的提供商，您可能需要尝试开启和关闭此设置。
 
-In the **desktop application** or **mobile application**, select "OneDrive" as the synchronisation target in the [Configuration screen](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md). Then, to initiate the synchronisation process, click on the "Synchronise" button in the sidebar and follow the instructions.
+在为 Joplin 创建新的存储桶时，请禁用**存储桶版本控制** ，启用**阻止所有公共访问** ，并启用**默认加密** ，加密方式为 `Amazon S3 密钥（SSE-S3）`。一些提供商不提供这些选项，可能会导致同步问题。请尝试并反馈，以便我们更新文档。
 
-In the **terminal application**, to initiate the synchronisation process, type `:sync`. You will be asked to follow a link to authorise the application (simply input your Microsoft credentials - you do not need to register with OneDrive).
+要在 AWS S3 Web 控制台中添加**存储桶策略** ，请导航到**权限**选项卡。暂时禁用**阻止所有公共访问**以编辑存储桶策略，类似于以下内容：
 
-## S3 synchronisation
-
-As of Joplin 2.x.x, Joplin supports multiple S3 providers. We expose some options that will need to be configured depending on your provider of choice. We have tested with UpCloud, AWS, and Linode. others should work as well.
-
-In the **desktop application** or **mobile application**, select "S3 (Beta)" as the synchronisation target in the [Configuration screen](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md).
-
-- **S3 Bucket:** The name of your Bucket, such as `joplin-bucket`
-- **S3 URL:** Fully qualified URL; For AWS this should be `https://s3.<regionName>.amazonaws.com/`
-- **S3 Access Key & S3 Secret Key:**  The User's programmatic access key.  To create a new key & secret on AWS, visit [IAM Security Credentials](https://console.aws.amazon.com/iam/home#/security_credentials). For other providers follow their documentation.
-- **S3 Region:** Some providers require you to provide the region of your bucket. This is usually in the form of "eu-west1" or something similar depending on your region. For providers that do not require a region, you can leave it blank.
-- **Force Path Style**: This setting enables Joplin to talk to S3 providers using an older style S3 Path. Depending on your provider you may need to try with this on and off.
-
-
-While creating a new Bucket for Joplin, disable **Bucket Versioning**, enable **Block all public access** and enable **Default encryption** with `Amazon S3 key (SSE-S3)`. Some providers do not expose these options, and it could create a syncing problem. Do attempt and report back so we can update the documentation appropriately.
-
-To add a **Bucket Policy** from the AWS S3 Web Console, navigate to the **Permissions** tab. Temporarily disable **Block all public access**  to edit the Bucket policy, something along the lines of:
 ```
 {
     "Version": "2012-10-17",
@@ -340,213 +330,215 @@ To add a **Bucket Policy** from the AWS S3 Web Console, navigate to the **Permis
 }
 ```
 
-### Configuration settings for tested providers
+### 已测试提供商的配置设置
 
-All providers will require a bucket, Access Key, and Secret Key.
+所有提供商都需要一个存储桶、访问密钥和密钥。
 
-If you provide a configuration and you receive "success!" on the "check config" then your S3 sync should work for your provider. If you do not receive success, you may need to adjust your settings, or save them, restart the app, and attempt a sync. This may reveal more clear error messaging that will help you deduce the problem.
+如果提供了配置并在“检查配置”中收到“success!”，那么您的 S3 同步应该可以正常工作。如果没有收到成功消息，您可能需要调整设置，或者保存设置、重启应用并尝试同步。这可能会揭示更清晰的错误信息，帮助您找出问题所在。
 
 ### AWS
-- URL: `https://s3.<region>.amazonaws.com/` (fill in your region, a complete list of endpoint adresses can be found [here](https://docs.aws.amazon.com/general/latest/gr/s3.html))
-- Region: required
-- Force Path Style: unchecked
+
+*   URL: `https://s3.<region>.amazonaws.com/` (填入您的区域，完整的端点地址列表可以在这里找到 [这里](https://docs.aws.amazon.com/general/latest/gr/s3.html) )
+*   区域: 必填
+*   强制路径样式: 未选中
 
 ### Linode
-- URL: `https://<region>.linodeobjects.com` (region is in the URL provided by Linode; this URL is also the same as the URL provided by Linode with the bucket name removed)
-- Region: Anything you want to type, can't be left empty
-- Force Path Style: unchecked
+
+*   URL: `https://<region>.linodeobjects.com` （区域在 Linode 提供的 URL 中；此 URL 也与移除桶名后的 Linode 提供的 URL 相同）
+*   区域: 你想输入的内容不能为空
+*   强制路径样式: 未选中
 
 ### UpCloud
-- URL: `https://<account>.<region>.upcloudobjects.com` (They will provide you with multiple URLs, the one that follows this pattern should work.)
-- Region: required
-- Force Path Style: unchecked
 
-# Encryption
+*   URL: `https://<account>.<region>.upcloudobjects.com` (他们会提供给你多个 URL，符合这个模式的应该有效。)
+*   区域: 必填
+*   强制路径样式: 未选中
 
-Joplin supports end-to-end encryption (E2EE) on all the applications. E2EE is a system where only the owner of the notes, notebooks, tags or resources can read them. It prevents potential eavesdroppers - including telecom providers, internet providers, and even the developers of Joplin from being able to access the data. Please see the [End-To-End Encryption Tutorial](https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md) for more information about this feature and how to enable it.
+# 加密
 
-For a more technical description, mostly relevant for development or to review the method being used, please see the [Encryption specification](https://github.com/laurent22/joplin/blob/dev/readme/spec/e2ee.md).
+Joplin 在所有应用程序中支持端到端加密（E2EE）。E2EE 是一种系统，只有笔记、笔记本、标签或资源的所有者才能阅读它们。这可以防止潜在的窃听者——包括电信提供商、互联网提供商，甚至 Joplin 的开发者——无法访问数据。请参阅 [端到端加密教程](https://github.com/laurent22/joplin/blob/dev/readme/e2ee.md) 以获取更多关于此功能及其启用方法的信息。
 
-# Note history
+对于更详细的描述，主要适用于开发或审查所使用的方法，请参阅 [加密规范](https://github.com/laurent22/joplin/blob/dev/readme/spec/e2ee.md) 。
 
-The Joplin applications automatically save previous versions of your notes at regular intervals. These versions are synced across devices and can be viewed from the desktop application. To do so, click on the "Information" button on a note, then click on "Previous version of this note". From this screen you can view the previous versions of the note as well as restore any of them.
+# 历史记录
 
-This feature can be disabled from the "Note history" section in the [Configuration screen](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md), and it is also possible to change for how long the history of a note is saved.
+Joplin 应用程序会定期自动保存笔记的先前版本。这些版本会在设备之间同步，并且可以从桌面应用程序中查看。要查看这些版本，请点击笔记上的“信息”按钮，然后点击“此笔记的先前版本”。从这个界面，您可以查看笔记的先前版本并恢复其中任何一个版本。
 
-More information please see the [Note History page](https://github.com/laurent22/joplin/blob/dev/readme/note_history.md).
+此功能可以在“配置屏幕”的“笔记历史”部分禁用，并且还可以更改笔记历史保存的时间长度。
 
-# External text editor
+更多信息请参见“笔记历史”页面。
 
-Joplin notes can be opened and edited using an external editor of your choice. It can be a simple text editor like Notepad++ or Sublime Text or an actual Markdown editor like Typora. In that case, images will also be displayed within the editor. To open the note in an external editor, click on the icon in the toolbar or press Ctrl+E (or Cmd+E). Your default text editor will be used to open the note. If needed, you can also specify the editor directly in the General Options, under "Text editor command".
+# 外部文本编辑器
 
-# Attachments
+Joplin 笔记可以使用您选择的外部编辑器打开和编辑。这可以是一个简单的文本编辑器，如 Notepad++ 或 Sublime Text，也可以是一个实际的 Markdown 编辑器，如 Typora。在这种情况下，图片也会在编辑器中显示。要使用外部编辑器打开笔记，请点击工具栏中的图标或按 Ctrl+E（或 Cmd+E）。默认的文本编辑器将用于打开笔记。如果需要，您也可以在“文本编辑器命令”下直接指定编辑器。
 
-Any kind of file can be attached to a note. In Markdown, links to these files are represented as a simple ID to the attachment, clicking on this link will open the file in the default application. In the case of audio, video and pdf files, these will be displayed inline with the note and so can be viewed or played within Joplin.
+# 附件
 
-In the **desktop application**, files can be attached either by clicking the "Attach file" icon in the editor or via drag and drop. If you prefer to create a link to a local file instead, hold the ALT key while performing the drag and drop operation. You can also copy and paste images directly in the editor via Ctrl+V.
+任何类型的文件都可以附加到一个笔记中。在 Markdown 中，这些文件的链接表示为一个简单的附件 ID，点击这个链接将在默认应用程序中打开文件。对于音频、视频和 PDF 文件，这些文件将在笔记中嵌入显示，因此可以在 Joplin 中查看或播放。
 
-Resources that are not attached to any note will be automatically deleted in accordance to the [Note History](#note-history) settings.
+在 **桌面应用程序** 中，可以通过点击编辑器中的“附加文件”图标或通过拖放来附加文件。如果你更愿意创建一个指向本地文件的链接，可以在执行拖放操作时按住 ALT 键。你也可以通过 Ctrl+V 将图片直接粘贴到编辑器中。
 
-**Important:** Resources larger than 10 MB are not currently supported on mobile. They will crash the application when synchronising so it is recommended not to attach such resources at the moment. The issue is being looked at.
+未附加到任何笔记中的资源将根据 [笔记历史](#note-history) 设置自动删除。
 
-## Downloading attachments
+**重要：** 目前，大小超过 10 MB 的资源在移动设备上不被支持。在同步时它们会导致应用程序崩溃，因此目前建议不要附加此类资源。这个问题正在被解决。
 
-The way the attachments are downloaded during synchronisation can be customised in the [Configuration screen](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md), under "Attachment download behaviour". The default option ("Always") is to download all the attachments, all the time, so that the data is available even when the device is offline. There is also the option to download the attachments manually (option "Manual"), by clicking on it, or automatically (Option "Auto"), in which case the attachments are downloaded only when a note is opened. These options should help saving disk space and network bandwidth, especially on mobile.
+## 下载附件
 
-# Notifications
+在同步过程中下载附件的方式可以在[配置屏幕](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md)下的“附件下载行为”中进行自定义。默认选项（“始终”）是始终下载所有附件，这样即使在设备离线时数据也是可用的。还可以选择手动下载（选项“手动”），通过点击触发，或者自动下载（选项“自动”），在这种情况下，只有在打开笔记时才会下载附件。这些选项有助于节省磁盘空间和网络带宽，特别是在移动设备上。
 
-In the desktop and mobile apps, an alarm can be associated with any to-do. It will be triggered at the given time by displaying a notification. How the notification will be displayed depends on the operating system since each has a different way to handle this. Please see below for the requirements for the desktop applications:
+# 通知
 
-- **Windows**: >= 8. Make sure the Action Center is enabled on Windows. Task bar balloon for Windows < 8. Growl as fallback. Growl takes precedence over Windows balloons.
-- **macOS**: >= 10.8 or Growl if earlier.
-- **Linux**: `notify-send` tool, delivered through packages `notify-osd`, `libnotify-bin` or `libnotify-tools`. GNOME should have this by default, but install `libnotify-tools` if using KDE Plasma.
+在桌面和移动应用程序中，可以将任何待办事项与警报关联。该警报将在指定时间通过显示通知来触发。通知的显示方式取决于操作系统，因为每个操作系统处理这种方式的方式不同。请参阅以下桌面应用程序的要求：
 
-See [documentation and flow chart for reporter choice](https://github.com/mikaelbr/node-notifier/blob/master/DECISION_FLOW.md)
+*   **Windows**: >= 8. 确保在 Windows 中启用了行动中心。Windows 任务栏气球 < 8. 作为备选方案使用 Growl。Growl 优先于 Windows 气球。
+*   macOS: >= 10.8 或 Growl（如果更早）。
+*   Linux: `notify-send` 工具，通过软件包 `notify-osd`、`libnotify-bin` 或 `libnotify-tools` 提供。GNOME 默认包含此工具，但如果使用 KDE Plasma，请安装 `libnotify-tools`。
 
-On mobile, the alarms will be displayed using the built-in notification system.
+请参阅 [报告者选择的文档和流程图](https://github.com/mikaelbr/node-notifier/blob/master/DECISION_FLOW.md)
 
-If for any reason the notifications do not work, please [open an issue](https://github.com/laurent22/joplin/issues).
+在移动设备上，警报将使用内置的通知系统显示。
 
-# Sub-notebooks
+如果通知不工作，请[提交问题](https://github.com/laurent22/joplin/issues) 。
 
-Sub-notebooks allow organising multiple notebooks into a tree of notebooks. For example it can be used to regroup all the notebooks related to work, to family or to a particular project under a parent notebook.
+# 子笔记本
+
+子笔记本允许将多个笔记本组织成笔记本树。例如，可以将所有与工作、家庭或特定项目相关的笔记本归类到一个父笔记本下。
 
 ![](https://raw.githubusercontent.com/laurent22/joplin/dev/Assets/WebsiteAssets/images/SubNotebooks.png)
 
-- In the **desktop application**, to create a subnotebook, drag and drop it onto another notebook. To move it back to the root, drag and drop it on the "Notebooks" header. Currently only the desktop app can be used to organise the notebooks.
-- The **mobile application** supports displaying and collapsing/expanding the tree of notebooks, however it does not currently support moving the subnotebooks to different notebooks.
-- The **terminal app** supports displaying the tree of subnotebooks but it does not support collapsing/expanding them or moving the subnotebooks around.
+*   在**桌面应用程序**中，要创建子笔记本，请将其拖放到另一个笔记本上。要将其移回根目录，请将其拖放到“笔记本”标题上。目前只有桌面应用程序可以用于组织笔记本。
+*   在**移动应用程序**中，支持显示和折叠/展开笔记本树，但目前不支持将子笔记本移动到不同的笔记本中。
+*   终端应用支持显示子笔记本树结构，但不支持折叠/展开它们或移动子笔记本。
 
 # Markdown
 
-Joplin uses and renders a Github-flavoured Markdown with a few variations and additions. In particular it adds math formula support, interactive checkboxes and support for note links. Joplin also supports Markdown plugins which allow enabling and disabling various advanced Markdown features. Have a look at the [Markdown Guide](https://github.com/laurent22/joplin/blob/dev/readme/markdown.md) for more information.
+Joplin 使用并渲染一种带有少量变体和扩展的 Github 风格的 Markdown。特别是它增加了数学公式支持、交互式复选框和笔记链接支持。Joplin 还支持 Markdown 插件，允许启用和禁用各种高级 Markdown 功能。请参阅 [Markdown 指南](https://github.com/laurent22/joplin/blob/dev/readme/markdown.md) 以获取更多信息。
 
-# Custom CSS
+# 自定义 CSS
 
-Rendered markdown can be customized by placing a userstyle file in the profile directory `~/.config/joplin-desktop/userstyle.css` (This path might be different on your device - check at the top of the `General` page of the [Configuration screen](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md) for the exact path). This file supports standard CSS syntax. Joplin ***must*** be restarted for the new css to be applied, please ensure that Joplin is not closing to the tray, but is actually exiting. Note that this file is used for both displaying the notes and printing the notes. Be aware how the CSS may look printed (for example, printing white text over a black background is usually not wanted).
+渲染的 Markdown 可以通过在配置文件目录中放置用户样式文件来自定义 `~/.config/joplin-desktop/userstyle.css` （此路径在您的设备上可能不同，请在 [配置屏幕](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md) 的 `通用` 页面顶部检查确切路径）。此文件支持标准 CSS 语法。Joplin ***必须*** 重启以应用新的 CSS，确保 Joplin 真正退出而不是仅最小化到托盘中。请注意，此文件同时用于显示笔记和打印笔记。请注意 CSS 在打印时可能的外观（例如，打印白色文本在黑色背景上通常不是想要的效果）。
 
-The whole UI can be customized by placing a custom editor style file in the profile directory `~/.config/joplin-desktop/userchrome.css`.
+整个 UI 可以通过在配置目录中放置自定义编辑器样式文件来自定义 `~/.config/joplin-desktop/userchrome.css` 。
 
-Important: userstyle.css and userchrome.css are provided for your convenience, but they are advanced settings, and styles you define may break from one version to the next. If you want to use them, please know that it might require regular development work from you to keep them working. The Joplin team cannot make a commitment to keep the application HTML structure stable.
+重要提示：userstyle.css 和 userchrome.css 是为了方便提供的，但它们是高级设置，您定义的样式可能会在不同版本之间失效。如果您打算使用它们，请了解这可能需要您定期进行开发工作来保持它们的正常运行。Joplin 团队无法保证应用程序的 HTML 结构保持稳定。
 
-# Plugins
+# 插件
 
-The **desktop app** has the ability to extend beyond its standard functionality by the way of plugins. These plugins adhere to the Joplin [plugin API](https://joplinapp.org/api/references/plugin_api/classes/joplin.html) and can be installed & configured within the application via the `Plugins` page of the [Configuration screen](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md).
+桌面应用可以通过插件扩展其标准功能。这些插件遵循 Joplin 的 [插件 API](https://joplinapp.org/api/references/plugin_api/classes/joplin.html)，并通过应用中的 `插件` 页面在 [配置屏幕](https://github.com/laurent22/joplin/blob/dev/readme/config_screen.md) 中进行安装和配置。
 
-From this menu you can search for plugins uploaded to the [Joplin plugins](https://github.com/joplin/plugins) repository as well as manual installation of plugins using a 'Joplin Plugin Archive' (*.jpl) file.  
-Once the application is reloaded the plugins will appear within the plugins menu where they can be toggled on/off or removed entirely.
+从这个菜单中，您可以搜索上传到 [Joplin 插件](https://github.com/joplin/plugins) 仓库的插件，也可以使用 'Joplin 插件存档' (*.jpl) 文件手动安装插件。
+重新加载应用程序后，插件将出现在插件菜单中，可以在其中启用/禁用或完全移除这些插件。
 
-For more information see [Plugins](https://github.com/laurent22/joplin/blob/dev/readme/plugins.md)
+更多信息，请参见[插件]
 
-# Searching
+# 搜索
 
-Joplin implements the SQLite Full Text Search (FTS4) extension. It means the content of all the notes is indexed in real time and search queries return results very fast. Both [Simple FTS Queries](https://www.sqlite.org/fts3.html#simple_fts_queries) and [Full-Text Index Queries](https://www.sqlite.org/fts3.html#full_text_index_queries) are supported. See below for the list of supported queries:
+Joplin 实现了 SQLite 全文搜索（FTS4）扩展。这意味着所有笔记的内容会实时索引，搜索查询会非常快速地返回结果。支持[简单全文查询]和[全文索引查询]。以下为支持的查询列表：
 
-One caveat of SQLite FTS is that it does not support languages which do not use Latin word boundaries (spaces, tabs, punctuation). To solve this issue, Joplin has a custom search mode, that does not use FTS, but still has all of its features (multi term search, filters, etc.). One of its drawbacks is that it can get slow on larger note collections. Also, the sorting of the results will be less accurate, as the ranking algorithm (BM25) is, for now, only implemented for FTS. Finally, in this mode there are no restrictions on using the `*` wildcard (`swim*`, `*swim` and `ast*rix` all work). This search mode is currently enabled if one of the following languages are detected:
- - Chinese
- - Japanese
- - Korean
- - Thai
+SQLite FTS 的一个限制是它不支持不使用拉丁词边界（空格、制表符、标点符号）的语言。为了解决这个问题，Joplin 提供了一种自定义搜索模式，该模式不使用 FTS，但仍保留了所有功能（多词搜索、过滤器等）。其缺点之一是在较大的笔记集合中可能会变慢。此外，结果的排序也会不够准确，因为目前排名算法（BM25）仅实现了对 FTS 的支持。最后，在这种模式下，可以使用通配符 ``*``（``swim*``、````*swim` 和 ``ast*rix`` 都有效）。当前，如果检测到以下语言之一，此搜索模式将被启用：```
 
-## Supported queries
+*   中文
+*   日文
+*   韩文
+*   泰语
 
-Search type | Description | Example
-------------|-------------|---------
-Single word | Returns all the notes that contain this term. | For example, searching for `cat` will return all the notes that contain this exact word. Note: it will not return the notes that contain the substring - thus, for "cat", notes that contain "cataclysmic" or "prevaricate" will **not** be returned.
-Multiple word | Returns all the notes that contain **all** these words, but not necessarily next to each other. | `dog cat` - will return any notes that contain the words "dog" and "cat" anywhere in the note, no necessarily in that order nor next to each other. It will **not** return results that contain "dog" or "cat" only.
-Phrase | Add double quotes to return the notes that contain exactly this phrase. | `"shopping list"` - will return the notes that contain these **exact terms** next to each other and in this order. It will **not** return for example a note that contains "going shopping with my list".
-Prefix | Add a wildcard to return all the notes that contain a term with a specified prefix. | `swim*` - will return all the notes that contain eg. "swim", but also "swimming", "swimsuit", etc. IMPORTANT: The wildcard **can only be at the end** - it will be ignored at the beginning of a word (eg. `*swim`) and will be treated as a literal asterisk in the middle of a word (eg. `ast*rix`)
-Switch to basic search | One drawback of Full Text Search is that it ignores most non-alphabetical characters. However in some cases you might want to search for this too. To do that, you can use basic search. You switch to this mode by prefixing your search with a slash `/`. This won't provide the benefits of FTS but it will allow searching exactly for what you need. Note that it can also be much slower, even extremely slow, depending on your query. | `/"- [ ]"` - will return all the notes that contain unchecked checkboxes.
+## 支持的查询
 
-## Search filters
-
-You can also use search filters to further restrict the search.
-
-| Operator | Description | Example |
+| 查询类型 | 描述 | 示例 |
 | --- | --- | --- |
-|**-**|If placed before a text term, it excludes the notes that contain that term. You can also place it before a filter to negate it. |`-spam` searches for all notes without the word `spam`.<br>`office -trash` searches for all notes with the word `office` and without the word `trash`.|
-|**any:**|Return notes that satisfy any/all of the required conditions. `any:0` is the default, which means all conditions must be satisfied.|`any:1 cat dog` will return notes that have the word `cat` or `dog`.<br>`any:0 cat dog` will return notes with both the words `cat` and `dog`. |
-| **title:** <br> **body:**|Restrict your search to just the title or the body field.|`title:"hello world"` searches for notes whose title contains `hello` and `world`.<br>`title:hello -body:world` searches for notes whose title contains `hello` and body does not contain `world`.
-| **tag:** |Restrict the search to the notes with the specified tags.|`tag:office` searches for all notes having tag office.<br>`tag:office tag:important` searches for all notes having both office and important tags.<br>`tag:office -tag:spam` searches for notes having tag `office` which do not have tag `spam`.<br>`any:1 tag:office tag:spam` searches for notes having tag `office` or tag `spam`.<br>`tag:be*ful` does a search with wildcards.<br>`tag:*` returns all notes with tags.<br>`-tag:*` returns all notes without tags.|
-| **notebook:** | Restrict the search to the specified notebook(s). |`notebook:books` limits the search scope within `books` and all its subnotebooks.<br>`notebook:wheel*time` does a wildcard search.|
-| **created:** <br> **updated:** <br> **due:**| Searches for notes created/updated on dates specified using YYYYMMDD format. You can also search relative to the current day, week, month, or year. | `created:20201218` will return notes created on or after December 18, 2020.<br>`-updated:20201218` will return notes updated before December 18, 2020.<br>`created:20200118 -created:20201215` will return notes created between January 18, 2020, and before December 15, 2020.<br>`created:202001 -created:202003` will return notes created on or after January and before March 2020.<br>`updated:1997 -updated:2020` will return all notes updated between the years 1997 and 2019.<br>`created:day-2` searches for all notes created in the past two days.<br>`updated:year-0` searches all notes updated in the current year.<br>`-due:day+7` will return all todos which are due or will be due in the next seven days.<br>`-due:day-5` searches all todos that are overdue for more than 5 days.|
-| **type:** |Restrict the search to either notes or todos. | `type:note` to return all notes<br>`type:todo` to return all todos |
-| **iscompleted:** | Restrict the search to either completed or uncompleted todos. | `iscompleted:1` to return all completed todos<br>`iscompleted:0` to return all uncompleted todos|
-|**latitude:** <br> **longitude:** <br> **altitude:**|Filter by location|`latitude:40 -latitude:50` to return notes with latitude >= 40 and < 50  |
-|**resource:**|Filter by attachment MIME type|`resource:image/jpeg` to return notes with a jpeg attachment.<br>`-resource:application/pdf` to return notes without a pdf attachment.<br>`resource:image/*` to return notes with any images.|
-|**sourceurl:**|Filter by source URL|`sourceurl:https://www.google.com`<br>`sourceurl:*joplinapp.org` to perform a wildcard search.|
-|**id:**|Filter by note ID|`id:9cbc1b4f242043a9b8a50627508bccd5` return a note with the specified id |
+| 单个词 | 包含此术语的所有便签。 | 例如，搜索 `cat` 将返回包含此确切单词的所有便签。注意：它不会返回包含该子字符串的便签——因此，“cat”不会返回包含“cataclysmic”或“prevaricate”的便签。 |
+| 多个词 | 包含所有这些单词的所有便签，但不一定相邻。 | dog cat - 将返回包含“dog”和“cat”这两个词的任何笔记，但不一定按这个顺序或相邻出现。它将不返回只包含“dog”或“cat”其中之一的结果。 |
+| 短语 | 在需要时添加双引号，以返回包含这些**确切词语**且顺序不变的笔记。 | "shopping list" - 将返回包含这些确切词语且顺序不变的笔记。它将不返回例如包含“going shopping with my list”的笔记。 |
+| 前缀 | 添加通配符以返回包含指定前缀的所有笔记。 | swim* - 将返回包含“swim”等的所有笔记，例如“swimming”、“swimsuit”等。重要提示：通配符只能位于末尾 - 在单词开头（例如 *swim）时将被忽略，并且在单词中间（例如 ast*rix）将被视为一个实际的星号。 |
+| 切换到基本搜索 | 全文搜索的一个缺点是它会忽略大多数非字母字符。然而，在某些情况下，你可能也需要搜索这些字符。要实现这一点，你可以使用基本搜索。通过在搜索前加上斜杠 `/`（/）来切换到这种模式。这不会提供全文搜索的好处，但它可以让你精确地搜索你需要的内容。请注意，这可能会导致搜索速度大幅下降，甚至非常慢，这取决于你的查询。 | /"- [ ]" - 将返回包含未选中复选框的所有笔记。 |
 
-Note: In the CLI client you have to escape the query using `--` when using negated filters.
-Eg. `:search -- "-tag:tag1"`.
+## 搜索过滤器
 
-The filters are implicitly connected by and/or connectives depending on the following rules:
+你还可以使用搜索过滤器进一步限制搜索范围。
 
-- By default, all filters are connected by "AND".
-- To override this default behaviour, use the `any` filter, in which case the search terms will be connected by "OR" instead.
-- There's an exception for the `notebook` filters which are connected by "OR". The reason being that no note can be in multiple notebooks at once.
+| 操作符 | 描述 | 示例 |
+| --- | --- | --- |
+| - | 如果放在文本术语之前，它会排除包含该术语的注释。你也可以将其放在过滤器之前以否定该过滤器。 | `-spam` 搜索所有不包含单词 `spam` 的注释。`office -trash` 搜索所有包含单词 `office` 但不包含单词 `trash` 的注释。 |
+| any: | 返回满足任意/所有必需条件的注释。any:0 是默认值，表示所有条件都必须满足。 | any:1 cat dog 将返回包含单词 cat 或 dog 的笔记。any:0 cat dog 将返回同时包含单词 cat 和 dog 的注释。 |
+| 标题: 主体: | 将搜索范围限制为仅标题或正文字段。 | title:"hello world" 搜索标题包含 hello 和 world 的笔记。title:hello -body:world 搜索标题包含 hello 且正文不包含 world 的笔记。 |
+| 标签: | 限制搜索范围为指定标签的笔记。 | tag:office 搜索所有带有标签 office 的笔记。tag:office tag:important 搜索同时带有 office 和 important 标签的所有笔记。tag:office -tag:spam 搜索带有 tag office 但不带有 tag spam 的笔记。any:1 tag:office tag:spam 搜索带有 tag office 或 tag spam 的笔记。tag:be*ful 使用通配符进行搜索。tag:* 返回所有带有标签的笔记。-tag:* 返回所有不带标签的笔记。 |
+| 笔记本: | 限制搜索范围为指定的笔记本。 | notebook:books 将搜索范围限制在 books 以及其所有子笔记本内。notebook:wheel*time 进行通配符搜索。 |
+| 创建时间: updated: 到期时间: | 使用 YYYYMMDD 格式指定日期创建或更新的笔记。您也可以相对于当前日期、周、月或年进行搜索。 | created:20201218 将返回 2020 年 12 月 18 日或之后创建的笔记。-updated:20201218 将返回 2020 年 12 月 18 日之前更新的笔记。 created:20200118 -created:20201215 将返回2020年1月18日至2020年12月14日之间创建的笔记。 created:202001 -created:202003 将返回2020年1月至2020年2月之间创建的笔记。updated:1997 -updated:2020 将返回 1997 年至 2019 年之间更新的所有笔记。created:day-2 搜索最近两天内创建的所有笔记。updated:year-0 搜索当前年份内更新的所有笔记。-due:day+7 将返回所有在接下来的七天内到期或即将到期的任务。-due:day-5 搜索所有逾期超过五天的任务。 |
+| 类型: | 将搜索范围限制在笔记或待办事项中。 | 输入 type:note 以返回所有笔记输入 type:todo 以返回所有待办事项 |
+| iscompleted: | 将搜索限制在已完成或未完成的任务中。 | iscompleted:1 用于返回所有已完成的任务iscompleted:0 用于返回所有未完成的任务 |
+| 纬度: 经度: 海拔: | 按位置筛选 | latitude:40 -latitude:50 返回纬度 >= 40 且 < 50 的笔记 |
+| 资源： | 按附件 MIME 类型筛选 | resource:image/jpeg 用于返回带有 jpeg 附件的笔记。-resource:application/pdf 用于返回不带有 pdf 附件的笔记。resource:image/* 用于返回包含任何图片的笔记。 |
+| 源链接： | 按源 URL 过滤 | sourceurl:https://www.google.comsourceurl:*joplinapp.org 进行通配符搜索。 |
+| ID： | 按笔记 ID 过滤 | id:9cbc1b4f242043a9b8a50627508bccd5 返回指定 id 的笔记 |
 
-Incorrect search filters are interpreted as a phrase search, e.g. misspelled `nootebook:Example` or non-existing `https://joplinapp.org`.
+注意：在命令行客户端中，使用否定过滤器时需要使用 `--` 转义查询。例如：`:search -- "-tag:tag1"`。
 
-## Search order
+过滤器默认通过“AND”连接，具体连接方式取决于以下规则：
 
-Notes are sorted by "relevance". Currently it means the notes that contain the requested terms the most times are on top. For queries with multiple terms, it also matters how close to each other the terms are. This is a bit experimental so if you notice a search query that returns unexpected results, please report it in the forum, providing as many details as possible to replicate the issue.
+*   默认情况下，所有过滤器通过“AND”连接。
+*   若要覆盖这种默认行为，请使用 `any` 过滤器，此时搜索项将通过“OR”连接。
+*   `notebook` 过滤器有例外情况，它们通过“OR”连接。原因是笔记不能同时存在于多个笔记本中。
+
+错误的搜索过滤条件会被解释为短语搜索，例如拼写错误的 ``nootebook:Example`` 或不存在的 ``https://joplinapp.org``。
+
+## 搜索顺序
+
+笔记按“相关性”排序。目前这意味着包含请求词汇次数最多的笔记排在最前面。对于包含多个词汇的查询，词汇之间的距离也会影响排序。这还处于实验阶段，如果您发现某个搜索查询返回了意外的结果，请在论坛中报告该问题，并尽可能提供详细信息以便重现问题。
 
 # Goto Anything
 
-In the desktop application, press <kbd>Ctrl+P</kbd> or <kbd>Cmd+P</kbd> and type a note title or part of its content to jump to it. Or type <kbd>#</kbd> followed by a tag name, or <kbd>@</kbd> followed by a notebook name.
+在桌面应用程序中，按下 ` Ctrl+P ` 或 ` Cmd+P `，然后输入笔记标题或部分内容以跳转到该笔记。或者输入 ` # ` 后跟标签名称，或输入 ` @ ` 后跟笔记本名称。
 
-# Multiple profile support
-	
-To create a new profile, open File > Switch profile and select Create new profile, enter the profile name and press OK. The app will automatically switch to this new profile, which you can now configure.
+# 多配置文件支持
 
-To switch back to the previous profile, again open File > Switch profile and select Default.
+要创建一个新的配置文件，请打开“文件”>“切换配置文件”，然后选择“创建新配置文件”，输入配置文件名称并点击“确定”。应用程序会自动切换到这个新配置文件，你可以对其进行配置。
 
-Note that profiles all share certain settings, such as language, font size, theme, etc. This is done so that you don't have reconfigure every details when switching profiles. Other settings such as sync configuration is per profile.
+要切换回之前的配置文件，请再次打开“文件”>“切换配置文件”，然后选择“默认”。
 
-The feature is available on desktop only for now, and should be ported to mobile relatively soon.
-	
-# Donations
+请注意，所有配置文件共享某些设置，例如语言、字体大小、主题等。这样做的目的是在切换配置文件时不需要重新配置每个细节。其他设置，如同步配置，则是针对每个配置文件的。
 
-Donations to Joplin support the development of the project. Developing quality applications mostly takes time, but there are also some expenses, such as digital certificates to sign the applications, app store fees, hosting, etc. Most of all, your donation will make it possible to keep up the current development standard.
+该功能目前仅在桌面端可用，不久后会移植到移动设备。
 
-Please see the [donation page](https://github.com/laurent22/joplin/blob/dev/readme/donate.md) for information on how to support the development of Joplin.
+# 捐赠
 
-# Community
+捐赠给 Joplin 可以支持项目的开发。开发高质量的应用程序主要需要时间，但还有一些费用，例如用于签署应用程序的数字证书、应用商店费用、托管费用等。最重要的是，您的捐赠可以让开发保持当前的标准。
 
-Name | Description
---- | ---
-[Support Forum](https://discourse.joplinapp.org/) | This is the main place for general discussion about Joplin, user support, software development questions, and to discuss new features. Also where the latest beta versions are released and discussed.
-[Twitter feed](https://twitter.com/joplinapp) | Follow us on Twitter
-[Mastodon feed](https://mastodon.social/@joplinapp) | Follow us on Mastodon
-[Patreon page](https://www.patreon.com/joplin) |The latest news are often posted there
-[Discord server](https://discord.gg/VSj7AFHvpq) | Our chat server
-[LinkedIn](https://www.linkedin.com/company/joplin) | Our LinkedIn page
-[Lemmy Community](https://sopuli.xyz/c/joplinapp) | Also a good place to get help
+请参阅[捐赠页面](https://github.com/laurent22/joplin/blob/dev/readme/donate.md)了解如何支持 Joplin 的开发。
 
-# Contributing
+# 社区
 
-Please see the guide for information on how to contribute to the development of Joplin: https://github.com/laurent22/joplin/blob/dev/CONTRIBUTING.md
+| 名称 | 描述 |
+| --- | --- |
+| 支持论坛 | 这是关于 Joplin 的一般讨论区，用户支持、软件开发问题以及讨论新功能的地方。也是最新测试版本的发布和讨论的地方。 |
+| Twitter 动态 | 在 Twitter 上关注我们 |
+| Mastodon 动态 | 在 Mastodon 上关注我们 |
+| Patreon 页面 | 最新消息通常会发布在那里 |
+| Discord 服务器 | 我们的聊天服务器 |
+| LinkedIn | 我们的 LinkedIn 页面 |
+| Lemmy 社区 | 也是一个获取帮助的好地方 |
 
-# Localisation
+# 贡献
 
-Joplin is currently available in the languages below. If you would like to contribute a **new translation**, it is quite straightforward, please follow these steps:
+请参阅指南，了解如何为 Joplin 的开发做出贡献：[https://github.com/laurent22/joplin/blob/dev/CONTRIBUTING.md](https://github.com/laurent22/joplin/blob/dev/CONTRIBUTING.md)
 
-- [Download Poedit](https://poedit.net/), the translation editor, and install it.
-- [Download the file to be translated](https://raw.githubusercontent.com/laurent22/joplin/dev/packages/tools/locales/joplin.pot).
-- In Poedit, open this .pot file, go into the Catalog menu and click Configuration. Change "Country" and "Language" to your own country and language.
-- From then you can translate the file.
-- Once it is done, please [open a pull request](https://github.com/laurent22/joplin/pulls) and add the file to it.
+# 本地化
 
-This translation will apply to the three applications - desktop, mobile and terminal.
+Joplin 目前提供以下语言版本。如果您希望贡献一种新的翻译，请按照以下步骤操作：
 
-To **update a translation**, follow the same steps as above but instead of getting the .pot file, get the .po file for your language from the table below.
+*   请下载 Poedit，这是一个翻译编辑器，并进行安装。
+*   [下载待翻译的文件](https://raw.githubusercontent.com/laurent22/joplin/dev/packages/tools/locales/joplin.pot) 。
+*   在 Poedit 中，打开这个.pot 文件，进入 Catalog 菜单并点击 Configuration。将“Country”和“Language”改为你的国家和语言。
+*   从那时起，你就可以开始翻译文件了。
+*   完成后，请[提交一个拉取请求](https://github.com/laurent22/joplin/pulls)并将文件添加到其中。
 
-Current translations:
+此翻译将适用于桌面、移动和终端三个应用程序。
 
-<!-- LOCALE-TABLE-AUTO-GENERATED -->
-&nbsp;  |  Language  |  Po File  |  Last translator  |  Percent done
----|---|---|---|---
+要更新翻译，请按照上述步骤操作，但不要获取 .pot 文件，而是从下方表格中获取您语言的 .po 文件。
+
+当前翻译：
+
+|  | 语言 | Po 文件 | 最后翻译者 | 完成百分比 |
+| --- | --- | --- | --- | --- |
 <img src="https://joplinapp.org/images/flags/country-4x3/arableague.png" width="16px"/>  |  Arabic  |  [ar](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ar.po)  |  [Whaell O](mailto:Whaell@protonmail.com)  |  79%
 <img src="https://joplinapp.org/images/flags/es/basque_country.png" width="16px"/>  |  Basque  |  [eu](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/eu.po)  |  juan.abasolo@ehu.eus  |  22%
 <img src="https://joplinapp.org/images/flags/country-4x3/ba.png" width="16px"/>  |  Bosnian (Bosna i Hercegovina)  |  [bs_BA](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/bs_BA.po)  |  [Derviš T.](mailto:dervis.t@pm.me)  |  57%
@@ -588,87 +580,84 @@ Current translations:
 <img src="https://joplinapp.org/images/flags/country-4x3/tw.png" width="16px"/>  |  中文 (繁體)  |  [zh_TW](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/zh_TW.po)  |  [Kevin Hsu](mailto:kevin.hsu.hws@gmail.com)  |  88%
 <img src="https://joplinapp.org/images/flags/country-4x3/jp.png" width="16px"/>  |  日本語 (日本)  |  [ja_JP](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ja_JP.po)  |  [genneko](mailto:genneko217@gmail.com)  |  88%
 <img src="https://joplinapp.org/images/flags/country-4x3/kr.png" width="16px"/>  |  한국어  |  [ko](https://github.com/laurent22/joplin/blob/dev/packages/tools/locales/ko.po)  |  [Ji-Hyeon Gim](mailto:potatogim@potatogim.net)  |  88%
-<!-- LOCALE-TABLE-AUTO-GENERATED -->
 
-# Contributors
+# 贡献者
 
-Thank you to everyone who've contributed to Joplin's source code!
+感谢所有为 Joplin 源代码做出贡献的人！
 
-<!-- CONTRIBUTORS-TABLE-AUTO-GENERATED -->
-|     |     |     |     |     |
-| :---: | :---: | :---: | :---: | :---: |
-| <img width="50" src="https://avatars.githubusercontent.com/u/1285584?v=4"/></br>[laurent22](https://github.com/laurent22) | <img width="50" src="https://avatars.githubusercontent.com/u/223439?v=4"/></br>[tessus](https://github.com/tessus) | <img width="50" src="https://avatars.githubusercontent.com/u/2179547?v=4"/></br>[CalebJohn](https://github.com/CalebJohn) | <img width="50" src="https://avatars.githubusercontent.com/u/1732810?v=4"/></br>[mic704b](https://github.com/mic704b) | <img width="50" src="https://avatars.githubusercontent.com/u/995612?v=4"/></br>[roman-r-m](https://github.com/roman-r-m) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/29672555?v=4"/></br>[genneko](https://github.com/genneko) | <img width="50" src="https://avatars.githubusercontent.com/u/63491353?v=4"/></br>[j-krl](https://github.com/j-krl) | <img width="50" src="https://avatars.githubusercontent.com/u/4553672?v=4"/></br>[tanrax](https://github.com/tanrax) | <img width="50" src="https://avatars.githubusercontent.com/u/30305957?v=4"/></br>[naviji](https://github.com/naviji) | <img width="50" src="https://avatars.githubusercontent.com/u/3542031?v=4"/></br>[PackElend](https://github.com/PackElend) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/8701534?v=4"/></br>[rtmkrlv](https://github.com/rtmkrlv) | <img width="50" src="https://avatars.githubusercontent.com/u/10997189?v=4"/></br>[fmrtn](https://github.com/fmrtn) | <img width="50" src="https://avatars.githubusercontent.com/u/4374338?v=4"/></br>[potatogim](https://github.com/potatogim) | <img width="50" src="https://avatars.githubusercontent.com/u/6979755?v=4"/></br>[devonzuegel](https://github.com/devonzuegel) | <img width="50" src="https://avatars.githubusercontent.com/u/26695184?v=4"/></br>[anjulalk](https://github.com/anjulalk) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/16101778?v=4"/></br>[gabcoh](https://github.com/gabcoh) | <img width="50" src="https://avatars.githubusercontent.com/u/10927304?v=4"/></br>[matsest](https://github.com/matsest) | <img width="50" src="https://avatars.githubusercontent.com/u/6319051?v=4"/></br>[abonte](https://github.com/abonte) | <img width="50" src="https://avatars.githubusercontent.com/u/1685517?v=4"/></br>[Abijeet](https://github.com/Abijeet) | <img width="50" src="https://avatars.githubusercontent.com/u/27751740?v=4"/></br>[ishantgupta777](https://github.com/ishantgupta777) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/24863925?v=4"/></br>[JackGruber](https://github.com/JackGruber) | <img width="50" src="https://avatars.githubusercontent.com/u/2063957?v=4"/></br>[Ardakilic](https://github.com/Ardakilic) | <img width="50" src="https://avatars.githubusercontent.com/u/44024553?v=4"/></br>[rabeehrz](https://github.com/rabeehrz) | <img width="50" src="https://avatars.githubusercontent.com/u/35633575?v=4"/></br>[coderrsid](https://github.com/coderrsid) | <img width="50" src="https://avatars.githubusercontent.com/u/208212?v=4"/></br>[foxmask](https://github.com/foxmask) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/6557454?v=4"/></br>[innocuo](https://github.com/innocuo) | <img width="50" src="https://avatars.githubusercontent.com/u/54268438?v=4"/></br>[Rahulm2310](https://github.com/Rahulm2310) | <img width="50" src="https://avatars.githubusercontent.com/u/1904967?v=4"/></br>[readingsnail](https://github.com/readingsnail) | <img width="50" src="https://avatars.githubusercontent.com/u/7415668?v=4"/></br>[mablin7](https://github.com/mablin7) | <img width="50" src="https://avatars.githubusercontent.com/u/3985557?v=4"/></br>[XarisA](https://github.com/XarisA) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/49979415?v=4"/></br>[jonath92](https://github.com/jonath92) | <img width="50" src="https://avatars.githubusercontent.com/u/4237724?v=4"/></br>[alexdevero](https://github.com/alexdevero) | <img width="50" src="https://avatars.githubusercontent.com/u/35904727?v=4"/></br>[Runo-saduwa](https://github.com/Runo-saduwa) | <img width="50" src="https://avatars.githubusercontent.com/u/5365582?v=4"/></br>[marcosvega91](https://github.com/marcosvega91) | <img width="50" src="https://avatars.githubusercontent.com/u/37639389?v=4"/></br>[petrz12](https://github.com/petrz12) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/51550769?v=4"/></br>[rnbastos](https://github.com/rnbastos) | <img width="50" src="https://avatars.githubusercontent.com/u/32396?v=4"/></br>[ProgramFan](https://github.com/ProgramFan) | <img width="50" src="https://avatars.githubusercontent.com/u/4245227?v=4"/></br>[zblesk](https://github.com/zblesk) | <img width="50" src="https://avatars.githubusercontent.com/u/5730052?v=4"/></br>[vsimkus](https://github.com/vsimkus) | <img width="50" src="https://avatars.githubusercontent.com/u/3194829?v=4"/></br>[moltenform](https://github.com/moltenform) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/36989112?v=4"/></br>[nishantwrp](https://github.com/nishantwrp) | <img width="50" src="https://avatars.githubusercontent.com/u/5199995?v=4"/></br>[zuphilip](https://github.com/zuphilip) | <img width="50" src="https://avatars.githubusercontent.com/u/54576074?v=4"/></br>[Rishabh-malhotraa](https://github.com/Rishabh-malhotraa) | <img width="50" src="https://avatars.githubusercontent.com/u/559346?v=4"/></br>[metbril](https://github.com/metbril) | <img width="50" src="https://avatars.githubusercontent.com/u/47623588?v=4"/></br>[WhiredPlanck](https://github.com/WhiredPlanck) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/43657314?v=4"/></br>[milotype](https://github.com/milotype) | <img width="50" src="https://avatars.githubusercontent.com/u/32196447?v=4"/></br>[yaozeye](https://github.com/yaozeye) | <img width="50" src="https://avatars.githubusercontent.com/u/12264626?v=4"/></br>[ylc395](https://github.com/ylc395) | <img width="50" src="https://avatars.githubusercontent.com/u/17768566?v=4"/></br>[RenatoXSR](https://github.com/RenatoXSR) | <img width="50" src="https://avatars.githubusercontent.com/u/54888685?v=4"/></br>[RedDocMD](https://github.com/RedDocMD) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/31567272?v=4"/></br>[q1011](https://github.com/q1011) | <img width="50" src="https://avatars.githubusercontent.com/u/12906090?v=4"/></br>[amitsin6h](https://github.com/amitsin6h) | <img width="50" src="https://avatars.githubusercontent.com/u/628474?v=4"/></br>[Atalanttore](https://github.com/Atalanttore) | <img width="50" src="https://avatars.githubusercontent.com/u/42747216?v=4"/></br>[Mannivu](https://github.com/Mannivu) | <img width="50" src="https://avatars.githubusercontent.com/u/23281486?v=4"/></br>[martonpaulo](https://github.com/martonpaulo) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/390889?v=4"/></br>[mmahmoudian](https://github.com/mmahmoudian) | <img width="50" src="https://avatars.githubusercontent.com/u/4497566?v=4"/></br>[rccavalcanti](https://github.com/rccavalcanti) | <img width="50" src="https://avatars.githubusercontent.com/u/1540054?v=4"/></br>[ShaneKilkelly](https://github.com/ShaneKilkelly) | <img width="50" src="https://avatars.githubusercontent.com/u/7091080?v=4"/></br>[sinkuu](https://github.com/sinkuu) | <img width="50" src="https://avatars.githubusercontent.com/u/6734573?v=4"/></br>[stweil](https://github.com/stweil) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/692072?v=4"/></br>[conyx](https://github.com/conyx) | <img width="50" src="https://avatars.githubusercontent.com/u/49116134?v=4"/></br>[anihm136](https://github.com/anihm136) | <img width="50" src="https://avatars.githubusercontent.com/u/937861?v=4"/></br>[archont00](https://github.com/archont00) | <img width="50" src="https://avatars.githubusercontent.com/u/32770029?v=4"/></br>[bradmcl](https://github.com/bradmcl) | <img width="50" src="https://avatars.githubusercontent.com/u/22592201?v=4"/></br>[tfinnberg](https://github.com/tfinnberg) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/8716226?v=4"/></br>[amandamcg](https://github.com/amandamcg) | <img width="50" src="https://avatars.githubusercontent.com/u/3870964?v=4"/></br>[marcushill](https://github.com/marcushill) | <img width="50" src="https://avatars.githubusercontent.com/u/102242?v=4"/></br>[nathanleiby](https://github.com/nathanleiby) | <img width="50" src="https://avatars.githubusercontent.com/u/226708?v=4"/></br>[RaphaelKimmig](https://github.com/RaphaelKimmig) | <img width="50" src="https://avatars.githubusercontent.com/u/20461071?v=4"/></br>[Vaso3](https://github.com/Vaso3) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/36303913?v=4"/></br>[sensor-freak](https://github.com/sensor-freak) | <img width="50" src="https://avatars.githubusercontent.com/u/63918341?v=4"/></br>[lkiThakur](https://github.com/lkiThakur) | <img width="50" src="https://avatars.githubusercontent.com/u/28987176?v=4"/></br>[infinity052](https://github.com/infinity052) | <img width="50" src="https://avatars.githubusercontent.com/u/21161146?v=4"/></br>[BartBucknill](https://github.com/BartBucknill) | <img width="50" src="https://avatars.githubusercontent.com/u/2494769?v=4"/></br>[mrwulf](https://github.com/mrwulf) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/560571?v=4"/></br>[chrisb86](https://github.com/chrisb86) | <img width="50" src="https://avatars.githubusercontent.com/u/1686759?v=4"/></br>[chrmoritz](https://github.com/chrmoritz) | <img width="50" src="https://avatars.githubusercontent.com/u/58074586?v=4"/></br>[Daeraxa](https://github.com/Daeraxa) | <img width="50" src="https://avatars.githubusercontent.com/u/71190696?v=4"/></br>[Elaborendum](https://github.com/Elaborendum) | <img width="50" src="https://avatars.githubusercontent.com/u/5001259?v=4"/></br>[ethan42411](https://github.com/ethan42411) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/2733783?v=4"/></br>[JOJ0](https://github.com/JOJ0) | <img width="50" src="https://avatars.githubusercontent.com/u/17108695?v=4"/></br>[jalajcodes](https://github.com/jalajcodes) | <img width="50" src="https://avatars.githubusercontent.com/u/238088?v=4"/></br>[jblunck](https://github.com/jblunck) | <img width="50" src="https://avatars.githubusercontent.com/u/3140223?v=4"/></br>[jdrobertso](https://github.com/jdrobertso) | <img width="50" src="https://avatars.githubusercontent.com/u/37297218?v=4"/></br>[Jesssullivan](https://github.com/Jesssullivan) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/339645?v=4"/></br>[jmontane](https://github.com/jmontane) | <img width="50" src="https://avatars.githubusercontent.com/u/69011?v=4"/></br>[johanhammar](https://github.com/johanhammar) | <img width="50" src="https://avatars.githubusercontent.com/u/4168339?v=4"/></br>[solariz](https://github.com/solariz) | <img width="50" src="https://avatars.githubusercontent.com/u/25288?v=4"/></br>[maicki](https://github.com/maicki) | <img width="50" src="https://avatars.githubusercontent.com/u/2136373?v=4"/></br>[mjjzf](https://github.com/mjjzf) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/27608187?v=4"/></br>[rt-oliveira](https://github.com/rt-oliveira) | <img width="50" src="https://avatars.githubusercontent.com/u/2486806?v=4"/></br>[sebastienjust](https://github.com/sebastienjust) | <img width="50" src="https://avatars.githubusercontent.com/u/28362310?v=4"/></br>[sealch](https://github.com/sealch) | <img width="50" src="https://avatars.githubusercontent.com/u/34258070?v=4"/></br>[StarFang208](https://github.com/StarFang208) | <img width="50" src="https://avatars.githubusercontent.com/u/59690052?v=4"/></br>[Subhra264](https://github.com/Subhra264) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/1782292?v=4"/></br>[SubodhDahal](https://github.com/SubodhDahal) | <img width="50" src="https://avatars.githubusercontent.com/u/5912371?v=4"/></br>[TobiasDev](https://github.com/TobiasDev) | <img width="50" src="https://avatars.githubusercontent.com/u/13502069?v=4"/></br>[Whaell](https://github.com/Whaell) | <img width="50" src="https://avatars.githubusercontent.com/u/29891001?v=4"/></br>[jyuvaraj03](https://github.com/jyuvaraj03) | <img width="50" src="https://avatars.githubusercontent.com/u/15380913?v=4"/></br>[kowalskidev](https://github.com/kowalskidev) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/337455?v=4"/></br>[alexchee](https://github.com/alexchee) | <img width="50" src="https://avatars.githubusercontent.com/u/5077221?v=4"/></br>[axq](https://github.com/axq) | <img width="50" src="https://avatars.githubusercontent.com/u/8808502?v=4"/></br>[barbowza](https://github.com/barbowza) | <img width="50" src="https://avatars.githubusercontent.com/u/42007357?v=4"/></br>[eresytter](https://github.com/eresytter) | <img width="50" src="https://avatars.githubusercontent.com/u/4316805?v=4"/></br>[lightray22](https://github.com/lightray22) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/11711053?v=4"/></br>[lscolombo](https://github.com/lscolombo) | <img width="50" src="https://avatars.githubusercontent.com/u/36228623?v=4"/></br>[mrkaato](https://github.com/mrkaato) | <img width="50" src="https://avatars.githubusercontent.com/u/17399340?v=4"/></br>[pf-siedler](https://github.com/pf-siedler) | <img width="50" src="https://avatars.githubusercontent.com/u/17232523?v=4"/></br>[ruuti](https://github.com/ruuti) | <img width="50" src="https://avatars.githubusercontent.com/u/23638148?v=4"/></br>[s1nceri7y](https://github.com/s1nceri7y) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/10117386?v=4"/></br>[kornava](https://github.com/kornava) | <img width="50" src="https://avatars.githubusercontent.com/u/7471938?v=4"/></br>[ShuiHuo](https://github.com/ShuiHuo) | <img width="50" src="https://avatars.githubusercontent.com/u/11596277?v=4"/></br>[ikunya](https://github.com/ikunya) | <img width="50" src="https://avatars.githubusercontent.com/u/8184424?v=4"/></br>[Ahmad45123](https://github.com/Ahmad45123) | <img width="50" src="https://avatars.githubusercontent.com/u/59133880?v=4"/></br>[bedwardly-down](https://github.com/bedwardly-down) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/50335724?v=4"/></br>[dcaveiro](https://github.com/dcaveiro) | <img width="50" src="https://avatars.githubusercontent.com/u/47456195?v=4"/></br>[hexclover](https://github.com/hexclover) | <img width="50" src="https://avatars.githubusercontent.com/u/45535789?v=4"/></br>[2jaeyeol](https://github.com/2jaeyeol) | <img width="50" src="https://avatars.githubusercontent.com/u/25622825?v=4"/></br>[thackeraaron](https://github.com/thackeraaron) | <img width="50" src="https://avatars.githubusercontent.com/u/15862474?v=4"/></br>[aaronxn](https://github.com/aaronxn) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/40672207?v=4"/></br>[xUser5000](https://github.com/xUser5000) | <img width="50" src="https://avatars.githubusercontent.com/u/56785486?v=4"/></br>[iamabhi222](https://github.com/iamabhi222) | <img width="50" src="https://avatars.githubusercontent.com/u/63443657?v=4"/></br>[Aksh-Konda](https://github.com/Aksh-Konda) | <img width="50" src="https://avatars.githubusercontent.com/u/3660978?v=4"/></br>[alanfortlink](https://github.com/alanfortlink) | <img width="50" src="https://avatars.githubusercontent.com/u/53372753?v=4"/></br>[AverageUser2](https://github.com/AverageUser2) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/4056990?v=4"/></br>[afischer211](https://github.com/afischer211) | <img width="50" src="https://avatars.githubusercontent.com/u/26230870?v=4"/></br>[a13xk](https://github.com/a13xk) | <img width="50" src="https://avatars.githubusercontent.com/u/14836659?v=4"/></br>[apankratov](https://github.com/apankratov) | <img width="50" src="https://avatars.githubusercontent.com/u/7045739?v=4"/></br>[teterkin](https://github.com/teterkin) | <img width="50" src="https://avatars.githubusercontent.com/u/215668?v=4"/></br>[avanderberg](https://github.com/avanderberg) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/41290751?v=4"/></br>[serenitatis](https://github.com/serenitatis) | <img width="50" src="https://avatars.githubusercontent.com/u/4408379?v=4"/></br>[lex111](https://github.com/lex111) | <img width="50" src="https://avatars.githubusercontent.com/u/60134194?v=4"/></br>[Alkindi42](https://github.com/Alkindi42) | <img width="50" src="https://avatars.githubusercontent.com/u/7129815?v=4"/></br>[Jumanjii](https://github.com/Jumanjii) | <img width="50" src="https://avatars.githubusercontent.com/u/19962243?v=4"/></br>[AlphaJack](https://github.com/AlphaJack) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/65647302?v=4"/></br>[Lord-Aman](https://github.com/Lord-Aman) | <img width="50" src="https://avatars.githubusercontent.com/u/14096959?v=4"/></br>[richtwin567](https://github.com/richtwin567) | <img width="50" src="https://avatars.githubusercontent.com/u/487182?v=4"/></br>[ajilderda](https://github.com/ajilderda) | <img width="50" src="https://avatars.githubusercontent.com/u/922429?v=4"/></br>[adrynov](https://github.com/adrynov) | <img width="50" src="https://avatars.githubusercontent.com/u/94937?v=4"/></br>[andrewperry](https://github.com/andrewperry) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/5417051?v=4"/></br>[tekdel](https://github.com/tekdel) | <img width="50" src="https://avatars.githubusercontent.com/u/54475686?v=4"/></br>[anshuman9999](https://github.com/anshuman9999) | <img width="50" src="https://avatars.githubusercontent.com/u/25694659?v=4"/></br>[rasklaad](https://github.com/rasklaad) | <img width="50" src="https://avatars.githubusercontent.com/u/17809291?v=4"/></br>[Technik-J](https://github.com/Technik-J) | <img width="50" src="https://avatars.githubusercontent.com/u/498326?v=4"/></br>[Shaxine](https://github.com/Shaxine) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/9095073?v=4"/></br>[antonio-ramadas](https://github.com/antonio-ramadas) | <img width="50" src="https://avatars.githubusercontent.com/u/28067395?v=4"/></br>[heyapoorva](https://github.com/heyapoorva) | <img width="50" src="https://avatars.githubusercontent.com/u/201215?v=4"/></br>[assimd](https://github.com/assimd) | <img width="50" src="https://avatars.githubusercontent.com/u/26827848?v=4"/></br>[Atrate](https://github.com/Atrate) | <img width="50" src="https://avatars.githubusercontent.com/u/60288895?v=4"/></br>[Beowulf2](https://github.com/Beowulf2) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/7034200?v=4"/></br>[bimlas](https://github.com/bimlas) | <img width="50" src="https://avatars.githubusercontent.com/u/47641641?v=4"/></br>[brenobaptista](https://github.com/brenobaptista) | <img width="50" src="https://avatars.githubusercontent.com/u/60824?v=4"/></br>[brttbndr](https://github.com/brttbndr) | <img width="50" src="https://avatars.githubusercontent.com/u/16287077?v=4"/></br>[carlbordum](https://github.com/carlbordum) | <img width="50" src="https://avatars.githubusercontent.com/u/20382?v=4"/></br>[carlosedp](https://github.com/carlosedp) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/105843?v=4"/></br>[chaifeng](https://github.com/chaifeng) | <img width="50" src="https://avatars.githubusercontent.com/u/549349?v=4"/></br>[charles-e](https://github.com/charles-e) | <img width="50" src="https://avatars.githubusercontent.com/u/19870089?v=4"/></br>[cyy5358](https://github.com/cyy5358) | <img width="50" src="https://avatars.githubusercontent.com/u/32337926?v=4"/></br>[Chillu1](https://github.com/Chillu1) | <img width="50" src="https://avatars.githubusercontent.com/u/2348463?v=4"/></br>[Techwolf12](https://github.com/Techwolf12) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/2282880?v=4"/></br>[cloudtrends](https://github.com/cloudtrends) | <img width="50" src="https://avatars.githubusercontent.com/u/17257053?v=4"/></br>[idcristi](https://github.com/idcristi) | <img width="50" src="https://avatars.githubusercontent.com/u/15956322?v=4"/></br>[damienmascre](https://github.com/damienmascre) | <img width="50" src="https://avatars.githubusercontent.com/u/1044056?v=4"/></br>[daniellandau](https://github.com/daniellandau) | <img width="50" src="https://avatars.githubusercontent.com/u/12847693?v=4"/></br>[danil-tolkachev](https://github.com/danil-tolkachev) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/7279100?v=4"/></br>[darshani28](https://github.com/darshani28) | <img width="50" src="https://avatars.githubusercontent.com/u/26189247?v=4"/></br>[daukadolt](https://github.com/daukadolt) | <img width="50" src="https://avatars.githubusercontent.com/u/28535750?v=4"/></br>[NeverMendel](https://github.com/NeverMendel) | <img width="50" src="https://avatars.githubusercontent.com/u/26790323?v=4"/></br>[dervist](https://github.com/dervist) | <img width="50" src="https://avatars.githubusercontent.com/u/11378282?v=4"/></br>[diego-betto](https://github.com/diego-betto) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/215270?v=4"/></br>[erdody](https://github.com/erdody) | <img width="50" src="https://avatars.githubusercontent.com/u/10371667?v=4"/></br>[domgoodwin](https://github.com/domgoodwin) | <img width="50" src="https://avatars.githubusercontent.com/u/72066?v=4"/></br>[b4mboo](https://github.com/b4mboo) | <img width="50" src="https://avatars.githubusercontent.com/u/5131923?v=4"/></br>[donbowman](https://github.com/donbowman) | <img width="50" src="https://avatars.githubusercontent.com/u/579727?v=4"/></br>[sirnacnud](https://github.com/sirnacnud) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/47756?v=4"/></br>[dflock](https://github.com/dflock) | <img width="50" src="https://avatars.githubusercontent.com/u/7990534?v=4"/></br>[drobilica](https://github.com/drobilica) | <img width="50" src="https://avatars.githubusercontent.com/u/21699905?v=4"/></br>[educbraga](https://github.com/educbraga) | <img width="50" src="https://avatars.githubusercontent.com/u/67867099?v=4"/></br>[eduardokimmel](https://github.com/eduardokimmel) | <img width="50" src="https://avatars.githubusercontent.com/u/30393516?v=4"/></br>[VodeniZeko](https://github.com/VodeniZeko) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/17415256?v=4"/></br>[ei-ke](https://github.com/ei-ke) | <img width="50" src="https://avatars.githubusercontent.com/u/1962738?v=4"/></br>[einverne](https://github.com/einverne) | <img width="50" src="https://avatars.githubusercontent.com/u/16492558?v=4"/></br>[eodeluga](https://github.com/eodeluga) | <img width="50" src="https://avatars.githubusercontent.com/u/16875937?v=4"/></br>[fathyar](https://github.com/fathyar) | <img width="50" src="https://avatars.githubusercontent.com/u/3057302?v=4"/></br>[fer22f](https://github.com/fer22f) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/43272148?v=4"/></br>[fpindado](https://github.com/fpindado) | <img width="50" src="https://avatars.githubusercontent.com/u/1714374?v=4"/></br>[FleischKarussel](https://github.com/FleischKarussel) | <img width="50" src="https://avatars.githubusercontent.com/u/18525376?v=4"/></br>[talkdirty](https://github.com/talkdirty) | <img width="50" src="https://avatars.githubusercontent.com/u/19814827?v=4"/></br>[gmaubach](https://github.com/gmaubach) | <img width="50" src="https://avatars.githubusercontent.com/u/6190183?v=4"/></br>[gmag11](https://github.com/gmag11) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/6209647?v=4"/></br>[Jackymancs4](https://github.com/Jackymancs4) | <img width="50" src="https://avatars.githubusercontent.com/u/297578?v=4"/></br>[Glandos](https://github.com/Glandos) | <img width="50" src="https://avatars.githubusercontent.com/u/24235344?v=4"/></br>[vibraniumdev](https://github.com/vibraniumdev) | <img width="50" src="https://avatars.githubusercontent.com/u/2257024?v=4"/></br>[gusbemacbe](https://github.com/gusbemacbe) | <img width="50" src="https://avatars.githubusercontent.com/u/64917442?v=4"/></br>[HOLLYwyh](https://github.com/HOLLYwyh) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/18524580?v=4"/></br>[Fvbor](https://github.com/Fvbor) | <img width="50" src="https://avatars.githubusercontent.com/u/22606250?v=4"/></br>[bennetthanna](https://github.com/bennetthanna) | <img width="50" src="https://avatars.githubusercontent.com/u/67231570?v=4"/></br>[harshitkathuria](https://github.com/harshitkathuria) | <img width="50" src="https://avatars.githubusercontent.com/u/1716229?v=4"/></br>[Vistaus](https://github.com/Vistaus) | <img width="50" src="https://avatars.githubusercontent.com/u/6509881?v=4"/></br>[ianjs](https://github.com/ianjs) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/19862172?v=4"/></br>[iahmedbacha](https://github.com/iahmedbacha) | <img width="50" src="https://avatars.githubusercontent.com/u/1533624?v=4"/></br>[IrvinDominin](https://github.com/IrvinDominin) | <img width="50" src="https://avatars.githubusercontent.com/u/33200024?v=4"/></br>[ishammahajan](https://github.com/ishammahajan) | <img width="50" src="https://avatars.githubusercontent.com/u/6916297?v=4"/></br>[ffadilaputra](https://github.com/ffadilaputra) | <img width="50" src="https://avatars.githubusercontent.com/u/19985741?v=4"/></br>[JRaiden16](https://github.com/JRaiden16) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/11466782?v=4"/></br>[jacobherrington](https://github.com/jacobherrington) | <img width="50" src="https://avatars.githubusercontent.com/u/9365179?v=4"/></br>[jamesadjinwa](https://github.com/jamesadjinwa) | <img width="50" src="https://avatars.githubusercontent.com/u/20801821?v=4"/></br>[jrwrigh](https://github.com/jrwrigh) | <img width="50" src="https://avatars.githubusercontent.com/u/4995433?v=4"/></br>[jaredcrowe](https://github.com/jaredcrowe) | <img width="50" src="https://avatars.githubusercontent.com/u/4087105?v=4"/></br>[volatilevar](https://github.com/volatilevar) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/47724360?v=4"/></br>[innkuika](https://github.com/innkuika) | <img width="50" src="https://avatars.githubusercontent.com/u/163555?v=4"/></br>[JoelRSimpson](https://github.com/JoelRSimpson) | <img width="50" src="https://avatars.githubusercontent.com/u/6965062?v=4"/></br>[joeltaylor](https://github.com/joeltaylor) | <img width="50" src="https://avatars.githubusercontent.com/u/242107?v=4"/></br>[exic](https://github.com/exic) | <img width="50" src="https://avatars.githubusercontent.com/u/13716151?v=4"/></br>[JonathanPlasse](https://github.com/JonathanPlasse) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/1248504?v=4"/></br>[joesfer](https://github.com/joesfer) | <img width="50" src="https://avatars.githubusercontent.com/u/6048003?v=4"/></br>[joybinchen](https://github.com/joybinchen) | <img width="50" src="https://avatars.githubusercontent.com/u/37601331?v=4"/></br>[kaustubhsh](https://github.com/kaustubhsh) | <img width="50" src="https://avatars.githubusercontent.com/u/1560189?v=4"/></br>[y-usuzumi](https://github.com/y-usuzumi) | <img width="50" src="https://avatars.githubusercontent.com/u/1660460?v=4"/></br>[xuhcc](https://github.com/xuhcc) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/16933735?v=4"/></br>[kirtanprht](https://github.com/kirtanprht) | <img width="50" src="https://avatars.githubusercontent.com/u/37491732?v=4"/></br>[k0ur0x](https://github.com/k0ur0x) | <img width="50" src="https://avatars.githubusercontent.com/u/7824233?v=4"/></br>[kklas](https://github.com/kklas) | <img width="50" src="https://avatars.githubusercontent.com/u/8622992?v=4"/></br>[xmlangel](https://github.com/xmlangel) | <img width="50" src="https://avatars.githubusercontent.com/u/1055100?v=4"/></br>[troilus](https://github.com/troilus) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/2599210?v=4"/></br>[lboullo0](https://github.com/lboullo0) | <img width="50" src="https://avatars.githubusercontent.com/u/1562062?v=4"/></br>[dbinary](https://github.com/dbinary) | <img width="50" src="https://avatars.githubusercontent.com/u/15436007?v=4"/></br>[marc-bouvier](https://github.com/marc-bouvier) | <img width="50" src="https://avatars.githubusercontent.com/u/5699725?v=4"/></br>[mvonmaltitz](https://github.com/mvonmaltitz) | <img width="50" src="https://avatars.githubusercontent.com/u/11036464?v=4"/></br>[mlkood](https://github.com/mlkood) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/2480960?v=4"/></br>[plextoriano](https://github.com/plextoriano) | <img width="50" src="https://avatars.githubusercontent.com/u/5788516?v=4"/></br>[Marmo](https://github.com/Marmo) | <img width="50" src="https://avatars.githubusercontent.com/u/29300939?v=4"/></br>[mcejp](https://github.com/mcejp) | <img width="50" src="https://avatars.githubusercontent.com/u/640949?v=4"/></br>[freaktechnik](https://github.com/freaktechnik) | <img width="50" src="https://avatars.githubusercontent.com/u/79802125?v=4"/></br>[martinkorelic](https://github.com/martinkorelic) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/287105?v=4"/></br>[Petemir](https://github.com/Petemir) | <img width="50" src="https://avatars.githubusercontent.com/u/5218859?v=4"/></br>[matsair](https://github.com/matsair) | <img width="50" src="https://avatars.githubusercontent.com/u/12831489?v=4"/></br>[mgroth0](https://github.com/mgroth0) | <img width="50" src="https://avatars.githubusercontent.com/u/21796?v=4"/></br>[silentmatt](https://github.com/silentmatt) | <img width="50" src="https://avatars.githubusercontent.com/u/76700192?v=4"/></br>[maxs-test](https://github.com/maxs-test) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/59669349?v=4"/></br>[MichBoi](https://github.com/MichBoi) | <img width="50" src="https://avatars.githubusercontent.com/u/51273874?v=4"/></br>[MichipX](https://github.com/MichipX) | <img width="50" src="https://avatars.githubusercontent.com/u/53177864?v=4"/></br>[MrTraduttore](https://github.com/MrTraduttore) | <img width="50" src="https://avatars.githubusercontent.com/u/48156230?v=4"/></br>[sanjarcode](https://github.com/sanjarcode) | <img width="50" src="https://avatars.githubusercontent.com/u/43955099?v=4"/></br>[Mustafa-ALD](https://github.com/Mustafa-ALD) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/9076687?v=4"/></br>[NJannasch](https://github.com/NJannasch) | <img width="50" src="https://avatars.githubusercontent.com/u/8016073?v=4"/></br>[zomglings](https://github.com/zomglings) | <img width="50" src="https://avatars.githubusercontent.com/u/10386884?v=4"/></br>[Frichetten](https://github.com/Frichetten) | <img width="50" src="https://avatars.githubusercontent.com/u/5541611?v=4"/></br>[nicolas-suzuki](https://github.com/nicolas-suzuki) | <img width="50" src="https://avatars.githubusercontent.com/u/12369770?v=4"/></br>[Ouvill](https://github.com/Ouvill) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/43815417?v=4"/></br>[shorty2380](https://github.com/shorty2380) | <img width="50" src="https://avatars.githubusercontent.com/u/15014287?v=4"/></br>[dist3r](https://github.com/dist3r) | <img width="50" src="https://avatars.githubusercontent.com/u/19418601?v=4"/></br>[rakleed](https://github.com/rakleed) | <img width="50" src="https://avatars.githubusercontent.com/u/7881932?v=4"/></br>[idle-code](https://github.com/idle-code) | <img width="50" src="https://avatars.githubusercontent.com/u/168931?v=4"/></br>[bobchao](https://github.com/bobchao) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/6306608?v=4"/></br>[Diadlo](https://github.com/Diadlo) | <img width="50" src="https://avatars.githubusercontent.com/u/42793024?v=4"/></br>[pranavmodx](https://github.com/pranavmodx) | <img width="50" src="https://avatars.githubusercontent.com/u/50834839?v=4"/></br>[R3dError](https://github.com/R3dError) | <img width="50" src="https://avatars.githubusercontent.com/u/42652941?v=4"/></br>[rajprakash00](https://github.com/rajprakash00) | <img width="50" src="https://avatars.githubusercontent.com/u/32304956?v=4"/></br>[rahil1304](https://github.com/rahil1304) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/8257474?v=4"/></br>[rasulkireev](https://github.com/rasulkireev) | <img width="50" src="https://avatars.githubusercontent.com/u/17312341?v=4"/></br>[reinhart1010](https://github.com/reinhart1010) | <img width="50" src="https://avatars.githubusercontent.com/u/60484714?v=4"/></br>[Retew](https://github.com/Retew) | <img width="50" src="https://avatars.githubusercontent.com/u/10456131?v=4"/></br>[ambrt](https://github.com/ambrt) | <img width="50" src="https://avatars.githubusercontent.com/u/15892014?v=4"/></br>[Derkades](https://github.com/Derkades) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/49439044?v=4"/></br>[fourstepper](https://github.com/fourstepper) | <img width="50" src="https://avatars.githubusercontent.com/u/54365?v=4"/></br>[rodgco](https://github.com/rodgco) | <img width="50" src="https://avatars.githubusercontent.com/u/96014?v=4"/></br>[Ronnie76er](https://github.com/Ronnie76er) | <img width="50" src="https://avatars.githubusercontent.com/u/79168?v=4"/></br>[roryokane](https://github.com/roryokane) | <img width="50" src="https://avatars.githubusercontent.com/u/744655?v=4"/></br>[ruzaq](https://github.com/ruzaq) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/20490839?v=4"/></br>[szokesandor](https://github.com/szokesandor) | <img width="50" src="https://avatars.githubusercontent.com/u/19328605?v=4"/></br>[SamuelBlickle](https://github.com/SamuelBlickle) | <img width="50" src="https://avatars.githubusercontent.com/u/80849457?v=4"/></br>[livingc0l0ur](https://github.com/livingc0l0ur) | <img width="50" src="https://avatars.githubusercontent.com/u/1776?v=4"/></br>[bronson](https://github.com/bronson) | <img width="50" src="https://avatars.githubusercontent.com/u/24606935?v=4"/></br>[semperor](https://github.com/semperor) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/607938?v=4"/></br>[shawnaxsom](https://github.com/shawnaxsom) | <img width="50" src="https://avatars.githubusercontent.com/u/9937486?v=4"/></br>[SFoskitt](https://github.com/SFoskitt) | <img width="50" src="https://avatars.githubusercontent.com/u/505011?v=4"/></br>[kcrt](https://github.com/kcrt) | <img width="50" src="https://avatars.githubusercontent.com/u/538584?v=4"/></br>[xissy](https://github.com/xissy) | <img width="50" src="https://avatars.githubusercontent.com/u/164962?v=4"/></br>[tams](https://github.com/tams) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/466122?v=4"/></br>[Tekki](https://github.com/Tekki) | <img width="50" src="https://avatars.githubusercontent.com/u/2112477?v=4"/></br>[ThatcherC](https://github.com/ThatcherC) | <img width="50" src="https://avatars.githubusercontent.com/u/21969426?v=4"/></br>[TheoDutch](https://github.com/TheoDutch) | <img width="50" src="https://avatars.githubusercontent.com/u/8731922?v=4"/></br>[tbroadley](https://github.com/tbroadley) | <img width="50" src="https://avatars.githubusercontent.com/u/114300?v=4"/></br>[Kriechi](https://github.com/Kriechi) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/3457339?v=4"/></br>[tkilaker](https://github.com/tkilaker) | <img width="50" src="https://avatars.githubusercontent.com/u/802148?v=4"/></br>[Tim-Erwin](https://github.com/Tim-Erwin) | <img width="50" src="https://avatars.githubusercontent.com/u/4201229?v=4"/></br>[tcyrus](https://github.com/tcyrus) | <img width="50" src="https://avatars.githubusercontent.com/u/834914?v=4"/></br>[tobias-grasse](https://github.com/tobias-grasse) | <img width="50" src="https://avatars.githubusercontent.com/u/6691273?v=4"/></br>[strobeltobias](https://github.com/strobeltobias) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/1677578?v=4"/></br>[kostegit](https://github.com/kostegit) | <img width="50" src="https://avatars.githubusercontent.com/u/70296?v=4"/></br>[tbergeron](https://github.com/tbergeron) | <img width="50" src="https://avatars.githubusercontent.com/u/10265443?v=4"/></br>[Ullas-Aithal](https://github.com/Ullas-Aithal) | <img width="50" src="https://avatars.githubusercontent.com/u/6104498?v=4"/></br>[MyTheValentinus](https://github.com/MyTheValentinus) | <img width="50" src="https://avatars.githubusercontent.com/u/2830093?v=4"/></br>[vassudanagunta](https://github.com/vassudanagunta) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/54314949?v=4"/></br>[vijayjoshi16](https://github.com/vijayjoshi16) | <img width="50" src="https://avatars.githubusercontent.com/u/59287619?v=4"/></br>[max-keviv](https://github.com/max-keviv) | <img width="50" src="https://avatars.githubusercontent.com/u/598576?v=4"/></br>[vandreykiv](https://github.com/vandreykiv) | <img width="50" src="https://avatars.githubusercontent.com/u/26511487?v=4"/></br>[WisdomCode](https://github.com/WisdomCode) | <img width="50" src="https://avatars.githubusercontent.com/u/1921957?v=4"/></br>[xsak](https://github.com/xsak) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/11031696?v=4"/></br>[ymitsos](https://github.com/ymitsos) | <img width="50" src="https://avatars.githubusercontent.com/u/63324960?v=4"/></br>[abolishallprivateproperty](https://github.com/abolishallprivateproperty) | <img width="50" src="https://avatars.githubusercontent.com/u/11336076?v=4"/></br>[aerotog](https://github.com/aerotog) | <img width="50" src="https://avatars.githubusercontent.com/u/39854348?v=4"/></br>[albertopasqualetto](https://github.com/albertopasqualetto) | <img width="50" src="https://avatars.githubusercontent.com/u/44570278?v=4"/></br>[asrient](https://github.com/asrient) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/621360?v=4"/></br>[bestlibre](https://github.com/bestlibre) | <img width="50" src="https://avatars.githubusercontent.com/u/35600612?v=4"/></br>[boring10](https://github.com/boring10) | <img width="50" src="https://avatars.githubusercontent.com/u/13894820?v=4"/></br>[cadolphs](https://github.com/cadolphs) | <img width="50" src="https://avatars.githubusercontent.com/u/12461043?v=4"/></br>[colorchestra](https://github.com/colorchestra) | <img width="50" src="https://avatars.githubusercontent.com/u/30935096?v=4"/></br>[cybertramp](https://github.com/cybertramp) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/15824892?v=4"/></br>[dartero](https://github.com/dartero) | <img width="50" src="https://avatars.githubusercontent.com/u/9694906?v=4"/></br>[delta-emil](https://github.com/delta-emil) | <img width="50" src="https://avatars.githubusercontent.com/u/926263?v=4"/></br>[doc75](https://github.com/doc75) | <img width="50" src="https://avatars.githubusercontent.com/u/5589253?v=4"/></br>[dsp77](https://github.com/dsp77) | <img width="50" src="https://avatars.githubusercontent.com/u/2903013?v=4"/></br>[ebayer](https://github.com/ebayer) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/9206310?v=4"/></br>[elsiehupp](https://github.com/elsiehupp) | <img width="50" src="https://avatars.githubusercontent.com/u/701050?v=4"/></br>[espinosa](https://github.com/espinosa) | <img width="50" src="https://avatars.githubusercontent.com/u/18619090?v=4"/></br>[exponentactivity](https://github.com/exponentactivity) | <img width="50" src="https://avatars.githubusercontent.com/u/16708935?v=4"/></br>[exprez135](https://github.com/exprez135) | <img width="50" src="https://avatars.githubusercontent.com/u/9768112?v=4"/></br>[fab4x](https://github.com/fab4x) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/47755037?v=4"/></br>[fabianski7](https://github.com/fabianski7) | <img width="50" src="https://avatars.githubusercontent.com/u/14201321?v=4"/></br>[rasperepodvipodvert](https://github.com/rasperepodvipodvert) | <img width="50" src="https://avatars.githubusercontent.com/u/748808?v=4"/></br>[gasolin](https://github.com/gasolin) | <img width="50" src="https://avatars.githubusercontent.com/u/47191051?v=4"/></br>[githubaccount073](https://github.com/githubaccount073) | <img width="50" src="https://avatars.githubusercontent.com/u/43672033?v=4"/></br>[hms5232](https://github.com/hms5232) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/11388094?v=4"/></br>[hydrandt](https://github.com/hydrandt) | <img width="50" src="https://avatars.githubusercontent.com/u/61012185?v=4"/></br>[iamtalwinder](https://github.com/iamtalwinder) | <img width="50" src="https://avatars.githubusercontent.com/u/557540?v=4"/></br>[jabdoa2](https://github.com/jabdoa2) | <img width="50" src="https://avatars.githubusercontent.com/u/29166402?v=4"/></br>[jduar](https://github.com/jduar) | <img width="50" src="https://avatars.githubusercontent.com/u/2678545?v=4"/></br>[jibedoubleve](https://github.com/jibedoubleve) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/53862536?v=4"/></br>[johanvanheusden](https://github.com/johanvanheusden) | <img width="50" src="https://avatars.githubusercontent.com/u/38327267?v=4"/></br>[jtagcat](https://github.com/jtagcat) | <img width="50" src="https://avatars.githubusercontent.com/u/61631665?v=4"/></br>[konhi](https://github.com/konhi) | <img width="50" src="https://avatars.githubusercontent.com/u/54991735?v=4"/></br>[krzysiekwie](https://github.com/krzysiekwie) | <img width="50" src="https://avatars.githubusercontent.com/u/12849008?v=4"/></br>[lighthousebulb](https://github.com/lighthousebulb) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/4140247?v=4"/></br>[luzpaz](https://github.com/luzpaz) | <img width="50" src="https://avatars.githubusercontent.com/u/29355048?v=4"/></br>[majsterkovic](https://github.com/majsterkovic) | <img width="50" src="https://avatars.githubusercontent.com/u/77744862?v=4"/></br>[mak2002](https://github.com/mak2002) | <img width="50" src="https://avatars.githubusercontent.com/u/30428258?v=4"/></br>[nmiquan](https://github.com/nmiquan) | <img width="50" src="https://avatars.githubusercontent.com/u/31123054?v=4"/></br>[nullpointer666](https://github.com/nullpointer666) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/2979926?v=4"/></br>[oscaretu](https://github.com/oscaretu) | <img width="50" src="https://avatars.githubusercontent.com/u/36965591?v=4"/></br>[oskarsh](https://github.com/oskarsh) | <img width="50" src="https://avatars.githubusercontent.com/u/52031346?v=4"/></br>[osso73](https://github.com/osso73) | <img width="50" src="https://avatars.githubusercontent.com/u/29743024?v=4"/></br>[over-soul](https://github.com/over-soul) | <img width="50" src="https://avatars.githubusercontent.com/u/42961947?v=4"/></br>[pensierocrea](https://github.com/pensierocrea) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/45542782?v=4"/></br>[pomeloy](https://github.com/pomeloy) | <img width="50" src="https://avatars.githubusercontent.com/u/10206967?v=4"/></br>[rhtenhove](https://github.com/rhtenhove) | <img width="50" src="https://avatars.githubusercontent.com/u/16728217?v=4"/></br>[rikanotank1](https://github.com/rikanotank1) | <img width="50" src="https://avatars.githubusercontent.com/u/24560368?v=4"/></br>[rxliuli](https://github.com/rxliuli) | <img width="50" src="https://avatars.githubusercontent.com/u/14062932?v=4"/></br>[simonsan](https://github.com/simonsan) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/5004545?v=4"/></br>[stellarpower](https://github.com/stellarpower) | <img width="50" src="https://avatars.githubusercontent.com/u/20983267?v=4"/></br>[suixinio](https://github.com/suixinio) | <img width="50" src="https://avatars.githubusercontent.com/u/12995773?v=4"/></br>[sumomo-99](https://github.com/sumomo-99) | <img width="50" src="https://avatars.githubusercontent.com/u/367170?v=4"/></br>[xtatsux](https://github.com/xtatsux) | <img width="50" src="https://avatars.githubusercontent.com/u/6908872?v=4"/></br>[taw00](https://github.com/taw00) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/10956653?v=4"/></br>[tcassaert](https://github.com/tcassaert) | <img width="50" src="https://avatars.githubusercontent.com/u/46327531?v=4"/></br>[victante](https://github.com/victante) | <img width="50" src="https://avatars.githubusercontent.com/u/7252567?v=4"/></br>[Voltinus](https://github.com/Voltinus) | <img width="50" src="https://avatars.githubusercontent.com/u/2216902?v=4"/></br>[xcffl](https://github.com/xcffl) | <img width="50" src="https://avatars.githubusercontent.com/u/46404814?v=4"/></br>[yourcontact](https://github.com/yourcontact) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/37692927?v=4"/></br>[zaoyifan](https://github.com/zaoyifan) | <img width="50" src="https://avatars.githubusercontent.com/u/10813608?v=4"/></br>[zawnk](https://github.com/zawnk) | <img width="50" src="https://avatars.githubusercontent.com/u/55245068?v=4"/></br>[zen-quo](https://github.com/zen-quo) | <img width="50" src="https://avatars.githubusercontent.com/u/23507174?v=4"/></br>[zozolina123](https://github.com/zozolina123) | <img width="50" src="https://avatars.githubusercontent.com/u/25315?v=4"/></br>[xcession](https://github.com/xcession) |
-| <img width="50" src="https://avatars.githubusercontent.com/u/34542665?v=4"/></br>[paventyang](https://github.com/paventyang) | <img width="50" src="https://avatars.githubusercontent.com/u/608014?v=4"/></br>[jackytsu](https://github.com/jackytsu) | <img width="50" src="https://avatars.githubusercontent.com/u/1308646?v=4"/></br>[zhangmx](https://github.com/zhangmx) |  |  |
-<!-- CONTRIBUTORS-TABLE-AUTO-GENERATED -->
+|  |  |  |  |  |
+| --- | --- | --- | --- | --- |
+| laurent22 | tessus | CalebJohn | mic704b | roman-r-m |
+| genneko | j-krl | tanrax | naviji | PackElend |
+| rtmkrlv | fmrtn | potatogim | devonzuegel | anjulalk |
+| gabcoh | matsest | abonte | Abijeet | ishantgupta777 |
+| JackGruber | Ardakilic | rabeerz | coderrsid | foxmask |
+| innocuo | Rahulm2310 | readingsnail | mablin7 | XarisA |
+| jonath92 | alexdevero | Runo-saduwa | marcosvega91 | petrz12 |
+| rnbastos | ProgramFan | zblesk | vsimkus | moltenform |
+| nishantwrp | zuphilip | Rishabh-malhotraa | metbril | WhiredPlanck |
+| milotype | 药 ayer | ylc395 | RenatoXSR | RedDocMD |
+| q1011 | amitsin6h | Atalanttore | Mannivu | martonpaulo |
+| mmahmoudian | rccavalcanti | ShaneKilkelly | sinkuu | stweil |
+| conyx | anihm136 | archont00 | bradmcl | tfinnberg |
+| amandamcg | marcushill | nathanleiby | RaphaelKimmig | Vaso3 |
+| sensor-freak | lkiThakur | infinity052 | BartBucknill | mrwulf |
+| chrisb86 | chrmoritz | Daeraxa | 阐述 | ethan42411 |
+| JOJ0 | jalajcodes | jblunck | jdrobertso | Jesssullivan |
+| jmontane | johanhammar | solariz | maicki | mjjzf |
+| rt-oliveira | sebastienjust | sealch | StarFang208 | Subhra264 |
+| SubodhDahal | TobiasDev | Whaell | jyuvaraj03 | kowalskidev |
+| alexchee | axq | barbowza | eresytter | lightray22 |
+| lscolombo | mrkaato | pf-siedler | ruuti | s1nceri7y |
+| cornava | 浇水 | ikunya | Ahmad45123 | bedwardly-down |
+| dcaveiro | hexclover | 2jaeyeol | thackeraaron | aaronxn |
+| xUser5000 | iamabhi222 | Aksh-Konda | alanfortlink | AverageUser2 |
+| afischer211 | a13xk | apankratov | teterkin | avanderberg |
+| 宁静 | lex111 | Alkindi42 | Jumanjii | AlphaJack |
+| Lord-Aman | richtwin567 | ajilderda | adrynov | andrewperry |
+| tekdel | anshuman9999 | 拉克拉德 | 技术-J | 沙欣 |
+| 安东尼-拉马达斯 | heyapoorva | assimd | Atrate | Beowulf2 |
+| bimlas | brenobaptista | brttbndr | carlbordum | carlosedp |
+| chaifeng | charles-e | cyy5358 | Chillu1 | Techwolf12 |
+| cloudtrends | idcristi | damienmascre | daniellandau | danil-tolkachev |
+| darshani28 | daukadolt | NeverMendel | dervist | diego-betto |
+| erdody | domgoodwin | b4mboo | donbowman | sirnacnud |
+| dflock | drobilica | educbraga | eduardokimmel | VodeniZeko |
+| ei-ke | einverne | eodeluga | fathyar | fer22f |
+| fpindado | FleischKarussel | talkdirty | gmaubach | gmag11 |
+| Jackymancs4 | Glandos | vibraniumdev | gusbemacbe | HOLLYwyh |
+| Fvbor | bennetthanna | harshitkathuria | 视图 | ianjs |
+| iahmedbacha | IrvinDominin | ishammahajan | ffadilaputra | JRaiden16 |
+| jacobherrington | 詹姆斯·阿吉纳 | jrwrigh | 杰拉德·克劳夫 | 易变变量 |
+| innkuika | JoelRSimpson | joeltaylor | exc | JonathanPlasse |
+| joesfer | joybinchen | kaustubhsh | y-usuzumi | xuhcc |
+| kirtanprht | k0ur0x | kklas | xmlangel | troilus |
+| lboullo0 | dbinary | marc-bouvier | mvonmaltitz | mlkood |
+| plextoriano | Marmo | mcejp | freaktechnik | martinkorelic |
+| Petemir | matsair | mgroth0 | silentmatt | maxs-test |
+| MichBoi | MichipX | MrTraduttore | sanjarcode | Mustafa-ALD |
+| NJannasch | zomglings | Frichetten | nicolas-suzuki | Ouvill |
+| shorty2380 | dist3r | rakleed | idle-code | bobchao |
+| Diadlo | pranavmodx | R3dError | rajprakash00 | rahil1304 |
+| rasulkireev | reinhart1010 | 重写 | ambrt | 德卡德斯 |
+| 四步进器 | rodgco | Ronnie76er | roryokane | ruzaq |
+| szokesandor | SamuelBlickle | livingc0l0ur | bronson | semperor |
+| shawnaxsom | SFoskitt | kcrt | xissy | tams |
+| Tekki | ThatcherC | TheoDutch | tbroadley | Kriechi |
+| tkilaker | Tim-Erwin | tcyrus | tobias-grasse | strobeltobias |
+| kostegit | tbergeron | Ullas-Aithal | MyTheValentinus | vassudanagunta |
+| vijayjoshi16 | max-keviv | vandreykiv | WisdomCode | xsak |
+| ymitos | 废除所有私有财产 | aerotog | albertopasqualetto | asrient |
+| bestlibre | 无聊10 | 卡多夫 | colorchestra | 网络流浪者 |
+| dartero | delta-emil | doc75 | dsp77 | ebayer |
+| elsiehupp | espinosa | exponentactivity | exprez135 | fab4x |
+| fabianski7 | rasperepodvipodvert | gasolin | githubaccount073 | hms5232 |
+| hydrandt | iamtalwinder | jabdoa2 | jduar | jibedoubleve |
+| johanvanheusden | jtagcat | konhi | krzysiekwie | 灯塔灯泡 |
+| luzpaz | majsterkovic | mak2002 | nmiquan | nullpointer666 |
+| oscaretu | oskarsh | osso73 | 超灵 | pensierocrea |
+| pomeloy | rhtenhove | rikanotank1 | rxliuli | simonsan |
+| stellarpower | suixinio | sumomo-99 | xtatsux | taw00 |
+| tcassaert | victante | Voltinus | xcffl | yourcontact |
+| zaoyifan | zawnk | zen-quo | zozolina123 | 许可 |
+| paventyang | jackytsu | zhangmx |  |  |

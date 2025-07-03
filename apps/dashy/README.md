@@ -1,32 +1,29 @@
+# Dashy
 
-<h1 align="center">Dashy</h1>
-<p align="center">
-  <i>Dashy helps you organize your self-hosted services by making them accessible from a single place</i>
-   <br/>
-  <img width="120" src="https://i.ibb.co/yhbt6CY/dashy.png" />
-  <br/>
-  <b><a href="https://github.com/Lissy93/dashy/blob/master/docs/showcase.md">User Showcase</a></b> | <b><a href="https://demo.dashy.to">Live Demo</a></b> | <b><a href="https://github.com/Lissy93/dashy/blob/master/docs/quick-start.md">Getting Started</a></b> | <b><a href="https://dashy.to/docs">Documentation</a></b> | <b><a href="https://github.com/Lissy93/dashy">GitHub</a></b>
-</p>
+*Dashy 帮助您通过将自托管服务集中在一个地方来组织它们*
+![](https://i.ibb.co/yhbt6CY/dashy.png)
+**[用户展示](https://github.com/Lissy93/dashy/blob/master/docs/showcase.md)** | **[实时演示](https://demo.dashy.to)** | **[入门指南](https://github.com/Lissy93/dashy/blob/master/docs/quick-start.md)** | **[文档](https://dashy.to/docs)** | **[GitHub](https://github.com/Lissy93/dashy)**
 
-## Features 🌈
-- 📃 Support for multiple pages
-- 🚦 Real-time status monitoring for each of your apps/links
-- 📊 Use widgets to display info and dynamic content from self-hosted services
-- 🔎 Instant search by name, domain, or tags + customizable hotkeys & keyboard shortcuts
-- 🎨 Many built-in color themes, with UI color editor and support for custom CSS
-- 🧸 Many icon options - Font-Awesome, homelab icons, auto-fetching Favicon, images, emojis, etc.
-- 💂 Optional authentication with multi-user access, configurable privileges, and SSO support
-- 🌎 Multi-language support, with 10+ human-translated languages, and more on the way
-- ☁ Optional, encrypted, free off-site cloud backup and restore feature available
-- 💼 A workspace view, for easily switching between multiple apps simultaneously
-- 🛩️ A minimal view, for use as a fast-loading browser Startpage
-- 🖱️ Choose app launch methods: new tab, same tab, clipboard, pop-up modal, or open in workspace view
-- 📏 Customizable layout, sizes, text, component visibility, sort order, behavior, etc.
-- 🖼️ Options for a full-screen background image, custom nav-bar links, HTML footer, title, etc.
-- 🚀 Easy to setup with Docker, or on bare metal, or with 1-Click cloud deployment
-- ⚙️ Easy single-file YAML-based configuration, and option to configure app through the UI
-- ✨ Under active development with improvements and new features added regularly 
-- 🤏 Small bundle size, fully responsive UI, and PWA for basic offline access
-- 🆓 100% free and open-source
-- 🔐 Strong focus on privacy
-- 🌈 And loads more...
+## 功能 🌈
+
+*   📃 支持多页
+*   🚦 对每个应用/链接进行实时状态监控
+*   📊 使用小部件显示来自自托管服务的信息和动态内容
+*   🔎 通过名称、域名或标签进行即时搜索 + 可自定义快捷键和键盘快捷方式
+*   🎨 许多内置颜色主题，包含 UI 颜色编辑器和自定义 CSS 支持
+*   🧸 许多图标选项 - Font-Awesome、homelab 图标、自动获取 Favicon、图片、表情符号等。
+*   💂 可选的认证功能，支持多用户访问、可配置权限和 SSO 支持
+*   🌎 多语言支持，包含10+种人工翻译的语言，还有更多即将到来
+*   ☁ 可选的加密、免费离线云备份和恢复功能可用
+*   💼 工作空间视图，便于同时切换多个应用
+*   🛩️ 最简视图，可作为快速加载的浏览器起始页使用
+*   🖱️ 选择应用启动方式：新标签页、同一标签页、剪贴板、弹出模态窗口或在工作空间视图中打开
+*   📏 可自定义布局、尺寸、文本、组件可见性、排序顺序、行为等。
+*   🖼️ 提供全屏背景图片、自定义导航栏链接、HTML 页脚、标题等选项。
+*   🚀 使用 Docker、裸机或一键云部署轻松设置。
+*   ⚙️ 易于使用基于单文件的 YAML 配置，并通过 UI 配置应用程序。
+*   ✨ 正在积极开发中，定期添加改进和新功能
+*   🤏 小巧的安装包，完全响应式界面，支持离线访问的 PWA
+*   🆓 100% 免费且开源
+*   🔐 强调隐私保护
+*   🌈 更多内容...

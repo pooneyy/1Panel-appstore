@@ -8,56 +8,46 @@
 
 [![image](http://isitmaintained.com/badge/resolution/Flexget/Flexget.svg)](http://isitmaintained.com/project/Flexget/Flexget)
 
-[FlexGet](https://flexget.com) is a multipurpose automation tool for
-content like torrents, nzbs, podcasts, comics, series, movies, etc. It
-can use different kinds of sources like RSS-feeds, html pages, csv
-files, search engines and there are even plugins for sites that do not
-provide any kind of useful feeds.
+[FlexGet](https://flexget.com) 是一款多功能的自动化工具，用于处理如种子、NZB、播客、漫画、剧集、电影等内容。它可以使用不同的来源，如 RSS 订阅源、HTML 页面、CSV 文件、搜索引擎，甚至为那些不提供任何有用订阅源的网站提供插件。
 
-# Example
+# 示例
 
-Flexget uses a [YAML](http://www.yaml.org/) based configuration file.
-The following example will look in the RSS feed in the link, will match
-any item that match the series names and download it:
+Flexget 使用基于 [YAML](http://www.yaml.org/) 的配置文件。以下示例将检查链接中的 RSS 订阅源，匹配任何与系列名称匹配的项目并下载它们：
 
-    tasks:
-      tv:
-        rss: http://example.com/torrents.xml
-        series:
-        - some series
-        - another series
-        download: /tvshows
+```
+tasks:
+  tv:
+    rss: http://example.com/torrents.xml
+    series:
+    - some series
+    - another series
+    download: /tvshows
+```
 
-There are numerous plugins that allow utilizing FlexGet in interesting
-ways and more are being added continuously.
+有许多插件允许以有趣的方式使用 FlexGet，并且持续有更多插件被添加。
 
-FlexGet is extremely useful in conjunction with applications which have
-watch directory support or provide interface for external utilities like
-FlexGet. To get a sense of the many things that can be done with FlexGet
-you can take a look in our [cookbook](https://flexget.com/Cookbook).
+FlexGet 与支持监视目录或提供 FlexGet 等外部工具接口的应用程序结合使用时非常实用。要了解 FlexGet 可以完成的各种事情，您可以查看我们的[烹饪书](https://flexget.com/Cookbook) 。
 
-**ChangeLog:** <https://flexget.com/ChangeLog>
+**变更日志:**[https://flexget.com/ChangeLog](https://flexget.com/ChangeLog)
 
-**Help:** <https://github.com/Flexget/Flexget/discussions>
+**帮助:**[https://github.com/Flexget/Flexget/discussions](https://github.com/Flexget/Flexget/discussions)
 
-**Chat:** <https://flexget.com/Chat>
+**Chat:** [https://flexget.com/Chat](https://flexget.com/Chat)
 
-**Bugs:** <https://github.com/Flexget/Flexget/issues>
+**错误:**[https://github.com/Flexget/Flexget/issues](https://github.com/Flexget/Flexget/issues)
 
-## Install
+## 安装
 
-FlexGet is installable via pip with the command:
+FlexGet 可以通过 pip 命令安装：
 
-    pip install flexget
+```
+pip install flexget
+```
 
-For more detailed instructions see the [installation
-guide](https://flexget.com/Install).
+更多详细说明请参阅[安装指南](https://flexget.com/Install) .
 
-## How to use GIT checkout
+## 如何使用 GIT checkout
 
-Refer to [development
-guide](https://flexget.readthedocs.io/en/latest/develop/index.html#how-do-i-get-started).
+请参考[开发指南](https://flexget.readthedocs.io/en/latest/develop/index.html#how-do-i-get-started) 。
 
-If you don\'t want to use virtualenv there\'s `flexget_vanilla.py` file
-which can be used to run FlexGet without virtualenv, note that you will
-need to install all required dependencies yourself.
+如果您不想使用 virtualenv，可以使用 `flexget_vanilla.py` 文件来运行 FlexGet 而不需要 virtualenv，请注意您需要自行安装所有必需的依赖项。
